@@ -7,7 +7,7 @@ import { AyahView } from "./Ayah";
 import { Intro, Outro } from "./Cards";
 import { Watermark } from "./Watermark";
 import { TajweedLegend } from "./TajweedLegend";
-import { revealForRepetition, repetitionLabel, Reveal } from "./hifz";
+import { passForRepetition, HifzPass } from "./hifz";
 import { canonicalRule } from "./tajweed";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
@@ -20,32 +20,43 @@ const resolveAudio = (src: string): string =>
 export const ayahFrameLength = (durationInSeconds: number, gapSeconds: number): number =>
   Math.round((durationInSeconds + gapSeconds) * FPS);
 
+// Seconds for the silent "Your turn" recall beat (scaled to the ayah length).
+const CONFIRM_SECONDS = 1.8; // hold after the reveal, to read the confirmation
+const yourTurnSeconds = (ayah: Ayah): number => {
+  const lastEnd = ayah.words.reduce((m, w) => Math.max(m, w.end), 0);
+  return Math.min(Math.max(lastEnd, 2.0), 6.0);
+};
+
 // One on-screen unit. In standard mode there's one per ayah; in Hifz mode each
-// ayah expands into several repetitions with progressively more words hidden.
+// ayah expands into several repetition passes (some with a recall gap).
 export type Segment = {
   key: string;
   ayah: Ayah;
   frames: number;
-  reveal?: Reveal; // present only in Hifz mode
-  repetitionLabel?: string;
+  pass?: HifzPass; // present only in Hifz mode
+  responseGapSeconds: number; // length of the silent "your turn" beat (0 = none)
 };
 
 export const buildSegments = (props: QuranProps): Segment[] => {
   const segs: Segment[] = [];
   for (const ayah of props.ayahs) {
-    const frames = ayahFrameLength(ayah.durationInSeconds, props.ayahGapSeconds);
+    const recite = ayahFrameLength(ayah.durationInSeconds, props.ayahGapSeconds);
     if (props.mode === "hifz") {
       for (let rep = 0; rep < props.hifzRepeats; rep++) {
+        const pass = passForRepetition(rep, props.hifzRepeats);
+        const gapSec = pass.responseGap ? yourTurnSeconds(ayah) : 0;
+        const confirmSec =
+          pass.reveal === "afterGap" || pass.reveal === "end" ? CONFIRM_SECONDS : 0;
         segs.push({
           key: `${ayah.key}-r${rep}`,
           ayah,
-          frames,
-          reveal: revealForRepetition(rep, props.hifzRepeats),
-          repetitionLabel: repetitionLabel(rep, props.hifzRepeats),
+          frames: recite + Math.round((gapSec + confirmSec) * FPS),
+          pass,
+          responseGapSeconds: gapSec,
         });
       }
     } else {
-      segs.push({ key: ayah.key, ayah, frames });
+      segs.push({ key: ayah.key, ayah, frames: recite, responseGapSeconds: 0 });
     }
   }
   return segs;
@@ -135,13 +146,17 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
         cursor += seg.frames;
         return (
           <Sequence key={seg.key} from={from} durationInFrames={seg.frames}>
-            <Audio src={resolveAudio(seg.ayah.audioSrc)} />
+            {/* Stop the recitation before the silent "your turn" beat. */}
+            <Audio
+              src={resolveAudio(seg.ayah.audioSrc)}
+              endAt={Math.round(seg.ayah.durationInSeconds * FPS)}
+            />
             <AyahView
               ayah={seg.ayah}
               theme={theme}
               durationInFrames={seg.frames}
-              reveal={seg.reveal}
-              repetitionLabel={seg.repetitionLabel}
+              pass={seg.pass}
+              responseGapSeconds={seg.responseGapSeconds}
               showTajweed={showTajweed}
               showTransliteration={props.showTransliteration}
             />
@@ -156,46 +171,23 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
         </Sequence>
       ) : null}
 
-      {/* Outro card */}
+      {/* Outro card — also where the reciter + translation credits live now. */}
       <Sequence from={introFrames + ayahsFrames} durationInFrames={outroFrames}>
         <Outro
           surahNameArabic={props.surahNameArabic}
           surahNameEnglish={props.surahNameEnglish}
           channelName={props.channelName}
           ayahReference={ayahReference(props)}
+          reciterName={props.reciterName}
+          translationName={props.translationName}
           theme={theme}
         />
       </Sequence>
 
-      {/* Anti-theft watermark over everything */}
+      {/* Anti-theft watermark over everything. Reciter + translation credits
+          now live on the outro card (and belong in the video description),
+          keeping every recitation frame clean. */}
       <Watermark src={props.watermarkSrc} opacity={props.watermarkOpacity} />
-
-      {/* Footer: reciter + translation credit */}
-      <AbsoluteFill
-        style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 70 }}
-      >
-        <div
-          style={{
-            fontFamily: TRANSLATION_FONT,
-            fontSize: 26,
-            color: theme.translation,
-            opacity: 0.85,
-          }}
-        >
-          {props.reciterName}
-        </div>
-        <div
-          style={{
-            fontFamily: TRANSLATION_FONT,
-            fontSize: 20,
-            color: theme.translation,
-            opacity: 0.5,
-            marginTop: 6,
-          }}
-        >
-          {props.translationName}
-        </div>
-      </AbsoluteFill>
     </AbsoluteFill>
   );
 };

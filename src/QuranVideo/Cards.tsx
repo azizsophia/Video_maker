@@ -166,8 +166,18 @@ export const Outro: React.FC<{
   surahNameEnglish: string;
   channelName: string;
   ayahReference?: string;
+  reciterName?: string;
+  translationName?: string;
   theme: ThemePalette;
-}> = ({ surahNameArabic, surahNameEnglish, channelName, ayahReference, theme }) => {
+}> = ({
+  surahNameArabic,
+  surahNameEnglish,
+  channelName,
+  ayahReference,
+  reciterName,
+  translationName,
+  theme,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const cta = spring({ frame: frame - 18, fps, config: { damping: 16 } });
@@ -240,6 +250,22 @@ export const Outro: React.FC<{
       >
         {channelName}
       </div>
+      {/* Credits — kept off the recitation frames, gathered here instead. */}
+      {reciterName || translationName ? (
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 18,
+            lineHeight: 1.5,
+            color: theme.translation,
+            opacity: 0.55,
+            marginTop: 40,
+          }}
+        >
+          {reciterName ? <div>Recitation · {reciterName}</div> : null}
+          {translationName ? <div>Translation · {translationName}</div> : null}
+        </div>
+      ) : null}
     </Card>
   );
 };

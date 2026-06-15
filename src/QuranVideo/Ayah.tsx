@@ -9,38 +9,47 @@ import {
 import { Ayah as AyahType } from "./schema";
 import { ThemePalette } from "./themes";
 import { tajweedColor } from "./tajweed";
-import { Reveal } from "./hifz";
+import { HifzPass } from "./hifz";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 // Small lead so a word lights up just as the reciter begins it.
 const HIGHLIGHT_LEAD = 0.08;
-// In "from memory" mode, reveal the whole ayah this many seconds before the end.
-const MEMORY_REVEAL = 1.3;
+// The "Your turn" gap begins this long after the last word ends.
+const GAP_LEAD = 0.3;
 
 export const AyahView: React.FC<{
   ayah: AyahType;
   theme: ThemePalette;
   durationInFrames: number;
-  reveal?: Reveal; // Hifz reveal behaviour (undefined = always shown)
-  repetitionLabel?: string; // e.g. "Recall · 2 / 4"
+  pass?: HifzPass; // Hifz pass (undefined = standard recitation, all shown)
+  responseGapSeconds?: number; // silent "your turn" beat after recitation (0 = none)
   showTajweed?: boolean; // color letters by tajweed rule
   showTransliteration?: boolean; // romanized pronunciation line
 }> = ({
   ayah,
   theme,
   durationInFrames,
-  reveal,
-  repetitionLabel,
+  pass,
+  responseGapSeconds = 0,
   showTajweed = false,
   showTransliteration = false,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const t = frame / fps; // seconds within this ayah
-  const total = durationInFrames / fps;
-  const lastEnd = ayah.words.reduce((m, w) => Math.max(m, w.end), 0) || total;
+  const t = frame / fps; // seconds within this segment
+  const reveal = pass?.reveal ?? "always";
+  const isListen = reveal === "always"; // full text + meaning + transliteration
+  const lastEnd = Math.max(
+    0.5,
+    ayah.words.reduce((m, w) => Math.max(m, w.end), 0)
+  );
 
-  // Gentle fade in/out at the edges of the ayah's time on screen.
+  // The silent recall beat, then the confirming reveal.
+  const gapStart = lastEnd + GAP_LEAD;
+  const gapEnd = gapStart + responseGapSeconds;
+  const inYourTurn = responseGapSeconds > 0 && t >= gapStart && t < gapEnd;
+
+  // Gentle fade in/out at the edges of the segment.
   const fadeIn = interpolate(frame, [0, 12], [0, 1], { extrapolateRight: "clamp" });
   const fadeOut = interpolate(
     frame,
@@ -50,10 +59,7 @@ export const AyahView: React.FC<{
   );
   const opacity = Math.min(fadeIn, fadeOut);
 
-  // Translation rises in shortly after the Arabic appears.
   const transReveal = spring({ frame: frame - 8, fps, config: { damping: 200 } });
-
-  // How far through the recitation we are (karaoke progress bar).
   const progress = interpolate(t, [0, lastEnd], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -62,20 +68,18 @@ export const AyahView: React.FC<{
   // Per-word reveal state for the current time.
   const wordState = (word: AyahType["words"][number]) => {
     const active = t >= word.start - HIGHLIGHT_LEAD && t < word.end;
-    // Standard mode (and the Hifz "Listen" pass): always visible.
-    if (!reveal || reveal.mode === "always")
-      return { active, hidden: false, revealProg: 1 };
-    // Otherwise the word reveals at a point in time, then fades in.
-    const revealAt =
-      reveal.mode === "afterWord"
-        ? word.end + reveal.delay // just after the reciter says it
-        : total - MEMORY_REVEAL; // "memory": all reveal near the end
-    const revealProg = interpolate(t, [revealAt, revealAt + 0.28], [0, 1], {
+    if (isListen) return { active, hidden: false, revealProg: 1 };
+    // "build" reveals each word just after it's recited; "afterGap"/"end"
+    // hold everything hidden through the your-turn beat, then reveal together.
+    const revealAt = reveal === "build" ? word.end + 0.05 : gapEnd;
+    const revealProg = interpolate(t, [revealAt, revealAt + 0.3], [0, 1], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
     });
     return { active, hidden: revealProg < 1, revealProg };
   };
+
+  const showTranslitNow = showTransliteration && !!ayah.transliteration && isListen;
 
   return (
     <AbsoluteFill
@@ -86,7 +90,7 @@ export const AyahView: React.FC<{
         opacity,
       }}
     >
-      {repetitionLabel ? (
+      {pass ? (
         <div
           style={{
             fontFamily: TRANSLATION_FONT,
@@ -98,9 +102,10 @@ export const AyahView: React.FC<{
             textTransform: "uppercase",
           }}
         >
-          {repetitionLabel}
+          {pass.label}
         </div>
       ) : null}
+
       <div
         dir="rtl"
         style={{
@@ -126,7 +131,6 @@ export const AyahView: React.FC<{
           );
           const baseColor = active ? theme.arabicActive : theme.arabicIdle;
           const useRuns = showTajweed && !hidden && word.runs && word.runs.length > 0;
-          // A revealing word fades + lifts in; a hidden word is a glowing tile.
           const revealScale = hidden ? 1 : 0.94 + revealProg * 0.06;
           return (
             <span
@@ -169,8 +173,9 @@ export const AyahView: React.FC<{
         })}
       </div>
 
-      {/* Romanized pronunciation line (optional). */}
-      {showTransliteration && ayah.transliteration ? (
+      {/* Romanized pronunciation line — only on the Listen pass / standard mode
+          (so it can't be used to cheat during recall). */}
+      {showTranslitNow ? (
         <div
           style={{
             marginTop: 34,
@@ -188,11 +193,115 @@ export const AyahView: React.FC<{
         </div>
       ) : null}
 
-      {/* Karaoke-style recitation progress bar. */}
+      {/* The "Your turn" recall beat replaces the lower content. */}
+      {inYourTurn ? (
+        <YourTurn theme={theme} progress={(t - gapStart) / responseGapSeconds} />
+      ) : (
+        <>
+          {/* Karaoke-style recitation progress bar. */}
+          <div
+            style={{
+              marginTop: 40,
+              width: 360,
+              height: 6,
+              borderRadius: 3,
+              background: `${theme.accent}22`,
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                width: `${progress * 100}%`,
+                height: "100%",
+                borderRadius: 3,
+                background: theme.accent,
+                boxShadow: `0 0 14px ${theme.arabicGlow}`,
+              }}
+            />
+          </div>
+
+          {/* Translation — taught on the Listen pass, withheld during recall. */}
+          {isListen ? (
+            <div
+              style={{
+                marginTop: 40,
+                maxWidth: 880,
+                fontFamily: TRANSLATION_FONT,
+                fontSize: 40,
+                lineHeight: 1.5,
+                textAlign: "center",
+                color: theme.translation,
+                opacity: transReveal,
+                transform: `translateY(${(1 - transReveal) * 24}px)`,
+              }}
+            >
+              {ayah.translation}
+            </div>
+          ) : null}
+
+          <div
+            style={{
+              marginTop: 36,
+              fontFamily: TRANSLATION_FONT,
+              fontSize: 26,
+              letterSpacing: 2,
+              color: theme.accent,
+              opacity: transReveal * 0.9,
+            }}
+          >
+            {ayah.key}
+          </div>
+        </>
+      )}
+    </AbsoluteFill>
+  );
+};
+
+// The active-practice prompt: a calm "recite from memory" cue with a draining ring.
+const YourTurn: React.FC<{ theme: ThemePalette; progress: number }> = ({
+  theme,
+  progress,
+}) => {
+  const pulse = 0.9 + 0.1 * Math.sin(progress * Math.PI * 6);
+  return (
+    <div
+      style={{
+        marginTop: 46,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <div
         style={{
-          marginTop: 40,
-          width: 360,
+          fontFamily: TRANSLATION_FONT,
+          fontSize: 38,
+          letterSpacing: 2,
+          color: theme.arabicActive,
+          textShadow: `0 0 24px ${theme.arabicGlow}`,
+          transform: `scale(${pulse})`,
+        }}
+      >
+        🎙 Your turn
+      </div>
+      <div
+        style={{
+          fontFamily: TRANSLATION_FONT,
+          fontSize: 24,
+          letterSpacing: 3,
+          color: theme.accent,
+          opacity: 0.8,
+          marginTop: 10,
+          textTransform: "uppercase",
+        }}
+      >
+        Recite from memory
+      </div>
+      {/* Draining countdown bar for the recall window. */}
+      <div
+        style={{
+          marginTop: 26,
+          width: 320,
           height: 6,
           borderRadius: 3,
           background: `${theme.accent}22`,
@@ -201,7 +310,7 @@ export const AyahView: React.FC<{
       >
         <div
           style={{
-            width: `${progress * 100}%`,
+            width: `${Math.max(0, 1 - progress) * 100}%`,
             height: "100%",
             borderRadius: 3,
             background: theme.accent,
@@ -209,35 +318,6 @@ export const AyahView: React.FC<{
           }}
         />
       </div>
-
-      <div
-        style={{
-          marginTop: 40,
-          maxWidth: 880,
-          fontFamily: TRANSLATION_FONT,
-          fontSize: 40,
-          lineHeight: 1.5,
-          textAlign: "center",
-          color: theme.translation,
-          opacity: transReveal,
-          transform: `translateY(${(1 - transReveal) * 24}px)`,
-        }}
-      >
-        {ayah.translation}
-      </div>
-
-      <div
-        style={{
-          marginTop: 36,
-          fontFamily: TRANSLATION_FONT,
-          fontSize: 26,
-          letterSpacing: 2,
-          color: theme.accent,
-          opacity: transReveal * 0.9,
-        }}
-      >
-        {ayah.key}
-      </div>
-    </AbsoluteFill>
+    </div>
   );
 };
