@@ -42,10 +42,25 @@ To have finished videos land in your Drive automatically:
 
 ## 4. Reciter & translation ids (Quran.com)
 
-**Reciters** (`--recitation`): `1` AbdulBaset (Mujawwad) · `2` AbdulBaset
-(Murattal) · `3` Sudais · `4` Shatri · `5` Hani ar-Rifai · `6` Husary ·
-`7` Mishary Alafasy.
+**Reciters with word-by-word timing** (`--recitation`): `1` AbdulBaset
+(Mujawwad) · `2` AbdulBaset (Murattal, default) · `3` Sudais · `4` Shatri ·
+`5` Hani ar-Rifai · `6` Husary · `12` Husary (Muallim).
 
 **Translations** (`--translation`): `20` Saheeh International · `131` The Clear
 Quran (Dr. Mustafa Khattab) · `85` (Pickthall) and more at
 <https://api.quran.com/api/v4/resources/translations>.
+
+### Luhaidan & Dossary
+
+These two are **not** available on the free Quran.com word-timing API, so they
+can't be word-synced out of the box. Two ways to support them later:
+
+1. **Ayah-level highlight** — pull their audio from another CDN (e.g.
+   EveryAyah) and highlight a whole ayah at a time instead of each word.
+2. **Forced alignment** — run their audio + the Arabic text through an aligner
+   (e.g. `aeneas` / a Whisper-based aligner) to generate our own word timings,
+   then feed those into the same composition. This gives full word-by-word sync
+   for any reciter.
+
+For now **Abdul Basit** is the recommended default — fully word-synced and one
+of your preferred reciters.

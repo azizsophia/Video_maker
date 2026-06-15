@@ -36,8 +36,11 @@ Built with [Remotion](https://remotion.dev) (React → MP4). Data from the free
 3. Fill in: surah, (optional) ayah range, reciter, translation, theme, orientation.
 4. When the run finishes, open it and download the MP4 from **Artifacts**.
 
-Reciter ids: `7` Alafasy · `3` Sudais · `2` AbdulBaset · `6` Husary.
+Reciter ids: `2` AbdulBaset (Murattal) · `1` AbdulBaset (Mujawwad) · `3` Sudais · `6` Husary.
 Translation ids: `20` Saheeh International · `131` The Clear Quran.
+
+> Luhaidan & Dossary aren't on the free word-timing API yet — see
+> `docs/SETUP.md` for how we can add them via forced alignment.
 
 (Optional auto-upload to Google Drive is wired in `docs/SETUP.md`.)
 
@@ -51,9 +54,9 @@ npm install
 # Preview live in the browser (Remotion Studio)
 npm run dev
 
-# Pull a real surah + reciter audio, then render
-npm run fetch -- --surah=112 --recitation=7 --theme=midnight
-npx remotion render QuranRecitation out/al-ikhlas.mp4 --props=src/data/surah-112.json
+# Pull a real passage + reciter audio, then render (Ayat al-Kursi by Abdul Basit)
+npm run fetch -- --surah=2 --from=255 --to=255 --recitation=2 --theme=midnight
+npx remotion render QuranRecitation out/ayat-al-kursi.mp4 --props=src/data/surah-2.json
 ```
 
 Vertical (`QuranRecitation`, 1080×1920) is for Shorts/TikTok/Reels.

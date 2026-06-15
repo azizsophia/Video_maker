@@ -26,8 +26,14 @@ export const quranPropsSchema = z.object({
   reciterName: z.string(),
   translationName: z.string(),
   theme: themeSchema,
+  // Channel name shown on the intro/outro cards (e.g. "Ketabi Studio").
+  channelName: z.string().default("Ketabi Studio"),
   // Gap of silence held between ayahs (seconds) for breathing room.
   ayahGapSeconds: z.number().default(0.4),
+  // Animated title/closing cards that bracket the recitation and help videos
+  // comfortably reach the 60s+ length good for Shorts/Reels.
+  introSeconds: z.number().default(5),
+  outroSeconds: z.number().default(4),
   ayahs: z.array(ayahSchema),
 });
 

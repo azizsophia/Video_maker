@@ -23,7 +23,9 @@ import { dirname, join } from "node:path";
 const API = "https://api.quran.com/api/v4";
 const AUDIO_BASE = "https://verses.quran.com/";
 
-// Common reciters (Quran.com recitation ids). 7 = Mishary al-Afasy (Murattal).
+// Reciters available on the Quran.com API *with word-by-word timing segments*.
+// NOTE: Yasser al-Dossary and Muhammad al-Luhaidan are NOT in this set, so they
+// can't be word-synced from this free API yet (see docs/SETUP.md for the plan).
 const RECITER_NAMES: Record<string, string> = {
   "1": "AbdulBaset AbdulSamad (Mujawwad)",
   "2": "AbdulBaset AbdulSamad (Murattal)",
@@ -31,8 +33,7 @@ const RECITER_NAMES: Record<string, string> = {
   "4": "Abu Bakr al-Shatri",
   "5": "Hani ar-Rifai",
   "6": "Mahmoud Khalil Al-Husary",
-  "7": "Mishary Rashid Alafasy",
-  "9": "Mishary Alafasy (Mujawwad)",
+  "12": "Mahmoud Khalil Al-Husary (Muallim)",
 };
 
 type Args = Record<string, string>;
@@ -81,7 +82,7 @@ async function download(url: string, dest: string): Promise<void> {
 async function main() {
   const args = parseArgs();
   const surah = Number(args.surah ?? "112");
-  const recitation = args.recitation ?? "7";
+  const recitation = args.recitation ?? "2"; // 2 = Abdul Basit (Murattal)
   const translation = args.translation ?? "20"; // 20 = Saheeh International
   const theme = args.theme ?? "midnight";
   const from = args.from ? Number(args.from) : undefined;
@@ -148,7 +149,10 @@ async function main() {
     reciterName: args.reciterName ?? RECITER_NAMES[recitation] ?? `Recitation ${recitation}`,
     translationName: args.translationName ?? "Saheeh International",
     theme,
+    channelName: args.channelName ?? "Ketabi Studio",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
+    introSeconds: args.intro ? Number(args.intro) : 5,
+    outroSeconds: args.outro ? Number(args.outro) : 4,
     ayahs,
   };
 

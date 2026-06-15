@@ -9,19 +9,19 @@ on:
       surah:
         description: "Surah number (1-114)"
         required: true
-        default: "112"
+        default: "2"
       from:
-        description: "First ayah (optional, blank = whole surah)"
+        description: "First ayah (optional, blank = whole surah). Default 255 = Ayat al-Kursi"
         required: false
-        default: ""
+        default: "255"
       to:
         description: "Last ayah (optional, blank = whole surah)"
         required: false
-        default: ""
+        default: "255"
       recitation:
-        description: "Reciter id (7=Alafasy, 3=Sudais, 2=AbdulBaset, 6=Husary)"
+        description: "Reciter id (2=AbdulBaset Murattal, 1=AbdulBaset Mujawwad, 3=Sudais, 6=Husary)"
         required: true
-        default: "7"
+        default: "2"
       translation:
         description: "Translation id (20=Saheeh Intl, 131=Clear Quran)"
         required: true

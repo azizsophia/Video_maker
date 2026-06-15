@@ -1,10 +1,13 @@
 {
   "surahNameEnglish": "Al-Ikhlas",
   "surahNameArabic": "الإخلاص",
-  "reciterName": "Mishary Rashid Alafasy",
+  "reciterName": "AbdulBaset AbdulSamad (Murattal)",
   "translationName": "Sahih International",
   "theme": "midnight",
+  "channelName": "Ketabi Studio",
   "ayahGapSeconds": 0.5,
+  "introSeconds": 5,
+  "outroSeconds": 4,
   "ayahs": [
     {
       "number": 1,
