@@ -5,4 +5,7 @@ output/diag*.png
 output/pf_*.png
 output/seg1.png
 output/render.log
+output/chk_*.png
+# high-bitrate master exceeds GitHub's 100 MB limit; the _web version is tracked
+output/ayat_al_kursi_cinematic.mp4
 .DS_Store
