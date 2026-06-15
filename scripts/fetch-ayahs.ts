@@ -316,7 +316,15 @@ async function main() {
     showTransliteration: args.transliteration === "true" || args.translit === "true",
     basmala,
     channelName: args.channelName ?? "Ketabi Studio",
-    websiteUrl: args.website ?? "ketabistudio.com",
+    // Promo shorts swap the outro CTA to point at the full lesson.
+    websiteUrl:
+      args.promo === "true"
+        ? "on my YouTube channel"
+        : args.website ?? "ketabistudio.com",
+    ctaHeadline:
+      args.promo === "true"
+        ? "Watch the full lesson"
+        : args.ctaHeadline ?? "Find more at",
     showCourseCta: args.cta !== "false",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
     introSeconds: args.intro ? Number(args.intro) : 5,

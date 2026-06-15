@@ -61,6 +61,9 @@ export const quranPropsSchema = z.object({
   // Website call-to-action on the outro (promotes ketabistudio.com).
   websiteUrl: z.string().default("ketabistudio.com"),
   showCourseCta: z.boolean().default(true),
+  // Small line above the CTA url ("Find more at" normally; for promo shorts,
+  // e.g. "Watch the full lesson").
+  ctaHeadline: z.string().default("Find more at"),
   // Gap of silence held between ayahs (seconds) for breathing room.
   ayahGapSeconds: z.number().default(0.4),
   // Animated title/closing cards that bracket the recitation and help videos

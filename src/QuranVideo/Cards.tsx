@@ -170,6 +170,7 @@ export const Outro: React.FC<{
   translationName?: string;
   websiteUrl?: string;
   showCourseCta?: boolean;
+  ctaHeadline?: string;
   theme: ThemePalette;
 }> = ({
   surahNameArabic,
@@ -180,6 +181,7 @@ export const Outro: React.FC<{
   translationName,
   websiteUrl,
   showCourseCta = false,
+  ctaHeadline = "Find more at",
   theme,
 }) => {
   const frame = useCurrentFrame();
@@ -248,7 +250,7 @@ export const Outro: React.FC<{
             color: theme.translation,
           }}
         >
-          Find more at
+          {ctaHeadline}
         </div>
         <div
           style={{

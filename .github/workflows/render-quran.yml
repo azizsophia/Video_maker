@@ -46,6 +46,10 @@ on:
         description: "Show the ketabistudio.com call-to-action on the outro: true | false"
         required: false
         default: "true"
+      promo:
+        description: "Promo short: swap outro CTA to 'Watch the full lesson on my YouTube channel': true | false"
+        required: false
+        default: "false"
       orientation:
         description: "vertical (Shorts/TikTok) or wide (YouTube)"
         required: true
@@ -77,7 +81,7 @@ jobs:
       - name: Fetch ayahs + audio
         run: |
           ARGS="--surah=${{ inputs.surah }} --recitation=${{ inputs.recitation }} --translation=${{ inputs.translation }} --theme=${{ inputs.theme }}"
-          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }} --cta=${{ inputs.cta }}"
+          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }} --cta=${{ inputs.cta }} --promo=${{ inputs.promo }}"
           if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from=${{ inputs.from }}"; fi
           if [ -n "${{ inputs.to }}" ]; then ARGS="$ARGS --to=${{ inputs.to }}"; fi
           npx tsx scripts/fetch-ayahs.ts $ARGS --out=src/data/render.json
