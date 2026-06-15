@@ -1,0 +1,74 @@
+{
+  "_note": "PLACEHOLDER for offline visual preview only. Not for publishing. Authoritative text/audio/timings always come from scripts/fetch-ayahs.ts (KFGQPC Uthmani via Quran.com).",
+  "surahNameEnglish": "Al-Ikhlas",
+  "surahNameArabic": "الإخلاص",
+  "basmala": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+  "reciterName": "AbdulBaset AbdulSamad (Murattal)",
+  "translationName": "Sahih International",
+  "theme": "midnight",
+  "mode": "standard",
+  "hifzRepeats": 4,
+  "channelName": "Ketabi Studio",
+  "ayahGapSeconds": 0.5,
+  "introSeconds": 5,
+  "outroSeconds": 4,
+  "watermarkSrc": "brand/ketabi-mark.png",
+  "watermarkOpacity": 0.1,
+  "ayahs": [
+    {
+      "number": 1,
+      "key": "112:1",
+      "arabic": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "translation": "Say, \"He is Allah, [who is] One,",
+      "audioSrc": "audio/al-ikhlas/112001.mp3",
+      "durationInSeconds": 5.5,
+      "words": [
+        { "text": "قُلْ", "start": 0.2, "end": 0.9 },
+        { "text": "هُوَ", "start": 0.9, "end": 1.7 },
+        { "text": "ٱللَّهُ", "start": 1.7, "end": 3.0 },
+        { "text": "أَحَدٌ", "start": 3.0, "end": 5.0 }
+      ]
+    },
+    {
+      "number": 2,
+      "key": "112:2",
+      "arabic": "ٱللَّهُ ٱلصَّمَدُ",
+      "translation": "Allah, the Eternal Refuge.",
+      "audioSrc": "audio/al-ikhlas/112002.mp3",
+      "durationInSeconds": 3.5,
+      "words": [
+        { "text": "ٱللَّهُ", "start": 0.2, "end": 1.3 },
+        { "text": "ٱلصَّمَدُ", "start": 1.3, "end": 3.2 }
+      ]
+    },
+    {
+      "number": 3,
+      "key": "112:3",
+      "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "translation": "He neither begets nor is born,",
+      "audioSrc": "audio/al-ikhlas/112003.mp3",
+      "durationInSeconds": 4.5,
+      "words": [
+        { "text": "لَمْ", "start": 0.2, "end": 0.8 },
+        { "text": "يَلِدْ", "start": 0.8, "end": 1.8 },
+        { "text": "وَلَمْ", "start": 1.8, "end": 2.6 },
+        { "text": "يُولَدْ", "start": 2.6, "end": 4.2 }
+      ]
+    },
+    {
+      "number": 4,
+      "key": "112:4",
+      "arabic": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+      "translation": "Nor is there to Him any equivalent.\"",
+      "audioSrc": "audio/al-ikhlas/112004.mp3",
+      "durationInSeconds": 6.5,
+      "words": [
+        { "text": "وَلَمْ", "start": 0.2, "end": 0.9 },
+        { "text": "يَكُن", "start": 0.9, "end": 1.7 },
+        { "text": "لَّهُۥ", "start": 1.7, "end": 2.6 },
+        { "text": "كُفُوًا", "start": 2.6, "end": 4.0 },
+        { "text": "أَحَدٌۢ", "start": 4.0, "end": 6.2 }
+      ]
+    }
+  ]
+}
