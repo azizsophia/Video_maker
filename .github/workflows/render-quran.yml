@@ -97,7 +97,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: quran-surah-${{ inputs.surah }}
-          path: out/*.mp4
+          path: |
+            out/*.mp4
+            src/data/qc-report.txt
           retention-days: 14
 
       # Auto-upload to your Google Drive. Easiest: deploy the Apps Script

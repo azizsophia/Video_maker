@@ -171,6 +171,7 @@ async function main() {
   const audioDir = `audio/${surah}_${recitation}`;
   const publicDir = join("public", audioDir);
   const ayahs: any[] = [];
+  const qcRows: { key: string; words: number; text: string; timing: string }[] = [];
   let tajweedApplied = 0;
 
   for (const v of data.verses as any[]) {
@@ -230,6 +231,31 @@ async function main() {
     const lastEnd = timed.length ? timed[timed.length - 1].end : 4;
     const durationInSeconds = Math.max(2, lastEnd + 0.6);
 
+    // --- quality control: record text + timing accuracy for this ayah -----
+    const textCheck = verifyMap[key]
+      ? baseLetters(verifyMap[key]) === baseLetters(uthmaniText)
+        ? "match"
+        : "MISMATCH"
+      : "no-2nd-source";
+    const timingIssues: string[] = [];
+    const missing = timed.filter((w) => w.start === 0 && w.end === 0).length;
+    if (missing) timingIssues.push(`${missing} missing`);
+    const zeroLen = timed.filter(
+      (w) => w.end <= w.start && !(w.start === 0 && w.end === 0)
+    ).length;
+    if (zeroLen) timingIssues.push(`${zeroLen} zero-length`);
+    let outOfOrder = 0;
+    for (let i = 1; i < timed.length; i++)
+      if (timed[i].start + 0.001 < timed[i - 1].start) outOfOrder++;
+    if (outOfOrder) timingIssues.push(`${outOfOrder} out-of-order`);
+    if (lastEnd > durationInSeconds + 0.5) timingIssues.push("ends after audio");
+    qcRows.push({
+      key,
+      words: apiWords.length,
+      text: textCheck,
+      timing: timingIssues.length ? timingIssues.join(", ") : "ok",
+    });
+
     const audioUrl = AUDIO_BASE + v.audio.url;
     const fileName = `${String(surah).padStart(3, "0")}${String(ayahNum).padStart(3, "0")}.mp3`;
     await download(audioUrl, join(publicDir, fileName));
@@ -286,6 +312,29 @@ async function main() {
   await mkdir(dirname(outFile), { recursive: true });
   await writeFile(outFile, JSON.stringify(props, null, 2));
   console.log(`\n✅ Wrote ${ayahs.length} ayahs to ${outFile} (audio in ${publicDir})`);
+
+  // --- write a human-readable QC report (uploaded alongside the video) -----
+  let flagged = 0;
+  const lines = [
+    "KETABI STUDIO — QUALITY CONTROL",
+    `Surah ${surah} (${surahNameEnglish}) · mode ${mode} · reciter ${recitation} · translation ${translation}`,
+    `Text cross-checked against an independent source (${verify ? "on" : "OFF"}).`,
+    "",
+    "ayah     words  text            timing",
+    "-------  -----  --------------  ------",
+  ];
+  for (const r of qcRows) {
+    const bad = r.text === "MISMATCH" || r.timing !== "ok";
+    if (bad) flagged++;
+    const mark = bad ? "REVIEW " : "ok     ";
+    lines.push(
+      `${mark}${r.key.padEnd(7)} ${String(r.words).padStart(4)}   ${r.text.padEnd(14)}  ${r.timing}`
+    );
+  }
+  lines.push("", flagged === 0 ? "RESULT: all checks passed." : `RESULT: ${flagged} ayah(s) need review.`);
+  const qcText = lines.join("\n");
+  await writeFile(join(dirname(outFile), "qc-report.txt"), qcText);
+  console.log("\n" + qcText);
   console.log(`\nRender it with:`);
   const comp = mode === "tajweed" ? "QuranTajweed" : mode === "hifz" ? "QuranHifz" : "QuranRecitation";
   console.log(`   npx remotion render ${comp} out/surah-${surah}.mp4 --props=${outFile}`);
