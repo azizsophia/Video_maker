@@ -1,6 +1,8 @@
 {
+  "_note": "PLACEHOLDER for offline visual preview only. Not for publishing. Authoritative text/audio/timings always come from scripts/fetch-ayahs.ts (KFGQPC Uthmani via Quran.com).",
   "surahNameEnglish": "Al-Ikhlas",
   "surahNameArabic": "الإخلاص",
+  "basmala": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
   "reciterName": "AbdulBaset AbdulSamad (Murattal)",
   "translationName": "Sahih International",
   "theme": "midnight",

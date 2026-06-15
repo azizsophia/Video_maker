@@ -54,6 +54,20 @@ export const RemotionRoot: React.FC = () => {
           durationInFrames: Math.max(1, totalDurationInFrames(props)),
         })}
       />
+
+      {/* Tajweed preview (needs fetched runs to show colour; plain text otherwise) */}
+      <Composition
+        id="QuranTajweed"
+        component={QuranComposition}
+        schema={quranPropsSchema}
+        defaultProps={{ ...defaultProps, mode: "tajweed" }}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: Math.max(1, totalDurationInFrames(props)),
+        })}
+      />
     </>
   );
 };

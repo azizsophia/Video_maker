@@ -31,7 +31,7 @@ on:
         required: true
         default: "midnight"
       mode:
-        description: "standard (recitation) or hifz (memorization drill)"
+        description: "standard | hifz (memorization) | tajweed (colour-coded)"
         required: true
         default: "standard"
       repeats:

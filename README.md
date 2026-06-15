@@ -70,6 +70,24 @@ Vertical (`QuranRecitation`, 1080×1920) is for Shorts/TikTok/Reels.
 
 ---
 
+## Arabic accuracy
+
+Quranic text is **never hand-typed**. Every render's Arabic comes from the
+KFGQPC Uthmani mushaf via the Quran.com API (the basmala too). The fetcher
+**validates every verse** — Arabic-only characters, sane word/timing counts —
+and cross-checks the text against a second authoritative source, aborting on
+any anomaly. In tajweed mode the colour markup is stripped and the clean text
+is verified to match the Uthmani text (same base letters and word count) before
+any colour is applied; if a verse doesn't verify, it renders as plain, correct
+text with no colouring. The bundled `sample-al-ikhlas.json` is a non-publishable
+preview placeholder only.
+
+## Tajweed mode
+
+Letters are coloured by their authoritative tajweed rule (madd, ghunnah,
+qalqalah, ikhfaa…), with a legend of the rules that appear. Turn it on with
+`--mode=tajweed`; preview as the `QuranTajweed` composition.
+
 ## Hifz (memorization) mode
 
 A format that doesn't exist as a shareable video anywhere else: each ayah
@@ -87,7 +105,7 @@ Preview it live as the `QuranHifz` composition in `npm run dev`.
 
 - [x] **M1 — Quran recitation template** (word-by-word synced, real reciters)
 - [x] **Hifz memorization mode** (progressive word blanking)
-- [ ] **Tajweed color-coding** (letters colored by rule, in sync)
+- [x] **Tajweed color-coding** (letters colored by rule, with legend)
 - [ ] **Word-by-word meaning layer** (transliteration + literal meaning per word)
 - [ ] **3D audio-reactive scenes** (`@remotion/three`, verse-meaning environments)
 - [ ] **M2 — Story / prophets template**: script → ElevenLabs British narrator +

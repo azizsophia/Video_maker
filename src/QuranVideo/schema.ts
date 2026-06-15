@@ -1,10 +1,19 @@
 import { z } from "zod";
 
+// A colored slice of a word's text, used by Tajweed mode. `rule` is an
+// authoritative tajweed class name (or null for an un-ruled slice).
+export const tajweedRunSchema = z.object({
+  text: z.string(),
+  rule: z.string().nullable(),
+});
+
 // A single word with timing relative to its ayah's audio file (seconds).
 export const wordSchema = z.object({
   text: z.string(),
   start: z.number(), // seconds from start of this ayah's audio
   end: z.number(),
+  // Present only in Tajweed mode; concatenating run texts === `text`.
+  runs: z.array(tajweedRunSchema).optional(),
 });
 
 export const ayahSchema = z.object({
@@ -23,7 +32,8 @@ export const themeSchema = z.enum(["midnight", "emerald", "sand"]);
 // "standard" = clean word-by-word recitation.
 // "hifz" = memorization drill: each ayah repeats while words progressively
 // blank out so the viewer recites the gaps from memory.
-export const modeSchema = z.enum(["standard", "hifz"]);
+// "tajweed" = letters colored by their authoritative tajweed rule.
+export const modeSchema = z.enum(["standard", "hifz", "tajweed"]);
 
 export const quranPropsSchema = z.object({
   surahNameEnglish: z.string(),
@@ -35,6 +45,10 @@ export const quranPropsSchema = z.object({
   // Hifz mode: how many times each ayah repeats (first pass full text,
   // last pass fully blanked — "recite from memory").
   hifzRepeats: z.number().int().min(2).max(8).default(4),
+  // Basmala shown on the intro card. ALWAYS sourced from the API by the
+  // fetcher (empty for Surah at-Tawbah). The literal here is only a fallback
+  // for offline preview and is never used for published renders.
+  basmala: z.string().default("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"),
   // Channel name shown on the intro/outro cards (e.g. "Ketabi Studio").
   channelName: z.string().default("Ketabi Studio"),
   // Gap of silence held between ayahs (seconds) for breathing room.

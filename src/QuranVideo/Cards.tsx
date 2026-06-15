@@ -36,30 +36,33 @@ const Card: React.FC<{ children: React.ReactNode; fadeOut?: boolean }> = ({
   );
 };
 
-// Opening card: Bismillah + surah name, gently scaling in.
+// Opening card: Bismillah (sourced from the API) + surah name, gently scaling in.
 export const Intro: React.FC<{
+  basmala: string;
   surahNameArabic: string;
   surahNameEnglish: string;
   channelName: string;
   theme: ThemePalette;
-}> = ({ surahNameArabic, surahNameEnglish, channelName, theme }) => {
+}> = ({ basmala, surahNameArabic, surahNameEnglish, channelName, theme }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const rise = spring({ frame, fps, config: { damping: 200 } });
   return (
     <Card fadeOut>
-      <div
-        dir="rtl"
-        style={{
-          fontFamily: ARABIC_DISPLAY_FONT,
-          fontSize: 64,
-          color: theme.arabicActive,
-          textShadow: `0 0 40px ${theme.arabicGlow}`,
-          transform: `translateY(${(1 - rise) * 20}px)`,
-        }}
-      >
-        بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-      </div>
+      {basmala ? (
+        <div
+          dir="rtl"
+          style={{
+            fontFamily: ARABIC_DISPLAY_FONT,
+            fontSize: 64,
+            color: theme.arabicActive,
+            textShadow: `0 0 40px ${theme.arabicGlow}`,
+            transform: `translateY(${(1 - rise) * 20}px)`,
+          }}
+        >
+          {basmala}
+        </div>
+      ) : null}
       <div
         style={{
           width: 160,
@@ -103,42 +106,55 @@ export const Intro: React.FC<{
   );
 };
 
-// Closing card.
-export const Outro: React.FC<{ channelName: string; theme: ThemePalette }> = ({
-  channelName,
-  theme,
-}) => {
+// Closing card. Intentionally free of any non-Quranic Arabic phrase to avoid
+// authenticity concerns — just the surah reference and the channel mark.
+export const Outro: React.FC<{
+  surahNameArabic: string;
+  surahNameEnglish: string;
+  channelName: string;
+  theme: ThemePalette;
+}> = ({ surahNameArabic, surahNameEnglish, channelName, theme }) => {
   return (
     <Card>
       <div
         dir="rtl"
         style={{
           fontFamily: ARABIC_DISPLAY_FONT,
-          fontSize: 70,
+          fontSize: 76,
           color: theme.arabicActive,
           textShadow: `0 0 40px ${theme.arabicGlow}`,
         }}
       >
-        صَدَقَ ٱللَّهُ ٱلْعَظِيمُ
+        {surahNameArabic}
       </div>
       <div
         style={{
           fontFamily: TRANSLATION_FONT,
           fontSize: 30,
+          letterSpacing: 3,
           color: theme.translation,
           opacity: 0.85,
-          marginTop: 32,
+          marginTop: 18,
+          textTransform: "uppercase",
         }}
       >
-        Allah, the Most Great, has spoken the truth.
+        Surah {surahNameEnglish}
       </div>
+      <div
+        style={{
+          width: 160,
+          height: 2,
+          background: theme.accent,
+          opacity: 0.6,
+          margin: "48px 0",
+        }}
+      />
       <div
         style={{
           fontFamily: TRANSLATION_FONT,
           fontSize: 26,
           letterSpacing: 3,
           color: theme.accent,
-          marginTop: 60,
           textTransform: "uppercase",
         }}
       >

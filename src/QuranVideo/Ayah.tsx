@@ -8,6 +8,7 @@ import {
 } from "remotion";
 import { Ayah as AyahType } from "./schema";
 import { ThemePalette } from "./themes";
+import { tajweedColor } from "./tajweed";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 // Small lead so a word lights up just as the reciter begins it.
@@ -19,7 +20,15 @@ export const AyahView: React.FC<{
   durationInFrames: number;
   hiddenWords?: number[]; // indices of words to blank out (Hifz mode)
   repetitionLabel?: string; // e.g. "Repetition 2 / 4"
-}> = ({ ayah, theme, durationInFrames, hiddenWords = [], repetitionLabel }) => {
+  showTajweed?: boolean; // color letters by tajweed rule
+}> = ({
+  ayah,
+  theme,
+  durationInFrames,
+  hiddenWords = [],
+  repetitionLabel,
+  showTajweed = false,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps; // seconds within this ayah
@@ -86,13 +95,15 @@ export const AyahView: React.FC<{
             { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
           );
           const isHidden = hidden.has(i);
+          const baseColor = active ? theme.arabicActive : theme.arabicIdle;
+          const useRuns = showTajweed && !isHidden && word.runs && word.runs.length > 0;
           return (
             <span
               key={i}
               style={{
                 // Blanked words keep their footprint (transparent glyphs) so the
                 // line never reflows; a tile + glow marks where the word is.
-                color: isHidden ? "transparent" : active ? theme.arabicActive : theme.arabicIdle,
+                color: isHidden ? "transparent" : baseColor,
                 background: isHidden
                   ? active
                     ? theme.arabicGlow
@@ -109,7 +120,13 @@ export const AyahView: React.FC<{
                 display: "inline-block",
               }}
             >
-              {word.text}
+              {useRuns
+                ? word.runs!.map((r, j) => (
+                    <span key={j} style={{ color: tajweedColor(r.rule, baseColor) }}>
+                      {r.text}
+                    </span>
+                  ))
+                : word.text}
             </span>
           );
         })}

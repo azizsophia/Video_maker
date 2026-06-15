@@ -6,7 +6,9 @@ import { Background } from "./Background";
 import { AyahView } from "./Ayah";
 import { Intro, Outro } from "./Cards";
 import { Watermark } from "./Watermark";
+import { TajweedLegend } from "./TajweedLegend";
 import { hiddenForRepetition, repetitionLabel } from "./hifz";
+import { canonicalRule } from "./tajweed";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const FPS = 30;
@@ -62,8 +64,18 @@ export const totalDurationInFrames = (props: QuranProps): number =>
   ayahsDurationInFrames(props) +
   Math.round(props.outroSeconds * FPS);
 
+// Collect the distinct tajweed rules present, for the legend.
+export const tajweedRulesPresent = (props: QuranProps): string[] => {
+  const set = new Set<string>();
+  for (const a of props.ayahs)
+    for (const w of a.words)
+      for (const r of w.runs ?? []) if (r.rule) set.add(canonicalRule(r.rule));
+  return Array.from(set);
+};
+
 export const QuranComposition: React.FC<QuranProps> = (props) => {
   const theme = themes[props.theme];
+  const showTajweed = props.mode === "tajweed";
   const introFrames = Math.round(props.introSeconds * FPS);
   const outroFrames = Math.round(props.outroSeconds * FPS);
   const ayahsFrames = ayahsDurationInFrames(props);
@@ -76,6 +88,7 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
       {/* Intro title card */}
       <Sequence from={0} durationInFrames={introFrames}>
         <Intro
+          basmala={props.basmala}
           surahNameArabic={props.surahNameArabic}
           surahNameEnglish={props.surahNameEnglish}
           channelName={props.channelName}
@@ -124,14 +137,27 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
               durationInFrames={seg.frames}
               hiddenWords={seg.hiddenWords}
               repetitionLabel={seg.repetitionLabel}
+              showTajweed={showTajweed}
             />
           </Sequence>
         );
       })}
 
+      {/* Tajweed legend (only in tajweed mode, only during recitation) */}
+      {showTajweed ? (
+        <Sequence from={introFrames} durationInFrames={ayahsFrames}>
+          <TajweedLegend rules={tajweedRulesPresent(props)} />
+        </Sequence>
+      ) : null}
+
       {/* Outro card */}
       <Sequence from={introFrames + ayahsFrames} durationInFrames={outroFrames}>
-        <Outro channelName={props.channelName} theme={theme} />
+        <Outro
+          surahNameArabic={props.surahNameArabic}
+          surahNameEnglish={props.surahNameEnglish}
+          channelName={props.channelName}
+          theme={theme}
+        />
       </Sequence>
 
       {/* Anti-theft watermark over everything */}
