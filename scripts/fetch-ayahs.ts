@@ -273,7 +273,7 @@ async function main() {
     basmala,
     channelName: args.channelName ?? "Ketabi Studio",
     websiteUrl: args.website ?? "ketabistudio.com",
-    showCourseCta: args.cta === "true",
+    showCourseCta: args.cta !== "false",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
     introSeconds: args.intro ? Number(args.intro) : 5,
     outroSeconds: args.outro ? Number(args.outro) : 4,

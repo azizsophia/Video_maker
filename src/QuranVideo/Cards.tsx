@@ -248,7 +248,7 @@ export const Outro: React.FC<{
             color: theme.translation,
           }}
         >
-          Memorize the whole Qur'an, ayah by ayah
+          Find more at
         </div>
         <div
           style={{
