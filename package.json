@@ -1,0 +1,31 @@
+{
+  "name": "ketabi-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ketabi Studio - code-driven Islamic video engine. Milestone 1: Quran recitation videos with word-by-word synced highlighting using real reciter audio.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "remotion studio",
+    "fetch": "tsx scripts/fetch-ayahs.ts",
+    "render": "remotion render QuranRecitation out/quran.mp4",
+    "render:sample": "remotion render QuranRecitation out/al-ikhlas.mp4 --props=src/data/sample-al-ikhlas.json",
+    "still": "remotion still QuranRecitation out/preview.png --props=src/data/sample-al-ikhlas.json --frame=120",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/amiri": "^5.0.13",
+    "@fontsource/scheherazade-new": "^5.0.13",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}

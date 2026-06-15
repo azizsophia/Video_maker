@@ -1,0 +1,88 @@
+name: Render Quran Video
+
+# Phone-first: trigger this from the GitHub mobile app
+# (Actions tab -> "Render Quran Video" -> Run workflow), fill the fields,
+# then download the finished MP4 from the run's Artifacts when it's done.
+on:
+  workflow_dispatch:
+    inputs:
+      surah:
+        description: "Surah number (1-114)"
+        required: true
+        default: "112"
+      from:
+        description: "First ayah (optional, blank = whole surah)"
+        required: false
+        default: ""
+      to:
+        description: "Last ayah (optional, blank = whole surah)"
+        required: false
+        default: ""
+      recitation:
+        description: "Reciter id (7=Alafasy, 3=Sudais, 2=AbdulBaset, 6=Husary)"
+        required: true
+        default: "7"
+      translation:
+        description: "Translation id (20=Saheeh Intl, 131=Clear Quran)"
+        required: true
+        default: "20"
+      theme:
+        description: "Theme: midnight | emerald | sand"
+        required: true
+        default: "midnight"
+      orientation:
+        description: "vertical (Shorts/TikTok) or wide (YouTube)"
+        required: true
+        default: "vertical"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      # Libraries Remotion's headless Chrome needs on Linux runners.
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 || \
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch ayahs + audio
+        run: |
+          ARGS="--surah=${{ inputs.surah }} --recitation=${{ inputs.recitation }} --translation=${{ inputs.translation }} --theme=${{ inputs.theme }}"
+          if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from=${{ inputs.from }}"; fi
+          if [ -n "${{ inputs.to }}" ]; then ARGS="$ARGS --to=${{ inputs.to }}"; fi
+          npx tsx scripts/fetch-ayahs.ts $ARGS --out=src/data/render.json
+
+      - name: Render video
+        run: |
+          COMP="QuranRecitation"
+          if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="QuranRecitationWide"; fi
+          mkdir -p out
+          npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" --props=src/data/render.json
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: quran-surah-${{ inputs.surah }}
+          path: out/*.mp4
+          retention-days: 14
+
+      # OPTIONAL: auto-upload to Google Drive. Add repo secrets
+      # GDRIVE_CREDENTIALS (service-account JSON) and GDRIVE_FOLDER_ID to enable.
+      - name: Upload to Google Drive
+        if: ${{ env.GDRIVE_FOLDER_ID != '' }}
+        env:
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+        run: echo "Drive upload step is a placeholder — see docs/SETUP.md to wire it up."
