@@ -181,6 +181,7 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
           reciterName={props.reciterName}
           translationName={props.translationName}
           websiteUrl={props.websiteUrl}
+          showCourseCta={props.showCourseCta}
           theme={theme}
         />
       </Sequence>

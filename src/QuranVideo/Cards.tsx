@@ -169,6 +169,7 @@ export const Outro: React.FC<{
   reciterName?: string;
   translationName?: string;
   websiteUrl?: string;
+  showCourseCta?: boolean;
   theme: ThemePalette;
 }> = ({
   surahNameArabic,
@@ -178,6 +179,7 @@ export const Outro: React.FC<{
   reciterName,
   translationName,
   websiteUrl,
+  showCourseCta = false,
   theme,
 }) => {
   const frame = useCurrentFrame();
@@ -221,7 +223,8 @@ export const Outro: React.FC<{
           margin: "44px 0",
         }}
       />
-      {/* Course call-to-action. */}
+      {/* Course call-to-action (only once the course is live). */}
+      {showCourseCta ? (
       <div
         style={{
           transform: `scale(${0.85 + cta * 0.15})`,
@@ -259,6 +262,7 @@ export const Outro: React.FC<{
           {websiteUrl}
         </div>
       </div>
+      ) : null}
       <div
         style={{
           fontFamily: TRANSLATION_FONT,
