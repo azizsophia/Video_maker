@@ -71,6 +71,16 @@ There is **no GPU, Blender or system ffmpeg** in play — it is a small, fully
   vignette, film grain and 2.39:1 letterbox bars before being piped to a bundled
   `ffmpeg` (via `imageio-ffmpeg`) and encoded to H.264.
 
+## Delivery to Google Drive (phone-first)
+
+Finished videos are delivered to Google Drive by a **GitHub Action**, not by
+pasting base64 (which can't carry a real video). Trigger it from the GitHub
+mobile app: **Actions → Render & Upload to Drive → Run workflow**, choosing
+`upload-existing` (upload the committed MP4) or `render-and-upload` (render
+fresh first). One-time credential setup is in
+[`docs/DRIVE_SETUP.md`](docs/DRIVE_SETUP.md); the uploader is
+`scripts/upload_to_drive.py`.
+
 ## Project layout
 
 ```

@@ -1,0 +1,68 @@
+name: Render & Upload to Drive
+
+# Phone-first: trigger from the GitHub mobile app / web via "Run workflow".
+# Renders (optionally) and uploads the finished MP4 straight to your Google
+# Drive — no base64, no size limit, no corruption.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to do"
+        type: choice
+        default: upload-existing
+        options:
+          - upload-existing      # upload the committed web MP4 (fast)
+          - render-and-upload    # render fresh, then upload
+      file:
+        description: "File to upload (for upload-existing) or output path"
+        default: output/ayat_al_kursi_cinematic_web.mp4
+      drive_name:
+        description: "Title to use in Google Drive"
+        default: "Ayat al-Kursi — Cinematic (Ketabi Studio).mp4"
+
+jobs:
+  render-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system fonts (Latin)
+        run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install google-api-python-client google-auth google-auth-oauthlib
+
+      - name: Render (optional)
+        if: ${{ github.event.inputs.mode == 'render-and-upload' }}
+        run: |
+          bash scripts/setup.sh
+          python3 src/cinematic.py --out output/master.mp4 --width 1920 --height 1080 --fps 30
+          FFMPEG=$(python3 -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())")
+          "$FFMPEG" -y -i output/master.mp4 -c:v libx264 -preset slow -crf 23 \
+            -pix_fmt yuv420p -movflags +faststart "${{ github.event.inputs.file }}"
+
+      - name: Upload to Google Drive
+        env:
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+        run: |
+          python3 scripts/upload_to_drive.py \
+            --file "${{ github.event.inputs.file }}" \
+            --name "${{ github.event.inputs.drive_name }}" \
+            --mime video/mp4 \
+            --replace
+
+      - name: Summary
+        run: echo "Done. Check your Google Drive for '${{ github.event.inputs.drive_name }}'."
