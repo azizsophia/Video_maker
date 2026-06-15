@@ -256,7 +256,14 @@ async function main() {
       timing: timingIssues.length ? timingIssues.join(", ") : "ok",
     });
 
-    const audioUrl = AUDIO_BASE + v.audio.url;
+    // Some reciters return an absolute or protocol-relative audio URL; others
+    // a path relative to verses.quran.com. Handle all three.
+    const rawAudio = v.audio.url as string;
+    const audioUrl = /^https?:\/\//.test(rawAudio)
+      ? rawAudio
+      : rawAudio.startsWith("//")
+        ? "https:" + rawAudio
+        : AUDIO_BASE + rawAudio.replace(/^\/+/, "");
     const fileName = `${String(surah).padStart(3, "0")}${String(ayahNum).padStart(3, "0")}.mp3`;
     await download(audioUrl, join(publicDir, fileName));
     console.log(`  ${key}: ${apiWords.length} words, ~${durationInSeconds.toFixed(1)}s`);
