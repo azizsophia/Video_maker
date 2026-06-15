@@ -237,6 +237,17 @@ async function main() {
     });
   }
 
+  // Fail loudly rather than emitting an empty video (which crashes the render
+  // with a cryptic "durationInFrames must be positive" error downstream).
+  if (ayahs.length === 0) {
+    const range =
+      from || to ? ` with --from=${from ?? ""} --to=${to ?? ""}` : "";
+    throw new Error(
+      `No ayahs matched for surah ${surah}${range}. ` +
+        `Surah ${surah} has ${data.verses.length} ayahs — check the range.`
+    );
+  }
+
   if (mode === "tajweed")
     console.log(`  tajweed colouring applied to ${tajweedApplied}/${ayahs.length} ayahs`);
 
