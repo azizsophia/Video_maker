@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+output/preview*.mp4
+output/diag*.png
+output/pf_*.png
+output/seg1.png
+output/render.log
+.DS_Store
