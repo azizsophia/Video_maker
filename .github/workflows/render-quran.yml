@@ -38,6 +38,10 @@ on:
         description: "Hifz only: repetitions per ayah (2-8)"
         required: false
         default: "4"
+      transliteration:
+        description: "Show romanized pronunciation line: true | false"
+        required: false
+        default: "true"
       orientation:
         description: "vertical (Shorts/TikTok) or wide (YouTube)"
         required: true
@@ -69,7 +73,7 @@ jobs:
       - name: Fetch ayahs + audio
         run: |
           ARGS="--surah=${{ inputs.surah }} --recitation=${{ inputs.recitation }} --translation=${{ inputs.translation }} --theme=${{ inputs.theme }}"
-          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }}"
+          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }}"
           if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from=${{ inputs.from }}"; fi
           if [ -n "${{ inputs.to }}" ]; then ARGS="$ARGS --to=${{ inputs.to }}"; fi
           npx tsx scripts/fetch-ayahs.ts $ARGS --out=src/data/render.json

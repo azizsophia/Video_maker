@@ -7,7 +7,7 @@ import { AyahView } from "./Ayah";
 import { Intro, Outro } from "./Cards";
 import { Watermark } from "./Watermark";
 import { TajweedLegend } from "./TajweedLegend";
-import { hiddenForRepetition, repetitionLabel } from "./hifz";
+import { revealForRepetition, repetitionLabel, Reveal } from "./hifz";
 import { canonicalRule } from "./tajweed";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
@@ -26,7 +26,7 @@ export type Segment = {
   key: string;
   ayah: Ayah;
   frames: number;
-  hiddenWords: number[];
+  reveal?: Reveal; // present only in Hifz mode
   repetitionLabel?: string;
 };
 
@@ -40,20 +40,23 @@ export const buildSegments = (props: QuranProps): Segment[] => {
           key: `${ayah.key}-r${rep}`,
           ayah,
           frames,
-          hiddenWords: hiddenForRepetition(
-            ayah.words.length,
-            rep,
-            props.hifzRepeats,
-            ayah.number
-          ),
+          reveal: revealForRepetition(rep, props.hifzRepeats),
           repetitionLabel: repetitionLabel(rep, props.hifzRepeats),
         });
       }
     } else {
-      segs.push({ key: ayah.key, ayah, frames, hiddenWords: [] });
+      segs.push({ key: ayah.key, ayah, frames });
     }
   }
   return segs;
+};
+
+// "2:255" for a single ayah, or "2:255–256" for a range.
+export const ayahReference = (props: QuranProps): string => {
+  const a = props.ayahs;
+  if (a.length === 0) return "";
+  if (a.length === 1) return a[0].key;
+  return `${a[0].key}–${a[a.length - 1].number}`;
 };
 
 export const ayahsDurationInFrames = (props: QuranProps): number =>
@@ -92,6 +95,8 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
           surahNameArabic={props.surahNameArabic}
           surahNameEnglish={props.surahNameEnglish}
           channelName={props.channelName}
+          brandSrc={props.watermarkSrc}
+          ayahReference={ayahReference(props)}
           theme={theme}
         />
       </Sequence>
@@ -135,9 +140,10 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
               ayah={seg.ayah}
               theme={theme}
               durationInFrames={seg.frames}
-              hiddenWords={seg.hiddenWords}
+              reveal={seg.reveal}
               repetitionLabel={seg.repetitionLabel}
               showTajweed={showTajweed}
+              showTransliteration={props.showTransliteration}
             />
           </Sequence>
         );
@@ -156,6 +162,7 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
           surahNameArabic={props.surahNameArabic}
           surahNameEnglish={props.surahNameEnglish}
           channelName={props.channelName}
+          ayahReference={ayahReference(props)}
           theme={theme}
         />
       </Sequence>

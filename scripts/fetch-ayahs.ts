@@ -147,7 +147,7 @@ async function main() {
   const versesUrl =
     `${API}/verses/by_chapter/${surah}?language=en&words=true` +
     `&translations=${translation}&audio=${recitation}` +
-    `&fields=text_uthmani&word_fields=text_uthmani&per_page=300`;
+    `&fields=text_uthmani&word_fields=text_uthmani,transliteration&per_page=300`;
   const data = await getJson<any>(versesUrl);
 
   // Optional independent source for cross-verification of the bare text.
@@ -181,7 +181,16 @@ async function main() {
 
     const apiWords = (v.words as any[])
       .filter((w) => w.char_type_name === "word")
-      .map((w) => ({ text: w.text_uthmani as string, position: w.position as number }));
+      .map((w) => ({
+        text: w.text_uthmani as string,
+        position: w.position as number,
+        translit: (w.transliteration?.text as string) ?? "",
+      }));
+    // Romanized line for the whole ayah (pronunciation aid).
+    const transliteration = apiWords
+      .map((w) => w.translit)
+      .filter(Boolean)
+      .join(" ");
 
     const segments: number[][] = v.audio?.segments ?? [];
     const timed = apiWords.map((w, i) => {
@@ -231,6 +240,7 @@ async function main() {
       key,
       arabic: uthmaniText,
       translation: stripHtml(v.translations?.[0]?.text ?? ""),
+      transliteration: transliteration || undefined,
       audioSrc: `${audioDir}/${fileName}`,
       durationInSeconds: Number(durationInSeconds.toFixed(2)),
       words: timed.map((w) => (w.runs ? w : { text: w.text, start: w.start, end: w.end })),
@@ -259,6 +269,7 @@ async function main() {
     theme,
     mode,
     hifzRepeats: args.repeats ? Number(args.repeats) : 4,
+    showTransliteration: args.transliteration === "true" || args.translit === "true",
     basmala,
     channelName: args.channelName ?? "Ketabi Studio",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
