@@ -42,16 +42,21 @@ const GeometricPattern: React.FC<{ color: string }> = ({ color }) => {
   return (
     <svg width="100%" height="100%" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid slice">
       <defs>
-        <pattern id="stars" width="180" height="180" patternUnits="userSpaceOnUse">
-          {/* Eight-pointed star (khatam) — a classic Islamic motif. */}
+        <pattern id="rosette" width="180" height="180" patternUnits="userSpaceOnUse">
+          {/* Interlaced-circle rosette (flower-of-life lattice) — a purely
+              circular Islamic geometric motif, with no pointed-star shapes. */}
           <g stroke={color} strokeWidth="1.5" fill="none">
-            <path d="M90 20 L110 70 L160 90 L110 110 L90 160 L70 110 L20 90 L70 70 Z" />
-            <rect x="55" y="55" width="70" height="70" transform="rotate(45 90 90)" />
-            <circle cx="90" cy="90" r="48" />
+            <circle cx="90" cy="90" r="52" />
+            <circle cx="90" cy="90" r="30" />
+            <circle cx="0" cy="90" r="52" />
+            <circle cx="180" cy="90" r="52" />
+            <circle cx="90" cy="0" r="52" />
+            <circle cx="90" cy="180" r="52" />
           </g>
+          <circle cx="90" cy="90" r="5" fill={color} />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#stars)" />
+      <rect width="100%" height="100%" fill="url(#rosette)" />
     </svg>
   );
 };

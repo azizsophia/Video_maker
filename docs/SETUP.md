@@ -27,18 +27,50 @@ internet, so phone-triggered renders work without any allowlist changes.
 The Quran template (M1) does **not** use TTS — it uses real reciter audio — so
 you can ship Quran videos before setting this up.
 
-## 3. Google Drive auto-upload (optional)
+## 3. Google Drive auto-upload
 
-To have finished videos land in your Drive automatically:
+Finished videos upload straight to your Drive from the render workflow (no
+base64, no size limit). The uploader is `scripts/upload_to_drive.py`; the
+"Upload to Google Drive" step runs automatically once the secrets below exist.
 
-1. In Google Cloud, create a **service account** and enable the **Drive API**.
-2. Download its JSON key. Share your target Drive folder with the service
-   account's email, and copy the folder id from its URL.
-3. Add repo secrets:
-   - `GDRIVE_CREDENTIALS` — the full service-account JSON
-   - `GDRIVE_FOLDER_ID` — the destination folder id
-4. The render workflow has a guarded "Upload to Google Drive" step that activates
-   once `GDRIVE_FOLDER_ID` is present.
+### Recommended for a personal @gmail — OAuth refresh token
+
+A service account **cannot** store files in a consumer (personal) Google Drive
+(it has no storage quota there), so use the OAuth method — the upload happens as
+*you*, and files land in your Drive normally. All steps are phone-browser doable.
+
+**A) Make an OAuth client (Google Cloud Console, signed in as your channel gmail)**
+1. **console.cloud.google.com** → create a project (e.g. `Ketabi`).
+2. Search **Google Drive API** → **Enable**.
+3. **APIs & Services → OAuth consent screen** → External → fill the name/emails.
+   Under **Audience**, either add your gmail under **Test users**, *or* tap
+   **Publish app** (publishing avoids the "app not verified / access blocked"
+   wall on the next step).
+4. **APIs & Services → Credentials → Create credentials → OAuth client ID** →
+   **Web application** → add redirect URI
+   `https://developers.google.com/oauthplayground` → Create. Copy the
+   **Client ID** and **Client secret**.
+
+**B) Get a refresh token (OAuth Playground)**
+1. **developers.google.com/oauthplayground** → gear ⚙︎ → check
+   **Use your own OAuth credentials** → paste your Client ID + secret.
+2. In Step 1, paste the scope `https://www.googleapis.com/auth/drive` →
+   **Authorize APIs** → sign in → (if warned) **Advanced → continue**.
+3. Step 2 → **Exchange authorization code for tokens** → copy the **Refresh token**.
+
+**C) Add repo secrets** (Settings → Secrets and variables → Actions)
+- `GDRIVE_CLIENT_ID`
+- `GDRIVE_CLIENT_SECRET`
+- `GDRIVE_REFRESH_TOKEN`
+- `GDRIVE_FOLDER_ID` *(optional — a Drive folder id from its URL; else root)*
+
+Re-running with the same title overwrites the file (no duplicates).
+
+### Alternative — service account (Google Workspace / Shared Drive only)
+
+If you use a Workspace account uploading into a **Shared Drive**, add the full
+service-account JSON as `GDRIVE_SA_JSON` (and `GDRIVE_FOLDER_ID`). The uploader
+auto-detects whichever secret set is present.
 
 ## 4. Reciter & translation ids (Quran.com)
 

@@ -88,10 +88,39 @@ jobs:
           path: out/*.mp4
           retention-days: 14
 
-      # OPTIONAL: auto-upload to Google Drive. Add repo secrets
-      # GDRIVE_CREDENTIALS (service-account JSON) and GDRIVE_FOLDER_ID to enable.
-      - name: Upload to Google Drive
-        if: ${{ env.GDRIVE_FOLDER_ID != '' }}
+      # Auto-upload to your Google Drive. For a personal @gmail account add the
+      # OAuth secrets GDRIVE_CLIENT_ID / GDRIVE_CLIENT_SECRET / GDRIVE_REFRESH_TOKEN
+      # (and optionally GDRIVE_FOLDER_ID). See docs/SETUP.md §3. The upload is
+      # skipped automatically until those secrets exist.
+      - name: Check Drive credentials
+        id: drive
         env:
+          RT: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          SA: ${{ secrets.GDRIVE_SA_JSON }}
+        run: |
+          if [ -n "$RT" ] || [ -n "$SA" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "No Drive secrets set — skipping upload (download from Artifacts above)."
+          fi
+
+      - name: Set up Python (for Drive upload)
+        if: ${{ steps.drive.outputs.enabled == 'true' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Upload to Google Drive
+        if: ${{ steps.drive.outputs.enabled == 'true' }}
+        env:
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
-        run: echo "Drive upload step is a placeholder — see docs/SETUP.md to wire it up."
+        run: |
+          pip install --quiet google-api-python-client google-auth google-auth-oauthlib
+          NAME="Ketabi — Surah ${{ inputs.surah }} (${{ inputs.mode }}, ${{ inputs.orientation }}).mp4"
+          FILE=$(ls out/*.mp4 | head -n1)
+          python3 scripts/upload_to_drive.py --file "$FILE" --name "$NAME" --mime video/mp4 --replace
