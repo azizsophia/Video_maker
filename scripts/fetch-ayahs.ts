@@ -149,6 +149,8 @@ async function main() {
     reciterName: args.reciterName ?? RECITER_NAMES[recitation] ?? `Recitation ${recitation}`,
     translationName: args.translationName ?? "Saheeh International",
     theme,
+    mode: args.mode === "hifz" ? "hifz" : "standard",
+    hifzRepeats: args.repeats ? Number(args.repeats) : 4,
     channelName: args.channelName ?? "Ketabi Studio",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
     introSeconds: args.intro ? Number(args.intro) : 5,

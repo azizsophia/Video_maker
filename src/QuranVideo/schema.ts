@@ -20,12 +20,21 @@ export const ayahSchema = z.object({
 
 export const themeSchema = z.enum(["midnight", "emerald", "sand"]);
 
+// "standard" = clean word-by-word recitation.
+// "hifz" = memorization drill: each ayah repeats while words progressively
+// blank out so the viewer recites the gaps from memory.
+export const modeSchema = z.enum(["standard", "hifz"]);
+
 export const quranPropsSchema = z.object({
   surahNameEnglish: z.string(),
   surahNameArabic: z.string(),
   reciterName: z.string(),
   translationName: z.string(),
   theme: themeSchema,
+  mode: modeSchema.default("standard"),
+  // Hifz mode: how many times each ayah repeats (first pass full text,
+  // last pass fully blanked — "recite from memory").
+  hifzRepeats: z.number().int().min(2).max(8).default(4),
   // Channel name shown on the intro/outro cards (e.g. "Ketabi Studio").
   channelName: z.string().default("Ketabi Studio"),
   // Gap of silence held between ayahs (seconds) for breathing room.

@@ -4,6 +4,8 @@
   "reciterName": "AbdulBaset AbdulSamad (Murattal)",
   "translationName": "Sahih International",
   "theme": "midnight",
+  "mode": "standard",
+  "hifzRepeats": 4,
   "channelName": "Ketabi Studio",
   "ayahGapSeconds": 0.5,
   "introSeconds": 5,

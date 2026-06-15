@@ -1,11 +1,12 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
-import { QuranProps } from "./schema";
+import { QuranProps, Ayah } from "./schema";
 import { themes } from "./themes";
 import { Background } from "./Background";
 import { AyahView } from "./Ayah";
 import { Intro, Outro } from "./Cards";
 import { Watermark } from "./Watermark";
+import { hiddenForRepetition, repetitionLabel } from "./hifz";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const FPS = 30;
@@ -17,11 +18,44 @@ const resolveAudio = (src: string): string =>
 export const ayahFrameLength = (durationInSeconds: number, gapSeconds: number): number =>
   Math.round((durationInSeconds + gapSeconds) * FPS);
 
+// One on-screen unit. In standard mode there's one per ayah; in Hifz mode each
+// ayah expands into several repetitions with progressively more words hidden.
+export type Segment = {
+  key: string;
+  ayah: Ayah;
+  frames: number;
+  hiddenWords: number[];
+  repetitionLabel?: string;
+};
+
+export const buildSegments = (props: QuranProps): Segment[] => {
+  const segs: Segment[] = [];
+  for (const ayah of props.ayahs) {
+    const frames = ayahFrameLength(ayah.durationInSeconds, props.ayahGapSeconds);
+    if (props.mode === "hifz") {
+      for (let rep = 0; rep < props.hifzRepeats; rep++) {
+        segs.push({
+          key: `${ayah.key}-r${rep}`,
+          ayah,
+          frames,
+          hiddenWords: hiddenForRepetition(
+            ayah.words.length,
+            rep,
+            props.hifzRepeats,
+            ayah.number
+          ),
+          repetitionLabel: repetitionLabel(rep, props.hifzRepeats),
+        });
+      }
+    } else {
+      segs.push({ key: ayah.key, ayah, frames, hiddenWords: [] });
+    }
+  }
+  return segs;
+};
+
 export const ayahsDurationInFrames = (props: QuranProps): number =>
-  props.ayahs.reduce(
-    (sum, a) => sum + ayahFrameLength(a.durationInSeconds, props.ayahGapSeconds),
-    0
-  );
+  buildSegments(props).reduce((sum, s) => sum + s.frames, 0);
 
 export const totalDurationInFrames = (props: QuranProps): number =>
   Math.round(props.introSeconds * FPS) +
@@ -77,15 +111,20 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
         </AbsoluteFill>
       </Sequence>
 
-      {/* Ayah sequences with synced audio */}
-      {props.ayahs.map((ayah) => {
-        const frames = ayahFrameLength(ayah.durationInSeconds, props.ayahGapSeconds);
+      {/* Ayah / repetition sequences with synced audio */}
+      {buildSegments(props).map((seg) => {
         const from = cursor;
-        cursor += frames;
+        cursor += seg.frames;
         return (
-          <Sequence key={ayah.key} from={from} durationInFrames={frames}>
-            <Audio src={resolveAudio(ayah.audioSrc)} />
-            <AyahView ayah={ayah} theme={theme} durationInFrames={frames} />
+          <Sequence key={seg.key} from={from} durationInFrames={seg.frames}>
+            <Audio src={resolveAudio(seg.ayah.audioSrc)} />
+            <AyahView
+              ayah={seg.ayah}
+              theme={theme}
+              durationInFrames={seg.frames}
+              hiddenWords={seg.hiddenWords}
+              repetitionLabel={seg.repetitionLabel}
+            />
           </Sequence>
         );
       })}

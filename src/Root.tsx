@@ -40,6 +40,20 @@ export const RemotionRoot: React.FC = () => {
           durationInFrames: Math.max(1, totalDurationInFrames(props)),
         })}
       />
+
+      {/* Hifz (memorization) preview — same engine, mode flipped on */}
+      <Composition
+        id="QuranHifz"
+        component={QuranComposition}
+        schema={quranPropsSchema}
+        defaultProps={{ ...defaultProps, mode: "hifz", hifzRepeats: 4 }}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: Math.max(1, totalDurationInFrames(props)),
+        })}
+      />
     </>
   );
 };

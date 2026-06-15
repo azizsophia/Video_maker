@@ -17,10 +17,13 @@ export const AyahView: React.FC<{
   ayah: AyahType;
   theme: ThemePalette;
   durationInFrames: number;
-}> = ({ ayah, theme, durationInFrames }) => {
+  hiddenWords?: number[]; // indices of words to blank out (Hifz mode)
+  repetitionLabel?: string; // e.g. "Repetition 2 / 4"
+}> = ({ ayah, theme, durationInFrames, hiddenWords = [], repetitionLabel }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps; // seconds within this ayah
+  const hidden = new Set(hiddenWords);
 
   // Gentle fade in/out at the edges of the ayah's time on screen.
   const fadeIn = interpolate(frame, [0, 12], [0, 1], { extrapolateRight: "clamp" });
@@ -44,6 +47,21 @@ export const AyahView: React.FC<{
         opacity,
       }}
     >
+      {repetitionLabel ? (
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 26,
+            letterSpacing: 3,
+            color: theme.accent,
+            opacity: 0.85,
+            marginBottom: 40,
+            textTransform: "uppercase",
+          }}
+        >
+          {repetitionLabel}
+        </div>
+      ) : null}
       <div
         dir="rtl"
         style={{
@@ -67,16 +85,27 @@ export const AyahView: React.FC<{
             [0, 1],
             { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
           );
+          const isHidden = hidden.has(i);
           return (
             <span
               key={i}
               style={{
-                color: active ? theme.arabicActive : theme.arabicIdle,
-                textShadow: active
-                  ? `0 0 30px ${theme.arabicGlow}, 0 0 60px ${theme.arabicGlow}`
-                  : "none",
+                // Blanked words keep their footprint (transparent glyphs) so the
+                // line never reflows; a tile + glow marks where the word is.
+                color: isHidden ? "transparent" : active ? theme.arabicActive : theme.arabicIdle,
+                background: isHidden
+                  ? active
+                    ? theme.arabicGlow
+                    : `${theme.accent}22`
+                  : "transparent",
+                borderRadius: isHidden ? 14 : 0,
+                boxShadow: isHidden && active ? `0 0 30px ${theme.arabicGlow}` : "none",
+                textShadow:
+                  !isHidden && active
+                    ? `0 0 30px ${theme.arabicGlow}, 0 0 60px ${theme.arabicGlow}`
+                    : "none",
                 transform: `scale(${1 + sungProgress * 0.06})`,
-                transition: "color 0.12s linear",
+                transition: "color 0.12s linear, background 0.12s linear",
                 display: "inline-block",
               }}
             >

@@ -70,9 +70,26 @@ Vertical (`QuranRecitation`, 1080×1920) is for Shorts/TikTok/Reels.
 
 ---
 
+## Hifz (memorization) mode
+
+A format that doesn't exist as a shareable video anywhere else: each ayah
+repeats while words progressively blank out, so the viewer recites the gaps
+from memory (first pass full, final pass blank). Turn it on with `mode`:
+
+```bash
+npm run fetch -- --surah=112 --recitation=2 --mode=hifz --repeats=4
+npx remotion render QuranRecitation out/al-ikhlas-hifz.mp4 --props=src/data/surah-112.json
+```
+
+Preview it live as the `QuranHifz` composition in `npm run dev`.
+
 ## Roadmap
 
 - [x] **M1 — Quran recitation template** (word-by-word synced, real reciters)
+- [x] **Hifz memorization mode** (progressive word blanking)
+- [ ] **Tajweed color-coding** (letters colored by rule, in sync)
+- [ ] **Word-by-word meaning layer** (transliteration + literal meaning per word)
+- [ ] **3D audio-reactive scenes** (`@remotion/three`, verse-meaning environments)
 - [ ] **M2 — Story / prophets template**: script → ElevenLabs British narrator +
       Pexels stock visuals + captions (the InVideo replacement)
 - [ ] **M3 — Phone web app**: Next.js on Vercel + Supabase; paste a script,
