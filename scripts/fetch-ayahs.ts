@@ -73,6 +73,17 @@ const baseLetters = (s: string): string =>
     .replace(/\s+/g, " ")
     .trim();
 
+// Even more lenient fold, used ONLY for the two-source text cross-check so it
+// doesn't flag cosmetic orthography differences between valid Uthmani editions
+// (alef-maksura vs ya, hamza-seat variants). Never affects the displayed text.
+const compareLetters = (s: string): string =>
+  baseLetters(s)
+    .replace(/[ىئ]/g, "ي")
+    .replace(/ؤ/g, "و")
+    .replace(/ء/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
 // Split a parsed tajweed run list into words (runs grouped per word).
 const tajweedWords = (runs: Run[]): { text: string; runs: Run[] }[] => {
   const words: { text: string; runs: Run[] }[] = [];
@@ -206,7 +217,7 @@ async function main() {
     if (apiWords.length === 0) throw new Error(`${key}: no words returned`);
     if (!ARABIC_ONLY.test(uthmaniText))
       throw new Error(`${key}: text contains non-Arabic characters — aborting`);
-    if (verifyMap[key] && baseLetters(verifyMap[key]) !== baseLetters(uthmaniText))
+    if (verifyMap[key] && compareLetters(verifyMap[key]) !== compareLetters(uthmaniText))
       console.warn(`  ⚠️  ${key}: text differs from cross-check source (review before publishing)`);
     const missingTimings = timed.filter((w) => w.start === 0 && w.end === 0).length;
     if (missingTimings > 0)
@@ -233,7 +244,7 @@ async function main() {
 
     // --- quality control: record text + timing accuracy for this ayah -----
     const textCheck = verifyMap[key]
-      ? baseLetters(verifyMap[key]) === baseLetters(uthmaniText)
+      ? compareLetters(verifyMap[key]) === compareLetters(uthmaniText)
         ? "match"
         : "MISMATCH"
       : "no-2nd-source";
