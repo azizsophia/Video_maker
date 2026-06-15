@@ -195,43 +195,43 @@ def rot_matrix(ax, ay, az):
     return Rz @ Ry @ Rx
 
 
-def khatam_geometry(depth=0.30, outer=1.0, inner=0.46):
-    """8-pointed Islamic star (Khatam / Rub-el-Hizb) extruded into a 3-D prism.
+def medallion_geometry():
+    """A round ornamental medallion — concentric rings joined by radial spokes,
+    like a rose-window / astrolabe. Deliberately circular (no pointed star
+    polygons) so it reads as Islamic geometry with no resemblance to a hexagram.
 
-    16 vertices alternate outer tip / inner notch to form the star outline;
-    the outline is duplicated front/back and connected into a prism. A small
-    central octagon adds an ornamental core. Returns (vertices, edges, tips)."""
-    n = 8
-    pts2d = []
-    for k in range(2 * n):
-        ang = k * np.pi / n
-        r = outer if k % 2 == 0 else inner
-        pts2d.append((r * np.cos(ang), r * np.sin(ang)))
-    pts2d = np.array(pts2d)                       # 16 points
-    m = len(pts2d)
-    front = np.column_stack([pts2d, np.full(m, depth)])
-    back = np.column_stack([pts2d, np.full(m, -depth)])
-    # central octagon (ornamental ring) on the mid-plane
-    core = []
-    for k in range(n):
-        ang = np.pi / n + k * (2 * np.pi / n)
-        core.append((0.20 * np.cos(ang), 0.20 * np.sin(ang), 0.0))
-    core = np.array(core)
-    verts = np.vstack([front, back, core])
-    fo, bo, co = 0, m, 2 * m
+    The outer ring has a little depth (a thin band) so it tilts in 3-D as it
+    rotates. Returns (vertices, edges, tips)."""
+    no, nm, ni, nspoke = 36, 24, 16, 12
+    d = 0.06
+
+    def ring(n, r, z):
+        a = np.arange(n) * 2 * np.pi / n
+        return np.column_stack([r * np.cos(a), r * np.sin(a), np.full(n, z)])
+
+    outerF = ring(no, 1.00, d)
+    outerB = ring(no, 1.00, -d)
+    mid = ring(nm, 0.62, 0.0)
+    inner = ring(ni, 0.30, 0.0)
+    verts = np.vstack([outerF, outerB, mid, inner])
+    oF, oB, mO, iO = 0, no, 2 * no, 2 * no + nm
     edges = []
-    for k in range(m):
-        edges.append((fo + k, fo + (k + 1) % m))      # front star outline
-        edges.append((bo + k, bo + (k + 1) % m))      # back star outline
-    for k in range(0, m, 2):
-        edges.append((fo + k, bo + k))                # connect outer tips (depth)
-    for k in range(n):
-        edges.append((co + k, co + (k + 1) % n))      # central octagon
-    tips = [fo + k for k in range(0, m, 2)]            # bright outer tips
+    for k in range(no):
+        edges.append((oF + k, oF + (k + 1) % no))      # outer ring front
+        edges.append((oB + k, oB + (k + 1) % no))      # outer ring back
+    for k in range(0, no, 2):
+        edges.append((oF + k, oB + k))                 # band thickness
+    for k in range(nm):
+        edges.append((mO + k, mO + (k + 1) % nm))      # middle ring
+    for k in range(ni):
+        edges.append((iO + k, iO + (k + 1) % ni))      # inner ring
+    for s in range(nspoke):
+        edges.append((iO + (s * ni // nspoke), oF + s * (no // nspoke)))  # spokes
+    tips = [oF + s * (no // nspoke) for s in range(nspoke)]  # bright nodes
     return verts, edges, tips
 
 
-_KHATAM_V, _KHATAM_E, _KHATAM_TIPS = khatam_geometry()
+_KHATAM_V, _KHATAM_E, _KHATAM_TIPS = medallion_geometry()
 
 
 def render_emblem(W, H, t, cz, rot_speed, scale_px, brightness,
@@ -468,6 +468,70 @@ def build_vignette(W, H):
 
 
 # ---------------------------------------------------------------------------
+# Brand watermark (faint, premium, slowly drifting — anti-theft)
+# ---------------------------------------------------------------------------
+
+BRAND_DIR = os.path.join(ROOT, "assets", "brand")
+
+
+def _load_logo(name, W, frac):
+    path = os.path.join(BRAND_DIR, name)
+    if not os.path.exists(path):
+        return None
+    logo = Image.open(path).convert("RGBA")
+    tw = max(1, int(W * frac))
+    th = max(1, int(tw * logo.height / logo.width))
+    return logo.resize((tw, th), Image.LANCZOS)
+
+
+def load_watermark(W):
+    """Return the brand marks used as watermarks.
+
+    hero  — the wordmark for the premium placement inside the bottom bar.
+    guard — a small, faint, drifting wordmark in a corner for anti-theft."""
+    return {
+        "hero": _load_logo("ketabi-horizontal-dark.png", W, 0.150),
+        "guard": _load_logo("ketabi-horizontal-dark.png", W, 0.090),
+    }
+
+
+def _blend_logo(frame, logo, cx, cy, alpha):
+    if logo is None or alpha <= 0.001:
+        return
+    lw, lh = logo.size
+    x0, y0 = int(cx - lw / 2), int(cy - lh / 2)
+    bx0, by0 = max(0, x0), max(0, y0)
+    bx1, by1 = min(frame.shape[1], x0 + lw), min(frame.shape[0], y0 + lh)
+    if bx1 <= bx0 or by1 <= by0:
+        return
+    arr = np.asarray(logo).astype(np.float32)
+    a = (arr[:, :, 3] / 255.0 * alpha)[by0 - y0:by1 - y0, bx0 - x0:bx1 - x0, None]
+    rgb = arr[:, :, :3][by0 - y0:by1 - y0, bx0 - x0:bx1 - x0, :]
+    sub = frame[by0:by1, bx0:bx1, :].astype(np.float32)
+    frame[by0:by1, bx0:bx1, :] = np.clip(sub * (1 - a) + rgb * a, 0, 255).astype(np.uint8)
+
+
+def apply_watermark(frame, marks, t, W, H, bar_h):
+    """Premium hero wordmark centred in the lower letterbox bar, plus a faint
+    drifting wordmark in the top-right active area as an anti-theft guard.
+    Applied after grading so the brand stays crisp."""
+    if not marks:
+        return frame
+    # hero: centred in the bottom cinematic bar (clear of the verse)
+    hero = marks.get("hero")
+    if hero is not None:
+        drift = int(np.sin(t * 0.08) * W * 0.006)
+        _blend_logo(frame, hero, W * 0.5 + drift, H - bar_h / 2, alpha=0.62)
+    # guard: faint, slowly drifting, top-right active area (away from centre text)
+    guard = marks.get("guard")
+    if guard is not None:
+        gx = W * 0.83 + np.sin(t * 0.10) * W * 0.012
+        gy = bar_h + guard.size[1] * 0.9 + np.sin(t * 0.07 + 1.0) * H * 0.010
+        _blend_logo(frame, guard, gx, gy, alpha=0.14)
+    return frame
+
+
+# ---------------------------------------------------------------------------
 # Timeline
 # ---------------------------------------------------------------------------
 
@@ -640,6 +704,8 @@ def render(out_path, W, H, fps, preview=False, seconds_cap=None,
     vignette = build_vignette(W, H)
     bar_h = int((H - W / 2.39) / 2)  # anamorphic 2.39:1
     assets = prepare_assets(W, H)
+    watermark = load_watermark(W)
+    print(f"[brand] watermark={'loaded' if watermark is not None else 'MISSING'}")
 
     # particle fields (parallax depth layers)
     star_far = Field(2600, W, H, 0.18, 7.0, scale=W * 0.115, seed=7,
@@ -668,7 +734,7 @@ def render(out_path, W, H, fps, preview=False, seconds_cap=None,
     if poster_only:
         # render a representative single frame (climax verse) for inspection
         frame = _render_single_poster(assets, star_far, dust, vignette, bar_h,
-                                      W, H, grain_rng)
+                                      W, H, grain_rng, watermark)
         ppath = os.path.join(ROOT, "output", "cinematic_poster.png")
         Image.fromarray(frame).save(ppath)
         print(f"[poster] {ppath}")
@@ -754,6 +820,7 @@ def render(out_path, W, H, fps, preview=False, seconds_cap=None,
                 fade = smooth(abs_t / 1.2)
             frame = post_process(hdr, vignette, grain_rng, done, bar_h,
                                  exposure=1.0, bloom_strength=0.95, ca=1.6)
+            frame = apply_watermark(frame, watermark, abs_t, W, H, bar_h)
             if fade < 1.0:
                 frame = (frame.astype(np.float32) * fade).astype(np.uint8)
 
@@ -774,7 +841,8 @@ def render(out_path, W, H, fps, preview=False, seconds_cap=None,
     return out_path
 
 
-def _render_single_poster(assets, star_far, dust, vignette, bar_h, W, H, grain):
+def _render_single_poster(assets, star_far, dust, vignette, bar_h, W, H, grain,
+                          watermark=None):
     hdr = np.zeros((H, W, 3), dtype=np.float32)
     for _ in range(12):
         star_far.advance(0.01)
@@ -785,7 +853,8 @@ def _render_single_poster(assets, star_far, dust, vignette, bar_h, W, H, grain):
     # paint a verse
     sc = Scene("verse", 6.0, idx=7, total=9)
     paint_verse(hdr, assets, sc, 2.4, W, H)
-    return post_process(hdr, vignette, grain, 0, bar_h, bloom_strength=0.95, ca=1.6)
+    frame = post_process(hdr, vignette, grain, 0, bar_h, bloom_strength=0.95, ca=1.6)
+    return apply_watermark(frame, watermark, 1.4, W, H, bar_h)
 
 
 def main():

@@ -5,7 +5,7 @@ as a video. Two renderers are included:
 
 | Renderer | Look | Command |
 | --- | --- | --- |
-| **Cinematic 3-D** *(flagship)* | A camera flight through a volumetric golden star/dust field, a rotating 3-D 8-pointed Islamic "Throne" emblem (Khatam), HDR bloom, anamorphic 2.39:1 letterbox, chromatic aberration, vignette and film grain. | `python3 src/cinematic.py` |
+| **Cinematic 3-D** *(flagship)* | A camera flight through a volumetric golden star/dust field, a rotating 3-D ornamental medallion (concentric rings + spokes, rose-window / astrolabe style), word-by-word kinetic reveals, a faint Ketabi Studio brand watermark, HDR bloom, anamorphic 2.39:1 letterbox, chromatic aberration, vignette and film grain. | `python3 src/cinematic.py` |
 | **Classic cards** | Clean phrase-by-phrase cards with a gradient background and gold ornaments. | `python3 src/render.py` |
 
 ![Cinematic title](output/cinematic_poster.png)
@@ -55,9 +55,14 @@ There is **no GPU, Blender or system ffmpeg** in play — it is a small, fully
   shrinks) they sweep radially outward — a genuine 3-D dolly. Particles that
   pass the camera are recycled to the far plane for an endless field, and are
   drawn with motion streaks during warp accelerations.
-- **Rotating emblem.** The 8-pointed Khatam star is extruded into a 3-D prism,
-  rotated with real 3×3 rotation matrices and perspective-projected each frame,
-  then drawn as a glowing line figure (sharp core + blurred halo).
+- **Rotating medallion.** A round ornamental medallion (concentric rings joined
+  by radial spokes — a rose-window / astrolabe motif, deliberately circular with
+  no pointed-star geometry) is rotated with real 3×3 rotation matrices and
+  perspective-projected each frame, then drawn as a glowing line figure (sharp
+  core + blurred halo).
+- **Brand watermark.** The Ketabi Studio wordmark is composited after grading —
+  a premium placement in the lower cinematic bar plus a faint, slowly drifting
+  anti-theft guard mark in a corner. Brand assets live in `assets/brand/`.
 - **Text shaping.** Pillow + **libraqm/HarfBuzz** do full Arabic cursive joining
   and bidi directly from logical-order text (with an `arabic-reshaper` +
   `python-bidi` fallback).
