@@ -84,8 +84,10 @@ jobs:
           if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="QuranRecitationWide"; fi
           mkdir -p out
           # Use every available core (Remotion otherwise defaults low on CI).
+          # --crf 23 keeps the (low-motion) video visually crisp but far smaller,
+          # so long-form episodes fit under the Drive web-app upload limit.
           npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" \
-            --props=src/data/render.json --concurrency=$(nproc)
+            --props=src/data/render.json --concurrency=$(nproc) --crf 23
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4

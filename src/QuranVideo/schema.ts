@@ -58,6 +58,8 @@ export const quranPropsSchema = z.object({
   basmala: z.string().default("بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"),
   // Channel name shown on the intro/outro cards (e.g. "Ketabi Studio").
   channelName: z.string().default("Ketabi Studio"),
+  // Course call-to-action shown on the outro (promotes the hifz course).
+  websiteUrl: z.string().default("ketabistudio.com"),
   // Gap of silence held between ayahs (seconds) for breathing room.
   ayahGapSeconds: z.number().default(0.4),
   // Animated title/closing cards that bracket the recitation and help videos

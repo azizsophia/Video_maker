@@ -272,6 +272,7 @@ async function main() {
     showTransliteration: args.transliteration === "true" || args.translit === "true",
     basmala,
     channelName: args.channelName ?? "Ketabi Studio",
+    websiteUrl: args.website ?? "ketabistudio.com",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
     introSeconds: args.intro ? Number(args.intro) : 5,
     outroSeconds: args.outro ? Number(args.outro) : 4,
