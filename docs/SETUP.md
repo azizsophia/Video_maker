@@ -30,47 +30,50 @@ you can ship Quran videos before setting this up.
 ## 3. Google Drive auto-upload
 
 Finished videos upload straight to your Drive from the render workflow (no
-base64, no size limit). The uploader is `scripts/upload_to_drive.py`; the
-"Upload to Google Drive" step runs automatically once the secrets below exist.
+base64 in chat, no size limit). The uploader is `scripts/upload_to_drive.py` and
+runs automatically once one of the secret sets below exists. If none are set,
+the video is still available from the run's **Artifacts**.
 
-### Recommended for a personal @gmail — OAuth refresh token
+### Recommended — Apps Script web app (no OAuth client, no verification wall) ⭐
 
-A service account **cannot** store files in a consumer (personal) Google Drive
-(it has no storage quota there), so use the OAuth method — the upload happens as
-*you*, and files land in your Drive normally. All steps are phone-browser doable.
+This is the easiest path for a personal @gmail. A tiny Google Apps Script runs
+**as you**, so files are owned by you with no service-account quota issue and no
+"app not verified" wall (it's your own script). All steps are phone-doable.
 
-**A) Make an OAuth client (Google Cloud Console, signed in as your channel gmail)**
-1. **console.cloud.google.com** → create a project (e.g. `Ketabi`).
-2. Search **Google Drive API** → **Enable**.
-3. **APIs & Services → OAuth consent screen** → External → fill the name/emails.
-   Under **Audience**, either add your gmail under **Test users**, *or* tap
-   **Publish app** (publishing avoids the "app not verified / access blocked"
-   wall on the next step).
-4. **APIs & Services → Credentials → Create credentials → OAuth client ID** →
-   **Web application** → add redirect URI
-   `https://developers.google.com/oauthplayground` → Create. Copy the
-   **Client ID** and **Client secret**.
+1. Open **script.google.com** → **New project**.
+2. Delete the sample, paste all of **`scripts/drive-webapp.gs`**, and Save.
+3. In the pasted `CONFIG`, set `SECRET` to a long random password (you'll reuse
+   it), and optionally `FOLDER_ID` to a Drive folder id (else it goes to root).
+4. **Deploy → New deployment → (gear) Web app** → *Execute as:* **Me**,
+   *Who has access:* **Anyone** → **Deploy** → **Authorize access** → pick your
+   account → (if warned) **Advanced → Go to … (unsafe) → Allow**.
+5. Copy the Web app **URL** (ends in `/exec`).
+6. Add repo secrets (Settings → Secrets and variables → Actions):
+   - `DRIVE_UPLOAD_URL` = the `/exec` URL
+   - `DRIVE_UPLOAD_TOKEN` = the same `SECRET` from step 3
 
-**B) Get a refresh token (OAuth Playground)**
-1. **developers.google.com/oauthplayground** → gear ⚙︎ → check
-   **Use your own OAuth credentials** → paste your Client ID + secret.
-2. In Step 1, paste the scope `https://www.googleapis.com/auth/drive` →
-   **Authorize APIs** → sign in → (if warned) **Advanced → continue**.
-3. Step 2 → **Exchange authorization code for tokens** → copy the **Refresh token**.
+That's it — every render now drops into your Drive. Re-running with the same
+title replaces the old file (no duplicates).
 
-**C) Add repo secrets** (Settings → Secrets and variables → Actions)
-- `GDRIVE_CLIENT_ID`
-- `GDRIVE_CLIENT_SECRET`
-- `GDRIVE_REFRESH_TOKEN`
-- `GDRIVE_FOLDER_ID` *(optional — a Drive folder id from its URL; else root)*
+### Alternative — OAuth refresh token
 
-Re-running with the same title overwrites the file (no duplicates).
+If you prefer the API route: make an OAuth client (Google Cloud Console →
+enable **Drive API** → **OAuth consent screen**: under **Audience** add your
+gmail as a **Test user** *or* **Publish app** to clear the "access blocked"
+wall → **Credentials → OAuth client ID → Web application** with redirect URI
+`https://developers.google.com/oauthplayground`). Then at
+**developers.google.com/oauthplayground** (gear → *Use your own OAuth
+credentials*), authorize the scope `https://www.googleapis.com/auth/drive` and
+**Exchange authorization code for tokens**. Add `GDRIVE_CLIENT_ID`,
+`GDRIVE_CLIENT_SECRET`, `GDRIVE_REFRESH_TOKEN` (and optional `GDRIVE_FOLDER_ID`)
+as secrets.
 
 ### Alternative — service account (Google Workspace / Shared Drive only)
 
-If you use a Workspace account uploading into a **Shared Drive**, add the full
-service-account JSON as `GDRIVE_SA_JSON` (and `GDRIVE_FOLDER_ID`). The uploader
-auto-detects whichever secret set is present.
+For a Workspace account uploading into a **Shared Drive**, add the full
+service-account JSON as `GDRIVE_SA_JSON` (and `GDRIVE_FOLDER_ID`). Service
+accounts have no storage in a *personal* Drive, so use one of the methods above
+for an @gmail account.
 
 ## 4. Reciter & translation ids (Quran.com)
 

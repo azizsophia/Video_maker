@@ -22,6 +22,8 @@ export const ayahSchema = z.object({
   arabic: z.string(),
   words: z.array(wordSchema),
   translation: z.string(),
+  // Romanized pronunciation line (optional; shown when showTransliteration is on).
+  transliteration: z.string().optional(),
   // Path under /public (e.g. "audio/112_7/112001.mp3") or an absolute URL.
   audioSrc: z.string(),
   durationInSeconds: z.number(),
@@ -42,9 +44,14 @@ export const quranPropsSchema = z.object({
   translationName: z.string(),
   theme: themeSchema,
   mode: modeSchema.default("standard"),
-  // Hifz mode: how many times each ayah repeats (first pass full text,
-  // last pass fully blanked — "recite from memory").
+  // Hifz mode: how many times each ayah repeats. First pass is a full
+  // read-along; middle passes hide the words and reveal each one just AFTER
+  // the reciter says it (build-from-listening); the final pass stays hidden
+  // for full recall, then reveals at the end as a check.
   hifzRepeats: z.number().int().min(2).max(8).default(4),
+  // Show a romanized transliteration line under the Arabic (pronunciation aid
+  // for non-Arabic speakers). Data is filled in per-ayah by the fetcher.
+  showTransliteration: z.boolean().default(false),
   // Basmala shown on the intro card. ALWAYS sourced from the API by the
   // fetcher (empty for Surah at-Tawbah). The literal here is only a fallback
   // for offline preview and is never used for published renders.

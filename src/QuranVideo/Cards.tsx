@@ -1,6 +1,8 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Img,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -8,6 +10,9 @@ import {
 } from "remotion";
 import { ThemePalette } from "./themes";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
+
+const resolveSrc = (src: string): string =>
+  /^https?:\/\//.test(src) ? src : staticFile(src);
 
 const Card: React.FC<{ children: React.ReactNode; fadeOut?: boolean }> = ({
   children,
@@ -36,19 +41,64 @@ const Card: React.FC<{ children: React.ReactNode; fadeOut?: boolean }> = ({
   );
 };
 
-// Opening card: Bismillah (sourced from the API) + surah name, gently scaling in.
+// A glowing brand mark that gently floats and breathes — used on both cards.
+const BrandMark: React.FC<{ src?: string; theme: ThemePalette; size: number }> = ({
+  src,
+  theme,
+  size,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const pop = spring({ frame, fps, config: { damping: 14, mass: 0.6 } });
+  const float = Math.sin(frame / 22) * 6;
+  return (
+    <div
+      style={{
+        width: size,
+        height: size,
+        marginBottom: 30,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "50%",
+        transform: `translateY(${float}px) scale(${0.6 + pop * 0.4})`,
+        background: `radial-gradient(circle, ${theme.arabicGlow} 0%, transparent 68%)`,
+      }}
+    >
+      {src ? (
+        <Img
+          src={resolveSrc(src)}
+          style={{ width: "62%", height: "62%", objectFit: "contain", opacity: 0.95 }}
+        />
+      ) : null}
+    </div>
+  );
+};
+
+// Opening card: brand mark + Bismillah (sourced from the API) + surah name.
 export const Intro: React.FC<{
   basmala: string;
   surahNameArabic: string;
   surahNameEnglish: string;
   channelName: string;
+  brandSrc?: string;
+  ayahReference?: string;
   theme: ThemePalette;
-}> = ({ basmala, surahNameArabic, surahNameEnglish, channelName, theme }) => {
+}> = ({
+  basmala,
+  surahNameArabic,
+  surahNameEnglish,
+  channelName,
+  brandSrc,
+  ayahReference,
+  theme,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const rise = spring({ frame, fps, config: { damping: 200 } });
   return (
     <Card fadeOut>
+      <BrandMark src={brandSrc} theme={theme} size={170} />
       {basmala ? (
         <div
           dir="rtl"
@@ -69,7 +119,7 @@ export const Intro: React.FC<{
           height: 2,
           background: theme.accent,
           opacity: 0.6,
-          margin: "56px 0",
+          margin: "48px 0",
         }}
       />
       <div
@@ -89,6 +139,9 @@ export const Intro: React.FC<{
         }}
       >
         Surah {surahNameEnglish}
+        {ayahReference ? (
+          <span style={{ opacity: 0.7 }}> · {ayahReference}</span>
+        ) : null}
       </div>
       <div
         style={{
@@ -97,7 +150,7 @@ export const Intro: React.FC<{
           letterSpacing: 3,
           color: theme.translation,
           opacity: 0.6,
-          marginTop: 48,
+          marginTop: 44,
         }}
       >
         {channelName}
@@ -112,8 +165,22 @@ export const Outro: React.FC<{
   surahNameArabic: string;
   surahNameEnglish: string;
   channelName: string;
+  ayahReference?: string;
+  reciterName?: string;
+  translationName?: string;
   theme: ThemePalette;
-}> = ({ surahNameArabic, surahNameEnglish, channelName, theme }) => {
+}> = ({
+  surahNameArabic,
+  surahNameEnglish,
+  channelName,
+  ayahReference,
+  reciterName,
+  translationName,
+  theme,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const cta = spring({ frame: frame - 18, fps, config: { damping: 16 } });
   return (
     <Card>
       <div
@@ -139,6 +206,9 @@ export const Outro: React.FC<{
         }}
       >
         Surah {surahNameEnglish}
+        {ayahReference ? (
+          <span style={{ opacity: 0.7 }}> · {ayahReference}</span>
+        ) : null}
       </div>
       <div
         style={{
@@ -146,9 +216,28 @@ export const Outro: React.FC<{
           height: 2,
           background: theme.accent,
           opacity: 0.6,
-          margin: "48px 0",
+          margin: "44px 0",
         }}
       />
+      {/* Subscribe call-to-action. */}
+      <div
+        style={{
+          transform: `scale(${0.8 + cta * 0.2})`,
+          opacity: cta,
+          padding: "16px 40px",
+          borderRadius: 999,
+          border: `2px solid ${theme.accent}`,
+          background: `${theme.accent}1a`,
+          fontFamily: TRANSLATION_FONT,
+          fontSize: 28,
+          letterSpacing: 2,
+          color: theme.arabicActive,
+          textTransform: "uppercase",
+          boxShadow: `0 0 28px ${theme.arabicGlow}`,
+        }}
+      >
+        ♥ Subscribe for daily āyāt
+      </div>
       <div
         style={{
           fontFamily: TRANSLATION_FONT,
@@ -156,10 +245,27 @@ export const Outro: React.FC<{
           letterSpacing: 3,
           color: theme.accent,
           textTransform: "uppercase",
+          marginTop: 30,
         }}
       >
         {channelName}
       </div>
+      {/* Credits — kept off the recitation frames, gathered here instead. */}
+      {reciterName || translationName ? (
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 18,
+            lineHeight: 1.5,
+            color: theme.translation,
+            opacity: 0.55,
+            marginTop: 40,
+          }}
+        >
+          {reciterName ? <div>Recitation · {reciterName}</div> : null}
+          {translationName ? <div>Translation · {translationName}</div> : null}
+        </div>
+      ) : null}
     </Card>
   );
 };

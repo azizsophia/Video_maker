@@ -38,6 +38,10 @@ on:
         description: "Hifz only: repetitions per ayah (2-8)"
         required: false
         default: "4"
+      transliteration:
+        description: "Show romanized pronunciation line: true | false"
+        required: false
+        default: "true"
       orientation:
         description: "vertical (Shorts/TikTok) or wide (YouTube)"
         required: true
@@ -69,7 +73,7 @@ jobs:
       - name: Fetch ayahs + audio
         run: |
           ARGS="--surah=${{ inputs.surah }} --recitation=${{ inputs.recitation }} --translation=${{ inputs.translation }} --theme=${{ inputs.theme }}"
-          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }}"
+          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }}"
           if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from=${{ inputs.from }}"; fi
           if [ -n "${{ inputs.to }}" ]; then ARGS="$ARGS --to=${{ inputs.to }}"; fi
           npx tsx scripts/fetch-ayahs.ts $ARGS --out=src/data/render.json
@@ -79,7 +83,9 @@ jobs:
           COMP="QuranRecitation"
           if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="QuranRecitationWide"; fi
           mkdir -p out
-          npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" --props=src/data/render.json
+          # Use every available core (Remotion otherwise defaults low on CI).
+          npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" \
+            --props=src/data/render.json --concurrency=$(nproc)
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
@@ -88,39 +94,46 @@ jobs:
           path: out/*.mp4
           retention-days: 14
 
-      # Auto-upload to your Google Drive. For a personal @gmail account add the
-      # OAuth secrets GDRIVE_CLIENT_ID / GDRIVE_CLIENT_SECRET / GDRIVE_REFRESH_TOKEN
-      # (and optionally GDRIVE_FOLDER_ID). See docs/SETUP.md §3. The upload is
-      # skipped automatically until those secrets exist.
+      # Auto-upload to your Google Drive. Easiest: deploy the Apps Script
+      # (scripts/drive-webapp.gs) and add DRIVE_UPLOAD_URL + DRIVE_UPLOAD_TOKEN.
+      # Or use the OAuth secrets GDRIVE_CLIENT_ID/SECRET/REFRESH_TOKEN. See
+      # docs/SETUP.md §3. The upload is skipped automatically until secrets exist.
       - name: Check Drive credentials
         id: drive
         env:
+          URL: ${{ secrets.DRIVE_UPLOAD_URL }}
           RT: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           SA: ${{ secrets.GDRIVE_SA_JSON }}
         run: |
-          if [ -n "$RT" ] || [ -n "$SA" ]; then
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          if [ -n "$URL" ]; then
+            echo "method=webapp" >> "$GITHUB_OUTPUT"
+          elif [ -n "$RT" ] || [ -n "$SA" ]; then
+            echo "method=api" >> "$GITHUB_OUTPUT"
           else
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "method=none" >> "$GITHUB_OUTPUT"
             echo "No Drive secrets set — skipping upload (download from Artifacts above)."
           fi
 
       - name: Set up Python (for Drive upload)
-        if: ${{ steps.drive.outputs.enabled == 'true' }}
+        if: ${{ steps.drive.outputs.method != 'none' }}
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Upload to Google Drive
-        if: ${{ steps.drive.outputs.enabled == 'true' }}
+        if: ${{ steps.drive.outputs.method != 'none' }}
         env:
+          DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
+          DRIVE_UPLOAD_TOKEN: ${{ secrets.DRIVE_UPLOAD_TOKEN }}
           GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
           GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
         run: |
-          pip install --quiet google-api-python-client google-auth google-auth-oauthlib
+          if [ "${{ steps.drive.outputs.method }}" = "api" ]; then
+            pip install --quiet google-api-python-client google-auth google-auth-oauthlib
+          fi
           NAME="Ketabi — Surah ${{ inputs.surah }} (${{ inputs.mode }}, ${{ inputs.orientation }}).mp4"
           FILE=$(ls out/*.mp4 | head -n1)
           python3 scripts/upload_to_drive.py --file "$FILE" --name "$NAME" --mime video/mp4 --replace
