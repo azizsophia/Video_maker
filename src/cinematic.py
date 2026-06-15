@@ -150,13 +150,15 @@ class Field:
             self.v[rec] = self.rng.uniform(-1.25, 1.25, k)
             self.mag[rec] = self.rng.uniform(0.35, 1.0, k) ** 1.6
 
-    def render(self, buf, dz, brightness=1.0, streak=1.0):
+    def render(self, buf, dz, brightness=1.0, streak=1.0, pan_u=0.0, pan_v=0.0):
         W, H = self.W, self.H
         cx, cy = W * 0.5, H * 0.5
         z = self.z
         inv = self.scale / z
-        sx = cx + self.u * inv
-        sy = cy + self.v * inv * (W / H)  # keep aspect of motion
+        u = self.u + pan_u                  # camera pan -> nearer stars shift more
+        v = self.v + pan_v
+        sx = cx + u * inv
+        sy = cy + v * inv * (W / H)  # keep aspect of motion
         # brightness falls with depth, sharpens near camera
         depth = np.clip(1.0 - (z - self.znear) / (self.zfar - self.znear), 0, 1)
         amp = (0.30 + 1.5 * depth ** 1.5) * self.mag * brightness
@@ -164,8 +166,8 @@ class Field:
         # motion streaks: sample along the path travelled this frame
         zprev = z + dz
         invp = self.scale / zprev
-        sxp = cx + self.u * invp
-        syp = cy + self.v * invp * (W / H)
+        sxp = cx + u * invp
+        syp = cy + v * invp * (W / H)
         speed = np.hypot(sx - sxp, sy - syp)
         nseg = int(np.clip(streak, 1, 6))
         if nseg <= 1:
@@ -232,7 +234,8 @@ def khatam_geometry(depth=0.30, outer=1.0, inner=0.46):
 _KHATAM_V, _KHATAM_E, _KHATAM_TIPS = khatam_geometry()
 
 
-def render_emblem(W, H, t, cz, rot_speed, scale_px, brightness):
+def render_emblem(W, H, t, cz, rot_speed, scale_px, brightness,
+                  cx_off=0.0, cy_off=0.0):
     """Draw the rotating 3-D emblem to an intensity layer, return RGB float (H,W,3).
 
     Rendered as a glowing line drawing: a sharp core layer plus a strongly
@@ -246,8 +249,8 @@ def render_emblem(W, H, t, cz, rot_speed, scale_px, brightness):
     P[:, 2] += cz
     f = scale_px
     z = P[:, 2]
-    sx = W * 0.5 + f * P[:, 0] / z
-    sy = H * 0.5 + f * P[:, 1] / z
+    sx = W * 0.5 + cx_off + f * P[:, 0] / z
+    sy = H * 0.5 + cy_off + f * P[:, 1] / z
     for i, j in _KHATAM_E:
         if z[i] <= 0.05 or z[j] <= 0.05:
             continue
@@ -291,6 +294,53 @@ def make_text_tile(lines, font_obj, fill, line_gap=1.5, pad=40, align="center"):
         y = pad + i * lh + lh // 2
         d.text((W // 2, y), ln, font=font_obj, fill=fill, anchor="mm")
     return tile
+
+
+def _measure(txt, font_obj):
+    return ImageDraw.Draw(Image.new("RGBA", (4, 4))).textlength(txt, font=font_obj)
+
+
+def make_word_tile(word, font_obj, fill):
+    """Render a single word to a tight RGBA tile (symmetric padding for glow)."""
+    pad = int(font_obj.size * 0.40)
+    adv = _measure(word, font_obj)
+    W = int(adv) + pad * 2
+    H = int(font_obj.size * 1.75) + pad
+    tile = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(tile).text((W // 2, H // 2), word, font=font_obj,
+                              fill=fill, anchor="mm")
+    return tile, adv
+
+
+def layout_words(text, font_obj, fill, max_w, line_h, rtl):
+    """Lay words out into wrapped, centred lines. Returns a list of
+    (tile, dx, dy) in reading order, positioned relative to the block centre."""
+    space_w = max(_measure(" ", font_obj), font_obj.size * 0.30)
+    items = [(w,) + make_word_tile(w, font_obj, fill) for w in text.split()]
+    lines, cur, curw = [], [], 0.0
+    for (w, tile, adv) in items:
+        add = adv + (space_w if cur else 0)
+        if cur and curw + add > max_w:
+            lines.append((cur, curw))
+            cur, curw, add = [], 0.0, adv
+        cur.append((tile, adv))
+        curw += add
+    if cur:
+        lines.append((cur, curw))
+    placed, n = [], len(lines)
+    for li, (cur, curw) in enumerate(lines):
+        dy = (li - (n - 1) / 2.0) * line_h
+        if rtl:
+            x = curw / 2.0
+            for (tile, adv) in cur:
+                placed.append((tile, x - adv / 2.0, dy))
+                x -= adv + space_w
+        else:
+            x = -curw / 2.0
+            for (tile, adv) in cur:
+                placed.append((tile, x + adv / 2.0, dy))
+                x += adv + space_w
+    return placed
 
 
 def wrap_latin(txt, font_obj, max_w):
@@ -455,24 +505,32 @@ def prepare_assets(W, H):
     assets["title_sub"] = make_text_tile(
         ["THE THRONE  •  " + verse.REFERENCE.upper()],
         font(F_LATIN, int(H * 0.028)), (190, 200, 205, 255))
-    # per verse
+    # per verse — Arabic & transliteration are laid out word-by-word for the
+    # kinetic reveal; the English meaning fades in as wrapped line tiles.
+    ar_font = font(F_QURAN, int(H * 0.100))
+    tr_font = font(F_SERIF, int(H * 0.038))
     for i, (ar, tr, en) in enumerate(verse.SEGMENTS, 1):
-        ar_lines = wrap_arabic(ar, font(F_QURAN, int(H * 0.105)), max_w)
-        assets[f"ar{i}"] = make_text_tile(
-            ar_lines, font(F_QURAN, int(H * 0.105)), (246, 238, 214, 255), line_gap=1.65)
-        tr_lines = wrap_latin(tr, font(F_SERIF, int(H * 0.040)), max_w)
-        assets[f"tr{i}"] = make_text_tile(
-            tr_lines, font(F_SERIF, int(H * 0.040)), (206, 214, 200, 255))
+        assets[f"arw{i}"] = layout_words(
+            ar, ar_font, (246, 238, 214, 255), max_w,
+            line_h=int(H * 0.100 * 1.6), rtl=True)
+        assets[f"trw{i}"] = layout_words(
+            tr, tr_font, (206, 214, 200, 255), max_w,
+            line_h=int(H * 0.038 * 1.5), rtl=False)
         en_lines = wrap_latin(en, font(F_LATIN, int(H * 0.036)), max_w)
         assets[f"en{i}"] = make_text_tile(
             en_lines, font(F_LATIN, int(H * 0.036)), (214, 218, 224, 255))
         assets[f"ct{i}"] = make_text_tile(
             [f"{i} / {len(verse.SEGMENTS)}"], font(F_LATIN, int(H * 0.024)),
             (150, 160, 165, 255))
-    # finale
-    fa = wrap_arabic(verse.FULL_ARABIC, font(F_QURAN, int(H * 0.062)), int(W * 0.82))
-    assets["full_ar"] = make_text_tile(
-        fa, font(F_QURAN, int(H * 0.062)), (244, 236, 212, 255), line_gap=1.7)
+    # finale — full verse revealed line-by-line (cascade)
+    full_font = font(F_QURAN, int(H * 0.060))
+    fa = wrap_arabic(verse.FULL_ARABIC, full_font, int(W * 0.82))
+    lh = int(H * 0.060 * 1.75)
+    assets["full_lines"] = []
+    for li, line in enumerate(fa):
+        tile = make_text_tile([line], full_font, (244, 236, 212, 255), line_gap=1.0)
+        dy = (li - (len(fa) - 1) / 2.0) * lh
+        assets["full_lines"].append((tile, dy))
     assets["full_ref"] = make_text_tile(
         [verse.REFERENCE.upper()], font(F_LATIN, int(H * 0.028)), (224, 196, 130, 255))
     return assets
@@ -481,6 +539,26 @@ def prepare_assets(W, H):
 # ---------------------------------------------------------------------------
 # Per-scene frame painters
 # ---------------------------------------------------------------------------
+
+def reveal_words(buf, placed, lt, dur, ox, oy, stagger, start, hold_exit,
+                 glow_color, rise, gmul=0.4, scale0=0.82, app=0.45):
+    """Reveal a list of (tile, dx, dy) word tiles staggered in reading order.
+    Each word fades + rises into place with a glow burst that then settles."""
+    ex = smooth((lt - (dur - hold_exit)) / hold_exit)
+    for k, (tile, dx, dy) in enumerate(placed):
+        loc = lt - (start + k * stagger)
+        if loc < 0:
+            continue
+        a = smooth(loc / app) * (1.0 - ex)
+        if a <= 0.002:
+            continue
+        ri = (1.0 - smooth(loc / (app * 1.3))) * rise
+        s = lerp(scale0, 1.0, smoother(min(1.0, loc / app)))
+        burst = 1.0 - smooth(loc / (app * 0.9))     # 1 -> 0 as it lands
+        g = gmul * (0.45 + 1.7 * burst)
+        composite_tile(buf, tile, ox + dx, oy + dy - ri, s, a,
+                       glow=g, glow_color=glow_color)
+
 
 def paint_title(buf, assets, lt, dur, W, H):
     # text emerges from depth: scale up + fade in, gentle float
@@ -500,36 +578,56 @@ def verse_alpha(lt, dur, fin=1.1, fout=1.1):
     return smooth(lt / fin) * (1.0 - smooth((lt - (dur - fout)) / fout))
 
 
-def paint_verse(buf, assets, sc, lt, W, H):
+def paint_verse(buf, assets, sc, lt, W, H, sway=(0.0, 0.0)):
     i = sc.kw["idx"]
     dur = sc.dur
-    a = verse_alpha(lt, dur)
-    # Arabic emerges from depth
-    s_ar = lerp(0.82, 1.0, smoother(min(1.0, lt / 1.8)))
-    drift = np.sin(lt * 0.6 + i) * H * 0.005
-    composite_tile(buf, assets[f"ct{i}"], W * 0.5, H * 0.16,
-                   1.0, a * 0.8, glow=0.05, glow_color=PARCH)
-    composite_tile(buf, assets[f"ar{i}"], W * 0.5, H * 0.40 + drift,
-                   s_ar, a, glow=0.55, glow_color=GOLD)
-    # lower third
-    a_lt = smooth((lt - 0.7) / 1.4) * (1.0 - smooth((lt - (dur - 1.0)) / 1.0))
-    composite_tile(buf, assets[f"tr{i}"], W * 0.5, H * 0.66,
-                   1.0, a_lt, glow=0.12, glow_color=GOLD)
-    composite_tile(buf, assets[f"en{i}"], W * 0.5, H * 0.78,
-                   1.0, a_lt, glow=0.05, glow_color=PARCH)
+    sx, sy = sway
+    a_all = verse_alpha(lt, dur)
+    composite_tile(buf, assets[f"ct{i}"], W * 0.5 + sx * 0.3, H * 0.155 + sy * 0.3,
+                   1.0, a_all * 0.75, glow=0.05, glow_color=PARCH)
+
+    # Arabic — word by word, in reading order, igniting as each lands.
+    arw = assets[f"arw{i}"]
+    reveal_words(buf, arw, lt, dur, W * 0.5 + sx, H * 0.40 + sy,
+                 stagger=0.16, start=0.35, hold_exit=1.0,
+                 glow_color=GOLD, rise=H * 0.028, gmul=0.42, scale0=0.80)
+
+    # Transliteration — quick left-to-right word cascade, after Arabic starts.
+    tr_start = 0.7 + len(arw) * 0.16 * 0.45
+    trw = assets[f"trw{i}"]
+    reveal_words(buf, trw, lt, dur, W * 0.5 + sx * 0.6, H * 0.66 + sy * 0.6,
+                 stagger=0.05, start=tr_start, hold_exit=0.9,
+                 glow_color=GOLD, rise=H * 0.012, gmul=0.12, scale0=0.92, app=0.3)
+
+    # English meaning — fades in as a block once the rest is settling.
+    en_start = tr_start + len(trw) * 0.05 + 0.3
+    a_en = smooth((lt - en_start) / 0.9) * (1.0 - smooth((lt - (dur - 0.9)) / 0.9))
+    composite_tile(buf, assets[f"en{i}"], W * 0.5 + sx * 0.45, H * 0.78 + sy * 0.45,
+                   1.0, a_en, glow=0.05, glow_color=PARCH)
 
 
-def paint_finale(buf, assets, lt, dur, W, H):
-    # full verse fades in, holds, then converges to a point
-    a_in = smooth(lt / 2.2)
+def paint_finale(buf, assets, lt, dur, W, H, sway=(0.0, 0.0)):
+    sx, sy = sway
+    # Full verse cascades in line by line, holds, then converges to a point.
     converge = smooth((lt - (dur - 2.6)) / 2.4)
-    a = a_in * (1.0 - converge)
-    s = lerp(0.85, 1.0, smoother(min(1.0, lt / 2.4))) * lerp(1.0, 0.05, converge)
-    composite_tile(buf, assets["full_ar"], W * 0.5, H * 0.44,
-                   s, a, glow=0.4, glow_color=GOLD)
-    composite_tile(buf, assets["full_ref"], W * 0.5, H * 0.72,
+    lines = assets["full_lines"]
+    for li, (tile, dy) in enumerate(lines):
+        loc = lt - (0.4 + li * 0.45)
+        if loc < 0:
+            continue
+        a_in = smooth(loc / 0.9)
+        a = a_in * (1.0 - converge)
+        if a <= 0.002:
+            continue
+        burst = 1.0 - smooth(loc / 0.8)
+        s = lerp(0.9, 1.0, smoother(min(1.0, loc / 0.8))) * lerp(1.0, 0.05, converge)
+        composite_tile(buf, tile, W * 0.5 + sx * 0.6,
+                       H * 0.44 + dy * lerp(1.0, 0.05, converge) + sy * 0.6,
+                       s, a, glow=0.30 + 0.8 * burst, glow_color=GOLD)
+    composite_tile(buf, assets["full_ref"], W * 0.5 + sx * 0.4, H * 0.80 + sy * 0.4,
                    lerp(1.0, 0.2, converge),
-                   smooth((lt - 1.2) / 1.6) * (1 - converge), glow=0.15)
+                   smooth((lt - (0.4 + len(lines) * 0.45)) / 1.2) * (1 - converge),
+                   glow=0.15)
 
 
 # ---------------------------------------------------------------------------
@@ -606,12 +704,20 @@ def render(out_path, W, H, fps, preview=False, seconds_cap=None,
 
             hdr = np.zeros((H, W, 3), dtype=np.float32)
 
+            # --- camera parallax sway (nearer layers drift more) ---
+            pan_u = 0.055 * np.sin(abs_t * 0.16)
+            pan_v = 0.038 * np.sin(abs_t * 0.12 + 1.0)
+            sway = (pan_u * 240.0, pan_v * 240.0)        # mid-depth screen offset
+            emb_off = (pan_u * 90.0, pan_v * 90.0)       # far layer offset
+
             # --- background particle fields ---
             star_far.advance(dz)
             dust.advance(dz * 0.7)
             warpx = 4 if lt < 0.7 and sc.kind == "verse" else (5 if sc.kind == "title" and lt < 1.5 else 2)
-            star_far.render(hdr, dz, brightness=1.0, streak=warpx)
-            dust.render(hdr, dz * 0.7, brightness=0.8, streak=1)
+            star_far.render(hdr, dz, brightness=1.0, streak=warpx,
+                            pan_u=pan_u, pan_v=pan_v)
+            dust.render(hdr, dz * 0.7, brightness=0.8, streak=1,
+                        pan_u=pan_u * 1.3, pan_v=pan_v * 1.3)
 
             # --- rotating 3-D emblem ---
             if sc.kind == "title":
@@ -630,16 +736,17 @@ def render(out_path, W, H, fps, preview=False, seconds_cap=None,
             if emb_b > 0.001:
                 emb = render_emblem(W, H, emblem_phase * 6.0 + abs_t,
                                     emb_cz, rot_speed=0.5,
-                                    scale_px=emb_scale, brightness=emb_b)
+                                    scale_px=emb_scale, brightness=emb_b,
+                                    cx_off=emb_off[0], cy_off=emb_off[1])
                 hdr += emb
 
             # --- text layer ---
             if sc.kind == "title":
                 paint_title(hdr, assets, lt, sc.dur, W, H)
             elif sc.kind == "finale":
-                paint_finale(hdr, assets, lt, sc.dur, W, H)
+                paint_finale(hdr, assets, lt, sc.dur, W, H, sway=sway)
             else:
-                paint_verse(hdr, assets, sc, lt, W, H)
+                paint_verse(hdr, assets, sc, lt, W, H, sway=sway)
 
             # global fade from/to black at very start and end
             fade = 1.0
