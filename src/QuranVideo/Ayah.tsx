@@ -62,10 +62,14 @@ export const AyahView: React.FC<{
   // Per-word reveal state for the current time.
   const wordState = (word: AyahType["words"][number]) => {
     const active = t >= word.start - HIGHLIGHT_LEAD && t < word.end;
-    let revealAt = -Infinity; // when the word becomes visible (seconds)
-    if (!reveal || reveal.mode === "always") revealAt = -Infinity;
-    else if (reveal.mode === "afterWord") revealAt = word.end + reveal.delay;
-    else revealAt = total - MEMORY_REVEAL; // "memory": all reveal near the end
+    // Standard mode (and the Hifz "Listen" pass): always visible.
+    if (!reveal || reveal.mode === "always")
+      return { active, hidden: false, revealProg: 1 };
+    // Otherwise the word reveals at a point in time, then fades in.
+    const revealAt =
+      reveal.mode === "afterWord"
+        ? word.end + reveal.delay // just after the reciter says it
+        : total - MEMORY_REVEAL; // "memory": all reveal near the end
     const revealProg = interpolate(t, [revealAt, revealAt + 0.28], [0, 1], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
