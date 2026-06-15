@@ -1,70 +1,103 @@
 /**
- * Ketabi Studio — Drive upload web app (Google Apps Script).
+ * Ketabi Studio — Drive web app (Google Apps Script).
  *
- * Lets the GitHub render workflow drop finished videos straight into YOUR
- * Google Drive, with NO OAuth client, refresh token, or "app not verified"
- * wall. The script runs AS YOU, so files are owned by you and count against
- * your normal Drive storage (unlike a service account).
+ * Handles BOTH uploading finished videos into your Drive AND organizing them
+ * after you post (archive to a "Posted ✅" folder, or delete to free space).
+ * Runs AS YOU, so no OAuth client / verification wall.
  *
- * ── One-time setup (all phone-browser doable) ──────────────────────────────
- * 1. Go to https://script.google.com  → New project.
- * 2. Delete the sample code, paste THIS whole file, and Save.
- * 3. Edit the two values in CONFIG below:
- *      SECRET     — make up a long random password (you'll reuse it as a secret)
- *      FOLDER_ID  — (optional) a Drive folder id from its URL, or "" for root
- * 4. Deploy ▸ New deployment ▸ (gear) Web app
- *      - Description: Ketabi uploader
- *      - Execute as:  Me
- *      - Who has access:  Anyone
- *    Deploy ▸ Authorize access ▸ pick your account ▸ (if warned) Advanced ▸
- *    "Go to <project> (unsafe)" ▸ Allow.   ← this is YOUR script, always allowed
- * 5. Copy the Web app URL (ends in /exec).
- * 6. In GitHub: Settings ▸ Secrets and variables ▸ Actions, add:
- *      DRIVE_UPLOAD_URL    = the /exec URL
- *      DRIVE_UPLOAD_TOKEN  = the same SECRET you set below
+ * ── If you're UPDATING an existing deployment ──────────────────────────────
+ * 1. Paste this whole file over the old code and Save.
+ * 2. Deploy ▸ Manage deployments ▸ (pencil/edit) ▸ Version: "New version" ▸
+ *    Deploy.  ← editing the SAME deployment keeps your /exec URL unchanged.
  *
- * The render workflow auto-detects these and uploads after each render.
- * Re-running with the same title replaces the old file (no duplicates).
- * ───────────────────────────────────────────────────────────────────────────
+ * ── First-time setup ───────────────────────────────────────────────────────
+ *  - Set CONFIG.SECRET to a long random string (reused as DRIVE_UPLOAD_TOKEN).
+ *  - Deploy ▸ New deployment ▸ Web app ▸ Execute as: Me, Who has access: Anyone.
+ *  - Put the /exec URL in the GitHub secret DRIVE_UPLOAD_URL, the SECRET in
+ *    DRIVE_UPLOAD_TOKEN.
  */
 
 var CONFIG = {
-  SECRET: "CHANGE-ME-to-a-long-random-string",
-  FOLDER_ID: "", // optional Drive folder id; "" = My Drive root
+  SECRET: "Ketabi-Drive-7Gq4x9Pm2Vn8",
+  FOLDER_ID: "", // optional Drive folder id where videos land; "" = My Drive root
+  ARCHIVE_FOLDER: "Posted ✅",
 };
 
 function doPost(e) {
   try {
     var p = (e && e.parameter) || {};
-    if (p.token !== CONFIG.SECRET) {
-      return _json({ ok: false, error: "unauthorized" });
+    if (p.token !== CONFIG.SECRET) return _json({ ok: false, error: "unauthorized" });
+    switch (p.action || "upload") {
+      case "upload":
+        return _upload(p, e);
+      case "archive":
+        return _archive(p);
+      case "delete":
+        return _delete(p);
+      case "list":
+        return _list();
+      default:
+        return _json({ ok: false, error: "unknown action: " + p.action });
     }
-    var name = p.name || "video.mp4";
-    var mimeType = p.mimeType || "video/mp4";
-    var folderId = p.folderId || CONFIG.FOLDER_ID;
-
-    if (!e.postData || !e.postData.contents) {
-      return _json({ ok: false, error: "no file content" });
-    }
-    var bytes = Utilities.base64Decode(e.postData.contents);
-    var blob = Utilities.newBlob(bytes, mimeType, name);
-
-    var folder = folderId
-      ? DriveApp.getFolderById(folderId)
-      : DriveApp.getRootFolder();
-
-    // Replace any existing file of the same name (keeps the folder tidy).
-    var existing = folder.getFilesByName(name);
-    while (existing.hasNext()) existing.next().setTrashed(true);
-
-    var file = folder.createFile(blob);
-    return _json({ ok: true, id: file.getId(), url: file.getUrl(), name: name });
   } catch (err) {
     return _json({ ok: false, error: String(err) });
   }
 }
 
-// A quick health check you can open in a browser to confirm it's deployed.
+function _upload(p, e) {
+  if (!e.postData || !e.postData.contents)
+    return _json({ ok: false, error: "no file content" });
+  var name = p.name || "video.mp4";
+  var bytes = Utilities.base64Decode(e.postData.contents);
+  var blob = Utilities.newBlob(bytes, p.mimeType || "video/mp4", name);
+  var folder = _sourceFolder();
+  var existing = folder.getFilesByName(name);
+  while (existing.hasNext()) existing.next().setTrashed(true);
+  var file = folder.createFile(blob);
+  return _json({ ok: true, id: file.getId(), url: file.getUrl(), name: name });
+}
+
+function _archive(p) {
+  if (!p.name) return _json({ ok: false, error: "missing name" });
+  var posted = _child(_sourceFolder(), CONFIG.ARCHIVE_FOLDER);
+  var files = DriveApp.getFilesByName(p.name);
+  var moved = 0;
+  while (files.hasNext()) {
+    files.next().moveTo(posted);
+    moved++;
+  }
+  return _json({ ok: true, action: "archive", name: p.name, moved: moved });
+}
+
+function _delete(p) {
+  if (!p.name) return _json({ ok: false, error: "missing name" });
+  var files = DriveApp.getFilesByName(p.name);
+  var trashed = 0;
+  while (files.hasNext()) {
+    files.next().setTrashed(true);
+    trashed++;
+  }
+  return _json({ ok: true, action: "delete", name: p.name, trashed: trashed });
+}
+
+function _list() {
+  var it = _sourceFolder().getFiles();
+  var names = [];
+  while (it.hasNext()) names.push(it.next().getName());
+  return _json({ ok: true, files: names });
+}
+
+function _sourceFolder() {
+  return CONFIG.FOLDER_ID
+    ? DriveApp.getFolderById(CONFIG.FOLDER_ID)
+    : DriveApp.getRootFolder();
+}
+
+function _child(parent, name) {
+  var it = parent.getFoldersByName(name);
+  return it.hasNext() ? it.next() : parent.createFolder(name);
+}
+
 function doGet() {
   return _json({ ok: true, service: "ketabi-drive-uploader" });
 }

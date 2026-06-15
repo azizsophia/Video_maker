@@ -83,7 +83,9 @@ jobs:
           COMP="QuranRecitation"
           if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="QuranRecitationWide"; fi
           mkdir -p out
-          npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" --props=src/data/render.json
+          # Use every available core (Remotion otherwise defaults low on CI).
+          npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" \
+            --props=src/data/render.json --concurrency=$(nproc)
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
