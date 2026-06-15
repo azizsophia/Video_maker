@@ -153,6 +153,8 @@ async function main() {
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
     introSeconds: args.intro ? Number(args.intro) : 5,
     outroSeconds: args.outro ? Number(args.outro) : 4,
+    watermarkSrc: args.watermark ?? "brand/ketabi-mark.png",
+    watermarkOpacity: args.watermarkOpacity ? Number(args.watermarkOpacity) : 0.1,
     ayahs,
   };
 

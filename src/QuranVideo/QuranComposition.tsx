@@ -5,6 +5,7 @@ import { themes } from "./themes";
 import { Background } from "./Background";
 import { AyahView } from "./Ayah";
 import { Intro, Outro } from "./Cards";
+import { Watermark } from "./Watermark";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const FPS = 30;
@@ -93,6 +94,9 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
       <Sequence from={introFrames + ayahsFrames} durationInFrames={outroFrames}>
         <Outro channelName={props.channelName} theme={theme} />
       </Sequence>
+
+      {/* Anti-theft watermark over everything */}
+      <Watermark src={props.watermarkSrc} opacity={props.watermarkOpacity} />
 
       {/* Footer: reciter + translation credit */}
       <AbsoluteFill

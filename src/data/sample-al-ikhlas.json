@@ -8,6 +8,8 @@
   "ayahGapSeconds": 0.5,
   "introSeconds": 5,
   "outroSeconds": 4,
+  "watermarkSrc": "brand/ketabi-mark.png",
+  "watermarkOpacity": 0.1,
   "ayahs": [
     {
       "number": 1,

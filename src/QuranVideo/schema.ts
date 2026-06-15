@@ -34,6 +34,9 @@ export const quranPropsSchema = z.object({
   // comfortably reach the 60s+ length good for Shorts/Reels.
   introSeconds: z.number().default(5),
   outroSeconds: z.number().default(4),
+  // Anti-theft watermark: a faint, slowly drifting brand mark.
+  watermarkSrc: z.string().default("brand/ketabi-mark.png"),
+  watermarkOpacity: z.number().default(0.1),
   ayahs: z.array(ayahSchema),
 });
 
