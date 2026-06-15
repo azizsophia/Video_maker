@@ -148,10 +148,11 @@ def main():
     name = args.name or os.path.basename(args.file)
     size_mb = os.path.getsize(args.file) / 1e6
 
-    webapp_url = os.environ.get("DRIVE_UPLOAD_URL")
+    webapp_url = os.environ.get("DRIVE_UPLOAD_URL", "").strip()
     print(f"Uploading {args.file} ({size_mb:.1f} MB) as '{name}'")
     if webapp_url:
-        upload_via_webapp(webapp_url, os.environ.get("DRIVE_UPLOAD_TOKEN", ""),
+        upload_via_webapp(webapp_url,
+                          os.environ.get("DRIVE_UPLOAD_TOKEN", "").strip(),
                           args.file, name, args.mime, args.folder)
     else:
         upload_via_api(args.file, name, args.mime, args.folder, args.replace)
