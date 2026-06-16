@@ -40,6 +40,15 @@ Short on hand regardless of which path we choose.
 Current channel reciter: **Sheikh Abdur-Rahman as-Sudais** (Quran.com id `3`).
 Credit on the outro + in every description.
 
+## Caption / description rules
+- **YouTube descriptions: no emojis.** Keep it clean and professional.
+- Use **<=5 hashtags** (YouTube ignores all hashtags if there are more than 15;
+  a tight set ranks better).
+- **Front-load keywords** in the first two lines (that's the search/preview snippet).
+- Always include: the hook, authentic **sources**, the **reciter credit**, and
+  the **ketabistudio.com** link.
+- TikTok/Reels captions: short, hook-first, no emojis, a handful of hashtags.
+
 ## Audio rules (non-negotiable)
 - **No music / instruments.** Story videos use **ambient sound effects only**
   (wind, atmosphere, low rumble for tension) — never melodic/instrumental music.
