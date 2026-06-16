@@ -338,6 +338,20 @@ const AppShowcase: React.FC<SceneProps> = () => {
         >
           {APP_NAME}
         </div>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 30,
+            fontStyle: "italic",
+            color: "#5d7064",
+            marginTop: 16,
+            opacity: headerIn,
+            textAlign: "center",
+            maxWidth: 760,
+          }}
+        >
+          "In the remembrance of Allah, hearts find rest."
+        </div>
       </AbsoluteFill>
 
       {/* phone carousel */}
