@@ -12,6 +12,10 @@ on:
         description: "Theme: midnight | emerald | sand | noor"
         required: true
         default: "midnight"
+      orientation:
+        description: "vertical (TikTok/Reels/Shorts) | landscape (YouTube long-form 16:9)"
+        required: true
+        default: "vertical"
 
 jobs:
   render:
@@ -56,7 +60,8 @@ jobs:
       - name: Render video
         run: |
           mkdir -p out
-          npx remotion render StoryVideo "out/story.mp4" \
+          if [ "${{ inputs.orientation }}" = "landscape" ]; then COMP=StoryVideoWide; else COMP=StoryVideo; fi
+          npx remotion render "$COMP" "out/story.mp4" \
             --props=src/data/story-render.json --concurrency=$(nproc) --crf 23
 
       - name: Upload video artifact
@@ -87,5 +92,5 @@ jobs:
           DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
           DRIVE_UPLOAD_TOKEN: ${{ secrets.DRIVE_UPLOAD_TOKEN }}
         run: |
-          NAME="Ketabi — Story — $(basename "${{ inputs.story }}" .json).mp4"
+          NAME="Ketabi — Story — $(basename "${{ inputs.story }}" .json) (${{ inputs.orientation }}).mp4"
           python3 scripts/upload_to_drive.py --file "out/story.mp4" --name "$NAME" --mime video/mp4 --replace

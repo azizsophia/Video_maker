@@ -86,6 +86,20 @@ export const RemotionRoot: React.FC = () => {
           durationInFrames: storyDurationInFrames(props),
         })}
       />
+
+      {/* Same story, 16:9 landscape for YouTube long-form */}
+      <Composition
+        id="StoryVideoWide"
+        component={StoryVideo}
+        schema={storyPropsSchema}
+        defaultProps={defaultStoryProps}
+        fps={STORY_FPS}
+        width={1920}
+        height={1080}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: storyDurationInFrames(props),
+        })}
+      />
     </>
   );
 };

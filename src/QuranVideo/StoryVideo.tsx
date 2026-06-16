@@ -118,19 +118,22 @@ const Narration: React.FC<{
   theme: ThemePalette;
 }> = ({ words = [], source, hook, theme }) => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps, durationInFrames, width, height } = useVideoConfig();
+  const wide = width > height;
   const t = frame / fps;
-  const lines = toLines(words);
+  const lines = toLines(words, wide ? 6 : 4);
   let idx = 0;
   for (let i = 0; i < lines.length; i++) if (t >= lines[i].start - 0.12) idx = i;
   const line = lines[idx];
   const lineFrame = frame - Math.round((line?.start ?? 0) * fps);
   const appear = spring({ frame: lineFrame, fps, config: { damping: 200 } });
   const kb = interpolate(frame, [0, durationInFrames], [1, 1.05]);
-  const fontSize = hook ? 76 : 60;
+  const fontSize = (hook ? 76 : 60) * (wide ? 0.82 : 1);
 
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 86px" }}>
+    <AbsoluteFill
+      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 170px" : "0 86px" }}
+    >
       <div
         style={{
           transform: `scale(${kb})`,
@@ -172,7 +175,7 @@ const Narration: React.FC<{
         <div
           style={{
             position: "absolute",
-            bottom: 232,
+            bottom: wide ? 96 : 232,
             fontFamily: TRANSLATION_FONT,
             fontSize: 26,
             letterSpacing: 1.5,
@@ -200,7 +203,8 @@ const AyahCard: React.FC<{
   theme: ThemePalette;
 }> = ({ arabic, translation, source, ember, theme }) => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps, durationInFrames, width, height } = useVideoConfig();
+  const wide = width > height;
   const fadeIn = interpolate(frame, [0, 16], [0, 1], { extrapolateRight: "clamp" });
   const fadeOut = interpolate(frame, [durationInFrames - 16, durationInFrames - 2], [1, 0], {
     extrapolateLeft: "clamp",
@@ -212,7 +216,9 @@ const AyahCard: React.FC<{
   const arabicColor = ember ? "#fff1e0" : theme.arabicActive;
 
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 76px", opacity }}>
+    <AbsoluteFill
+      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 76px", opacity }}
+    >
       {ember ? (
         <AbsoluteFill
           style={{
@@ -226,7 +232,7 @@ const AyahCard: React.FC<{
           style={{
             fontFamily: ARABIC_DISPLAY_FONT,
             fontWeight: 700,
-            fontSize: 104,
+            fontSize: wide ? 92 : 104,
             lineHeight: 1.7,
             color: arabicColor,
             textShadow: `0 0 46px ${glow}`,
@@ -236,10 +242,10 @@ const AyahCard: React.FC<{
         </div>
         <div
           style={{
-            marginTop: 54,
-            maxWidth: 900,
+            marginTop: wide ? 36 : 54,
+            maxWidth: wide ? 1300 : 900,
             fontFamily: TRANSLATION_FONT,
-            fontSize: 44,
+            fontSize: wide ? 40 : 44,
             lineHeight: 1.45,
             color: theme.translation,
             opacity: transReveal,
