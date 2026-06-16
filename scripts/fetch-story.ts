@@ -100,6 +100,31 @@ async function tts(text: string, voice: string, model: string, dest: string) {
   return { words, duration };
 }
 
+// Generate a SOUND EFFECT (never music) via ElevenLabs sound-generation.
+async function sfxGen(prompt: string, duration: number, dest: string) {
+  const key = (process.env.ELEVENLABS_API_KEY || "").trim();
+  const res = await fetch(`${ELEVEN}/sound-generation`, {
+    method: "POST",
+    headers: { "xi-api-key": key, "Content-Type": "application/json" },
+    body: JSON.stringify({ text: prompt, duration_seconds: duration, prompt_influence: 0.45 }),
+  });
+  if (!res.ok) throw new Error(`ElevenLabs SFX ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  await mkdir(dirname(dest), { recursive: true });
+  await writeFile(dest, Buffer.from(await res.arrayBuffer()));
+}
+
+async function cachedSfx(prompt: string, duration: number): Promise<string> {
+  const hash = sha(`sfx|${prompt}|${duration}`);
+  const mp3 = join(CACHE_DIR, `s-${hash}.mp3`);
+  if (existsSync(mp3)) {
+    console.log(`  sfx: cached (${prompt.slice(0, 32)}...)`);
+  } else {
+    await sfxGen(prompt, duration, mp3);
+    console.log(`  sfx: generated (${prompt.slice(0, 32)}...)`);
+  }
+  return `story-cache/s-${hash}.mp3`;
+}
+
 async function main() {
   const args = parseArgs();
   const storyFile = args.story ?? "scripts/stories/gog-and-magog.json";
@@ -112,10 +137,21 @@ async function main() {
   const GAP = 0.35; // small breath between segments
 
   await mkdir(CACHE_DIR, { recursive: true });
+
+  // Atmospheric bed (sound effect, never music) under the whole video.
+  let ambientSrc: string | undefined;
+  let ambientDuration: number | undefined;
+  if (story.sound?.ambient) {
+    ambientDuration = Number(story.sound.ambientDuration ?? 22);
+    ambientSrc = await cachedSfx(story.sound.ambient, ambientDuration);
+  }
+
   const segments: any[] = [];
   let cursor = 0;
   let i = 0;
   for (const seg of story.segments as any[]) {
+    if (seg.pauseBefore) cursor += Number(seg.pauseBefore); // dramatic silence
+    const sfxSrc = seg.sfx ? await cachedSfx(seg.sfx, 3) : undefined;
     if (seg.type === "narration") {
       const text: string = seg.say ?? seg.text;
       // Cache narration by content so visual-only re-renders never re-spend credits.
@@ -139,6 +175,8 @@ async function main() {
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         words,
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
+        sfxSrc,
+        hook: seg.hook || undefined,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
@@ -174,6 +212,8 @@ async function main() {
         arabic,
         translation: tr,
         source: seg.source,
+        sfxSrc,
+        ember: seg.ember || undefined,
       });
       cursor += duration + GAP;
     }
@@ -186,6 +226,8 @@ async function main() {
     reciterName: args.reciterName ?? "Sheikh Abdur-Rahman as-Sudais",
     voiceName: story.voiceName ?? "Daniel",
     websiteUrl: args.website ?? "ketabistudio.com",
+    ambientSrc,
+    ambientDuration,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";

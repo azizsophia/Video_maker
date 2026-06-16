@@ -20,6 +20,10 @@ export const storySegmentSchema = z.object({
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),
+  // effects
+  sfxSrc: z.string().optional(), // one-shot sound effect at segment start
+  ember: z.boolean().optional(), // warm molten-iron treatment (the wall moment)
+  hook: z.boolean().optional(), // scroll-stopper styling for the opening
 });
 
 export const storyPropsSchema = z.object({
@@ -28,6 +32,8 @@ export const storyPropsSchema = z.object({
   reciterName: z.string().default("Sheikh Abdur-Rahman as-Sudais"),
   voiceName: z.string().default("Daniel"),
   websiteUrl: z.string().default("ketabistudio.com"),
+  ambientSrc: z.string().optional(), // looping atmospheric bed (sound effect, never music)
+  ambientDuration: z.number().optional(),
   segments: z.array(storySegmentSchema),
 });
 
