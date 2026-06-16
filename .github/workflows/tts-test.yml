@@ -1,0 +1,36 @@
+name: TTS Names Test
+
+# Cheap check (a few dozen characters) to confirm the ElevenLabs key works and
+# that Daniel pronounces the names correctly, BEFORE generating full narration.
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        description: "Text for Daniel to read (compare spellings to find the right pronunciation)"
+        required: true
+        default: "Dhul-Qarnayn. Dhool Qar nayn. Zul Qarnain. Surah Al-Kahf. Soorat al Kahf. Gog and Magog."
+      voice:
+        description: "ElevenLabs voice id (default Daniel)"
+        required: false
+        default: "onwK4e9ZLuTAKqWW03F9"
+
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate narration sample
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          mkdir -p out
+          python3 scripts/tts.py --text "${{ inputs.text }}" \
+            --voice "${{ inputs.voice }}" --out out/names-test.mp3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tts-names-test
+          path: out/names-test.mp3
+          retention-days: 7

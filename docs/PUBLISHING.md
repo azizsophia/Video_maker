@@ -39,3 +39,12 @@ Short on hand regardless of which path we choose.
 ## Reciter
 Current channel reciter: **Sheikh Abdur-Rahman as-Sudais** (Quran.com id `3`).
 Credit on the outro + in every description.
+
+## Audio rules (non-negotiable)
+- **No music / instruments.** Story videos use **ambient sound effects only**
+  (wind, atmosphere, low rumble for tension) — never melodic/instrumental music.
+- **The Qur'an is never AI-synthesized.** Arabic ayahs are always the real
+  reciter (Sudais). AI narration (ElevenLabs, voice "Daniel") is used **only for
+  the English** story/meaning.
+- Story content must be **authentic** — every claim sourced (Qur'an + sound
+  hadith), never embellished.
