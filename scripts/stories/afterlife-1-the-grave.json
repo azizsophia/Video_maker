@@ -8,26 +8,26 @@
     "ambient": "deep dark ambience, hollow cavernous air, distant low rumble, cold and still, faint cosmic wind, no music, no melody, no instruments",
     "ambientDuration": 22
   },
-  "_note": "Afterlife Journey, Part 1. All AI narration (no recitation) = copyright-free. Hand-built illustrated scenes per beat (aniconic).",
+  "_note": "Afterlife Journey Part 1. No recitation = copyright-free. No em dashes; pauses via ellipses + pauseBefore. Ends with the app-showcase outro.",
   "segments": [
     {
       "type": "narration",
       "hook": true,
       "scene": "desert-night",
-      "text": "This is what Islam says happens in the first moments after you die… and most people have never heard it.",
+      "text": "This is what Islam says happens in the first moments after you die. And most people… have never heard it.",
       "caption": "The first moments after death."
     },
     {
       "type": "narration",
       "scene": "heavens",
-      "text": "The instant your soul leaves your body, the Prophet, peace be upon him, said angels carry it upward, past sky after sky, until it stands before Allah.",
+      "text": "The instant your soul leaves your body, the Prophet, peace be upon him, said angels carry it upward. Past sky… after sky… until it stands before Allah.",
       "caption": "Musnad Ahmad; Abu Dawud"
     },
     {
       "type": "narration",
       "scene": "grave-earth",
-      "pauseBefore": 0.4,
-      "text": "Then it is returned to the earth. Because the body in the grave is not asleep… it is about to be questioned.",
+      "pauseBefore": 0.5,
+      "text": "Then it is returned to the earth. Because the body in the grave is not asleep. It is about to be questioned.",
       "caption": "The questioning of the grave."
     },
     {
@@ -40,15 +40,22 @@
     {
       "type": "narration",
       "scene": "grave-earth",
-      "pauseBefore": 0.3,
-      "text": "For some, the answers come like light, and the grave opens wide. For others… there is only silence.",
-      "caption": "Sahih al-Bukhari"
+      "pauseBefore": 0.4,
+      "text": "For the believer, a voice calls from the heavens. A door to Paradise is opened. Its breeze, and its fragrance, reach them… and the grave is widened as far as the eye can see.",
+      "caption": "Sunan Abi Dawud (hadith of al-Bara)"
+    },
+    {
+      "type": "narration",
+      "scene": "grave-earth",
+      "pauseBefore": 0.4,
+      "text": "But for the one with no answer… there is only silence. A door to the Fire is opened. And the grave closes in… until it presses on the ribs.",
+      "caption": "Sunan al-Tirmidhi; Abu Dawud"
     },
     {
       "type": "narration",
       "scene": "misty-plain",
-      "pauseBefore": 0.4,
-      "text": "And this is only the beginning. The grave is just the first stage of a journey every soul will take.",
+      "pauseBefore": 0.5,
+      "text": "And this… is only the beginning. The grave is just the first stage of a journey that every soul will take.",
       "caption": "The first stage of the journey."
     },
     {
@@ -57,11 +64,18 @@
       "pauseBefore": 0.3,
       "text": "Follow for Part Two… what the angels do next.",
       "caption": "Follow for Part 2."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "pauseBefore": 0.4,
+      "text": "And if this touched your heart, my app can help you live it, every day. The Quran, your daily adhkar, and a place for whatever you are feeling. Download Ketabi, free, on my website.",
+      "caption": "Download Ketabi."
     }
   ],
   "sources": [
     "Musnad Ahmad; Sunan Abi Dawud - the soul's ascent (hadith of al-Bara ibn Azib)",
     "Sahih al-Bukhari; Sunan Abi Dawud - the questioning of the grave",
-    "Jami at-Tirmidhi - the two angels (Munkar and Nakir)"
+    "Sunan al-Tirmidhi; Sunan Abi Dawud - the grave's expansion and constriction"
   ]
 }

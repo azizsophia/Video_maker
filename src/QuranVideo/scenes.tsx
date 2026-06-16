@@ -1,12 +1,15 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Img,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
   random,
 } from "remotion";
 import { ThemePalette } from "./themes";
+import { TRANSLATION_FONT } from "./fonts";
 
 // Hand-built, fully aniconic illustrated scenes (skies, deserts, architecture,
 // light) — no faces, people, or animals, ever. Owned + copyright-free.
@@ -284,6 +287,111 @@ const MistyPlain: React.FC<SceneProps> = () => {
   );
 };
 
+// App-showcase outro: cycles through the app screens on a calm cream/sage
+// background that matches the app, with a download CTA. Edit APP_NAME / website
+// if the app is branded differently.
+const APP_SHOTS = ["app/home.png", "app/quran.png", "app/stateofheart.png", "app/adhkar.png"];
+const APP_NAME = "Ketabi";
+const APP_WEBSITE = "ketabistudio.com";
+
+const AppShowcase: React.FC<SceneProps> = () => {
+  const frame = useCurrentFrame();
+  const { fps, durationInFrames, height } = useVideoConfig();
+  const per = durationInFrames / APP_SHOTS.length;
+  const headerIn = interpolate(frame, [4, 22], [0, 1], { extrapolateRight: "clamp" });
+  return (
+    <AbsoluteFill style={{ background: "linear-gradient(180deg,#eef1ea 0%,#e6ebe0 55%,#dde3d6 100%)" }}>
+      {/* faint decorative arc, like the app's marketing shots */}
+      <div
+        style={{
+          position: "absolute",
+          top: -height * 0.12,
+          right: -height * 0.12,
+          width: height * 0.42,
+          height: height * 0.42,
+          borderRadius: "50%",
+          border: "2px solid rgba(60,90,70,0.10)",
+        }}
+      />
+      <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", paddingTop: 150 }}>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 34,
+            letterSpacing: 8,
+            color: "#5d7064",
+            textTransform: "uppercase",
+            opacity: headerIn,
+          }}
+        >
+          Your Daily Companion
+        </div>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 78,
+            fontWeight: 800,
+            color: "#20392b",
+            marginTop: 12,
+            opacity: headerIn,
+          }}
+        >
+          {APP_NAME}
+        </div>
+      </AbsoluteFill>
+
+      {/* phone carousel */}
+      {APP_SHOTS.map((src, i) => {
+        const local = frame - i * per;
+        const op = interpolate(local, [0, 14, per - 14, per], [0, 1, 1, 0], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
+        const rise = interpolate(local, [0, 18], [40, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+        const float = Math.sin(frame / fps + i) * 8;
+        return (
+          <AbsoluteFill key={i} style={{ justifyContent: "center", alignItems: "center", opacity: op }}>
+            <Img
+              src={staticFile(src)}
+              style={{
+                height: height * 0.6,
+                transform: `translateY(${rise + float}px)`,
+                filter: "drop-shadow(0 34px 60px rgba(40,55,45,0.28))",
+                borderRadius: 24,
+              }}
+            />
+          </AbsoluteFill>
+        );
+      })}
+
+      {/* CTA */}
+      <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 150 }}>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 50,
+            fontWeight: 800,
+            color: "#20392b",
+          }}
+        >
+          Download {APP_NAME}
+        </div>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 34,
+            color: "#5d7064",
+            marginTop: 8,
+            letterSpacing: 1,
+          }}
+        >
+          Free at {APP_WEBSITE}
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
 const Void: React.FC<SceneProps> = ({ theme }) => (
   <AbsoluteFill
     style={{
@@ -300,6 +408,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   "grave-earth": GraveEarth,
   "mosque-night": MosqueNight,
   "misty-plain": MistyPlain,
+  "app-showcase": AppShowcase,
   void: Void,
 };
 
