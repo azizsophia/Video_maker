@@ -27,7 +27,7 @@ on:
         required: true
         default: "20"
       theme:
-        description: "Theme: midnight | emerald | sand"
+        description: "Theme: midnight | emerald | sand | noor (light/cream)"
         required: true
         default: "midnight"
       mode:

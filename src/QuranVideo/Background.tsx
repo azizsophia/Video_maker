@@ -40,11 +40,11 @@ export const Background: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
       {/* A handful of drifting motes — plain dots (no blur/shadow) so they're
           essentially free to render. */}
       <Particles frame={frame} color={theme.accent} />
-      {/* Soft vignette to focus the eye on the text. */}
+      {/* Soft vignette to focus the eye on the text (theme-aware: dark on dark
+          themes, a soft warm edge on the light "noor" theme). */}
       <AbsoluteFill
         style={{
-          background:
-            "radial-gradient(circle at 50% 42%, transparent 35%, rgba(0,0,0,0.55) 100%)",
+          background: `radial-gradient(circle at 50% 42%, transparent 35%, ${theme.vignette} 100%)`,
         }}
       />
     </AbsoluteFill>
