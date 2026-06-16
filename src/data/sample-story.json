@@ -1,0 +1,19 @@
+{
+  "title": "Story Preview",
+  "theme": "midnight",
+  "reciterName": "Sheikh Abdur-Rahman as-Sudais",
+  "voiceName": "Daniel",
+  "websiteUrl": "ketabistudio.com",
+  "segments": [
+    {
+      "kind": "narration",
+      "audioSrc": "story/n0.mp3",
+      "fromSeconds": 0,
+      "durationInSeconds": 3,
+      "words": [
+        { "text": "Story", "start": 0, "end": 0.6 },
+        { "text": "preview.", "start": 0.7, "end": 1.4 }
+      ]
+    }
+  ]
+}

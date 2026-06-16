@@ -6,9 +6,13 @@ import {
   totalDurationInFrames,
 } from "./QuranVideo/QuranComposition";
 import { quranPropsSchema, QuranProps } from "./QuranVideo/schema";
+import { StoryVideo, STORY_FPS, storyDurationInFrames } from "./QuranVideo/StoryVideo";
+import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
 import sampleData from "./data/sample-al-ikhlas.json";
+import sampleStory from "./data/sample-story.json";
 
 const defaultProps = sampleData as unknown as QuranProps;
+const defaultStoryProps = sampleStory as unknown as StoryProps;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -66,6 +70,20 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         calculateMetadata={({ props }) => ({
           durationInFrames: Math.max(1, totalDurationInFrames(props)),
+        })}
+      />
+
+      {/* AI-narrated story video (vertical) — narration + real ayahs */}
+      <Composition
+        id="StoryVideo"
+        component={StoryVideo}
+        schema={storyPropsSchema}
+        defaultProps={defaultStoryProps}
+        fps={STORY_FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: storyDurationInFrames(props),
         })}
       />
     </>
