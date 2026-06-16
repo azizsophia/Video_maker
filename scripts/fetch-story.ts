@@ -177,6 +177,7 @@ async function main() {
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
         sfxSrc,
         hook: seg.hook || undefined,
+        scene: seg.scene || undefined,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
@@ -214,6 +215,7 @@ async function main() {
         source: seg.source,
         sfxSrc,
         ember: seg.ember || undefined,
+        scene: seg.scene || undefined,
       });
       cursor += duration + GAP;
     }

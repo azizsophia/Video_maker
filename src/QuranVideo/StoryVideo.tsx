@@ -12,7 +12,7 @@ import {
 } from "remotion";
 import { StoryProps, StorySegment, StoryWord } from "./storySchema";
 import { themes, ThemePalette } from "./themes";
-import { Background } from "./Background";
+import { SceneLayer } from "./scenes";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -63,39 +63,6 @@ const Embers: React.FC<{ count?: number; warm?: boolean }> = ({ count = 26, warm
           />
         );
       })}
-    </AbsoluteFill>
-  );
-};
-
-// Slow-moving soft fog blobs for depth.
-const Fog: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const t = frame / fps;
-  return (
-    <AbsoluteFill style={{ mixBlendMode: "screen", opacity: 0.5 }}>
-      <div
-        style={{
-          position: "absolute",
-          width: 1400,
-          height: 1400,
-          left: 200 + Math.sin(t * 0.15) * 120,
-          top: 300 + Math.cos(t * 0.12) * 100,
-          borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(60,90,140,0.18), transparent 60%)",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          width: 1200,
-          height: 1200,
-          right: 150 + Math.cos(t * 0.1) * 110,
-          bottom: 200 + Math.sin(t * 0.13) * 120,
-          borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(40,60,100,0.16), transparent 60%)",
-        }}
-      />
     </AbsoluteFill>
   );
 };
@@ -276,18 +243,29 @@ const AyahCard: React.FC<{
 
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
+  // Group consecutive segments sharing a scene so the illustrated backdrop only
+  // crossfades on real scene changes.
+  const spans: { scene?: string; start: number; end: number }[] = [];
+  props.segments.forEach((s) => {
+    const last = spans[spans.length - 1];
+    const end = s.fromSeconds + s.durationInSeconds;
+    if (last && last.scene === s.scene) last.end = end;
+    else spans.push({ scene: s.scene, start: s.fromSeconds, end });
+  });
+
   return (
     <AbsoluteFill style={{ backgroundColor: theme.background }}>
-      <Background theme={theme} />
-      <Fog />
-      <Embers />
-      {/* Cinematic darken + top light. */}
-      <AbsoluteFill style={{ background: "rgba(0,0,0,0.32)" }} />
-      <AbsoluteFill
-        style={{
-          background: "radial-gradient(circle at 50% 18%, rgba(120,150,210,0.12), transparent 45%)",
-        }}
-      />
+      {spans.map((sp, i) => {
+        const from = Math.max(0, Math.round(sp.start * STORY_FPS) - 8);
+        const dur = Math.round((sp.end - sp.start) * STORY_FPS) + 16;
+        return (
+          <Sequence key={`scene-${i}`} from={from} durationInFrames={dur}>
+            <SceneLayer name={sp.scene} theme={theme} />
+          </Sequence>
+        );
+      })}
+      {/* Gentle darken for caption legibility. */}
+      <AbsoluteFill style={{ background: "rgba(0,0,0,0.24)" }} />
 
       {/* Atmospheric bed (sound effect, never music). */}
       {props.ambientSrc ? (

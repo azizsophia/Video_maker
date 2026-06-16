@@ -1,0 +1,328 @@
+import React from "react";
+import {
+  AbsoluteFill,
+  useCurrentFrame,
+  useVideoConfig,
+  interpolate,
+  random,
+} from "remotion";
+import { ThemePalette } from "./themes";
+
+// Hand-built, fully aniconic illustrated scenes (skies, deserts, architecture,
+// light) — no faces, people, or animals, ever. Owned + copyright-free.
+
+type SceneProps = { theme: ThemePalette };
+
+const Stars: React.FC<{ count?: number; area?: number; opacity?: number }> = ({
+  count = 70,
+  area = 0.7,
+  opacity = 1,
+}) => {
+  const frame = useCurrentFrame();
+  const { width, height, fps } = useVideoConfig();
+  return (
+    <AbsoluteFill>
+      {new Array(count).fill(0).map((_, i) => {
+        const s = i + 1;
+        const x = random(`sx${s}`) * width;
+        const y = random(`sy${s}`) * height * area;
+        const sz = 1 + random(`ss${s}`) * 2.2;
+        const tw = 0.4 + 0.6 * Math.abs(Math.sin((frame / fps) * 1.2 + s));
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: x,
+              top: y,
+              width: sz,
+              height: sz,
+              borderRadius: "50%",
+              background: "#fff",
+              opacity: tw * opacity * 0.9,
+              boxShadow: `0 0 ${sz * 2}px #cfe0ff`,
+            }}
+          />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+const Moon: React.FC<{ x: number; y: number; r: number; color?: string }> = ({
+  x,
+  y,
+  r,
+  color = "#dfe8ff",
+}) => (
+  <div
+    style={{
+      position: "absolute",
+      left: x - r,
+      top: y - r,
+      width: r * 2,
+      height: r * 2,
+      borderRadius: "50%",
+      background: `radial-gradient(circle at 38% 38%, #ffffff, ${color} 58%, transparent 72%)`,
+      boxShadow: `0 0 ${r * 2}px ${r}px rgba(180,200,255,0.22)`,
+    }}
+  />
+);
+
+const dune = (w: number, h: number, base: number, off: number): string => {
+  const y = h * base;
+  const a = h * 0.05;
+  return `M -60 ${h} L -60 ${y} C ${w * 0.25} ${y - a + off} ${w * 0.4} ${y + a} ${w * 0.55} ${
+    y + off * 0.5
+  } C ${w * 0.7} ${y - a} ${w * 0.9} ${y + a + off} ${w + 60} ${y} L ${w + 60} ${h} Z`;
+};
+
+const DesertNight: React.FC<SceneProps> = () => {
+  const frame = useCurrentFrame();
+  const { width, height, fps } = useVideoConfig();
+  const drift = Math.sin((frame / fps) * 0.1) * 16;
+  return (
+    <AbsoluteFill
+      style={{
+        background:
+          "linear-gradient(180deg,#0a1230 0%,#162447 45%,#3a2e4f 70%,#1a1326 100%)",
+      }}
+    >
+      <Stars count={80} area={0.55} />
+      <Moon x={width * 0.7} y={height * 0.2} r={70} />
+      <svg
+        width={width}
+        height={height}
+        viewBox={`0 0 ${width} ${height}`}
+        preserveAspectRatio="none"
+        style={{ position: "absolute", inset: 0 }}
+      >
+        <path d={dune(width, height, 0.66, drift * 0.3)} fill="#241a33" />
+        <path d={dune(width, height, 0.74, drift * 0.6)} fill="#19121f" />
+        <path d={dune(width, height, 0.84, drift)} fill="#0c0810" />
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
+const Heavens: React.FC<SceneProps> = ({ theme }) => {
+  const frame = useCurrentFrame();
+  const { width, height, fps } = useVideoConfig();
+  const t = frame / fps;
+  return (
+    <AbsoluteFill
+      style={{
+        background:
+          "radial-gradient(ellipse at 50% 120%, #1a2a55 0%, #0a1230 40%, #04060f 82%)",
+      }}
+    >
+      <Stars count={70} area={1} />
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        {new Array(7).fill(0).map((_, i) => {
+          const cy = height * 0.97 - i * height * 0.12;
+          const rx = width * (0.82 - i * 0.07);
+          const pulse = 0.28 + 0.24 * Math.sin(t * 0.8 - i * 0.5);
+          return (
+            <ellipse
+              key={i}
+              cx={width / 2}
+              cy={cy}
+              rx={rx}
+              ry={height * 0.16}
+              fill="none"
+              stroke={theme.accent}
+              strokeWidth={2}
+              opacity={Math.max(0, pulse * (1 - i * 0.08))}
+            />
+          );
+        })}
+      </svg>
+      <div
+        style={{
+          position: "absolute",
+          left: width / 2 - 70,
+          bottom: 0,
+          width: 140,
+          height: height * 0.9,
+          background: "linear-gradient(0deg, rgba(150,190,255,0.25), transparent)",
+          filter: "blur(24px)",
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
+const GraveEarth: React.FC<SceneProps> = () => {
+  const { width, height } = useVideoConfig();
+  return (
+    <AbsoluteFill style={{ background: "#05060a" }}>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: height * 0.16,
+          background: "linear-gradient(180deg,#0a1230,#05060a)",
+        }}
+      />
+      <Stars count={24} area={0.13} />
+      <div
+        style={{
+          position: "absolute",
+          top: height * 0.16,
+          left: 0,
+          right: 0,
+          height: 3,
+          background: "#1a1410",
+          opacity: 0.85,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: height * 0.16,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background:
+            "radial-gradient(ellipse at 50% 0%, #1d140d 0%, #0a0705 55%, #030202 100%)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: height * 0.16,
+          left: width / 2 - 55,
+          width: 110,
+          height: height * 0.52,
+          background: "linear-gradient(180deg, rgba(205,182,120,0.30), transparent)",
+          filter: "blur(16px)",
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
+const MosqueNight: React.FC<SceneProps> = () => {
+  const { width, height } = useVideoConfig();
+  const hy = height * 0.72;
+  const cx = width / 2;
+  const domeR = 92;
+  return (
+    <AbsoluteFill
+      style={{
+        background:
+          "linear-gradient(180deg,#070c22 0%,#0e1838 45%,#243a5e 72%,#0c1226 100%)",
+      }}
+    >
+      <Stars count={80} area={0.6} />
+      <Moon x={width * 0.28} y={height * 0.22} r={56} />
+      <div
+        style={{
+          position: "absolute",
+          left: cx - 190,
+          top: hy - 280,
+          width: 380,
+          height: 380,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(120,160,230,0.18), transparent 62%)",
+        }}
+      />
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        <g fill="#070a16">
+          <rect x={0} y={hy} width={width} height={height} />
+          <rect x={cx - 160} y={hy - 120} width={320} height={120} />
+          <path d={`M ${cx - domeR} ${hy - 120} A ${domeR} ${domeR} 0 0 1 ${cx + domeR} ${hy - 120} Z`} />
+          <rect x={cx - 4} y={hy - 238} width={8} height={42} />
+          <rect x={cx - 222} y={hy - 200} width={26} height={200} />
+          <path d={`M ${cx - 222} ${hy - 200} A 13 13 0 0 1 ${cx - 196} ${hy - 200} Z`} />
+          <rect x={cx + 196} y={hy - 200} width={26} height={200} />
+          <path d={`M ${cx + 196} ${hy - 200} A 13 13 0 0 1 ${cx + 222} ${hy - 200} Z`} />
+        </g>
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
+const MistyPlain: React.FC<SceneProps> = () => {
+  const frame = useCurrentFrame();
+  const { width, height, fps } = useVideoConfig();
+  const t = frame / fps;
+  return (
+    <AbsoluteFill
+      style={{
+        background:
+          "linear-gradient(180deg,#1b2230 0%,#39424f 50%,#5a5f66 78%,#2b2f36 100%)",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: height * 0.6,
+          left: 0,
+          right: 0,
+          height: 2,
+          background: "rgba(255,255,255,0.12)",
+        }}
+      />
+      {[0, 1, 2, 3].map((i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            left: -200 + Math.sin(t * 0.1 + i) * 120,
+            top: height * (0.45 + i * 0.1),
+            width: width + 400,
+            height: 130,
+            background: "rgba(220,225,235,0.06)",
+            filter: "blur(34px)",
+          }}
+        />
+      ))}
+    </AbsoluteFill>
+  );
+};
+
+const Void: React.FC<SceneProps> = ({ theme }) => (
+  <AbsoluteFill
+    style={{
+      background: `radial-gradient(ellipse at 50% 35%, ${theme.gradientFrom}, ${theme.gradientTo} 82%)`,
+    }}
+  >
+    <Stars count={50} area={1} opacity={0.7} />
+  </AbsoluteFill>
+);
+
+const SCENES: Record<string, React.FC<SceneProps>> = {
+  "desert-night": DesertNight,
+  heavens: Heavens,
+  "grave-earth": GraveEarth,
+  "mosque-night": MosqueNight,
+  "misty-plain": MistyPlain,
+  void: Void,
+};
+
+export const SCENE_NAMES = Object.keys(SCENES);
+
+// One scene layer with crossfade in/out + slow push-in.
+export const SceneLayer: React.FC<{ name?: string; theme: ThemePalette }> = ({ name, theme }) => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const fade = 14;
+  const opacity = Math.min(
+    interpolate(frame, [0, fade], [0, 1], { extrapolateRight: "clamp" }),
+    interpolate(frame, [durationInFrames - fade, durationInFrames], [1, 0], {
+      extrapolateLeft: "clamp",
+    })
+  );
+  const kb = interpolate(frame, [0, durationInFrames], [1.05, 1.13]);
+  const Comp = SCENES[name ?? "void"] ?? Void;
+  return (
+    <AbsoluteFill style={{ opacity }}>
+      <AbsoluteFill style={{ transform: `scale(${kb})` }}>
+        <Comp theme={theme} />
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
