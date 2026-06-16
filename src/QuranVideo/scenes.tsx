@@ -287,6 +287,65 @@ const MistyPlain: React.FC<SceneProps> = () => {
   );
 };
 
+// The Day of Gathering: a barren cracked plain under a huge, low sun.
+const ScorchedSun: React.FC<SceneProps> = () => {
+  const frame = useCurrentFrame();
+  const { width, height, fps } = useVideoConfig();
+  const haze = Math.sin((frame / fps) * 1.5) * 6;
+  const ground = height * 0.64;
+  return (
+    <AbsoluteFill
+      style={{
+        background:
+          "linear-gradient(180deg,#e7bd84 0%,#dd9a52 28%,#bf5e2c 52%,#5a2a18 76%,#241009 100%)",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          left: width / 2 - 230,
+          top: height * 0.16 + haze,
+          width: 460,
+          height: 460,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, #fff7e6 0%, #ffd27a 38%, rgba(255,180,90,0) 70%)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: ground - 70,
+          left: 0,
+          right: 0,
+          height: 140,
+          background: "rgba(255,220,160,0.22)",
+          filter: "blur(34px)",
+        }}
+      />
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        <rect x={0} y={ground} width={width} height={height} fill="#34190f" />
+        {new Array(7).fill(0).map((_, i) => {
+          const x = (random(`cx${i}`) * width) | 0;
+          const y = ground + 30 + random(`cy${i}`) * (height - ground - 40);
+          const len = 60 + random(`cl${i}`) * 180;
+          return (
+            <path
+              key={i}
+              d={`M ${x} ${y} l ${len * 0.5} ${20} l ${-len * 0.3} ${24} l ${len * 0.4} ${18}`}
+              stroke="#1c0d07"
+              strokeWidth={2}
+              fill="none"
+              opacity={0.7}
+            />
+          );
+        })}
+      </svg>
+      <AbsoluteFill style={{ background: "rgba(20,8,4,0.18)" }} />
+    </AbsoluteFill>
+  );
+};
+
 // App-showcase outro: cycles through the app screens on a calm cream/sage
 // background that matches the app, with a download CTA. Edit APP_NAME / website
 // if the app is branded differently.
@@ -422,6 +481,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   "grave-earth": GraveEarth,
   "mosque-night": MosqueNight,
   "misty-plain": MistyPlain,
+  "scorched-sun": ScorchedSun,
   "app-showcase": AppShowcase,
   void: Void,
 };
