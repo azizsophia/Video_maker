@@ -11,9 +11,12 @@ each platform treats that match:
 | Format | What happens with a claimed reciter | What to do |
 |---|---|---|
 | **Long-form YouTube** (horizontal, regular video) | "No impact" claim — not a strike, video stays up, fully viewable | **Publish normally.** Fine. |
-| **YouTube Short ≤ 60 seconds** | Allowed — Shorts music licensing covers claimed audio under 60s | **Keep Shorts ≤ 60s.** |
-| **YouTube Short > 60 seconds** | **BLOCKED worldwide** ("not allowed in Shorts longer than 60 seconds") | **Never upload a 60s+ vertical to YouTube as a Short.** |
-| **TikTok** | Separate system from YouTube; our short surahs (e.g. Abdul Basit Al-Ikhlas) have published & monetized fine | **Post the 60s+ cut here** (TikTok monetization needs 60s+). |
+| **YouTube Short ≤ 60 seconds** | Always allowed — Shorts music licensing covers claimed audio under 60s | **Always safe.** Use freely, any reciter. |
+| **YouTube Short > 60 seconds** | Depends on the *specific recording's* claimant: some pass ("no impact"), some **BLOCK worldwide** (e.g. UMG). Abdul Basit Al-Ikhlas passed (did 1k); Sudais Al-Mulk was blocked (UMG). | **Test it Unlisted first** (check copyright before going public), OR use copyright-free audio for guaranteed safety. |
+| **TikTok** | Separate system from YouTube; our short surahs publish & monetize fine | **Post the 60s+ cut here** (TikTok monetization needs 60s+). |
+
+**Platform priority (by our results):** YouTube Shorts (1k) > TikTok (300). Shorts
+is the growth engine, so it's worth optimizing for.
 
 ### The practical workflow
 - **Long-form** lessons → YouTube (any reciter, "no impact" is fine).
@@ -22,10 +25,16 @@ each platform treats that match:
 - Reciter stays **consistent** (currently **Sudais**) across everything.
 
 ### When to switch to a copyright-free reciter (build "#2")
-Only if **TikTok** starts actually blocking the reciter. Until then, keep the
-famous voice. A copyright-free build means a lesser-known Creative Commons
-reciter **and** generating word-by-word timing ourselves (forced alignment),
-so it's a real project — not worth it while the famous voice still works.
+The case is strongest now that **YouTube Shorts (>60s) is the growth engine** but
+carries an unpredictable per-recording block risk with famous reciters. Two paths:
+- **Keep the famous voice + test each >60s Short Unlisted** before publishing
+  (works, but tedious at scale and risks inconsistent reciters).
+- **Copyright-free audio** — guarantees no blocks, so >60s Shorts work reliably
+  on the best platform. Trade-off: a lesser-known Creative Commons reciter **and**
+  generating word-by-word timing ourselves (forced alignment) — a real project.
+
+≤60s Shorts are always safe, so a quick safety net is to keep a ≤60s cut of every
+Short on hand regardless of which path we choose.
 
 ## Reciter
 Current channel reciter: **Sheikh Abdur-Rahman as-Sudais** (Quran.com id `3`).
