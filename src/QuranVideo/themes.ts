@@ -11,6 +11,7 @@ export type ThemePalette = {
   arabicGlow: string;
   translation: string;
   accent: string;
+  vignette: string; // edge vignette color (dark for dark themes, soft for light)
 };
 
 export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
@@ -24,6 +25,7 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     arabicGlow: "rgba(120, 200, 255, 0.55)",
     translation: "rgba(210, 222, 238, 0.85)",
     accent: "#7fd1ff",
+    vignette: "rgba(0,0,0,0.55)",
   },
   emerald: {
     background: "#04110c",
@@ -35,6 +37,7 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     arabicGlow: "rgba(110, 240, 180, 0.5)",
     translation: "rgba(210, 238, 224, 0.85)",
     accent: "#6ef0b4",
+    vignette: "rgba(0,0,0,0.55)",
   },
   sand: {
     background: "#13100a",
@@ -46,5 +49,20 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     arabicGlow: "rgba(240, 205, 120, 0.5)",
     translation: "rgba(238, 230, 210, 0.85)",
     accent: "#f0cd78",
+    vignette: "rgba(0,0,0,0.55)",
+  },
+  // Light "noor" theme — cream paper, deep ink-green Arabic, gold accents.
+  // Stands out on a feed full of dark Quran videos.
+  noor: {
+    background: "#f6efdf",
+    gradientFrom: "#fcf7ec",
+    gradientTo: "#ece0c8",
+    patternColor: "rgba(120, 95, 45, 0.10)",
+    arabicIdle: "rgba(38, 64, 50, 0.42)",
+    arabicActive: "#1c3a2b",
+    arabicGlow: "rgba(193, 150, 70, 0.45)",
+    translation: "rgba(54, 60, 50, 0.88)",
+    accent: "#a9792b",
+    vignette: "rgba(120, 95, 50, 0.18)",
   },
 };

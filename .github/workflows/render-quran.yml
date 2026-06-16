@@ -27,7 +27,7 @@ on:
         required: true
         default: "20"
       theme:
-        description: "Theme: midnight | emerald | sand"
+        description: "Theme: midnight | emerald | sand | noor (light/cream)"
         required: true
         default: "midnight"
       mode:
@@ -42,6 +42,14 @@ on:
         description: "Show romanized pronunciation line: true | false"
         required: false
         default: "true"
+      cta:
+        description: "Show the ketabistudio.com call-to-action on the outro: true | false"
+        required: false
+        default: "true"
+      promo:
+        description: "Promo short: swap outro CTA to 'Watch the full lesson on my YouTube channel': true | false"
+        required: false
+        default: "false"
       orientation:
         description: "vertical (Shorts/TikTok) or wide (YouTube)"
         required: true
@@ -73,7 +81,7 @@ jobs:
       - name: Fetch ayahs + audio
         run: |
           ARGS="--surah=${{ inputs.surah }} --recitation=${{ inputs.recitation }} --translation=${{ inputs.translation }} --theme=${{ inputs.theme }}"
-          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }}"
+          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }} --cta=${{ inputs.cta }} --promo=${{ inputs.promo }}"
           if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from=${{ inputs.from }}"; fi
           if [ -n "${{ inputs.to }}" ]; then ARGS="$ARGS --to=${{ inputs.to }}"; fi
           npx tsx scripts/fetch-ayahs.ts $ARGS --out=src/data/render.json
@@ -84,14 +92,18 @@ jobs:
           if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="QuranRecitationWide"; fi
           mkdir -p out
           # Use every available core (Remotion otherwise defaults low on CI).
+          # --crf 23 keeps the (low-motion) video visually crisp but far smaller,
+          # so long-form episodes fit under the Drive web-app upload limit.
           npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" \
-            --props=src/data/render.json --concurrency=$(nproc)
+            --props=src/data/render.json --concurrency=$(nproc) --crf 23
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
         with:
           name: quran-surah-${{ inputs.surah }}
-          path: out/*.mp4
+          path: |
+            out/*.mp4
+            src/data/qc-report.txt
           retention-days: 14
 
       # Auto-upload to your Google Drive. Easiest: deploy the Apps Script

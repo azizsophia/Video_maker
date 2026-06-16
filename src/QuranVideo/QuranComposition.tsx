@@ -180,6 +180,9 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
           ayahReference={ayahReference(props)}
           reciterName={props.reciterName}
           translationName={props.translationName}
+          websiteUrl={props.websiteUrl}
+          showCourseCta={props.showCourseCta}
+          ctaHeadline={props.ctaHeadline}
           theme={theme}
         />
       </Sequence>

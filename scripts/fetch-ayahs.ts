@@ -73,6 +73,17 @@ const baseLetters = (s: string): string =>
     .replace(/\s+/g, " ")
     .trim();
 
+// Even more lenient fold, used ONLY for the two-source text cross-check so it
+// doesn't flag cosmetic orthography differences between valid Uthmani editions
+// (alef-maksura vs ya, hamza-seat variants). Never affects the displayed text.
+const compareLetters = (s: string): string =>
+  baseLetters(s)
+    .replace(/[ىئ]/g, "ي")
+    .replace(/ؤ/g, "و")
+    .replace(/ء/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
 // Split a parsed tajweed run list into words (runs grouped per word).
 const tajweedWords = (runs: Run[]): { text: string; runs: Run[] }[] => {
   const words: { text: string; runs: Run[] }[] = [];
@@ -171,6 +182,7 @@ async function main() {
   const audioDir = `audio/${surah}_${recitation}`;
   const publicDir = join("public", audioDir);
   const ayahs: any[] = [];
+  const qcRows: { key: string; words: number; text: string; timing: string }[] = [];
   let tajweedApplied = 0;
 
   for (const v of data.verses as any[]) {
@@ -205,7 +217,7 @@ async function main() {
     if (apiWords.length === 0) throw new Error(`${key}: no words returned`);
     if (!ARABIC_ONLY.test(uthmaniText))
       throw new Error(`${key}: text contains non-Arabic characters — aborting`);
-    if (verifyMap[key] && baseLetters(verifyMap[key]) !== baseLetters(uthmaniText))
+    if (verifyMap[key] && compareLetters(verifyMap[key]) !== compareLetters(uthmaniText))
       console.warn(`  ⚠️  ${key}: text differs from cross-check source (review before publishing)`);
     const missingTimings = timed.filter((w) => w.start === 0 && w.end === 0).length;
     if (missingTimings > 0)
@@ -230,7 +242,39 @@ async function main() {
     const lastEnd = timed.length ? timed[timed.length - 1].end : 4;
     const durationInSeconds = Math.max(2, lastEnd + 0.6);
 
-    const audioUrl = AUDIO_BASE + v.audio.url;
+    // --- quality control: record text + timing accuracy for this ayah -----
+    const textCheck = verifyMap[key]
+      ? compareLetters(verifyMap[key]) === compareLetters(uthmaniText)
+        ? "match"
+        : "MISMATCH"
+      : "no-2nd-source";
+    const timingIssues: string[] = [];
+    const missing = timed.filter((w) => w.start === 0 && w.end === 0).length;
+    if (missing) timingIssues.push(`${missing} missing`);
+    const zeroLen = timed.filter(
+      (w) => w.end <= w.start && !(w.start === 0 && w.end === 0)
+    ).length;
+    if (zeroLen) timingIssues.push(`${zeroLen} zero-length`);
+    let outOfOrder = 0;
+    for (let i = 1; i < timed.length; i++)
+      if (timed[i].start + 0.001 < timed[i - 1].start) outOfOrder++;
+    if (outOfOrder) timingIssues.push(`${outOfOrder} out-of-order`);
+    if (lastEnd > durationInSeconds + 0.5) timingIssues.push("ends after audio");
+    qcRows.push({
+      key,
+      words: apiWords.length,
+      text: textCheck,
+      timing: timingIssues.length ? timingIssues.join(", ") : "ok",
+    });
+
+    // Some reciters return an absolute or protocol-relative audio URL; others
+    // a path relative to verses.quran.com. Handle all three.
+    const rawAudio = v.audio.url as string;
+    const audioUrl = /^https?:\/\//.test(rawAudio)
+      ? rawAudio
+      : rawAudio.startsWith("//")
+        ? "https:" + rawAudio
+        : AUDIO_BASE + rawAudio.replace(/^\/+/, "");
     const fileName = `${String(surah).padStart(3, "0")}${String(ayahNum).padStart(3, "0")}.mp3`;
     await download(audioUrl, join(publicDir, fileName));
     console.log(`  ${key}: ${apiWords.length} words, ~${durationInSeconds.toFixed(1)}s`);
@@ -272,6 +316,16 @@ async function main() {
     showTransliteration: args.transliteration === "true" || args.translit === "true",
     basmala,
     channelName: args.channelName ?? "Ketabi Studio",
+    // Promo shorts swap the outro CTA to point at the full lesson.
+    websiteUrl:
+      args.promo === "true"
+        ? "on my YouTube channel"
+        : args.website ?? "ketabistudio.com",
+    ctaHeadline:
+      args.promo === "true"
+        ? "Watch the full lesson"
+        : args.ctaHeadline ?? "Find more at",
+    showCourseCta: args.cta !== "false",
     ayahGapSeconds: args.gap ? Number(args.gap) : 0.5,
     introSeconds: args.intro ? Number(args.intro) : 5,
     outroSeconds: args.outro ? Number(args.outro) : 4,
@@ -284,6 +338,29 @@ async function main() {
   await mkdir(dirname(outFile), { recursive: true });
   await writeFile(outFile, JSON.stringify(props, null, 2));
   console.log(`\n✅ Wrote ${ayahs.length} ayahs to ${outFile} (audio in ${publicDir})`);
+
+  // --- write a human-readable QC report (uploaded alongside the video) -----
+  let flagged = 0;
+  const lines = [
+    "KETABI STUDIO — QUALITY CONTROL",
+    `Surah ${surah} (${surahNameEnglish}) · mode ${mode} · reciter ${recitation} · translation ${translation}`,
+    `Text cross-checked against an independent source (${verify ? "on" : "OFF"}).`,
+    "",
+    "ayah     words  text            timing",
+    "-------  -----  --------------  ------",
+  ];
+  for (const r of qcRows) {
+    const bad = r.text === "MISMATCH" || r.timing !== "ok";
+    if (bad) flagged++;
+    const mark = bad ? "REVIEW " : "ok     ";
+    lines.push(
+      `${mark}${r.key.padEnd(7)} ${String(r.words).padStart(4)}   ${r.text.padEnd(14)}  ${r.timing}`
+    );
+  }
+  lines.push("", flagged === 0 ? "RESULT: all checks passed." : `RESULT: ${flagged} ayah(s) need review.`);
+  const qcText = lines.join("\n");
+  await writeFile(join(dirname(outFile), "qc-report.txt"), qcText);
+  console.log("\n" + qcText);
   console.log(`\nRender it with:`);
   const comp = mode === "tajweed" ? "QuranTajweed" : mode === "hifz" ? "QuranHifz" : "QuranRecitation";
   console.log(`   npx remotion render ${comp} out/surah-${surah}.mp4 --props=${outFile}`);

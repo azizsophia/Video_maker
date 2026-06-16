@@ -168,6 +168,9 @@ export const Outro: React.FC<{
   ayahReference?: string;
   reciterName?: string;
   translationName?: string;
+  websiteUrl?: string;
+  showCourseCta?: boolean;
+  ctaHeadline?: string;
   theme: ThemePalette;
 }> = ({
   surahNameArabic,
@@ -176,6 +179,9 @@ export const Outro: React.FC<{
   ayahReference,
   reciterName,
   translationName,
+  websiteUrl,
+  showCourseCta = false,
+  ctaHeadline = "Find more at",
   theme,
 }) => {
   const frame = useCurrentFrame();
@@ -219,36 +225,57 @@ export const Outro: React.FC<{
           margin: "44px 0",
         }}
       />
-      {/* Subscribe call-to-action. */}
+      {/* Course call-to-action (only once the course is live). */}
+      {showCourseCta ? (
       <div
         style={{
-          transform: `scale(${0.8 + cta * 0.2})`,
+          transform: `scale(${0.85 + cta * 0.15})`,
           opacity: cta,
-          padding: "16px 40px",
-          borderRadius: 999,
+          padding: "22px 46px",
+          borderRadius: 28,
           border: `2px solid ${theme.accent}`,
           background: `${theme.accent}1a`,
-          fontFamily: TRANSLATION_FONT,
-          fontSize: 28,
-          letterSpacing: 2,
-          color: theme.arabicActive,
-          textTransform: "uppercase",
           boxShadow: `0 0 28px ${theme.arabicGlow}`,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 8,
         }}
       >
-        ♥ Subscribe for daily āyāt
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 26,
+            letterSpacing: 1,
+            color: theme.translation,
+          }}
+        >
+          {ctaHeadline}
+        </div>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 38,
+            fontWeight: 700,
+            letterSpacing: 1,
+            color: theme.arabicActive,
+          }}
+        >
+          {websiteUrl}
+        </div>
       </div>
+      ) : null}
       <div
         style={{
           fontFamily: TRANSLATION_FONT,
-          fontSize: 26,
+          fontSize: 24,
           letterSpacing: 3,
           color: theme.accent,
           textTransform: "uppercase",
-          marginTop: 30,
+          marginTop: 28,
         }}
       >
-        {channelName}
+        {channelName} · Subscribe for new surahs weekly
       </div>
       {/* Credits — kept off the recitation frames, gathered here instead. */}
       {reciterName || translationName ? (
