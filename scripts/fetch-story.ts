@@ -9,14 +9,18 @@
  *       --out=src/data/story-render.json [--voice <id>] [--theme midnight]
  */
 import { mkdir, writeFile } from "node:fs/promises";
-import { createWriteStream } from "node:fs";
+import { createWriteStream, existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { Readable } from "node:stream";
 import { dirname, join } from "node:path";
 
 const API = "https://api.quran.com/api/v4";
 const AUDIO_BASE = "https://verses.quran.com/";
 const ELEVEN = "https://api.elevenlabs.io/v1";
+const CACHE_DIR = join("public", "story-cache"); // persisted across runs to avoid re-spending credits
+
+const sha = (s: string): string => createHash("sha1").update(s).digest("hex").slice(0, 16);
 
 type Args = Record<string, string>;
 const parseArgs = (): Args => {
@@ -107,18 +111,30 @@ async function main() {
   const theme = args.theme ?? story.look ?? "midnight";
   const GAP = 0.35; // small breath between segments
 
+  await mkdir(CACHE_DIR, { recursive: true });
   const segments: any[] = [];
   let cursor = 0;
   let i = 0;
   for (const seg of story.segments as any[]) {
     if (seg.type === "narration") {
       const text: string = seg.say ?? seg.text;
-      const dest = join("public", "story", `n${i}.mp3`);
-      const { words, duration } = await tts(text, voice, model, dest);
-      console.log(`  narration ${i}: ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
+      // Cache narration by content so visual-only re-renders never re-spend credits.
+      const hash = sha(`${voice}|${model}|${text}`);
+      const mp3 = join(CACHE_DIR, `n-${hash}.mp3`);
+      const meta = join(CACHE_DIR, `n-${hash}.json`);
+      let words: any[];
+      let duration: number;
+      if (existsSync(mp3) && existsSync(meta)) {
+        ({ words, duration } = JSON.parse(await readFile(meta, "utf8")));
+        console.log(`  narration ${i}: cached (${text.slice(0, 40)}...)`);
+      } else {
+        ({ words, duration } = await tts(text, voice, model, mp3));
+        await writeFile(meta, JSON.stringify({ words, duration }));
+        console.log(`  narration ${i}: generated ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
+      }
       segments.push({
         kind: "narration",
-        audioSrc: `story/n${i}.mp3`,
+        audioSrc: `story-cache/n-${hash}.mp3`,
         fromSeconds: Number(cursor.toFixed(2)),
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         words,
@@ -127,21 +143,32 @@ async function main() {
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
       const key = `${seg.surah}:${seg.ayah}`;
-      const v = await getJson<any>(
-        `${API}/verses/by_key/${key}?language=en&audio=${recitation}&translations=${translation}&fields=text_uthmani`
-      );
-      const verse = v.verse;
-      const arabic = verse.text_uthmani as string;
-      const tr = stripHtml(verse.translations?.[0]?.text ?? "");
-      const segsArr: number[][] = verse.audio?.segments ?? [];
-      const lastEnd = segsArr.length ? segsArr[segsArr.length - 1][segsArr[0].length - 1] / 1000 : 6;
-      const duration = Math.max(2, lastEnd + 0.6);
-      const dest = join("public", "story", `a${i}.mp3`);
-      await download(resolveAudioUrl(verse.audio.url), dest);
-      console.log(`  ayah ${key}: ${duration.toFixed(1)}s`);
+      const hash = sha(`ayah|${key}|${recitation}|${translation}`);
+      const mp3 = join(CACHE_DIR, `a-${hash}.mp3`);
+      const meta = join(CACHE_DIR, `a-${hash}.json`);
+      let arabic: string;
+      let tr: string;
+      let duration: number;
+      if (existsSync(mp3) && existsSync(meta)) {
+        ({ arabic, tr, duration } = JSON.parse(await readFile(meta, "utf8")));
+        console.log(`  ayah ${key}: cached`);
+      } else {
+        const v = await getJson<any>(
+          `${API}/verses/by_key/${key}?language=en&audio=${recitation}&translations=${translation}&fields=text_uthmani`
+        );
+        const verse = v.verse;
+        arabic = verse.text_uthmani as string;
+        tr = stripHtml(verse.translations?.[0]?.text ?? "");
+        const segsArr: number[][] = verse.audio?.segments ?? [];
+        const lastEnd = segsArr.length ? segsArr[segsArr.length - 1][segsArr[0].length - 1] / 1000 : 6;
+        duration = Math.max(2, lastEnd + 0.6);
+        await download(resolveAudioUrl(verse.audio.url), mp3);
+        await writeFile(meta, JSON.stringify({ arabic, tr, duration }));
+        console.log(`  ayah ${key}: fetched ${duration.toFixed(1)}s`);
+      }
       segments.push({
         kind: "ayah",
-        audioSrc: `story/a${i}.mp3`,
+        audioSrc: `story-cache/a-${hash}.mp3`,
         fromSeconds: Number(cursor.toFixed(2)),
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         arabic,

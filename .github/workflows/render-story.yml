@@ -34,6 +34,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Persist generated narration/ayah audio so visual-only re-renders never
+      # re-spend ElevenLabs credits. Keyed on the story script — edit the script
+      # and only the changed lines regenerate.
+      - name: Restore narration cache
+        uses: actions/cache@v4
+        with:
+          path: public/story-cache
+          key: story-cache-${{ hashFiles(inputs.story) }}
+          restore-keys: |
+            story-cache-
+
       - name: Build story (narration + ayahs)
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
