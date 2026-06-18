@@ -121,16 +121,21 @@ const Narration: React.FC<{
         {line?.words.map((w, i) => {
           const active = t >= w.start - 0.04 && t < w.end + 0.12;
           const seen = t >= w.start - 0.04;
+          // Ketabi brand caption palette: cream base, gold keyword highlight.
+          const CREAM = "#f3ecda";
+          const GOLD = "#e7c163";
           return (
             <span
               key={i}
               style={{
-                color: active ? theme.accent : "#ffffff",
+                color: active ? GOLD : CREAM,
                 opacity: seen ? 1 : 0.25,
                 transform: `translateY(${(1 - appear) * 18}px) scale(${active ? 1.07 : 1})`,
                 display: "inline-block",
                 transition: "color 0.08s linear, opacity 0.12s linear",
-                textShadow: active ? `0 0 26px ${theme.arabicGlow}` : "0 6px 36px rgba(0,0,0,0.85)",
+                textShadow: active
+                  ? `0 0 26px rgba(231,193,99,0.55), 0 4px 18px rgba(0,0,0,0.85)`
+                  : "0 4px 18px rgba(0,0,0,0.9)",
               }}
             >
               {w.text}

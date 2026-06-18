@@ -476,7 +476,57 @@ const Void: React.FC<SceneProps> = ({ theme }) => (
   </AbsoluteFill>
 );
 
+// Deep-emerald brand backdrop (Ketabi green) for text-driven beats.
+const EmeraldVeil: React.FC<SceneProps> = () => {
+  const frame = useCurrentFrame();
+  const { width, height, fps } = useVideoConfig();
+  const t = frame / fps;
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #1c3b30 0%, #102219 55%, #08120d 100%)" }}>
+      {new Array(24).fill(0).map((_, i) => {
+        const s = i + 1;
+        const x = random(`ex${s}`) * width;
+        const y = height - ((frame * (0.3 + random(`ev${s}`)) + random(`ey${s}`) * height) % (height + 80));
+        const sz = 2 + random(`es${s}`) * 3;
+        return (
+          <div key={i} style={{ position: "absolute", left: x + Math.sin(t + s) * 14, top: y, width: sz, height: sz, borderRadius: "50%", background: "rgba(231,193,99,0.5)", opacity: 0.4, filter: "blur(1px)" }} />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+// Ring-composition diagram: nested frames folding inward to a glowing gold center.
+const RingDiagram: React.FC<SceneProps> = () => {
+  const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const cx = width / 2;
+  const cy = height * 0.44;
+  const rings = 5;
+  const GREEN = "#4f9a7a";
+  const GOLD = "#e7c163";
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 44%, #163027 0%, #0c1a14 55%, #060e0a 100%)" }}>
+      {new Array(rings).fill(0).map((_, i) => {
+        const appear = interpolate(frame, [i * 9, i * 9 + 20], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+        const size = (rings - i) / rings;
+        const w = width * 0.82 * size;
+        const h = height * 0.62 * size;
+        const center = i === rings - 1;
+        return (
+          <div key={i} style={{ position: "absolute", left: cx - w / 2, top: cy - h / 2, width: w, height: h, borderRadius: Math.max(18, 28 * size), border: `${center ? 3 : 2}px solid ${center ? GOLD : GREEN}`, opacity: appear * (center ? 1 : 0.55), background: center ? "rgba(231,193,99,0.10)" : "transparent", boxShadow: center ? "0 0 50px rgba(231,193,99,0.5)" : "none" }} />
+        );
+      })}
+      <div style={{ position: "absolute", left: 0, right: 0, top: cy - 22, textAlign: "center", fontFamily: TRANSLATION_FONT, fontSize: 36, fontWeight: 800, color: GOLD, opacity: interpolate(frame, [rings * 9, rings * 9 + 18], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }), textShadow: "0 0 24px rgba(231,193,99,0.6)" }}>
+        The Ka'ba
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const SCENES: Record<string, React.FC<SceneProps>> = {
+  emerald: EmeraldVeil,
+  ringdiagram: RingDiagram,
   "desert-night": DesertNight,
   heavens: Heavens,
   "grave-earth": GraveEarth,

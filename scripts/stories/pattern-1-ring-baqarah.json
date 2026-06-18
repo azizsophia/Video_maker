@@ -1,0 +1,39 @@
+{
+  "id": "pattern-1-ring-baqarah",
+  "title": "Scholars Called the Quran a Jumble. Then They Found the Hidden Ring.",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "gap": 0.1,
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Ring composition (Surah Al-Baqarah). Text-on-screen, brand emerald canvas + ring diagram. Deep + mystery (the impossibility of the method). No 'chaos'; the 'jumble' claim is attributed to Western critics (Carlyle). Authentic (Farrin's structural analysis; Prophet directed verse placement). No em dashes. Voice: Oliver Silk.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "emerald", "text": "Fourteen centuries ago, an unlettered man recited a chapter of 286 verses, revealed piece by piece across years.", "caption": "286 verses. Revealed in fragments." },
+    { "type": "narration", "scene": "emerald", "text": "For two hundred years, Western scholars dismissed it as a disorganized jumble. They were wrong.", "caption": "They were wrong." },
+    { "type": "narration", "scene": "emerald", "text": "Modern analysis revealed something they never imagined. A flawless, hidden mirror.", "caption": "A hidden mirror." },
+    { "type": "narration", "scene": "emerald", "text": "It is called ring composition. An advanced literary structure where a text folds in on itself.", "caption": "Ring composition." },
+    { "type": "narration", "scene": "ringdiagram", "text": "The first part mirrors the last. The second mirrors the second to last. Every piece points inward… to a single center that holds the whole meaning.", "caption": "It folds inward." },
+    { "type": "narration", "scene": "emerald", "text": "Take Surah Al-Baqarah, the Quran's longest chapter. Its opening speaks of guidance, and who will accept it.", "caption": "Surah Al-Baqarah." },
+    { "type": "narration", "scene": "emerald", "text": "Its ending returns to the very same theme. The believers… and their faith. Beginning and end, a matched pair.", "caption": "Beginning mirrors the end." },
+    { "type": "narration", "scene": "emerald", "text": "Move inward, and it holds. Law mirrors law. Story mirrors story. Covenant mirrors covenant.", "caption": "Every layer mirrors." },
+    { "type": "narration", "scene": "ringdiagram", "text": "And every layer folds toward one center. The command to turn your face… toward the Ka'ba. The direction of prayer.", "caption": "The center: the Ka'ba." },
+    { "type": "narration", "scene": "ringdiagram", "text": "Because the entire chapter asks one question. Which way will you turn? The structure does not just carry the message. The structure is the message.", "caption": "The structure IS the message." },
+    { "type": "narration", "scene": "emerald", "text": "Now here is what should stop you cold. This was not written at a desk.", "caption": "It was never written." },
+    { "type": "narration", "scene": "emerald", "text": "It was revealed in fragments, over years, in response to wars, questions, and events as they happened.", "caption": "Revealed as events unfolded." },
+    { "type": "narration", "scene": "emerald", "text": "The order it arrived in was not the order it was placed in. And the Prophet himself directed where each verse belonged. Placements that seemed to follow no logic at the time.", "caption": "He placed each verse." },
+    { "type": "narration", "scene": "emerald", "text": "The man reciting it could not read or write. There was no draft. No outline. No going back to edit.", "caption": "Unlettered. No edits." },
+    { "type": "narration", "scene": "ringdiagram", "text": "And yet, every fragment landed in the exact place needed to complete a mirror no one would fully map for fourteen centuries.", "caption": "A perfect, hidden mirror." },
+    { "type": "narration", "scene": "emerald", "pauseBefore": 0.35, "text": "So how does scattered, real time revelation, arranged by an unlettered man over two decades, form a perfect hidden architecture that points to its own heart?", "caption": "How is this possible?" },
+    { "type": "narration", "scene": "emerald", "text": "Some designs are too precise to be an accident. And some authors… are not human.", "caption": "Some authors are not human." },
+    { "type": "narration", "scene": "emerald", "text": "Follow Ketabi Studio, for the patterns that should not exist.", "caption": "Follow Ketabi Studio." },
+    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+  ],
+  "sources": [
+    "Raymond Farrin, 'Surat al-Baqara: A Structural Analysis' (Journal of Qur'anic Studies, 2010) and 'Structure and Qur'anic Interpretation'",
+    "Michel Cuypers, 'The Composition of the Qur'an' - Semitic rhetoric / concentric structures",
+    "The Prophet directed verse placement - Musnad Ahmad; Sunan Abi Dawud; Jami at-Tirmidhi"
+  ]
+}
