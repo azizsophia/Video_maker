@@ -13,6 +13,7 @@ import {
 import { StoryProps, StorySegment, StoryWord } from "./storySchema";
 import { themes, ThemePalette } from "./themes";
 import { SceneLayer } from "./scenes";
+import { FULL_VISUAL_SCENES } from "./explainer";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -285,7 +286,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
             <Audio src={resolveAudio(seg.audioSrc)} />
             {seg.sfxSrc ? <Audio src={resolveAudio(seg.sfxSrc)} volume={0.55} /> : null}
             {seg.ember ? <Embers warm count={34} /> : null}
-            {seg.scene === "app-showcase" ? null : seg.kind === "narration" && seg.arabic ? (
+            {FULL_VISUAL_SCENES.includes(seg.scene ?? "") ? null : seg.kind === "narration" && seg.arabic ? (
               <AyahCard
                 arabic={seg.arabic}
                 translation={seg.translation}
