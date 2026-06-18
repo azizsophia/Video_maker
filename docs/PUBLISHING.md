@@ -2,6 +2,16 @@
 
 How to publish the rendered videos across platforms **without copyright trouble**.
 
+## Visual rules (motion-graphics explainer style)
+- **Never a stale background.** Every beat keeps moving and always has on-screen
+  text or an animated graphic. No holding a static background under a voiceover.
+- **A purposeful visual per beat** — quote cards, mirror/comparison cards, a
+  diagram that assembles, a timeline, kinetic typography — not one recycled scene.
+- Brand palette: **emerald + cream + gold** (from the Ketabi logo); keywords in gold.
+- Code-built motion graphics only (no live footage / AI images). Aniconic.
+- Goal: hold retention past the first 3s, and earn shares/saves (the metrics that
+  drove the channel's hits).
+
 ## The core rule (copyright / Content ID)
 
 Famous reciter recordings (Abdul Basit, Sudais, Shuraim, etc.) are commercially
