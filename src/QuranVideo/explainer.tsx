@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
 import { ThemePalette } from "./themes";
-import { TRANSLATION_FONT } from "./fonts";
+import { TRANSLATION_FONT, ARABIC_DISPLAY_FONT } from "./fonts";
 
 // Bespoke motion-graphics "explainer" scenes for the ring-composition video.
 // Each renders its own text, so the narration captions are suppressed on these.
@@ -40,26 +40,43 @@ const Carlyle: React.FC<SceneProps> = () => {
   );
 };
 
-// OPENING (2:2) mirrors ENDING (2:285), connected.
+// The real connected verses: the root آمن ("believe") opens (2:3) and closes
+// (2:285) the chapter. The shared word is highlighted in both, and linked.
 const BaqarahMirror: React.FC<SceneProps> = () => {
   const f = useCurrentFrame();
   const a = interpolate(f, [0, 16], [0, 1], { extrapolateRight: "clamp" });
-  const b = interpolate(f, [22, 38], [0, 1], { extrapolateRight: "clamp" });
-  const arc = interpolate(f, [44, 62], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const labelStyle: React.CSSProperties = { fontFamily: TRANSLATION_FONT, fontSize: 28, letterSpacing: 3, color: GOLD };
-  const textStyle: React.CSSProperties = { fontFamily: TRANSLATION_FONT, fontSize: 42, color: CREAM, marginTop: 14, lineHeight: 1.3 };
+  const b = interpolate(f, [26, 42], [0, 1], { extrapolateRight: "clamp" });
+  const link = interpolate(f, [48, 66], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const g: React.CSSProperties = { color: GOLD };
+  const label: React.CSSProperties = { fontFamily: TRANSLATION_FONT, fontSize: 26, letterSpacing: 3, color: GOLD };
+  const ar: React.CSSProperties = { fontFamily: ARABIC_DISPLAY_FONT, fontSize: 50, color: CREAM, marginTop: 12, lineHeight: 1.75 };
+  const tr: React.CSSProperties = { fontFamily: TRANSLATION_FONT, fontSize: 34, color: CREAM, marginTop: 12, opacity: 0.92 };
   return (
-    <AbsoluteFill style={{ background: BG, justifyContent: "center", alignItems: "center", padding: "0 70px" }}>
-      <div style={{ ...cardStyle, width: 800, opacity: a, transform: `translateY(${(1 - a) * -30}px)` }}>
-        <div style={labelStyle}>THE OPENING · 2:2</div>
-        <div style={textStyle}>"A guidance for those conscious of God."</div>
+    <AbsoluteFill style={{ background: BG, justifyContent: "center", alignItems: "center", padding: "0 60px" }}>
+      <div style={{ ...cardStyle, width: 860, opacity: a, transform: `translateY(${(1 - a) * -26}px)` }}>
+        <div style={label}>THE OPENING · 2:3</div>
+        <div dir="rtl" style={ar}>
+          الَّذِينَ <span style={g}>يُؤْمِنُونَ</span> بِالْغَيْبِ
+        </div>
+        <div style={tr}>
+          Those who <span style={g}>believe</span> in the unseen…
+        </div>
       </div>
-      <div style={{ height: 116, display: "flex", alignItems: "center", opacity: arc, fontFamily: TRANSLATION_FONT, fontSize: 32, letterSpacing: 6, color: GREEN }}>
-        ↑ MIRROR ↓
+      <div style={{ height: 132, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: link }}>
+        <div style={{ width: 3, height: 34, background: GOLD }} />
+        <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 25, letterSpacing: 1, color: GOLD, margin: "8px 0", border: `1px solid ${GOLD}`, borderRadius: 22, padding: "7px 18px" }}>
+          same root: آمن · believe
+        </div>
+        <div style={{ width: 3, height: 34, background: GOLD }} />
       </div>
-      <div style={{ ...cardStyle, width: 800, opacity: b, transform: `translateY(${(1 - b) * 30}px)` }}>
-        <div style={labelStyle}>THE ENDING · 2:285</div>
-        <div style={textStyle}>"The Messenger believes… and so do the believers."</div>
+      <div style={{ ...cardStyle, width: 860, opacity: b, transform: `translateY(${(1 - b) * 26}px)` }}>
+        <div style={label}>THE ENDING · 2:285</div>
+        <div dir="rtl" style={ar}>
+          <span style={g}>آمَنَ</span> الرَّسُولُ <span style={g}>وَالْمُؤْمِنُونَ</span>
+        </div>
+        <div style={tr}>
+          The Messenger <span style={g}>believed</span>, and so did the <span style={g}>believers</span>.
+        </div>
       </div>
     </AbsoluteFill>
   );
