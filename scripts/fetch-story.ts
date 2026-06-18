@@ -134,7 +134,7 @@ async function main() {
   const recitation = String(story.reciter ?? 3);
   const translation = args.translation ?? "20";
   const theme = args.theme ?? story.look ?? "midnight";
-  const GAP = 0.35; // small breath between segments
+  const GAP = args.gap ? Number(args.gap) : Number(story.gap ?? 0.35); // breath between segments (small = continuous flow)
 
   await mkdir(CACHE_DIR, { recursive: true });
 
