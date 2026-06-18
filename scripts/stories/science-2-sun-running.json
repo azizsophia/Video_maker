@@ -14,8 +14,8 @@
       "type": "narration",
       "hook": true,
       "scene": "cosmos",
-      "text": "You were taught that the sun stands still… while the Earth circles around it. But fourteen centuries ago, the Quran said something the world would not understand for over a thousand years. It said the sun itself… is running.",
-      "caption": "The sun is running."
+      "text": "Fourteen hundred years ago, an unlettered man in the middle of the desert revealed something about the sun that science would not confirm for over a thousand years. He said the sun is not standing still… the sun is running.",
+      "caption": "1,400 years ago…"
     },
     {
       "type": "narration",
@@ -64,7 +64,7 @@
       "type": "narration",
       "scene": "cosmos",
       "pauseBefore": 0.5,
-      "text": "So how did an unlettered man, in the middle of the desert, fourteen hundred years ago… know the sun was on a journey… with a final destination?",
+      "text": "So how did he know? A man with no telescope, and no science… describing the sun's journey, and its end, fourteen centuries before we could prove it.",
       "caption": "How did he know?"
     },
     {
