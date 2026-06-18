@@ -10,6 +10,7 @@ import {
 } from "remotion";
 import { ThemePalette } from "./themes";
 import { TRANSLATION_FONT } from "./fonts";
+import { scienceScenes } from "./scienceScenes";
 
 // Hand-built, fully aniconic illustrated scenes (skies, deserts, architecture,
 // light) — no faces, people, or animals, ever. Owned + copyright-free.
@@ -483,6 +484,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   "misty-plain": MistyPlain,
   "scorched-sun": ScorchedSun,
   "app-showcase": AppShowcase,
+  ...scienceScenes,
   void: Void,
 };
 
@@ -492,7 +494,7 @@ export const SCENE_NAMES = Object.keys(SCENES);
 export const SceneLayer: React.FC<{ name?: string; theme: ThemePalette }> = ({ name, theme }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const fade = 14;
+  const fade = 9;
   const opacity = Math.min(
     interpolate(frame, [0, fade], [0, 1], { extrapolateRight: "clamp" }),
     interpolate(frame, [durationInFrames - fade, durationInFrames], [1, 0], {

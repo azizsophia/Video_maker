@@ -1,0 +1,33 @@
+{
+  "id": "science-1-iron",
+  "title": "The Quran Said Iron Came From the Sky. Science Just Caught Up.",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "voiceName": "George (ElevenLabs)",
+  "look": "modern-dark",
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Quran-science miracle, modern fast-cut style. New scene almost every line. No recitation = copyright-free. No em dashes. Voice: George (deep British). Short app ad at the end.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "cosmos", "text": "The Quran said something about iron… that took science fourteen hundred years to understand.", "caption": "Iron · Quran 57:25" },
+    { "type": "narration", "scene": "meteor", "text": "It said iron was sent down.", "caption": "\"We sent down iron\"" },
+    { "type": "narration", "scene": "planet", "text": "Down? From where?", "caption": "From where?" },
+    { "type": "narration", "scene": "cosmos", "text": "For centuries, that made no sense.", "caption": "It made no sense." },
+    { "type": "narration", "scene": "supernova", "text": "Then we learned the truth.", "caption": "Then, the truth." },
+    { "type": "narration", "scene": "planet", "text": "Iron cannot be created on Earth.", "caption": "Not made on Earth." },
+    { "type": "narration", "scene": "ironcore", "text": "It can only be forged… in the heart of a dying star.", "caption": "Forged in dying stars." },
+    { "type": "narration", "scene": "supernova", "sfx": "deep low ominous impact, single hollow boom, dark", "text": "And when that star explodes…", "caption": "Then it explodes." },
+    { "type": "narration", "scene": "cosmos", "text": "it scatters iron across the universe.", "caption": "Scattered everywhere." },
+    { "type": "narration", "scene": "meteor", "text": "raining it down… onto worlds.", "caption": "Raining down." },
+    { "type": "narration", "scene": "planet", "text": "Including ours.", "caption": "Including ours." },
+    { "type": "narration", "scene": "datagrid", "text": "Every atom of iron on Earth… fell from the sky.", "caption": "Stellar nucleosynthesis" },
+    { "type": "narration", "scene": "ironcore", "text": "Even the iron in your blood… is stardust.", "caption": "You are stardust." },
+    { "type": "narration", "scene": "cosmos", "text": "Sent down. Exactly as He said… fourteen hundred years ago.", "caption": "Quran 57:25" },
+    { "type": "narration", "scene": "app-showcase", "text": "Want more like this? Get Ketabi, free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+  ],
+  "sources": [
+    "Quran 57:25 - 'and We sent down iron, in which is great strength'",
+    "Stellar nucleosynthesis - iron forms in massive stars; supernovae disperse it; Earth's iron is of cosmic origin"
+  ]
+}
