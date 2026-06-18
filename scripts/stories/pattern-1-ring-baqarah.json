@@ -29,8 +29,8 @@
     { "type": "narration", "scene": "baqarah-ring", "text": "And yet, every fragment landed in the exact place needed to complete a mirror no one would fully map for fourteen centuries." },
     { "type": "narration", "scene": "emerald", "pauseBefore": 0.35, "text": "So how does scattered, real time revelation, arranged by an unlettered man over two decades, form a perfect hidden architecture that points to its own heart?", "caption": "How is this possible?" },
     { "type": "narration", "scene": "emerald", "text": "Some designs are too precise to be an accident. And some authors… are not human.", "caption": "Some authors are not human." },
-    { "type": "narration", "scene": "emerald", "text": "Follow Kitaabi Studio, for the patterns that should not exist.", "caption": "Follow Ketabi Studio." },
-    { "type": "narration", "scene": "app-showcase", "text": "And our app, Kitaabi, is a calm home for your faith. Get it free, at Kitaabi Studio dot com.", "caption": "Download Ketabi." }
+    { "type": "narration", "scene": "emerald", "text": "Follow Ketabi Studio, for the patterns that should not exist.", "caption": "Follow Ketabi Studio." },
+    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
   ],
   "sources": [
     "Raymond Farrin, 'Surat al-Baqara: A Structural Analysis' (Journal of Qur'anic Studies, 2010)",
