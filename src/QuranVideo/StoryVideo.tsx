@@ -280,7 +280,14 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
             <Audio src={resolveAudio(seg.audioSrc)} />
             {seg.sfxSrc ? <Audio src={resolveAudio(seg.sfxSrc)} volume={0.55} /> : null}
             {seg.ember ? <Embers warm count={34} /> : null}
-            {seg.scene === "app-showcase" ? null : seg.kind === "narration" ? (
+            {seg.scene === "app-showcase" ? null : seg.kind === "narration" && seg.arabic ? (
+              <AyahCard
+                arabic={seg.arabic}
+                translation={seg.translation}
+                source={seg.source}
+                theme={theme}
+              />
+            ) : seg.kind === "narration" ? (
               <Narration words={seg.words} source={seg.source} hook={seg.hook} theme={theme} />
             ) : (
               <AyahCard

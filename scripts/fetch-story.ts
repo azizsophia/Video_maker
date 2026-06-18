@@ -174,10 +174,12 @@ async function main() {
         fromSeconds: Number(cursor.toFixed(2)),
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         words,
-        source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
+        source: seg.source ?? (seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined),
         sfxSrc,
         hook: seg.hook || undefined,
         scene: seg.scene || undefined,
+        arabic: seg.arabic || undefined,
+        translation: seg.translation || undefined,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
