@@ -104,17 +104,6 @@ const Narration: React.FC<{
     >
       <div
         style={{
-          width: 90,
-          height: 6,
-          borderRadius: 3,
-          background: "#e7c163",
-          marginBottom: 44,
-          opacity: appear,
-          transform: `scaleX(${appear})`,
-        }}
-      />
-      <div
-        style={{
           transform: `scale(${kb})`,
           fontFamily: TRANSLATION_FONT,
           fontSize,
