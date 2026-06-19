@@ -10,37 +10,32 @@ const GREEN = "#4f9a7a";
 const RED = "#d9695b";
 const BG = "radial-gradient(ellipse at 50% 42%, #15271f 0%, #0c1a13 55%, #08120d 100%)";
 
-// 632 (prophecy) -> 1453 (conquest), with failed sieges marked in the gap.
+// 632 (prophecy) -> 1453 (conquest): two clean endpoints, the 821-year gap big
+// in the centre. (Failed-siege dots removed; they clustered and overlapped.)
 const ProphecyTimeline: React.FC<SceneProps> = () => {
   const f = useCurrentFrame();
   const { width, height } = useVideoConfig();
-  const x0 = 110;
-  const x1 = width - 110;
-  const x = (y: number) => x0 + (x1 - x0) * ((y - 600) / 900);
-  const axisY = height * 0.5;
-  const draw = interpolate(f, [10, 50], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const fails = [
-    { y: 674, label: "674" },
-    { y: 717, label: "717" },
-    { y: 1390, label: "1390s" },
-  ];
-  const dot = (y: number, color: string, top: string, label: string, show: number) => (
-    <>
-      <div style={{ position: "absolute", left: x(y) - 9, top: axisY - 9, width: 18, height: 18, borderRadius: "50%", background: color, opacity: show, boxShadow: `0 0 14px ${color}` }} />
-      <div style={{ position: "absolute", left: x(y) - 70, width: 140, textAlign: "center", top, fontFamily: TRANSLATION_FONT, fontSize: 26, color, opacity: show }}>{label}</div>
-    </>
+  const lx = 150;
+  const rx = width - 150;
+  const axisY = height * 0.52;
+  const draw = interpolate(f, [12, 52], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const right = interpolate(f, [50, 64], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const endpoint = (cxp: number, year: string, label: string, show: number) => (
+    <div style={{ position: "absolute", left: cxp - 150, top: axisY - 150, width: 300, textAlign: "center", opacity: show }}>
+      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 84, fontWeight: 800, color: GOLD, textShadow: "0 0 22px rgba(231,193,99,0.5)" }}>{year}</div>
+      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 30, letterSpacing: 2, color: CREAM, marginTop: 6 }}>{label}</div>
+      <div style={{ width: 22, height: 22, borderRadius: "50%", background: GOLD, margin: "26px auto 0", boxShadow: `0 0 16px ${GOLD}` }} />
+    </div>
   );
   return (
     <AbsoluteFill style={{ background: BG }}>
-      <div style={{ position: "absolute", top: height * 0.22, left: 0, right: 0, textAlign: "center", fontFamily: TRANSLATION_FONT, fontSize: 38, fontWeight: 800, color: CREAM, opacity: interpolate(f, [0, 14], [0, 1], { extrapolateRight: "clamp" }) }}>
-        821 years apart
+      <div style={{ position: "absolute", left: lx, top: axisY, width: (rx - lx) * draw, height: 5, background: "rgba(243,236,218,0.45)", borderRadius: 3 }} />
+      {endpoint(lx, "632", "THE PROPHECY", interpolate(f, [0, 14], [0, 1], { extrapolateRight: "clamp" }))}
+      {endpoint(rx, "1453", "THE CONQUEST", right)}
+      <div style={{ position: "absolute", left: 0, right: 0, top: axisY + 90, textAlign: "center", fontFamily: TRANSLATION_FONT, fontSize: 120, fontWeight: 800, color: CREAM, opacity: draw, textShadow: "0 6px 30px rgba(0,0,0,0.7)" }}>
+        821
+        <div style={{ fontSize: 40, letterSpacing: 8, color: GREEN }}>YEARS LATER</div>
       </div>
-      <div style={{ position: "absolute", left: x0, top: axisY, width: (x1 - x0) * draw, height: 4, background: "rgba(243,236,218,0.55)", borderRadius: 2 }} />
-      {fails.map((s) => (
-        <React.Fragment key={s.y}>{dot(s.y, RED, `${axisY + 22}px`, "siege failed", draw > (s.y - 600) / 900 ? 0.85 : 0)}</React.Fragment>
-      ))}
-      {dot(632, GOLD, `${axisY - 80}px`, "632 · the prophecy", 1)}
-      {dot(1453, GOLD, `${axisY - 80}px`, "1453 · the conquest", draw > 0.9 ? 1 : 0)}
     </AbsoluteFill>
   );
 };

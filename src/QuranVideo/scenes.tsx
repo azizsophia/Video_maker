@@ -484,8 +484,20 @@ const EmeraldVeil: React.FC<SceneProps> = () => {
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
   const t = frame / fps;
+  const cx = width / 2;
+  const cy = height * 0.5;
+  const R = width * 0.66;
   return (
     <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #1c3b30 0%, #102219 55%, #08120d 100%)" }}>
+      {/* slowly rotating Islamic geometric motif so the background is never flat */}
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0, opacity: 0.1 }}>
+        <g transform={`rotate(${frame * 0.05} ${cx} ${cy})`} stroke="#e7c163" strokeWidth={2} fill="none">
+          <rect x={cx - R / 2} y={cy - R / 2} width={R} height={R} />
+          <rect x={cx - R / 2} y={cy - R / 2} width={R} height={R} transform={`rotate(45 ${cx} ${cy})`} />
+          <circle cx={cx} cy={cy} r={R * 0.64} />
+          <circle cx={cx} cy={cy} r={R * 0.4} />
+        </g>
+      </svg>
       {new Array(24).fill(0).map((_, i) => {
         const s = i + 1;
         const x = random(`ex${s}`) * width;

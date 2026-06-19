@@ -89,19 +89,30 @@ const Narration: React.FC<{
   const { fps, durationInFrames, width, height } = useVideoConfig();
   const wide = width > height;
   const t = frame / fps;
-  const lines = toLines(words, wide ? 6 : 4);
+  const lines = toLines(words, wide ? 5 : 3);
   let idx = 0;
   for (let i = 0; i < lines.length; i++) if (t >= lines[i].start - 0.12) idx = i;
   const line = lines[idx];
   const lineFrame = frame - Math.round((line?.start ?? 0) * fps);
   const appear = spring({ frame: lineFrame, fps, config: { damping: 200 } });
   const kb = interpolate(frame, [0, durationInFrames], [1, 1.05]);
-  const fontSize = (hook ? 76 : 60) * (wide ? 0.82 : 1);
+  const fontSize = (hook ? 104 : 86) * (wide ? 0.8 : 1);
 
   return (
     <AbsoluteFill
-      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 170px" : "0 86px" }}
+      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 70px" }}
     >
+      <div
+        style={{
+          width: 90,
+          height: 6,
+          borderRadius: 3,
+          background: "#e7c163",
+          marginBottom: 44,
+          opacity: appear,
+          transform: `scaleX(${appear})`,
+        }}
+      />
       <div
         style={{
           transform: `scale(${kb})`,
