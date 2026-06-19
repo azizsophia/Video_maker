@@ -1,0 +1,37 @@
+{
+  "id": "history-2-constantinople",
+  "title": "A Prophecy Named a City That Wouldn't Fall for 800 Years. Then It Fell.",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "gap": 0.1,
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "History + prophecy + explainer. Constantinople. Ultra-precise: hadith praised the future commander (did not name him); tradition identifies Mehmed II. 632->1453 = 821 yrs. No em dashes. Oliver.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "emerald", "text": "For a thousand years, the most fortified city on Earth had never fallen. Then, fourteen centuries ago, a man in the desert said it would. And he was right.", "caption": "The city that could not fall." },
+    { "type": "narration", "scene": "emerald", "text": "The city was Constantinople. Guarded by a triple line of walls, a deep moat, and the sea on three sides.", "caption": "Constantinople." },
+    { "type": "narration", "scene": "emerald", "text": "Empire after empire came to take it. For eight hundred years, every single one of them failed.", "caption": "800 years of failed sieges." },
+    { "type": "narration", "scene": "emerald", "arabic": "لَتُفْتَحَنَّ الْقُسْطَنْطِينِيَّةُ، فَلَنِعْمَ الْأَمِيرُ أَمِيرُهَا، وَلَنِعْمَ الْجَيْشُ ذَلِكَ الْجَيْشُ", "translation": "Constantinople will surely be conquered. What a blessed commander will its commander be, and what a blessed army will that army be.", "source": "Musnad Ahmad", "text": "Constantinople will surely be conquered. What a blessed commander will its commander be, and what a blessed army will that army be. Reported in Musnad Ahmad." },
+    { "type": "narration", "scene": "emerald", "text": "The Prophet Muhammad, peace be upon him, said this in the seventh century, when that city ruled the known world.", "caption": "Said in the 7th century." },
+    { "type": "narration", "scene": "prophecy-timeline", "text": "He passed away in 632. The city would not fall for another 821 years." },
+    { "type": "narration", "scene": "prophecy-timeline", "text": "Generation after generation of Muslims marched on those walls, chasing the promise. And generation after generation… died trying." },
+    { "type": "narration", "scene": "emerald", "text": "Until the spring of 1453. A 21 year old sultan, Mehmed the Second, arrived with a weapon the world had never seen.", "caption": "1453. Mehmed II, age 21." },
+    { "type": "narration", "scene": "emerald", "text": "A cannon so vast it took sixty oxen to drag. It cracked walls that had stood for a thousand years.", "caption": "The great cannon." },
+    { "type": "narration", "scene": "golden-horn", "text": "And when the defenders sealed the harbor with a massive iron chain, Mehmed did the impossible. He hauled seventy ships over dry land… around the chain… and into the city's heart." },
+    { "type": "narration", "scene": "emerald", "text": "On the 29th of May, 1453, Constantinople fell. Exactly as it was foretold.", "caption": "29 May 1453." },
+    { "type": "narration", "scene": "emerald", "text": "And the commander the Prophet had praised, eight centuries before he was born, would be remembered by one name. Mehmed, the Conqueror.", "caption": "Mehmed the Conqueror." },
+    { "type": "narration", "scene": "emerald", "pauseBefore": 0.35, "text": "So how does a man name the fall of the world's greatest fortress, eight hundred years before it happens?", "caption": "How?" },
+    { "type": "narration", "scene": "emerald", "text": "He didn't predict it. He was told. And eight centuries later, history obeyed.", "caption": "He was told." },
+    { "type": "narration", "scene": "emerald", "text": "Follow for the history they don't teach you.", "caption": "Follow Ketabi Studio." },
+    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+  ],
+  "sources": [
+    "Musnad Ahmad 18957 - the Prophet's prophecy of Constantinople's conquest (the hadith praises the future commander, it does not name him)",
+    "Constantinople fell to Mehmed II on 29 May 1453; the Prophet died in 632 (821 years)",
+    "The Theodosian Walls had repelled sieges for ~1000 years; Mehmed used massive bombards and transported ships overland into the Golden Horn",
+    "Traditional identification of Mehmed II as the praised commander"
+  ]
+}
