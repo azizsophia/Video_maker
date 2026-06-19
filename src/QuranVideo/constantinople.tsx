@@ -15,15 +15,15 @@ const BG = "radial-gradient(ellipse at 50% 42%, #15271f 0%, #0c1a13 55%, #08120d
 const ProphecyTimeline: React.FC<SceneProps> = () => {
   const f = useCurrentFrame();
   const { width, height } = useVideoConfig();
-  const lx = 150;
-  const rx = width - 150;
+  const lx = Math.round(width * 0.24);
+  const rx = Math.round(width * 0.76);
   const axisY = height * 0.52;
   const draw = interpolate(f, [12, 52], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const right = interpolate(f, [50, 64], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const endpoint = (cxp: number, year: string, label: string, show: number) => (
-    <div style={{ position: "absolute", left: cxp - 150, top: axisY - 150, width: 300, textAlign: "center", opacity: show }}>
-      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 84, fontWeight: 800, color: GOLD, textShadow: "0 0 22px rgba(231,193,99,0.5)" }}>{year}</div>
-      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 30, letterSpacing: 2, color: CREAM, marginTop: 6 }}>{label}</div>
+    <div style={{ position: "absolute", left: cxp - 210, top: axisY - 150, width: 420, textAlign: "center", opacity: show }}>
+      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 80, fontWeight: 800, color: GOLD, textShadow: "0 0 22px rgba(231,193,99,0.5)" }}>{year}</div>
+      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 27, letterSpacing: 1, color: CREAM, marginTop: 6 }}>{label}</div>
       <div style={{ width: 22, height: 22, borderRadius: "50%", background: GOLD, margin: "26px auto 0", boxShadow: `0 0 16px ${GOLD}` }} />
     </div>
   );

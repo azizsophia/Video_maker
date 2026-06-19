@@ -489,13 +489,17 @@ const EmeraldVeil: React.FC<SceneProps> = () => {
   const R = width * 0.66;
   return (
     <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #1c3b30 0%, #102219 55%, #08120d 100%)" }}>
-      {/* slowly rotating Islamic geometric motif so the background is never flat */}
+      {/* slow-rotating astrolabe motif (concentric rings + tick marks) so the
+          background is never flat. Deliberately no stars/polygons. */}
       <svg width={width} height={height} style={{ position: "absolute", inset: 0, opacity: 0.1 }}>
-        <g transform={`rotate(${frame * 0.05} ${cx} ${cy})`} stroke="#e7c163" strokeWidth={2} fill="none">
-          <rect x={cx - R / 2} y={cy - R / 2} width={R} height={R} />
-          <rect x={cx - R / 2} y={cy - R / 2} width={R} height={R} transform={`rotate(45 ${cx} ${cy})`} />
-          <circle cx={cx} cy={cy} r={R * 0.64} />
-          <circle cx={cx} cy={cy} r={R * 0.4} />
+        <g transform={`rotate(${frame * 0.04} ${cx} ${cy})`} stroke="#e7c163" fill="none">
+          <circle cx={cx} cy={cy} r={R * 0.62} strokeWidth={2} />
+          <circle cx={cx} cy={cy} r={R * 0.46} strokeWidth={1.5} />
+          <circle cx={cx} cy={cy} r={R * 0.3} strokeWidth={1.5} />
+          {new Array(24).fill(0).map((_, i) => {
+            const a = (i / 24) * Math.PI * 2;
+            return <line key={i} x1={cx + Math.cos(a) * R * 0.62} y1={cy + Math.sin(a) * R * 0.62} x2={cx + Math.cos(a) * R * 0.7} y2={cy + Math.sin(a) * R * 0.7} strokeWidth={2} />;
+          })}
         </g>
       </svg>
       {new Array(24).fill(0).map((_, i) => {

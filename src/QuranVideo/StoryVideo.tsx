@@ -123,10 +123,6 @@ const Narration: React.FC<{
           textAlign: "center",
           color: "#ffffff",
           textShadow: "0 6px 36px rgba(0,0,0,0.85)",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "0 18px",
           opacity: Math.min(1, appear + 0.15),
         }}
       >
@@ -137,21 +133,23 @@ const Narration: React.FC<{
           const CREAM = "#f3ecda";
           const GOLD = "#e7c163";
           return (
-            <span
-              key={i}
-              style={{
-                color: active ? GOLD : CREAM,
-                opacity: seen ? 1 : 0.25,
-                transform: `translateY(${(1 - appear) * 18}px) scale(${active ? 1.07 : 1})`,
-                display: "inline-block",
-                transition: "color 0.08s linear, opacity 0.12s linear",
-                textShadow: active
-                  ? `0 0 26px rgba(231,193,99,0.55), 0 4px 18px rgba(0,0,0,0.85)`
-                  : "0 4px 18px rgba(0,0,0,0.9)",
-              }}
-            >
-              {w.text}
-            </span>
+            <React.Fragment key={i}>
+              <span
+                style={{
+                  color: active ? GOLD : CREAM,
+                  opacity: seen ? 1 : 0.25,
+                  transform: `translateY(${(1 - appear) * 18}px) scale(${active ? 1.04 : 1})`,
+                  display: "inline-block",
+                  transition: "color 0.08s linear, opacity 0.12s linear",
+                  textShadow: active
+                    ? `0 0 26px rgba(231,193,99,0.55), 0 4px 18px rgba(0,0,0,0.85)`
+                    : "0 4px 18px rgba(0,0,0,0.9)",
+                }}
+              >
+                {w.text}
+              </span>
+              {i < (line?.words.length ?? 0) - 1 ? " " : ""}
+            </React.Fragment>
           );
         })}
       </div>
