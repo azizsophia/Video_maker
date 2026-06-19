@@ -12,6 +12,18 @@ How to publish the rendered videos across platforms **without copyright trouble*
 - Goal: hold retention past the first 3s, and earn shares/saves (the metrics that
   drove the channel's hits).
 
+## Accuracy (non-negotiable: ultra-precise)
+- **Be ultra-precise. Never simplify in a way a knowledgeable viewer could pick
+  apart.** Accuracy applies to the **visuals too**, not just the narration.
+- Prefer the exactly-correct word over the punchier-but-looser one (e.g. the
+  Birmingham text is "**identical**" in wording, not "exactly the same" — the
+  early manuscript is undotted).
+- Example to follow: when comparing an old manuscript to today, show the
+  **undotted early script** vs the **dotted modern script** — don't show the
+  modern dotted text on both sides.
+- Every claim sourced (Qur'an + sound Hadith / cited scholarship). Frame disputed
+  i'jaz claims as reflection/possibility, never as proven fact.
+
 ## The core rule (copyright / Content ID)
 
 Famous reciter recordings (Abdul Basit, Sudais, Shuraim, etc.) are commercially
