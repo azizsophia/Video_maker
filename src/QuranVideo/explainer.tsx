@@ -146,4 +146,4 @@ export const explainerScenes: Record<string, React.FC<SceneProps>> = {
   "revelation-timeline": RevelationTimeline,
 };
 
-export const FULL_VISUAL_SCENES = ["app-showcase", "carlyle", "baqarah-mirror", "baqarah-ring", "revelation-timeline", "ringdiagram", "manuscript", "match-compare", "carbon-timeline", "confidence-meter", "preservation-timeline", "prophecy-timeline", "golden-horn", "walls", "sieges-failed", "cannon", "fell-stamp"];
+export const FULL_VISUAL_SCENES = ["app-showcase", "carlyle", "baqarah-mirror", "baqarah-ring", "revelation-timeline", "ringdiagram", "manuscript", "match-compare", "carbon-timeline", "confidence-meter", "preservation-timeline", "prophecy-timeline", "golden-horn", "walls", "sieges-failed", "cannon", "fell-stamp", "march-map", "kaaba-protected", "stones-from-sky", "isnad-chain", "rijal-card", "bukhari-funnel", "grading-scale"];
