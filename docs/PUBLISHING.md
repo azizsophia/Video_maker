@@ -58,6 +58,8 @@ Credit on the outro + in every description.
 - Always include: the hook, authentic **sources**, the **reciter credit**, and
   the **ketabistudio.com** link.
 - TikTok/Reels captions: short, hook-first, no emojis, a handful of hashtags.
+- **Shorts + TikTok caption: 100 characters or less, exactly 5 hashtags.** Punchy,
+  hook-first, no emojis. (The longer sourced YouTube description is separate.)
 
 ## Audio rules (non-negotiable)
 - **No music / instruments.** Story videos use **ambient sound effects only**
