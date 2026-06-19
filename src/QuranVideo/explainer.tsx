@@ -146,4 +146,4 @@ export const explainerScenes: Record<string, React.FC<SceneProps>> = {
   "revelation-timeline": RevelationTimeline,
 };
 
-export const FULL_VISUAL_SCENES = ["app-showcase", "carlyle", "baqarah-mirror", "baqarah-ring", "revelation-timeline", "ringdiagram"];
+export const FULL_VISUAL_SCENES = ["app-showcase", "carlyle", "baqarah-mirror", "baqarah-ring", "revelation-timeline", "ringdiagram", "manuscript", "carbon-timeline", "confidence-meter", "preservation-timeline"];
