@@ -11,7 +11,7 @@
   },
   "_note": "History + mystery + explainer graphics. The Birmingham Qur'an manuscript. 100% accurate (radiocarbon 568-645 CE, 95.4%; Prophet 570-632; text matches modern Qur'an; preservation verse 15:9). Framed as possibility, not overstated. No em dashes. Oliver Silk.",
   "segments": [
-    { "type": "narration", "hook": true, "scene": "manuscript", "text": "For nearly a century, one of the oldest books on Earth sat forgotten on a library shelf in England. And no one knew what they were holding." },
+    { "type": "narration", "hook": true, "scene": "emerald", "text": "For nearly a century, one of the oldest books on Earth sat forgotten on a library shelf in England. And no one knew what they were holding.", "caption": "Forgotten for a century." },
     { "type": "narration", "scene": "emerald", "text": "It was a fragment of the Quran. Written on the skin of an animal, in faded, ancient ink.", "caption": "A fragment of the Quran." },
     { "type": "narration", "scene": "emerald", "text": "In 2015, a researcher at the University of Birmingham noticed something strange about it, and sent it for radiocarbon testing.", "caption": "2015. Carbon dating." },
     { "type": "narration", "scene": "emerald", "text": "The results stunned the world.", "caption": "The world was stunned." },
@@ -19,12 +19,12 @@
     { "type": "narration", "scene": "carbon-timeline", "text": "The two timelines overlap completely. This Quran may have been written within the lifetime of the Prophet himself. Or by the companions who knew him." },
     { "type": "narration", "scene": "confidence-meter", "text": "Scientists placed the accuracy of that dating at ninety five point four percent." },
     { "type": "narration", "scene": "emerald", "text": "But here is the part that should stop you.", "caption": "But here's the part…" },
-    { "type": "narration", "scene": "manuscript", "text": "The text on that fourteen hundred year old parchment is identical to the Quran printed and recited today. Word for word." },
+    { "type": "narration", "scene": "match-compare", "text": "The text on that fourteen hundred year old parchment is identical to the Quran printed and recited today. Word for word." },
     { "type": "narration", "scene": "preservation-timeline", "text": "Not a single letter changed. Across fourteen centuries, across empires, and across continents." },
     { "type": "narration", "scene": "emerald", "arabic": "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ", "translation": "Indeed, it is We who sent down the Reminder, and indeed, We will be its guardian.", "source": "Surah Al-Hijr · 15:9", "text": "Indeed, it is We who sent down the Reminder, and indeed, We will be its guardian. Surah Al-Hijr, verse 9." },
     { "type": "narration", "scene": "emerald", "text": "The Quran promised to guard itself. And the oldest copies on Earth show it kept that promise.", "caption": "A promise kept." },
     { "type": "narration", "scene": "emerald", "pauseBefore": 0.35, "text": "So how does a book, revealed in the desert fourteen centuries ago, survive completely unchanged, when so many ancient texts were lost or rewritten?", "caption": "How?" },
-    { "type": "narration", "scene": "emerald", "text": "Some books are preserved by men. And some… are protected by something greater.", "caption": "Protected by something greater." },
+    { "type": "narration", "scene": "emerald", "text": "The Quran didn't just survive history. It told you it would. Fourteen centuries before we could prove it.", "caption": "It told you it would." },
     { "type": "narration", "scene": "emerald", "text": "Follow for the history they don't teach you.", "caption": "Follow Ketabi Studio." },
     { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
   ],

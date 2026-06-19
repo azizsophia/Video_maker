@@ -147,8 +147,46 @@ const PreservationTimeline: React.FC<SceneProps> = () => {
   );
 };
 
+// Clean comparison: the same line, dated 568 CE vs today, marked identical.
+const MatchCompare: React.FC<SceneProps> = () => {
+  const f = useCurrentFrame();
+  const { width } = useVideoConfig();
+  const a = interpolate(f, [0, 16], [0, 1], { extrapolateRight: "clamp" });
+  const b = interpolate(f, [22, 38], [0, 1], { extrapolateRight: "clamp" });
+  const badge = interpolate(f, [46, 62], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const line = "وَاذْكُرْ فِي الْكِتَابِ مَرْيَمَ";
+  const card = (op: number, ty: number): React.CSSProperties => ({
+    width: width * 0.8,
+    background: "rgba(18,38,30,0.78)",
+    border: "1px solid rgba(79,154,122,0.5)",
+    borderRadius: 24,
+    padding: "30px 40px",
+    textAlign: "center",
+    opacity: op,
+    transform: `translateY(${ty}px)`,
+  });
+  const lab: React.CSSProperties = { fontFamily: TRANSLATION_FONT, fontSize: 26, letterSpacing: 3, color: GOLD };
+  const ar: React.CSSProperties = { fontFamily: ARABIC_DISPLAY_FONT, fontSize: 54, color: CREAM, marginTop: 10, lineHeight: 1.6 };
+  return (
+    <AbsoluteFill style={{ background: BG, justifyContent: "center", alignItems: "center" }}>
+      <div style={card(a, (1 - a) * -24)}>
+        <div style={lab}>THE PARCHMENT · 568 CE</div>
+        <div dir="rtl" style={ar}>{line}</div>
+      </div>
+      <div style={{ margin: "22px 0", opacity: badge, fontFamily: TRANSLATION_FONT, fontSize: 30, fontWeight: 800, letterSpacing: 2, color: "#0c1a13", background: GOLD, padding: "10px 26px", borderRadius: 30 }}>
+        ✓ IDENTICAL
+      </div>
+      <div style={card(b, (1 - b) * 24)}>
+        <div style={lab}>TODAY</div>
+        <div dir="rtl" style={ar}>{line}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const birminghamScenes: Record<string, React.FC<SceneProps>> = {
   manuscript: Manuscript,
+  "match-compare": MatchCompare,
   "carbon-timeline": CarbonTimeline,
   "confidence-meter": ConfidenceMeter,
   "preservation-timeline": PreservationTimeline,
