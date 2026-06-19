@@ -25,7 +25,7 @@
     { "type": "narration", "scene": "emerald", "text": "The Quran promised to guard itself. And the oldest copies on Earth show it kept that promise.", "caption": "A promise kept." },
     { "type": "narration", "scene": "emerald", "pauseBefore": 0.35, "text": "So how does a book, revealed in the desert fourteen centuries ago, survive completely unchanged, when so many ancient texts were lost or rewritten?", "caption": "How?" },
     { "type": "narration", "scene": "emerald", "text": "Some books are preserved by men. And some… are protected by something greater.", "caption": "Protected by something greater." },
-    { "type": "narration", "scene": "emerald", "text": "Follow Ketabi Studio, for the history they don't teach you.", "caption": "Follow Ketabi Studio." },
+    { "type": "narration", "scene": "emerald", "text": "Follow for the history they don't teach you.", "caption": "Follow Ketabi Studio." },
     { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
   ],
   "sources": [

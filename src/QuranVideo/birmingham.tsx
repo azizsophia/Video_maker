@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig, interpolate, random } from "remotion";
 import { ThemePalette } from "./themes";
 import { TRANSLATION_FONT, ARABIC_DISPLAY_FONT } from "./fonts";
 
@@ -10,43 +10,63 @@ const GOLD = "#e7c163";
 const GREEN = "#4f9a7a";
 const BG = "radial-gradient(ellipse at 50% 42%, #15271f 0%, #0c1a13 55%, #08120d 100%)";
 
-// An aged parchment folio with early Hijazi-era Arabic (from Surah Maryam, which
-// the real manuscript contains).
+// An aged parchment folio (museum-style) with undotted Hijazi-era Arabic from
+// Surah Maryam, which the real Birmingham manuscript contains. Ragged edges,
+// stains, darkened borders, ruling lines, a warm spotlight + drifting dust.
+const STAINS =
+  "radial-gradient(circle at 17% 20%, rgba(120,85,40,0.28), transparent 18%)," +
+  "radial-gradient(circle at 84% 28%, rgba(110,75,35,0.24), transparent 16%)," +
+  "radial-gradient(circle at 28% 82%, rgba(85,55,24,0.30), transparent 22%)," +
+  "radial-gradient(circle at 73% 86%, rgba(120,85,40,0.22), transparent 18%)";
+const RAGGED =
+  "polygon(1.5% 3%, 22% 0.6%, 48% 2.6%, 78% 0.4%, 98.5% 4%, 100% 28%, 98.8% 56%, 100% 92%, 72% 99.4%, 45% 97.6%, 14% 100%, 1% 72%, 2.2% 40%)";
+
 const Manuscript: React.FC<SceneProps> = () => {
   const f = useCurrentFrame();
-  const { width, height } = useVideoConfig();
-  const inn = interpolate(f, [0, 22], [0, 1], { extrapolateRight: "clamp" });
-  const float = Math.sin(f / 30) * 6;
+  const { width, height, durationInFrames, fps } = useVideoConfig();
+  const inn = interpolate(f, [0, 24], [0, 1], { extrapolateRight: "clamp" });
+  const zoom = interpolate(f, [0, durationInFrames], [1, 1.06]);
+  const t = f / fps;
+  const W = width * 0.78;
+  const H = height * 0.54;
+  const lines = ["واذكر في الكتاب مريم", "اذ انتبذت من اهلها", "مكانا شرقيا"];
   return (
     <AbsoluteFill style={{ background: BG, justifyContent: "center", alignItems: "center" }}>
-      <div style={{ position: "absolute", width: width * 0.9, height: width * 0.9, borderRadius: "50%", background: "radial-gradient(circle, rgba(231,193,99,0.16), transparent 60%)" }} />
-      <div
-        dir="rtl"
-        style={{
-          width: width * 0.74,
-          height: height * 0.5,
-          background: "linear-gradient(155deg, #efe2c2 0%, #e3d2ab 55%, #d2bd8e 100%)",
-          borderRadius: 12,
-          boxShadow: "0 40px 90px rgba(0,0,0,0.55), inset 0 0 80px rgba(120,90,40,0.35)",
-          transform: `translateY(${float}px) rotate(-2deg) scale(${0.9 + inn * 0.1})`,
-          opacity: inn,
-          padding: "60px 54px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          gap: 34,
-          fontFamily: ARABIC_DISPLAY_FONT,
-          color: "#3a2a16",
-          fontSize: 52,
-          lineHeight: 1.9,
-        }}
-      >
-        <div>وَاذْكُرْ فِي الْكِتَابِ مَرْيَمَ</div>
-        <div>إِذِ انتَبَذَتْ مِنْ أَهْلِهَا</div>
-        <div>مَكَانًا شَرْقِيًّا</div>
+      <div style={{ position: "absolute", width: W * 1.5, height: W * 1.5, borderRadius: "50%", background: "radial-gradient(circle, rgba(231,193,99,0.22), transparent 60%)" }} />
+      {new Array(18).fill(0).map((_, i) => {
+        const s = i + 1;
+        const x = (random(`mx${s}`) * width + t * 8 * (0.3 + random(`mv${s}`))) % width;
+        const y = height * 0.18 + random(`my${s}`) * height * 0.64;
+        return <div key={i} style={{ position: "absolute", left: x, top: y + Math.sin(t + s) * 10, width: 3, height: 3, borderRadius: "50%", background: "rgba(231,193,99,0.55)", opacity: 0.4 }} />;
+      })}
+      <div style={{ transform: `scale(${zoom}) rotate(-1.6deg)`, opacity: inn }}>
+        <div
+          dir="rtl"
+          style={{
+            position: "relative",
+            width: W,
+            height: H,
+            background: `${STAINS}, linear-gradient(150deg, #ece0bf 0%, #ddc99c 52%, #c9b184 100%)`,
+            clipPath: RAGGED,
+            boxShadow: "0 55px 110px rgba(0,0,0,0.62)",
+            padding: "76px 70px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: 42,
+          }}
+        >
+          {[0, 1, 2, 3].map((i) => (
+            <div key={`r${i}`} style={{ position: "absolute", left: 60, right: 60, top: `${26 + i * 18}%`, height: 1, background: "rgba(90,62,28,0.18)" }} />
+          ))}
+          {lines.map((line, i) => (
+            <div key={i} style={{ fontFamily: ARABIC_DISPLAY_FONT, color: "#3a2912", fontSize: 58, lineHeight: 1.6, opacity: 0.9, textShadow: "0 1px 0 rgba(255,255,255,0.25)" }}>{line}</div>
+          ))}
+          <div style={{ position: "absolute", inset: 0, clipPath: RAGGED, background: "radial-gradient(ellipse at 50% 50%, transparent 52%, rgba(70,46,16,0.55) 100%)", pointerEvents: "none" }} />
+        </div>
       </div>
-      <div style={{ position: "absolute", bottom: height * 0.16, fontFamily: TRANSLATION_FONT, fontSize: 28, letterSpacing: 2, color: GOLD, opacity: inn }}>
-        Birmingham Qur'an · Surah Maryam
+      <div style={{ position: "absolute", bottom: height * 0.13, fontFamily: TRANSLATION_FONT, fontSize: 28, letterSpacing: 2, color: GOLD, opacity: inn }}>
+        The Birmingham Qur'an · Surah Maryam
       </div>
     </AbsoluteFill>
   );
