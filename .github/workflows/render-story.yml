@@ -1,0 +1,97 @@
+name: Render Story Video
+
+# AI-narrated story video (Daniel narration + real Sudais ayahs). Vertical.
+on:
+  workflow_dispatch:
+    inputs:
+      story:
+        description: "Story script path"
+        required: true
+        default: "scripts/stories/gog-and-magog.json"
+      theme:
+        description: "Theme: midnight | emerald | sand | noor"
+        required: true
+        default: "midnight"
+      orientation:
+        description: "vertical (TikTok/Reels/Shorts) | landscape (YouTube long-form 16:9)"
+        required: true
+        default: "vertical"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 || \
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Persist generated narration/ayah audio so visual-only re-renders never
+      # re-spend ElevenLabs credits. Keyed on the story script — edit the script
+      # and only the changed lines regenerate.
+      - name: Restore narration cache
+        uses: actions/cache@v4
+        with:
+          path: public/story-cache
+          key: story-cache-${{ hashFiles(inputs.story) }}
+          restore-keys: |
+            story-cache-
+
+      - name: Build story (narration + ayahs)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          npx tsx scripts/fetch-story.ts \
+            --story="${{ inputs.story }}" --theme="${{ inputs.theme }}" \
+            --out=src/data/story-render.json
+
+      - name: Render video
+        run: |
+          mkdir -p out
+          if [ "${{ inputs.orientation }}" = "landscape" ]; then COMP=StoryVideoWide; else COMP=StoryVideo; fi
+          npx remotion render "$COMP" "out/story.mp4" \
+            --props=src/data/story-render.json --concurrency=$(nproc) --crf 23
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: story-video
+          path: |
+            out/story.mp4
+            src/data/story-render.json
+            src/data/story-facts.txt
+          retention-days: 14
+
+      - name: Check Drive credentials
+        id: drive
+        env:
+          URL: ${{ secrets.DRIVE_UPLOAD_URL }}
+        run: |
+          if [ -n "$URL" ]; then echo "method=webapp" >> "$GITHUB_OUTPUT"; else echo "method=none" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Set up Python (Drive upload)
+        if: ${{ steps.drive.outputs.method != 'none' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Upload to Google Drive
+        if: ${{ steps.drive.outputs.method != 'none' }}
+        env:
+          DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
+          DRIVE_UPLOAD_TOKEN: ${{ secrets.DRIVE_UPLOAD_TOKEN }}
+        run: |
+          NAME="Ketabi — Story — $(basename "${{ inputs.story }}" .json) (${{ inputs.orientation }}).mp4"
+          python3 scripts/upload_to_drive.py --file "out/story.mp4" --name "$NAME" --mime video/mp4 --replace

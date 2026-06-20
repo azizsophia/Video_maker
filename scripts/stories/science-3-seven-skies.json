@@ -1,0 +1,139 @@
+{
+  "id": "science-3-seven-skies",
+  "title": "Did the Quran Predict the SEVEN Layers of the Sky?",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "gap": 0.1,
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Sequel to the Seven Earths hit. Story structure with tension + a specific discovery moment. Continuous flow (gap 0.1), micro-pauses via ellipses, fast scene cuts, ~140s. No em dashes. No recitation = copyright-free. Voice: Oliver Silk.",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "planet",
+      "text": "Fourteen centuries ago, the Quran declared the sky above you is not one… but seven.",
+      "caption": "The sky is not one."
+    },
+    {
+      "type": "narration",
+      "scene": "datagrid",
+      "text": "Scientists believed the atmosphere was a single blanket of air, until balloons and rockets revealed the shocking truth.",
+      "caption": "They were wrong."
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "text": "What they found will change the way you look up… forever.",
+      "caption": "Look up."
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "arabic": "الَّذِي خَلَقَ سَبْعَ سَمَاوَاتٍ طِبَاقًا",
+      "translation": "[He] who created seven heavens in layers.",
+      "source": "Surah Al-Mulk · 67:3",
+      "text": "The Quran states. He who created seven heavens, in layers. Surah Al-Mulk, verse three.",
+      "verseRef": "67:3"
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "text": "And the Prophet, peace be upon him, spoke of seven skies, one above the other. For over a thousand years… it seemed impossible.",
+      "caption": "Seven skies."
+    },
+    {
+      "type": "narration",
+      "scene": "planet",
+      "text": "How could the sky have seven layers, when all we see is open blue?",
+      "caption": "How?"
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "text": "For most of history, there was no way to climb above the clouds. No way to measure what shields us from the cold of space.",
+      "caption": "A sealed mystery."
+    },
+    {
+      "type": "narration",
+      "scene": "datagrid",
+      "text": "Then, in 1902, a French scientist named Léon Teisserenc de Bort sent weather balloons higher than anyone had ever dared.",
+      "caption": "1902."
+    },
+    {
+      "type": "narration",
+      "scene": "planet",
+      "text": "And he found something no one expected. Far above the air we breathe… lay a second, completely different layer.",
+      "caption": "A second layer."
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "text": "The sky was not one. It was many.",
+      "caption": "It was many."
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "text": "Today, science divides the sky into seven layers.",
+      "caption": "Seven layers."
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "text": "The troposphere. The stratosphere. The ozone layer. The mesosphere. The thermosphere. The ionosphere. And the exosphere.",
+      "caption": "Seven."
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "text": "Seven heavens… exactly as it was written, fourteen centuries ago.",
+      "caption": "Exactly as written."
+    },
+    {
+      "type": "narration",
+      "scene": "planet",
+      "text": "And each one guards the Earth from a different danger above.",
+      "caption": "Each one a shield."
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "pauseBefore": 0.35,
+      "text": "So here is the question that should stop you.",
+      "caption": "The question."
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "text": "How did a man in seventh century Arabia know the sky was built in seven layers… when no human alive could rise high enough to see even one?",
+      "caption": "How did he know?"
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "text": "Perhaps some knowledge does not come from looking up… but from the One who raised what is above us.",
+      "caption": "From the One above."
+    },
+    {
+      "type": "narration",
+      "scene": "datagrid",
+      "text": "Follow Ketabi Studio, for more truths that science keeps catching up to… one sign at a time.",
+      "caption": "Follow Ketabi Studio."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.",
+      "caption": "Download Ketabi."
+    }
+  ],
+  "sources": [
+    "Quran 67:3 (Surah Al-Mulk) - 'who created seven heavens in layers' (tibaqan)",
+    "Quran 2:29; 71:15 - seven heavens",
+    "Atmospheric science - the atmosphere is commonly divided into layers (troposphere, stratosphere, mesosphere, thermosphere, exosphere; with ozone layer and ionosphere)"
+  ]
+}

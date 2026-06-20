@@ -1,0 +1,69 @@
+{
+  "id": "gog-and-magog",
+  "title": "The Wall Holding Back the End of the World",
+  "reciter": 3,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "cinematic-dark",
+  "sound": {
+    "ambient": "continuous low ominous wind, dark hollow atmosphere, distant deep rumble, tense and desolate, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Ellipses give Daniel natural dramatic pauses; pauseBefore adds silence before the big reveals (timing only, no re-generation). Ayahs are the real Sudais recitation.",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "text": "Somewhere on this earth… is a wall you won't find on any map. And behind it, the Quran says, is a force that will one day pour out… and signal the end of the world.",
+      "caption": "There is a wall you won't find on any map."
+    },
+    {
+      "type": "narration",
+      "text": "This isn't folklore. It's in the Quran… the story of a mysterious traveler called Dhul-Qarnayn — a king given power, and a path across the entire earth.",
+      "caption": "Surah Al-Kahf · 18:83"
+    },
+    {
+      "type": "narration",
+      "text": "He traveled west, until he reached a place where the sun seemed to set into dark, murky water. Then he turned east… to a people living exposed beneath the sun. And then — a valley between two mountains, and a people who could barely understand a word.",
+      "caption": "18:86 - 18:93"
+    },
+    {
+      "type": "narration",
+      "pauseBefore": 0.6,
+      "text": "They were terrified. And they begged him… Gog and Magog spread corruption in this land. Build a barrier between us… and them.",
+      "caption": "18:94"
+    },
+    { "type": "ayah", "surah": 18, "ayah": 96, "source": "Surah Al-Kahf 18:96", "pauseBefore": 0.5, "ember": true, "sfx": "deep cinematic impact, heavy stone slab dropping, low sub boom, single hit" },
+    { "type": "ayah", "surah": 18, "ayah": 97, "source": "Surah Al-Kahf 18:97" },
+    { "type": "ayah", "surah": 18, "ayah": 98, "source": "Surah Al-Kahf 18:98", "pauseBefore": 0.6 },
+    {
+      "type": "narration",
+      "pauseBefore": 0.5,
+      "text": "The wall is temporary. And the Prophet, peace be upon him, told us… every day, Gog and Magog dig at it, until they almost break through. And every day… it is restored. Until the day… it isn't.",
+      "caption": "Tirmidhi 3153 (hasan)"
+    },
+    {
+      "type": "narration",
+      "pauseBefore": 0.3,
+      "text": "When they finally pour out… it is one of the great signs that the end has begun.",
+      "caption": "Quran 21:96 · Sahih Muslim"
+    },
+    {
+      "type": "narration",
+      "pauseBefore": 0.5,
+      "text": "So somewhere out there… the digging continues. And the Quran told us… fourteen hundred years ago.",
+      "caption": "1,400 years ago."
+    },
+    {
+      "type": "narration",
+      "pauseBefore": 0.3,
+      "text": "Follow… for the stories the Quran actually tells.",
+      "caption": "Follow for the stories the Quran actually tells."
+    }
+  ],
+  "sources": [
+    "Surah Al-Kahf 18:83-98",
+    "Jami at-Tirmidhi 3153 (hasan) - the daily digging",
+    "Quran 21:96-97; Sahih Muslim - Gog & Magog as a sign of the end"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "afterlife-3-the-gathering",
+  "title": "The Day Every Human Who Ever Lived Stands in One Place",
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "cinematic-dark",
+  "sound": {
+    "ambient": "deep dark ambience, hollow cavernous air, distant low rumble, cold and still, faint cosmic wind, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Afterlife Journey Part 3. No recitation = copyright-free. No em dashes.",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "grave-earth",
+      "sfx": "deep low ominous impact, single hollow boom, dark",
+      "text": "One day, the Trumpet will sound a second time. And the earth… will give back everyone it ever buried.",
+      "caption": "The Resurrection."
+    },
+    {
+      "type": "narration",
+      "scene": "grave-earth",
+      "pauseBefore": 0.3,
+      "text": "From the very first human, to the very last. Every soul who ever lived will rise from the ground. Barefoot. Bare. Exactly as they were first created.",
+      "caption": "Sahih al-Bukhari; Muslim"
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "pauseBefore": 0.4,
+      "text": "They are driven to one vast plain. No mountains. No place to hide. Just level ground… and a crowd beyond counting.",
+      "caption": "Quran 18:47"
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "text": "And then… the sun is brought near. Closer than it has ever been. And the people stand, drowning in their own sweat, each by the weight of what they did.",
+      "caption": "Sahih Muslim"
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "pauseBefore": 0.4,
+      "text": "For some, the sweat reaches their ankles. For some, their waist. And for some… it will reach their mouths.",
+      "caption": "Sahih Muslim"
+    },
+    {
+      "type": "narration",
+      "scene": "misty-plain",
+      "pauseBefore": 0.5,
+      "text": "All of them… waiting. For the one judgment that lasts forever.",
+      "caption": "Awaiting judgment."
+    },
+    {
+      "type": "narration",
+      "scene": "mosque-night",
+      "pauseBefore": 0.3,
+      "text": "Follow for Part Four… when the books are opened.",
+      "caption": "Follow for Part 4."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "pauseBefore": 0.4,
+      "text": "And if this stirred your heart, let it become a habit. Our app, Ketabi, is a calm home for your faith. Adhkar through your day, a space to reflect, and gentle daily check-ins. Because in the remembrance of Allah… hearts find rest. Begin your journey, at Ketabi Studio dot com.",
+      "caption": "Download Ketabi."
+    }
+  ],
+  "sources": [
+    "Quran 39:68; 36:51 - the second blast and the rising",
+    "Sahih al-Bukhari 6527; Sahih Muslim 2860 - raised barefoot and bare",
+    "Quran 18:47; Sahih Muslim 2864 - the level plain, the sun drawn near, the sweat"
+  ]
+}

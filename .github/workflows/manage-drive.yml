@@ -1,0 +1,32 @@
+name: Manage Drive
+
+# Archive (move to "Posted ✅") or delete a finished video in your Drive.
+# Usually triggered for you by Claude when you say "posted <file>".
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "archive | delete | list"
+        required: true
+        default: "archive"
+      name:
+        description: "Exact file name (needed for archive/delete)"
+        required: false
+        default: ""
+
+jobs:
+  manage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run Drive action
+        env:
+          DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
+          DRIVE_UPLOAD_TOKEN: ${{ secrets.DRIVE_UPLOAD_TOKEN }}
+        run: |
+          python3 scripts/manage_drive.py \
+            --action "${{ inputs.action }}" \
+            --name "${{ inputs.name }}"

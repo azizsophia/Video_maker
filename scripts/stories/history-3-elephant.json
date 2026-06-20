@@ -1,0 +1,99 @@
+{
+  "id": "history-3-elephant",
+  "title": "An Army Came to Destroy the Ka'ba With Elephants. None Survived.",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "gap": 0.1,
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Year of the Elephant (Surah Al-Fil). Aniconic: no elephants/birds drawn (map, Ka'ba, falling stones). Birth-year tie framed 'according to tradition'. No em dashes. Oliver.",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "emerald",
+      "text": "An army once marched on Mecca to destroy the Ka'ba, led by war elephants. They were the most powerful force in all of Arabia. And not one of them would make it home.",
+      "caption": "The army that came for the Ka'ba."
+    },
+    {
+      "type": "narration",
+      "scene": "march-map",
+      "text": "The year was around 570. A king named Abraha had built a great cathedral in Yemen, and he wanted to erase the Ka'ba, so the world would worship at his instead."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "So he raised an army no tribe could stop. And at its front, he placed elephants. Creatures the people of Mecca had never even seen.",
+      "caption": "War elephants."
+    },
+    {
+      "type": "narration",
+      "scene": "kaaba-protected",
+      "text": "The Meccans could not fight him. The Prophet's grandfather said only this. I am the master of the camels. But this House has a Lord who will protect it."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "And as the army reached the edge of the city, the lead elephant stopped. It knelt to the ground. And it refused to march on the Ka'ba.",
+      "caption": "The elephant refused."
+    },
+    {
+      "type": "narration",
+      "scene": "stones-from-sky",
+      "text": "Then the sky went dark. Not with clouds, but with flocks of birds. Each one carrying a stone of hardened clay."
+    },
+    {
+      "type": "narration",
+      "scene": "stones-from-sky",
+      "text": "They rained down upon the army, and tore it apart. The mightiest force in Arabia, destroyed in moments."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "arabic": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ ۝ تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+      "translation": "And He sent against them birds in flocks, striking them with stones of baked clay.",
+      "source": "Surah Al-Fil · 105:3-4",
+      "text": "And He sent against them birds in flocks, striking them with stones of baked clay. Surah Al-Fil.",
+      "verseRef": "105:3-4"
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "The Quran preserved it as an entire chapter. The Year of the Elephant.",
+      "caption": "The Year of the Elephant."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "And in that very same year, according to tradition, a child was born in that same city. His name was Muhammad.",
+      "caption": "c. 570 CE."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "Fourteen centuries later, the Ka'ba still stands. The cathedral Abraha built to replace it is dust.",
+      "caption": "The Ka'ba still stands."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "Follow for the history they don't teach you.",
+      "caption": "Follow Ketabi Studio."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.",
+      "caption": "Download Ketabi."
+    }
+  ],
+  "sources": [
+    "Surah Al-Fil (105) - the companions of the elephant",
+    "Sira (Ibn Ishaq): Abraha, viceroy of Aksumite Yemen, marched on Mecca with elephants c. 570 CE; the lead elephant refused to advance; the army was destroyed by birds carrying stones of clay",
+    "Abd al-Muttalib's words to Abraha (the House has a Lord who protects it)",
+    "Traditional dating: the Year of the Elephant coincides with the Prophet's birth (c. 570 CE)"
+  ]
+}

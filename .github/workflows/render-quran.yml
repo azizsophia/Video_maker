@@ -1,0 +1,151 @@
+name: Render Quran Video
+
+# Phone-first: trigger this from the GitHub mobile app
+# (Actions tab -> "Render Quran Video" -> Run workflow), fill the fields,
+# then download the finished MP4 from the run's Artifacts when it's done.
+on:
+  workflow_dispatch:
+    inputs:
+      surah:
+        description: "Surah number (1-114)"
+        required: true
+        default: "2"
+      from:
+        description: "First ayah (optional, blank = whole surah). Default 255 = Ayat al-Kursi"
+        required: false
+        default: "255"
+      to:
+        description: "Last ayah (optional, blank = whole surah)"
+        required: false
+        default: "255"
+      recitation:
+        description: "Reciter id (2=AbdulBaset Murattal, 1=AbdulBaset Mujawwad, 3=Sudais, 6=Husary)"
+        required: true
+        default: "2"
+      translation:
+        description: "Translation id (20=Saheeh Intl, 131=Clear Quran)"
+        required: true
+        default: "20"
+      theme:
+        description: "Theme: midnight | emerald | sand | noor (light/cream)"
+        required: true
+        default: "midnight"
+      mode:
+        description: "standard | hifz (memorization) | tajweed (colour-coded)"
+        required: true
+        default: "standard"
+      repeats:
+        description: "Hifz only: repetitions per ayah (2-8)"
+        required: false
+        default: "4"
+      transliteration:
+        description: "Show romanized pronunciation line: true | false"
+        required: false
+        default: "true"
+      cta:
+        description: "Show the ketabistudio.com call-to-action on the outro: true | false"
+        required: false
+        default: "true"
+      promo:
+        description: "Promo short: swap outro CTA to 'Watch the full lesson on my YouTube channel': true | false"
+        required: false
+        default: "false"
+      orientation:
+        description: "vertical (Shorts/TikTok) or wide (YouTube)"
+        required: true
+        default: "vertical"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      # Libraries Remotion's headless Chrome needs on Linux runners.
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 || \
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch ayahs + audio
+        run: |
+          ARGS="--surah=${{ inputs.surah }} --recitation=${{ inputs.recitation }} --translation=${{ inputs.translation }} --theme=${{ inputs.theme }}"
+          ARGS="$ARGS --mode=${{ inputs.mode }} --repeats=${{ inputs.repeats }} --transliteration=${{ inputs.transliteration }} --cta=${{ inputs.cta }} --promo=${{ inputs.promo }}"
+          if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from=${{ inputs.from }}"; fi
+          if [ -n "${{ inputs.to }}" ]; then ARGS="$ARGS --to=${{ inputs.to }}"; fi
+          npx tsx scripts/fetch-ayahs.ts $ARGS --out=src/data/render.json
+
+      - name: Render video
+        run: |
+          COMP="QuranRecitation"
+          if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="QuranRecitationWide"; fi
+          mkdir -p out
+          # Use every available core (Remotion otherwise defaults low on CI).
+          # --crf 23 keeps the (low-motion) video visually crisp but far smaller,
+          # so long-form episodes fit under the Drive web-app upload limit.
+          npx remotion render "$COMP" "out/surah-${{ inputs.surah }}.mp4" \
+            --props=src/data/render.json --concurrency=$(nproc) --crf 23
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: quran-surah-${{ inputs.surah }}
+          path: |
+            out/*.mp4
+            src/data/qc-report.txt
+          retention-days: 14
+
+      # Auto-upload to your Google Drive. Easiest: deploy the Apps Script
+      # (scripts/drive-webapp.gs) and add DRIVE_UPLOAD_URL + DRIVE_UPLOAD_TOKEN.
+      # Or use the OAuth secrets GDRIVE_CLIENT_ID/SECRET/REFRESH_TOKEN. See
+      # docs/SETUP.md §3. The upload is skipped automatically until secrets exist.
+      - name: Check Drive credentials
+        id: drive
+        env:
+          URL: ${{ secrets.DRIVE_UPLOAD_URL }}
+          RT: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          SA: ${{ secrets.GDRIVE_SA_JSON }}
+        run: |
+          if [ -n "$URL" ]; then
+            echo "method=webapp" >> "$GITHUB_OUTPUT"
+          elif [ -n "$RT" ] || [ -n "$SA" ]; then
+            echo "method=api" >> "$GITHUB_OUTPUT"
+          else
+            echo "method=none" >> "$GITHUB_OUTPUT"
+            echo "No Drive secrets set — skipping upload (download from Artifacts above)."
+          fi
+
+      - name: Set up Python (for Drive upload)
+        if: ${{ steps.drive.outputs.method != 'none' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Upload to Google Drive
+        if: ${{ steps.drive.outputs.method != 'none' }}
+        env:
+          DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
+          DRIVE_UPLOAD_TOKEN: ${{ secrets.DRIVE_UPLOAD_TOKEN }}
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+        run: |
+          if [ "${{ steps.drive.outputs.method }}" = "api" ]; then
+            pip install --quiet google-api-python-client google-auth google-auth-oauthlib
+          fi
+          NAME="Ketabi — Surah ${{ inputs.surah }} (${{ inputs.mode }}, ${{ inputs.orientation }}).mp4"
+          FILE=$(ls out/*.mp4 | head -n1)
+          python3 scripts/upload_to_drive.py --file "$FILE" --name "$NAME" --mime video/mp4 --replace

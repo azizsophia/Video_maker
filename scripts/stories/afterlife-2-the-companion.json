@@ -1,0 +1,81 @@
+{
+  "id": "afterlife-2-the-companion",
+  "title": "What Comes to You in the Grave After the Questions",
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "cinematic-dark",
+  "sound": {
+    "ambient": "deep dark ambience, hollow cavernous air, distant low rumble, cold and still, faint cosmic wind, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Afterlife Journey Part 2. No recitation = copyright-free. No em dashes.",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "grave-earth",
+      "text": "After the angels finish questioning you in the grave… something else arrives. And the Prophet, peace be upon him, said it has a face.",
+      "caption": "The companion in the grave."
+    },
+    {
+      "type": "narration",
+      "scene": "grave-earth",
+      "text": "For the one who believed, a man appears. Beautiful in face. Sweet in scent. Who are you, the soul asks. And he answers… I am your good deeds.",
+      "caption": "Sunan Abi Dawud (hadith of al-Bara)"
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "pauseBefore": 0.4,
+      "text": "Then a window opens, to their place in Paradise. And every morning, and every evening… they are shown the home that is waiting for them.",
+      "caption": "Sahih al-Bukhari; Muslim"
+    },
+    {
+      "type": "narration",
+      "scene": "grave-earth",
+      "pauseBefore": 0.4,
+      "text": "But for the one who turned away, the face that comes is dark, and the scent is foul. I am your bad deeds, it says. And a window opens… to the Fire.",
+      "caption": "Sunan Abi Dawud"
+    },
+    {
+      "type": "narration",
+      "scene": "misty-plain",
+      "pauseBefore": 0.5,
+      "text": "And there… they wait. Not for years. But until a sound tears through the heavens and the earth.",
+      "caption": "Until the Trumpet."
+    },
+    {
+      "type": "narration",
+      "scene": "heavens",
+      "sfx": "deep low ominous impact, single hollow boom, dark",
+      "text": "The blast of the Trumpet. And when it comes, everything in the heavens and the earth will fall… except whom Allah wills.",
+      "caption": "Quran 39:68"
+    },
+    {
+      "type": "narration",
+      "scene": "misty-plain",
+      "pauseBefore": 0.4,
+      "text": "And that… is where the journey truly begins.",
+      "caption": "The journey begins."
+    },
+    {
+      "type": "narration",
+      "scene": "mosque-night",
+      "pauseBefore": 0.3,
+      "text": "Follow for Part Three… the day the earth gives everyone back.",
+      "caption": "Follow for Part 3."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "pauseBefore": 0.4,
+      "text": "And if this stirred your heart, let it become a habit. Our app, Ketabi, is a calm home for your faith. Adhkar through your day, a space to reflect, and gentle daily check-ins. Because in the remembrance of Allah… hearts find rest. Begin your journey, at Ketabi Studio dot com.",
+      "caption": "Download Ketabi."
+    }
+  ],
+  "sources": [
+    "Sunan Abi Dawud; Musnad Ahmad - the deeds appear as a companion (hadith of al-Bara)",
+    "Sahih al-Bukhari 1379; Sahih Muslim 2866 - the window shown morning and evening",
+    "Quran 39:68 - the blast of the Trumpet"
+  ]
+}

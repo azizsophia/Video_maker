@@ -1,98 +1,117 @@
-# Video_maker
+# Ketabi Studio 🎬
 
-Render **Ayat al-Kursi** (Surah Al-Baqarah, 2:255 — "The Verse of the Throne")
-as a video. Two renderers are included:
+A **code-driven video engine** for Islamic content — your own replacement for
+InVideo, built so every visual is programmable, reusable, and free to render.
 
-| Renderer | Look | Command |
-| --- | --- | --- |
-| **Cinematic 3-D** *(flagship)* | A camera flight through a volumetric golden star/dust field, a rotating 3-D ornamental medallion (concentric rings + spokes, rose-window / astrolabe style), word-by-word kinetic reveals, a faint Ketabi Studio brand watermark, HDR bloom, anamorphic 2.39:1 letterbox, chromatic aberration, vignette and film grain. | `python3 src/cinematic.py` |
-| **Classic cards** | Clean phrase-by-phrase cards with a gradient background and gold ornaments. | `python3 src/render.py` |
+This repo's **first milestone** is the signature feature: **Quran recitation
+videos with word-by-word highlighting synced to a real reciter's audio.** Real
+Arabic text lights up in perfect time with the recitation, with translation and
+a fully code-generated animated backdrop. No stock clips, no generic AI — every
+frame is drawn by code.
 
-![Cinematic title](output/cinematic_poster.png)
+> Phone-first: you can render videos straight from the **GitHub mobile app**
+> (no laptop needed) — see [Render from your phone](#render-from-your-phone).
 
-The verse is revealed phrase by phrase — Arabic in the **AmiriQuran** script, a
-transliteration, and the English meaning — then the complete verse appears over
-the glowing emblem before everything converges to a single point of light.
+---
 
-## Quick start
+## What's inside
+
+| Path | What it is |
+|---|---|
+| `src/QuranVideo/` | The Remotion composition: background, ayah view, word-by-word highlighting, themes |
+| `src/data/sample-al-ikhlas.json` | A bundled sample (Surah Al-Ikhlas) so the engine runs out of the box |
+| `scripts/fetch-ayahs.ts` | Pulls any surah/ayah range + real reciter audio + word timings from the free Quran.com API |
+| `.github/workflows/render-quran.yml` | One-tap rendering you can trigger from your phone |
+| `docs/SETUP.md` | API keys, network allowlist, Drive + ElevenLabs setup |
+
+Built with [Remotion](https://remotion.dev) (React → MP4). Data from the free
+[Quran.com API v4](https://api-docs.quran.com/).
+
+---
+
+## Render from your phone
+
+1. Open the **GitHub app** → this repo → **Actions** tab.
+2. Choose **"Render Quran Video"** → **Run workflow**.
+3. Fill in: surah, (optional) ayah range, reciter, translation, theme, orientation.
+4. When the run finishes, open it and download the MP4 from **Artifacts**.
+
+Reciter ids: `2` AbdulBaset (Murattal) · `1` AbdulBaset (Mujawwad) · `3` Sudais · `6` Husary.
+Translation ids: `20` Saheeh International · `131` The Clear Quran.
+
+> Luhaidan & Dossary aren't on the free word-timing API yet — see
+> `docs/SETUP.md` for how we can add them via forced alignment.
+
+(Optional auto-upload to Google Drive is wired in `docs/SETUP.md`.)
+
+---
+
+## Run it on a computer
 
 ```bash
-bash scripts/setup.sh                 # install deps + fonts (one time)
-python3 src/cinematic.py              # -> output/ayat_al_kursi_cinematic.mp4
+npm install
+
+# Preview live in the browser (Remotion Studio)
+npm run dev
+
+# Pull a real passage + reciter audio, then render (Ayat al-Kursi by Abdul Basit)
+npm run fetch -- --surah=2 --from=255 --to=255 --recitation=2 --theme=midnight
+npx remotion render QuranRecitation out/ayat-al-kursi.mp4 --props=src/data/surah-2.json
 ```
 
-## Cinematic renderer
+Vertical (`QuranRecitation`, 1080×1920) is for Shorts/TikTok/Reels.
+`QuranRecitationWide` (1920×1080) is for standard YouTube.
+
+> **Heads up on network:** rendering downloads a headless Chrome from
+> `remotion.media`, and `fetch` calls `api.quran.com` / `verses.quran.com`.
+> In Claude Code web sessions these hosts must be added to the egress
+> allowlist — see `docs/SETUP.md`. Normal machines and GitHub Actions have
+> open internet, so it just works there.
+
+---
+
+## Arabic accuracy
+
+Quranic text is **never hand-typed**. Every render's Arabic comes from the
+KFGQPC Uthmani mushaf via the Quran.com API (the basmala too). The fetcher
+**validates every verse** — Arabic-only characters, sane word/timing counts —
+and cross-checks the text against a second authoritative source, aborting on
+any anomaly. In tajweed mode the colour markup is stripped and the clean text
+is verified to match the Uthmani text (same base letters and word count) before
+any colour is applied; if a verse doesn't verify, it renders as plain, correct
+text with no colouring. The bundled `sample-al-ikhlas.json` is a non-publishable
+preview placeholder only.
+
+## Tajweed mode
+
+Letters are coloured by their authoritative tajweed rule (madd, ghunnah,
+qalqalah, ikhfaa…), with a legend of the rules that appear. Turn it on with
+`--mode=tajweed`; preview as the `QuranTajweed` composition.
+
+## Hifz (memorization) mode
+
+A format that doesn't exist as a shareable video anywhere else: each ayah
+repeats while words progressively blank out, so the viewer recites the gaps
+from memory (first pass full, final pass blank). Turn it on with `mode`:
 
 ```bash
-python3 src/cinematic.py [options]
-
-  --out PATH        output file (default: output/ayat_al_kursi_cinematic.mp4)
-  --width  N        frame width  (default: 1920)
-  --height N        frame height (default: 1080)
-  --fps N           frames per second (default: 30)
-  --preview         render only title + a verse + the climax + finale (fast check)
-  --poster          save a single representative PNG and exit
-  --seconds-cap N   stop after N seconds (useful for tests)
+npm run fetch -- --surah=112 --recitation=2 --mode=hifz --repeats=4
+npx remotion render QuranRecitation out/al-ikhlas-hifz.mp4 --props=src/data/surah-112.json
 ```
 
-Examples:
+Preview it live as the `QuranHifz` composition in `npm run dev`.
 
-```bash
-# quick low-res motion check
-python3 src/cinematic.py --preview --width 960 --height 540 --fps 24
+## Roadmap
 
-# vertical 9:16 cut for reels/shorts
-python3 src/cinematic.py --width 1080 --height 1920 --out output/ayat_vertical.mp4
-```
+- [x] **M1 — Quran recitation template** (word-by-word synced, real reciters)
+- [x] **Hifz memorization mode** (progressive word blanking)
+- [x] **Tajweed color-coding** (letters colored by rule, with legend)
+- [ ] **Word-by-word meaning layer** (transliteration + literal meaning per word)
+- [ ] **3D audio-reactive scenes** (`@remotion/three`, verse-meaning environments)
+- [ ] **M2 — Story / prophets template**: script → ElevenLabs British narrator +
+      Pexels stock visuals + captions (the InVideo replacement)
+- [ ] **M3 — Phone web app**: Next.js on Vercel + Supabase; paste a script,
+      pick a template, tap render, get the MP4 in your Drive
+- [ ] **M4 — Auto-publish** helpers for YouTube / TikTok
 
-## How the 3-D works
-
-There is **no GPU, Blender or system ffmpeg** in play — it is a small, fully
-**vectorised software 3-D engine** in numpy:
-
-- **Perspective fly-through.** Particles live in a 3-D frustum; their screen
-  position is `centre + (u, v) · scale / z`, so as the camera advances (`z`
-  shrinks) they sweep radially outward — a genuine 3-D dolly. Particles that
-  pass the camera are recycled to the far plane for an endless field, and are
-  drawn with motion streaks during warp accelerations.
-- **Rotating medallion.** A round ornamental medallion (concentric rings joined
-  by radial spokes — a rose-window / astrolabe motif, deliberately circular with
-  no pointed-star geometry) is rotated with real 3×3 rotation matrices and
-  perspective-projected each frame, then drawn as a glowing line figure (sharp
-  core + blurred halo).
-- **Brand watermark.** The Ketabi Studio wordmark is composited after grading —
-  a premium placement in the lower cinematic bar plus a faint, slowly drifting
-  anti-theft guard mark in a corner. Brand assets live in `assets/brand/`.
-- **Text shaping.** Pillow + **libraqm/HarfBuzz** do full Arabic cursive joining
-  and bidi directly from logical-order text (with an `arabic-reshaper` +
-  `python-bidi` fallback).
-- **Cinematic finishing.** Everything is composited into an HDR float buffer,
-  then put through filmic tone-mapping, HDR bloom, chromatic aberration,
-  vignette, film grain and 2.39:1 letterbox bars before being piped to a bundled
-  `ffmpeg` (via `imageio-ffmpeg`) and encoded to H.264.
-
-## Delivery to Google Drive (phone-first)
-
-Finished videos are delivered to Google Drive by a **GitHub Action**, not by
-pasting base64 (which can't carry a real video). Trigger it from the GitHub
-mobile app: **Actions → Render & Upload to Drive → Run workflow**, choosing
-`upload-existing` (upload the committed MP4) or `render-and-upload` (render
-fresh first). One-time credential setup is in
-[`docs/DRIVE_SETUP.md`](docs/DRIVE_SETUP.md); the uploader is
-`scripts/upload_to_drive.py`.
-
-## Project layout
-
-```
-src/verse.py      the verse text: Arabic, transliteration, translation
-src/cinematic.py  the 3-D engine, scenes, post-processing and encoding
-src/render.py     the classic card renderer
-assets/fonts/     AmiriQuran (Quranic Arabic) + DejaVu (Latin)
-scripts/setup.sh  installs dependencies and fonts
-output/           rendered videos + posters
-```
-
-## Fonts & licensing
-
-- **Amiri / AmiriQuran** — © The Amiri Project, [SIL Open Font License 1.1](https://github.com/aliftype/amiri).
-- **DejaVu Sans/Serif** — DejaVu Fonts license (public-domain derived).
+See `docs/SETUP.md` to get the live pipeline running.

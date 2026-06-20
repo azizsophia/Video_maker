@@ -1,0 +1,35 @@
+{
+  "id": "decoded-1-alkahf",
+  "title": "Surah Al-Kahf Decoded: The 4 Trials Hidden Inside It",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "gap": 0.1,
+  "sound": { "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments", "ambientDuration": 22 },
+  "_note": "Surah Decoded pilot — Al-Kahf. Interactive (puzzle, poll, comment-next). 4-trials framing attributed to scholars. Verse 18:7 auto-pulled. Hadith shown English + source only (no hand-typed Arabic). No em dashes. Oliver.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "emerald", "text": "Every Friday, millions of Muslims read one chapter, to be protected from the greatest deceiver who will ever live. This is Surah Al-Kahf, decoded.", "caption": "Surah Al-Kahf, decoded." },
+    { "type": "narration", "scene": "alkahf-name", "text": "Surah Al-Kahf. The Cave. The eighteenth chapter of the Quran." },
+    { "type": "narration", "scene": "alkahf-info", "text": "Revealed in Mecca. One hundred and ten verses. And inside it, four stories that look completely unrelated." },
+    { "type": "narration", "scene": "alkahf-structure", "text": "The People of the Cave. The man with two gardens. Musa and Al-Khidr. And the king, Dhul-Qarnayn." },
+    { "type": "narration", "scene": "emerald", "pauseBefore": 0.3, "text": "Four stories, scattered across the chapter. Scholars noticed they share one hidden thread. Can you see it?", "caption": "Can you see the link?" },
+    { "type": "narration", "scene": "emerald", "text": "Every single one… is a trial. A test of what people value most.", "caption": "Every one is a test." },
+    { "type": "narration", "scene": "emerald", "text": "The cave, a trial of faith. The gardens, a trial of wealth. Musa, a trial of knowledge. And Dhul-Qarnayn, a trial of power.", "caption": "Faith. Wealth. Knowledge. Power." },
+    { "type": "narration", "scene": "poll-card", "text": "Four trials every human will face. So which one is testing you, right now? Comment it below." },
+    { "type": "narration", "scene": "emerald", "verseRef": "18:7", "source": "Surah Al-Kahf · 18:7", "text": "And the Quran tells you exactly why. We made all that is on the earth an adornment, to test which of you is best in deeds. Surah Al-Kahf, verse 7." },
+    { "type": "narration", "scene": "emerald", "hadith": true, "arabic": "مَنْ حَفِظَ عَشْرَ آيَاتٍ مِنْ أَوَّلِ سُورَةِ الْكَهْفِ عُصِمَ مِنَ الدَّجَّالِ", "translation": "Whoever memorizes ten verses from the beginning of Surah al-Kahf will be protected from the Dajjal.", "source": "Sahih Muslim", "text": "And the Prophet, peace be upon him, said: whoever memorizes the first ten verses of Surah Al-Kahf will be protected from the Dajjal." },
+    { "type": "narration", "scene": "emerald", "hadith": true, "arabic": "مَنْ قَرَأَ سُورَةَ الْكَهْفِ يَوْمَ الْجُمُعَةِ أَضَاءَ لَهُ مِنَ النُّورِ مَا بَيْنَ الْجُمُعَتَيْنِ", "translation": "Whoever reads Surah al-Kahf on Friday, a light will shine for him between the two Fridays.", "source": "Authenticated by al-Albani", "text": "He also said: whoever reads Surah Al-Kahf on Friday will have a light, shining for him between the two Fridays." },
+    { "type": "narration", "scene": "alkahf-lessons", "text": "Faith outlasts numbers. Wealth is borrowed, never owned. Knowledge has limits. And power is a test, not a trophy." },
+    { "type": "narration", "scene": "emerald", "text": "Everything you are afraid to lose… is the test. Al-Kahf is the manual for passing it.", "caption": "Al-Kahf is the manual." },
+    { "type": "narration", "scene": "emerald", "text": "Comment the surah you want me to decode next.", "caption": "Which surah next?" },
+    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+  ],
+  "sources": [
+    "Surah Al-Kahf (18) - Meccan, 110 verses",
+    "The four stories: People of the Cave (18:9-26), Two Gardens (18:32-44), Musa & al-Khidr (18:60-82), Dhul-Qarnayn (18:83-98)",
+    "The 'four trials' (faith, wealth, knowledge, power) is a well-known scholarly thematic reading",
+    "Quran 18:7 - the world as a test (auto-pulled)",
+    "Sahih Muslim 809 - the first ten verses and protection from the Dajjal",
+    "The Friday recitation hadith - graded authentic by al-Albani (Sahih al-Jami 6470)"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "science-2-sun-running",
+  "title": "The Quran Said the Sun Is Moving. Science Said It Was Still. Guess Who Was Right.",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Quran-science miracle (36:38). Tight, flowing, Islamic-anchored, dramatic pauses, verse shown on screen (Arabic text only, no reciter audio = copyright-free). >60s. Voice: Oliver Silk.",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "cosmos",
+      "text": "Fourteen hundred years ago, an unlettered man in the middle of the desert revealed something about the sun that science would not confirm for over a thousand years. He said the sun is not standing still… the sun is running.",
+      "caption": "1,400 years ago…"
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "pauseBefore": 0.3,
+      "arabic": "وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَّهَا ۚ ذَٰلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ",
+      "translation": "And the sun runs toward its resting place. That is the decree of the Almighty, the All-Knowing.",
+      "source": "Surah Ya-Sin · 36:38",
+      "text": "And the sun runs toward its resting place. That is the decree of the Almighty, the All-Knowing. Surah Ya-Sin, verse thirty-eight.",
+      "verseRef": "36:38"
+    },
+    {
+      "type": "narration",
+      "scene": "datagrid",
+      "pauseBefore": 0.3,
+      "text": "For most of history, mankind believed the sun was fixed in the sky. Motionless. Then we built telescopes… and discovered the truth.",
+      "caption": "We were wrong."
+    },
+    {
+      "type": "narration",
+      "scene": "planet",
+      "text": "Our sun is not still at all. It is racing through the galaxy at over eight hundred thousand kilometers an hour… carrying the Earth, and everything on it, along for the ride.",
+      "caption": "800,000 km/h."
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "text": "It is circling the center of the Milky Way on a journey so vast… that a single orbit takes two hundred and thirty million years.",
+      "caption": "One orbit: 230 million years."
+    },
+    {
+      "type": "narration",
+      "scene": "ironcore",
+      "pauseBefore": 0.5,
+      "text": "But the verse said something deeper. The sun runs toward a resting place. A destination. An end.",
+      "caption": "Toward a resting place."
+    },
+    {
+      "type": "narration",
+      "scene": "supernova",
+      "sfx": "deep low ominous impact, single hollow boom, dark",
+      "pauseBefore": 0.3,
+      "text": "And science agrees. One day, the sun will burn through the last of its fuel… and die.",
+      "caption": "The sun will die."
+    },
+    {
+      "type": "narration",
+      "scene": "cosmos",
+      "pauseBefore": 0.5,
+      "text": "So how did he know? A man with no telescope, and no science… describing the sun's journey, and its end, fourteen centuries before we could prove it.",
+      "caption": "How did he know?"
+    },
+    {
+      "type": "narration",
+      "scene": "datagrid",
+      "pauseBefore": 0.3,
+      "text": "The answer changes how you see everything. Follow Ketabi Studio, for the signs science is still catching up to.",
+      "caption": "Follow Ketabi Studio."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "text": "Want more like this? Get Ketabi, free, at Ketabi Studio dot com.",
+      "caption": "Download Ketabi."
+    }
+  ],
+  "sources": [
+    "Quran 36:38 (Surah Ya-Sin) - 'and the sun runs toward its resting place'",
+    "The sun orbits the galactic center at ~828,000 km/h; one orbit ~230 million years",
+    "Stellar evolution - the sun will exhaust its fuel and die (red giant -> white dwarf)"
+  ]
+}
