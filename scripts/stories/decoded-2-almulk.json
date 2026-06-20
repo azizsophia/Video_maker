@@ -1,0 +1,32 @@
+{
+  "id": "decoded-2-almulk",
+  "title": "Surah Al-Mulk Decoded: The Chapter That Pleads For You",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "modern-dark",
+  "gap": 0.12,
+  "sound": { "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments", "ambientDuration": 22 },
+  "_note": "Surah Decoded #2 - Al-Mulk. Generic data-driven Decoded kit + cosmic theme (cosmos backdrops). Calm tone. Verses 67:2 and 67:3-4 auto-pulled. Intercession hadith (Tirmidhi, hasan) verified + on fact sheet. No em dashes.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "heavens", "text": "There is one chapter the Prophet, peace be upon him, said will plead for the person who reads it, until he is forgiven. Tonight, we decode it.", "caption": "Surah Al-Mulk, decoded." },
+    { "type": "narration", "scene": "decoded-name", "data": { "arabic": "الملك", "english": "Al-Mulk · The Dominion", "chapter": "CHAPTER 67" }, "text": "Surah Al-Mulk. The Dominion. The sixty-seventh chapter of the Quran." },
+    { "type": "narration", "scene": "decoded-info", "data": { "tiles": [["MECCAN", "where it was revealed"], ["30", "verses"], ["NIGHTLY", "the Prophet read it before sleep"]] }, "text": "Revealed in Mecca. Just thirty verses. And the Prophet would not sleep until he had recited it." },
+    { "type": "narration", "scene": "decoded-structure", "data": { "heading": "How the surah unfolds", "rows": [["1", "Sovereignty and the test", "1-4"], ["2", "The Fire and its warning", "5-11"], ["3", "Reflect on His creation", "12-22"], ["4", "The final reckoning", "23-30"]] }, "text": "In four movements, it takes you from the throne of creation, to the test of this life, to the reckoning at the end." },
+    { "type": "narration", "scene": "heavens", "hadith": true, "arabic": "إِنَّ سُورَةً مِنَ الْقُرْآنِ ثَلَاثُونَ آيَةً شَفَعَتْ لِرَجُلٍ حَتَّى غُفِرَ لَهُ، وَهِيَ تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ", "translation": "A surah of thirty verses interceded for a man until he was forgiven. It is 'Blessed is He in whose hand is the dominion.'", "source": "Jami at-Tirmidhi (hasan)", "text": "The Prophet, peace be upon him, said: a surah of thirty verses interceded for a man until he was forgiven. It is this surah, Al-Mulk." },
+    { "type": "narration", "scene": "heavens", "text": "And it opens with a power so total, it should stop you cold.", "caption": "The Dominion." },
+    { "type": "narration", "scene": "heavens", "verseRef": "67:2", "source": "Surah Al-Mulk · 67:2", "text": "He who created death and life, to test which of you is best in deeds. Surah Al-Mulk, verse 2." },
+    { "type": "narration", "scene": "heavens", "text": "Read it again. He created death… before life. Death is not the end of the test. It is part of it.", "caption": "Death before life." },
+    { "type": "narration", "scene": "heavens", "verseRef": "67:3-4", "source": "Surah Al-Mulk · 67:3-4", "text": "Then look at the sky. Do you see any flaw? Look again, and again. Your sight returns to you, humbled and exhausted, finding none." },
+    { "type": "narration", "scene": "decoded-poll", "data": { "question": "The test is who is best in...", "options": ["Wealth", "Power", "Status", "Deeds"], "cta": "Comment your answer." }, "text": "So the test is not who gathers the most. It is who is best in one thing. Can you guess which? Comment it." },
+    { "type": "narration", "scene": "decoded-lessons", "data": { "heading": "What it teaches", "items": ["Death is part of the test, not the end.", "Look closely. His creation has no flaw.", "Success is best in deeds, not most in wealth.", "This surah pleads for the one who reads it."] }, "text": "Death is part of the test. His creation is flawless. Success is in deeds, not in wealth. And this surah pleads for the one who reads it." },
+    { "type": "narration", "scene": "heavens", "text": "A perfect sky. A perfect test. And a chapter that stands up for you, when you need it most. Read Al-Mulk tonight.", "caption": "Read it tonight." },
+    { "type": "narration", "scene": "heavens", "text": "And comment the surah you want me to decode next.", "caption": "Which surah next?" },
+    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+  ],
+  "sources": [
+    "Surah Al-Mulk (67) - Meccan, 30 verses",
+    "Jami at-Tirmidhi 2891 (hasan) - a surah of thirty verses intercedes until forgiven (Surah Al-Mulk)",
+    "Jami at-Tirmidhi - the Prophet recited Al-Mulk before sleeping",
+    "Quran 67:2 (death and life as a test) and 67:3-4 (the flawless creation) - auto-pulled"
+  ]
+}

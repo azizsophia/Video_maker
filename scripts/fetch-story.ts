@@ -221,6 +221,7 @@ async function main() {
         scene: seg.scene || undefined,
         arabic: vArabic,
         translation: vTrans,
+        data: seg.data || undefined,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {

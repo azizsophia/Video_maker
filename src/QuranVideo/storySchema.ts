@@ -25,6 +25,7 @@ export const storySegmentSchema = z.object({
   ember: z.boolean().optional(), // warm molten-iron treatment (the wall moment)
   hook: z.boolean().optional(), // scroll-stopper styling for the opening
   scene: z.string().optional(), // illustrated backdrop (see scenes.tsx)
+  data: z.any().optional(), // arbitrary content for data-driven scenes (Decoded kit)
 });
 
 export const storyPropsSchema = z.object({

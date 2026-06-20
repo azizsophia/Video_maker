@@ -249,12 +249,12 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
   // Group consecutive segments sharing a scene so the illustrated backdrop only
   // crossfades on real scene changes.
-  const spans: { scene?: string; start: number; end: number }[] = [];
+  const spans: { scene?: string; data?: unknown; start: number; end: number }[] = [];
   props.segments.forEach((s) => {
     const last = spans[spans.length - 1];
     const end = s.fromSeconds + s.durationInSeconds;
     if (last && last.scene === s.scene) last.end = end;
-    else spans.push({ scene: s.scene, start: s.fromSeconds, end });
+    else spans.push({ scene: s.scene, data: (s as { data?: unknown }).data, start: s.fromSeconds, end });
   });
 
   return (
@@ -264,7 +264,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         const dur = Math.round((sp.end - sp.start) * STORY_FPS) + 16;
         return (
           <Sequence key={`scene-${i}`} from={from} durationInFrames={dur}>
-            <SceneLayer name={sp.scene} theme={theme} />
+            <SceneLayer name={sp.scene} theme={theme} data={sp.data} />
           </Sequence>
         );
       })}

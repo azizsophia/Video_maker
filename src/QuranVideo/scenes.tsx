@@ -17,11 +17,12 @@ import { constantinopleScenes } from "./constantinople";
 import { elephantScenes } from "./elephant";
 import { isnadScenes } from "./isnad";
 import { alkahfScenes } from "./alkahf";
+import { decodedScenes } from "./decoded";
 
 // Hand-built, fully aniconic illustrated scenes (skies, deserts, architecture,
 // light) — no faces, people, or animals, ever. Owned + copyright-free.
 
-type SceneProps = { theme: ThemePalette };
+type SceneProps = { theme: ThemePalette; data?: any };
 
 const Stars: React.FC<{ count?: number; area?: number; opacity?: number }> = ({
   count = 70,
@@ -563,13 +564,14 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   ...elephantScenes,
   ...isnadScenes,
   ...alkahfScenes,
+  ...decodedScenes,
   void: Void,
 };
 
 export const SCENE_NAMES = Object.keys(SCENES);
 
 // One scene layer with crossfade in/out + slow push-in.
-export const SceneLayer: React.FC<{ name?: string; theme: ThemePalette }> = ({ name, theme }) => {
+export const SceneLayer: React.FC<{ name?: string; theme: ThemePalette; data?: any }> = ({ name, theme, data }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const fade = 9;
@@ -584,7 +586,7 @@ export const SceneLayer: React.FC<{ name?: string; theme: ThemePalette }> = ({ n
   return (
     <AbsoluteFill style={{ opacity }}>
       <AbsoluteFill style={{ transform: `scale(${kb})` }}>
-        <Comp theme={theme} />
+        <Comp theme={theme} data={data} />
       </AbsoluteFill>
     </AbsoluteFill>
   );

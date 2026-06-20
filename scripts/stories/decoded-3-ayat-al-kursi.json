@@ -1,0 +1,30 @@
+{
+  "id": "decoded-3-ayat-al-kursi",
+  "title": "Ayat al-Kursi Decoded: The Greatest Verse in the Quran",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "midnight",
+  "gap": 0.12,
+  "sound": { "ambient": "deep calm cosmic ambience, soft airy hum, vast and reverent, subtle shimmer, no music, no melody, no instruments", "ambientDuration": 22 },
+  "_note": "Surah Decoded #3 - Ayat al-Kursi (2:255, the Throne Verse). Generic data-driven Decoded kit + cosmic 'heavens' backdrop (midnight theme). Calm tone. Verse 2:255 auto-pulled from Quran.com. Protection hadith (Sahih al-Bukhari 2311) verified + on fact sheet; greatest-verse hadith (Sahih Muslim) cited in narration. No em dashes.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "heavens", "text": "There is a single verse the Prophet, peace be upon him, called the greatest in the entire Quran. Read it before you sleep, and a guardian from Allah stays with you until morning. Tonight, we decode it.", "caption": "The greatest verse, decoded." },
+    { "type": "narration", "scene": "decoded-name", "data": { "arabic": "آية الكرسي", "english": "Ayat al-Kursi · The Throne Verse", "chapter": "AL-BAQARAH · 2:255" }, "text": "Ayat al-Kursi. The Verse of the Throne. Verse two hundred and fifty-five, in the heart of Surah al-Baqarah." },
+    { "type": "narration", "scene": "decoded-info", "data": { "tiles": [["GREATEST", "verse in the Quran"], ["2:255", "in Surah al-Baqarah"], ["NIGHTLY", "read before sleep for protection"]] }, "text": "The greatest single verse in the Quran. Found in its longest chapter. And recited every night, for protection." },
+    { "type": "narration", "scene": "heavens", "verseRef": "2:255", "source": "Surah al-Baqarah · 2:255", "text": "Listen to how it opens. There is no god but Him, the Ever-Living, the Sustainer of all that exists. No tiredness touches Him. No sleep. And everything in the heavens and the earth belongs to Him alone." },
+    { "type": "narration", "scene": "decoded-structure", "data": { "heading": "One verse, seven movements", "rows": [["1", "No god but Him, the Living", "TAWHID"], ["2", "No sleep ever overtakes Him", "PERFECTION"], ["3", "All the heavens and earth are His", "DOMINION"], ["4", "None intercedes without His leave", "AUTHORITY"], ["5", "His knowledge encompasses everything", "KNOWLEDGE"], ["6", "His Throne spans the heavens and earth", "THE THRONE"], ["7", "The Most High, the Most Great", "MAJESTY"]] }, "text": "In just one verse, there are seven movements. From His oneness, to His perfect life, to a Throne that spans all of creation. Watch them unfold." },
+    { "type": "narration", "scene": "decoded-poll", "data": { "question": "It is the greatest verse because it is entirely about...", "options": ["Paradise", "Allah Himself", "Judgment Day", "The Prophets"], "cta": "Comment your answer." }, "text": "And here is what sets it apart. It is the one verse that is entirely about a single subject. Can you guess what? Comment it." },
+    { "type": "narration", "scene": "heavens", "hadith": true, "arabic": "إِذَا أَوَيْتَ إِلَى فِرَاشِكَ فَاقْرَأْ آيَةَ الْكُرْسِيِّ، لَنْ يَزَالَ عَلَيْكَ مِنَ اللَّهِ حَافِظٌ، وَلَا يَقْرَبَنَّكَ شَيْطَانٌ حَتَّى تُصْبِحَ", "translation": "When you go to your bed, recite Ayat al-Kursi. A guardian from Allah will stay with you, and no devil will come near you until morning.", "source": "Sahih al-Bukhari 2311", "text": "The Prophet, peace be upon him, confirmed that whoever recites it at night will have a guardian from Allah, and no devil will come near him until morning." },
+    { "type": "narration", "scene": "heavens", "source": "Sahih Muslim", "text": "And when he asked his companion which verse in the Book of Allah was the greatest, the answer was this one. He smiled, and said: may knowledge be pleasant for you." },
+    { "type": "narration", "scene": "decoded-lessons", "data": { "heading": "What it teaches", "items": ["It is the greatest verse in the Quran.", "It is entirely about Allah, His names and power.", "Read it at night and a guardian stays till dawn.", "Read it after each prayer; Paradise awaits."] }, "text": "So remember four things. It is the greatest verse. It is entirely about Allah. Read it at night for protection. And read it after every prayer, and Paradise is promised." },
+    { "type": "narration", "scene": "heavens", "text": "One verse. The Throne of the Most High, over all the heavens and the earth. Read Ayat al-Kursi tonight, before you sleep.", "caption": "Read it tonight." },
+    { "type": "narration", "scene": "heavens", "text": "And comment the surah or verse you want me to decode next.", "caption": "Which one next?" },
+    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+  ],
+  "sources": [
+    "Ayat al-Kursi - Quran 2:255, Surah al-Baqarah (the Throne Verse) - auto-pulled",
+    "Sahih al-Bukhari 2311 - recite Ayat al-Kursi at night; a guardian from Allah stays, no devil approaches until morning",
+    "Sahih Muslim 810 - the Prophet asked Ubayy ibn Ka'b for the greatest verse in the Book of Allah; he answered Ayat al-Kursi",
+    "Sunan an-Nasa'i (al-Kubra), graded sahih by al-Albani - whoever recites Ayat al-Kursi after every obligatory prayer, nothing keeps him from Paradise but death"
+  ]
+}
