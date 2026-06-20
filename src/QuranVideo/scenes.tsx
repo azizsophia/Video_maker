@@ -16,6 +16,7 @@ import { birminghamScenes } from "./birmingham";
 import { constantinopleScenes } from "./constantinople";
 import { elephantScenes } from "./elephant";
 import { isnadScenes } from "./isnad";
+import { alkahfScenes } from "./alkahf";
 
 // Hand-built, fully aniconic illustrated scenes (skies, deserts, architecture,
 // light) — no faces, people, or animals, ever. Owned + copyright-free.
@@ -561,6 +562,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   ...constantinopleScenes,
   ...elephantScenes,
   ...isnadScenes,
+  ...alkahfScenes,
   void: Void,
 };
 
