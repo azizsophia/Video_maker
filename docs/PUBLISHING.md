@@ -24,6 +24,19 @@ How to publish the rendered videos across platforms **without copyright trouble*
 - Every claim sourced (Qur'an + sound Hadith / cited scholarship). Frame disputed
   i'jaz claims as reflection/possibility, never as proven fact.
 
+### Enforced safeguards (so an error cannot ship)
+- **Qur'an Arabic is NEVER hand-typed.** Use `verseRef` (e.g. `"15:9"`); the
+  pipeline pulls the exact `text_uthmani` + official translation from Quran.com.
+  The build **fails** if a segment has hand-typed Arabic without `verseRef`
+  (hadith must be flagged `"hadith": true` and manually verified).
+- **Attribution rule:** divine acts belong to **Allah**, never to "the Qur'an
+  itself." Say *"Allah promised to protect it"* — never *"the Qur'an guards itself."*
+- **Bulletproof claims only.** History, prophecy, preservation. No contestable
+  science-i'jaz (e.g. atmosphere ≠ the seven heavens — 67:5 places the stars in
+  the lowest heaven).
+- Every render emits **`story-facts.txt`** (exact verses + translations + sources).
+  Review it before posting.
+
 ## The core rule (copyright / Content ID)
 
 Famous reciter recordings (Abdul Basit, Sudais, Shuraim, etc.) are commercially

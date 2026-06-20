@@ -5,23 +5,96 @@
   "voiceName": "Oliver Silk (ElevenLabs)",
   "look": "modern-dark",
   "gap": 0.1,
-  "sound": { "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments", "ambientDuration": 22 },
+  "sound": {
+    "ambient": "deep space cosmic ambience, low airy hum, vast and clean, subtle shimmer, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
   "_note": "The isnad system. Ultra-precise: al-Bukhari examined ~600,000 narrations, accepted ~7,000. The warning hadith (Bukhari). No em dashes. Oliver.",
   "segments": [
-    { "type": "narration", "hook": true, "scene": "emerald", "text": "How do you preserve the exact words of one man, perfectly, across fourteen centuries? Islam built a system the world had never seen.", "caption": "How were his words preserved?" },
-    { "type": "narration", "scene": "emerald", "text": "The Prophet Muhammad, peace be upon him, knew his words would be quoted forever. So he gave a chilling warning.", "caption": "A warning." },
-    { "type": "narration", "scene": "emerald", "arabic": "مَنْ كَذَبَ عَلَيَّ مُتَعَمِّدًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنَ النَّارِ", "translation": "Whoever deliberately lies about me, let him take his seat in the Fire.", "source": "Sahih al-Bukhari", "text": "Whoever deliberately lies about me, let him take his seat in the Fire. Reported in Sahih al-Bukhari." },
-    { "type": "narration", "scene": "emerald", "text": "After that, Muslims refused to accept a single saying, unless they could trace exactly who said it, and who they heard it from.", "caption": "Trace every word." },
-    { "type": "narration", "scene": "isnad-chain", "text": "Every hadith carried a chain. This person heard it from that person, who heard it from a companion, who heard it directly from the Prophet." },
-    { "type": "narration", "scene": "emerald", "text": "But a chain is only as strong as its weakest link. So they investigated every narrator in it.", "caption": "Every link checked." },
-    { "type": "narration", "scene": "rijal-card", "text": "Were they honest? Was their memory exact? Did they ever actually meet the one they quoted? The answers were recorded for hundreds of thousands of people." },
-    { "type": "narration", "scene": "emerald", "text": "An entire science was built, just to catch a single lie.", "caption": "A science to catch a lie." },
-    { "type": "narration", "scene": "bukhari-funnel", "text": "Imam al-Bukhari examined around six hundred thousand narrations. He accepted only about seven thousand. The rest, he discarded." },
-    { "type": "narration", "scene": "grading-scale", "text": "Every hadith was graded. Authentic. Good. Weak. Or fabricated. Judged entirely by its chain." },
-    { "type": "narration", "scene": "emerald", "text": "No other text from the ancient world was guarded this strictly. A documented chain, behind every single word.", "caption": "Unmatched in history." },
-    { "type": "narration", "scene": "emerald", "text": "Most of history reaches us as rumor. This reaches us with a receipt.", "caption": "History with a receipt." },
-    { "type": "narration", "scene": "emerald", "text": "Follow for the history they don't teach you.", "caption": "Follow Ketabi Studio." },
-    { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "emerald",
+      "text": "How do you preserve the exact words of one man, perfectly, across fourteen centuries? Islam built a system the world had never seen.",
+      "caption": "How were his words preserved?"
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "The Prophet Muhammad, peace be upon him, knew his words would be quoted forever. So he gave a chilling warning.",
+      "caption": "A warning."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "arabic": "مَنْ كَذَبَ عَلَيَّ مُتَعَمِّدًا فَلْيَتَبَوَّأْ مَقْعَدَهُ مِنَ النَّارِ",
+      "translation": "Whoever deliberately lies about me, let him take his seat in the Fire.",
+      "source": "Sahih al-Bukhari",
+      "text": "Whoever deliberately lies about me, let him take his seat in the Fire. Reported in Sahih al-Bukhari.",
+      "hadith": true
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "After that, Muslims refused to accept a single saying, unless they could trace exactly who said it, and who they heard it from.",
+      "caption": "Trace every word."
+    },
+    {
+      "type": "narration",
+      "scene": "isnad-chain",
+      "text": "Every hadith carried a chain. This person heard it from that person, who heard it from a companion, who heard it directly from the Prophet."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "But a chain is only as strong as its weakest link. So they investigated every narrator in it.",
+      "caption": "Every link checked."
+    },
+    {
+      "type": "narration",
+      "scene": "rijal-card",
+      "text": "Were they honest? Was their memory exact? Did they ever actually meet the one they quoted? The answers were recorded for hundreds of thousands of people."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "An entire science was built, just to catch a single lie.",
+      "caption": "A science to catch a lie."
+    },
+    {
+      "type": "narration",
+      "scene": "bukhari-funnel",
+      "text": "Imam al-Bukhari examined around six hundred thousand narrations. He accepted only about seven thousand. The rest, he discarded."
+    },
+    {
+      "type": "narration",
+      "scene": "grading-scale",
+      "text": "Every hadith was graded. Authentic. Good. Weak. Or fabricated. Judged entirely by its chain."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "No other text from the ancient world was guarded this strictly. A documented chain, behind every single word.",
+      "caption": "Unmatched in history."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "Most of history reaches us as rumor. This reaches us with a receipt.",
+      "caption": "History with a receipt."
+    },
+    {
+      "type": "narration",
+      "scene": "emerald",
+      "text": "Follow for the history they don't teach you.",
+      "caption": "Follow Ketabi Studio."
+    },
+    {
+      "type": "narration",
+      "scene": "app-showcase",
+      "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.",
+      "caption": "Download Ketabi."
+    }
   ],
   "sources": [
     "The science of isnad (chain of narration) and ilm al-rijal (narrator criticism)",

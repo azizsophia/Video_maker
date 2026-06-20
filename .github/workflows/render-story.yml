@@ -71,6 +71,7 @@ jobs:
           path: |
             out/story.mp4
             src/data/story-render.json
+            src/data/story-facts.txt
           retention-days: 14
 
       - name: Check Drive credentials

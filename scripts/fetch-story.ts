@@ -166,6 +166,7 @@ async function main() {
   }
 
   const segments: any[] = [];
+  const facts: string[] = []; // verse/hadith fact sheet for pre-publish verification
   let cursor = 0;
   let i = 0;
   for (const seg of story.segments as any[]) {
@@ -189,11 +190,24 @@ async function main() {
       }
       let vArabic = seg.arabic || undefined;
       let vTrans = seg.translation || undefined;
+      // ACCURACY GUARD: Qur'an Arabic must come from the authoritative source by
+      // reference. Hand-typed Arabic is only allowed for hadith (flagged + manually
+      // verified). This makes a wrong/garbled/abbreviated verse impossible to ship.
+      if (seg.arabic && !seg.verseRef && !seg.hadith) {
+        throw new Error(
+          `Accuracy guard failed: a segment has hand-typed Arabic but no "verseRef". ` +
+          `Use "verseRef" (e.g. "15:9") so the exact text + official translation are pulled ` +
+          `from Quran.com, or flag "hadith": true if it is a verified hadith. Got: ${seg.arabic.slice(0, 50)}`
+        );
+      }
       if (seg.verseRef) {
         const vv = await fetchVerse(String(seg.verseRef), translation);
         vArabic = vv.arabic;
         vTrans = vv.translation;
+        facts.push(`Qur'an ${seg.verseRef}  (${seg.source ?? ""})\n  AR: ${vArabic}\n  EN: ${vTrans}`);
         console.log(`  verse ${seg.verseRef}: pulled exact text + official translation from Quran.com`);
+      } else if (seg.hadith && seg.arabic) {
+        facts.push(`HADITH  (${seg.source ?? ""})  [hand-typed, manually verified]\n  AR: ${seg.arabic}\n  EN: ${vTrans ?? ""}`);
       }
       segments.push({
         kind: "narration",
@@ -264,7 +278,18 @@ async function main() {
   const outFile = args.out ?? "src/data/story-render.json";
   await mkdir(dirname(outFile), { recursive: true });
   await writeFile(outFile, JSON.stringify(props, null, 2));
+
+  // Pre-publish fact sheet: exact verses/hadith + sources, for verification.
+  const factsFile = join(dirname(outFile), "story-facts.txt");
+  const factsBody =
+    `FACT SHEET — ${story.title}\n${"=".repeat(60)}\n\n` +
+    (facts.length ? facts.join("\n\n") : "(no Qur'an/hadith quoted)") +
+    `\n\nSOURCES:\n` +
+    ((story.sources as string[]) ?? []).map((s) => `- ${s}`).join("\n") +
+    "\n";
+  await writeFile(factsFile, factsBody);
   console.log(`\n✅ Story built: ${segments.length} segments, ~${cursor.toFixed(0)}s -> ${outFile}`);
+  console.log(`📋 Fact sheet -> ${factsFile}\n${factsBody}`);
 }
 
 main().catch((e) => {
