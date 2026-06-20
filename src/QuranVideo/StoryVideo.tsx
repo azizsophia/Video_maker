@@ -182,13 +182,25 @@ const AyahCard: React.FC<{
   });
   const opacity = Math.min(fadeIn, fadeOut);
   const transReveal = spring({ frame: frame - 12, fps, config: { damping: 200 } });
-  const kb = interpolate(frame, [0, durationInFrames], [1.02, 1.09]);
+  const kb = interpolate(frame, [0, durationInFrames], [1.02, 1.06]);
   const glow = ember ? "rgba(255,150,60,0.75)" : theme.arabicGlow;
   const arabicColor = ember ? "#fff1e0" : theme.arabicActive;
 
+  // Auto-fit: long verses (e.g. Ayat al-Kursi, 2:255) must never overflow or
+  // clip. Scale the Arabic + translation down by character count so the whole
+  // ayah and its translation always sit inside the (TikTok/Shorts-safe) frame.
+  const alen = (arabic ?? "").length;
+  const arabicSize = wide
+    ? alen > 260 ? 44 : alen > 180 ? 56 : alen > 120 ? 68 : alen > 60 ? 82 : 92
+    : alen > 260 ? 50 : alen > 180 ? 60 : alen > 120 ? 74 : alen > 60 ? 90 : 104;
+  const tlen = (translation ?? "").length;
+  const transSize = wide
+    ? tlen > 220 ? 32 : 40
+    : tlen > 220 ? 34 : tlen > 120 ? 40 : 44;
+
   return (
     <AbsoluteFill
-      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 76px", opacity }}
+      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "190px 70px", opacity }}
     >
       {ember ? (
         <AbsoluteFill
@@ -197,14 +209,24 @@ const AyahCard: React.FC<{
           }}
         />
       ) : null}
-      <div style={{ transform: `scale(${kb})`, textAlign: "center" }}>
+      <div
+        style={{
+          transform: `scale(${kb})`,
+          textAlign: "center",
+          maxHeight: height * (wide ? 0.82 : 0.7),
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <div
           dir="rtl"
           style={{
             fontFamily: ARABIC_DISPLAY_FONT,
             fontWeight: 700,
-            fontSize: wide ? 92 : 104,
-            lineHeight: 1.7,
+            fontSize: arabicSize,
+            lineHeight: 1.62,
+            maxWidth: wide ? 1500 : 960,
             color: arabicColor,
             textShadow: `0 0 46px ${glow}`,
           }}
@@ -213,11 +235,11 @@ const AyahCard: React.FC<{
         </div>
         <div
           style={{
-            marginTop: wide ? 36 : 54,
-            maxWidth: wide ? 1300 : 900,
+            marginTop: wide ? 30 : 40,
+            maxWidth: wide ? 1300 : 920,
             fontFamily: TRANSLATION_FONT,
-            fontSize: wide ? 40 : 44,
-            lineHeight: 1.45,
+            fontSize: transSize,
+            lineHeight: 1.42,
             color: theme.translation,
             opacity: transReveal,
             transform: `translateY(${(1 - transReveal) * 22}px)`,
