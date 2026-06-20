@@ -125,6 +125,25 @@ async function cachedSfx(prompt: string, duration: number): Promise<string> {
   return `story-cache/s-${hash}.mp3`;
 }
 
+// Pull the EXACT Qur'an text + official translation straight from Quran.com by
+// reference (e.g. "36:38" or "105:3-4"). Guarantees correct Arabic + translation.
+async function fetchVerse(ref: string, translationId: string): Promise<{ arabic: string; translation: string }> {
+  const [sura, part] = ref.split(":");
+  const [start, end] = part.includes("-")
+    ? part.split("-").map((n) => parseInt(n, 10))
+    : [parseInt(part, 10), parseInt(part, 10)];
+  const ar: string[] = [];
+  const tr: string[] = [];
+  for (let a = start; a <= end; a++) {
+    const v = await getJson<any>(
+      `${API}/verses/by_key/${sura}:${a}?language=en&translations=${translationId}&fields=text_uthmani`
+    );
+    ar.push(v.verse.text_uthmani as string);
+    tr.push(stripHtml(v.verse.translations?.[0]?.text ?? ""));
+  }
+  return { arabic: ar.join(" "), translation: tr.join(" ") };
+}
+
 async function main() {
   const args = parseArgs();
   const storyFile = args.story ?? "scripts/stories/gog-and-magog.json";
@@ -168,6 +187,14 @@ async function main() {
         await writeFile(meta, JSON.stringify({ words, duration }));
         console.log(`  narration ${i}: generated ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
       }
+      let vArabic = seg.arabic || undefined;
+      let vTrans = seg.translation || undefined;
+      if (seg.verseRef) {
+        const vv = await fetchVerse(String(seg.verseRef), translation);
+        vArabic = vv.arabic;
+        vTrans = vv.translation;
+        console.log(`  verse ${seg.verseRef}: pulled exact text + official translation from Quran.com`);
+      }
       segments.push({
         kind: "narration",
         audioSrc: `story-cache/n-${hash}.mp3`,
@@ -178,8 +205,8 @@ async function main() {
         sfxSrc,
         hook: seg.hook || undefined,
         scene: seg.scene || undefined,
-        arabic: seg.arabic || undefined,
-        translation: seg.translation || undefined,
+        arabic: vArabic,
+        translation: vTrans,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {

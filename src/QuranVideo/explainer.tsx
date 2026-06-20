@@ -71,11 +71,11 @@ const BaqarahMirror: React.FC<SceneProps> = () => {
       </div>
       <div style={{ ...cardStyle, width: 860, opacity: b, transform: `translateY(${(1 - b) * 26}px)` }}>
         <div style={label}>THE ENDING · 2:285</div>
-        <div dir="rtl" style={ar}>
-          <span style={g}>آمَنَ</span> الرَّسُولُ <span style={g}>وَالْمُؤْمِنُونَ</span>
+        <div dir="rtl" style={{ ...ar, fontSize: 42 }}>
+          <span style={g}>آمَنَ</span> الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ <span style={g}>وَالْمُؤْمِنُونَ</span>
         </div>
         <div style={tr}>
-          The Messenger <span style={g}>believed</span>, and so did the <span style={g}>believers</span>.
+          The Messenger <span style={g}>believed</span> in what was revealed to him from his Lord, and so did the <span style={g}>believers</span>.
         </div>
       </div>
     </AbsoluteFill>
