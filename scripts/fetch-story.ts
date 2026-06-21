@@ -89,6 +89,7 @@ const PRONUNCIATION: Record<string, string> = {
   surahs: "soorahs",
   dua: "doo-aa",
   duas: "doo-aas",
+  khalil: "khaleel",
 };
 function pronounce(text: string): { tts: string; back: Record<string, string> } {
   const back: Record<string, string> = {};
