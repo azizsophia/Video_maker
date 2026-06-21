@@ -1,0 +1,30 @@
+{
+  "id": "story-1-splitting-sea",
+  "title": "The Night God Split the Sea: Musa and the Parting of the Sea",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "midnight",
+  "gap": 0.15,
+  "sound": { "ambient": "deep ocean ambience, distant crashing waves, low ominous water rumble, wind over open water, tense and vast, no music, no melody, no instruments", "ambientDuration": 22 },
+  "_note": "Cinematic Quran story #1 - the splitting of the sea (Musa). Bespoke aniconic sea-* scenes (no people ever shown; drama carried by water, light, the path). Dramatic deep-voice tone. Verses ash-Shu'ara 26:62, 26:63, 26:65-66 auto-pulled from Quran.com. Brand shop-waitlist ad closer. No em dashes.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "sea-shore", "text": "Trapped between a sea they could not cross, and an army that had come to kill them. This is the night God split the sea in two.", "caption": "The sea split in two." },
+    { "type": "narration", "scene": "sea-shore", "text": "Musa, peace be upon him, had led the believers out of Egypt. But Pharaoh and his army gave chase. And now the people stood at the water's edge, with nowhere left to run." },
+    { "type": "narration", "scene": "sea-shore", "text": "His people cried out in terror. They have caught us. There is no escape. We are going to die.", "caption": "We are caught." },
+    { "type": "narration", "scene": "sea-shore", "verseRef": "26:62", "source": "Surah ash-Shu'ara · 26:62", "text": "But Musa was calm. He said: No. Indeed, my Lord is with me, and He will guide me." },
+    { "type": "narration", "scene": "sea-strike", "pauseBefore": 0.5, "verseRef": "26:63", "source": "Surah ash-Shu'ara · 26:63", "text": "Then came the command. We inspired Musa: strike the sea with your staff. And it parted, and each part was like a great towering mountain." },
+    { "type": "narration", "scene": "sea-parted", "text": "Two walls of water, standing in the air like mountains. And between them, a road of dry land, straight to the far shore.", "caption": "A road through the sea." },
+    { "type": "narration", "scene": "sea-path", "text": "The believers walked through, the sea held back on either side, until every last one of them reached the other side in safety." },
+    { "type": "narration", "scene": "sea-closing", "text": "Pharaoh and his army charged in after them. But the moment the last believer stepped onto dry land, the walls came crashing down.", "caption": "The walls came down." },
+    { "type": "narration", "scene": "sea-closing", "verseRef": "26:65-66", "source": "Surah ash-Shu'ara · 26:65-66", "text": "And We saved Musa and all who were with him. Then We drowned the others." },
+    { "type": "narration", "scene": "sea-dawn", "text": "The same sea that had trapped them became the wall that saved them. When Allah is with you, even the impossible can open.", "caption": "Allah was with them." },
+    { "type": "narration", "scene": "sea-dawn", "text": "And comment which story from the Quran you want me to tell next.", "caption": "Which story next?" },
+    { "type": "narration", "scene": "shop-waitlist", "data": { "headline": "Something beautiful is coming", "sub": "Personalized storybooks, photo keepsakes, and cards sealed with a dua.", "cta": "Join the founding list", "url": "ketabistudio.com", "products": [{ "src": "shop/hijab.png" }, { "src": "shop/duas.png" }, { "src": "shop/maryam.png" }] }, "text": "And something beautiful is coming from Ketabi Studio. Personalized storybooks, keepsakes, and cards sealed with a dua. Join the founding list now, at Ketabi Studio dot com." }
+  ],
+  "sources": [
+    "Surah ash-Shu'ara 26:52-66 - the exodus, the pursuit, the parting of the sea, the salvation of Musa and the drowning of Pharaoh's army",
+    "Quran 26:62 ('No! Indeed, my Lord is with me; He will guide me') - auto-pulled",
+    "Quran 26:63 (strike the sea with your staff; it parted, each part like a great mountain) - auto-pulled",
+    "Quran 26:65-66 (We saved Musa and all with him, then drowned the others) - auto-pulled"
+  ]
+}

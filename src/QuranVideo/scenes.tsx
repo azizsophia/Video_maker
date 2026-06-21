@@ -20,6 +20,7 @@ import { alkahfScenes } from "./alkahf";
 import { decodedScenes } from "./decoded";
 import { sahabaScenes } from "./sahaba";
 import { ctaScenes } from "./cta";
+import { seaScenes } from "./sea";
 
 // Hand-built, fully aniconic illustrated scenes (skies, deserts, architecture,
 // light) — no faces, people, or animals, ever. Owned + copyright-free.
@@ -569,6 +570,7 @@ const SCENES: Record<string, React.FC<SceneProps>> = {
   ...decodedScenes,
   ...sahabaScenes,
   ...ctaScenes,
+  ...seaScenes,
   void: Void,
 };
 
