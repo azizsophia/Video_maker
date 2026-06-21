@@ -29,5 +29,14 @@
     "The refrain is in the DUAL (rabbikumaa / tukadhdhibaan), addressing two creations; named outright as jinn and mankind in 55:33 ('O company of jinn and mankind') - 55:33 auto-pulled; cf. 55:31 'al-thaqalan' (the two weighty ones)",
     "Quran 55:46 ('two gardens') and 55:62 ('and besides these two, two more gardens') = four gardens for those who fear their Lord",
     "Quran 55:26-27 (all on earth perish; the Face of your Lord remains) - auto-pulled"
+  ],
+  "claims": [
+    { "claim": "Surah Ar-Rahman is the 55th chapter of the Quran", "source": "Mushaf, surah order" },
+    { "claim": "The refrain 'So which of the favors of your Lord will you deny?' recurs 31 times", "source": "Textual count across Surah 55 (e.g. 55:13,16,18,... ,77)" },
+    { "claim": "It opens: the Most Merciful taught the Quran, created man, taught him speech (al-bayan)", "source": "Quran 55:1-4" },
+    { "claim": "The refrain is in the DUAL form (rabbikumaa / tukadhdhibaan), addressing two parties", "source": "Arabic grammar of the refrain, e.g. 55:13" },
+    { "claim": "The two are jinn and mankind, named explicitly as 'O company of jinn and mankind'", "source": "Quran 55:33 (cf. 'al-thaqalan', the two weighty ones, 55:31)" },
+    { "claim": "Two gardens, and besides them two more = four gardens for those who fear their Lord", "source": "Quran 55:46 and 55:62" },
+    { "claim": "Everyone on earth will perish; the Face of your Lord remains", "source": "Quran 55:26-27" }
   ]
 }

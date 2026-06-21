@@ -280,14 +280,34 @@ async function main() {
   await mkdir(dirname(outFile), { recursive: true });
   await writeFile(outFile, JSON.stringify(props, null, 2));
 
-  // Pre-publish fact sheet: exact verses/hadith + sources, for verification.
+  // Pre-publish fact sheet: exact verses/hadith + every declared on-screen
+  // claim + sources, with a review sign-off gate. Reviewed before posting.
   const factsFile = join(dirname(outFile), "story-facts.txt");
+  // story.claims: each on-screen factual assertion + its source. Accepts
+  // {claim, source} objects or "claim — source" strings.
+  const claims = (story.claims as Array<string | { claim: string; source?: string }>) ?? [];
+  const claimsBlock = claims.length
+    ? claims
+        .map((c, i) => {
+          const line = typeof c === "string" ? c : `${c.claim}   [source: ${c.source ?? "MISSING"}]`;
+          return `  [ ] ${i + 1}. ${line}`;
+        })
+        .join("\n")
+    : "  (none declared — add a top-level \"claims\" array to the story for full coverage)";
   const factsBody =
     `FACT SHEET — ${story.title}\n${"=".repeat(60)}\n\n` +
+    `VERSES & HADITH (auto-pulled from Quran.com / verified hadith):\n` +
     (facts.length ? facts.join("\n\n") : "(no Qur'an/hadith quoted)") +
+    `\n\nON-SCREEN CLAIMS — REVIEW CHECKLIST:\n${claimsBlock}` +
     `\n\nSOURCES:\n` +
     ((story.sources as string[]) ?? []).map((s) => `- ${s}`).join("\n") +
-    "\n";
+    `\n\n${"-".repeat(60)}\n` +
+    `REVIEW SIGN-OFF (required before posting — sensitive topic):\n` +
+    `  [ ] Every verse checked against the Mushaf (reference + text)\n` +
+    `  [ ] Every claim above matches its cited source\n` +
+    `  [ ] No interpretation presented as fact (tafsir attributed or cut)\n` +
+    `  [ ] Reviewed by: ____________________   Date: __________\n` +
+    `  [ ] Knowledgeable / scholar check (recommended): ____________________\n`;
   await writeFile(factsFile, factsBody);
   console.log(`\n✅ Story built: ${segments.length} segments, ~${cursor.toFixed(0)}s -> ${outFile}`);
   console.log(`📋 Fact sheet -> ${factsFile}\n${factsBody}`);

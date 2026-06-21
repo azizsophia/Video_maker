@@ -1,0 +1,63 @@
+{
+  "_README": "Curated, SOURCED facts per surah. Single source of truth for scripts so videos draw from verified data, not model memory. Every entry must have a citation. Verse text itself is NOT stored here (always auto-pulled from Quran.com by reference); this holds structural facts, counts, and authentic-hadith references with grading. Review/extend with a knowledgeable person before relying on new entries. Verse counts follow the Hafs/Kufan count.",
+  "surahs": {
+    "2": {
+      "name_ar": "البقرة",
+      "name_en": "Al-Baqarah",
+      "number": 2,
+      "verses": 286,
+      "revelation": "Medinan",
+      "notable": [
+        { "ref": "2:255", "note": "Ayat al-Kursi, the Throne Verse" }
+      ],
+      "hadith": [
+        { "ref": "Sahih al-Bukhari 2311", "grade": "sahih", "topic": "Recite Ayat al-Kursi at night: a guardian from Allah stays, no devil approaches until morning" },
+        { "ref": "Sahih Muslim 810", "grade": "sahih", "topic": "Ayat al-Kursi is the greatest verse in the Book of Allah (Ubayy ibn Ka'b)" },
+        { "ref": "Sunan an-Nasa'i (al-Kubra), graded sahih by al-Albani", "grade": "sahih (al-Albani)", "topic": "Recite Ayat al-Kursi after every obligatory prayer; nothing keeps one from Paradise but death" }
+      ]
+    },
+    "18": {
+      "name_ar": "الكهف",
+      "name_en": "Al-Kahf",
+      "number": 18,
+      "verses": 110,
+      "revelation": "Meccan",
+      "structure": [
+        { "fact": "Four narratives: the People of the Cave, the man with two gardens, Musa and al-Khidr, Dhul-Qarnayn", "source": "Surah text / classical tafsir" }
+      ],
+      "hadith": [
+        { "ref": "Sahih Muslim 809", "grade": "sahih", "topic": "Whoever memorizes the first ten verses of al-Kahf is protected from the Dajjal (some narrations: the last ten)" },
+        { "ref": "al-Hakim / al-Bayhaqi, graded sahih by al-Albani", "grade": "sahih (al-Albani)", "topic": "Reciting Surah al-Kahf on Friday: light between the two Fridays" }
+      ]
+    },
+    "55": {
+      "name_ar": "الرحمن",
+      "name_en": "Ar-Rahman",
+      "number": 55,
+      "verses": 78,
+      "revelation": "Meccan (majority view; some scholars: Medinan)",
+      "structure": [
+        { "fact": "The refrain 'fa-bi-ayyi ala'i rabbikuma tukadhdhiban' recurs 31 times", "source": "Textual count across Surah 55" },
+        { "fact": "The refrain is DUAL (rabbikuma/tukadhdhiban), addressing two parties: jinn and mankind", "source": "Quran 55:33 ('O company of jinn and mankind'); cf. 55:31 'al-thaqalan'" },
+        { "fact": "Four gardens: two (55:46) and two more besides them (55:62)", "source": "Quran 55:46, 55:62" }
+      ],
+      "hadith": [
+        { "ref": "(none used)", "grade": "n/a", "topic": "Popular virtue-narrations for Ar-Rahman are contested in grading; keep this surah Quran-only" }
+      ]
+    },
+    "67": {
+      "name_ar": "الملك",
+      "name_en": "Al-Mulk",
+      "number": 67,
+      "verses": 30,
+      "revelation": "Meccan",
+      "notable": [
+        { "ref": "67:2", "note": "Created death and life to test which of you is best in deed" }
+      ],
+      "hadith": [
+        { "ref": "Jami at-Tirmidhi 2891", "grade": "hasan", "topic": "A surah of 30 verses interceded for a man until he was forgiven: Surah al-Mulk" },
+        { "ref": "Jami at-Tirmidhi", "grade": "see grading", "topic": "The Prophet would recite al-Mulk before sleeping" }
+      ]
+    }
+  }
+}
