@@ -15,8 +15,10 @@ So I can **verify by fetching while drafting** (not recall), add these hosts to 
 
 Until then, the render pipeline still reaches `api.quran.com` (so verses are safe), but my drafting research is limited to memory + this library.
 
-## 2. Hadith auto-pull (planned)
-Replace hand-typed hadith Arabic with a `hadithRef` resolver that pulls text + grading from sunnah.com (needs the allowlist above, and possibly an API key). Until built: hadith stays hand-typed **but** must be (a) flagged `"hadith": true`, (b) verified against sunnah.com, (c) on the fact sheet with its grade, and (d) only used when authentic (sahih/hasan). Contested-grade virtue-hadith are cut (e.g. Ar-Rahman is Quran-only).
+## 2. Hadith — wording must match sunnah.com verbatim
+**The Arabic AND the English translation of any hadith must match sunnah.com exactly.** Do not paraphrase, gloss, or insert explanations inside the quoted hadith (including the spoken narration of it). Use sunnah.com's own translation verbatim (e.g. keep "Khalil"; keep "(in Islam)"). Cite the exact reference whose wording you used — different narrations of the same meaning have different reference numbers (the Bukhari 3656 "my brother and my companion" wording is NOT the "other than my Lord" wording). Attach the `sunnah.com` link to the claim so it can be screenshot-verified.
+
+Replace hand-typed hadith Arabic with a `hadithRef` resolver that pulls text + grading from sunnah.com (needs the allowlist above, and possibly an API key). Until built: hadith stays hand-typed **but** must be (a) flagged `"hadith": true`, (b) verified against sunnah.com **verbatim**, (c) on the fact sheet with its grade + link, and (d) only used when authentic (sahih/hasan). Contested-grade virtue-hadith are cut (e.g. Ar-Rahman is Quran-only).
 
 ## 3. Claims manifest + fact sheet (every render)
 Each story declares a top-level `claims` array — every on-screen factual assertion + its source:
