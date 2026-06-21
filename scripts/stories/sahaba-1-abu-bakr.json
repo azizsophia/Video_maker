@@ -26,5 +26,12 @@
     "Quran 9:40 (at-Tawbah) - 'the second of two, when they were in the cave' - auto-pulled",
     "Sahih al-Bukhari 3656 - 'Were I to take a khalil other than my Lord, I would have taken Abu Bakr' (verified hadith)",
     "Title as-Siddiq for affirming the Night Journey (Isra and Mi'raj); freed Bilal; gave his wealth - widely-reported sira/history"
+  ],
+  "claims": [
+    { "claim": "The Prophet said: 'Were I to take an intimate friend (khalil) other than my Lord, I would have taken Abu Bakr'", "source": "Sahih al-Bukhari 3656 - https://sunnah.com/bukhari:3656" },
+    { "claim": "The Quran places Abu Bakr with the Prophet in the cave: 'the second of two... do not grieve, Allah is with us'", "source": "Quran 9:40 - https://quran.com/9/40" },
+    { "claim": "He was titled as-Siddiq (the Truthful), associated with affirming the Night Journey (Isra)", "source": "Seerah (Isra/Mi'raj accounts), e.g. Ibn Hisham" },
+    { "claim": "He freed Bilal ibn Rabah and other enslaved believers", "source": "Seerah / sira accounts" },
+    { "claim": "He became the first Caliph of Islam after the Prophet (632 CE)", "source": "Established Islamic history" }
   ]
 }

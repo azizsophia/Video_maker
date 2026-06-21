@@ -26,5 +26,11 @@
     "Quran 26:62 ('No! Indeed, my Lord is with me; He will guide me') - auto-pulled",
     "Quran 26:63 (strike the sea with your staff; it parted, each part like a great mountain) - auto-pulled",
     "Quran 26:65-66 (We saved Musa and all with him, then drowned the others) - auto-pulled"
+  ],
+  "claims": [
+    { "claim": "Musa told his people: 'No! Indeed, my Lord is with me; He will guide me'", "source": "Quran 26:62 - https://quran.com/26/62" },
+    { "claim": "Allah commanded: 'Strike the sea with your staff'; it parted, each part like a great towering mountain", "source": "Quran 26:63 - https://quran.com/26/63" },
+    { "claim": "'We saved Musa and all who were with him, then We drowned the others'", "source": "Quran 26:65-66 - https://quran.com/26/65" },
+    { "claim": "The exodus from Egypt, Pharaoh's pursuit, the parting of the sea, the crossing, and the drowning", "source": "Surah ash-Shu'ara 26:52-66" }
   ]
 }
