@@ -4,7 +4,7 @@ import { ThemePalette } from "./themes";
 import { TRANSLATION_FONT, ARABIC_DISPLAY_FONT } from "./fonts";
 
 // Bespoke, accurate "Decoded" graphics for Surah Ar-Rahman. Emerald/gold.
-// Every claim is sourced (55:31 names jinn + mankind; 55:46 + 55:62 = 2+2
+// Every claim is sourced (55:33 names jinn + mankind; 55:46 + 55:62 = 2+2
 // gardens; the refrain recurs 31 times). No hand-typed full verses — only a
 // single well-known word fragment (رَبِّكُمَا) + transliteration as a label.
 type SceneProps = { theme: ThemePalette; data?: any };
@@ -16,7 +16,7 @@ const BG = "radial-gradient(ellipse at 50% 36%, #143a2c 0%, #0c2419 55%, #07140e
 const CARD = "rgba(18,42,30,0.82)";
 const BORDER = "1px solid rgba(120,200,150,0.4)";
 
-// THE reveal: the refrain is dual — addressed to mankind AND jinn (55:31).
+// THE reveal: the refrain is dual — addressed to mankind AND jinn (55:33).
 const RahmanDual: React.FC<SceneProps> = () => {
   const f = useCurrentFrame();
   const { fps, width } = useVideoConfig();
@@ -47,7 +47,7 @@ const RahmanDual: React.FC<SceneProps> = () => {
         {pillar("Mankind", "al-Ins", left)}
         {pillar("Jinn", "al-Jinn", right)}
       </div>
-      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 26, color: DIM, marginTop: 26, opacity: tag }}>Named together in <span style={{ color: GOLD }}>Surah Ar-Rahman 55:31</span></div>
+      <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 26, color: DIM, marginTop: 26, opacity: tag }}>Named together in <span style={{ color: GOLD }}>Surah Ar-Rahman 55:33</span></div>
     </AbsoluteFill>
   );
 };

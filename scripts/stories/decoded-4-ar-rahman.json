@@ -1,31 +1,33 @@
 {
   "id": "decoded-4-ar-rahman",
-  "title": "Surah Ar-Rahman Decoded: The Question God Asks 31 Times",
+  "title": "Surah Ar-Rahman Decoded: The Question God Asks Two Creations",
   "voiceId": "jfIS2w2yJi0grJZPyEsk",
   "voiceName": "Oliver Silk (ElevenLabs)",
   "look": "emerald",
   "gap": 0.12,
   "sound": { "ambient": "calm paradise garden ambience, soft flowing water, gentle airy breeze, distant soft birdsong, serene and clean, no music, no melody, no instruments", "ambientDuration": 22 },
-  "_note": "Surah Decoded #4 - Ar-Rahman. Generic data-driven Decoded kit + emerald gardens palette (EmeraldVeil + heavens backdrops) for per-surah visual variety. Calm tone. Verses 55:1-4, 55:13 (the 31x refrain), 55:26-27 auto-pulled. QURAN-ONLY by design: Ar-Rahman's famous fada'il hadith are contested in grading, so to stay bulletproof we quote only the Quran. No em dashes.",
+  "_note": "Surah Decoded #4 - Ar-Rahman (REDESIGNED for genuine insight + accuracy). Bespoke sourced graphics: rahman-rhythm (refrain x31), rahman-dual (the refrain is DUAL -> mankind + jinn, proven by 55:33), rahman-gardens (2+2 gardens, 55:46 + 55:62). Genuine poll (the dual reveal, NOT pre-answered). Verses 55:1-4, 55:13, 55:33, 55:26-27 auto-pulled. Decoded -> app ad. Quran-only. No em dashes.",
   "segments": [
-    { "type": "narration", "hook": true, "scene": "emerald", "text": "There is one verse in the Quran that God repeats thirty-one times. It is a question, asked again and again, to you. Tonight, we decode the surah it lives in.", "caption": "Ar-Rahman, decoded." },
+    { "type": "narration", "hook": true, "scene": "emerald", "text": "There is a question Allah asks thirty-one times in a single chapter. And most people miss who He is actually asking. Let us decode Surah Ar-Rahman.", "caption": "One question, 31 times." },
     { "type": "narration", "scene": "decoded-name", "data": { "arabic": "الرحمن", "english": "Ar-Rahman · The Most Merciful", "chapter": "CHAPTER 55" }, "text": "Surah Ar-Rahman. The Most Merciful. The fifty-fifth chapter of the Quran." },
-    { "type": "narration", "scene": "decoded-info", "data": { "tiles": [["MERCY", "the whole surah, one theme"], ["78", "verses"], ["31x", "one verse repeats thirty-one times"]] }, "text": "Seventy-eight verses. One single theme, mercy. And one verse that returns, thirty-one times." },
-    { "type": "narration", "scene": "emerald", "verseRef": "55:1-4", "source": "Surah Ar-Rahman · 55:1-4", "text": "It opens without even a name. Just this. The Most Merciful. Taught the Quran. Created man. And taught him to speak." },
-    { "type": "narration", "scene": "decoded-structure", "data": { "heading": "How mercy unfolds", "rows": [["1", "He taught the Quran, created man", "MERCY"], ["2", "Sun and moon by precise calculation", "ORDER"], ["3", "He set the Balance, do not cheat it", "JUSTICE"], ["4", "Man from clay, jinn from fire", "CREATION"], ["5", "Two seas meet, yet never mix", "WONDER"], ["6", "All perishes but the Face of your Lord", "ETERNITY"], ["7", "Two gardens, springs, and fruit", "PARADISE"]] }, "text": "From the gift of speech, to the sun and moon, to the scale of justice, to two gardens waiting in Paradise. Watch the mercy unfold." },
-    { "type": "narration", "scene": "heavens", "verseRef": "55:13", "source": "Surah Ar-Rahman · 55:13", "text": "And between every gift, the same question returns. So which of the favors of your Lord will you deny? You will hear it thirty-one times." },
-    { "type": "narration", "scene": "decoded-poll", "data": { "question": "That one verse repeats how many times in the surah?", "options": ["7 times", "13 times", "31 times", "41 times"], "cta": "Comment your guess." }, "text": "So how many times does that single verse repeat? Can you guess? Comment it." },
-    { "type": "narration", "scene": "heavens", "verseRef": "55:26-27", "source": "Surah Ar-Rahman · 55:26-27", "text": "And then the reminder that puts it all in place. Everyone on the earth will perish. And there remains only the Face of your Lord, full of majesty and honor." },
-    { "type": "narration", "scene": "decoded-lessons", "data": { "heading": "What it teaches", "items": ["Mercy is the lens of the whole surah.", "His creation runs on perfect balance.", "Be just; never tip the scale.", "All things fade, but His Face remains."] }, "text": "Mercy is the lens. His creation runs on balance. So be just, and never tip the scale. Because all things fade, but His Face remains." },
-    { "type": "narration", "scene": "emerald", "text": "Mercy taught you to speak. Mercy gave you the scale. So which of His favors will you deny? Read Surah Ar-Rahman.", "caption": "Read Ar-Rahman." },
-    { "type": "narration", "scene": "emerald", "text": "And comment the surah you want me to decode next.", "caption": "Which one next?" },
+    { "type": "narration", "scene": "emerald", "verseRef": "55:1-4", "source": "Surah Ar-Rahman · 55:1-4", "text": "It opens with mercy itself. The Most Merciful. He taught the Quran. He created man. And He taught him to speak." },
+    { "type": "narration", "scene": "rahman-rhythm", "text": "Then it moves like a heartbeat. A gift, then a question. Another gift, and the same question again. Thirty-one times in all." },
+    { "type": "narration", "scene": "emerald", "verseRef": "55:13", "source": "Surah Ar-Rahman · 55:13", "text": "So which of the favors of your Lord will you deny?" },
+    { "type": "narration", "scene": "decoded-poll", "data": { "question": "This question is in the DUAL form. Who are the two it is asked to?", "options": ["Men and angels", "Men and jinn", "Believers and disbelievers", "The living and the dead"], "cta": "Comment your guess." }, "text": "Now look closely. The words are not singular. They are dual. Allah is speaking to two different creations at once. Can you guess which two? Comment your answer." },
+    { "type": "narration", "scene": "rahman-dual", "text": "The word is rabbikumaa. Your Lord, spoken to two. And the surah names them outright, just a few verses later." },
+    { "type": "narration", "scene": "emerald", "verseRef": "55:33", "source": "Surah Ar-Rahman · 55:33", "text": "And there it is, stated plainly. O company of jinn and mankind. This surah was never speaking to you alone." },
+    { "type": "narration", "scene": "rahman-gardens", "text": "And for those who fear their Lord, Ar-Rahman promises not one paradise. Two gardens. And then, two more." },
+    { "type": "narration", "scene": "emerald", "verseRef": "55:26-27", "source": "Surah Ar-Rahman · 55:26-27", "text": "Everyone upon the earth will perish. And there will remain the Face of your Lord, full of majesty and honor." },
+    { "type": "narration", "scene": "decoded-lessons", "data": { "heading": "What it teaches", "items": ["Its mercy reaches all creation, even the jinn.", "Every blessing is a question: will you be grateful?", "He promises four gardens to those who fear Him.", "All things perish, but the Face of your Lord remains."] }, "text": "Its mercy reaches every creation. Every blessing asks: will you be grateful, or deny it? Four gardens await those who fear Him. And all things fade, but His Face remains." },
+    { "type": "narration", "scene": "emerald", "text": "Mercy taught you to speak. Mercy gave you everything. So which of His favors will you deny? Read Surah Ar-Rahman.", "caption": "Read Ar-Rahman." },
     { "type": "narration", "scene": "app-showcase", "text": "And our app, Ketabi, is a calm home for your faith. Get it free, at Ketabi Studio dot com.", "caption": "Download Ketabi." }
   ],
   "sources": [
-    "Surah Ar-Rahman (55) - 78 verses; theme of mercy; the refrain 'So which of the favors of your Lord will you deny?' repeats 31 times",
+    "Surah Ar-Rahman (55), 78 verses; the refrain 'So which of the favors of your Lord will you deny?' recurs 31 times",
     "Quran 55:1-4 (the Most Merciful taught the Quran, created man, taught him speech) - auto-pulled",
     "Quran 55:13 (the refrain, first occurrence) - auto-pulled",
-    "Quran 55:26-27 (all perish but the Face of your Lord) - auto-pulled",
-    "Quran-only by design: Ar-Rahman's popular virtue-hadith are contested in grading, so only the Quran is quoted to stay bulletproof"
+    "The refrain is in the DUAL (rabbikumaa / tukadhdhibaan), addressing two creations; named outright as jinn and mankind in 55:33 ('O company of jinn and mankind') - 55:33 auto-pulled; cf. 55:31 'al-thaqalan' (the two weighty ones)",
+    "Quran 55:46 ('two gardens') and 55:62 ('and besides these two, two more gardens') = four gardens for those who fear their Lord",
+    "Quran 55:26-27 (all on earth perish; the Face of your Lord remains) - auto-pulled"
   ]
 }
