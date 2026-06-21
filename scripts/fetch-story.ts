@@ -79,6 +79,35 @@ function groupWords(align: any): { text: string; start: number; end: number }[] 
   return words;
 }
 
+// Pronunciation map: ElevenLabs mis-says some short Arabic terms (e.g. "Surah"
+// -> "sooRAW", "dua" -> "D-U-A"). We send a phonetic spelling to the voice but
+// RESTORE the correct spelling for the on-screen captions, so the audio is
+// right AND the text is right. Add words here as you catch them (display
+// spelling -> phonetic). Best-guess spellings; tweak one line if still off.
+const PRONUNCIATION: Record<string, string> = {
+  surah: "soorah",
+  surahs: "soorahs",
+  dua: "doo-aa",
+  duas: "doo-aas",
+};
+function pronounce(text: string): { tts: string; back: Record<string, string> } {
+  const back: Record<string, string> = {};
+  const tts = text.replace(/[A-Za-z']+/g, (w) => {
+    const ph = PRONUNCIATION[w.toLowerCase()];
+    if (!ph) return w;
+    const cased = /^[A-Z]/.test(w) ? ph.charAt(0).toUpperCase() + ph.slice(1) : ph;
+    back[cased.toLowerCase().replace(/[^a-z]/g, "")] = w; // normalized phonetic -> display word
+    return cased;
+  });
+  return { tts, back };
+}
+function restoreWord(word: string, back: Record<string, string>): string {
+  const m = word.match(/^([^A-Za-z]*)([A-Za-z'-]+)([^A-Za-z]*)$/);
+  if (!m) return word;
+  const norm = m[2].toLowerCase().replace(/[^a-z]/g, "");
+  return back[norm] ? m[1] + back[norm] + m[3] : word;
+}
+
 async function tts(text: string, voice: string, model: string, dest: string) {
   const key = (process.env.ELEVENLABS_API_KEY || "").trim();
   if (!key) throw new Error("ELEVENLABS_API_KEY is not set.");
@@ -174,8 +203,10 @@ async function main() {
     const sfxSrc = seg.sfx ? await cachedSfx(seg.sfx, 3) : undefined;
     if (seg.type === "narration") {
       const text: string = seg.say ?? seg.text;
-      // Cache narration by content so visual-only re-renders never re-spend credits.
-      const hash = sha(`${voice}|${model}|${text}`);
+      // Send phonetic spelling to the voice; restore display spelling for captions.
+      const { tts: ttsText, back } = pronounce(text);
+      // Cache narration by the SPOKEN text so changed pronunciations regenerate.
+      const hash = sha(`${voice}|${model}|${ttsText}`);
       const mp3 = join(CACHE_DIR, `n-${hash}.mp3`);
       const meta = join(CACHE_DIR, `n-${hash}.json`);
       let words: any[];
@@ -184,7 +215,8 @@ async function main() {
         ({ words, duration } = JSON.parse(await readFile(meta, "utf8")));
         console.log(`  narration ${i}: cached (${text.slice(0, 40)}...)`);
       } else {
-        ({ words, duration } = await tts(text, voice, model, mp3));
+        ({ words, duration } = await tts(ttsText, voice, model, mp3));
+        words = words.map((w) => ({ ...w, text: restoreWord(w.text, back) }));
         await writeFile(meta, JSON.stringify({ words, duration }));
         console.log(`  narration ${i}: generated ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
       }
