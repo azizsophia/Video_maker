@@ -1,0 +1,30 @@
+{
+  "id": "sahaba-1-abu-bakr",
+  "title": "Meet the Sahaba: Abu Bakr as-Siddiq, the Prophet's Closest Friend",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "look": "sand",
+  "gap": 0.12,
+  "sound": { "ambient": "calm desert night ambience, soft warm wind, distant and serene, vast and clean, no music, no melody, no instruments", "ambientDuration": 22 },
+  "_note": "Meet the Sahaba #1 - Abu Bakr as-Siddiq. Aniconic (no faces/figures) warm parchment/gold sahaba-* kit + sand theme. Quran 9:40 (the cave) auto-pulled. Hadith (Sahih al-Bukhari, the khalil hadith) verified + on fact sheet. Biographical facts are widely-reported history, attributed not as hadith. Shop-waitlist ad closer. No em dashes.",
+  "segments": [
+    { "type": "narration", "hook": true, "scene": "desert-night", "text": "When the Prophet, peace be upon him, was asked which person he loved most, he answered with one name. This is the story of that man.", "caption": "Abu Bakr as-Siddiq." },
+    { "type": "narration", "scene": "sahaba-name", "data": { "arabic": "أبو بكر الصديق", "name": "Abu Bakr as-Siddiq", "title": "The Truthful · 1st Caliph of Islam" }, "text": "Abu Bakr as-Siddiq. The Truthful. The closest companion of the Messenger of Allah." },
+    { "type": "narration", "scene": "sahaba-dossier", "data": { "tiles": [["1st", "free man to believe"], ["AS-SIDDIQ", "the Truthful"], ["THE CAVE", "companion of the Hijrah"]] }, "text": "Among the first to believe. The one who freed Bilal from slavery. And the only man chosen to hide beside the Prophet." },
+    { "type": "narration", "scene": "desert-night", "verseRef": "9:40", "source": "Surah at-Tawbah · 9:40", "text": "The Quran records that moment. When they were both in the cave, and the Prophet said to him: do not grieve, indeed Allah is with us." },
+    { "type": "narration", "scene": "desert-night", "hadith": true, "arabic": "لَوْ كُنْتُ مُتَّخِذًا خَلِيلًا غَيْرَ رَبِّي لَاتَّخَذْتُ أَبَا بَكْرٍ خَلِيلًا", "translation": "Were I to take an intimate friend other than my Lord, I would have taken Abu Bakr.", "source": "Sahih al-Bukhari 3656", "text": "And of him the Prophet said: were I to take an intimate friend other than my Lord, I would have taken Abu Bakr." },
+    { "type": "narration", "scene": "sahaba-journey", "data": { "heading": "His journey", "rows": [["MECCA", "First among men to answer the call"], ["CAVE OF THAWR", "Hid with the Prophet during the Hijrah"], ["MEDINA", "Helped build the first Muslim community"], ["632 CE", "Chosen as the first Caliph of Islam"]] }, "text": "From the streets of Mecca, to the cave of Thawr, to Medina, and finally to leading the Muslims after the Prophet was gone." },
+    { "type": "narration", "scene": "sahaba-poll", "data": { "question": "Why was he called as-Siddiq, the Truthful?", "options": ["He never lied", "He believed the Night Journey", "He was the richest", "He was the eldest"], "cta": "Comment your answer." }, "text": "He earned the title the Truthful for a single moment of faith. Do you know which one? Comment it." },
+    { "type": "narration", "scene": "desert-night", "text": "When others doubted the Night Journey to Jerusalem and the heavens, he simply said: if he said it, then it is true. And so he became as-Siddiq.", "caption": "The Truthful." },
+    { "type": "narration", "scene": "sahaba-virtues", "data": { "heading": "His legacy", "items": ["He gave his entire wealth for Islam.", "He freed Bilal and other enslaved believers.", "He never wavered when others did.", "He led the Muslims as the first Caliph."] }, "text": "He gave everything he owned. He freed the enslaved. He stood firm when others wavered. And he led with humility." },
+    { "type": "narration", "scene": "desert-night", "text": "The closest friend. The first Caliph. The Truthful. This was Abu Bakr as-Siddiq, may Allah be pleased with him.", "caption": "Radiya Allahu anhu." },
+    { "type": "narration", "scene": "desert-night", "text": "And comment the companion you want me to feature next.", "caption": "Who next?" },
+    { "type": "narration", "scene": "shop-waitlist", "data": { "kicker": "COMING SOON", "headline": "The Ketabi Shop", "sub": "Something calm and beautiful for your faith.", "cta": "Join the waitlist", "url": "ketabistudio.com" }, "text": "And something new is coming from Ketabi. Be first in line. Join the waitlist now, at Ketabi Studio dot com." }
+  ],
+  "sources": [
+    "Abu Bakr as-Siddiq (RA) - first caliph of Islam; companion of the Prophet in the cave during the Hijrah",
+    "Quran 9:40 (at-Tawbah) - 'the second of two, when they were in the cave' - auto-pulled",
+    "Sahih al-Bukhari 3656 - 'Were I to take a khalil other than my Lord, I would have taken Abu Bakr' (verified hadith)",
+    "Title as-Siddiq for affirming the Night Journey (Isra and Mi'raj); freed Bilal; gave his wealth - widely-reported sira/history"
+  ]
+}
