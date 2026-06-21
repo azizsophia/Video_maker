@@ -61,12 +61,13 @@ jobs:
         run: |
           mkdir -p out
           if [ "${{ inputs.orientation }}" = "landscape" ]; then COMP=StoryVideoWide; else COMP=StoryVideo; fi
-          # 4K-class output: 2x scale (1080x1920 -> 2160x3840 vertical), lossless
-          # PNG frames and a low CRF so the upload stays crisp after the platform
-          # re-encodes it. Concurrency is capped for the larger 4K frame buffers.
+          # 4K-class output: 2x scale (1080x1920 -> 2160x3840 vertical) and a low
+          # CRF so the upload stays crisp after the platform re-encodes it. JPEG
+          # frames at quality 100 are visually lossless but encode far faster than
+          # PNG at 4K (PNG was ~10x slower per frame on a 2-core runner).
           npx remotion render "$COMP" "out/story.mp4" \
             --props=src/data/story-render.json \
-            --scale=2 --image-format=png --crf=16 --concurrency=$(nproc)
+            --scale=2 --image-format=jpeg --jpeg-quality=100 --crf=16 --concurrency=$(nproc)
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
