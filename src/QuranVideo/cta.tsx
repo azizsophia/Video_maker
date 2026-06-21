@@ -48,14 +48,12 @@ const ShopWaitlist: React.FC<SceneProps> = ({ data }) => {
     { ar: "سكينة", en: "You are my sakinah", color: "#b46b6b" },
     { ar: "مبارك", en: "Congratulations", color: "#6f93b0" },
   ];
-  const ph = width * 0.2; // product height
 
   const logo = spring({ frame: f - 2, fps, config: { damping: 200 } });
   const head = interpolate(f, [14, 32], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const subA = interpolate(f, [26, 44], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const btn = spring({ frame: f - 52, fps, config: { damping: 200 } });
   const pulse = 1 + 0.025 * Math.sin(f / 6);
-  const tilts = [-6, 0, 6];
 
   return (
     <AbsoluteFill style={{ background: PARCH, justifyContent: "center", alignItems: "center", padding: "0 70px" }}>
@@ -75,16 +73,17 @@ const ShopWaitlist: React.FC<SceneProps> = ({ data }) => {
         {sub}
       </div>
 
-      {/* product display: real cover images if provided, else card mockups */}
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", gap: 18, marginTop: 40, height: ph * 1.4 }}>
+      {/* product display: uniform square cover cards (clean, aligned row) */}
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 20, marginTop: 42 }}>
         {products.slice(0, 3).map((c, i) => {
           const show = spring({ frame: f - (20 + i * 8), fps, config: { damping: 180 } });
+          const box = width * 0.26;
           return (
-            <div key={i} style={{ opacity: show, transform: `translateY(${(1 - show) * 36}px) rotate(${tilts[i] ?? 0}deg)` }}>
+            <div key={i} style={{ width: box, height: box, opacity: show, transform: `translateY(${(1 - show) * 30}px)`, borderRadius: 16, overflow: "hidden", boxShadow: "0 16px 30px rgba(60,45,20,0.30)", border: "4px solid #ffffff", background: "#ffffff" }}>
               {c.src ? (
-                <Img src={resolveImg(c.src)} style={{ height: ph, width: "auto", borderRadius: 14, boxShadow: "0 18px 30px rgba(60,45,20,0.32)", border: "3px solid #fff" }} />
+                <Img src={resolveImg(c.src)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               ) : (
-                <GiftCard c={c} w={width * 0.22} tilt={0} />
+                <GiftCard c={c} w={box} tilt={0} />
               )}
             </div>
           );

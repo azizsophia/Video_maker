@@ -7,3 +7,6 @@ public/audio/
 .env.local
 __pycache__/
 *.pyc
+
+# Generated narration/ayah cache (restored via actions/cache in CI)
+public/story-cache/
