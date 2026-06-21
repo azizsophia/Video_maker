@@ -43,7 +43,9 @@ SCOPES = ["https://www.googleapis.com/auth/drive"]
 def upload_via_webapp(url, token, file_path, name, mime, folder):
     with open(file_path, "rb") as f:
         b64 = base64.b64encode(f.read())
-    qs = {"token": token, "name": name, "mimeType": mime}
+    # "replace": ask the web app to overwrite an existing file of the same name
+    # instead of creating a duplicate. Harmless if the Apps Script ignores it.
+    qs = {"token": token, "name": name, "mimeType": mime, "replace": "true"}
     if folder:
         qs["folderId"] = folder
     full = url + ("&" if "?" in url else "?") + urllib.parse.urlencode(qs)
