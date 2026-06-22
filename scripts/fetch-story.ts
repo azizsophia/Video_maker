@@ -8,12 +8,38 @@
  *   npx tsx scripts/fetch-story.ts --story=scripts/stories/gog-and-magog.json \
  *       --out=src/data/story-render.json [--voice <id>] [--theme midnight]
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, rm } from "node:fs/promises";
 import { createWriteStream, existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { Readable } from "node:stream";
 import { dirname, join } from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+
+const execFileP = promisify(execFile);
+
+// Pre-crop a downloaded clip to exactly 1080x1920 (center-crop "cover") ONCE,
+// so the render composites a tiny already-vertical file instead of re-extracting
+// frames from a large landscape source every frame. This is the single biggest
+// render-speed win for footage stories. Caps length (clips only back a ~9s beat)
+// and normalises fps so 60fps sources don't bloat extraction.
+async function transcodePortrait(src: string, dest: string): Promise<void> {
+  const args = [
+    "-y", "-i", src,
+    "-t", "12",
+    "-an",
+    "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30",
+    "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
+    dest,
+  ];
+  try {
+    await execFileP("ffmpeg", args, { maxBuffer: 1 << 26 });
+  } catch {
+    // Fall back to Remotion's bundled ffmpeg if system ffmpeg is unavailable.
+    await execFileP("npx", ["remotion", "ffmpeg", ...args], { maxBuffer: 1 << 26 });
+  }
+}
 
 const API = "https://api.quran.com/api/v4";
 const AUDIO_BASE = "https://verses.quran.com/";
@@ -184,7 +210,8 @@ async function fetchStock(query: string): Promise<string | undefined> {
     console.log(`  stock: PEXELS_API_KEY not set — skipping "${query}" (using code scene)`);
     return undefined;
   }
-  const hash = sha(`stock|${query}`);
+  // "v2" = pre-cropped-to-1080x1920 era; invalidates older uncropped cache files.
+  const hash = sha(`stock|v2crop|${query}`);
   const dest = join(CACHE_DIR, `v-${hash}.mp4`);
   const rel = `story-cache/v-${hash}.mp4`;
   if (existsSync(dest)) {
@@ -217,8 +244,20 @@ async function fetchStock(query: string): Promise<string | undefined> {
       console.log(`  stock: 0 results for "${query}" (${videos.length} videos) — using code scene`);
       return undefined;
     }
-    await download(best.link, dest);
-    console.log(`  stock: downloaded ${best.width}x${best.height} (${query})`);
+    const raw = dest.replace(/\.mp4$/, ".raw.mp4");
+    await download(best.link, raw);
+    // Pre-crop to 1080x1920 so the render stays fast (see transcodePortrait).
+    try {
+      await transcodePortrait(raw, dest);
+      await rm(raw, { force: true });
+      console.log(`  stock: downloaded ${best.width}x${best.height} -> cropped 1080x1920 (${query})`);
+    } catch (te: any) {
+      // If ffmpeg isn't available, fall back to the raw clip (still renders, just slower).
+      await rm(dest, { force: true }).catch(() => {});
+      const { rename } = await import("node:fs/promises");
+      await rename(raw, dest);
+      console.log(`  stock: downloaded ${best.width}x${best.height} (uncropped — ffmpeg unavailable: ${te.message?.slice(0, 60)}) (${query})`);
+    }
     return rel;
   } catch (e: any) {
     console.log(`  stock: failed for "${query}" (${e.message}) — using code scene`);
