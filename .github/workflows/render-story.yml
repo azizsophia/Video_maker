@@ -67,9 +67,27 @@ jobs:
           # blur was JPEG-80 frames + CRF 23 + Drive's preview compression, NOT the
           # resolution. Upscaling (1.5x/2x) only slowed renders since the platforms
           # re-encode every upload down to ~1080p anyway.
-          npx remotion render "$COMP" "out/story.mp4" \
-            --props=src/data/story-render.json \
-            --image-format=jpeg --jpeg-quality=100 --crf=16 --concurrency=$(nproc)
+          BG=$(node -e "try{process.stdout.write(require('./src/data/story-render.json').backgroundSrc||'')}catch(e){}")
+          if [ -n "$BG" ] && [ -f "public/$BG" ]; then
+            echo "Footage mode: alpha render + ffmpeg overlay (footage composited OUTSIDE Remotion)."
+            echo "  -> putting video INSIDE Remotion is a ~5x render slowdown on this 2-core runner."
+            # 1) Render calligraphy/scenes on TRANSPARENT (ProRes 4444 = alpha). No
+            #    video element inside Remotion, so this runs at the ~9 min baseline.
+            npx remotion render "$COMP" "out/overlay.mov" \
+              --props=src/data/story-render.json \
+              --codec=prores --prores-profile=4444 --concurrency=$(nproc)
+            # 2) Lay the pre-stitched footage track UNDER the alpha render in one
+            #    fast ffmpeg pass, then encode the final crisp H.264.
+            ffmpeg -y -i "public/$BG" -i out/overlay.mov \
+              -filter_complex "[0:v][1:v]overlay=format=auto:shortest=1[v]" \
+              -map "[v]" -map 1:a? -r 30 -c:v libx264 -crf 16 -pix_fmt yuv420p -c:a aac -b:a 192k \
+              out/story.mp4
+            rm -f out/overlay.mov
+          else
+            npx remotion render "$COMP" "out/story.mp4" \
+              --props=src/data/story-render.json \
+              --image-format=jpeg --jpeg-quality=100 --crf=16 --concurrency=$(nproc)
+          fi
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
