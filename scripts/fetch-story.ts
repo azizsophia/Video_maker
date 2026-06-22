@@ -449,16 +449,17 @@ async function main() {
       } else if (seg.hadith && seg.arabic) {
         facts.push(`HADITH  (${seg.source ?? ""})  [hand-typed, manually verified]\n  AR: ${seg.arabic}\n  EN: ${vTrans ?? ""}`);
       }
-      // Hold a verse on screen long enough to READ it AND hear its recitation —
-      // the verses are the whole point, they must not fly by or sit silent. If we
-      // have reciter audio, hold for its full length; else reading-time based.
+      // Verse timing: the English narration reads the verse over the on-screen
+      // ayah, then just a SHORT tail so it doesn't cut the instant the voice ends
+      // (no long silent hold — the user wants the voice carrying it, no dead air).
+      // If reciter audio is ever used, hold for its full length instead.
       const isVerse = !!(vArabic && (seg.verseRef || seg.hadith));
       const recStart = duration + 0.55; // recitation begins just after the narration line
       const holdAfter = !isVerse
         ? 0
         : rec
           ? rec.duration + 1.1
-          : Math.max(2.4, Math.min(4.6, (vTrans ? vTrans.split(/\s+/).length : 8) * 0.28));
+          : 1.1;
       segments.push({
         kind: "narration",
         audioSrc: `story-cache/n-${hash}.mp3`,
