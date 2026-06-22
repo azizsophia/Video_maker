@@ -193,23 +193,28 @@ async function fetchStock(query: string): Promise<string | undefined> {
   }
   try {
     const res = await fetch(
-      `${PEXELS}/search?query=${encodeURIComponent(query)}&orientation=portrait&per_page=25&size=medium`,
+      `${PEXELS}/search?query=${encodeURIComponent(query)}&per_page=30`,
       { headers: { Authorization: key } }
     );
-    if (!res.ok) throw new Error(`Pexels ${res.status}`);
+    if (!res.ok) throw new Error(`Pexels ${res.status} (${(await res.text()).slice(0, 80)})`);
     const data: any = await res.json();
     const videos: any[] = data.videos ?? [];
     let best: any;
     for (const v of videos) {
-      const files = (v.video_files ?? []).filter(
-        (ff: any) => ff.file_type === "video/mp4" && ff.height && ff.width && ff.height >= ff.width
-      );
-      // prefer a clip whose height is closest to 1920 (vertical HD), not huge
-      files.sort((a: any, b: any) => Math.abs((a.height || 0) - 1920) - Math.abs((b.height || 0) - 1920));
-      if (files[0]) { best = files[0]; break; }
+      const files = (v.video_files ?? []).filter((ff: any) => ff.file_type === "video/mp4" && ff.link);
+      if (!files.length) continue;
+      // prefer portrait files, then a sensible resolution (objectFit cover crops landscape to vertical)
+      files.sort((a: any, b: any) => {
+        const ap = (a.height || 0) >= (a.width || 0) ? 0 : 1;
+        const bp = (b.height || 0) >= (b.width || 0) ? 0 : 1;
+        if (ap !== bp) return ap - bp;
+        return Math.abs((a.height || 0) - 1280) - Math.abs((b.height || 0) - 1280);
+      });
+      best = files[0];
+      break;
     }
     if (!best) {
-      console.log(`  stock: no portrait clip for "${query}"`);
+      console.log(`  stock: 0 results for "${query}" (${videos.length} videos) — using code scene`);
       return undefined;
     }
     await download(best.link, dest);
@@ -244,12 +249,14 @@ async function main() {
 
   const segments: any[] = [];
   const facts: string[] = []; // verse/hadith fact sheet for pre-publish verification
+  const stockLog: { query: string; ok: boolean }[] = []; // Pexels footage audit
   let cursor = 0;
   let i = 0;
   for (const seg of story.segments as any[]) {
     if (seg.pauseBefore) cursor += Number(seg.pauseBefore); // dramatic silence
     const sfxSrc = seg.sfx ? await cachedSfx(seg.sfx, 3) : undefined;
     const stockSrc = seg.stock ? await fetchStock(String(seg.stock)) : undefined;
+    if (seg.stock) stockLog.push({ query: String(seg.stock), ok: !!stockSrc });
     if (seg.type === "narration") {
       const text: string = seg.say ?? seg.text;
       // Send phonetic spelling to the voice; restore display spelling for captions.
@@ -384,6 +391,11 @@ async function main() {
     `\n\nON-SCREEN CLAIMS — REVIEW CHECKLIST:\n${claimsBlock}` +
     `\n\nSOURCES:\n` +
     ((story.sources as string[]) ?? []).map((s) => `- ${s}`).join("\n") +
+    (stockLog.length
+      ? `\n\nSTOCK FOOTAGE (Pexels) — confirm each is aniconic (no people/faces):\n` +
+        stockLog.map((s) => `  [${s.ok ? "OK" : "MISSING"}] ${s.query}`).join("\n") +
+        `\n  (${stockLog.filter((s) => s.ok).length}/${stockLog.length} clips pulled; MISSING = fell back to a code scene)`
+      : "") +
     `\n\n${"-".repeat(60)}\n` +
     `REVIEW SIGN-OFF (required before posting — sensitive topic):\n` +
     `  [ ] Every verse checked against the Mushaf (reference + text)\n` +

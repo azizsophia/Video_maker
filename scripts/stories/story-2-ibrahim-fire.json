@@ -5,20 +5,106 @@
   "voiceName": "Oliver Silk (ElevenLabs)",
   "look": "sand",
   "gap": 0.15,
-  "sound": { "ambient": "deep fire crackling ambience, low roar of flames, embers popping, warm and tense, no music, no melody, no instruments", "ambientDuration": 22 },
+  "sound": {
+    "ambient": "deep fire crackling ambience, low roar of flames, embers popping, warm and tense, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
   "_note": "Cinematic Quran story #2 - Ibrahim and the fire (Surah al-Anbiya). Real aniconic FIRE footage via Pexels 'stock' (no people ever shown). Code scenes (scorched-sun/desert-night) are the no-key fallback. Verses 21:68, 21:69, 21:70 auto-pulled. Dramatic tone. Shop-waitlist ad closer. No em dashes.",
   "segments": [
-    { "type": "narration", "hook": true, "scene": "scorched-sun", "stock": "huge bonfire flames at night dramatic", "text": "They built a fire so vast it could be seen for miles, all to destroy one man who refused to bow to idols. Then God spoke to the fire itself.", "caption": "O fire, be cool." },
-    { "type": "narration", "scene": "desert-night", "stock": "fire embers sparks rising dark night", "text": "Ibrahim, peace be upon him, stood alone against his whole people. While they were away, he broke their idols to pieces, all but the largest, and left the axe in its hands." },
-    { "type": "narration", "scene": "desert-night", "stock": "glowing embers fire close up", "text": "When they returned in fury and demanded who had done it, he told them: ask the great one, if it can speak. They knew their gods could not even defend themselves." },
-    { "type": "narration", "scene": "scorched-sun", "stock": "wall of fire flames roaring", "verseRef": "21:68", "source": "Surah al-Anbiya · 21:68", "text": "So they made their decision." },
-    { "type": "narration", "scene": "scorched-sun", "stock": "raging inferno huge fire wall", "text": "They gathered wood for days. They lit a blaze so enormous that no one could stand near it. And they hurled him into its heart." },
-    { "type": "narration", "scene": "scorched-sun", "stock": "calm gentle blue fire embers glowing", "pauseBefore": 0.5, "verseRef": "21:69", "source": "Surah al-Anbiya · 21:69", "text": "Then came the command, not to a prophet, not to an angel, but to the fire." },
-    { "type": "narration", "scene": "scorched-sun", "stock": "soft glowing embers calm warm light", "text": "And the blaze that should have consumed him became cool. Calm. Safe. He sat in the very heart of the fire, unharmed.", "caption": "Cool and safe." },
-    { "type": "narration", "scene": "desert-night", "stock": "smoke embers dying fire dark", "verseRef": "21:70", "source": "Surah al-Anbiya · 21:70", "text": "They had wanted to destroy him." },
-    { "type": "narration", "scene": "desert-night", "stock": "warm golden sunrise calm sky", "text": "The fire meant to end him could not touch a single hair, because the One who made fire burn had told it to be still. Nothing can harm you without His permission.", "caption": "Allah was with him." },
-    { "type": "narration", "scene": "desert-night", "stock": "warm sunrise calm horizon", "text": "And comment which story from the Quran you want me to tell next.", "caption": "Which story next?" },
-    { "type": "narration", "scene": "shop-waitlist", "data": { "headline": "Something beautiful is coming", "sub": "Personalized storybooks, photo keepsakes, and cards sealed with a dua.", "cta": "Join the founding list", "url": "ketabistudio.com", "products": [{ "src": "shop/hijab.png" }, { "src": "shop/duas.png" }, { "src": "shop/juha.png" }] }, "text": "And something beautiful is coming from Ketabi Studio. Personalized storybooks, keepsakes, and cards, each one sealed with a prayer. Join the founding list now, at Ketabi Studio dot com." }
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "scorched-sun",
+      "stock": "bonfire night",
+      "text": "They built a fire so vast it could be seen for miles, all to destroy one man who refused to bow to idols. Then God spoke to the fire itself.",
+      "caption": "O fire, be cool."
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "fire embers",
+      "text": "Ibrahim, peace be upon him, stood alone against his whole people. While they were away, he broke their idols to pieces, all but the largest, and left the axe in its hands."
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "fire embers closeup",
+      "text": "When they returned in fury and demanded who had done it, he told them: ask the great one, if it can speak. They knew their gods could not even defend themselves."
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "fire flames",
+      "verseRef": "21:68",
+      "source": "Surah al-Anbiya · 21:68",
+      "text": "So they made their decision."
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "wildfire flames",
+      "text": "They gathered wood for days. They lit a blaze so enormous that no one could stand near it. And they hurled him into its heart."
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "campfire embers",
+      "pauseBefore": 0.5,
+      "verseRef": "21:69",
+      "source": "Surah al-Anbiya · 21:69",
+      "text": "Then came the command, not to a prophet, not to an angel, but to the fire."
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "glowing embers",
+      "text": "And the blaze that should have consumed him became cool. Calm. Safe. He sat in the very heart of the fire, unharmed.",
+      "caption": "Cool and safe."
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "smoke embers dark",
+      "verseRef": "21:70",
+      "source": "Surah al-Anbiya · 21:70",
+      "text": "They had wanted to destroy him."
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "sunrise sky",
+      "text": "The fire meant to end him could not touch a single hair, because the One who made fire burn had told it to be still. Nothing can harm you without His permission.",
+      "caption": "Allah was with him."
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "sunrise sky",
+      "text": "And comment which story from the Quran you want me to tell next.",
+      "caption": "Which story next?"
+    },
+    {
+      "type": "narration",
+      "scene": "shop-waitlist",
+      "data": {
+        "headline": "Something beautiful is coming",
+        "sub": "Personalized storybooks, photo keepsakes, and cards sealed with a dua.",
+        "cta": "Join the founding list",
+        "url": "ketabistudio.com",
+        "products": [
+          {
+            "src": "shop/hijab.png"
+          },
+          {
+            "src": "shop/duas.png"
+          },
+          {
+            "src": "shop/juha.png"
+          }
+        ]
+      },
+      "text": "And something beautiful is coming from Ketabi Studio. Personalized storybooks, keepsakes, and cards, each one sealed with a prayer. Join the founding list now, at Ketabi Studio dot com."
+    }
   ],
   "sources": [
     "Surah al-Anbiya 21:51-70 - Ibrahim breaks the idols, is sentenced to the fire, and Allah makes it cool and safe",
@@ -28,10 +114,25 @@
     "Ibrahim broke the idols except the largest and left the tool on it (21:57-58, 63); told them to ask the biggest idol (21:63)"
   ],
   "claims": [
-    { "claim": "Ibrahim broke the idols to pieces except the largest one", "source": "Quran 21:57-58 - https://quran.com/21/58" },
-    { "claim": "He told them to ask the biggest idol (showing the idols were powerless)", "source": "Quran 21:63 - https://quran.com/21/63" },
-    { "claim": "They said: 'Burn him and support your gods, if you are to act'", "source": "Quran 21:68 - https://quran.com/21/68" },
-    { "claim": "Allah said: 'O fire, be coolness and safety upon Ibrahim'", "source": "Quran 21:69 - https://quran.com/21/69" },
-    { "claim": "'They intended for him harm, but We made them the greatest losers'", "source": "Quran 21:70 - https://quran.com/21/70" }
+    {
+      "claim": "Ibrahim broke the idols to pieces except the largest one",
+      "source": "Quran 21:57-58 - https://quran.com/21/58"
+    },
+    {
+      "claim": "He told them to ask the biggest idol (showing the idols were powerless)",
+      "source": "Quran 21:63 - https://quran.com/21/63"
+    },
+    {
+      "claim": "They said: 'Burn him and support your gods, if you are to act'",
+      "source": "Quran 21:68 - https://quran.com/21/68"
+    },
+    {
+      "claim": "Allah said: 'O fire, be coolness and safety upon Ibrahim'",
+      "source": "Quran 21:69 - https://quran.com/21/69"
+    },
+    {
+      "claim": "'They intended for him harm, but We made them the greatest losers'",
+      "source": "Quran 21:70 - https://quran.com/21/70"
+    }
   ]
 }
