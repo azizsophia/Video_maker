@@ -52,8 +52,22 @@ def upload_via_webapp(url, token, file_path, name, mime, folder):
     req = urllib.request.Request(
         full, data=b64, method="POST",
         headers={"Content-Type": "text/plain"})
-    with urllib.request.urlopen(req, timeout=300) as resp:
-        body = resp.read().decode("utf-8", "replace")
+    # Retry transient network/SSL drops (e.g. "EOF occurred in violation of
+    # protocol") — the Apps Script upload occasionally drops mid-transfer.
+    import time
+    last = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                body = resp.read().decode("utf-8", "replace")
+            break
+        except (urllib.error.URLError, OSError) as e:
+            last = e
+            if attempt < 3:
+                print(f"Drive upload attempt {attempt + 1} failed ({e}); retrying...")
+                time.sleep(2 ** attempt)
+    else:
+        sys.exit(f"Web app upload failed after retries: {last}")
     try:
         data = json.loads(body)
     except ValueError:
