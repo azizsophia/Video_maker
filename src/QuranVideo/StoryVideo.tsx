@@ -96,48 +96,42 @@ const Narration: React.FC<{
   const line = lines[idx];
   const lineFrame = frame - Math.round((line?.start ?? 0) * fps);
   const appear = spring({ frame: lineFrame, fps, config: { damping: 200 } });
-  const kb = interpolate(frame, [0, durationInFrames], [1, 1.05]);
-  const fontSize = (hook ? 104 : 86) * (wide ? 0.8 : 1);
+      const fontSize = (hook ? 100 : 84) * (wide ? 0.8 : 1);
 
   return (
     <AbsoluteFill
-      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 70px" }}
+      style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 64px" }}
     >
+      {/* Modern, calm captions: the whole line is fully visible (no per-word
+          dim/blink, no colour flips, no zoom). Only the spoken word glides up a
+          touch with a soft warm-white glow, so it reads as karaoke without the
+          flicker. The line itself fades + rises in once, smoothly. */}
       <div
         style={{
-          transform: `scale(${kb})`,
           fontFamily: TRANSLATION_FONT,
           fontSize,
           fontWeight: 800,
-          lineHeight: 1.28,
+          lineHeight: 1.22,
+          letterSpacing: -0.5,
           textAlign: "center",
           color: "#ffffff",
-          textShadow: "0 6px 36px rgba(0,0,0,0.85)",
-          opacity: Math.min(1, appear + 0.15),
+          opacity: appear,
+          transform: `translateY(${(1 - appear) * 12}px)`,
         }}
       >
         {line?.words.map((w, i) => {
-          const active = t >= w.start - 0.04 && t < w.end + 0.12;
-          const seen = t >= w.start - 0.04;
-          // Over footage (esp. fire/sand) a gold highlight clashes with the
-          // background — use a clean white pop instead; the karaoke read comes
-          // from opacity + scale, not hue. Code-scene videos keep the brand gold.
-          const CREAM = footage ? "#f4f1ea" : "#f3ecda";
-          const GOLD = footage ? "#ffffff" : "#e7c163";
+          const active = t >= w.start - 0.03 && t < w.end + 0.08;
           return (
             <React.Fragment key={i}>
               <span
                 style={{
-                  color: active ? GOLD : CREAM,
-                  opacity: seen ? 1 : 0.25,
-                  transform: `translateY(${(1 - appear) * 18}px) scale(${active ? 1.04 : 1})`,
                   display: "inline-block",
-                  transition: "color 0.08s linear, opacity 0.12s linear",
+                  color: "#ffffff",
+                  transform: active ? "scale(1.09)" : "scale(1)",
+                  transition: "transform 0.18s cubic-bezier(0.2,0.8,0.2,1), text-shadow 0.18s ease",
                   textShadow: active
-                    ? (footage
-                        ? `0 0 24px rgba(255,255,255,0.5), 0 4px 20px rgba(0,0,0,0.95)`
-                        : `0 0 26px rgba(231,193,99,0.55), 0 4px 18px rgba(0,0,0,0.85)`)
-                    : "0 4px 18px rgba(0,0,0,0.9)",
+                    ? "0 0 26px rgba(255,236,196,0.7), 0 4px 18px rgba(0,0,0,0.95)"
+                    : "0 3px 16px rgba(0,0,0,0.92)",
                 }}
               >
                 {w.text}
@@ -188,7 +182,7 @@ const AyahCard: React.FC<{
   });
   const opacity = Math.min(fadeIn, fadeOut);
   const transReveal = spring({ frame: frame - 12, fps, config: { damping: 200 } });
-  const kb = interpolate(frame, [0, durationInFrames], [1.02, 1.06]);
+  const kb = 1; // steady — no slow zoom (it read as "shaky" over moving footage)
   // Over footage, keep the verse clean white with a soft glow (warm theme tints
   // clash with fire) and sit it on a dark scrim so it's always readable.
   const glow = footage ? "rgba(0,0,0,0.0)" : ember ? "rgba(255,150,60,0.75)" : theme.arabicGlow;
@@ -298,7 +292,7 @@ const TitleCard: React.FC<{ title: string; sub?: string; theme: ThemePalette; fo
   const wide = width > height;
   const appear = spring({ frame: frame - 4, fps, config: { damping: 200 } });
   const fadeOut = interpolate(frame, [durationInFrames - 16, durationInFrames - 2], [1, 0], { extrapolateLeft: "clamp" });
-  const kb = interpolate(frame, [0, durationInFrames], [1, 1.05]);
+  const kb = 1; // steady title (no zoom)
   const rule = interpolate(spring({ frame: frame - 14, fps, config: { damping: 200 } }), [0, 1], [0, 1]);
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 80px", opacity: Math.min(appear, fadeOut) }}>
@@ -435,8 +429,28 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           pointerEvents: "none",
         }}
       />
-      {/* (No persistent footer watermark — it read as blurry on footage; the
-          closing card carries the brand. A crisp logo lockup can be added later.) */}
+      {/* Persistent brand watermark — crisp this time: solid white, bold, a real
+          dark plate behind it so it stays sharp over any footage and after
+          compression. Sits high (top) to clear the TikTok caption/UI at the
+          bottom. */}
+      <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", paddingTop: 54, pointerEvents: "none" }}>
+        <div
+          style={{
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 28,
+            fontWeight: 700,
+            letterSpacing: 1.5,
+            color: "#ffffff",
+            opacity: 0.92,
+            padding: "8px 18px",
+            borderRadius: 999,
+            background: "rgba(0,0,0,0.42)",
+            textShadow: "0 2px 10px rgba(0,0,0,0.9)",
+          }}
+        >
+          {props.websiteUrl}
+        </div>
+      </AbsoluteFill>
     </AbsoluteFill>
   );
 };

@@ -161,6 +161,7 @@ const PRONUNCIATION: Record<string, string> = {
   dua: "doo-aa",
   duas: "doo-aas",
   khalil: "khaleel",
+  ibrahim: "Ibraheem", // pronounce "Ibraheem"; captions keep the "Ibrahim" spelling
 };
 function pronounce(text: string): { tts: string; back: Record<string, string> } {
   const back: Record<string, string> = {};
@@ -355,6 +356,9 @@ async function main() {
   const voice = args.voice ?? story.voiceId ?? "onwK4e9ZLuTAKqWW03F9";
   const model = args.model ?? "eleven_multilingual_v2";
   const recitation = String(story.reciter ?? 3);
+  // Famous-reciter audio is a published recording -> TikTok Content-ID mutes it.
+  // Story can opt out ("recite": false) and rely on narration + ambient instead.
+  const allowRecite = story.recite !== false;
   const translation = args.translation ?? "20";
   const theme = args.theme ?? story.look ?? "midnight";
   const GAP = args.gap ? Number(args.gap) : Number(story.gap ?? 0.35); // breath between segments (small = continuous flow)
@@ -441,7 +445,7 @@ async function main() {
         facts.push(`Qur'an ${seg.verseRef}  (${seg.source ?? ""})\n  AR: ${vArabic}\n  EN: ${vTrans}`);
         console.log(`  verse ${seg.verseRef}: pulled exact text + official translation from Quran.com`);
         // Recitation audio plays while the verse holds (unless opted out).
-        if (seg.recite !== false) rec = await fetchVerseAudio(String(seg.verseRef), recitation);
+        if (allowRecite && seg.recite !== false) rec = await fetchVerseAudio(String(seg.verseRef), recitation);
       } else if (seg.hadith && seg.arabic) {
         facts.push(`HADITH  (${seg.source ?? ""})  [hand-typed, manually verified]\n  AR: ${seg.arabic}\n  EN: ${vTrans ?? ""}`);
       }
@@ -454,7 +458,7 @@ async function main() {
         ? 0
         : rec
           ? rec.duration + 1.1
-          : Math.max(3, Math.min(6.5, (vTrans ? vTrans.split(/\s+/).length : 8) * 0.33));
+          : Math.max(2.4, Math.min(4.6, (vTrans ? vTrans.split(/\s+/).length : 8) * 0.28));
       segments.push({
         kind: "narration",
         audioSrc: `story-cache/n-${hash}.mp3`,
