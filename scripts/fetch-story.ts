@@ -239,6 +239,19 @@ async function main() {
 
   await mkdir(CACHE_DIR, { recursive: true });
 
+  // Footage key diagnostic (never prints the secret itself — only its length).
+  // A 13s "0 clips" build with no key length here means the repo secret
+  // PEXELS_API_KEY is empty / not reaching the job.
+  const wantsStock = (story.segments as any[]).some((s) => s.stock);
+  if (wantsStock) {
+    const pk = (process.env.PEXELS_API_KEY || "").trim();
+    console.log(
+      pk
+        ? `🎞  PEXELS_API_KEY detected (${pk.length} chars) — will pull stock footage`
+        : `🎞  PEXELS_API_KEY is EMPTY/UNSET — every "stock" beat will fall back to a code scene`
+    );
+  }
+
   // Atmospheric bed (sound effect, never music) under the whole video.
   let ambientSrc: string | undefined;
   let ambientDuration: number | undefined;
@@ -354,6 +367,16 @@ async function main() {
       cursor += duration + GAP;
     }
     i++;
+  }
+
+  if (stockLog.length) {
+    const ok = stockLog.filter((s) => s.ok).length;
+    console.log(
+      `\n🎞  STOCK SUMMARY: ${ok}/${stockLog.length} Pexels clips downloaded` +
+        (ok === 0
+          ? ` — NONE pulled. If the key length printed above, the queries returned nothing or the key was rejected (see the "stock:" lines). If no key length printed, the PEXELS_API_KEY secret is empty.`
+          : ``)
+    );
   }
 
   const props = {
