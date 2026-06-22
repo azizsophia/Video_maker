@@ -35,13 +35,17 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - name: Install Chrome dependencies
+      - name: Install Chrome dependencies + ffmpeg
         run: |
           sudo apt-get update
-          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+          # ffmpeg is REQUIRED for footage (crop/stitch/chroma-key). Some runner
+          # images don't ship it, and Remotion's bundled ffmpeg is a minimal build
+          # with no filters — so footage would silently fall back to code scenes.
+          sudo apt-get install -y ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
             libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 || \
-          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+          sudo apt-get install -y ffmpeg libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
             libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1
+          echo "ffmpeg: $(command -v ffmpeg || echo MISSING)"
 
       - name: Install dependencies
         run: npm ci
