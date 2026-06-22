@@ -19,26 +19,57 @@ import { promisify } from "node:util";
 
 const execFileP = promisify(execFile);
 
+// Run ffmpeg, falling back to Remotion's bundled binary if system ffmpeg is absent.
+async function ffmpegRun(args: string[]): Promise<void> {
+  try {
+    await execFileP("ffmpeg", args, { maxBuffer: 1 << 27 });
+  } catch (e: any) {
+    if (e?.code === "ENOENT") {
+      await execFileP("npx", ["remotion", "ffmpeg", ...args], { maxBuffer: 1 << 27 });
+      return;
+    }
+    throw e;
+  }
+}
+
+const PORTRAIT_VF = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30";
+const X264 = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p"];
+
 // Pre-crop a downloaded clip to exactly 1080x1920 (center-crop "cover") ONCE,
 // so the render composites a tiny already-vertical file instead of re-extracting
-// frames from a large landscape source every frame. This is the single biggest
-// render-speed win for footage stories. Caps length (clips only back a ~9s beat)
-// and normalises fps so 60fps sources don't bloat extraction.
+// frames from a large landscape source every frame. Caps length and normalises fps.
 async function transcodePortrait(src: string, dest: string): Promise<void> {
-  const args = [
-    "-y", "-i", src,
-    "-t", "12",
-    "-an",
-    "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30",
-    "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p",
-    dest,
-  ];
-  try {
-    await execFileP("ffmpeg", args, { maxBuffer: 1 << 26 });
-  } catch {
-    // Fall back to Remotion's bundled ffmpeg if system ffmpeg is unavailable.
-    await execFileP("npx", ["remotion", "ffmpeg", ...args], { maxBuffer: 1 << 26 });
+  await ffmpegRun(["-y", "-i", src, "-t", "12", "-an", "-vf", PORTRAIT_VF, ...X264, dest]);
+}
+
+// Stitch the per-beat clips into ONE continuous 1080x1920 background for the whole
+// video (each clip looped/trimmed to its beat's duration; black where a beat has no
+// footage — those beats render an opaque code scene on top). The render then reads a
+// SINGLE video sequentially (OffthreadVideo's fast path) instead of re-opening 10
+// separate files per frame — the fix for the 60-90 min footage renders.
+async function buildBackground(track: { src: string | null; dur: number }[], dest: string): Promise<void> {
+  const { resolve } = await import("node:path");
+  const partsDir = join(CACHE_DIR, "bgparts");
+  await rm(partsDir, { recursive: true, force: true });
+  await mkdir(partsDir, { recursive: true });
+  const pieces: string[] = [];
+  for (let i = 0; i < track.length; i++) {
+    const { src, dur } = track[i];
+    if (dur <= 0.04) continue;
+    const piece = join(partsDir, `p-${String(i).padStart(3, "0")}.mp4`);
+    if (src) {
+      await ffmpegRun(["-y", "-stream_loop", "-1", "-i", join("public", src), "-t", dur.toFixed(2), "-an", "-vf", PORTRAIT_VF, ...X264, piece]);
+    } else {
+      await ffmpegRun(["-y", "-f", "lavfi", "-i", "color=c=black:s=1080x1920:r=30", "-t", dur.toFixed(2), "-an", "-vf", "fps=30", ...X264, piece]);
+    }
+    pieces.push(piece);
   }
+  const listFile = join(partsDir, "concat.txt");
+  await writeFile(listFile, pieces.map((p) => `file '${resolve(p)}'`).join("\n"));
+  // Re-encode (not -c copy) so the stitched file has one clean, continuous
+  // timeline — OffthreadVideo reads it sequentially without seek hiccups.
+  await ffmpegRun(["-y", "-f", "concat", "-safe", "0", "-i", listFile, "-an", "-vf", "fps=30", ...X264, dest]);
+  await rm(partsDir, { recursive: true, force: true });
 }
 
 const API = "https://api.quran.com/api/v4";
@@ -418,6 +449,36 @@ async function main() {
     );
   }
 
+  // Stitch ONE continuous footage backdrop for the whole timeline (the fast-render
+  // fix). Reconstruct the timeline from the built segments: each beat's cropped
+  // clip for its exact duration, black filler for gaps / non-footage beats.
+  let backgroundSrc: string | undefined;
+  const anyStock = segments.some((s: any) => s.stock);
+  if (anyStock) {
+    const track: { src: string | null; dur: number }[] = [];
+    let t = 0;
+    for (const s of segments as any[]) {
+      if (s.fromSeconds > t + 0.04) track.push({ src: null, dur: s.fromSeconds - t }); // silent gap
+      track.push({ src: s.stock || null, dur: s.durationInSeconds });
+      t = s.fromSeconds + s.durationInSeconds;
+    }
+    const bgHash = sha(`bg|${track.map((e) => `${e.src ?? "_"}:${e.dur.toFixed(2)}`).join("|")}`);
+    const bgDest = join(CACHE_DIR, `bg-${bgHash}.mp4`);
+    backgroundSrc = `story-cache/bg-${bgHash}.mp4`;
+    if (existsSync(bgDest)) {
+      console.log(`  background: cached (${track.length} pieces)`);
+    } else {
+      console.log(`  background: stitching ${track.length} pieces -> one ${t.toFixed(0)}s track...`);
+      try {
+        await buildBackground(track, bgDest);
+        console.log(`  background: built ${backgroundSrc}`);
+      } catch (e: any) {
+        backgroundSrc = undefined;
+        console.log(`  background: FAILED (${e.message?.slice(0, 80)}) — falling back to code scenes`);
+      }
+    }
+  }
+
   const props = {
     title: story.title,
     theme,
@@ -426,6 +487,7 @@ async function main() {
     websiteUrl: args.website ?? "ketabistudio.com",
     ambientSrc,
     ambientDuration,
+    backgroundSrc,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";

@@ -268,31 +268,28 @@ const AyahCard: React.FC<{
   );
 };
 
-// Real cinematic stock footage as a backdrop (Pexels). Slow Ken-Burns push-in
-// + a cinematic gradient so the calligraphy/captions stay legible on top.
-const StockBackdrop: React.FC<{ src: string }> = ({ src }) => {
+// ONE continuous footage backdrop for the whole video, pre-stitched by ffmpeg in
+// fetch-story (each beat's Pexels clip trimmed to its segment, concatenated in
+// order). A single OffthreadVideo read sequentially renders ~6x faster than many
+// per-segment clips, each of which forced ffmpeg to re-open and seek a different
+// file every frame (the cause of the 60-90 min footage renders). Slow global
+// Ken-Burns push-in for life.
+const GlobalBackdrop: React.FC<{ src: string }> = ({ src }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const scale = interpolate(frame, [0, durationInFrames], [1.05, 1.16]);
-  const fade = Math.min(
-    interpolate(frame, [0, 10], [0, 1], { extrapolateRight: "clamp" }),
-    interpolate(frame, [durationInFrames - 10, durationInFrames], [1, 0], { extrapolateLeft: "clamp" })
-  );
+  const scale = interpolate(frame, [0, durationInFrames], [1.04, 1.12]);
   return (
-    <AbsoluteFill style={{ opacity: fade }}>
-      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
-        {/* OffthreadVideo extracts frames via ffmpeg — multiples faster to
-            render than <Video> (which seeks frame-by-frame in headless Chrome).
-            No loop prop in this Remotion version, but each backdrop only spans a
-            single ~5-9s beat and Pexels clips run 10-30s, so it never runs out
-            (and would just hold the last frame if it ever did). */}
-        <OffthreadVideo src={src} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-      </AbsoluteFill>
-      {/* cinematic legibility gradient: darker top + bottom, lighter middle */}
-      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 38%, rgba(0,0,0,0.2) 62%, rgba(0,0,0,0.72) 100%)" }} />
+    <AbsoluteFill style={{ transform: `scale(${scale})` }}>
+      <OffthreadVideo src={src} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
     </AbsoluteFill>
   );
 };
+
+// Cinematic legibility gradient shown over footage beats (darker top + bottom,
+// lighter middle) so the calligraphy/captions stay readable on the footage.
+const FootageGradient: React.FC = () => (
+  <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 38%, rgba(0,0,0,0.2) 62%, rgba(0,0,0,0.72) 100%)" }} />
+);
 
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
@@ -309,13 +306,17 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
 
   return (
     <AbsoluteFill style={{ backgroundColor: theme.background }}>
+      {/* One continuous footage track behind everything. Footage beats let it
+          show through (gradient + text on top); non-footage beats render an
+          opaque code scene that covers it. */}
+      {props.backgroundSrc ? <GlobalBackdrop src={resolveAudio(props.backgroundSrc)} /> : null}
       {spans.map((sp, i) => {
         const from = Math.max(0, Math.round(sp.start * STORY_FPS) - 8);
         const dur = Math.round((sp.end - sp.start) * STORY_FPS) + 16;
         return (
           <Sequence key={`scene-${i}`} from={from} durationInFrames={dur}>
             {sp.stock ? (
-              <StockBackdrop src={resolveAudio(sp.stock)} />
+              <FootageGradient />
             ) : (
               <SceneLayer name={sp.scene} theme={theme} data={sp.data} />
             )}

@@ -37,6 +37,7 @@ export const storyPropsSchema = z.object({
   websiteUrl: z.string().default("ketabistudio.com"),
   ambientSrc: z.string().optional(), // looping atmospheric bed (sound effect, never music)
   ambientDuration: z.number().optional(),
+  backgroundSrc: z.string().optional(), // one pre-stitched footage track for the whole video
   segments: z.array(storySegmentSchema),
 });
 
