@@ -66,9 +66,23 @@ async function buildBackground(track: { src: string | null; dur: number }[], des
   }
   const listFile = join(partsDir, "concat.txt");
   await writeFile(listFile, pieces.map((p) => `file '${resolve(p)}'`).join("\n"));
-  // Re-encode (not -c copy) so the stitched file has one clean, continuous
-  // timeline — OffthreadVideo reads it sequentially without seek hiccups.
-  await ffmpegRun(["-y", "-f", "concat", "-safe", "0", "-i", listFile, "-an", "-vf", "fps=30", ...X264, dest]);
+  // A one-frame legibility gradient (dark top + bottom, light middle) baked into
+  // the footage track. It has to live here, not in the Remotion render, because
+  // that render is opaque chroma-green for keying — a gradient over green would
+  // not key out cleanly. alpha = 0.18..0.6 via |cos| down the frame.
+  const gradPng = join(partsDir, "grad.png");
+  await ffmpegRun([
+    "-y", "-f", "lavfi", "-i", "color=c=black:s=1080x1920", "-frames:v", "1",
+    "-vf", "format=rgba,geq=r=0:g=0:b=0:a='255*(0.18+0.42*abs(cos(PI*Y/H)))'",
+    gradPng,
+  ]);
+  // Concatenate the beats into one clean, continuous track and bake the gradient
+  // in, in a single pass.
+  await ffmpegRun([
+    "-y", "-f", "concat", "-safe", "0", "-i", listFile, "-i", gradPng,
+    "-filter_complex", "[0:v]fps=30[v0];[v0][1:v]overlay=format=auto[v]",
+    "-map", "[v]", "-an", ...X264, dest,
+  ]);
   await rm(partsDir, { recursive: true, force: true });
 }
 
@@ -462,7 +476,7 @@ async function main() {
       track.push({ src: s.stock || null, dur: s.durationInSeconds });
       t = s.fromSeconds + s.durationInSeconds;
     }
-    const bgHash = sha(`bg|${track.map((e) => `${e.src ?? "_"}:${e.dur.toFixed(2)}`).join("|")}`);
+    const bgHash = sha(`bg|grad2|${track.map((e) => `${e.src ?? "_"}:${e.dur.toFixed(2)}`).join("|")}`);
     const bgDest = join(CACHE_DIR, `bg-${bgHash}.mp4`);
     backgroundSrc = `story-cache/bg-${bgHash}.mp4`;
     if (existsSync(bgDest)) {

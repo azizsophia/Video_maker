@@ -268,20 +268,23 @@ const AyahCard: React.FC<{
 };
 
 // Cinematic legibility gradient shown over footage beats (darker top + bottom,
-// lighter middle) so the calligraphy/captions stay readable on the footage.
-// Semi-transparent, so in footage (alpha) mode the footage still shows through.
-const FootageGradient: React.FC = () => (
-  <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 38%, rgba(0,0,0,0.2) 62%, rgba(0,0,0,0.72) 100%)" }} />
+// Footage beats render a solid CHROMA-KEY green here; ffmpeg keys it out and
+// drops the (already gradient-darkened) footage track behind, with the
+// calligraphy/captions on top. Pure #00ff00 never appears in the nature footage
+// (fire/sand/sky/water), so the key is clean. Rendering an OPAQUE green (instead
+// of a transparent/alpha frame) keeps Remotion on its fast JPEG path — the whole
+// point: footage videos render at the ~9 min baseline, not 50-80 min.
+const CHROMA_KEY = "#00ff00";
+const ChromaFill: React.FC = () => (
+  <AbsoluteFill style={{ backgroundColor: CHROMA_KEY }} />
 );
 
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
   // Footage mode: the Pexels footage is composited UNDER this render by ffmpeg
-  // (see render-story.yml), NOT decoded inside Remotion — putting video in
-  // Remotion is a ~5x render slowdown on the CI runner. So in footage mode the
-  // root is transparent (alpha render), footage beats are just a gradient + text
-  // that the ffmpeg overlay shows footage through, and code-scene beats stay
-  // opaque (covering the footage where there is none).
+  // (see render-story.yml), NOT decoded inside Remotion. The render stays OPAQUE
+  // (fast JPEG): footage beats are painted chroma-green for ffmpeg to key out and
+  // replace with the footage track; code-scene beats render their opaque scene.
   const footageMode = !!props.backgroundSrc;
   // Group consecutive segments sharing a scene so the illustrated backdrop only
   // crossfades on real scene changes.
@@ -295,12 +298,12 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: footageMode ? "transparent" : theme.background }}>
+    <AbsoluteFill style={{ backgroundColor: theme.background }}>
       {spans.map((sp, i) => {
         const isFootage = !!sp.stock && footageMode;
         // Code scenes get ±frames of padding so the illustrated backdrop
-        // crossfades smoothly; footage gradients use exact bounds so adjacent
-        // beats abut without overlapping (overlap would double-darken).
+        // crossfades smoothly; footage (chroma) beats use exact bounds so the key
+        // colour never bleeds a frame into a neighbouring code scene.
         const from = isFootage
           ? Math.round(sp.start * STORY_FPS)
           : Math.max(0, Math.round(sp.start * STORY_FPS) - 8);
@@ -310,15 +313,15 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         return (
           <Sequence key={`scene-${i}`} from={from} durationInFrames={dur}>
             {isFootage ? (
-              <FootageGradient />
+              <ChromaFill />
             ) : (
               <SceneLayer name={sp.scene} theme={theme} data={sp.data} />
             )}
           </Sequence>
         );
       })}
-      {/* Gentle darken for caption legibility (skip in footage mode — the
-          FootageGradient already handles it and we want the footage crisp). */}
+      {/* Gentle darken for caption legibility (skip in footage mode — the gradient
+          is baked into the footage track and we want the footage crisp). */}
       {footageMode ? null : <AbsoluteFill style={{ background: "rgba(0,0,0,0.24)" }} />}
 
       {/* Atmospheric bed (sound effect, never music). */}
