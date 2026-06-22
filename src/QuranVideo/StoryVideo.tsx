@@ -2,7 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
-  Video,
+  OffthreadVideo,
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -281,7 +281,12 @@ const StockBackdrop: React.FC<{ src: string }> = ({ src }) => {
   return (
     <AbsoluteFill style={{ opacity: fade }}>
       <AbsoluteFill style={{ transform: `scale(${scale})` }}>
-        <Video src={src} muted loop style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        {/* OffthreadVideo extracts frames via ffmpeg — multiples faster to
+            render than <Video> (which seeks frame-by-frame in headless Chrome).
+            No loop prop in this Remotion version, but each backdrop only spans a
+            single ~5-9s beat and Pexels clips run 10-30s, so it never runs out
+            (and would just hold the last frame if it ever did). */}
+        <OffthreadVideo src={src} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       </AbsoluteFill>
       {/* cinematic legibility gradient: darker top + bottom, lighter middle */}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 38%, rgba(0,0,0,0.2) 62%, rgba(0,0,0,0.72) 100%)" }} />
