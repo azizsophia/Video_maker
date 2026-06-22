@@ -429,11 +429,12 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           pointerEvents: "none",
         }}
       />
-      {/* Persistent brand watermark — crisp this time: solid white, bold, a real
-          dark plate behind it so it stays sharp over any footage and after
-          compression. Sits high (top) to clear the TikTok caption/UI at the
-          bottom. */}
-      <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", paddingTop: 54, pointerEvents: "none" }}>
+      {/* Persistent brand watermark — crisp: solid white, bold, on a dark plate
+          so it stays sharp over any footage and after compression. paddingTop is
+          ~200 (not the very top) so it clears the phone status bar + TikTok's
+          "For You / Following" tab strip, which were hiding it. Still well above
+          the bottom caption/action-rail zone. */}
+      <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", paddingTop: 200, pointerEvents: "none" }}>
         <div
           style={{
             fontFamily: TRANSLATION_FONT,
