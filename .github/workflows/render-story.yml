@@ -69,20 +69,25 @@ jobs:
           # re-encode every upload down to ~1080p anyway.
           BG=$(node -e "try{process.stdout.write(require('./src/data/story-render.json').backgroundSrc||'')}catch(e){}")
           if [ -n "$BG" ] && [ -f "public/$BG" ]; then
-            echo "Footage mode: alpha render + ffmpeg overlay (footage composited OUTSIDE Remotion)."
-            echo "  -> putting video INSIDE Remotion is a ~5x render slowdown on this 2-core runner."
-            # 1) Render calligraphy/scenes on TRANSPARENT (ProRes 4444 = alpha). No
-            #    video element inside Remotion, so this runs at the ~9 min baseline.
-            npx remotion render "$COMP" "out/overlay.mov" \
+            echo "Footage mode: PNG-sequence alpha + ffmpeg overlay (footage composited OUTSIDE Remotion)."
+            echo "  -> in-Remotion video AND ProRes alpha both ~5x slow on this 2-core runner;"
+            echo "     PNG frames encode at ~JPEG speed and ffmpeg does the footage compositing."
+            rm -rf out/seq && mkdir -p out/seq
+            # 1) Calligraphy/scenes as a TRANSPARENT PNG frame sequence (alpha), which
+            #    encodes at ~JPEG speed (no ProRes muxer, no in-Remotion video).
+            npx remotion render "$COMP" out/seq \
               --props=src/data/story-render.json \
-              --codec=prores --prores-profile=4444 --concurrency=$(nproc)
-            # 2) Lay the pre-stitched footage track UNDER the alpha render in one
-            #    fast ffmpeg pass, then encode the final crisp H.264.
-            ffmpeg -y -i "public/$BG" -i out/overlay.mov \
+              --sequence --image-format=png --concurrency=$(nproc)
+            # 2) Audio only (fast — Remotion skips frame rendering for an audio output).
+            npx remotion render "$COMP" out/audio.aac \
+              --props=src/data/story-render.json --codec=aac --concurrency=$(nproc)
+            # 3) Footage UNDER the alpha frames + the audio -> final crisp H.264.
+            #    glob sorts correctly because Remotion pads every frame to one width.
+            ffmpeg -y -i "public/$BG" -framerate 30 -pattern_type glob -i 'out/seq/element-*.png' -i out/audio.aac \
               -filter_complex "[0:v][1:v]overlay=format=auto:shortest=1[v]" \
-              -map "[v]" -map 1:a? -r 30 -c:v libx264 -crf 16 -pix_fmt yuv420p -c:a aac -b:a 192k \
+              -map "[v]" -map 2:a -r 30 -c:v libx264 -crf 16 -pix_fmt yuv420p -c:a aac -b:a 192k \
               out/story.mp4
-            rm -f out/overlay.mov
+            rm -rf out/seq out/audio.aac
           else
             npx remotion render "$COMP" "out/story.mp4" \
               --props=src/data/story-render.json \
