@@ -10,7 +10,7 @@
     "ambient": "deep fire crackling ambience, low roar of flames, embers popping, warm and tense, no music, no melody, no instruments",
     "ambientDuration": 22
   },
-  "_note": "Cinematic Quran story - Prophet Ibrahim (AS) and the fire (Surah al-Anbiya 21:51-70). Real aniconic PORTRAIT fire footage via Pexels. Six verses auto-pulled AND recited (AbdulBasit Murattal, reciter 2) while each ayah holds. Honorific: voice says 'peace be upon him', screen shows '(AS)' - both = alayhis-salam, never the Prophet-Muhammad-only form. Dramatic tone. Shop-waitlist closer. No em dashes.",
+  "_note": "Cinematic Quran story - Prophet Ibrahim (AS) and the fire (Surah al-Anbiya 21:51-70). Trimmed to FOUR on-screen+recited verses (21:58, 21:63, 21:68, 21:69) for a ~2:10 viral length; 21:52 and 21:70 are narrated. AbdulBasit Murattal (reciter 2) recites each verse while it holds. PORTRAIT fire footage via Pexels. Honorific: voice says 'peace be upon him', screen shows '(AS)'. No em dashes.",
   "segments": [
     {
       "type": "narration",
@@ -26,23 +26,14 @@
       "type": "narration",
       "scene": "scorched-sun",
       "stock": "bonfire night",
-      "text": "Ibrahim watched his people bow down to statues they had carved with their own hands. And he asked the question that no one else dared to ask.",
+      "text": "Ibrahim watched his people bow down to statues they had carved with their own hands. So he asked them: what are these idols that you worship? They had no answer, only the way of their fathers.",
       "caption": "Why worship what you built?"
     },
     {
       "type": "narration",
       "scene": "desert-night",
-      "stock": "fire embers",
-      "verseRef": "21:52",
-      "source": "Surah al-Anbiya · 21:52",
-      "text": "He said to his father and his people: what are these statues that you stand before in devotion?",
-      "caption": "Surah al-Anbiya · 21:52"
-    },
-    {
-      "type": "narration",
-      "scene": "desert-night",
       "stock": "fire embers closeup",
-      "text": "They had no answer, only the way of their fathers. So Ibrahim waited. And when they left for their festival, he made his move.",
+      "text": "So Ibrahim waited. And when they left for their festival, he made his move.",
       "caption": "He had a plan."
     },
     {
@@ -91,7 +82,7 @@
       "scene": "scorched-sun",
       "stock": "wildfire flames",
       "pauseBefore": 0.3,
-      "text": "They gathered wood for days, and lit a blaze so vast that no one could stand near it. They threw him in. And in that moment, the command went not to an angel, not to a prophet, but to the fire itself.",
+      "text": "They gathered wood for days, and lit a blaze so vast that no one could stand near it. They threw him in. And the command went not to an angel, not to a prophet, but to the fire itself.",
       "caption": "Then God spoke to the fire."
     },
     {
@@ -108,17 +99,8 @@
       "type": "narration",
       "scene": "desert-night",
       "stock": "glowing embers",
-      "text": "The flames that should have devoured him turned cool and gentle around him. He sat in the very heart of the fire, untouched.",
+      "text": "The flames that should have devoured him turned cool and gentle around him. He sat in the very heart of the fire, untouched. They had meant to destroy him, but it was they who became the losers.",
       "caption": "Cool. And safe."
-    },
-    {
-      "type": "narration",
-      "scene": "desert-night",
-      "stock": "golden sunrise sky",
-      "verseRef": "21:70",
-      "source": "Surah al-Anbiya · 21:70",
-      "text": "And they intended for him harm, but We made them the greatest losers.",
-      "caption": "Surah al-Anbiya · 21:70"
     },
     {
       "type": "narration",
@@ -154,20 +136,20 @@
   ],
   "sources": [
     "Surah al-Anbiya 21:51-70 - Ibrahim questions the idols, breaks them (except the largest), is sentenced to the fire, and Allah commands it to be cool and safe",
-    "Quran 21:52 ('What are these statues to which you are devoted?') - auto-pulled + recited",
-    "Quran 21:58 (broke them to pieces except the largest, that they might return to it) - auto-pulled + recited",
-    "Quran 21:63 ('Rather, this - the largest of them - did it, so ask them, if they should speak') - auto-pulled + recited",
-    "Quran 21:68 ('Burn him and support your gods, if you are to act') - auto-pulled + recited",
-    "Quran 21:69 ('O fire, be coolness and safety upon Abraham') - auto-pulled + recited",
-    "Quran 21:70 ('And they intended for him harm, but We made them the greatest losers') - auto-pulled + recited"
+    "Quran 21:52 ('What are these statues to which you are devoted?') - narrated",
+    "Quran 21:58 (broke them to pieces except the largest, that they might return to it) - on screen + recited",
+    "Quran 21:63 ('Rather, this - the largest of them - did it, so ask them, if they should speak') - on screen + recited",
+    "Quran 21:68 ('Burn him and support your gods, if you are to act') - on screen + recited",
+    "Quran 21:69 ('O fire, be coolness and safety upon Abraham') - on screen + recited",
+    "Quran 21:70 ('And they intended for him harm, but We made them the greatest losers') - narrated"
   ],
   "claims": [
-    { "claim": "Ibrahim asked his people about the statues they were devoted to", "source": "Quran 21:52 - https://quran.com/21/52" },
+    { "claim": "Ibrahim asked his people about the statues/idols they worshipped", "source": "Quran 21:52 - https://quran.com/21/52" },
     { "claim": "He broke the idols to pieces except the largest, that they might return to it", "source": "Quran 21:58 - https://quran.com/21/58" },
     { "claim": "He told them to ask the largest idol, if it could speak (exposing their powerlessness)", "source": "Quran 21:63 - https://quran.com/21/63" },
     { "claim": "They said: 'Burn him and support your gods, if you are to act'", "source": "Quran 21:68 - https://quran.com/21/68" },
     { "claim": "Allah said: 'O fire, be coolness and safety upon Abraham'", "source": "Quran 21:69 - https://quran.com/21/69" },
-    { "claim": "'They intended for him harm, but We made them the greatest losers'", "source": "Quran 21:70 - https://quran.com/21/70" },
+    { "claim": "They intended harm but were made the greatest losers", "source": "Quran 21:70 - https://quran.com/21/70" },
     { "claim": "Nothing harms a person except by Allah's permission (reflection)", "source": "Quran 64:11 - https://quran.com/64/11" }
   ]
 }
