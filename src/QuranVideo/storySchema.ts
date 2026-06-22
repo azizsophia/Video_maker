@@ -24,6 +24,8 @@ export const storySegmentSchema = z.object({
   sfxSrc: z.string().optional(), // one-shot sound effect at segment start
   ember: z.boolean().optional(), // warm molten-iron treatment (the wall moment)
   hook: z.boolean().optional(), // scroll-stopper styling for the opening
+  title: z.string().optional(), // big title-card text for an opening beat (\n allowed)
+  titleSub: z.string().optional(), // small line under the title (e.g. "peace be upon him")
   scene: z.string().optional(), // illustrated backdrop (see scenes.tsx)
   data: z.any().optional(), // arbitrary content for data-driven scenes (Decoded kit)
   stock: z.string().optional(), // cached Pexels footage path (real cinematic backdrop)

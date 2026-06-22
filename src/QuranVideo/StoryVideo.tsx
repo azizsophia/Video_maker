@@ -84,7 +84,8 @@ const Narration: React.FC<{
   source?: string;
   hook?: boolean;
   theme: ThemePalette;
-}> = ({ words = [], source, hook, theme }) => {
+  footage?: boolean;
+}> = ({ words = [], source, hook, theme, footage }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames, width, height } = useVideoConfig();
   const wide = width > height;
@@ -118,9 +119,11 @@ const Narration: React.FC<{
         {line?.words.map((w, i) => {
           const active = t >= w.start - 0.04 && t < w.end + 0.12;
           const seen = t >= w.start - 0.04;
-          // Ketabi brand caption palette: cream base, gold keyword highlight.
-          const CREAM = "#f3ecda";
-          const GOLD = "#e7c163";
+          // Over footage (esp. fire/sand) a gold highlight clashes with the
+          // background — use a clean white pop instead; the karaoke read comes
+          // from opacity + scale, not hue. Code-scene videos keep the brand gold.
+          const CREAM = footage ? "#f4f1ea" : "#f3ecda";
+          const GOLD = footage ? "#ffffff" : "#e7c163";
           return (
             <React.Fragment key={i}>
               <span
@@ -131,7 +134,9 @@ const Narration: React.FC<{
                   display: "inline-block",
                   transition: "color 0.08s linear, opacity 0.12s linear",
                   textShadow: active
-                    ? `0 0 26px rgba(231,193,99,0.55), 0 4px 18px rgba(0,0,0,0.85)`
+                    ? (footage
+                        ? `0 0 24px rgba(255,255,255,0.5), 0 4px 20px rgba(0,0,0,0.95)`
+                        : `0 0 26px rgba(231,193,99,0.55), 0 4px 18px rgba(0,0,0,0.85)`)
                     : "0 4px 18px rgba(0,0,0,0.9)",
                 }}
               >
@@ -150,12 +155,12 @@ const Narration: React.FC<{
             fontFamily: TRANSLATION_FONT,
             fontSize: 26,
             letterSpacing: 1.5,
-            color: theme.accent,
-            opacity: 0.9,
-            background: "rgba(0,0,0,0.4)",
+            color: footage ? "#f4f1ea" : theme.accent,
+            opacity: 0.92,
+            background: "rgba(0,0,0,0.5)",
             padding: "9px 20px",
             borderRadius: 22,
-            border: `1px solid ${theme.accent}55`,
+            border: `1px solid ${footage ? "rgba(255,255,255,0.35)" : theme.accent + "55"}`,
           }}
         >
           {source}
@@ -172,7 +177,8 @@ const AyahCard: React.FC<{
   source?: string;
   ember?: boolean;
   theme: ThemePalette;
-}> = ({ arabic, translation, source, ember, theme }) => {
+  footage?: boolean;
+}> = ({ arabic, translation, source, ember, theme, footage }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames, width, height } = useVideoConfig();
   const wide = width > height;
@@ -183,8 +189,10 @@ const AyahCard: React.FC<{
   const opacity = Math.min(fadeIn, fadeOut);
   const transReveal = spring({ frame: frame - 12, fps, config: { damping: 200 } });
   const kb = interpolate(frame, [0, durationInFrames], [1.02, 1.06]);
-  const glow = ember ? "rgba(255,150,60,0.75)" : theme.arabicGlow;
-  const arabicColor = ember ? "#fff1e0" : theme.arabicActive;
+  // Over footage, keep the verse clean white with a soft glow (warm theme tints
+  // clash with fire) and sit it on a dark scrim so it's always readable.
+  const glow = footage ? "rgba(0,0,0,0.0)" : ember ? "rgba(255,150,60,0.75)" : theme.arabicGlow;
+  const arabicColor = footage ? "#ffffff" : ember ? "#fff1e0" : theme.arabicActive;
 
   // Auto-fit: long verses (e.g. Ayat al-Kursi, 2:255) must never overflow or
   // clip. Scale the Arabic + translation down by character count so the whole
@@ -202,10 +210,19 @@ const AyahCard: React.FC<{
     <AbsoluteFill
       style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "190px 70px", opacity }}
     >
-      {ember ? (
+      {ember && !footage ? (
         <AbsoluteFill
           style={{
             background: "radial-gradient(circle at 50% 45%, rgba(255,120,40,0.22), transparent 55%)",
+          }}
+        />
+      ) : null}
+      {/* Dark readability scrim so the verse always reads over busy footage. */}
+      {footage ? (
+        <AbsoluteFill
+          style={{
+            background: "radial-gradient(ellipse 78% 52% at 50% 47%, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.5) 55%, transparent 100%)",
+            opacity,
           }}
         />
       ) : null}
@@ -228,7 +245,7 @@ const AyahCard: React.FC<{
             lineHeight: 1.62,
             maxWidth: wide ? 1500 : 960,
             color: arabicColor,
-            textShadow: `0 0 46px ${glow}`,
+            textShadow: footage ? "0 4px 28px rgba(0,0,0,0.95), 0 0 18px rgba(0,0,0,0.8)" : `0 0 46px ${glow}`,
           }}
         >
           {arabic}
@@ -240,7 +257,8 @@ const AyahCard: React.FC<{
             fontFamily: TRANSLATION_FONT,
             fontSize: transSize,
             lineHeight: 1.42,
-            color: theme.translation,
+            color: footage ? "#f4f1ea" : theme.translation,
+            textShadow: footage ? "0 3px 18px rgba(0,0,0,0.95)" : undefined,
             opacity: transReveal,
             transform: `translateY(${(1 - transReveal) * 22}px)`,
           }}
@@ -254,12 +272,52 @@ const AyahCard: React.FC<{
               fontFamily: TRANSLATION_FONT,
               fontSize: 26,
               letterSpacing: 2.5,
-              color: ember ? "#ffb060" : theme.accent,
+              color: footage ? "#e9d9a8" : ember ? "#ffb060" : theme.accent,
+              textShadow: footage ? "0 2px 12px rgba(0,0,0,0.9)" : undefined,
               opacity: transReveal * 0.95,
               textTransform: "uppercase",
             }}
           >
             {source}
+          </div>
+        ) : null}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// --- Title card (storytelling opener, e.g. "The Story of Prophet Ibrahim") -----
+const TitleCard: React.FC<{ title: string; sub?: string; theme: ThemePalette; footage?: boolean }> = ({
+  title,
+  sub,
+  theme,
+  footage,
+}) => {
+  const frame = useCurrentFrame();
+  const { fps, durationInFrames, width, height } = useVideoConfig();
+  const wide = width > height;
+  const appear = spring({ frame: frame - 4, fps, config: { damping: 200 } });
+  const fadeOut = interpolate(frame, [durationInFrames - 16, durationInFrames - 2], [1, 0], { extrapolateLeft: "clamp" });
+  const kb = interpolate(frame, [0, durationInFrames], [1, 1.05]);
+  const rule = interpolate(spring({ frame: frame - 14, fps, config: { damping: 200 } }), [0, 1], [0, 1]);
+  return (
+    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 150px" : "0 80px", opacity: Math.min(appear, fadeOut) }}>
+      {footage ? (
+        <AbsoluteFill style={{ background: "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0,0,0,0.66) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)" }} />
+      ) : null}
+      <div style={{ transform: `scale(${kb}) translateY(${(1 - appear) * 20}px)`, textAlign: "center" }}>
+        <div style={{ fontFamily: TRANSLATION_FONT, fontWeight: 500, fontSize: wide ? 30 : 34, letterSpacing: 6, textTransform: "uppercase", color: footage ? "#e9d9a8" : theme.accent, textShadow: "0 3px 18px rgba(0,0,0,0.9)", marginBottom: 26, opacity: 0.92 }}>
+          A Quran Story
+        </div>
+        {title.split("\n").map((ln, i) => (
+          <div key={i} style={{ fontFamily: TRANSLATION_FONT, fontWeight: 800, fontSize: wide ? 96 : 110, lineHeight: 1.08, color: "#ffffff", textShadow: "0 6px 34px rgba(0,0,0,0.92)" }}>
+            {ln}
+          </div>
+        ))}
+        <div style={{ height: 3, width: `${Math.round(rule * (wide ? 360 : 300))}px`, margin: "34px auto 0", background: footage ? "#e9d9a8" : theme.accent, opacity: 0.9, borderRadius: 2 }} />
+        {sub ? (
+          <div style={{ fontFamily: TRANSLATION_FONT, fontStyle: "italic", fontSize: wide ? 34 : 40, color: "#f4f1ea", textShadow: "0 3px 16px rgba(0,0,0,0.92)", marginTop: 26, opacity: 0.95 }}>
+            {sub}
           </div>
         ) : null}
       </div>
@@ -337,15 +395,18 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
             <Audio src={resolveAudio(seg.audioSrc)} />
             {seg.sfxSrc ? <Audio src={resolveAudio(seg.sfxSrc)} volume={0.55} /> : null}
             {seg.ember ? <Embers warm count={34} /> : null}
-            {FULL_VISUAL_SCENES.includes(seg.scene ?? "") ? null : seg.kind === "narration" && seg.arabic ? (
+            {FULL_VISUAL_SCENES.includes(seg.scene ?? "") ? null : seg.title ? (
+              <TitleCard title={seg.title} sub={seg.titleSub} theme={theme} footage={footageMode} />
+            ) : seg.kind === "narration" && seg.arabic ? (
               <AyahCard
                 arabic={seg.arabic}
                 translation={seg.translation}
                 source={seg.source}
                 theme={theme}
+                footage={footageMode}
               />
             ) : seg.kind === "narration" ? (
-              <Narration words={seg.words} source={seg.source} hook={seg.hook} theme={theme} />
+              <Narration words={seg.words} source={seg.source} hook={seg.hook} theme={theme} footage={footageMode} />
             ) : (
               <AyahCard
                 arabic={seg.arabic}
@@ -353,6 +414,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
                 source={seg.source}
                 ember={seg.ember}
                 theme={theme}
+                footage={footageMode}
               />
             )}
           </Sequence>

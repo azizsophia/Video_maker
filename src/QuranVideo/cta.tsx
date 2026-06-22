@@ -93,7 +93,7 @@ const ShopWaitlist: React.FC<SceneProps> = ({ data }) => {
       <div style={{ opacity: btn, transform: `scale(${(0.92 + btn * 0.08) * pulse})`, marginTop: 46, fontFamily: TRANSLATION_FONT, fontSize: 42, fontWeight: 700, color: CREAM, background: GREEN, borderRadius: 16, padding: "20px 46px", boxShadow: "0 10px 26px rgba(40,60,45,0.32)" }}>
         {cta}
       </div>
-      <div style={{ opacity: btn, fontFamily: TRANSLATION_FONT, fontSize: 32, letterSpacing: 1.5, color: GOLD, marginTop: 24 }}>
+      <div style={{ opacity: btn, fontFamily: TRANSLATION_FONT, fontSize: 40, fontWeight: 800, letterSpacing: 0.3, color: INK, marginTop: 24, padding: "12px 26px", background: "rgba(255,255,255,0.6)", border: `2px solid ${GREEN}`, borderRadius: 14 }}>
         {url}
       </div>
     </AbsoluteFill>

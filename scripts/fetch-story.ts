@@ -255,8 +255,9 @@ async function fetchStock(query: string): Promise<string | undefined> {
     console.log(`  stock: PEXELS_API_KEY not set — skipping "${query}" (using code scene)`);
     return undefined;
   }
-  // "v2" = pre-cropped-to-1080x1920 era; invalidates older uncropped cache files.
-  const hash = sha(`stock|v2crop|${query}`);
+  // "v3" = portrait-sourced. Requesting portrait clips avoids upscaling a
+  // landscape clip ~1.8x to fill 1080x1920 (the main softness culprit).
+  const hash = sha(`stock|v3portrait|${query}`);
   const dest = join(CACHE_DIR, `v-${hash}.mp4`);
   const rel = `story-cache/v-${hash}.mp4`;
   if (existsSync(dest)) {
@@ -264,8 +265,9 @@ async function fetchStock(query: string): Promise<string | undefined> {
     return rel;
   }
   try {
+    // orientation=portrait + a tall min size so clips fill the 9:16 frame natively.
     const res = await fetch(
-      `${PEXELS}/search?query=${encodeURIComponent(query)}&per_page=30`,
+      `${PEXELS}/search?query=${encodeURIComponent(query)}&orientation=portrait&size=medium&per_page=40`,
       { headers: { Authorization: key } }
     );
     if (!res.ok) throw new Error(`Pexels ${res.status} (${(await res.text()).slice(0, 80)})`);
@@ -275,12 +277,16 @@ async function fetchStock(query: string): Promise<string | undefined> {
     for (const v of videos) {
       const files = (v.video_files ?? []).filter((ff: any) => ff.file_type === "video/mp4" && ff.link);
       if (!files.length) continue;
-      // prefer portrait files, then a sensible resolution (objectFit cover crops landscape to vertical)
+      // Prefer PORTRAIT files at >=1080 wide so there's no upscaling.
       files.sort((a: any, b: any) => {
-        const ap = (a.height || 0) >= (a.width || 0) ? 0 : 1;
-        const bp = (b.height || 0) >= (b.width || 0) ? 0 : 1;
+        const ap = (a.height || 0) > (a.width || 0) ? 0 : 1;
+        const bp = (b.height || 0) > (b.width || 0) ? 0 : 1;
         if (ap !== bp) return ap - bp;
-        return Math.abs((a.height || 0) - 1280) - Math.abs((b.height || 0) - 1280);
+        // then the one whose width is closest to (and ideally >=) 1080
+        const aw = a.width || 0, bw = b.width || 0;
+        const ascore = aw >= 1080 ? aw - 1080 : (1080 - aw) * 3;
+        const bscore = bw >= 1080 ? bw - 1080 : (1080 - bw) * 3;
+        return ascore - bscore;
       });
       best = files[0];
       break;
@@ -394,11 +400,19 @@ async function main() {
       } else if (seg.hadith && seg.arabic) {
         facts.push(`HADITH  (${seg.source ?? ""})  [hand-typed, manually verified]\n  AR: ${seg.arabic}\n  EN: ${vTrans ?? ""}`);
       }
+      // Hold a verse on screen long enough to actually READ it (Arabic +
+      // translation), well beyond the short narration line — the verses are the
+      // whole point, they must not fly by. Reading-time based: ~0.33s/word of
+      // translation, clamped 3-6.5s of extra still time after the narration.
+      const isVerse = !!(vArabic && (seg.verseRef || seg.hadith));
+      const holdAfter = isVerse
+        ? Math.max(3, Math.min(6.5, (vTrans ? vTrans.split(/\s+/).length : 8) * 0.33))
+        : 0;
       segments.push({
         kind: "narration",
         audioSrc: `story-cache/n-${hash}.mp3`,
         fromSeconds: Number(cursor.toFixed(2)),
-        durationInSeconds: Number((duration + GAP).toFixed(2)),
+        durationInSeconds: Number((duration + GAP + holdAfter).toFixed(2)),
         words,
         source: seg.source ?? (seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined),
         sfxSrc,
@@ -406,10 +420,12 @@ async function main() {
         scene: seg.scene || undefined,
         arabic: vArabic,
         translation: vTrans,
+        title: seg.title || undefined,
+        titleSub: seg.titleSub || undefined,
         data: seg.data || undefined,
         stock: stockSrc,
       });
-      cursor += duration + GAP;
+      cursor += duration + GAP + holdAfter;
     } else if (seg.type === "ayah") {
       const key = `${seg.surah}:${seg.ayah}`;
       const hash = sha(`ayah|${key}|${recitation}|${translation}`);

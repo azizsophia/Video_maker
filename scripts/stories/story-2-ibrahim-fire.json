@@ -14,6 +14,15 @@
     {
       "type": "narration",
       "hook": true,
+      "scene": "desert-night",
+      "stock": "sunrise sky golden",
+      "title": "The Story of\nProphet Ibrahim",
+      "titleSub": "peace be upon him",
+      "text": "This is the story of Prophet Ibrahim, peace be upon him, and the fire that refused to burn.",
+      "caption": "Prophet Ibrahim (peace be upon him)"
+    },
+    {
+      "type": "narration",
       "scene": "scorched-sun",
       "stock": "bonfire night",
       "text": "They built a fire so vast it could be seen for miles, all to destroy one man who refused to bow to idols. Then God spoke to the fire itself.",
