@@ -245,9 +245,41 @@ async function fetchVerse(ref: string, translationId: string): Promise<{ arabic:
   return { arabic: ar.join(" "), translation: tr.join(" ") };
 }
 
+// Pull the authoritative Arabic RECITATION audio for a single verse (Quran.com
+// reciter) so it can play while the verse is on screen — fills the silence and
+// lets viewers hear the ayah, not just read it. Single verse only; cached.
+async function fetchVerseAudio(
+  ref: string,
+  recitation: string
+): Promise<{ src: string; duration: number } | undefined> {
+  if (!/^\d+:\d+$/.test(ref)) return undefined; // single ayah only
+  const recHash = sha(`rec|${ref}|${recitation}`);
+  const mp3 = join(CACHE_DIR, `r-${recHash}.mp3`);
+  const meta = join(CACHE_DIR, `r-${recHash}.json`);
+  const rel = `story-cache/r-${recHash}.mp3`;
+  if (existsSync(mp3) && existsSync(meta)) {
+    const { duration } = JSON.parse(await readFile(meta, "utf8"));
+    return { src: rel, duration };
+  }
+  try {
+    const v = await getJson<any>(`${API}/verses/by_key/${ref}?language=en&audio=${recitation}`);
+    const verse = v.verse;
+    if (!verse?.audio?.url) return undefined;
+    const segsArr: number[][] = verse.audio?.segments ?? [];
+    const lastEnd = segsArr.length ? segsArr[segsArr.length - 1][segsArr[0].length - 1] / 1000 : 6;
+    const duration = Math.max(2, lastEnd + 0.5);
+    await download(resolveAudioUrl(verse.audio.url), mp3);
+    await writeFile(meta, JSON.stringify({ duration }));
+    console.log(`  recitation ${ref}: pulled reciter audio ${duration.toFixed(1)}s`);
+    return { src: rel, duration };
+  } catch (e: any) {
+    console.log(`  recitation ${ref}: unavailable (${e.message?.slice(0, 50)})`);
+    return undefined;
+  }
+}
+
 // Real cinematic stock footage from Pexels (free). ANICONIC ONLY — query for
-// nature/skies/water/architecture/light, never people. Returns a cached local
-// path, or undefined if no key / nothing found (falls back to code scenes).
+// nature/skies/water/architecture/light, never people.
 const PEXELS = "https://api.pexels.com/videos";
 async function fetchStock(query: string): Promise<string | undefined> {
   const key = (process.env.PEXELS_API_KEY || "").trim();
@@ -391,23 +423,28 @@ async function main() {
           `from Quran.com, or flag "hadith": true if it is a verified hadith. Got: ${seg.arabic.slice(0, 50)}`
         );
       }
+      let rec: { src: string; duration: number } | undefined;
       if (seg.verseRef) {
         const vv = await fetchVerse(String(seg.verseRef), translation);
         vArabic = vv.arabic;
         vTrans = vv.translation;
         facts.push(`Qur'an ${seg.verseRef}  (${seg.source ?? ""})\n  AR: ${vArabic}\n  EN: ${vTrans}`);
         console.log(`  verse ${seg.verseRef}: pulled exact text + official translation from Quran.com`);
+        // Recitation audio plays while the verse holds (unless opted out).
+        if (seg.recite !== false) rec = await fetchVerseAudio(String(seg.verseRef), recitation);
       } else if (seg.hadith && seg.arabic) {
         facts.push(`HADITH  (${seg.source ?? ""})  [hand-typed, manually verified]\n  AR: ${seg.arabic}\n  EN: ${vTrans ?? ""}`);
       }
-      // Hold a verse on screen long enough to actually READ it (Arabic +
-      // translation), well beyond the short narration line — the verses are the
-      // whole point, they must not fly by. Reading-time based: ~0.33s/word of
-      // translation, clamped 3-6.5s of extra still time after the narration.
+      // Hold a verse on screen long enough to READ it AND hear its recitation —
+      // the verses are the whole point, they must not fly by or sit silent. If we
+      // have reciter audio, hold for its full length; else reading-time based.
       const isVerse = !!(vArabic && (seg.verseRef || seg.hadith));
-      const holdAfter = isVerse
-        ? Math.max(3, Math.min(6.5, (vTrans ? vTrans.split(/\s+/).length : 8) * 0.33))
-        : 0;
+      const recStart = duration + 0.55; // recitation begins just after the narration line
+      const holdAfter = !isVerse
+        ? 0
+        : rec
+          ? rec.duration + 1.1
+          : Math.max(3, Math.min(6.5, (vTrans ? vTrans.split(/\s+/).length : 8) * 0.33));
       segments.push({
         kind: "narration",
         audioSrc: `story-cache/n-${hash}.mp3`,
@@ -422,6 +459,8 @@ async function main() {
         translation: vTrans,
         title: seg.title || undefined,
         titleSub: seg.titleSub || undefined,
+        recSrc: rec?.src,
+        recStart: rec ? Number(recStart.toFixed(2)) : undefined,
         data: seg.data || undefined,
         stock: stockSrc,
       });

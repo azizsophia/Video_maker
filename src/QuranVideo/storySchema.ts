@@ -29,6 +29,8 @@ export const storySegmentSchema = z.object({
   scene: z.string().optional(), // illustrated backdrop (see scenes.tsx)
   data: z.any().optional(), // arbitrary content for data-driven scenes (Decoded kit)
   stock: z.string().optional(), // cached Pexels footage path (real cinematic backdrop)
+  recSrc: z.string().optional(), // verse recitation audio, played while the ayah holds
+  recStart: z.number().optional(), // seconds into the segment when recitation begins
 });
 
 export const storyPropsSchema = z.object({

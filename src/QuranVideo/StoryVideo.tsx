@@ -394,6 +394,13 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <Sequence key={i} from={from} durationInFrames={dur}>
             <Audio src={resolveAudio(seg.audioSrc)} />
             {seg.sfxSrc ? <Audio src={resolveAudio(seg.sfxSrc)} volume={0.55} /> : null}
+            {/* Verse recitation: starts just after the English narration line and
+                plays while the ayah holds on screen (authentic reciter audio). */}
+            {seg.recSrc ? (
+              <Sequence from={Math.round((seg.recStart ?? 0) * STORY_FPS)}>
+                <Audio src={resolveAudio(seg.recSrc)} volume={0.92} />
+              </Sequence>
+            ) : null}
             {seg.ember ? <Embers warm count={34} /> : null}
             {FULL_VISUAL_SCENES.includes(seg.scene ?? "") ? null : seg.title ? (
               <TitleCard title={seg.title} sub={seg.titleSub} theme={theme} footage={footageMode} />
@@ -428,20 +435,8 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           pointerEvents: "none",
         }}
       />
-      {/* Subtle persistent brand chip. */}
-      <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 64 }}>
-        <div
-          style={{
-            fontFamily: TRANSLATION_FONT,
-            fontSize: 26,
-            letterSpacing: 3,
-            color: theme.accent,
-            opacity: 0.65,
-          }}
-        >
-          {props.websiteUrl}
-        </div>
-      </AbsoluteFill>
+      {/* (No persistent footer watermark — it read as blurry on footage; the
+          closing card carries the brand. A crisp logo lockup can be added later.) */}
     </AbsoluteFill>
   );
 };
