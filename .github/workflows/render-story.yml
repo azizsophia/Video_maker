@@ -16,10 +16,18 @@ on:
         description: "vertical (TikTok/Reels/Shorts) | landscape (YouTube long-form 16:9)"
         required: true
         default: "vertical"
+      runner:
+        description: "Runner: ubuntu-latest (free 2-core; footage is SLOW ~50-80min) | a larger-runner label e.g. ubuntu-8core (paid; footage ~10-15min)"
+        required: false
+        default: "ubuntu-latest"
 
 jobs:
   render:
-    runs-on: ubuntu-latest
+    # Free 2-core renders no-footage stories in ~9 min, but footage (alpha/video
+    # compositing) is ~5x slower. For footage stories, point this at a larger
+    # paid runner label (configure under Settings -> Actions -> Runners) and the
+    # same pipeline renders ~4x faster and reliably.
+    runs-on: ${{ inputs.runner }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
