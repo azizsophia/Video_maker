@@ -141,6 +141,15 @@ to ~1080p anyway. `StoryVideo` = vertical; `StoryVideoWide` = 16:9.
 **books ad** (`cta.tsx`, the "Something beautiful is coming / Join the founding
 list" card with real product covers from `public/shop/`).
 
+### Real cinematic footage (Pexels)
+Any beat can specify a `"stock": "<keywords>"` field. The build queries the free
+**Pexels** video API, downloads a portrait clip, caches it, and `StoryVideo`
+composites it as a moving backdrop (slow Ken-Burns + a legibility gradient) with
+the calligraphy/captions on top. **Aniconic only** — query for nature, skies,
+water, light, architecture; **never people/faces/sacred figures.** Needs a free
+`PEXELS_API_KEY` repo secret (pexels.com/api). With no key, the beat falls back
+to its code-drawn `scene`.
+
 ### Scene system
 `src/QuranVideo/scenes.tsx` maps a `scene` name → a React component. Data-driven
 scenes read `segment.data`. Names listed in `FULL_VISUAL_SCENES`

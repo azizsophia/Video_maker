@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
+  Video,
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -267,16 +268,38 @@ const AyahCard: React.FC<{
   );
 };
 
+// Real cinematic stock footage as a backdrop (Pexels). Slow Ken-Burns push-in
+// + a cinematic gradient so the calligraphy/captions stay legible on top.
+const StockBackdrop: React.FC<{ src: string }> = ({ src }) => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const scale = interpolate(frame, [0, durationInFrames], [1.05, 1.16]);
+  const fade = Math.min(
+    interpolate(frame, [0, 10], [0, 1], { extrapolateRight: "clamp" }),
+    interpolate(frame, [durationInFrames - 10, durationInFrames], [1, 0], { extrapolateLeft: "clamp" })
+  );
+  return (
+    <AbsoluteFill style={{ opacity: fade }}>
+      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
+        <Video src={src} muted loop style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      </AbsoluteFill>
+      {/* cinematic legibility gradient: darker top + bottom, lighter middle */}
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 38%, rgba(0,0,0,0.2) 62%, rgba(0,0,0,0.72) 100%)" }} />
+    </AbsoluteFill>
+  );
+};
+
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
   // Group consecutive segments sharing a scene so the illustrated backdrop only
   // crossfades on real scene changes.
-  const spans: { scene?: string; data?: unknown; start: number; end: number }[] = [];
+  const spans: { scene?: string; data?: unknown; stock?: string; start: number; end: number }[] = [];
   props.segments.forEach((s) => {
     const last = spans[spans.length - 1];
     const end = s.fromSeconds + s.durationInSeconds;
-    if (last && last.scene === s.scene) last.end = end;
-    else spans.push({ scene: s.scene, data: (s as { data?: unknown }).data, start: s.fromSeconds, end });
+    const stock = (s as { stock?: string }).stock;
+    if (last && last.scene === s.scene && last.stock === stock) last.end = end;
+    else spans.push({ scene: s.scene, data: (s as { data?: unknown }).data, stock, start: s.fromSeconds, end });
   });
 
   return (
@@ -286,7 +309,11 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         const dur = Math.round((sp.end - sp.start) * STORY_FPS) + 16;
         return (
           <Sequence key={`scene-${i}`} from={from} durationInFrames={dur}>
-            <SceneLayer name={sp.scene} theme={theme} data={sp.data} />
+            {sp.stock ? (
+              <StockBackdrop src={resolveAudio(sp.stock)} />
+            ) : (
+              <SceneLayer name={sp.scene} theme={theme} data={sp.data} />
+            )}
           </Sequence>
         );
       })}

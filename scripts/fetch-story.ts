@@ -174,6 +174,53 @@ async function fetchVerse(ref: string, translationId: string): Promise<{ arabic:
   return { arabic: ar.join(" "), translation: tr.join(" ") };
 }
 
+// Real cinematic stock footage from Pexels (free). ANICONIC ONLY — query for
+// nature/skies/water/architecture/light, never people. Returns a cached local
+// path, or undefined if no key / nothing found (falls back to code scenes).
+const PEXELS = "https://api.pexels.com/videos";
+async function fetchStock(query: string): Promise<string | undefined> {
+  const key = (process.env.PEXELS_API_KEY || "").trim();
+  if (!key) {
+    console.log(`  stock: PEXELS_API_KEY not set — skipping "${query}" (using code scene)`);
+    return undefined;
+  }
+  const hash = sha(`stock|${query}`);
+  const dest = join(CACHE_DIR, `v-${hash}.mp4`);
+  const rel = `story-cache/v-${hash}.mp4`;
+  if (existsSync(dest)) {
+    console.log(`  stock: cached (${query})`);
+    return rel;
+  }
+  try {
+    const res = await fetch(
+      `${PEXELS}/search?query=${encodeURIComponent(query)}&orientation=portrait&per_page=25&size=medium`,
+      { headers: { Authorization: key } }
+    );
+    if (!res.ok) throw new Error(`Pexels ${res.status}`);
+    const data: any = await res.json();
+    const videos: any[] = data.videos ?? [];
+    let best: any;
+    for (const v of videos) {
+      const files = (v.video_files ?? []).filter(
+        (ff: any) => ff.file_type === "video/mp4" && ff.height && ff.width && ff.height >= ff.width
+      );
+      // prefer a clip whose height is closest to 1920 (vertical HD), not huge
+      files.sort((a: any, b: any) => Math.abs((a.height || 0) - 1920) - Math.abs((b.height || 0) - 1920));
+      if (files[0]) { best = files[0]; break; }
+    }
+    if (!best) {
+      console.log(`  stock: no portrait clip for "${query}"`);
+      return undefined;
+    }
+    await download(best.link, dest);
+    console.log(`  stock: downloaded ${best.width}x${best.height} (${query})`);
+    return rel;
+  } catch (e: any) {
+    console.log(`  stock: failed for "${query}" (${e.message}) — using code scene`);
+    return undefined;
+  }
+}
+
 async function main() {
   const args = parseArgs();
   const storyFile = args.story ?? "scripts/stories/gog-and-magog.json";
@@ -202,6 +249,7 @@ async function main() {
   for (const seg of story.segments as any[]) {
     if (seg.pauseBefore) cursor += Number(seg.pauseBefore); // dramatic silence
     const sfxSrc = seg.sfx ? await cachedSfx(seg.sfx, 3) : undefined;
+    const stockSrc = seg.stock ? await fetchStock(String(seg.stock)) : undefined;
     if (seg.type === "narration") {
       const text: string = seg.say ?? seg.text;
       // Send phonetic spelling to the voice; restore display spelling for captions.
@@ -255,6 +303,7 @@ async function main() {
         arabic: vArabic,
         translation: vTrans,
         data: seg.data || undefined,
+        stock: stockSrc,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
@@ -293,6 +342,7 @@ async function main() {
         sfxSrc,
         ember: seg.ember || undefined,
         scene: seg.scene || undefined,
+        stock: stockSrc,
       });
       cursor += duration + GAP;
     }

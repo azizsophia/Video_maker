@@ -52,6 +52,7 @@ jobs:
       - name: Build story (narration + ayahs)
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: |
           npx tsx scripts/fetch-story.ts \
             --story="${{ inputs.story }}" --theme="${{ inputs.theme }}" \

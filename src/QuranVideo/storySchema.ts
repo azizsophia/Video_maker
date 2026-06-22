@@ -26,6 +26,7 @@ export const storySegmentSchema = z.object({
   hook: z.boolean().optional(), // scroll-stopper styling for the opening
   scene: z.string().optional(), // illustrated backdrop (see scenes.tsx)
   data: z.any().optional(), // arbitrary content for data-driven scenes (Decoded kit)
+  stock: z.string().optional(), // cached Pexels footage path (real cinematic backdrop)
 });
 
 export const storyPropsSchema = z.object({
