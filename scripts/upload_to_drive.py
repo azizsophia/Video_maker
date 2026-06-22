@@ -56,16 +56,17 @@ def upload_via_webapp(url, token, file_path, name, mime, folder):
     # protocol") — the Apps Script upload occasionally drops mid-transfer.
     import time
     last = None
-    for attempt in range(4):
+    attempts = 3
+    for attempt in range(attempts):
         try:
-            with urllib.request.urlopen(req, timeout=300) as resp:
+            with urllib.request.urlopen(req, timeout=90) as resp:
                 body = resp.read().decode("utf-8", "replace")
             break
         except (urllib.error.URLError, OSError) as e:
             last = e
-            if attempt < 3:
+            if attempt < attempts - 1:
                 print(f"Drive upload attempt {attempt + 1} failed ({e}); retrying...")
-                time.sleep(2 ** attempt)
+                time.sleep(3)
     else:
         sys.exit(f"Web app upload failed after retries: {last}")
     try:
