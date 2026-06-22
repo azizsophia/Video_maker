@@ -388,7 +388,17 @@ async function main() {
   let cursor = 0;
   let i = 0;
   for (const seg of story.segments as any[]) {
-    if (seg.pauseBefore) cursor += Number(seg.pauseBefore); // dramatic silence
+    if (seg.pauseBefore) {
+      // Graceful dramatic pause: HOLD the previous beat's visual through the
+      // silence (footage + ambient keep going) instead of leaving an uncovered
+      // gap that would flash dark. Then the next beat starts cleanly.
+      const p = Number(seg.pauseBefore);
+      if (segments.length) {
+        const prev = segments[segments.length - 1];
+        prev.durationInSeconds = Number((prev.durationInSeconds + p).toFixed(2));
+      }
+      cursor += p;
+    }
     const sfxSrc = seg.sfx ? await cachedSfx(seg.sfx, 3) : undefined;
     const stockSrc = seg.stock ? await fetchStock(String(seg.stock)) : undefined;
     if (seg.stock) stockLog.push({ query: String(seg.stock), ok: !!stockSrc });
