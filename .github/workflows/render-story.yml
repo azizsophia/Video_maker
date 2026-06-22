@@ -150,7 +150,7 @@ jobs:
             DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 out/story.mp4 | cut -d. -f1)
             BR=$(python3 -c "d=max(1,$DUR); print(max(900, min(int((27*8192/d) - 128), 3500)))")
             echo "Encoding a ~27MB Drive copy: duration ${DUR}s -> ${BR}k video bitrate."
-            ffmpeg -y -i out/story.mp4 -c:v libx264 -preset slow -b:v ${BR}k -maxrate $((BR*5/4))k -bufsize $((BR*2))k \
+            ffmpeg -y -i out/story.mp4 -c:v libx264 -preset medium -b:v ${BR}k -maxrate $((BR*5/4))k -bufsize $((BR*2))k \
               -pix_fmt yuv420p -c:a aac -b:a 128k out/story-drive.mp4
             UP="out/story-drive.mp4"
           fi
