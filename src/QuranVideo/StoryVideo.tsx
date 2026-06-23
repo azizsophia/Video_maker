@@ -15,6 +15,7 @@ import { themes, ThemePalette } from "./themes";
 import { Background } from "./Background";
 import { StoryMap } from "./StoryMap";
 import { Scene } from "./Scenes";
+import { Slide, InstitutionalScene, InkCaption } from "./Slides";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT, CAPTION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -395,18 +396,35 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
   const contentEndFrames = Math.round(contentEndSeconds(props) * STORY_FPS);
   const outroFrames = Math.round((props.ctaSeconds ?? 4.5) * STORY_FPS);
+  const institutional = props.theme === "atlas";
   return (
-    <AbsoluteFill>
-      <Background theme={theme} />
-      {/* Extra darken for cinematic mood. */}
-      <AbsoluteFill style={{ background: "rgba(0,0,0,0.28)" }} />
+    <AbsoluteFill style={{ background: institutional ? "#efe4cd" : undefined }}>
+      {!institutional ? (
+        <>
+          <Background theme={theme} />
+          {/* Extra darken for cinematic mood. */}
+          <AbsoluteFill style={{ background: "rgba(0,0,0,0.28)" }} />
+        </>
+      ) : null}
       {props.segments.map((seg: StorySegment, i: number) => {
         const from = Math.round(seg.fromSeconds * STORY_FPS);
         const dur = Math.round(seg.durationInSeconds * STORY_FPS);
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
-            <Audio src={resolveAudio(seg.audioSrc)} />
-            {seg.kind === "narration" ? (
+            {seg.audioSrc ? <Audio src={resolveAudio(seg.audioSrc)} /> : null}
+            {institutional ? (
+              <>
+                <Slide kicker={seg.kicker} foot={seg.foot}>
+                  <InstitutionalScene seg={seg} theme={theme} />
+                </Slide>
+                {!seg.arabic ? (
+                  <InkCaption
+                    words={seg.words}
+                    align={!seg.scene || seg.scene === "statement" ? "center" : "bottom"}
+                  />
+                ) : null}
+              </>
+            ) : seg.kind === "narration" ? (
               seg.arabic ? (
                 <>
                   <Scene name={seg.scene ?? "rays"} theme={theme} />
@@ -437,22 +455,24 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           </Sequence>
         );
       })}
-      {/* Subtle persistent brand chip — only during the content, not the outro. */}
-      <Sequence durationInFrames={Math.max(1, contentEndFrames)}>
-        <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 70 }}>
-          <div
-            style={{
-              fontFamily: TRANSLATION_FONT,
-              fontSize: 26,
-              letterSpacing: 3,
-              color: theme.accent,
-              opacity: 0.7,
-            }}
-          >
-            {props.websiteUrl}
-          </div>
-        </AbsoluteFill>
-      </Sequence>
+      {/* Subtle persistent brand chip — only during the content (dark themes only). */}
+      {!institutional ? (
+        <Sequence durationInFrames={Math.max(1, contentEndFrames)}>
+          <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 70 }}>
+            <div
+              style={{
+                fontFamily: TRANSLATION_FONT,
+                fontSize: 26,
+                letterSpacing: 3,
+                color: theme.accent,
+                opacity: 0.7,
+              }}
+            >
+              {props.websiteUrl}
+            </div>
+          </AbsoluteFill>
+        </Sequence>
+      ) : null}
 
       {/* Auto-appended founding-list ad end card. */}
       {props.showOutro ? (
@@ -461,7 +481,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
             theme={theme}
             websiteUrl={props.websiteUrl}
             headline={props.ctaHeadline}
-            onLight={props.theme === "noor"}
+            onLight={props.theme === "noor" || props.theme === "atlas"}
           />
         </Sequence>
       ) : null}

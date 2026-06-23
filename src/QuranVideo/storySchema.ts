@@ -18,7 +18,10 @@ export const storySegmentSchema = z.object({
   words: z.array(storyWordSchema).optional(), // for synced captions
   source: z.string().optional(), // small citation chip (e.g. "Tirmidhi 3153 (hasan)")
   map: z.string().optional(), // optional animated history map behind a narration beat
-  scene: z.string().optional(), // animated visual backdrop: dunes|geo|rays|stone|nightsky|embers
+  scene: z.string().optional(), // institutional visual: statement|chronology|facade|map|quote
+  kicker: z.string().optional(), // small gold eyebrow label at the top of the slide
+  foot: z.string().optional(), // small italic source/footnote at the bottom
+  highlight: z.string().optional(), // chronology: which era to emphasise (dadan|lihyan|nabataean)
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),
