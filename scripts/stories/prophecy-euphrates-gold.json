@@ -1,0 +1,53 @@
+{
+  "id": "prophecy-euphrates-gold",
+  "title": "The River, the Gold, and a 1400-Year-Old Warning",
+  "reciter": 3,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "cinematic-dark",
+  "_note": "TTS pronunciation: Euphrates = 'You-FRAY-teez'. On-screen captions use proper spelling. AUDIO/COPYRIGHT: the ayah clip (47:18) currently pulls Sudais via the Quran.com API; per the content strategy this must be swapped to a VERIFIED free-license (CC0/Public Domain) recording before commercial publishing, or recited in-house. Verify name pronunciations with a short test render to keep ElevenLabs usage low.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Fourteen hundred years ago, a man who could not read or write described something we are watching happen right now.",
+      "caption": "There is a wall... no. There is a river."
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, said: the Hour will not come until the Euphrates uncovers a mountain of gold.",
+      "caption": "Sahih al-Bukhari 7119"
+    },
+    {
+      "type": "narration",
+      "text": "And he warned: when that day comes, people will fight over it, and ninety-nine out of every hundred will die. Each one hoping that he is the one who survives.",
+      "caption": "Sahih Muslim 2894"
+    },
+    {
+      "type": "narration",
+      "text": "Then he gave a command across the centuries: whoever is there, let him not take a single thing from it.",
+      "caption": "Sahih al-Bukhari 7119"
+    },
+    {
+      "type": "narration",
+      "text": "Here is what is true today. The Euphrates, a river that has flowed through all of human history, is shrinking. Scientists who study it warn it could one day run dry.",
+      "caption": "Present-day context — not a religious source"
+    },
+    {
+      "type": "narration",
+      "text": "The gold has not been uncovered. The prophecy is about the day the river finally gives out. And the signs, the Quran says, have already begun to come.",
+      "caption": "Surah Muhammad 47:18"
+    },
+    { "type": "ayah", "surah": 47, "ayah": 18, "source": "Surah Muhammad 47:18" },
+    {
+      "type": "narration",
+      "text": "A man in the desert, who never held a book, told us where to look. And we are still watching the water fall.",
+      "caption": "Ketabi Studio — sourced Islamic stories"
+    }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 7119 — the Euphrates will uncover a mountain/treasure of gold",
+    "Sahih Muslim 2894 — same prophecy; people will fight, do not take from it",
+    "Surah Muhammad 47:18 — 'for its signs have already come'",
+    "Present-day context: the documented long-term decline of the Tigris-Euphrates basin (e.g., NASA GRACE satellite water-storage studies). This is modern background ONLY and is clearly separated from the religious sources. The script does NOT claim the prophecy is fulfilled — the gold has not been uncovered."
+  ]
+}
