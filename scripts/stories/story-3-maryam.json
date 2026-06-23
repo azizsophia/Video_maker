@@ -16,7 +16,7 @@
       "type": "narration",
       "hook": true,
       "scene": "desert-night",
-      "stock": "sunlight rays through ancient stone arches",
+      "stock": "golden light rays particles dark background",
       "title": "Only One Woman\nIs Named in the Quran",
       "text": "Only one woman is named in the entire Quran, more times than in the whole Christian Bible. And she was chosen through a miracle the world refused to believe.",
       "caption": "The only woman named in the Quran"
@@ -47,7 +47,7 @@
     {
       "type": "narration",
       "scene": "scorched-sun",
-      "stock": "date palm tree against the sky in wind",
+      "stock": "palm leaves against blue sky in wind",
       "verseRef": "19:25",
       "source": "Surah Maryam · 19:25",
       "text": "Then an angel told her she would bear a son, though no man had ever touched her. Alone and in labor, she clung to a withered palm tree, and it rained fresh dates into her hands.",

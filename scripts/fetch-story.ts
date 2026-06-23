@@ -282,53 +282,105 @@ async function fetchVerseAudio(
 }
 
 // Real cinematic stock footage from Pexels (free). ANICONIC ONLY — query for
-// nature/skies/water/architecture/light, never people.
+// abstract textures / skies / light / cosmos, never people or animals.
 const PEXELS = "https://api.pexels.com/videos";
-async function fetchStock(query: string): Promise<string | undefined> {
+
+// Hard safety net: Pexels names every clip descriptively in its URL slug
+// (e.g. .../video/woman-walking-through-a-hallway-12345/). We reject ANY clip
+// whose slug contains a person- or animal-word, token-matched so "human" can't
+// sneak through and "command"/"romania" can't false-trigger. If a query yields
+// only rejected clips, we return undefined and the beat falls back to a safe
+// code scene — we NEVER show a person/animal in Qur'an content.
+const STOCK_BANNED = new Set<string>([
+  // people
+  "man","men","woman","women","girl","girls","boy","boys","people","person","persons",
+  "human","humans","lady","ladies","guy","guys","male","males","female","females","gentleman",
+  "model","models","fashion","dancer","dancers","dancing","dance","walk","walking","runner",
+  "running","jogging","crowd","crowds","child","children","kid","kids","baby","babies","toddler",
+  "couple","couples","family","families","portrait","selfie","yoga","worker","workers","worship",
+  "worshipper","worshippers","praying","prayer","pray","pilgrim","pilgrims","tourist","tourists",
+  "soldier","soldiers","hand","hands","finger","fingers","arm","arms","face","faces","feet","foot",
+  "legs","leg","skirt","dress","hijab","muslim","athlete","player","players","team","friends",
+  "group","businessman","businesswoman","chef","doctor","nurse","teacher","student","students",
+  "girlfriend","boyfriend","wife","husband","mother","father","mom","dad","son","daughter","skin","body",
+  // animals
+  "dog","dogs","cat","cats","bird","birds","horse","horses","camel","camels","animal","animals",
+  "cow","cows","sheep","goat","goats","fish","pet","pets","monkey","elephant","lion","tiger",
+  "insect","insects","bee","bees","butterfly","butterflies","duck","ducks","chicken","deer",
+  "wolf","bear","snake","spider","ant","ants","fox","rabbit","seagull","pigeon","owl",
+]);
+function slugIsSafe(url: string): boolean {
+  const tokens = (url || "").toLowerCase().split(/[^a-z]+/).filter(Boolean);
+  return !tokens.some((t) => STOCK_BANNED.has(t) || (t.endsWith("s") && STOCK_BANNED.has(t.slice(0, -1))));
+}
+// Pick the sharpest portrait mp4 from a clip (prefer the HIGHEST resolution and
+// downscale to 1080x1920 — downscaling stays crisp, upscaling is the soft look).
+function bestPortraitFile(v: any): any | undefined {
+  const files = (v.video_files ?? []).filter((ff: any) => ff.file_type === "video/mp4" && ff.link);
+  if (!files.length) return undefined;
+  files.sort((a: any, b: any) => {
+    const ap = (a.height || 0) >= (a.width || 0) ? 0 : 1;
+    const bp = (b.height || 0) >= (b.width || 0) ? 0 : 1;
+    if (ap !== bp) return ap - bp; // portrait first
+    return (b.width || 0) * (b.height || 0) - (a.width || 0) * (a.height || 0); // then highest res
+  });
+  const portrait = files.find((f: any) => (f.height || 0) >= (f.width || 0) && (f.width || 0) >= 1080);
+  return portrait || files[0];
+}
+
+async function fetchStock(query: string, stockId?: number): Promise<string | undefined> {
   const key = (process.env.PEXELS_API_KEY || "").trim();
   if (!key) {
     console.log(`  stock: PEXELS_API_KEY not set — skipping "${query}" (using code scene)`);
     return undefined;
   }
-  // "v3" = portrait-sourced. Requesting portrait clips avoids upscaling a
-  // landscape clip ~1.8x to fill 1080x1920 (the main softness culprit).
-  const hash = sha(`stock|v3portrait|${query}`);
+  // "v4safe" = portrait + people/animal denylist + highest-res file. Bumping the
+  // cache version forces a re-pull so any previously cached unsafe clip is dropped.
+  const hash = sha(`stock|v4safe|${stockId ?? query}`);
   const dest = join(CACHE_DIR, `v-${hash}.mp4`);
   const rel = `story-cache/v-${hash}.mp4`;
   if (existsSync(dest)) {
-    console.log(`  stock: cached (${query})`);
+    console.log(`  stock: cached (${stockId ? `#${stockId}` : query})`);
     return rel;
   }
   try {
-    // orientation=portrait + a tall min size so clips fill the 9:16 frame natively.
-    const res = await fetch(
-      `${PEXELS}/search?query=${encodeURIComponent(query)}&orientation=portrait&size=medium&per_page=40`,
-      { headers: { Authorization: key } }
-    );
-    if (!res.ok) throw new Error(`Pexels ${res.status} (${(await res.text()).slice(0, 80)})`);
-    const data: any = await res.json();
-    const videos: any[] = data.videos ?? [];
     let best: any;
-    for (const v of videos) {
-      const files = (v.video_files ?? []).filter((ff: any) => ff.file_type === "video/mp4" && ff.link);
-      if (!files.length) continue;
-      // Prefer PORTRAIT files at >=1080 wide so there's no upscaling.
-      files.sort((a: any, b: any) => {
-        const ap = (a.height || 0) > (a.width || 0) ? 0 : 1;
-        const bp = (b.height || 0) > (b.width || 0) ? 0 : 1;
-        if (ap !== bp) return ap - bp;
-        // then the one whose width is closest to (and ideally >=) 1080
-        const aw = a.width || 0, bw = b.width || 0;
-        const ascore = aw >= 1080 ? aw - 1080 : (1080 - aw) * 3;
-        const bscore = bw >= 1080 ? bw - 1080 : (1080 - bw) * 3;
-        return ascore - bscore;
-      });
-      best = files[0];
-      break;
-    }
-    if (!best) {
-      console.log(`  stock: 0 results for "${query}" (${videos.length} videos) — using code scene`);
-      return undefined;
+    if (stockId) {
+      // Hand-pinned, pre-verified clip — fetch it directly, no search roulette.
+      const res = await fetch(`${PEXELS}/videos/${stockId}`, { headers: { Authorization: key } });
+      if (!res.ok) throw new Error(`Pexels id ${stockId} ${res.status}`);
+      best = bestPortraitFile(await res.json());
+      if (!best) { console.log(`  stock: pinned #${stockId} had no mp4 — using code scene`); return undefined; }
+      console.log(`  stock: pinned clip #${stockId}`);
+    } else {
+      // orientation=portrait so clips fill 9:16 natively; size=medium = FHD+ floor.
+      const res = await fetch(
+        `${PEXELS}/search?query=${encodeURIComponent(query)}&orientation=portrait&size=medium&per_page=80`,
+        { headers: { Authorization: key } }
+      );
+      if (!res.ok) throw new Error(`Pexels ${res.status} (${(await res.text()).slice(0, 80)})`);
+      const data: any = await res.json();
+      const videos: any[] = data.videos ?? [];
+      let skipped = 0;
+      // First pass: a SAFE clip that also has a sharp (>=1080w) portrait file.
+      for (const v of videos) {
+        if (!slugIsSafe(v.url || "")) { skipped++; continue; }
+        const f = bestPortraitFile(v);
+        if (f && (f.width || 0) >= 1080 && (f.height || 0) >= (f.width || 0)) { best = f; break; }
+      }
+      // Second pass: any SAFE clip with any mp4 (still no people/animals).
+      if (!best) {
+        for (const v of videos) {
+          if (!slugIsSafe(v.url || "")) continue;
+          const f = bestPortraitFile(v);
+          if (f) { best = f; break; }
+        }
+      }
+      if (!best) {
+        console.log(`  stock: no SAFE clip for "${query}" (${videos.length} found, ${skipped} rejected for people/animals) — using code scene`);
+        return undefined;
+      }
+      console.log(`  stock: picked safe ${best.width}x${best.height} for "${query}" (${skipped} unsafe clips skipped)`);
     }
     const raw = dest.replace(/\.mp4$/, ".raw.mp4");
     await download(best.link, raw);
@@ -406,7 +458,7 @@ async function main() {
       cursor += p;
     }
     const sfxSrc = seg.sfx ? await cachedSfx(seg.sfx, 3) : undefined;
-    const stockSrc = seg.stock ? await fetchStock(String(seg.stock)) : undefined;
+    const stockSrc = seg.stock ? await fetchStock(String(seg.stock), seg.stockId ? Number(seg.stockId) : undefined) : undefined;
     if (seg.stock) stockLog.push({ query: String(seg.stock), ok: !!stockSrc });
     if (seg.type === "narration") {
       const text: string = seg.say ?? seg.text;
