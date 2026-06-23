@@ -1,0 +1,35 @@
+{
+  "id": "alula-prophet-warning",
+  "title": "The Place the Prophet ﷺ Told Us Not to Enter",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "_note": "CINEMATIC style: full-bleed Pexels footage (NO humans/faces/bodies — every clip verified by thumbnail), brand ivory/green/gold grade, calm captions, NO recital (Qur'an shown as Arabic+English, voice speaks English only). Simple English for non-native viewers. Sources verified: Sahih al-Bukhari 4702 & 3379-3381 (the 'enter only weeping' warning at al-Hijr on the way to Tabuk); Qur'an 7:73-79 & 15:80-84 (Thamud, Salih, the blast); modern luxury tourism — Royal Commission for AlUla, Banyan Tree AlUla, Maraya. TTS: al-Hijr='al-HIJR', Hegra='HEG-ra', Thamud='tha-MOOD', Salih='SAW-lih', Tabuk='ta-BOOK'. Pexels clips streamed at render (API key never committed). For #HistoryTikTokContest (1min+).",
+  "segments": [
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/36259626/15376417_1080_1920_30fps.mp4", "text": "In the deserts of Saudi Arabia, there is a place the Prophet Muhammad, peace be upon him, told us never to enter." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/17926237/17926237-hd_1080_1920_30fps.mp4", "text": "It is called al-Hijr. Today, tourists call it Hegra." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/7624035/7624035-hd_1080_1920_30fps.mp4", "foot": "Qur'an · Surah Al-Hijr 15:82", "text": "Long ago, a proud and powerful people called Thamud carved their homes straight into these mountains." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/11565218/11565218-hd_1080_1920_60fps.mp4", "foot": "Qur'an · Surah Al-A'raf 7:73-79", "text": "Allah sent them a prophet named Salih, to call them back to the truth. But they refused." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/6175187/6175187-hd_1080_1920_24fps.mp4", "foot": "Qur'an · Surah Al-Hijr 15:83", "text": "So the punishment came. One mighty blast, and by morning, the whole nation was gone." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/30547199/13084495_1080_1920_30fps.mp4", "text": "Their empty homes still stand in the sand, silent for thousands of years." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/18897114/18897114-hd_1080_1920_30fps.mp4", "foot": "Sahih al-Bukhari 4702", "text": "Long after, the Prophet, peace be upon him, passed this place with his army, on the way to Tabuk." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/11565218/11565218-hd_1080_1920_60fps.mp4", "foot": "Sahih al-Bukhari 3380", "text": "He covered his face. He told his men to hurry, and not to rest here." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/7624035/7624035-hd_1080_1920_30fps.mp4", "foot": "Sahih al-Bukhari 4702", "text": "Then he gave a warning. Do not enter the homes of these people, he said, unless you are weeping." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/6175187/6175187-hd_1080_1920_24fps.mp4", "foot": "Sahih al-Bukhari 4702", "text": "If you cannot weep, do not enter at all. So that what struck them does not strike you." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/11983958/11983958-hd_1080_1920_60fps.mp4", "text": "But look at the very same place today. It has become a luxury holiday resort." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/11983958/11983958-hd_1080_1920_60fps.mp4", "foot": "Banyan Tree AlUla · Maraya, Royal Commission for AlUla", "text": "Five-star hotels. Concerts by famous singers. Influencers posing for photos." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/32349013/13800911_1080_1920_30fps.mp4", "text": "But for a believer, this is not a place to relax. It is a sign. A warning from the past." },
+    { "type": "narration", "quote": "30:42", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "text": "Travel through the land, and see how the people before you ended." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "text": "Some places are not made for holidays. They are made for lessons. May Allah guide us all." }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 4702 (also 3379-3381; Sahih Muslim 2980) — at al-Hijr, on the way to Tabuk, the Prophet ﷺ said: 'Do not enter upon these people who were punished unless you are weeping; if you do not weep, do not enter, lest what struck them strike you.' He covered his head and hastened through the valley.",
+    "Sahih al-Bukhari 3380 — he urged his mount on and hurried past the dwellings of Thamud.",
+    "Qur'an, Surah Al-A'raf 7:73-79 — Thamud, the prophet Salih, and their destruction.",
+    "Qur'an, Surah Al-Hijr 15:80-84 — the people of al-Hijr; 15:82 'they carved homes from the mountains'; 15:83 'the shriek (blast) seized them at morning'.",
+    "Qur'an, Surah Ar-Rum 30:42 — 'Travel through the land and observe how was the end of those before' (shown as Arabic + English; NOT recited).",
+    "Modern luxury tourism: Royal Commission for AlUla; Banyan Tree AlUla (Ashar Valley); Maraya (world's largest mirrored building); celebrity concerts — verified via RCU/Accor and press, June 2026.",
+    "VISUALS: all Pexels clips were checked by thumbnail to contain NO human faces or bodies; the false 'ozone hole over AlUla' claim is excluded."
+  ]
+}
