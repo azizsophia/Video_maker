@@ -1,0 +1,69 @@
+{
+  "id": "alula-part2-tabuk",
+  "title": "AlUla Part 2: The City the Prophet ﷺ Rushed Through",
+  "reciter": 3,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "cinematic-dark",
+  "_note": "PART 2 to the popular AlUla video; for #HistoryTikTokContest (1min+). TTS pronunciation: Thamud='tha-MOOD', Salih='SAW-lih', al-Hijr='al-HIJR', Hegra='HEG-ra', Tabuk='ta-BOOK', Nabataeans='nab-a-TEE-ans', Hijra='HIJ-ra'. ACCURACY: (1) the false 'ozone hole over AlUla' claim from Part 1 is deliberately EXCLUDED — there is no ozone hole there; ozone holes are over Antarctica/Arctic. (2) The monumental tombs at Hegra are archaeologically NABATAEAN; the Qur'an names the region (al-Hijr) as Thamud's land — the script keeps that distinction. AUDIO/COPYRIGHT: this is a monetized contest entry, so the ayah (7:78) audio MUST be swapped to a verified free-license/own recording per docs/RECITERS.md before posting (set audioUrl+seconds on the ayah segment).",
+  "segments": [
+    {
+      "type": "narration",
+      "map": "hijaz",
+      "text": "In part one, you met the people of Thamud and the ruins they left in north-west Saudi Arabia. But the most chilling part of this place isn't who built it. It's what the Prophet, peace be upon him, did when he had to pass straight through it.",
+      "caption": "AlUla & Al-Hijr · the Hijaz"
+    },
+    {
+      "type": "narration",
+      "map": "tabuk-route",
+      "text": "Nine years after the migration to Madinah, his army marched north toward Tabuk. And the road ran directly through al-Hijr, the dead cities of Thamud.",
+      "caption": "The march to Tabuk · 9 AH (630 CE)"
+    },
+    {
+      "type": "narration",
+      "text": "When he saw his companions drawing water from the wells of Thamud and kneading their dough with it, he ordered them to pour the water away and throw the dough to the camels, and to use only the well that the she-camel of Salih had once drunk from.",
+      "caption": "Sahih al-Bukhari 3378-3379"
+    },
+    {
+      "type": "narration",
+      "text": "Then he covered his face, urged his camel to move faster, and warned them: do not enter upon these people who were punished, unless you are weeping. For if you do not weep, what struck them may strike you.",
+      "caption": "Sahih al-Bukhari 4702"
+    },
+    {
+      "type": "narration",
+      "text": "Why such fear of a field of ruins? Because the Quran had already told their story. Allah sent them the prophet Salih, and a single she-camel as a clear sign, with one simple rule: she drinks one day, and you drink the next.",
+      "caption": "Surah Ash-Shu'ara 26:155"
+    },
+    {
+      "type": "narration",
+      "text": "They hamstrung her and killed her anyway. So Allah gave them just three more days in their homes, a promise, He said, that would not be broken.",
+      "caption": "Surah Hud 11:65"
+    },
+    {
+      "type": "narration",
+      "text": "Then the end came. And notice how precisely the Quran describes it across different chapters: a violent earthquake, a single deafening blast, an overwhelming cry.",
+      "caption": "Quran 7:78 · 54:31 · 69:5"
+    },
+    { "type": "ayah", "surah": 7, "ayah": 78, "source": "Surah Al-A'raf 7:78" },
+    {
+      "type": "narration",
+      "text": "Today those carved tombs are a UNESCO World Heritage site, and AlUla is sold as a luxury escape. Most of those famous facades were actually cut later by the Nabataeans, but the land itself is the al-Hijr the Quran names.",
+      "caption": "Hegra · Saudi Arabia's first UNESCO site"
+    },
+    {
+      "type": "narration",
+      "text": "And that is the lesson the Prophet left us. To a believer, a place like this was never a backdrop for photos. It is a sign of Allah's power. You pass it, he showed us, with a lowered gaze and a softened heart.",
+      "caption": "Some places are signs, not sights."
+    }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 4702 — passing al-Hijr on the way to Tabuk: 'Do not enter upon these people who were punished unless you are weeping...'; the Prophet ﷺ covered his head and hastened through the valley (also Bukhari 3378-3381; Sahih Muslim 2980).",
+    "Sahih al-Bukhari 3378-3379 — at al-Hijr he ordered the water drawn from Thamud's wells poured out and the kneaded dough fed to the camels, using only the well the she-camel had drunk from.",
+    "Surah Al-A'raf 7:73-79 — Salih, the she-camel as a clear sign, the hamstringing, and 7:78 'So the earthquake (rajfah) seized them, and they lay lifeless in their homes.'",
+    "Surah Ash-Shu'ara 26:155 (and Surah Al-Qamar 54:28) — the shared water turn: 'a [day of] drink for her and a [day of] drink for you.'",
+    "Surah Hud 11:65 — the three-day respite. Multiple descriptors of the punishment: rajfah/earthquake (7:78), sayhah/the single blast (11:67; 54:31), at-taghiyah/the overwhelming [cry] (69:5).",
+    "Thamud carving homes in the mountains: Quran 7:74; 15:82; 26:149.",
+    "Hegra (Mada'in Salih) inscribed as Saudi Arabia's first UNESCO World Heritage Site (2008). ACCURACY NOTE: the monumental rock-cut tombs at Hegra are dated by archaeologists to the NABATAEANS (1st c. BCE - 1st c. CE); the Qur'an associates the region (al-Hijr) with Thamud. The script keeps that distinction and does not claim the visible tombs were carved by Thamud.",
+    "DELIBERATELY EXCLUDED as false: the claim of an 'ozone hole over AlUla causing earthquakes/UV/skin disease.' There is no ozone hole over Arabia; ozone depletion is over Antarctica (and a smaller Arctic region) and is unrelated to earthquakes."
+  ]
+}

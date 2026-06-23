@@ -13,6 +13,7 @@ import {
 import { StoryProps, StorySegment, StoryWord } from "./storySchema";
 import { themes, ThemePalette } from "./themes";
 import { Background } from "./Background";
+import { StoryMap } from "./StoryMap";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -40,11 +41,12 @@ const toLines = (words: StoryWord[], perLine = 5) => {
   return lines;
 };
 
-const Narration: React.FC<{ words?: StoryWord[]; source?: string; theme: ThemePalette }> = ({
-  words = [],
-  source,
-  theme,
-}) => {
+const Narration: React.FC<{
+  words?: StoryWord[];
+  source?: string;
+  theme: ThemePalette;
+  align?: "center" | "bottom";
+}> = ({ words = [], source, theme, align = "center" }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -56,7 +58,14 @@ const Narration: React.FC<{ words?: StoryWord[]; source?: string; theme: ThemePa
   const appear = spring({ frame: frame - Math.round((line?.start ?? 0) * fps), fps, config: { damping: 200 } });
 
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 90px" }}>
+    <AbsoluteFill
+      style={{
+        justifyContent: align === "bottom" ? "flex-end" : "center",
+        alignItems: "center",
+        padding: "0 90px",
+        paddingBottom: align === "bottom" ? 360 : 0,
+      }}
+    >
       <div
         style={{
           fontFamily: TRANSLATION_FONT,
@@ -259,7 +268,15 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <Sequence key={i} from={from} durationInFrames={dur}>
             <Audio src={resolveAudio(seg.audioSrc)} />
             {seg.kind === "narration" ? (
-              <Narration words={seg.words} source={seg.source} theme={theme} />
+              <>
+                {seg.map ? <StoryMap view={seg.map} theme={theme} /> : null}
+                <Narration
+                  words={seg.words}
+                  source={seg.source}
+                  theme={theme}
+                  align={seg.map ? "bottom" : "center"}
+                />
+              </>
             ) : (
               <AyahCard
                 arabic={seg.arabic}

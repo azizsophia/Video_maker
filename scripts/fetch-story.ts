@@ -123,6 +123,7 @@ async function main() {
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         words,
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
+        map: seg.map,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
