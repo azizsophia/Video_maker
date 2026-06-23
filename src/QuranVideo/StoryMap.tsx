@@ -14,8 +14,10 @@ type Place = { label: string; lat: number; lon: number };
 const PLACES: Record<string, Place> = {
   makkah: { label: "Makkah", lat: 21.42, lon: 39.83 },
   medina: { label: "Madinah", lat: 24.47, lon: 39.61 },
+  alula: { label: "AlUla (Dadan · Hegra)", lat: 26.62, lon: 37.92 },
   hegra: { label: "Al-Hijr · Hegra", lat: 26.79, lon: 37.95 },
   tabuk: { label: "Tabuk", lat: 28.38, lon: 36.57 },
+  petra: { label: "Petra", lat: 30.33, lon: 35.44 },
 };
 
 type MapView = { title: string; pins: string[]; route?: string[] };
@@ -28,6 +30,11 @@ const VIEWS: Record<string, MapView> = {
     title: "The road to Tabuk · 9 AH (630 CE)",
     pins: ["medina", "hegra", "tabuk"],
     route: ["medina", "hegra", "tabuk"],
+  },
+  "incense-road": {
+    title: "The incense road · AlUla, the crossroads",
+    pins: ["makkah", "medina", "alula", "petra"],
+    route: ["makkah", "medina", "alula", "petra"],
   },
 };
 
