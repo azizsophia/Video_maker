@@ -460,7 +460,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         );
       })}
       {/* Subtle persistent brand chip — only during the content (dark themes only). */}
-      {!institutional ? (
+      {!institutional && !cinematic ? (
         <Sequence durationInFrames={Math.max(1, contentEndFrames)}>
           <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 70 }}>
             <div

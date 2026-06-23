@@ -103,12 +103,12 @@ export const Slide: React.FC<{
         <div
           style={{
             position: "absolute",
-            bottom: 96,
+            top: kicker ? 224 : 158,
             width: "100%",
             textAlign: "center",
             fontFamily: CORMORANT,
             fontStyle: "italic",
-            fontSize: 34,
+            fontSize: 32,
             color: INK2,
             opacity: fade * 0.9,
           }}
@@ -146,8 +146,7 @@ export const InkCaption: React.FC<{ words?: StoryWord[]; align?: "center" | "bot
       style={{
         justifyContent: align === "center" ? "center" : "flex-end",
         alignItems: "center",
-        paddingBottom: align === "center" ? 0 : 300,
-        padding: align === "center" ? "0 120px" : "0 120px 300px",
+        padding: align === "center" ? "0 120px" : "0 120px 480px",
       }}
     >
       <div

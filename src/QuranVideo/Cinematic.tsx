@@ -57,7 +57,7 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
   const line = lines[idx];
   const lineFade = interpolate(t, [line?.start ?? 0, (line?.start ?? 0) + 0.35], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 360, padding: "0 90px 360px" }}>
+    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", padding: "0 90px 600px" }}>
       <div
         style={{
           fontFamily: PLAYFAIR,
@@ -99,7 +99,7 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
         </div>
       ) : null}
       {foot ? (
-        <div style={{ position: "absolute", bottom: 150, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.82)", opacity: fade * 0.95, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
+        <div style={{ position: "absolute", top: kicker ? 224 : 158, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.85)", opacity: fade * 0.95, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
           {foot}
         </div>
       ) : null}
