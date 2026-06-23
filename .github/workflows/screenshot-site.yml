@@ -2,6 +2,9 @@ name: Capture Site Screenshots
 
 # Snaps clean retina screenshots of the website and commits them to public/promo/
 # so video outros can show the real site/books (no phone status bars).
+# workflow_dispatch only works from the default branch, so we also run on push
+# to this feature branch when the screenshot script/workflow changes. The paths
+# filter excludes the captured PNGs, so the auto-commit can't retrigger a loop.
 on:
   workflow_dispatch:
     inputs:
@@ -9,6 +12,11 @@ on:
         description: "Site URL"
         required: true
         default: "https://ketabistudio.com"
+  push:
+    branches: ["claude/video-performance-analysis-3bjmgv"]
+    paths:
+      - "scripts/screenshot-site.mjs"
+      - ".github/workflows/screenshot-site.yml"
 
 permissions:
   contents: write
