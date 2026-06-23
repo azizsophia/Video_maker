@@ -340,20 +340,20 @@ const OutroCard: React.FC<{
         </div>
       </div>
 
-      {/* the real product page, in a floating rounded device card */}
+      {/* the real website (founding list + book covers), in a floating device card */}
       <div
         style={{
-          width: 560,
-          height: 940,
-          borderRadius: 44,
+          width: 540,
+          height: 960,
+          borderRadius: 46,
           overflow: "hidden",
-          boxShadow: "0 40px 110px rgba(0,0,0,0.5)",
-          border: "6px solid rgba(255,255,255,0.9)",
+          boxShadow: "0 40px 110px rgba(0,0,0,0.55)",
+          border: "7px solid rgba(255,255,255,0.95)",
           transform: `translateY(${float}px) scale(${0.94 + 0.06 * appear})`,
         }}
       >
         <Img
-          src={staticFile("promo/founding-list.png")}
+          src={staticFile("promo/site-home.png")}
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
         />
       </div>
