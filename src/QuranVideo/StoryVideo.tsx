@@ -16,6 +16,7 @@ import { Background } from "./Background";
 import { StoryMap } from "./StoryMap";
 import { Scene } from "./Scenes";
 import { Slide, InstitutionalScene, InkCaption } from "./Slides";
+import { CinematicBeat } from "./Cinematic";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT, CAPTION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -397,9 +398,10 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   const contentEndFrames = Math.round(contentEndSeconds(props) * STORY_FPS);
   const outroFrames = Math.round((props.ctaSeconds ?? 4.5) * STORY_FPS);
   const institutional = props.theme === "atlas";
+  const cinematic = props.cinematic === true;
   return (
-    <AbsoluteFill style={{ background: institutional ? "#efe4cd" : undefined }}>
-      {!institutional ? (
+    <AbsoluteFill style={{ background: cinematic ? "#0b1410" : institutional ? "#efe4cd" : undefined }}>
+      {!institutional && !cinematic ? (
         <>
           <Background theme={theme} />
           {/* Extra darken for cinematic mood. */}
@@ -412,7 +414,9 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
             {seg.audioSrc ? <Audio src={resolveAudio(seg.audioSrc)} /> : null}
-            {institutional ? (
+            {cinematic ? (
+              <CinematicBeat seg={seg} />
+            ) : institutional ? (
               <>
                 <Slide kicker={seg.kicker} foot={seg.foot}>
                   <InstitutionalScene seg={seg} theme={theme} />

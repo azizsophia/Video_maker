@@ -41,6 +41,10 @@ jobs:
             npx remotion still StoryVideo "public/preview/inst-$F.png" \
               --props=src/data/institutional-sample.json --frame=$F
           done
+          for F in 75 225 380; do
+            npx remotion still StoryVideo "public/preview/cine-$F.png" \
+              --props=src/data/cinematic-sample.json --frame=$F
+          done
       - name: Commit stills
         run: |
           git config user.name "github-actions[bot]"

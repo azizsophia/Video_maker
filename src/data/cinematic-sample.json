@@ -1,0 +1,15 @@
+{
+  "title": "Cinematic Preview",
+  "theme": "ketabi",
+  "cinematic": true,
+  "reciterName": "—",
+  "voiceName": "Daniel",
+  "websiteUrl": "ketabistudio.com",
+  "showOutro": false,
+  "ctaSeconds": 4.5,
+  "segments": [
+    { "kind": "narration", "videoSrc": "https://videos.pexels.com/video-files/36259626/15376417_1080_1920_30fps.mp4", "foot": "Sahih al-Bukhari 4702", "audioSrc": "", "fromSeconds": 0, "durationInSeconds": 5, "words": [{"text":"There","start":0.2,"end":0.6},{"text":"is","start":0.6,"end":0.8},{"text":"a","start":0.8,"end":0.95},{"text":"place","start":0.95,"end":1.4},{"text":"the","start":1.5,"end":1.7},{"text":"Prophet","start":1.7,"end":2.2},{"text":"told","start":2.3,"end":2.7},{"text":"us","start":2.7,"end":2.95},{"text":"not","start":2.95,"end":3.3},{"text":"to","start":3.3,"end":3.5},{"text":"enter.","start":3.5,"end":4.1}] },
+    { "kind": "narration", "videoSrc": "https://videos.pexels.com/video-files/7624035/7624035-hd_1080_1920_30fps.mp4", "foot": "Qur'an · Surah Al-Hijr 15:82", "audioSrc": "", "fromSeconds": 5, "durationInSeconds": 5, "words": [{"text":"Thamud","start":0.2,"end":0.8},{"text":"carved","start":0.8,"end":1.3},{"text":"their","start":1.3,"end":1.6},{"text":"homes","start":1.6,"end":2.1},{"text":"into","start":2.2,"end":2.5},{"text":"the","start":2.5,"end":2.7},{"text":"mountains.","start":2.7,"end":3.4}] },
+    { "kind": "narration", "videoSrc": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "kicker": "AS THE QUR'AN SAYS", "arabic": "قُلْ سِيرُوا فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلَّذِينَ مِن قَبْلُ", "audioSrc": "", "fromSeconds": 10, "durationInSeconds": 6, "words": [{"text":"Travel","start":0.4,"end":0.9},{"text":"through","start":0.9,"end":1.2},{"text":"the","start":1.2,"end":1.4},{"text":"land,","start":1.4,"end":1.9},{"text":"and","start":2.0,"end":2.2},{"text":"see","start":2.2,"end":2.5},{"text":"how","start":2.5,"end":2.8},{"text":"they","start":2.8,"end":3.1},{"text":"ended.","start":3.1,"end":3.7}] }
+  ]
+}

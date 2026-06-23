@@ -22,6 +22,7 @@ export const storySegmentSchema = z.object({
   kicker: z.string().optional(), // small gold eyebrow label at the top of the slide
   foot: z.string().optional(), // small italic source/footnote at the bottom
   highlight: z.string().optional(), // chronology: which era to emphasise (dadan|lihyan|nabataean)
+  videoSrc: z.string().optional(), // cinematic: background clip (remote Pexels URL or /public path)
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),
@@ -38,6 +39,8 @@ export const storyPropsSchema = z.object({
   showOutro: z.boolean().default(true),
   ctaHeadline: z.string().default("Join the founding list"),
   ctaSeconds: z.number().default(4.5),
+  // Cinematic mode: full-bleed stock footage backgrounds + calm captions.
+  cinematic: z.boolean().default(false),
   segments: z.array(storySegmentSchema),
 });
 

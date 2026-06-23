@@ -138,6 +138,7 @@ async function main() {
         kicker: seg.kicker,
         foot: seg.foot,
         highlight: seg.highlight,
+        videoSrc: seg.video, // remote Pexels URL — streamed at render (no download)
         arabic: arabicQuote,
       });
       cursor += duration + GAP;
@@ -191,7 +192,8 @@ async function main() {
     // (e.g. the standalone brand ad, which is itself the CTA).
     showOutro: story.showOutro ?? true,
     ctaHeadline: story.ctaHeadline ?? "Join the founding list",
-    ctaSeconds: story.ctaSeconds ?? 3.5,
+    ctaSeconds: story.ctaSeconds ?? 4.5,
+    cinematic: story.cinematic ?? false,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";
