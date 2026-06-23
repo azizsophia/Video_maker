@@ -121,6 +121,34 @@ const Narration: React.FC<{
   );
 };
 
+// Arabic verse shown on screen (NOT recited) above a narration beat — the voice
+// only speaks the English. Arabic comes from the validated Quran source.
+const ArabicQuote: React.FC<{ arabic: string; theme: ThemePalette }> = ({ arabic, theme }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const appear = spring({ frame, fps, config: { damping: 200 } });
+  return (
+    <AbsoluteFill style={{ justifyContent: "flex-start", alignItems: "center", paddingTop: 380, opacity: appear }}>
+      <div
+        dir="rtl"
+        style={{
+          fontFamily: ARABIC_DISPLAY_FONT,
+          fontWeight: 700,
+          fontSize: 84,
+          lineHeight: 1.7,
+          textAlign: "center",
+          color: theme.arabicActive,
+          textShadow: `0 0 40px ${theme.arabicGlow}`,
+          padding: "0 80px",
+          transform: `translateY(${(1 - appear) * 16}px)`,
+        }}
+      >
+        {arabic}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const AyahCard: React.FC<{
   arabic?: string;
   translation?: string;
@@ -270,11 +298,12 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
             {seg.kind === "narration" ? (
               <>
                 {seg.map ? <StoryMap view={seg.map} theme={theme} /> : null}
+                {seg.arabic ? <ArabicQuote arabic={seg.arabic} theme={theme} /> : null}
                 <Narration
                   words={seg.words}
                   source={seg.source}
                   theme={theme}
-                  align={seg.map ? "bottom" : "center"}
+                  align={seg.map || seg.arabic ? "bottom" : "center"}
                 />
               </>
             ) : (

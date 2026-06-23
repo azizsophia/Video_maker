@@ -116,6 +116,16 @@ async function main() {
       const dest = join("public", "story", `n${i}.mp3`);
       const { words, duration } = await tts(text, voice, model, dest);
       console.log(`  narration ${i}: ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
+      // Optional on-screen Arabic verse (shown, never recited). Pulled from the
+      // validated Quran.com source so Arabic is never hand-typed.
+      let arabicQuote: string | undefined;
+      if (seg.quote) {
+        const qv = await getJson<any>(
+          `${API}/verses/by_key/${String(seg.quote)}?language=en&fields=text_uthmani`
+        );
+        arabicQuote = qv.verse?.text_uthmani as string | undefined;
+        if (arabicQuote) console.log(`  quote ${seg.quote}: Arabic shown (not recited)`);
+      }
       segments.push({
         kind: "narration",
         audioSrc: `story/n${i}.mp3`,
@@ -124,6 +134,7 @@ async function main() {
         words,
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
         map: seg.map,
+        arabic: arabicQuote,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
