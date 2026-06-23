@@ -345,13 +345,16 @@ async function fetchStock(query: string, stockId?: number): Promise<string | und
   }
   try {
     let best: any;
+    let pageUrl = "";
     if (stockId) {
       // Hand-pinned, pre-verified clip — fetch it directly, no search roulette.
       const res = await fetch(`${PEXELS}/videos/${stockId}`, { headers: { Authorization: key } });
       if (!res.ok) throw new Error(`Pexels id ${stockId} ${res.status}`);
-      best = bestPortraitFile(await res.json());
+      const vid: any = await res.json();
+      pageUrl = vid.url || "";
+      best = bestPortraitFile(vid);
       if (!best) { console.log(`  stock: pinned #${stockId} had no mp4 — using code scene`); return undefined; }
-      console.log(`  stock: pinned clip #${stockId}`);
+      console.log(`  stock: pinned clip #${stockId}  ${pageUrl}`);
     } else {
       // orientation=portrait so clips fill 9:16 natively; size=medium = FHD+ floor.
       const res = await fetch(
@@ -366,21 +369,21 @@ async function fetchStock(query: string, stockId?: number): Promise<string | und
       for (const v of videos) {
         if (!slugIsSafe(v.url || "")) { skipped++; continue; }
         const f = bestPortraitFile(v);
-        if (f && (f.width || 0) >= 1080 && (f.height || 0) >= (f.width || 0)) { best = f; break; }
+        if (f && (f.width || 0) >= 1080 && (f.height || 0) >= (f.width || 0)) { best = f; pageUrl = v.url || ""; break; }
       }
       // Second pass: any SAFE clip with any mp4 (still no people/animals).
       if (!best) {
         for (const v of videos) {
           if (!slugIsSafe(v.url || "")) continue;
           const f = bestPortraitFile(v);
-          if (f) { best = f; break; }
+          if (f) { best = f; pageUrl = v.url || ""; break; }
         }
       }
       if (!best) {
         console.log(`  stock: no SAFE clip for "${query}" (${videos.length} found, ${skipped} rejected for people/animals) — using code scene`);
         return undefined;
       }
-      console.log(`  stock: picked safe ${best.width}x${best.height} for "${query}" (${skipped} unsafe clips skipped)`);
+      console.log(`  stock: picked safe ${best.width}x${best.height} for "${query}"  ${pageUrl}  (${skipped} unsafe skipped)`);
     }
     const raw = dest.replace(/\.mp4$/, ".raw.mp4");
     await download(best.link, raw);
