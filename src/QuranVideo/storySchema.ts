@@ -28,6 +28,11 @@ export const storyPropsSchema = z.object({
   reciterName: z.string().default("Sheikh Abdur-Rahman as-Sudais"),
   voiceName: z.string().default("Daniel"),
   websiteUrl: z.string().default("ketabistudio.com"),
+  // Auto-appended founding-list "ad" end card (on by default). The standalone
+  // brand ad sets showOutro:false so it doesn't get a redundant second CTA.
+  showOutro: z.boolean().default(true),
+  ctaHeadline: z.string().default("Join the founding list"),
+  ctaSeconds: z.number().default(3.5),
   segments: z.array(storySegmentSchema),
 });
 

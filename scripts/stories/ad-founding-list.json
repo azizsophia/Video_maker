@@ -1,0 +1,41 @@
+{
+  "id": "ad-founding-list",
+  "title": "Ketabi Studio — Join the Founding List",
+  "reciter": 3,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "noor",
+  "showOutro": false,
+  "_note": "SHORT BRAND AD (~30s) for the pre-launch waitlist. Deliberately contains NO Qur'an ayah — a commercial CTA must never sit over scripture (adab). showOutro:false because this whole clip IS the founding-list CTA (no redundant end card). 100% accurate: describes only what ketabistudio.com actually offers and is honest that the shop is pre-launch ('founding list'). Theme 'noor' = brand cream/ink-green/gold. Pass --theme=noor when rendering. Pure narration, so zero copyright risk.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Some gifts you keep. A few, you keep for a lifetime.",
+      "caption": "Ketabi Studio"
+    },
+    {
+      "type": "narration",
+      "text": "Ketabi Studio is crafting Islamic keepsakes for every age. Personalised storybooks where your child becomes the hero. Photo books for the moments that matter. And greeting cards for Eid, for weddings, for every new arrival.",
+      "caption": "Storybooks · Keepsakes · Cards"
+    },
+    {
+      "type": "narration",
+      "text": "And every dua inside is checked and sourced, because the words we give the people we love should be true.",
+      "caption": "Every dua vetted & sourced"
+    },
+    {
+      "type": "narration",
+      "text": "The shop is almost here. Join the founding list, and be the first through the door.",
+      "caption": "ketabistudio.com"
+    },
+    {
+      "type": "narration",
+      "text": "Ketabi Studio. Something beautiful is coming.",
+      "caption": "ketabistudio.com — join the founding list"
+    }
+  ],
+  "sources": [
+    "Brand/offerings verified from ketabistudio.com (June 2026): personalized children's storybooks (child as protagonist), photo keepsake books, Islamic greeting cards with vetted duas, and the Ketabi app. Shop is pre-launch; live CTA is 'Join the founding list'.",
+    "Claim discipline: no product is described as available for sale (it is not yet); 'vetted & sourced duas' reflects the site's stated practice of using vetted duas. No religious text is recited in this ad."
+  ]
+}

@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
+  Img,
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -19,12 +20,13 @@ export const STORY_FPS = 30;
 const resolveAudio = (src: string): string =>
   /^https?:\/\//.test(src) ? src : staticFile(src);
 
+const contentEndSeconds = (props: StoryProps): number =>
+  props.segments.reduce((m, s) => Math.max(m, s.fromSeconds + s.durationInSeconds), 0);
+
 export const storyDurationInFrames = (props: StoryProps): number => {
-  const end = props.segments.reduce(
-    (m, s) => Math.max(m, s.fromSeconds + s.durationInSeconds),
-    0
-  );
-  return Math.max(1, Math.round((end + 0.5) * STORY_FPS));
+  const end = contentEndSeconds(props);
+  const outro = props.showOutro ? props.ctaSeconds ?? 3.5 : 0;
+  return Math.max(1, Math.round((end + outro + 0.5) * STORY_FPS));
 };
 
 // Group words into short caption lines (subtitle style).
@@ -174,8 +176,77 @@ const AyahCard: React.FC<{
   );
 };
 
+// Founding-list "ad" end card, auto-appended after the story. Uses the green
+// brand icon so it reads on both light (noor) and dark themes.
+const OutroCard: React.FC<{
+  theme: ThemePalette;
+  websiteUrl: string;
+  headline: string;
+  onLight: boolean;
+}> = ({ theme, websiteUrl, headline, onLight }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const appear = spring({ frame, fps, config: { damping: 200 } });
+  const ink = onLight ? "#1c3a2b" : "#ffffff";
+  return (
+    <AbsoluteFill
+      style={{
+        background: theme.gradientFrom,
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 34,
+        opacity: appear,
+      }}
+    >
+      <Img
+        src={staticFile("brand/ketabi-icon-green.png")}
+        style={{
+          width: 240,
+          height: 240,
+          objectFit: "contain",
+          transform: `scale(${0.92 + 0.08 * appear})`,
+        }}
+      />
+      <div
+        style={{
+          fontFamily: TRANSLATION_FONT,
+          fontSize: 60,
+          fontWeight: 800,
+          letterSpacing: 3,
+          color: ink,
+        }}
+      >
+        Ketabi Studio
+      </div>
+      <div
+        style={{
+          fontFamily: TRANSLATION_FONT,
+          fontSize: 48,
+          fontWeight: 700,
+          color: theme.accent,
+        }}
+      >
+        {headline}
+      </div>
+      <div
+        style={{
+          fontFamily: TRANSLATION_FONT,
+          fontSize: 40,
+          color: ink,
+          opacity: 0.82,
+          marginTop: 6,
+        }}
+      >
+        {websiteUrl}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
+  const contentEndFrames = Math.round(contentEndSeconds(props) * STORY_FPS);
+  const outroFrames = Math.round((props.ctaSeconds ?? 3.5) * STORY_FPS);
   return (
     <AbsoluteFill>
       <Background theme={theme} />
@@ -200,20 +271,34 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           </Sequence>
         );
       })}
-      {/* Subtle persistent brand chip. */}
-      <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 70 }}>
-        <div
-          style={{
-            fontFamily: TRANSLATION_FONT,
-            fontSize: 26,
-            letterSpacing: 3,
-            color: theme.accent,
-            opacity: 0.7,
-          }}
-        >
-          {props.websiteUrl}
-        </div>
-      </AbsoluteFill>
+      {/* Subtle persistent brand chip — only during the content, not the outro. */}
+      <Sequence durationInFrames={Math.max(1, contentEndFrames)}>
+        <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 70 }}>
+          <div
+            style={{
+              fontFamily: TRANSLATION_FONT,
+              fontSize: 26,
+              letterSpacing: 3,
+              color: theme.accent,
+              opacity: 0.7,
+            }}
+          >
+            {props.websiteUrl}
+          </div>
+        </AbsoluteFill>
+      </Sequence>
+
+      {/* Auto-appended founding-list ad end card. */}
+      {props.showOutro ? (
+        <Sequence from={contentEndFrames} durationInFrames={outroFrames}>
+          <OutroCard
+            theme={theme}
+            websiteUrl={props.websiteUrl}
+            headline={props.ctaHeadline}
+            onLight={props.theme === "noor"}
+          />
+        </Sequence>
+      ) : null}
     </AbsoluteFill>
   );
 };

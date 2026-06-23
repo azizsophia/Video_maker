@@ -159,6 +159,11 @@ async function main() {
     reciterName: args.reciterName ?? "Sheikh Abdur-Rahman as-Sudais",
     voiceName: story.voiceName ?? "Daniel",
     websiteUrl: args.website ?? "ketabistudio.com",
+    // Founding-list ad end card: on by default, but a story can opt out
+    // (e.g. the standalone brand ad, which is itself the CTA).
+    showOutro: story.showOutro ?? true,
+    ctaHeadline: story.ctaHeadline ?? "Join the founding list",
+    ctaSeconds: story.ctaSeconds ?? 3.5,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";
