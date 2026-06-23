@@ -96,42 +96,6 @@ const Dunes: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   );
 };
 
-// ── Islamic geometric tessellation: 8-point stars, slow rotate + breathe ──────
-const Geo: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
-  const frame = useCurrentFrame();
-  const e = useEntrance();
-  const tiles: React.ReactNode[] = [];
-  const step = 200;
-  const s = 86;
-  let key = 0;
-  for (let gy = -1; gy <= H / step + 1; gy++) {
-    for (let gx = -1; gx <= W / step + 1; gx++) {
-      const cx = gx * step + (gy % 2) * (step / 2);
-      const cy = gy * step;
-      tiles.push(
-        <g key={key++} transform={`translate(${cx},${cy})`} stroke={theme.accent} strokeWidth={1.5} fill="none">
-          <rect x={-s / 2} y={-s / 2} width={s} height={s} />
-          <rect x={-s / 2} y={-s / 2} width={s} height={s} transform="rotate(45)" />
-          <circle r={s * 0.5} />
-        </g>
-      );
-    }
-  }
-  const breathe = 1 + 0.04 * Math.sin(frame * 0.03);
-  return (
-    <AbsoluteFill
-      style={{ background: `radial-gradient(circle at 50% 40%, ${theme.gradientFrom}, ${theme.gradientTo})`, opacity: e }}
-    >
-      <svg width={W} height={H} style={{ position: "absolute", inset: 0, opacity: 0.5 }}>
-        <g transform={`translate(${W / 2},${H / 2}) rotate(${frame * 0.15}) scale(${breathe}) translate(${-W / 2},${-H / 2})`}>
-          {tiles}
-        </g>
-      </svg>
-      <Glow x={W / 2} y={H / 2} r={520} color={theme.accent} opacity={0.16} />
-    </AbsoluteFill>
-  );
-};
-
 // ── Light rays from above (revelation/drama) ──────────────────────────────────
 const Rays: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   const frame = useCurrentFrame();
@@ -288,8 +252,6 @@ const Embers: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
 
 export const Scene: React.FC<{ name?: string; theme: ThemePalette }> = ({ name = "dunes", theme }) => {
   switch (name) {
-    case "geo":
-      return <Geo theme={theme} />;
     case "rays":
       return <Rays theme={theme} />;
     case "stone":

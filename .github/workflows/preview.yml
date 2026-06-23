@@ -1,0 +1,47 @@
+name: Render Style Preview
+
+# Screenshots preview/*.html frames to public/preview/*.png and commits them,
+# so we can review a visual style without a full video render.
+on:
+  push:
+    branches: ["claude/video-performance-analysis-3bjmgv"]
+    paths:
+      - "preview/**"
+      - "scripts/screenshot-preview.mjs"
+      - ".github/workflows/preview.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  shoot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Playwright + Chromium
+        run: |
+          npm i -D playwright@1.48.0
+          npx playwright install --with-deps chromium
+      - name: Capture preview frames
+        run: node scripts/screenshot-preview.mjs
+      - name: Commit preview PNGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/preview/*.png
+          if git diff --cached --quiet; then
+            echo "No preview changes."
+          else
+            git commit -m "Add style preview frames (automated)"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: style-preview
+          path: public/preview/*.png
+          retention-days: 14

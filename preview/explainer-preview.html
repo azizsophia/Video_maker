@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&family=Amiri:wght@700&display=swap');
+  :root{
+    --paper:#f7f0df; --paper2:#efe6cf;
+    --ink:#1d3a2b; --ink2:#39604a;
+    --gold:#c2912f; --goldsoft:rgba(194,145,47,.32);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:#333; display:flex; flex-wrap:wrap; gap:30px; padding:30px;}
+  .frame{
+    width:1080px; height:1920px; position:relative; overflow:hidden;
+    background:var(--paper);
+    font-family:'Poppins',system-ui,sans-serif; color:var(--ink);
+  }
+  .grid{position:absolute; inset:0;
+    background-image:radial-gradient(rgba(29,58,43,.13) 2.4px, transparent 2.4px);
+    background-size:48px 48px; opacity:.6;}
+  .vign{position:absolute; inset:0; box-shadow:inset 0 0 220px rgba(120,95,45,.18);}
+  .kicker{position:absolute; top:120px; left:0; width:100%; text-align:center;
+    letter-spacing:6px; font-weight:800; font-size:32px; color:var(--ink2);}
+  .cap{position:absolute; bottom:250px; left:0; width:100%; text-align:center;
+    padding:0 80px; font-weight:900; font-size:88px; line-height:1.12;}
+  .hl{background:linear-gradient(180deg,transparent 38%,var(--goldsoft) 38%); padding:0 10px; border-radius:4px;}
+  .gold{color:var(--gold);}
+  .pill{display:inline-block; background:var(--gold); color:#fff; font-weight:800;
+    font-size:30px; letter-spacing:1px; padding:10px 24px; border-radius:24px;}
+  /* stacked layers */
+  .label{font-weight:800; font-size:40px; fill:var(--ink);}
+  .small{font-family:'Poppins'; font-weight:600; font-size:26px; fill:var(--ink2);}
+  /* quote card */
+  .card{position:absolute; left:90px; right:90px; top:560px; padding:64px 56px;
+    background:var(--paper2); border:3px solid var(--ink);
+    border-radius:36px; box-shadow:14px 14px 0 rgba(29,58,43,.14);}
+  .ar{font-family:'Amiri',serif; direction:rtl; font-size:96px; line-height:1.7;
+    text-align:center; color:var(--ink);}
+  .div{height:4px; width:120px; background:var(--gold); margin:34px auto; border-radius:2px;}
+  .en{font-weight:800; font-size:52px; line-height:1.3; text-align:center; color:var(--ink);}
+  .src{text-align:center; margin-top:30px;}
+</style>
+</head>
+<body>
+
+  <!-- FRAME 1 — the "four civilisations" infographic -->
+  <div class="frame">
+    <div class="grid"></div>
+    <div class="kicker">AL-ULA · LOST CIVILISATIONS</div>
+    <svg width="1080" height="1920" style="position:absolute;inset:0">
+      <g transform="translate(150,470)" stroke="#1d3a2b" stroke-width="5" stroke-linejoin="round" fill="none">
+        <!-- 4 stacked strata, hand-drawn feel -->
+        <g>
+          <path d="M0,40 q200,-34 400,0 t380,0 l0,150 l-780,0 z" fill="#efe6cf"/>
+          <text x="810" y="135" class="label">Thamud</text><circle cx="790" cy="120" r="11" fill="#c2912f" stroke="none"/>
+        </g>
+        <g transform="translate(0,180)">
+          <path d="M0,40 q200,30 400,0 t380,0 l0,150 l-780,0 z" fill="#e7dabc"/>
+          <text x="810" y="135" class="label">Dadan</text><circle cx="790" cy="120" r="11" fill="#c2912f" stroke="none"/>
+        </g>
+        <g transform="translate(0,360)">
+          <path d="M0,40 q200,-30 400,0 t380,0 l0,150 l-780,0 z" fill="#ddca a6" />
+          <path d="M0,40 q200,-30 400,0 t380,0 l0,150 l-780,0 z" fill="#dcc9a4"/>
+          <text x="810" y="135" class="label">Lihyan</text><circle cx="790" cy="120" r="11" fill="#c2912f" stroke="none"/>
+        </g>
+        <g transform="translate(0,540)">
+          <path d="M0,40 q200,26 400,0 t380,0 l0,150 l-780,0 z" fill="#d2bd93"/>
+          <text x="780" y="135" class="label">Nabataeans</text><circle cx="760" cy="120" r="11" fill="#c2912f" stroke="none"/>
+        </g>
+      </g>
+    </svg>
+    <div class="cap">It isn't one lost city.<br><span class="hl">It's <span class="gold">four.</span></span></div>
+  </div>
+
+  <!-- FRAME 2 — carved facade line drawing -->
+  <div class="frame">
+    <div class="grid"></div>
+    <div class="kicker">THE LAND OF THAMUD · AL-HIJR</div>
+    <svg width="1080" height="1920" style="position:absolute;inset:0">
+      <g transform="translate(290,470)" stroke="#1d3a2b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none">
+        <!-- cliff face -->
+        <path d="M-150,720 L-150,40 q40,-60 120,-30 q60,-60 140,-20 q90,-50 180,0 q80,-30 140,30 l0,700 z" fill="#ece1c4"/>
+        <!-- pediment -->
+        <path d="M40,150 L250,150 L145,60 z" fill="#e0d0a8"/>
+        <!-- columns -->
+        <line x1="70" y1="150" x2="70" y2="470"/>
+        <line x1="145" y1="150" x2="145" y2="470"/>
+        <line x1="220" y1="150" x2="220" y2="470"/>
+        <!-- doorway -->
+        <rect x="100" y="300" width="90" height="170" rx="6" fill="#c2912f" fill-opacity="0.22"/>
+        <rect x="118" y="330" width="54" height="140" rx="4" fill="#c2912f" fill-opacity="0.5"/>
+        <!-- steps -->
+        <line x1="20" y1="500" x2="270" y2="500"/>
+        <line x1="0" y1="540" x2="290" y2="540"/>
+      </g>
+    </svg>
+    <div class="cap">They <span class="hl"><span class="gold">carved</span> homes</span><br>into solid mountains.</div>
+  </div>
+
+  <!-- FRAME 3 — the Quran quote card (Arabic + English, never recited) -->
+  <div class="frame">
+    <div class="grid"></div>
+    <div class="kicker">WHAT THE QURAN TELLS US TO DO</div>
+    <div class="card">
+      <div class="ar">قُلْ سِيرُوا فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلَّذِينَ مِن قَبْلُ</div>
+      <div class="div"></div>
+      <div class="en">Travel through the land and see how the story of those before you ended.</div>
+      <div class="src"><span class="pill">Qur'an · Ar-Rum 30:42</span></div>
+    </div>
+    <div class="cap" style="bottom:300px">Some places are <span class="hl">signs<span class="gold">, not sights.</span></span></div>
+  </div>
+
+</body>
+</html>
