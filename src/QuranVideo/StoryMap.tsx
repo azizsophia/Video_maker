@@ -20,22 +20,41 @@ const PLACES: Record<string, Place> = {
   petra: { label: "Petra", lat: 30.33, lon: 35.44 },
 };
 
-type MapView = { title: string; pins: string[]; route?: string[] };
+type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[] };
 const VIEWS: Record<string, MapView> = {
   hijaz: {
-    title: "The Hijaz · north-west Arabia",
+    title: "AL-ULA, NORTH-WEST ARABIA",
+    subtitle: "One valley — beside Islam's holiest cities",
     pins: ["makkah", "medina", "hegra", "tabuk"],
   },
   "tabuk-route": {
-    title: "The road to Tabuk · 9 AH (630 CE)",
+    title: "THE ROAD TO TABUK · 9 AH",
+    subtitle: "The army's path ran straight through the ruins",
     pins: ["medina", "hegra", "tabuk"],
     route: ["medina", "hegra", "tabuk"],
   },
   "incense-road": {
-    title: "The incense road · AlUla, the crossroads",
+    title: "THE INCENSE ROAD",
+    subtitle: "The richest trade route of the ancient world ran through here",
     pins: ["makkah", "medina", "alula", "petra"],
     route: ["makkah", "medina", "alula", "petra"],
   },
+};
+
+// Point at a fraction (0..1) along a polyline.
+const pointAlong = (pts: { x: number; y: number }[], frac: number) => {
+  if (pts.length < 2) return pts[0] ?? { x: 0, y: 0 };
+  const segs = pts.slice(1).map((p, i) => Math.hypot(p.x - pts[i].x, p.y - pts[i].y));
+  const total = segs.reduce((a, b) => a + b, 0);
+  let target = total * Math.max(0, Math.min(1, frac));
+  for (let i = 0; i < segs.length; i++) {
+    if (target <= segs[i]) {
+      const r = segs[i] === 0 ? 0 : target / segs[i];
+      return { x: pts[i].x + (pts[i + 1].x - pts[i].x) * r, y: pts[i].y + (pts[i + 1].y - pts[i].y) * r };
+    }
+    target -= segs[i];
+  }
+  return pts[pts.length - 1];
 };
 
 // Projection window over NW Arabia.
@@ -76,20 +95,37 @@ export const StoryMap: React.FC<{ view: string; theme: ThemePalette }> = ({ view
 
   return (
     <AbsoluteFill>
-      <div
-        style={{
-          position: "absolute",
-          top: 180,
-          width: "100%",
-          textAlign: "center",
-          fontFamily: TRANSLATION_FONT,
-          fontSize: 34,
-          letterSpacing: 2,
-          fontWeight: 700,
-          color: theme.accent,
-        }}
-      >
-        {def.title}
+      <div style={{ position: "absolute", top: 150, width: "100%", textAlign: "center", padding: "0 80px" }}>
+        <div
+          style={{
+            display: "inline-block",
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 38,
+            letterSpacing: 3,
+            fontWeight: 900,
+            color: "#0b0b0b",
+            background: theme.accent,
+            padding: "8px 24px",
+            borderRadius: 14,
+          }}
+        >
+          {def.title}
+        </div>
+        {def.subtitle ? (
+          <div
+            style={{
+              marginTop: 18,
+              fontFamily: TRANSLATION_FONT,
+              fontSize: 30,
+              lineHeight: 1.3,
+              fontWeight: 600,
+              color: "#ffffff",
+              textShadow: "0 3px 18px rgba(0,0,0,0.85)",
+            }}
+          >
+            {def.subtitle}
+          </div>
+        ) : null}
       </div>
 
       <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
@@ -114,6 +150,18 @@ export const StoryMap: React.FC<{ view: string; theme: ThemePalette }> = ({ view
             strokeDashoffset={dashOffset}
             opacity={0.92}
           />
+        ) : null}
+
+        {routePts.length > 1 ? (
+          (() => {
+            const m = pointAlong(routePts, routeProgress);
+            return (
+              <g>
+                <circle cx={m.x} cy={m.y} r={26} fill={theme.accent} opacity={0.22} />
+                <circle cx={m.x} cy={m.y} r={11} fill="#ffffff" stroke={theme.accent} strokeWidth={4} />
+              </g>
+            );
+          })()
         ) : null}
 
         {pins.map(({ id, pt }, i) => {

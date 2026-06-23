@@ -33,7 +33,7 @@ export const storyPropsSchema = z.object({
   // brand ad sets showOutro:false so it doesn't get a redundant second CTA.
   showOutro: z.boolean().default(true),
   ctaHeadline: z.string().default("Join the founding list"),
-  ctaSeconds: z.number().default(3.5),
+  ctaSeconds: z.number().default(4.5),
   segments: z.array(storySegmentSchema),
 });
 
