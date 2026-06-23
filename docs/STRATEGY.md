@@ -134,9 +134,10 @@ Decision: **verified free-license reciter** for the short ayah moments.
 4. For any full word-by-word video later: use a free-license recitation +
    **forced alignment** to generate our own timings (see `docs/SETUP.md`).
 
-**To verify next (then you approve):** specific Wikimedia/Archive recordings by
-surah, with license + URL, so we have a known-clean library for the ayahs our
-scripts use.
+**Done — see `docs/RECITERS.md`** for the verified, sourced breakdown (what's
+ruled out and why, the tiered recommendation, and how to plug a free-license
+clip into the pipeline). Headline: our own short clips are the only fully-safe
+default; a verified Wikimedia **CC0** file is the clean third-party backup.
 
 ---
 

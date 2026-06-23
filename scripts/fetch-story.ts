@@ -133,15 +133,27 @@ async function main() {
       const verse = v.verse;
       const arabic = verse.text_uthmani as string;
       const tr = stripHtml(verse.translations?.[0]?.text ?? "");
+
+      // Audio source: a verified free-license clip (seg.audioUrl) when provided,
+      // otherwise the Quran.com reciter — the copyrighted default, fine for
+      // testing but NOT for monetized >60s. See docs/RECITERS.md. We always keep
+      // the validated Uthmani text + translation from Quran.com regardless.
+      const custom = typeof seg.audioUrl === "string" && seg.audioUrl.length > 0;
+      if (custom && typeof seg.seconds !== "number") {
+        throw new Error(`Ayah ${key}: a custom audioUrl requires "seconds" (clip length). See docs/RECITERS.md.`);
+      }
+      const audioUrl: string = custom ? seg.audioUrl : verse.audio.url;
       const segsArr: number[][] = verse.audio?.segments ?? [];
       const lastEnd = segsArr.length ? segsArr[segsArr.length - 1][segsArr[0].length - 1] / 1000 : 6;
-      const duration = Math.max(2, lastEnd + 0.6);
-      const dest = join("public", "story", `a${i}.mp3`);
-      await download(resolveAudioUrl(verse.audio.url), dest);
+      const duration = custom ? Math.max(1, Number(seg.seconds)) : Math.max(2, lastEnd + 0.6);
+      const ext = (custom && audioUrl.match(/\.(ogg|mp3|m4a|wav)(?:\?|$)/i)?.[1]?.toLowerCase()) || "mp3";
+      const dest = join("public", "story", `a${i}.${ext}`);
+      await download(resolveAudioUrl(audioUrl), dest);
+      if (custom) console.log(`  ayah ${key}: free-license audio${seg.audioCredit ? ` — ${seg.audioCredit}` : ""}`);
       console.log(`  ayah ${key}: ${duration.toFixed(1)}s`);
       segments.push({
         kind: "ayah",
-        audioSrc: `story/a${i}.mp3`,
+        audioSrc: `story/a${i}.${ext}`,
         fromSeconds: Number(cursor.toFixed(2)),
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         arabic,
