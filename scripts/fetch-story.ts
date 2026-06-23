@@ -162,6 +162,8 @@ const PRONUNCIATION: Record<string, string> = {
   duas: "doo-aas",
   khalil: "khaleel",
   ibrahim: "Ibraheem", // pronounce "Ibraheem"; captions keep the "Ibrahim" spelling
+  isa: "Eesa", // pronounce "Eesa"; captions keep the "Isa" spelling
+  zakariya: "Zakariyya", // pronounce "Zakariyya"; captions keep the "Zakariya" spelling
 };
 function pronounce(text: string): { tts: string; back: Record<string, string> } {
   const back: Record<string, string> = {};

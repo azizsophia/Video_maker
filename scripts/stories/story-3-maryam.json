@@ -1,0 +1,125 @@
+{
+  "id": "story-3-maryam",
+  "title": "The Only Woman Named in the Quran: Maryam",
+  "voiceId": "jfIS2w2yJi0grJZPyEsk",
+  "voiceName": "Oliver Silk (ElevenLabs)",
+  "recite": false,
+  "look": "noor",
+  "gap": 0.14,
+  "sound": {
+    "ambient": "soft desert wind, gentle airy ambience, faint rustling of palm leaves, calm and reverent, no music, no melody, no instruments",
+    "ambientDuration": 22
+  },
+  "_note": "Maryam (AS), the only woman named in the Quran (34x). 'recite': false (no reciter audio; English narration carries the verses, no silence). Footage keywords are ANICONIC: architecture/light/plants/sky/calligraphy ONLY - never faces, people, or animals. On-screen verses are auto-pulled by verseRef (NEVER hand-typed): 3:42 (chosen above all women), 19:25 (palm tree), 19:30 (the baby speaks), 66:12 (God testifies to her chastity = the vindication payoff). Honorific: Maryam honored with the Quran's OWN words (no contested suffix); Isa & Zakariya get 'peace be upon him'. Isa pronounced 'Eesa', Zakariya 'Zakariyya'; spellings stay. No em dashes. Storytelling -> short Ketabi books ad (shop-waitlist).",
+  "segments": [
+    {
+      "type": "narration",
+      "hook": true,
+      "scene": "desert-night",
+      "stock": "sunlight rays through ancient stone arches",
+      "title": "Only One Woman\nIs Named in the Quran",
+      "text": "Only one woman is named in the entire Quran, more times than in the whole Christian Bible. And she was chosen through a miracle the world refused to believe.",
+      "caption": "The only woman named in the Quran"
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "golden light particles floating in the dark",
+      "text": "Her name is Maryam, the mother of Isa, peace be upon him.",
+      "caption": "Her name is Maryam"
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "soft golden light rays through clouds",
+      "verseRef": "3:42",
+      "source": "Surah Aal-Imran · 3:42",
+      "text": "God chose her, purified her, and lifted her above every woman who ever lived.",
+      "caption": "Surah Aal-Imran · 3:42"
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "ripe dates on a palm branch closeup",
+      "text": "She gave her life to worship. And whenever the Prophet Zakariya, peace be upon him, visited her, he found fruit that grew in no season, sent straight from God.",
+      "caption": "Fruit from no earthly hand"
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "date palm tree against the sky in wind",
+      "verseRef": "19:25",
+      "source": "Surah Maryam · 19:25",
+      "text": "Then an angel told her she would bear a son, though no man had ever touched her. Alone and in labor, she clung to a withered palm tree, and it rained fresh dates into her hands.",
+      "caption": "Surah Maryam · 19:25"
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "first light of dawn over clouds",
+      "verseRef": "19:30",
+      "source": "Surah Maryam · 19:30",
+      "text": "She carried her newborn home, and her people accused her. She did not say a word. She pointed at the child, and the infant Isa spoke, and defended his mother.",
+      "caption": "Surah Maryam · 19:30"
+    },
+    {
+      "type": "narration",
+      "scene": "scorched-sun",
+      "stock": "heavenly golden light rays through clouds",
+      "pauseBefore": 0.3,
+      "verseRef": "66:12",
+      "source": "Surah at-Tahrim · 66:12",
+      "text": "Sit with this. Her people accused her of the unthinkable. But God himself testified, in his own book, to her purity and devotion, and named her, the only woman named in the entire Quran, honored across the world, chosen above every woman who ever lived. The accusation did not define her. The words of God did.",
+      "caption": "Surah at-Tahrim · 66:12"
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "golden sunrise over the horizon",
+      "text": "The name they shamed, God made eternal.",
+      "caption": "The name they shamed, made eternal"
+    },
+    {
+      "type": "narration",
+      "scene": "desert-night",
+      "stock": "calm golden clouds drifting at sunrise",
+      "pauseBefore": 1.1,
+      "text": "Comment below whose story you would like us to tell next.",
+      "caption": "Whose story next?"
+    },
+    {
+      "type": "narration",
+      "scene": "shop-waitlist",
+      "data": {
+        "headline": "Something beautiful is coming",
+        "sub": "Personalized storybooks, photo keepsakes, and cards sealed with a dua.",
+        "cta": "Join the founding list",
+        "url": "ketabistudio.com",
+        "products": [
+          { "src": "shop/hijab.png" },
+          { "src": "shop/duas.png" },
+          { "src": "shop/juha.png" }
+        ]
+      },
+      "text": "And from Ketabi Studio, storybooks and keepsakes, each one sealed with a prayer. Join the founding list now, at Ketabi Studio dot com."
+    }
+  ],
+  "sources": [
+    "Surah Aal-Imran 3:42-47 - the angels tell Maryam Allah has chosen her above the women of the worlds, and give glad tidings of Isa",
+    "Surah Aal-Imran 3:37 - Zakariya finds provision (out-of-season fruit) with Maryam in the prayer chamber - narrated",
+    "Surah Maryam 19:16-26 - the angel, the conception, the palm tree dropping fresh dates - on screen 19:25",
+    "Surah Maryam 19:27-33 - her people accuse her, she points to the baby, and the infant Isa speaks - on screen 19:30",
+    "Surah al-Anbiya 21:91 - We made her and her son a sign for the worlds - narrated theme",
+    "Surah at-Tahrim 66:12 - Maryam who guarded her chastity and was of the devoutly obedient - on screen (the vindication)",
+    "Maryam is the only woman named in the Quran, mentioned 34 times across 32 verses; Surah 19 is named after her"
+  ],
+  "claims": [
+    { "claim": "Maryam is the only woman mentioned by name in the Quran (34 times); Surah 19 bears her name", "source": "Surah Maryam (19) - https://quran.com/19 ; Mary in Islam - https://en.wikipedia.org/wiki/Mary_in_Islam" },
+    { "claim": "Allah chose her and purified her and chose her above the women of the worlds", "source": "Quran 3:42 - https://quran.com/3/42" },
+    { "claim": "Zakariya found out-of-season provision with her, which she said was from Allah", "source": "Quran 3:37 - https://quran.com/3/37" },
+    { "claim": "She withdrew to a palm tree which dropped fresh ripe dates upon her", "source": "Quran 19:25 - https://quran.com/19/25" },
+    { "claim": "Her people accused her; she pointed to the infant Isa, who spoke from the cradle", "source": "Quran 19:27-30 - https://quran.com/19/30" },
+    { "claim": "Allah testifies she guarded her chastity and was of the devoutly obedient", "source": "Quran 66:12 - https://quran.com/66/12" },
+    { "claim": "Allah made her and her son a sign for the worlds", "source": "Quran 21:91 - https://quran.com/21/91" }
+  ]
+}
