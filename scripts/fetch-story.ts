@@ -134,6 +134,7 @@ async function main() {
         words,
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
         map: seg.map,
+        scene: seg.scene,
         arabic: arabicQuote,
       });
       cursor += duration + GAP;

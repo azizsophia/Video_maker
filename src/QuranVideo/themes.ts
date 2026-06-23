@@ -51,6 +51,20 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     accent: "#f0cd78",
     vignette: "rgba(0,0,0,0.55)",
   },
+  // Brand theme — the website's palette: deep ink-green + gold + cream.
+  // Dark/cinematic for story videos, but on-brand (no blue).
+  ketabi: {
+    background: "#0c1c14",
+    gradientFrom: "#15301f",
+    gradientTo: "#050d09",
+    patternColor: "rgba(199, 154, 62, 0.12)",
+    arabicIdle: "rgba(244, 236, 216, 0.45)",
+    arabicActive: "#f6efdc",
+    arabicGlow: "rgba(199, 154, 62, 0.55)",
+    translation: "rgba(244, 236, 216, 0.9)",
+    accent: "#cda24a",
+    vignette: "rgba(0,0,0,0.55)",
+  },
   // Light "noor" theme — cream paper, deep ink-green Arabic, gold accents.
   // Stands out on a feed full of dark Quran videos.
   noor: {

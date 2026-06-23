@@ -14,6 +14,7 @@ import { StoryProps, StorySegment, StoryWord } from "./storySchema";
 import { themes, ThemePalette } from "./themes";
 import { Background } from "./Background";
 import { StoryMap } from "./StoryMap";
+import { Scene } from "./Scenes";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT, CAPTION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -134,6 +135,16 @@ const Narration: React.FC<{
     </AbsoluteFill>
   );
 };
+
+// Bottom gradient so captions stay readable over busy animated scenes.
+const CaptionScrim: React.FC = () => (
+  <AbsoluteFill
+    style={{
+      background:
+        "linear-gradient(to top, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.34) 28%, rgba(0,0,0,0) 54%)",
+    }}
+  />
+);
 
 // A Quran verse shown on screen (NOT recited): Arabic on top, the English
 // directly underneath (synced to the voice, which speaks only the English).
@@ -397,16 +408,22 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
             <Audio src={resolveAudio(seg.audioSrc)} />
             {seg.kind === "narration" ? (
               seg.arabic ? (
-                <ArabicQuote arabic={seg.arabic} words={seg.words} source={seg.source} theme={theme} />
+                <>
+                  <Scene name={seg.scene ?? "rays"} theme={theme} />
+                  <CaptionScrim />
+                  <ArabicQuote arabic={seg.arabic} words={seg.words} source={seg.source} theme={theme} />
+                </>
+              ) : seg.map ? (
+                <>
+                  <StoryMap view={seg.map} theme={theme} />
+                  <CaptionScrim />
+                  <Narration words={seg.words} source={seg.source} theme={theme} align="bottom" />
+                </>
               ) : (
                 <>
-                  {seg.map ? <StoryMap view={seg.map} theme={theme} /> : null}
-                  <Narration
-                    words={seg.words}
-                    source={seg.source}
-                    theme={theme}
-                    align={seg.map ? "bottom" : "center"}
-                  />
+                  <Scene name={seg.scene} theme={theme} />
+                  <CaptionScrim />
+                  <Narration words={seg.words} source={seg.source} theme={theme} align="bottom" />
                 </>
               )
             ) : (

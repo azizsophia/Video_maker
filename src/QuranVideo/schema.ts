@@ -29,7 +29,7 @@ export const ayahSchema = z.object({
   durationInSeconds: z.number(),
 });
 
-export const themeSchema = z.enum(["midnight", "emerald", "sand", "noor"]);
+export const themeSchema = z.enum(["midnight", "emerald", "sand", "noor", "ketabi"]);
 
 // "standard" = clean word-by-word recitation.
 // "hifz" = memorization drill: each ayah repeats while words progressively

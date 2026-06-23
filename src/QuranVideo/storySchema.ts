@@ -18,6 +18,7 @@ export const storySegmentSchema = z.object({
   words: z.array(storyWordSchema).optional(), // for synced captions
   source: z.string().optional(), // small citation chip (e.g. "Tirmidhi 3153 (hasan)")
   map: z.string().optional(), // optional animated history map behind a narration beat
+  scene: z.string().optional(), // animated visual backdrop: dunes|geo|rays|stone|nightsky|embers
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),
