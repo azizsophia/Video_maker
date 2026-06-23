@@ -5,49 +5,64 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "look": "cinematic-dark",
-  "_note": "TTS pronunciation: Euphrates = 'You-FRAY-teez'. On-screen captions use proper spelling. AUDIO/COPYRIGHT: the ayah clip (47:18) currently pulls Sudais via the Quran.com API; per the content strategy this must be swapped to a VERIFIED free-license (CC0/Public Domain) recording before commercial publishing, or recited in-house. Verify name pronunciations with a short test render to keep ElevenLabs usage low.",
+  "_note": "Target length 60s+ (TikTok monetization + 'at least a minute'). TTS pronunciation: Euphrates = 'You-FRAY-teez'. On-screen captions use proper spelling. AUDIO/COPYRIGHT: the ayah clip (47:18) currently pulls Sudais via the Quran.com API. This first cut is a TEST render to validate the pipeline; per docs/STRATEGY.md the ayah audio must be swapped to a VERIFIED free-license (CC0/Public Domain) recording, or recited in-house, before commercial/public posting. Verify name pronunciations with a short test render to keep ElevenLabs usage low.",
   "segments": [
     {
       "type": "narration",
-      "text": "Fourteen hundred years ago, a man who could not read or write described something we are watching happen right now.",
-      "caption": "There is a wall... no. There is a river."
+      "text": "Fourteen hundred years ago, a man who could not read or write described something that scientists are measuring right now.",
+      "caption": "A prophecy you can watch unfold."
     },
     {
       "type": "narration",
-      "text": "The Prophet, peace be upon him, said: the Hour will not come until the Euphrates uncovers a mountain of gold.",
+      "text": "He pointed to one river. The Euphrates. The same river that fed the very first cities humanity ever built.",
+      "caption": "The Euphrates — cradle of civilisation"
+    },
+    {
+      "type": "narration",
+      "text": "And the Prophet, peace be upon him, said: the Hour will not come until the Euphrates uncovers a mountain of gold.",
       "caption": "Sahih al-Bukhari 7119"
     },
     {
       "type": "narration",
-      "text": "And he warned: when that day comes, people will fight over it, and ninety-nine out of every hundred will die. Each one hoping that he is the one who survives.",
+      "text": "Then he described what people would do when they saw it. They would fight. And out of every hundred men who fought over that gold, ninety-nine would be killed.",
       "caption": "Sahih Muslim 2894"
     },
     {
       "type": "narration",
-      "text": "Then he gave a command across the centuries: whoever is there, let him not take a single thing from it.",
+      "text": "And every single one of them, he said, would think to himself: maybe I will be the one who survives.",
+      "caption": "Sahih Muslim 2894"
+    },
+    {
+      "type": "narration",
+      "text": "So he gave a warning that crosses fourteen centuries to reach us. Whoever is there on that day, let him not take a single thing from it.",
       "caption": "Sahih al-Bukhari 7119"
     },
     {
       "type": "narration",
-      "text": "Here is what is true today. The Euphrates, a river that has flowed through all of human history, is shrinking. Scientists who study it warn it could one day run dry.",
-      "caption": "Present-day context — not a religious source"
+      "text": "Now here is what is actually true today, and this part is not scripture, it is science. Between 2003 and 2009, satellites watched the Tigris and Euphrates basin lose fresh water faster than almost anywhere on Earth.",
+      "caption": "NASA GRACE satellite data — modern context"
     },
     {
       "type": "narration",
-      "text": "The gold has not been uncovered. The prophecy is about the day the river finally gives out. And the signs, the Quran says, have already begun to come.",
+      "text": "The great river is shrinking. The researchers who study it warn that, on its current path, it could one day run dry.",
+      "caption": "Documented decline — not a religious source"
+    },
+    {
+      "type": "narration",
+      "text": "Be careful here. The gold has not been uncovered. The prophecy is about the day the water finally gives out. We are not there. But the Quran told us the signs of that day would begin to arrive.",
       "caption": "Surah Muhammad 47:18"
     },
     { "type": "ayah", "surah": 47, "ayah": 18, "source": "Surah Muhammad 47:18" },
     {
       "type": "narration",
-      "text": "A man in the desert, who never held a book, told us where to look. And we are still watching the water fall.",
+      "text": "A man in the desert, who never held a book, named the river and the warning. And fourteen hundred years later, we are still watching the water fall.",
       "caption": "Ketabi Studio — sourced Islamic stories"
     }
   ],
   "sources": [
-    "Sahih al-Bukhari 7119 — the Euphrates will uncover a mountain/treasure of gold",
-    "Sahih Muslim 2894 — same prophecy; people will fight, do not take from it",
-    "Surah Muhammad 47:18 — 'for its signs have already come'",
-    "Present-day context: the documented long-term decline of the Tigris-Euphrates basin (e.g., NASA GRACE satellite water-storage studies). This is modern background ONLY and is clearly separated from the religious sources. The script does NOT claim the prophecy is fulfilled — the gold has not been uncovered."
+    "Sahih al-Bukhari 7119 — the Euphrates will uncover a mountain/treasure of gold; whoever is present should not take from it",
+    "Sahih Muslim 2894 — people will fight over it, 99 of every 100 killed, each hoping he is the survivor",
+    "Surah Muhammad 47:18 — 'Then do they await except that the Hour should come upon them unexpectedly? But already there have come [some of] its indications.' (Saheeh International)",
+    "Present-day context (modern science, clearly separated from scripture): NASA GRACE satellite study (Voss et al., UC Irvine/NASA, 2013) found the Tigris-Euphrates basin lost ~144 km3 of freshwater 2003-2009, among the fastest depletion rates on Earth; ongoing droughts have driven record-low flows. The script does NOT claim the prophecy is fulfilled — the gold has not been uncovered."
   ]
 }
