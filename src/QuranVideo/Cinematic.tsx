@@ -66,11 +66,15 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
           lineHeight: 1.25,
           textAlign: "center",
           color: CREAM,
-          textShadow: "0 4px 30px rgba(0,0,0,0.9)",
+          textShadow: "0 4px 26px rgba(0,0,0,0.95)",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
           gap: "4px 16px",
+          maxWidth: 940,
+          background: "rgba(6,12,9,0.5)",
+          padding: "20px 32px",
+          borderRadius: 28,
           opacity: lineFade,
           transform: `translateY(${(1 - lineFade) * 12}px)`,
         }}
@@ -94,13 +98,17 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
   return (
     <>
       {kicker ? (
-        <div style={{ position: "absolute", top: 300, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, opacity: fade, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
-          {kicker}
+        <div style={{ position: "absolute", top: 300, width: "100%", display: "flex", justifyContent: "center", opacity: fade }}>
+          <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, background: "rgba(6,12,9,0.42)", padding: "9px 22px", borderRadius: 16, textShadow: "0 2px 16px rgba(0,0,0,0.85)" }}>
+            {kicker}
+          </span>
         </div>
       ) : null}
       {foot ? (
-        <div style={{ position: "absolute", bottom: 860, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.85)", opacity: fade * 0.95, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
-          {foot}
+        <div style={{ position: "absolute", bottom: 860, width: "100%", display: "flex", justifyContent: "center", opacity: fade * 0.95 }}>
+          <span style={{ fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.92)", background: "rgba(6,12,9,0.42)", padding: "7px 18px", borderRadius: 14, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
+            {foot}
+          </span>
         </div>
       ) : null}
     </>
