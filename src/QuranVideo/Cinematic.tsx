@@ -94,12 +94,12 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
   return (
     <>
       {kicker ? (
-        <div style={{ position: "absolute", top: 150, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, opacity: fade, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
+        <div style={{ position: "absolute", top: 300, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, opacity: fade, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
           {kicker}
         </div>
       ) : null}
       {foot ? (
-        <div style={{ position: "absolute", top: kicker ? 224 : 158, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.85)", opacity: fade * 0.95, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
+        <div style={{ position: "absolute", bottom: 860, width: "100%", textAlign: "center", fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.85)", opacity: fade * 0.95, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
           {foot}
         </div>
       ) : null}
@@ -117,7 +117,7 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   return (
     <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: "0 90px", opacity: fade }}>
       {kicker ? (
-        <div style={{ position: "absolute", top: 200, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
+        <div style={{ position: "absolute", top: 300, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
       ) : null}
       <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: 96, lineHeight: 1.85, textAlign: "center", color: CREAM, textShadow: "0 0 50px rgba(231,200,115,0.4)" }}>
         {arabic}
