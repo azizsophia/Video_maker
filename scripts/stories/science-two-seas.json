@@ -5,22 +5,23 @@
   "cinematic": true,
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
-  "_note": "CINEMATIC, hook-first. Footage = ocean/water (no humans; thumbnail-verified). NO recital. Simple English. SOURCE: Surah Ar-Rahman 55:19-20 (and Al-Furqan 25:53) — 'He released the two seas meeting; between them a barrier they do not transgress.' SCIENCE (solid): a halocline/pycnocline — a sharp salinity/temperature density gradient — acts as a barrier between water masses (e.g., Atlantic vs Mediterranean at the Strait of Gibraltar, which keep distinct temperature/salinity). ACCURACY GUARD: framed on the REAL invisible density barrier, NOT the misleading viral 'two-color oceans' photo (that's temporary sediment). Safe-zone captions. #HistoryTikTokContest.",
+  "_note": "CINEMATIC, hook-first, 60s+. Footage = ocean/water (no humans; verified). NO recital; voice speaks English. SOURCE: Surah Ar-Rahman 55:19-20 (and Al-Furqan 25:53). SCIENCE: halocline/pycnocline density barrier between water masses (e.g. Atlantic vs Mediterranean at Gibraltar). ACCURACY GUARD: framed on the REAL invisible density barrier; the visible 'two-colour' confluences (river mouths/estuaries) are real but the barrier itself is sub-surface density — NOT the overclaimed 'oceans never touch' photo. Safe-zone, legible captions.",
   "segments": [
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "text": "There are places in the ocean where two seas meet, and refuse to mix. The Quran described this fourteen hundred years ago." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "text": "There are places in the ocean where two seas meet, and refuse to fully mix. The Quran described this fourteen hundred years ago." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "foot": "Qur'an · Surah Ar-Rahman 55:19-20", "text": "It said: He released the two seas, meeting together. But between them is a barrier they do not cross." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "text": "For centuries this sounded impossible. Water is water. How can two seas not mix?" },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "foot": "Halocline / pycnocline", "text": "Then oceanographers found it. Where seas of different temperature and saltiness meet, an invisible wall forms between them." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "foot": "e.g. the Strait of Gibraltar", "text": "Each sea keeps its own temperature, its own saltiness, its own life. Held apart by a barrier made of nothing but density." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "text": "You cannot see it. But it is there. Exactly where the Quran said it would be." },
-    { "type": "narration", "quote": "55:20", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "text": "Between the two seas is a barrier, which they do not cross." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "text": "A wall you cannot see, named in a book thirteen centuries before we found it." }
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "text": "For centuries this sounded impossible. Water is water. How can two seas refuse to mix?" },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "text": "Sailors noticed it for generations. Two waters, side by side, with different colors and temperatures. But nobody could explain why they stayed apart." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "foot": "Halocline / pycnocline", "text": "Then oceanographers found the answer. Where seas of different saltiness and temperature meet, an invisible wall of density forms between them." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "foot": "e.g. the Strait of Gibraltar", "text": "Each sea keeps its own temperature, its own saltiness, even its own sea life. Held apart by a barrier you cannot even see." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "text": "We only measured it with modern submarines and sensors, deep beneath the surface." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "text": "You cannot see it with your eyes. But it is there. Exactly where the Quran said it would be." },
+    { "type": "narration", "quote": "55:20", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/29566639/12726730_1080_1920_60fps.mp4", "text": "Between the two seas is a barrier, which they do not cross." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/34380812/14565068_1080_1920_30fps.mp4", "text": "A wall you cannot see, named in a book thirteen centuries before we found it." }
   ],
   "sources": [
-    "Qur'an, Surah Ar-Rahman 55:19-20 (and Al-Furqan 25:53) — 'He released the two seas, meeting [side by side]; between them is a barrier [which] they do not transgress.'",
-    "Oceanography: a halocline/pycnocline is a sharp density gradient (salinity + temperature) that resists mixing between water masses; e.g. Atlantic and Mediterranean water at the Strait of Gibraltar keep distinct temperature/salinity for hundreds of km (Britannica; Wikipedia: Halocline/Pycnocline).",
-    "ACCURACY: framed on the real invisible density barrier, NOT the misleading viral 'two oceans don't mix' two-colour photo (that is temporary sediment, and overclaimed).",
-    "Qur'an 55:20 shown as Arabic + English; not recited.",
-    "VISUALS: all Pexels clips verified by thumbnail — no human faces/bodies."
+    "Qur'an, Surah Ar-Rahman 55:19-20 (and Al-Furqan 25:53) — 'He released the two seas, meeting; between them is a barrier they do not transgress.'",
+    "Oceanography: a halocline/pycnocline is a sharp density gradient (salinity + temperature) that resists mixing between water masses; e.g. Atlantic and Mediterranean water at the Strait of Gibraltar keep distinct properties for hundreds of km (Britannica; Wikipedia).",
+    "ACCURACY: framed on the real, mostly invisible density barrier — not the overclaimed 'two oceans never touch' viral photo.",
+    "Qur'an 55:20 shown Arabic + English; not recited. All Pexels clips verified human-free."
   ]
 }

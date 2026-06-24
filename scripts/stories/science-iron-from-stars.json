@@ -5,21 +5,23 @@
   "cinematic": true,
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
-  "_note": "CINEMATIC, hook-first. Footage = molten/abstract/galaxy/meteor/earth (no humans; thumbnail-verified; foundry clips avoided due to worker risk). NO recital. Simple English. SOURCE: Surah Al-Hadid 57:25 — 'and We sent down iron, in it is great might and benefits for people.' SCIENCE (solid): iron forms by fusion in massive stars and is scattered by supernovae (stellar nucleosynthesis); Earth's iron is of cosmic origin; the radioactive isotope iron-60 found on Earth and the Moon proves extraterrestrial delivery. Honest 'sent down' framing. Safe-zone captions. #HistoryTikTokContest.",
+  "_note": "CINEMATIC, hook-first, 60s+. Footage = molten-abstract/galaxy/sun/meteor/earth (no humans; verified; foundry clips avoided). NO recital; voice speaks English. SOURCE: Surah Al-Hadid 57:25. SCIENCE: iron forms by fusion in massive stars; iron fusion is endothermic and triggers core-collapse → supernova scatters iron; Earth's iron is cosmic; iron-60 isotope on Earth/Moon proves extraterrestrial delivery. Surah 57 is literally named 'The Iron' (a fact, no numerology). Safe-zone, legible captions.",
   "segments": [
     { "type": "narration", "video": "https://videos.pexels.com/video-files/19777570/19777570-hd_1080_1920_30fps.mp4", "text": "The iron in your blood, in your phone, in this whole planet, did not come from Earth. And the Quran hinted at this fourteen hundred years ago." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/19777570/19777570-hd_1080_1920_30fps.mp4", "foot": "Qur'an · Surah Al-Hadid 57:25", "text": "The Quran says iron was, quote, sent down." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "For centuries, that was a strange way to describe a metal we dig out of the ground." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "foot": "Stellar nucleosynthesis", "text": "Then science found where iron really comes from. It cannot form on Earth. It is forged inside giant, dying stars." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/35461866/15024051_1080_1920_24fps.mp4", "foot": "Supernovae · iron-60 found on Earth", "text": "When those stars explode, they fling iron across space. And billions of years ago, some of it fell to Earth." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "Every piece of iron you have ever touched was once inside a star, and was sent down from the sky." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "foot": "Stellar nucleosynthesis", "text": "Then science found where iron really comes from. It cannot be made on Earth. It is forged inside giant stars." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "text": "And iron is special. It is so heavy that making it actually drains a star's energy. Iron is the metal that finally kills the star." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35461866/15024051_1080_1920_24fps.mp4", "foot": "Supernovae · iron-60 found on Earth", "text": "In the star's dying explosion, that iron is blasted across the universe. Billions of years ago, some of it landed here." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "Every piece of iron you have ever touched was once inside a star, and fell from the sky." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/19777570/19777570-hd_1080_1920_30fps.mp4", "text": "The Quran even named an entire chapter after it. Surah Al-Hadid. The Iron." },
     { "type": "narration", "quote": "57:25", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "And We sent down iron, in which is great strength, and benefits for the people." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/19777570/19777570-hd_1080_1920_30fps.mp4", "text": "Sent down. Exactly as the Quran said." }
   ],
   "sources": [
     "Qur'an, Surah Al-Hadid 57:25 — 'and We sent down iron, wherein is great might and benefits for the people.'",
-    "Science: iron is produced by fusion in massive stars and dispersed by supernovae (stellar nucleosynthesis); it cannot be created on Earth. Earth's iron is of cosmic origin. The radioactive isotope iron-60 found on Earth and the Moon confirms extraterrestrial delivery (e.g., IFLScience; ESA).",
-    "Qur'an 57:25 shown as Arabic + English; not recited.",
-    "VISUALS: all Pexels clips verified by thumbnail — no human faces/bodies (industrial foundry clips were deliberately avoided to prevent any worker appearing)."
+    "Science: iron is produced by fusion in massive stars; iron fusion is endothermic and triggers core-collapse supernovae, which scatter iron through space. Earth's iron is of cosmic origin; iron-60 found on Earth/Moon confirms extraterrestrial delivery.",
+    "Surah 57 is named Al-Hadid ('The Iron') — stated as a simple fact, with NO numerology claims.",
+    "Qur'an 57:25 shown Arabic + English; not recited. All Pexels clips verified human-free (foundry clips avoided to prevent any worker appearing)."
   ]
 }

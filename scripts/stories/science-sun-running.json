@@ -5,21 +5,22 @@
   "cinematic": true,
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
-  "_note": "CINEMATIC, hook-first. Footage = sun/galaxy/stars (no humans; clips thumbnail-verified). NO recital. Simple English. SOURCE: Surah Ya-Sin 36:38 — 'the sun runs to a resting place (mustaqarr) for it.' SCIENCE (solid): the Sun is not fixed — it orbits the Milky Way's center at ~230 km/s (~828,000 km/h), one galactic year ~225-250 million years; the whole solar system also drifts toward the solar apex. Honest framing (the sun genuinely moves; people historically thought it fixed). Safe-zone captions. #HistoryTikTokContest.",
+  "_note": "CINEMATIC, hook-first, 60s+. Footage = sun/galaxy/stars (no humans; verified). NO recital; voice speaks English. SOURCE: Surah Ya-Sin 36:38. SCIENCE: the Sun orbits the Milky Way at ~230 km/s (~828,000 km/h); one galactic orbit ~225-250 million years; the Sun will eventually exhaust its fuel ('resting place'). Honest framing. Safe-zone, legible captions.",
   "segments": [
     { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "text": "For thousands of years, humans believed the sun was fixed in the sky. The Quran said something different. And it turned out to be true." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "foot": "Qur'an · Surah Ya-Sin 36:38", "text": "It said the sun is not standing still. It is running, toward a resting place of its own." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "For centuries that made no sense. The sun looked perfectly still to everyone." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "foot": "Modern astronomy", "text": "Then astronomers discovered the truth. The sun is flying through our galaxy at over eight hundred thousand kilometers per hour." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/35461866/15024051_1080_1920_24fps.mp4", "foot": "One orbit ≈ 230 million years", "text": "And it is dragging the Earth, and you, along with it, on a lap around the galaxy that takes over two hundred million years." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "text": "A book from the seventh century said the sun runs to a destination. Science took thirteen hundred years to catch up." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "Remember, back then, the greatest scholars on Earth taught that the sun circled a motionless Earth." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "The idea that the sun itself was flying somewhere sounded absurd." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "foot": "Modern astronomy", "text": "Then astronomers discovered the truth. The sun is racing through our galaxy at over eight hundred thousand kilometers per hour." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35461866/15024051_1080_1920_24fps.mp4", "foot": "One orbit ≈ 230 million years", "text": "And it drags the Earth, and you, along with it, on a single lap around the galaxy that takes over two hundred million years." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/37944582/16100876_1080_1920_30fps.mp4", "text": "The Quran even said the sun runs to a resting place. A final destination. Scientists agree the sun will one day burn out, and stop." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "A book from the seventh century knew the sun was moving. Science took thirteen hundred years to catch up." },
     { "type": "narration", "quote": "36:38", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/30450505/13049989_1080_1920_30fps.mp4", "text": "And the sun runs toward its resting place. That is the design of the Almighty, the All-Knowing." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/32349013/13800911_1080_1920_30fps.mp4", "text": "It was never standing still. And neither are you." }
   ],
   "sources": [
     "Qur'an, Surah Ya-Sin 36:38 — 'And the sun runs to a resting place for it; that is the determination of the Exalted in Might, the Knowing.'",
-    "Astronomy: the Sun orbits the galactic center at ~230 km/s (~828,000 km/h); one galactic orbit ≈ 225-250 million years; the solar system also moves toward the solar apex. The Sun is not stationary — historically it was thought fixed.",
-    "Qur'an 36:38 shown as Arabic + English; not recited.",
-    "VISUALS: all Pexels clips verified by thumbnail — no human faces/bodies."
+    "Astronomy: the Sun orbits the galactic center at ~230 km/s (~828,000 km/h); one galactic orbit ≈ 225-250 million years; the Sun will exhaust its fuel in ~5 billion years (a 'resting place'). The Sun is not stationary — historically thought fixed.",
+    "Qur'an 36:38 shown Arabic + English; not recited. All Pexels clips verified human-free."
   ]
 }

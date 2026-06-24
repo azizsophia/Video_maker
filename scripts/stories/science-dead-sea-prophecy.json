@@ -5,23 +5,25 @@
   "cinematic": true,
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
-  "_note": "CINEMATIC, hook-first. Footage = earth-from-space / desert (no humans; all clips thumbnail-verified). NO recital. Simple English. SOURCES VERIFIED: Surah Ar-Rum 30:2-6 — the Byzantines (Romans) defeated by Persia (~614 CE) then prophesied to win 'within 3-9 years' (bid' sinin); fulfilled at the Battle of Nineveh 627 CE / peace 628 CE. 'adna al-ard' (30:3) = nearest/lowest land; the Byzantine-Persian wars were fought in the Levant near the Dead Sea, whose shore is the lowest dry land on Earth (~430 m below sea level). ACCURACY: the historical prophecy (winner+timing) is the rock-solid core; 'lowest land'=Dead Sea is presented as a striking detail, with 'adna' honestly noted as nearest/lowest. Safe-zone captions. #HistoryTikTokContest.",
+  "_note": "CINEMATIC, hook-first, 60s+. Footage = earth-from-space / desert (no humans; verified). NO recital; voice speaks English. SOURCES: Surah Ar-Rum 30:2-6 (Romans defeated then victorious 'in 3-9 years'; fulfilled Battle of Nineveh 627 CE). Abu Bakr's public wager with Ubayy ibn Khalaf on the Romans' victory — Jami at-Tirmidhi 3193 (before betting was prohibited). 'adna al-ard' (30:3)=nearest/lowest; war fought in the Levant near the Dead Sea, lowest dry land on Earth (~430m below sea level). Safe-zone, legible captions.",
   "segments": [
     { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "Fourteen hundred years ago, the Quran made a prediction so specific it should have been impossible to get right." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/18897114/18897114-hd_1080_1920_30fps.mp4", "foot": "Qur'an · Surah Ar-Rum 30:2-4", "text": "It said the Romans had just lost a war. But in a few years, it promised, they would win again." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/36259626/15376417_1080_1920_30fps.mp4", "text": "At that moment the Romans were crushed. Everyone thought they were finished." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "foot": "Battle of Nineveh, 627 CE", "text": "But within nine years, exactly as the Quran said, the Romans came back and won." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "foot": "Qur'an 30:3 — 'adna al-ard'", "text": "And it told us where their defeat happened. In, quote, the lowest land." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/36259626/15376417_1080_1920_30fps.mp4", "text": "At that moment, the Persians had taken Jerusalem. They had pushed the Roman Empire to the edge of total collapse." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/36259626/15376417_1080_1920_30fps.mp4", "text": "Everyone was certain the Romans were finished." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "foot": "Jami at-Tirmidhi 3193", "text": "But one companion of the Prophet was so sure this would come true, he placed a public bet on it with the people who mocked it." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "foot": "Battle of Nineveh, 627 CE", "text": "And within nine years, exactly as the Quran promised, the Romans came back and won. He collected his bet." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "foot": "Qur'an 30:3 — 'adna al-ard'", "text": "But it did not stop there. The Quran also told us where their defeat happened. In, quote, the lowest land." },
     { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "foot": "Modern geography", "text": "That war was fought near the Dead Sea. And today we know its shore is the lowest dry land on the entire planet. Four hundred and thirty meters below sea level." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/32349013/13800911_1080_1920_30fps.mp4", "text": "A book from the seventh century named the winner, the timing, and the lowest place on Earth." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/32349013/13800911_1080_1920_30fps.mp4", "text": "The winner. The exact timing. And the lowest place on Earth." },
     { "type": "narration", "quote": "30:6", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "text": "This is the promise of Allah. And Allah never breaks His promise." },
-    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "The winner, the timing, and the lowest point on Earth. All in one prediction." }
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "All of it, in a single prediction, fourteen hundred years ago." }
   ],
   "sources": [
-    "Qur'an, Surah Ar-Rum 30:2-6 — the Romans (Byzantines) defeated 'in the nearest/lowest land' then prophesied to be victorious 'within a few (3-9) years'.",
-    "History: Byzantines defeated by Sassanid Persia c.613-614 CE (loss of the Levant/Jerusalem); Byzantine victory at the Battle of Nineveh 627 CE, peace 628 CE — fulfilling the 3-9 year window.",
-    "'adna al-arḍ' (30:3) means both 'nearest' and 'lowest' land; the Byzantine-Persian wars were fought in the Levant near the Dead Sea, whose shore is the lowest exposed land on Earth (~430 m below sea level). Presented honestly as a striking detail, not the only classical reading.",
-    "Qur'an 30:6 — 'the promise of Allah; Allah does not fail in His promise' (shown Arabic + English; not recited).",
-    "VISUALS: all Pexels clips verified by thumbnail — no human faces/bodies."
+    "Qur'an, Surah Ar-Rum 30:2-6 — Romans defeated 'in the nearest/lowest land' then prophesied to be victorious 'within 3-9 years'.",
+    "History: Byzantine losses to Sassanid Persia c.613-614 CE (incl. Jerusalem, 614); Byzantine victory at Nineveh 627 CE / peace 628 CE — fulfilling the window.",
+    "Abu Bakr's wager with Ubayy ibn Khalaf that the Romans would win — Jami at-Tirmidhi 3193 (betting was permitted before its later prohibition).",
+    "'adna al-arḍ' (30:3) = nearest/lowest land; the war was fought in the Levant near the Dead Sea, whose shore is the lowest exposed land on Earth (~430 m below sea level). A striking detail, honestly framed.",
+    "Qur'an 30:6 shown Arabic + English; not recited. All Pexels clips verified human-free."
   ]
 }
