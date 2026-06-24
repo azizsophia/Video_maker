@@ -1,4 +1,4 @@
-# Ketabi Studio 🎬
+
 
 A **code-driven video engine** for Islamic content — your own replacement for
 InVideo, built so every visual is programmable, reusable, and free to render.
