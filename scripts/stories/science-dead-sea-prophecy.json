@@ -1,0 +1,27 @@
+{
+  "id": "science-dead-sea-prophecy",
+  "title": "The Qur'an Predicted a War's Winner, Timing, and the Lowest Place on Earth",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "_note": "CINEMATIC, hook-first. Footage = earth-from-space / desert (no humans; all clips thumbnail-verified). NO recital. Simple English. SOURCES VERIFIED: Surah Ar-Rum 30:2-6 — the Byzantines (Romans) defeated by Persia (~614 CE) then prophesied to win 'within 3-9 years' (bid' sinin); fulfilled at the Battle of Nineveh 627 CE / peace 628 CE. 'adna al-ard' (30:3) = nearest/lowest land; the Byzantine-Persian wars were fought in the Levant near the Dead Sea, whose shore is the lowest dry land on Earth (~430 m below sea level). ACCURACY: the historical prophecy (winner+timing) is the rock-solid core; 'lowest land'=Dead Sea is presented as a striking detail, with 'adna' honestly noted as nearest/lowest. Safe-zone captions. #HistoryTikTokContest.",
+  "segments": [
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "Fourteen hundred years ago, the Quran made a prediction so specific it should have been impossible to get right." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/18897114/18897114-hd_1080_1920_30fps.mp4", "foot": "Qur'an · Surah Ar-Rum 30:2-4", "text": "It said the Romans had just lost a war. But in a few years, it promised, they would win again." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/36259626/15376417_1080_1920_30fps.mp4", "text": "At that moment the Romans were crushed. Everyone thought they were finished." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "foot": "Battle of Nineveh, 627 CE", "text": "But within nine years, exactly as the Quran said, the Romans came back and won." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "foot": "Qur'an 30:3 — 'adna al-ard'", "text": "And it told us where their defeat happened. In, quote, the lowest land." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "foot": "Modern geography", "text": "That war was fought near the Dead Sea. And today we know its shore is the lowest dry land on the entire planet. Four hundred and thirty meters below sea level." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/32349013/13800911_1080_1920_30fps.mp4", "text": "A book from the seventh century named the winner, the timing, and the lowest place on Earth." },
+    { "type": "narration", "quote": "30:6", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4", "text": "This is the promise of Allah. And Allah never breaks His promise." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4", "text": "The winner, the timing, and the lowest point on Earth. All in one prediction." }
+  ],
+  "sources": [
+    "Qur'an, Surah Ar-Rum 30:2-6 — the Romans (Byzantines) defeated 'in the nearest/lowest land' then prophesied to be victorious 'within a few (3-9) years'.",
+    "History: Byzantines defeated by Sassanid Persia c.613-614 CE (loss of the Levant/Jerusalem); Byzantine victory at the Battle of Nineveh 627 CE, peace 628 CE — fulfilling the 3-9 year window.",
+    "'adna al-arḍ' (30:3) means both 'nearest' and 'lowest' land; the Byzantine-Persian wars were fought in the Levant near the Dead Sea, whose shore is the lowest exposed land on Earth (~430 m below sea level). Presented honestly as a striking detail, not the only classical reading.",
+    "Qur'an 30:6 — 'the promise of Allah; Allah does not fail in His promise' (shown Arabic + English; not recited).",
+    "VISUALS: all Pexels clips verified by thumbnail — no human faces/bodies."
+  ]
+}
