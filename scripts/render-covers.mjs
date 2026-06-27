@@ -22,6 +22,7 @@ const COVERS = [
   { out: "09-al-kahf",         kicker: "DECODED",             title: "Surah\nAl-Kahf",                image: img(28359737) },
   { out: "10-year-elephant",   kicker: "ISLAMIC HISTORY",     title: "The Year\nof the Elephant",     image: img(2867771) },
   { out: "11-al-hijr",         kicker: "AL-HIJR · HEGRA",     title: "Do Not\nEnter Here",            image: img(11215342) },
+  { out: "12-iron-stars",      kicker: "QUR'AN & SCIENCE",    title: "Iron From\nthe Stars",          image: img(30616133) },
 ];
 
 const outDir = path.resolve("out/covers");
