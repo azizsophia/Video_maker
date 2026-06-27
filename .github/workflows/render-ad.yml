@@ -1,0 +1,49 @@
+name: Render Waitlist Ad
+
+# Parallax waitlist ad with a short spoken CTA (ElevenLabs "Daniel"). Vertical.
+on:
+  workflow_dispatch:
+    inputs:
+      cta:
+        description: "CTA voiceover line"
+        required: false
+        default: "Your photos, in a hardcover keepsake to treasure forever. Join the waitlist at ketabi studio dot com."
+
+jobs:
+  render-ad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 || \
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate CTA voiceover
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: npx tsx scripts/tts-cta.ts "${{ inputs.cta }}"
+
+      - name: Render ad (with voice)
+        run: |
+          mkdir -p out
+          npx remotion render src/ad-index.ts ParallaxAd "out/ketabi-waitlist-ad-voiced.mp4" \
+            --props='{"audioSrc":"ad/cta.mp3"}' --codec=h264 --crf 20
+
+      - name: Upload ad artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ketabi-waitlist-ad
+          path: out/ketabi-waitlist-ad-voiced.mp4
+          retention-days: 14
