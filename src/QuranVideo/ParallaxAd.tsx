@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Img, staticFile, useCurrentFrame, useVideoConfig, interpolate, spring } from "remotion";
+import { AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate, spring } from "remotion";
 // Bundled fonts (no gstatic through the proxy).
 import "@fontsource/playfair-display/700.css";
 import "@fontsource/playfair-display/900.css";
@@ -105,7 +105,7 @@ export const ParallaxAd: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
   return (
     <AbsoluteFill style={{ background: `linear-gradient(165deg, ${FOREST} 0%, ${FOREST_DEEP} 60%, #1c2f24 100%)` }}>
-      {audioSrc ? <Audio src={staticFile(audioSrc)} /> : null}
+      {audioSrc ? <Sequence from={12}><Audio src={staticFile(audioSrc)} /></Sequence> : null}
       <AbsoluteFill style={{ background: `radial-gradient(circle at ${50 + glowDrift / 10}% 28%, rgba(201,168,76,0.22), transparent 55%)` }} />
       <GoldDust />
 
