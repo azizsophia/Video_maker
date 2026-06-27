@@ -138,11 +138,11 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   const fade = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp" });
   const flourish = interpolate(frame, [18, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: "0 90px", opacity: fade }}>
+    <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: "200px 90px", opacity: fade }}>
       {kicker ? (
-        <div style={{ position: "absolute", top: 300, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
+        <div style={{ marginBottom: 40, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
       ) : null}
-      <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: 96, lineHeight: 1.85, textAlign: "center", color: CREAM, textShadow: "0 0 50px rgba(231,200,115,0.4)" }}>
+      <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: 92, lineHeight: 1.7, textAlign: "center", color: CREAM, textShadow: "0 0 50px rgba(231,200,115,0.4)" }}>
         {arabic}
       </div>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 18, margin: "44px 0" }}>
