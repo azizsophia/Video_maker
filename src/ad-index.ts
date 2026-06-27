@@ -10,9 +10,10 @@ const AdRoot: React.FC = () =>
     id: "ParallaxAd",
     component: ParallaxAd,
     fps: 30,
-    durationInFrames: 180,
+    durationInFrames: 240,
     width: 1080,
     height: 1920,
+    defaultProps: {},
   });
 
 registerRoot(AdRoot);
