@@ -97,22 +97,26 @@ export const ParallaxAd: React.FC = () => {
 
       {/* Parallax product cluster (pushed in by camera) */}
       <AbsoluteFill style={{ transform: `scale(${cam})` }}>
-        <Tile src="ad/book-baba.png" w={300} cx={300} cy={1040} depth={0.45} baseRot={9} delay={2.4} />
-        <Tile src="ad/book-mama.png" w={320} cx={800} cy={980} depth={0.62} baseRot={-8} delay={1.5} />
-        <Tile src="ad/card-open.png" w={430} cx={540} cy={920} depth={1.0} baseRot={-2} delay={0} />
+        <Tile src="ad/book-baba.png" w={400} cx={730} cy={960} depth={0.62} baseRot={8} delay={1.2} />
+        <Tile src="ad/book-mama.png" w={430} cx={440} cy={910} depth={1.0} baseRot={-5} delay={0} />
       </AbsoluteFill>
 
       {/* Headline (top safe zone) */}
       <div style={{ position: "absolute", top: 180, width: "100%", textAlign: "center", opacity: interpolate(headIn, [0, 1], [0, 1]), transform: `translateY(${interpolate(headIn, [0, 1], [-26, 0])}px)` }}>
         <div style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 9, fontSize: 30, color: GOLD, marginBottom: 22 }}>KETABI STUDIO</div>
-        <div style={{ fontFamily: PLAYFAIR, fontWeight: 900, fontSize: 78, lineHeight: 1.08, color: CREAM, textShadow: "0 4px 24px rgba(0,0,0,0.5)" }}>
-          Cards &amp; keepsakes,<br />sealed with a prayer
+        <div style={{ fontFamily: PLAYFAIR, fontWeight: 900, fontSize: 80, lineHeight: 1.08, color: CREAM, textShadow: "0 4px 24px rgba(0,0,0,0.5)" }}>
+          Your photos,<br />a keepsake forever
         </div>
+      </div>
+
+      {/* Mid caption — makes the personalization explicit */}
+      <div style={{ position: "absolute", top: 1270, width: "100%", textAlign: "center", opacity: interpolate(ctaIn, [0, 1], [0, 1]) }}>
+        <span style={{ fontFamily: JOST, fontWeight: 400, fontSize: 35, color: "rgba(246,244,239,0.92)" }}>hardcover books made from your own photos</span>
       </div>
 
       {/* CTA (bottom safe zone) */}
       <div style={{ position: "absolute", bottom: 230, width: "100%", display: "flex", flexDirection: "column", alignItems: "center", opacity: interpolate(ctaIn, [0, 1], [0, 1]), transform: `translateY(${interpolate(ctaIn, [0, 1], [30, 0])}px)` }}>
-        <div style={{ fontFamily: JOST, fontWeight: 400, fontSize: 30, color: "rgba(246,244,239,0.85)", marginBottom: 26 }}>be the first to gift one</div>
+        <div style={{ fontFamily: JOST, fontWeight: 400, fontSize: 30, color: "rgba(246,244,239,0.85)", marginBottom: 26 }}>be the first to make yours</div>
         <div style={{ transform: `scale(${pulse})`, fontFamily: JOST, fontWeight: 500, letterSpacing: 1, fontSize: 40, color: FOREST_DEEP, background: `linear-gradient(180deg, #f0e6c8, ${GOLD})`, padding: "26px 64px", borderRadius: 100, boxShadow: "0 14px 40px rgba(201,168,76,0.35)" }}>
           Join the waitlist
         </div>
