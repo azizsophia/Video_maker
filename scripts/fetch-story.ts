@@ -139,6 +139,7 @@ async function main() {
         foot: seg.foot,
         highlight: seg.highlight,
         videoSrc: seg.video, // remote Pexels URL — streamed at render (no download)
+        videoDuration: typeof seg.videoDuration === "number" ? seg.videoDuration : undefined, // clip seconds → fill-the-beat slowdown
         arabic: arabicQuote,
       });
       cursor += duration + GAP;

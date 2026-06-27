@@ -16,17 +16,32 @@ const CREAM = "#f7f1e2";
 
 const resolve = (src: string) => (/^https?:\/\//.test(src) ? src : staticFile(src));
 
+const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
+
 // Full-bleed Pexels footage (muted) with a brand green/gold grade + scrims so
-// captions stay readable. Calm: only a very slow zoom, footage does the motion.
-const CinematicBg: React.FC<{ src: string }> = ({ src }) => {
+// captions stay readable. A continuous Ken Burns pan+zoom keeps motion alive,
+// and the clip is slowed (playbackRate) to fill the whole beat so it never runs
+// out and FREEZES on its last frame at the cut. Pass videoDuration (seconds) so
+// the slow-down is computed exactly; otherwise a gentle slow-mo default is used.
+const CinematicBg: React.FC<{ src: string; videoDuration?: number }> = ({ src, videoDuration }) => {
   const frame = useCurrentFrame();
-  const { durationInFrames } = useVideoConfig();
-  const zoom = 1.05 + 0.05 * interpolate(frame, [0, durationInFrames], [0, 1], { extrapolateRight: "clamp" });
-  const fade = interpolate(frame, [0, 12], [0, 1], { extrapolateRight: "clamp" });
+  const { durationInFrames, fps } = useVideoConfig();
+  const beatSeconds = durationInFrames / fps;
+  // Stretch the clip to cover the beat (never faster than 1x, never a crawl).
+  const rate = videoDuration && videoDuration > 0
+    ? clamp(videoDuration / (beatSeconds + 0.3), 0.5, 1)
+    : 0.7;
+  const p = interpolate(frame, [0, durationInFrames], [0, 1], { extrapolateRight: "clamp" });
+  // Continuous motion: zoom in + a slow directional pan (direction varies per clip).
+  const zoom = 1.06 + 0.16 * p;
+  const dir = src.length % 2 === 0 ? 1 : -1;
+  const panX = dir * interpolate(p, [0, 1], [-26, 26]);
+  const panY = interpolate(p, [0, 1], [18, -18]);
+  const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ background: "#0b1410" }}>
-      <AbsoluteFill style={{ transform: `scale(${zoom})`, opacity: fade }}>
-        <OffthreadVideo src={resolve(src)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
+        <OffthreadVideo src={resolve(src)} muted playbackRate={rate} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       </AbsoluteFill>
       {/* brand green tint + gold warmth */}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(13,40,28,0.45) 0%, rgba(11,20,16,0.15) 35%, rgba(11,20,16,0.35) 70%, rgba(8,16,12,0.85) 100%)" }} />
@@ -150,7 +165,7 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
 export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
   return (
     <AbsoluteFill>
-      {seg.videoSrc ? <CinematicBg src={seg.videoSrc} /> : <AbsoluteFill style={{ background: "#0b1410" }} />}
+      {seg.videoSrc ? <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} /> : <AbsoluteFill style={{ background: "#0b1410" }} />}
       {seg.arabic ? (
         <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} />
       ) : (
