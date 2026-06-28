@@ -116,9 +116,9 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
       <AbsoluteFill style={{ transform: `scale(${cam})` }}>
         {/* second book (closed) in the back for "two books" */}
         <Tile src="ad/book-mama.png" w={272} cx={256} cy={792} depth={0.42} baseRot={-9} delay={1.4} total={total} />
-        {/* hero book that opens to reveal a DIFFERENT inner photo page (bigger,
-            so the printed caption inside reads clearly) */}
-        <OpeningBook coverSrc="ad/book-baba.png" spreadSrc="ad/spread-mama-sq.png" w={520} cx={772} cy={988} open0={42} open1={108} />
+        {/* hero book opens to ITS OWN interior page — same Baba book, a different
+            pose than the cover (coherent product; legible printed caption) */}
+        <OpeningBook coverSrc="ad/book-baba.png" spreadSrc="ad/spread-baba.png" w={520} cx={772} cy={988} open0={42} open1={108} />
       </AbsoluteFill>
 
       {/* Headline */}
@@ -132,7 +132,7 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
       {/* Subline — personalization made explicit (enlarged for legibility,
           balanced over two lines so it doesn't crowd the CTA) */}
       <div style={{ position: "absolute", top: 1352, width: "100%", textAlign: "center", padding: "0 70px", boxSizing: "border-box", opacity: interpolate(subIn, [0, 1], [0, 1]) }}>
-        <span style={{ fontFamily: JOST, fontWeight: 500, fontSize: 46, lineHeight: 1.28, color: CREAM, textShadow: "0 3px 18px rgba(0,0,0,0.55)" }}>hardcover books made<br />from your own photos</span>
+        <span style={{ fontFamily: JOST, fontWeight: 500, fontSize: 46, lineHeight: 1.28, color: CREAM, textShadow: "0 3px 18px rgba(0,0,0,0.55)" }}>Hardcover books made<br />from your own photos</span>
       </div>
 
       {/* CTA */}
