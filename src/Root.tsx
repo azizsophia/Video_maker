@@ -11,9 +11,11 @@ import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
 import { Cover } from "./QuranVideo/Cover";
 import sampleData from "./data/sample-al-ikhlas.json";
 import sampleStory from "./data/sample-story.json";
+import cinematicSample from "./data/cinematic-sample.json";
 
 const defaultProps = sampleData as unknown as QuranProps;
 const defaultStoryProps = sampleStory as unknown as StoryProps;
+const cinematicStoryProps = cinematicSample as unknown as StoryProps;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -74,7 +76,7 @@ export const RemotionRoot: React.FC = () => {
         })}
       />
 
-      {/* AI-narrated story video (vertical) — narration + real ayahs */}
+      {/* AI-narrated story video (vertical 9:16) — Shorts / TikTok / Reels */}
       <Composition
         id="StoryVideo"
         component={StoryVideo}
@@ -83,6 +85,25 @@ export const RemotionRoot: React.FC = () => {
         fps={STORY_FPS}
         width={1080}
         height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: storyDurationInFrames(props),
+        })}
+      />
+
+      {/* Long-form story video (horizontal 16:9) for standard YouTube. SAME
+          engine + props as StoryVideo; the cinematic layout reads
+          useVideoConfig() and re-flows for landscape (lower-third caption,
+          wider map box, side-by-side outro). This is the format long-form
+          lessons publish in (docs/PUBLISHING.md). The default props use the
+          cinematic sample so the Studio preview shows the landscape look. */}
+      <Composition
+        id="StoryVideoWide"
+        component={StoryVideo}
+        schema={storyPropsSchema}
+        defaultProps={cinematicStoryProps}
+        fps={STORY_FPS}
+        width={1920}
+        height={1080}
         calculateMetadata={({ props }) => ({
           durationInFrames: storyDurationInFrames(props),
         })}

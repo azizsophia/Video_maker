@@ -1,13 +1,19 @@
 name: Render Story Video
 
-# AI-narrated story video (Daniel narration + real Sudais ayahs). Vertical.
+# AI-narrated story video (Daniel narration + real Sudais ayahs).
+# orientation=wide -> long-form 16:9 (1920x1080) for YouTube;
+# orientation=vertical -> 9:16 (1080x1920) Shorts/TikTok/Reels cut.
 on:
   workflow_dispatch:
     inputs:
       story:
         description: "Story script path"
         required: true
-        default: "scripts/stories/gog-and-magog.json"
+        default: "scripts/stories/longform-euphrates.json"
+      orientation:
+        description: "wide (long-form 16:9 YouTube) or vertical (9:16 Shorts/Reels)"
+        required: true
+        default: "wide"
       theme:
         description: "Theme (blank = use the story's own; cinematic stories want 'ketabi'). Options: ketabi | atlas | midnight | emerald | sand | noor"
         required: false
@@ -44,8 +50,12 @@ jobs:
 
       - name: Render video
         run: |
+          COMP="StoryVideo"
+          if [ "${{ inputs.orientation }}" = "wide" ]; then COMP="StoryVideoWide"; fi
           mkdir -p out
-          npx remotion render StoryVideo "out/story.mp4" \
+          # Use every core; --crf 23 keeps the (low-motion) video crisp but far
+          # smaller, so long-form episodes fit under the Drive web-app limit.
+          npx remotion render "$COMP" "out/story.mp4" \
             --props=src/data/story-render.json --concurrency=$(nproc) --crf 23
 
       - name: Upload video artifact
@@ -76,5 +86,5 @@ jobs:
           DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
           DRIVE_UPLOAD_TOKEN: ${{ secrets.DRIVE_UPLOAD_TOKEN }}
         run: |
-          NAME="Ketabi — Story — $(basename "${{ inputs.story }}" .json).mp4"
+          NAME="Ketabi — Story — $(basename "${{ inputs.story }}" .json) (${{ inputs.orientation }}).mp4"
           python3 scripts/upload_to_drive.py --file "out/story.mp4" --name "$NAME" --mime video/mp4 --replace

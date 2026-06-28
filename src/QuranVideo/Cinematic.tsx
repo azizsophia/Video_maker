@@ -65,20 +65,27 @@ const toLines = (words: StoryWord[], per = 5) => {
 // per-word scaling (that was the "blinking").
 const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+  const { fps, width, height } = useVideoConfig();
+  const wide = width > height; // 16:9 long-form vs 9:16 short
   const t = frame / fps;
-  const lines = toLines(words);
+  const lines = toLines(words, wide ? 7 : 5);
   let idx = 0;
   for (let i = 0; i < lines.length; i++) if (t >= lines[i].start - 0.2) idx = i;
   const line = lines[idx];
   const lineFade = interpolate(t, [line?.start ?? 0, (line?.start ?? 0) + 0.35], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // Lower-third caption. Wide has far less vertical room, so the safe-area
+  // bottom inset and type shrink; the line gets wider to use the extra width.
+  const padBottom = wide ? 96 : 600;
+  const padX = wide ? 160 : 90;
+  const fontSize = wide ? 52 : 70;
+  const maxWidth = wide ? 1520 : 940;
   return (
-    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", padding: "0 90px 600px" }}>
+    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", padding: `0 ${padX}px ${padBottom}px` }}>
       <div
         style={{
           fontFamily: PLAYFAIR,
           fontWeight: 700,
-          fontSize: 70,
+          fontSize,
           lineHeight: 1.25,
           textAlign: "center",
           color: CREAM,
@@ -87,7 +94,7 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: "4px 16px",
-          maxWidth: 940,
+          maxWidth,
           background: "rgba(6,12,9,0.5)",
           padding: "20px 32px",
           borderRadius: 28,
@@ -110,18 +117,24 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
 
 const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot }) => {
   const frame = useCurrentFrame();
+  const { width, height } = useVideoConfig();
+  const wide = width > height;
   const fade = interpolate(frame, [4, 16], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // Kicker rides near the top; the source foot sits just above the lower-third
+  // caption. Both insets shrink for the shorter 16:9 frame.
+  const kickerTop = wide ? 80 : 300;
+  const footBottom = wide ? 300 : 860;
   return (
     <>
       {kicker ? (
-        <div style={{ position: "absolute", top: 300, width: "100%", display: "flex", justifyContent: "center", opacity: fade }}>
+        <div style={{ position: "absolute", top: kickerTop, width: "100%", display: "flex", justifyContent: "center", opacity: fade }}>
           <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, background: "rgba(6,12,9,0.42)", padding: "9px 22px", borderRadius: 16, textShadow: "0 2px 16px rgba(0,0,0,0.85)" }}>
             {kicker}
           </span>
         </div>
       ) : null}
       {foot ? (
-        <div style={{ position: "absolute", bottom: 860, width: "100%", display: "flex", justifyContent: "center", opacity: fade * 0.95 }}>
+        <div style={{ position: "absolute", bottom: footBottom, width: "100%", display: "flex", justifyContent: "center", opacity: fade * 0.95 }}>
           <span style={{ fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.92)", background: "rgba(6,12,9,0.42)", padding: "7px 18px", borderRadius: 14, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
             {foot}
           </span>
@@ -134,24 +147,32 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
 // Qur'an pull-quote over darkened footage (Arabic shown, never recited).
 const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: string }> = ({ arabic, words = [], kicker }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+  const { fps, width, height } = useVideoConfig();
+  const wide = width > height;
   const t = frame / fps;
   const fade = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp" });
   const flourish = interpolate(frame, [18, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // 16:9 has more width but much less height: tighten the vertical padding,
+  // shrink the Arabic + translation a touch, and widen the text column.
+  const padY = wide ? 110 : 200;
+  const padX = wide ? 160 : 90;
+  const arabicSize = wide ? 74 : 92;
+  const transSize = wide ? 46 : 58;
+  const maxWidth = wide ? 1320 : 900;
   return (
-    <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: "200px 90px", opacity: fade }}>
+    <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: `${padY}px ${padX}px`, opacity: fade }}>
       {kicker ? (
-        <div style={{ marginBottom: 40, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
+        <div style={{ marginBottom: wide ? 28 : 40, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
       ) : null}
-      <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: 92, lineHeight: 1.7, textAlign: "center", color: CREAM, textShadow: "0 0 50px rgba(231,200,115,0.4)" }}>
+      <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: arabicSize, lineHeight: 1.7, textAlign: "center", color: CREAM, textShadow: "0 0 50px rgba(231,200,115,0.4)" }}>
         {arabic}
       </div>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 18, margin: "44px 0" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 18, margin: wide ? "30px 0" : "44px 0" }}>
         <div style={{ height: 1.5, width: 150 * flourish, background: "linear-gradient(90deg,transparent,#e7c873)" }} />
         <div style={{ width: 14, height: 14, transform: "rotate(45deg)", background: GOLD, opacity: flourish }} />
         <div style={{ height: 1.5, width: 150 * flourish, background: "linear-gradient(90deg,#e7c873,transparent)" }} />
       </div>
-      <div style={{ fontFamily: CORMORANT, fontStyle: "italic", fontWeight: 600, fontSize: 58, lineHeight: 1.3, textAlign: "center", color: CREAM, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2px 14px", maxWidth: 900 }}>
+      <div style={{ fontFamily: CORMORANT, fontStyle: "italic", fontWeight: 600, fontSize: transSize, lineHeight: 1.3, textAlign: "center", color: CREAM, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2px 14px", maxWidth }}>
         {words.map((w, i) => (
           <span key={i} style={{ opacity: t >= w.start - 0.12 ? 1 : 0.3, color: t >= w.start - 0.04 && t < w.end + 0.12 ? GOLD : CREAM }}>
             {w.text}

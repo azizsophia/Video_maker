@@ -10,24 +10,34 @@ const CREAM = "#f7f1e2";
 // city markers with leader-line labels (placed clear of the bottom caption), a
 // faint graticule + sea/land tint, a compass, drifting dust and a slow drift.
 // Pins are at real lat/lon (honest); the land/sea tint is deliberately abstract.
+// The whole projection is laid out from useVideoConfig() so it works in both the
+// 9:16 short and the 16:9 long-form frame.
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
-
-// Projection box sits in the upper-middle so the bottom third stays free for the
-// narration caption (no overlap with labels).
-const BOX = { left: 200, right: 880, top: 360, bottom: 1120 };
-const proj = (b: Bounds, lon: number, lat: number) => ({
-  x: BOX.left + ((lon - b.lonMin) / (b.lonMax - b.lonMin)) * (BOX.right - BOX.left),
-  y: BOX.top + ((b.latMax - lat) / (b.latMax - b.latMin)) * (BOX.bottom - BOX.top),
-});
 
 export const CineMap: React.FC<{ view: string }> = ({ view }) => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps, durationInFrames, width: W, height: H } = useVideoConfig();
+  const wide = W > H; // 16:9 long-form vs 9:16 short
   const def = VIEWS[view] ?? VIEWS["medina-busra"];
   const b = def.bounds ?? DEFAULT_BOUNDS;
 
+  // Projection box. Vertical: upper-middle, leaving the bottom third for the
+  // caption. Wide: a broad band across the upper two-thirds, with the lower
+  // ~300px kept clear for the lower-third caption.
+  const BOX = wide
+    ? { left: 330, right: W - 330, top: 130, bottom: H - 320 }
+    : { left: 200, right: 880, top: 360, bottom: 1120 };
+  const bcx = (BOX.left + BOX.right) / 2;
+  const bcy = (BOX.top + BOX.bottom) / 2;
+  const bw = BOX.right - BOX.left;
+  const bh = BOX.bottom - BOX.top;
+  const proj = (lon: number, lat: number) => ({
+    x: BOX.left + ((lon - b.lonMin) / (b.lonMax - b.lonMin)) * bw,
+    y: BOX.top + ((b.latMax - lat) / (b.latMax - b.latMin)) * bh,
+  });
+
   const ids = def.route && def.route.length >= 2 ? def.route : def.pins;
-  const pts = ids.map((id) => ({ id, place: PLACES[id], ...proj(b, PLACES[id].lon, PLACES[id].lat) }));
+  const pts = ids.map((id) => ({ id, place: PLACES[id], ...proj(PLACES[id].lon, PLACES[id].lat) }));
   const twoPoint = ids.length === 2; // a 2-point journey gets FROM / destination eyebrows
   const a = pts[0];
   const z = pts[pts.length - 1];
@@ -73,8 +83,12 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
     return `${i === 0 ? "M" : "L"} ${q.x.toFixed(1)} ${q.y.toFixed(1)}`;
   }).join(" ");
 
-  // Drifting gold dust.
-  const specks = [[230, 520, 5], [840, 430, 4], [300, 980, 6], [780, 1040, 4], [180, 760, 4], [900, 760, 5], [520, 360, 4]];
+  // Drifting gold dust — placed by fraction of the frame so it scales to any size.
+  const speckF: [number, number, number][] = [
+    [0.21, 0.27, 5], [0.78, 0.22, 4], [0.28, 0.51, 6], [0.72, 0.55, 4],
+    [0.17, 0.40, 4], [0.84, 0.40, 5], [0.48, 0.19, 4],
+  ];
+  const specks = speckF.map(([fx, fy, r]) => [fx * W, fy * H, r] as [number, number, number]);
 
   return (
     <AbsoluteFill>
@@ -83,7 +97,7 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
       <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 36%, rgba(231,200,115,0.14), transparent 55%)" }} />
 
       <AbsoluteFill style={{ transform: `scale(${driftScale}) translateX(${driftX}px)` }}>
-        <svg width={1080} height={1920} style={{ position: "absolute", inset: 0 }}>
+        <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
           <defs>
             <linearGradient id="routeGrad" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#caa24a" />
@@ -97,17 +111,17 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
           </defs>
 
           {/* abstract land mass tint (stylised, not a precise coastline) */}
-          <ellipse cx={620} cy={760} rx={360} ry={520} fill="url(#land)" filter="url(#soft)" />
-          <ellipse cx={330} cy={520} rx={150} ry={260} fill="rgba(60,92,70,0.18)" filter="url(#soft)" />
+          <ellipse cx={bcx + bw * 0.06} cy={bcy} rx={bw * 0.46} ry={bh * 0.48} fill="url(#land)" filter="url(#soft)" />
+          <ellipse cx={bcx - bw * 0.28} cy={bcy - bh * 0.2} rx={bw * 0.18} ry={bh * 0.26} fill="rgba(60,92,70,0.18)" filter="url(#soft)" />
 
           {/* faint curved graticule */}
           {Array.from({ length: 5 }).map((_, i) => {
-            const yy = BOX.top + (i / 4) * (BOX.bottom - BOX.top);
-            return <path key={`lat${i}`} d={`M ${BOX.left - 40} ${yy + 30} Q 540 ${yy - 30} ${BOX.right + 40} ${yy + 30}`} fill="none" stroke="rgba(231,200,115,0.10)" strokeWidth={1} />;
+            const yy = BOX.top + (i / 4) * bh;
+            return <path key={`lat${i}`} d={`M ${BOX.left - 40} ${yy + 30} Q ${bcx} ${yy - 30} ${BOX.right + 40} ${yy + 30}`} fill="none" stroke="rgba(231,200,115,0.10)" strokeWidth={1} />;
           })}
           {Array.from({ length: 5 }).map((_, i) => {
-            const xx = BOX.left + (i / 4) * (BOX.right - BOX.left);
-            return <path key={`lon${i}`} d={`M ${xx - 20} ${BOX.top - 40} Q ${xx + 30} 740 ${xx - 20} ${BOX.bottom + 40}`} fill="none" stroke="rgba(231,200,115,0.08)" strokeWidth={1} />;
+            const xx = BOX.left + (i / 4) * bw;
+            return <path key={`lon${i}`} d={`M ${xx - 20} ${BOX.top - 40} Q ${xx + 30} ${bcy} ${xx - 20} ${BOX.bottom + 40}`} fill="none" stroke="rgba(231,200,115,0.08)" strokeWidth={1} />;
           })}
 
           {/* route glow + line */}
@@ -135,8 +149,8 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
             );
           })}
 
-          {/* compass, top-right */}
-          <g transform="translate(905,300)" opacity={0.7}>
+          {/* compass, top-right corner of the projection box */}
+          <g transform={`translate(${BOX.right - 30},${BOX.top + 20})`} opacity={0.7}>
             <circle r={34} fill="none" stroke="rgba(231,200,115,0.4)" strokeWidth={1.5} />
             <path d="M 0 -30 L 7 0 L 0 8 L -7 0 Z" fill={GOLD} />
             <path d="M 0 30 L 7 0 L 0 -8 L -7 0 Z" fill="rgba(231,200,115,0.3)" />
@@ -146,7 +160,7 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
         {/* leader-line labels — placed ABOVE each pin so they never hit the caption */}
         {pts.map((pt, i) => {
           const appear = spring({ frame: frame - 12 - i * 26, fps, config: { damping: 200 } });
-          const left = pt.x < 540; // bias label outward
+          const left = pt.x < bcx; // bias label outward
           return (
             <div key={pt.id} style={{
               position: "absolute", left: pt.x + (left ? -250 : 26), top: pt.y - 78,
@@ -158,7 +172,7 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
                   {pt.id === ids[0] ? "FROM" : "SEEN AS FAR AS"}
                 </div>
               ) : null}
-              <div style={{ fontFamily: TRANSLATION_FONT, fontWeight: 700, fontSize: 40, color: CREAM, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
+              <div style={{ fontFamily: TRANSLATION_FONT, fontWeight: 700, fontSize: wide ? 34 : 40, color: CREAM, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
                 {pt.place.label}
               </div>
             </div>

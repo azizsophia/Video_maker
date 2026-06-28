@@ -133,13 +133,14 @@ See `docs/SETUP.md` to get the live pipeline running.
 - **Fire of the Hijaz** short: done (map beat 4, red-sky beat 8, lava-field beat 10). Renders via `render-story.yml`.
 - Research done: TikTok-safe CTA (PLAYBOOK §8); long-form gap analysis → chose **Euphrates** as the first long-form.
 
-**IN PROGRESS — Long-form Euphrates documentary (the pilot)**
-- Script: `scripts/stories/longform-euphrates.json` — 30 beats, chaptered, accuracy-verified: **Sahih Muslim 2894 = "mountain of gold" (jabal); Sahih al-Bukhari 7119 = "treasure of gold" (kanz)**; NASA GRACE = 144 km³ lost 2003-2009 (Voss 2013). Has a river map beat (`map:"euphrates"`) and the Qur'an 47:18 quote beat.
-- Footage: one clip now filled into every narration beat (videoDuration set; **all URLs verified HTTP 206**). ⚠️ Selection was slug-filtered only — do a **visual human-free QC** (curl each thumb, swap any with people) before posting; the no-faces/adab rule is strict.
+**DONE — Long-form Euphrates documentary (the 16:9 pilot)**
+- Script: `scripts/stories/longform-euphrates.json` — now **37 beats, ~1,450 words (~9 min)**, chaptered, accuracy-verified: **Sahih Muslim 2894 = "mountain of gold" (jabal); Sahih al-Bukhari 7119 = "treasure of gold" (kanz)**; NASA GRACE = 144 km³ lost 2003-2009 (Voss 2013). River map beat (`map:"euphrates"`) plus **four Qur'an quote beats** (100:8, 102:1, 47:18 shown, never recited) on the love-of-wealth theme. Each beat's narration is kept within ~1.8× its clip length so the Ken Burns slow-down never freezes (verified: 0 freeze warnings).
+- **Format correction shipped:** the cinematic engine now reflows for landscape via `useVideoConfig()` — new `StoryVideoWide` composition (1920×1080); `CineCaption`/`CineLabel`/`CineQuote` (Cinematic.tsx), `CineMap` (responsive BOX/SVG/compass), and `ParallaxAd`/OpenBook (side-by-side book + CTA) all re-lay-out for 16:9. Vertical 9:16 `StoryVideo` is unchanged (Shorts cut). Verified with `remotion still` of `StoryVideoWide` (map / quote / caption / outro all correct).
+- Footage: one verified clip per narration beat (videoDuration set; **all URLs HTTP-206 verified**); quote beats reuse long verified clips as a darkened backdrop. ⚠️ Selection was slug-filtered only — do a **visual human-free QC** (curl each thumb, swap any with people) before posting; the no-faces/adab rule is strict.
 
 **NEXT STEPS**
-1. Visual human-free QC of the 29 Euphrates clips; swap any with people.
-2. Render: dispatch `render-story.yml` (inputs: `story=scripts/stories/longform-euphrates.json`, theme blank → uses `ketabi`) on this branch.
+1. Visual human-free QC of the Euphrates clips; swap any with people.
+2. Render the long-form: dispatch `render-story.yml` with `story=scripts/stories/longform-euphrates.json`, **`orientation=wide`**, theme blank (→ uses `ketabi`). For the Shorts cut, dispatch the same story with `orientation=vertical`.
 3. The run shows **"failure" = ONLY the optional Google Drive step**; the `story-video` artifact is still produced — download it and send the user the **artifact link** (long videos: link, not MP4).
 
 **Rules to keep**
@@ -148,8 +149,8 @@ See `docs/SETUP.md` to get the live pipeline running.
 - Captions: short-form = simple one-line title; TikTok adds 5 hashtags with `#edutokcontest` in the middle; long-form description only when asked.
 - Keep tool outputs SMALL (curl+parse, low-res images) — big dumps blow the request-size limit.
 
-### ⚠️ Long-form format correction (important)
-The first Euphrates long-form render came out **9:16 vertical, ~5 min** — WRONG for YouTube. Long-form must be:
-- **16:9 horizontal, 1920×1080.** The TikTok engine is 1080×1920; long-form needs a NEW landscape composition (e.g. `StoryVideoWide`) with the cinematic layout adapted for landscape: caption lower-third, `CineMap` BOX, `CineQuote`, and the `ParallaxAd`/OpenBook outro all reposition for 16:9 (use `useVideoConfig()` width/height, not hardcoded 1080×1920).
-- **Target ~8–10 min:** expand `scripts/stories/longform-euphrates.json` narration (~+60–80% words / more beats). Daniel narrates ~180–200 wpm, so plan ~1,500–1,800 words.
-- Keep vertical 9:16 for the Shorts cut of the same topic.
+### ✅ Long-form format correction (resolved)
+The first Euphrates long-form render came out **9:16 vertical, ~5 min** — WRONG for YouTube. Fixed:
+- **16:9 horizontal, 1920×1080** via the new `StoryVideoWide` composition. The cinematic layer reads `useVideoConfig()` and re-flows for landscape (caption lower-third, wider `CineMap` BOX/SVG, `CineQuote`, and a side-by-side `ParallaxAd`/OpenBook outro) — no hardcoded 1080×1920 left in the cinematic path. `render-story.yml` picks the composition from an `orientation` input.
+- **~9 min:** `longform-euphrates.json` expanded to 37 beats / ~1,450 words. (Daniel runs ~165–185 wpm in this reflective register → ~8.8–9 min incl. gaps + outro.)
+- Vertical 9:16 (`StoryVideo`) is kept unchanged for the Shorts cut of the same topic — render it with `orientation=vertical`.

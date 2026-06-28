@@ -6,17 +6,17 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
-  "_note": "LONG-FORM PILOT (~8-10 min) extending the 75K-view Euphrates short. Documentary structure with chapter kickers, a citation on every claim (foot), the hadith graded SAHIH on screen, an animated river map (map:'euphrates'), and the Qur'an 47:18 shown (quote, never recited). Reflective framing: the gold has NOT appeared; the science (NASA GRACE drying) is presented as documented fact, kept separate from scripture; no date-setting. FOOTAGE IS TODO: each narration beat needs its OWN distinct, human-free Pexels clip (river / Mesopotamia ruins / gold / satellite / dam / dry riverbed / desert / night sky) sourced + verified via the Pexels Search workflow before the final render. Map + quote beats render fully without footage.",
+  "_note": "LONG-FORM PILOT (~9 min, 16:9) extending the 75K-view Euphrates short. Render with the StoryVideoWide composition (orientation=wide). Documentary structure with chapter kickers, a citation on every claim (foot), the hadith graded SAHIH on screen, an animated river map (map:'euphrates'), and four Qur'an verses shown (quote, never recited). Reflective framing: the gold has NOT appeared; the science (NASA GRACE drying) is documented fact, kept separate from scripture; no date-setting. Footage: every narration beat carries a human-free Pexels clip (all URLs HTTP-206 verified); quote beats reuse long verified clips as a darkened backdrop; the map + quotes render fully without footage. Each beat's narration is kept within ~1.8x its clip length so the Ken Burns slow-down never freezes. ACCURACY: wordings verified verbatim on sunnah.com — Sahih Muslim 2894 = 'mountain of gold' (jabal min dhahab) + the 99-of-100 detail; Sahih al-Bukhari 7119 = 'treasure of gold' (kanz min dhahab) + 'whoever is present should take nothing'.",
   "segments": [
     {
       "type": "narration",
-      "text": "Fourteen hundred years ago, a man who could not read or write pointed to a single river and described something the world would only begin to measure in our own lifetime.",
+      "text": "Fourteen hundred years ago, in the deserts of Arabia, a man who could neither read nor write pointed to a single river, far from where he stood, and described something the modern world would only begin to measure with satellites, in our own lifetime.",
       "video": "https://videos.pexels.com/video-files/11858037/11858037-hd_1080_1920_60fps.mp4",
       "videoDuration": 18
     },
     {
       "type": "narration",
-      "text": "This is the story of the Euphrates, a mountain of gold, and a warning that was meant to reach us.",
+      "text": "This is the story of the Euphrates. A coming mountain of gold. A war over it that almost no one survives. And a warning that was meant to travel across fourteen centuries and reach you, exactly where you are sitting right now.",
       "video": "https://videos.pexels.com/video-files/11662958/11662958-hd_1080_1920_24fps.mp4",
       "videoDuration": 18
     },
@@ -25,18 +25,18 @@
       "map": "euphrates",
       "kicker": "ONE RIVER",
       "foot": "The Euphrates · about 2,800 km",
-      "text": "The Euphrates is the longest river in western Asia. It begins in the mountains of eastern Turkey, runs down through Syria, crosses Iraq, and meets the Tigris on its way to the Persian Gulf."
+      "text": "First, the river itself. The Euphrates is the longest river in western Asia. It is born in the snow-fed mountains of eastern Turkey, it runs south through Syria, it cuts across the entire length of Iraq, and it joins the Tigris before the two of them pour together into the Persian Gulf. For most of recorded history, this was simply the river at the centre of the known world."
     },
     {
       "type": "narration",
       "foot": "Mesopotamia · the cradle of civilisation",
-      "text": "On its banks, humanity built its very first cities. Sumer. Uruk. Babylon. The land between the two rivers is where writing, law, and the city itself were born.",
+      "text": "On these very banks, humanity built its first cities. Sumer. Uruk. Babylon. The land between the two rivers, Mesopotamia, is where writing was invented, where the earliest written laws were carved into stone, and where the city itself, as an idea, was first born.",
       "video": "https://videos.pexels.com/video-files/37617054/15943819_1080_1920_60fps.mp4",
       "videoDuration": 13
     },
     {
       "type": "narration",
-      "text": "So when the Prophet, peace be upon him, spoke about the end of time, he did not point to some place no one knew. He pointed to the most important river in human history.",
+      "text": "So when the Prophet, peace be upon him, spoke about the final days of this world, he did not point to some unknown corner that no one had ever heard of. He pointed to the single most important river in the entire history of the human race, and he told us to keep our eyes on it.",
       "video": "https://videos.pexels.com/video-files/10921268/10921268-hd_1080_1920_24fps.mp4",
       "videoDuration": 34
     },
@@ -44,138 +44,188 @@
       "type": "narration",
       "kicker": "THE PROPHECY",
       "foot": "Sahih Muslim 2894 (jabal min dhahab)",
-      "text": "He said the Hour will not come to pass until the Euphrates uncovers a mountain of gold.",
+      "text": "He said that the Hour will not arrive until the Euphrates draws back to uncover a mountain of gold.",
       "video": "https://videos.pexels.com/video-files/7667331/7667331-hd_1080_1920_30fps.mp4",
       "videoDuration": 10
     },
     {
       "type": "narration",
       "foot": "Sahih al-Bukhari 7119 (kanz min dhahab)",
-      "text": "In al-Bukhari's wording it is a treasure of gold, laid bare as the river pulls back from the land.",
+      "text": "In the wording recorded by al-Bukhari, it is a treasure of gold, laid bare as the river slowly pulls away from land it had covered for thousands of years.",
       "video": "https://videos.pexels.com/video-files/27551763/12165652_1080_1920_30fps.mp4",
       "videoDuration": 12
     },
     {
       "type": "narration",
-      "foot": "Grade: SAHIH — agreed upon by al-Bukhari & Muslim",
-      "text": "This is not a weak or doubtful report. It is recorded by both al-Bukhari and Muslim, the two most rigorously authenticated collections in Islam. Its grade is sahih, the highest there is.",
+      "foot": "Grade: SAHIH — the highest authentication",
+      "text": "And this is no weak or doubtful tale.",
       "video": "https://videos.pexels.com/video-files/27613481/12185879_1080_1920_60fps.mp4",
       "videoDuration": 5
     },
     {
       "type": "narration",
+      "foot": "Agreed upon by al-Bukhari & Muslim",
+      "text": "It is recorded by both al-Bukhari and Muslim, the two most rigorously verified collections of the Prophet's words in all of Islam. It was narrated by Abu Huraira, one of the closest companions, who simply passed on what he had heard. When al-Bukhari and Muslim agree on a narration, scholars call it agreed upon, and its grade is sahih: authentic, the very highest rank a report can hold. This is about as solid as Islamic knowledge ever gets.",
+      "video": "https://videos.pexels.com/video-files/31112120/13293234_1080_1920_30fps.mp4",
+      "videoDuration": 57
+    },
+    {
+      "type": "narration",
       "kicker": "THE WARNING",
-      "text": "Then he told us what people would do when they finally saw it. They would fight over it.",
+      "text": "Then he told us exactly what people would do on the day they finally laid eyes on that gold. They would not pray over it, or thank God for it. They would fight over it.",
       "video": "https://videos.pexels.com/video-files/35237402/14928221_1080_1920_60fps.mp4",
       "videoDuration": 11
     },
     {
       "type": "narration",
       "foot": "Sahih Muslim 2894",
-      "text": "And out of every hundred men who fight over that gold, he said, ninety-nine will be killed.",
+      "text": "And out of every hundred men who fight over that treasure, he said, ninety-nine of them will be killed.",
       "video": "https://videos.pexels.com/video-files/38141037/16193285_1080_1920_30fps.mp4",
       "videoDuration": 13
     },
     {
       "type": "narration",
       "foot": "Sahih Muslim 2894",
-      "text": "And here is the detail that lays the human heart bare. Every single one of them will say to himself: perhaps I will be the one who survives.",
+      "text": "And then comes the detail that lays the human heart completely bare. Every single one of them, knowing the odds, knowing that almost no one walks away, will still say to himself: perhaps I will be the one who survives.",
       "video": "https://videos.pexels.com/video-files/19797595/19797595-hd_1080_1920_60fps.mp4",
       "videoDuration": 10
     },
     {
       "type": "narration",
       "foot": "Sahih al-Bukhari 7119",
-      "text": "So he gave a command that crosses fourteen centuries to reach whoever is alive on that day. If you are there, do not take a single thing from it.",
+      "text": "So the Prophet, peace be upon him, gave a command meant to cross fourteen centuries and reach whoever is standing on that riverbank on that day. If you live to see it, he said, do not take a single thing from it. Treasure, lying in the open, free for the taking, and the instruction from the Messenger of Allah is simply this: turn, and walk away.",
       "video": "https://videos.pexels.com/video-files/33212388/14153622_1080_1920_60fps.mp4",
       "videoDuration": 32
     },
     {
       "type": "narration",
-      "text": "It sounds like a warning about gold. But really it is a warning about us, about what wealth does to people the moment they stop fearing the One who gave it.",
+      "text": "At first it sounds like a warning about gold. But listen to it again. It is really a warning about us. About what wealth does to a human being the very moment he stops fearing the One who gave it to him.",
       "video": "https://videos.pexels.com/video-files/34913155/14789474_1080_1920_30fps.mp4",
       "videoDuration": 10
     },
     {
       "type": "narration",
+      "kicker": "WHY GOLD?",
+      "text": "Because the Qur'an had already named this exact sickness, centuries before a single coin was ever pulled from that river. It does not pretend the love of wealth is a small thing in us. It tells us, plainly, that it is fierce.",
+      "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4",
+      "videoDuration": 65
+    },
+    {
+      "type": "narration",
+      "quote": "100:8",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Al-Aadiyat 100:8 (shown, not recited)",
+      "text": "And indeed, in his love of wealth, he is intense.",
+      "video": "https://videos.pexels.com/video-files/5819725/5819725-hd_720_1366_24fps.mp4",
+      "videoDuration": 30
+    },
+    {
+      "type": "narration",
+      "text": "And it warns us that this endless reaching for more, more money, more things, always a little more than the person beside us, will quietly swallow a person's whole life, and only loosen its grip at the very edge of the grave.",
+      "video": "https://videos.pexels.com/video-files/35497914/15037909_1080_1920_60fps.mp4",
+      "videoDuration": 81
+    },
+    {
+      "type": "narration",
+      "quote": "102:1",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah At-Takathur 102:1 (shown, not recited)",
+      "text": "Competition for more and more distracts you,",
+      "video": "https://videos.pexels.com/video-files/12222644/12222644-hd_1080_1920_30fps.mp4",
+      "videoDuration": 33
+    },
+    {
+      "type": "narration",
+      "text": "Until you visit the graves. That is where the counting finally stops. Not when a person has enough, because the one who chases more never once arrives at enough, but when the earth is closed over him, and he is asked about every coin he gathered.",
+      "video": "https://videos.pexels.com/video-files/10884417/10884417-hd_1080_1920_30fps.mp4",
+      "videoDuration": 47
+    },
+    {
+      "type": "narration",
+      "text": "So a mountain of gold, glittering in a drying river, is not a strange test at all. It is this whole lesson made visible. It is the entire world, pressed into one shining pile, with ninety-nine out of every hundred running straight into it, and only one holding back.",
+      "video": "https://videos.pexels.com/video-files/27551763/12165652_1080_1920_30fps.mp4",
+      "videoDuration": 12
+    },
+    {
+      "type": "narration",
       "kicker": "THE SCHOLARS",
       "foot": "an-Nawawi · Ibn Hajar al-Asqalani (Fath al-Bari)",
-      "text": "The classical scholars treated this as a real, future event, not a metaphor or a riddle.",
+      "text": "The great scholars of hadith treated this prophecy as a real, future event. Not a riddle. Not a metaphor to be quietly explained away.",
       "video": "https://videos.pexels.com/video-files/34677869/14698501_1080_1920_25fps.mp4",
       "videoDuration": 13
     },
     {
       "type": "narration",
       "foot": "an-Nawawi, commentary on Sahih Muslim",
-      "text": "Imam an-Nawawi explained that the order not to take the gold is because of the bloodshed and the chaos that will surround it.",
+      "text": "Imam an-Nawawi explained that the command not to take the gold is because of the bloodshed and the chaos that will surround it. The believer is told to keep his hands, and more importantly his heart, completely clear of it.",
       "video": "https://videos.pexels.com/video-files/36114345/15315623_1080_1920_29fps.mp4",
       "videoDuration": 26
     },
     {
       "type": "narration",
-      "text": "But notice their restraint. They did not set a date. They did not claim to know exactly how it would happen. And neither will we.",
+      "text": "But notice their restraint, and let it teach us something. These were brilliant men, who could have filled volumes with speculation. Instead they did not set a date. They did not pretend to know the year, or the exact way it would all unfold. And neither will we. To do that would be to claim a knowledge of the unseen that belongs to Allah, and to Allah alone.",
       "video": "https://videos.pexels.com/video-files/31112120/13293234_1080_1920_30fps.mp4",
       "videoDuration": 57
     },
     {
       "type": "narration",
       "kicker": "THE RIVER TODAY",
-      "text": "Now here is what is actually true today. And this part is not scripture. It is science you can check.",
+      "text": "Now, here is what is simply, verifiably true today. And this part is not scripture. It is science, and you can check every single line of it for yourself.",
       "video": "https://videos.pexels.com/video-files/20349219/20349219-hd_1080_1920_30fps.mp4",
       "videoDuration": 6
     },
     {
       "type": "narration",
       "foot": "NASA GRACE satellite mission",
-      "text": "Between 2003 and 2009, NASA's twin GRACE satellites measured the total water stored across the Tigris and Euphrates basin from orbit.",
+      "text": "Between 2003 and 2009, NASA's twin GRACE satellites measured the total water stored across the whole basin, from orbit.",
       "video": "https://videos.pexels.com/video-files/20349276/20349276-hd_1080_1920_30fps.mp4",
       "videoDuration": 4
     },
     {
       "type": "narration",
       "foot": "Voss et al., 2013, Water Resources Research",
-      "text": "They found it had lost roughly 144 cubic kilometers of fresh water, one of the fastest losses anywhere on Earth, most of it groundwater pumped from below.",
+      "text": "They found that the Tigris and Euphrates basin had lost around 144 cubic kilometres of fresh water in just those few years. That is one of the fastest losses of water measured anywhere on the planet, and most of it was groundwater, quietly pumped out from deep below the surface.",
       "video": "https://videos.pexels.com/video-files/35746058/15151874_1080_1920_60fps.mp4",
       "videoDuration": 21
     },
     {
       "type": "narration",
       "foot": "Documented water management, not a religious source",
-      "text": "Upstream, a chain of large dams now holds back much of the flow before it ever reaches Syria and Iraq.",
+      "text": "Upstream, a long chain of massive dams now holds back much of the flow, capturing the river behind walls of concrete before it can ever reach Syria and Iraq the way it once did, for thousands of years.",
       "video": "https://videos.pexels.com/video-files/10884417/10884417-hd_1080_1920_30fps.mp4",
       "videoDuration": 47
     },
     {
       "type": "narration",
       "foot": "Reported drought, 2020s",
-      "text": "Downstream, stretches of the Euphrates have shrunk to channels a person can wade across, exposing ground that had been riverbed for thousands of years.",
+      "text": "And downstream, in living memory, stretches of the mighty Euphrates have shrunk to thin channels a person can wade across on foot, exposing cracked, sun-baked ground that had lain beneath the water since before history was written.",
       "video": "https://videos.pexels.com/video-files/27062765/12061293_1080_1920_30fps.mp4",
       "videoDuration": 23
     },
     {
       "type": "narration",
       "foot": "Peer-reviewed hydrology",
-      "text": "The researchers who study it warn that, on its current path, the great river is steadily drying.",
+      "text": "The researchers who give their careers to studying this river warn that, on its present course, the great Euphrates is steadily, measurably drying.",
       "video": "https://videos.pexels.com/video-files/35065518/14853538_1080_1920_25fps.mp4",
       "videoDuration": 20
     },
     {
       "type": "narration",
       "kicker": "BE HONEST",
-      "text": "Now we have to be careful, because this is exactly the point where people exaggerate.",
+      "text": "Now we have to be very careful here, because this is the exact point where sincere, well-meaning people begin to exaggerate.",
       "video": "https://videos.pexels.com/video-files/34743427/14728607_1080_1920_30fps.mp4",
       "videoDuration": 9
     },
     {
       "type": "narration",
       "foot": "Reflection, not a claim of fulfilment",
-      "text": "The mountain of gold has not appeared. No one has uncovered a treasure. The prophecy describes a future moment we have simply not reached.",
+      "text": "So let us be completely clear. The mountain of gold has not appeared. No one has uncovered a treasure. The prophecy describes a future moment that we have simply not reached, and we will not pretend otherwise.",
       "video": "https://videos.pexels.com/video-files/10869006/10869006-hd_1080_1920_30fps.mp4",
       "videoDuration": 10
     },
     {
       "type": "narration",
-      "text": "What we can say honestly is smaller, and somehow heavier. The exact river the Prophet named, fourteen centuries ago, is measurably drying. And the signs of that day were always the kind of thing that begins quietly.",
+      "text": "What we can say honestly is something smaller, and yet somehow much heavier. The exact river the Prophet named, fourteen centuries before any satellite existed, before anyone could measure water from space, is today measurably drying. And the signs of that Day were always the kind of thing that begins quietly, in plain sight, long, long before anyone thinks to look up and notice.",
       "video": "https://videos.pexels.com/video-files/5819725/5819725-hd_720_1366_24fps.mp4",
       "videoDuration": 30
     },
@@ -191,25 +241,25 @@
     {
       "type": "narration",
       "kicker": "REFLECT",
-      "text": "A man in the desert, who never held a book, named the one river that mattered, described a treasure no one had seen, and warned of a greed no one had felt yet.",
+      "text": "So step back, and look at the whole of it. A man in the desert, who never once held a book in his life, named the single river that would matter, described a treasure that no eye had ever seen, and warned of a kind of greed that no one around him had even felt yet.",
       "video": "https://videos.pexels.com/video-files/33475549/14241100_1080_1622_30fps.mp4",
       "videoDuration": 19
     },
     {
       "type": "narration",
-      "text": "He was not guessing at geography. He was teaching us how to see.",
+      "text": "He was not guessing at geography. He was not predicting the weather. He was teaching us, across all these centuries, how to actually see the world for what it really is: a place of breathtaking beauty and constant temptation, where the brightest treasure is often the deadliest test, and how little of any of it we will carry with us on the day that we go.",
       "video": "https://videos.pexels.com/video-files/35497914/15037909_1080_1920_60fps.mp4",
       "videoDuration": 81
     },
     {
       "type": "narration",
-      "text": "Not to chase the gold, but to remember the One who buried it, and the day it will be uncovered.",
+      "text": "Not to chase the gold, but to remember the One who buried it in the earth in the first place. And to remember the Day it will all be uncovered, and gathered, and weighed, when the rich and the poor will stand exactly the same, and the only wealth that will matter is what we quietly sent ahead of us.",
       "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4",
       "videoDuration": 65
     },
     {
       "type": "narration",
-      "text": "Watch the river. And reflect.",
+      "text": "So watch the river. And reflect.",
       "video": "https://videos.pexels.com/video-files/26792376/12007264_1080_1920_30fps.mp4",
       "videoDuration": 4
     }
@@ -217,8 +267,9 @@
   "sources": [
     "Agreed upon (muttafaqun alayh). Sahih Muslim 2894 uses 'a mountain of gold' (jabal min dhahab) and gives the detail that people fight over it, ninety-nine of every hundred are killed, each saying 'perhaps I will be the one who survives.' Sahih al-Bukhari 7119 uses 'a treasure of gold' (kanz min dhahab) and gives the command that whoever is present should not take anything from it. Both wordings verified verbatim on sunnah.com.",
     "Classical commentary: an-Nawawi (Sharh Sahih Muslim) and Ibn Hajar al-Asqalani (Fath al-Bari) treat it as a real future event and explain the prohibition on taking the gold by the bloodshed/fitna surrounding it. No date is set.",
+    "Qur'an verses shown on screen (Arabic from Quran.com, never recited or synthesized), on the love of wealth: 100:8 (love of wealth is intense), 102:1 (rivalry for increase distracts you), 47:18 (the signs of the Hour have already come). All are deliberately short verses so the Arabic fits the pull-quote card in both 16:9 and 9:16.",
     "Geography: the Euphrates is the longest river of western Asia (~2,800 km), rising in eastern Turkey and flowing through Syria and Iraq to join the Tigris and reach the Persian Gulf; Mesopotamia is the cradle of the earliest cities (Sumer, Uruk, Babylon).",
     "Science (kept separate from scripture): NASA GRACE satellite gravimetry, 2003-2009, found the Tigris-Euphrates basin lost ~144 cubic km of freshwater, one of the fastest losses on Earth, largely groundwater (Voss, Famiglietti et al., 2013, Water Resources Research). Upstream dams and drought have reduced downstream flow; researchers warn the river is in long-term decline.",
-    "Framing: presented as reflection, NOT as a fulfilled prophecy. The 'mountain of gold' has not appeared; only the documented drying is claimed as present-day fact. Qur'an 47:18 is shown on screen (Arabic from Quran.com), never recited or synthesized. No human faces; all imagery is footage/maps, sourced."
+    "Framing: presented as reflection, NOT as a fulfilled prophecy. The 'mountain of gold' has not appeared; only the documented drying is claimed as present-day fact. No date-setting. No human faces; all imagery is footage/maps, sourced."
   ]
 }
