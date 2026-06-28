@@ -115,9 +115,10 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
 
       <AbsoluteFill style={{ transform: `scale(${cam})` }}>
         {/* second book (closed) in the back for "two books" */}
-        <Tile src="ad/book-baba.png" w={264} cx={258} cy={788} depth={0.42} baseRot={-9} delay={1.4} total={total} />
-        {/* hero book that opens to its inner photo page (centered when open) */}
-        <OpeningBook coverSrc="ad/book-mama.png" spreadSrc="ad/spread-mama-sq.png" w={470} cx={775} cy={1000} open0={42} open1={108} />
+        <Tile src="ad/book-mama.png" w={272} cx={256} cy={792} depth={0.42} baseRot={-9} delay={1.4} total={total} />
+        {/* hero book that opens to reveal a DIFFERENT inner photo page (bigger,
+            so the printed caption inside reads clearly) */}
+        <OpeningBook coverSrc="ad/book-baba.png" spreadSrc="ad/spread-mama-sq.png" w={520} cx={772} cy={988} open0={42} open1={108} />
       </AbsoluteFill>
 
       {/* Headline */}
@@ -128,9 +129,10 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
         </div>
       </div>
 
-      {/* Subline — personalization made explicit */}
-      <div style={{ position: "absolute", top: 1430, width: "100%", textAlign: "center", opacity: interpolate(subIn, [0, 1], [0, 1]) }}>
-        <span style={{ fontFamily: JOST, fontWeight: 400, fontSize: 35, color: "rgba(246,244,239,0.92)" }}>hardcover books made from your own photos</span>
+      {/* Subline — personalization made explicit (enlarged for legibility,
+          balanced over two lines so it doesn't crowd the CTA) */}
+      <div style={{ position: "absolute", top: 1352, width: "100%", textAlign: "center", padding: "0 70px", boxSizing: "border-box", opacity: interpolate(subIn, [0, 1], [0, 1]) }}>
+        <span style={{ fontFamily: JOST, fontWeight: 500, fontSize: 46, lineHeight: 1.28, color: CREAM, textShadow: "0 3px 18px rgba(0,0,0,0.55)" }}>hardcover books made<br />from your own photos</span>
       </div>
 
       {/* CTA */}
