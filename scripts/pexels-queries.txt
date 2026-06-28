@@ -1,11 +1,8 @@
-# Fire of the Hijaz — round 2: fill the lava / glow / black-rock / ember beats.
-molten lava night glow
-volcano lava at night
-lava fountain eruption night
-red glowing sky clouds night
-black lava rock field aerial
-basalt lava desert
-glowing embers black background
-fire sparks rising dark
-volcano lava river orange
-night sky red aurora
+# Cover photo search for the Fire of the Hijaz feed cover.
+# First line "--photos" switches pexels-pick into still-photo mode.
+--photos
+volcano eruption at night
+lava glowing dark
+volcanic desert landscape
+molten lava rock
+night desert dunes stars

@@ -192,8 +192,12 @@ async function main() {
     // Founding-list ad end card: on by default, but a story can opt out
     // (e.g. the standalone brand ad, which is itself the CTA).
     showOutro: story.showOutro ?? true,
-    ctaHeadline: story.ctaHeadline ?? "Join the founding list",
-    ctaSeconds: story.ctaSeconds ?? 4.5,
+    ctaHeadline: story.ctaHeadline ?? "Follow for more signs like this",
+    ctaHandle: story.ctaHandle ?? "",
+    ctaSub: story.ctaSub ?? "",
+    ctaComment: story.ctaComment ?? "",
+    ctaShowUrl: story.ctaShowUrl ?? false,
+    ctaSeconds: story.ctaSeconds ?? 5.5,
     cinematic: story.cinematic ?? false,
     segments,
   };

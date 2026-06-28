@@ -35,11 +35,27 @@ export const storyPropsSchema = z.object({
   reciterName: z.string().default("Sheikh Abdur-Rahman as-Sudais"),
   voiceName: z.string().default("Daniel"),
   websiteUrl: z.string().default("ketabistudio.com"),
-  // Auto-appended founding-list "ad" end card (on by default). The standalone
-  // brand ad sets showOutro:false so it doesn't get a redundant second CTA.
+  // Auto-appended end card (on by default). The standalone brand ad sets
+  // showOutro:false so it doesn't get a redundant second CTA.
+  //
+  // TikTok-safe CTA: the primary ask is an ON-PLATFORM action (follow, or a
+  // comment keyword) instead of an off-platform link/website screenshot, which
+  // TikTok's ranking suppresses as "ad-like". The website url is shown small
+  // (or hidden) so the card reads as content, not an ad.
   showOutro: z.boolean().default(true),
-  ctaHeadline: z.string().default("Join the founding list"),
-  ctaSeconds: z.number().default(4.5),
+  ctaHeadline: z.string().default("Follow for more signs like this"),
+  // Optional handle to follow (e.g. "@ketabistudio"). Empty -> hidden.
+  ctaHandle: z.string().default(""),
+  // Optional soft value line under the headline. Empty -> hidden.
+  ctaSub: z.string().default(""),
+  // Optional comment-keyword funnel: viewers comment this word and you reply
+  // with the waitlist link (keeps the link OFF the video, boosts engagement).
+  // Empty -> the line is hidden.
+  ctaComment: z.string().default(""),
+  // Show the website url on the end card. Off by default (off-platform push is
+  // the most-throttled pattern). The link belongs in the bio + pinned comment.
+  ctaShowUrl: z.boolean().default(false),
+  ctaSeconds: z.number().default(5.5),
   // Cinematic mode: full-bleed stock footage backgrounds + calm captions.
   cinematic: z.boolean().default(false),
   segments: z.array(storySegmentSchema),

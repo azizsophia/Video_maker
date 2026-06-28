@@ -1,0 +1,96 @@
+{
+  "id": "prophecy-fire-of-hijaz",
+  "title": "The Prophet Said a Fire Would Light Up Arabia. In 1256, the Ground Tore Open Outside Medina.",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "ctaHeadline": "Follow for more signs like this",
+  "ctaHandle": "@ketabistudio",
+  "ctaSub": "Sourced Islamic stories, every day.",
+  "ctaComment": "FIRE",
+  "_note": "CINEMATIC, hook-first, ~70s. PROPHECY lane (the playbook's strongest; closest to the 45K Euphrates hit). EVERY beat has its OWN distinct NEW clip (11 unique, no reuse anywhere in the library) sourced via the Pexels Search workflow; every thumbnail was visually checked human-free (no faces/bodies; rejected all crowd/feet/car/city clips) and every URL returns HTTP 206. videoDuration is the real Pexels clip length so playback slows to fill the beat (no end freeze) + continuous Ken Burns. NO recitation; Daniel speaks English only. Hadith shown via on-screen source labels (foot), not a Qur'an quote. TTS: 'Hijaz' and 'Busra' read fine; Harrat Rahat / an-Nawawi / Ibn Kathir kept OUT of the spoken lines (in foot labels only) so Daniel never mangles them. FRAMING is reflective ('look how this aligns, reflect'), never 'scientific/​miracle proof'. SOURCE: Sahih al-Bukhari 7118 + Sahih Muslim 2902; fulfillment = the 654 AH / 1256 CE Harrat Rahat basaltic fissure eruption east of Medina (~52 days), whose glow contemporary historians recorded as visible far to the north toward Busra. No em dashes. Captions kept in the TikTok safe band by the cinematic renderer.",
+  "segments": [
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/4143020/4143020-hd_1080_1920_30fps.mp4",
+      "videoDuration": 32,
+      "text": "Six hundred years before it happened, the Prophet, peace be upon him, described a fire that would burst out of Arabia. In the year 1256, the ground proved him right."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/34329524/14543342_1080_1920_30fps.mp4",
+      "videoDuration": 17,
+      "foot": "Sahih al-Bukhari 7118 · Sahih Muslim 2902",
+      "text": "He said the Last Hour would not come until a fire breaks out from the land of the Hijaz."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/38114880/16182405_1080_1920_30fps.mp4",
+      "videoDuration": 13,
+      "foot": "Hadith of Abu Hurayra (ra)",
+      "text": "And he added one strange detail. He said its light would shine on the necks of the camels in Busra."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/8829603/8829603-hd_1080_1920_30fps.mp4",
+      "videoDuration": 10,
+      "foot": "Busra · southern Syria",
+      "text": "Busra sits in southern Syria, more than a thousand kilometers north of Medina. A fire near the city being seen that far away sounded impossible."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/13096728/13096728-hd_1080_1920_24fps.mp4",
+      "videoDuration": 13,
+      "text": "For six centuries, it stayed just words on a page."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/29171249/12597258_1080_1920_24fps.mp4",
+      "videoDuration": 19,
+      "foot": "Harrat Rahat eruption · 654 AH / 1256 CE",
+      "text": "Then, in the year 1256, the ground a few miles east of Medina split open."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/9340000/9340000-hd_1080_1920_30fps.mp4",
+      "videoDuration": 16,
+      "foot": "The lava flowed for roughly 52 days",
+      "text": "A wall of molten rock poured out of the earth, and it kept flowing for almost two months."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/12139633/12139633-hd_1080_1920_60fps.mp4",
+      "videoDuration": 19,
+      "text": "The people who lived through it wrote that the night turned to fire, and the sky over Medina glowed red."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/28920412/12517290_1080_1920_30fps.mp4",
+      "videoDuration": 12,
+      "foot": "Recorded by an-Nawawi & Ibn Kathir (eyewitness era)",
+      "text": "And they recorded that the glow was seen far to the north, as far as Busra. The exact place the Prophet had named, six hundred years before."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/34300579/14531529_1080_1920_60fps.mp4",
+      "videoDuration": 13,
+      "foot": "Harrat Rahat lava field · visible today",
+      "text": "The lava cooled just short of the city. That black rock field still lies outside Medina today, where anyone can go and stand on it."
+    },
+    {
+      "type": "narration",
+      "video": "https://videos.pexels.com/video-files/30575359/13093390_1080_1622_30fps.mp4",
+      "videoDuration": 15,
+      "text": "A man who could not read or write named the fire, named the land, and named a city a thousand kilometers away. We are not asked to call it proof. Only to look, and to reflect."
+    }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 7118 (also Sahih Muslim 2902), narrated Abu Hurayra (ra): 'The Hour will not be established till a fire will come out of the land of the Hijaz which will throw light upon the necks of the camels at Busra.'",
+    "Fulfillment: the 654 AH / 1256 CE eruption of Harrat Rahat, a basaltic fissure volcanic field a few kilometers east of Medina. The eruption lasted roughly 52 days; the lava flow stopped short of the city. Contemporary and near-contemporary historians (an-Nawawi, who was alive at the time; Ibn Kathir in Al-Bidaya wa'l-Nihaya; al-Qastallani; Ibn Hajar in Fath al-Bari) recorded that its glow was seen at great distances to the north, including toward Busra in Syria. Many scholars identify this eruption as the fulfillment of the hadith.",
+    "Geology: Harrat Rahat (Harrat al-Madinah) is one of the largest volcanic fields in Arabia; the 1256 CE eruption is its most recent and best-documented event, and the basaltic lava flow remains visible near Medina today (Saudi Geological Survey).",
+    "Framing: presented as reflection, not as a 'scientific miracle' or proof. The hadith is authentic (Bukhari and Muslim); identifying the 1256 eruption as its fulfillment is the traditional scholarly view, attributed on screen to the historians who recorded it.",
+    "Footage: 11 distinct Pexels clips, one per beat (no reuse anywhere in the library); all thumbnails verified human-free (volcano, desert, molten rock, night sky, manuscript); all URLs return HTTP 206. Qur'an is not involved; nothing is recited. Daniel (ElevenLabs) speaks the English only."
+  ]
+}

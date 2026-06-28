@@ -320,19 +320,28 @@ const AyahCard: React.FC<{
   );
 };
 
-// Founding-list "ad" end card, auto-appended after the story. Shows the REAL
-// product (books + the founding-list page) so viewers understand the CTA.
+// Auto-appended end card. Deliberately NOT an ad: TikTok's ranking suppresses
+// videos that look promotional or push viewers off-platform (a website
+// screenshot + a "buy/join" button + a URL is the exact pattern it throttles).
+// So the primary ask is an ON-PLATFORM action the algorithm rewards: follow the
+// handle, and/or comment a keyword (which we answer with the waitlist link). The
+// link itself stays in the bio + a pinned comment, not on the video.
 const OutroCard: React.FC<{
   theme: ThemePalette;
   websiteUrl: string;
   headline: string;
+  handle: string;
+  sub: string;
+  comment: string;
+  showUrl: boolean;
   onLight: boolean;
-}> = ({ theme, websiteUrl, headline, onLight }) => {
+}> = ({ theme, websiteUrl, headline, handle, sub, comment, showUrl, onLight }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const appear = spring({ frame, fps, config: { damping: 200 } });
-  const float = Math.sin(frame / 16) * 8;
+  const rise = (1 - appear) * 24;
   const ink = onLight ? "#1c3a2b" : "#ffffff";
+  const soft = onLight ? "rgba(28,58,43,0.72)" : "rgba(255,255,255,0.78)";
   return (
     <AbsoluteFill
       style={{
@@ -340,55 +349,104 @@ const OutroCard: React.FC<{
         justifyContent: "center",
         alignItems: "center",
         opacity: appear,
+        padding: "0 90px",
       }}
     >
-      {/* header: icon + wordmark */}
-      <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 26 }}>
+      {/* brand mark — small, like a signature, not a billboard */}
+      <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 54, transform: `translateY(${rise}px)` }}>
         <Img
           src={staticFile("brand/ketabi-icon-green.png")}
-          style={{ width: 92, height: 92, objectFit: "contain" }}
+          style={{ width: 78, height: 78, objectFit: "contain" }}
         />
-        <div style={{ fontFamily: CAPTION_FONT, fontSize: 50, fontWeight: 900, letterSpacing: 1, color: ink }}>
+        <div style={{ fontFamily: CAPTION_FONT, fontSize: 40, fontWeight: 900, letterSpacing: 1, color: ink }}>
           Ketabi Studio
         </div>
       </div>
 
-      {/* the real website (founding list + book covers), in a floating device card */}
+      {/* primary, on-platform ask */}
       <div
         style={{
-          width: 540,
-          height: 960,
-          borderRadius: 46,
-          overflow: "hidden",
-          boxShadow: "0 40px 110px rgba(0,0,0,0.55)",
-          border: "7px solid rgba(255,255,255,0.95)",
-          transform: `translateY(${float}px) scale(${0.94 + 0.06 * appear})`,
+          fontFamily: CAPTION_FONT,
+          fontSize: 62,
+          fontWeight: 900,
+          lineHeight: 1.12,
+          textAlign: "center",
+          color: ink,
+          transform: `translateY(${rise}px)`,
         }}
       >
-        <Img
-          src={staticFile("promo/site-home.png")}
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-        />
+        {headline}
       </div>
 
-      {/* CTA */}
-      <div
-        style={{
-          marginTop: 30,
-          fontFamily: CAPTION_FONT,
-          fontSize: 50,
-          fontWeight: 900,
-          color: "#0b0b0b",
-          background: theme.accent,
-          padding: "12px 34px",
-          borderRadius: 28,
-        }}
-      >
-        {headline} →
-      </div>
-      <div style={{ marginTop: 18, fontFamily: CAPTION_FONT, fontSize: 40, fontWeight: 700, color: ink, opacity: 0.9 }}>
-        {websiteUrl}
-      </div>
+      {handle ? (
+        <div
+          style={{
+            marginTop: 22,
+            fontFamily: CAPTION_FONT,
+            fontSize: 56,
+            fontWeight: 900,
+            color: theme.accent,
+            transform: `translateY(${rise}px)`,
+          }}
+        >
+          {handle}
+        </div>
+      ) : null}
+
+      {sub ? (
+        <div
+          style={{
+            marginTop: 18,
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 34,
+            fontWeight: 600,
+            textAlign: "center",
+            color: soft,
+            transform: `translateY(${rise}px)`,
+          }}
+        >
+          {sub}
+        </div>
+      ) : null}
+
+      {/* comment-keyword funnel: looks like a native TikTok comment, keeps the
+          link off-screen, and the reply you post drives the signup. */}
+      {comment ? (
+        <div
+          style={{
+            marginTop: 44,
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
+            background: onLight ? "rgba(28,58,43,0.08)" : "rgba(255,255,255,0.12)",
+            border: `2px solid ${theme.accent}`,
+            borderRadius: 999,
+            padding: "16px 30px",
+            transform: `translateY(${rise}px)`,
+          }}
+        >
+          <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 32, fontWeight: 700, color: ink }}>
+            Comment{" "}
+            <span style={{ color: theme.accent, fontWeight: 900 }}>{`“${comment}”`}</span>
+            {" "}and I’ll send it to you
+          </div>
+        </div>
+      ) : null}
+
+      {showUrl ? (
+        <div
+          style={{
+            position: "absolute",
+            bottom: 120,
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 28,
+            letterSpacing: 2,
+            color: soft,
+          }}
+        >
+          {websiteUrl}
+        </div>
+      ) : null}
     </AbsoluteFill>
   );
 };
@@ -478,13 +536,17 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         </Sequence>
       ) : null}
 
-      {/* Auto-appended founding-list ad end card. */}
+      {/* Auto-appended, TikTok-safe end card (follow + comment funnel). */}
       {props.showOutro ? (
         <Sequence from={contentEndFrames} durationInFrames={outroFrames}>
           <OutroCard
             theme={theme}
             websiteUrl={props.websiteUrl}
             headline={props.ctaHeadline}
+            handle={props.ctaHandle}
+            sub={props.ctaSub}
+            comment={props.ctaComment}
+            showUrl={props.ctaShowUrl}
             onLight={props.theme === "noor" || props.theme === "atlas"}
           />
         </Sequence>
