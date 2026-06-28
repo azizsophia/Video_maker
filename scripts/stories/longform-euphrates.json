@@ -1,0 +1,57 @@
+{
+  "id": "longform-euphrates",
+  "title": "The Euphrates Prophecy: the River, the Mountain of Gold, and a 1400-Year-Old Warning",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "_note": "LONG-FORM PILOT (~8-10 min) extending the 75K-view Euphrates short. Documentary structure with chapter kickers, a citation on every claim (foot), the hadith graded SAHIH on screen, an animated river map (map:'euphrates'), and the Qur'an 47:18 shown (quote, never recited). Reflective framing: the gold has NOT appeared; the science (NASA GRACE drying) is presented as documented fact, kept separate from scripture; no date-setting. FOOTAGE IS TODO: each narration beat needs its OWN distinct, human-free Pexels clip (river / Mesopotamia ruins / gold / satellite / dam / dry riverbed / desert / night sky) sourced + verified via the Pexels Search workflow before the final render. Map + quote beats render fully without footage.",
+  "segments": [
+    { "type": "narration", "text": "Fourteen hundred years ago, a man who could not read or write pointed to a single river and described something the world would only begin to measure in our own lifetime." },
+    { "type": "narration", "text": "This is the story of the Euphrates, a mountain of gold, and a warning that was meant to reach us." },
+
+    { "type": "narration", "map": "euphrates", "kicker": "ONE RIVER", "foot": "The Euphrates · about 2,800 km", "text": "The Euphrates is the longest river in western Asia. It begins in the mountains of eastern Turkey, runs down through Syria, crosses Iraq, and meets the Tigris on its way to the Persian Gulf." },
+    { "type": "narration", "foot": "Mesopotamia · the cradle of civilisation", "text": "On its banks, humanity built its very first cities. Sumer. Uruk. Babylon. The land between the two rivers is where writing, law, and the city itself were born." },
+    { "type": "narration", "text": "So when the Prophet, peace be upon him, spoke about the end of time, he did not point to some place no one knew. He pointed to the most important river in human history." },
+
+    { "type": "narration", "kicker": "THE PROPHECY", "foot": "Sahih al-Bukhari 7119 · Sahih Muslim 2894", "text": "He said the Hour will not come to pass until the Euphrates uncovers a mountain of gold." },
+    { "type": "narration", "foot": "Sahih Muslim 2894", "text": "In another wording, it is a treasure of gold, laid bare as the river pulls back from the land." },
+    { "type": "narration", "foot": "Grade: SAHIH — agreed upon by al-Bukhari & Muslim", "text": "This is not a weak or doubtful report. It is recorded by both al-Bukhari and Muslim, the two most rigorously authenticated collections in Islam. Its grade is sahih, the highest there is." },
+
+    { "type": "narration", "kicker": "THE WARNING", "text": "Then he told us what people would do when they finally saw it. They would fight over it." },
+    { "type": "narration", "foot": "Sahih Muslim 2894", "text": "And out of every hundred men who fight over that gold, he said, ninety-nine will be killed." },
+    { "type": "narration", "foot": "Sahih Muslim 2894", "text": "And here is the detail that lays the human heart bare. Every single one of them will say to himself: perhaps I will be the one who survives." },
+    { "type": "narration", "foot": "Sahih al-Bukhari 7119", "text": "So he gave a command that crosses fourteen centuries to reach whoever is alive on that day. If you are there, do not take a single thing from it." },
+    { "type": "narration", "text": "It sounds like a warning about gold. But really it is a warning about us, about what wealth does to people the moment they stop fearing the One who gave it." },
+
+    { "type": "narration", "kicker": "THE SCHOLARS", "foot": "an-Nawawi · Ibn Hajar al-Asqalani (Fath al-Bari)", "text": "The classical scholars treated this as a real, future event, not a metaphor or a riddle." },
+    { "type": "narration", "foot": "an-Nawawi, commentary on Sahih Muslim", "text": "Imam an-Nawawi explained that the order not to take the gold is because of the bloodshed and the chaos that will surround it." },
+    { "type": "narration", "text": "But notice their restraint. They did not set a date. They did not claim to know exactly how it would happen. And neither will we." },
+
+    { "type": "narration", "kicker": "THE RIVER TODAY", "text": "Now here is what is actually true today. And this part is not scripture. It is science you can check." },
+    { "type": "narration", "foot": "NASA GRACE satellite mission", "text": "Between 2003 and 2009, NASA's twin GRACE satellites measured the total water stored across the Tigris and Euphrates basin from orbit." },
+    { "type": "narration", "foot": "Voss et al., 2013, Water Resources Research", "text": "They found it had lost roughly 144 cubic kilometers of fresh water, one of the fastest losses anywhere on Earth, most of it groundwater pumped from below." },
+    { "type": "narration", "foot": "Documented water management, not a religious source", "text": "Upstream, a chain of large dams now holds back much of the flow before it ever reaches Syria and Iraq." },
+    { "type": "narration", "foot": "Reported drought, 2020s", "text": "Downstream, stretches of the Euphrates have shrunk to channels a person can wade across, exposing ground that had been riverbed for thousands of years." },
+    { "type": "narration", "foot": "Peer-reviewed hydrology", "text": "The researchers who study it warn that, on its current path, the great river is steadily drying." },
+
+    { "type": "narration", "kicker": "BE HONEST", "text": "Now we have to be careful, because this is exactly the point where people exaggerate." },
+    { "type": "narration", "foot": "Reflection, not a claim of fulfilment", "text": "The mountain of gold has not appeared. No one has uncovered a treasure. The prophecy describes a future moment we have simply not reached." },
+    { "type": "narration", "text": "What we can say honestly is smaller, and somehow heavier. The exact river the Prophet named, fourteen centuries ago, is measurably drying. And the signs of that day were always the kind of thing that begins quietly." },
+
+    { "type": "narration", "quote": "47:18", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Muhammad 47:18 (shown, not recited)", "text": "Are they waiting for anything but the Hour, that it should come upon them suddenly? Its signs have already come." },
+
+    { "type": "narration", "kicker": "REFLECT", "text": "A man in the desert, who never held a book, named the one river that mattered, described a treasure no one had seen, and warned of a greed no one had felt yet." },
+    { "type": "narration", "text": "He was not guessing at geography. He was teaching us how to see." },
+    { "type": "narration", "text": "Not to chase the gold, but to remember the One who buried it, and the day it will be uncovered." },
+    { "type": "narration", "text": "Watch the river. And reflect." }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 7119 and Sahih Muslim 2894 (muttafaqun alayh / agreed upon): the Prophet (peace be upon him) said the Hour will not come until the Euphrates uncovers a mountain (treasure) of gold; people will fight over it and out of every hundred, ninety-nine will be killed; each saying 'perhaps I will be the one who survives'; and the command that whoever is present should not take anything from it.",
+    "Classical commentary: an-Nawawi (Sharh Sahih Muslim) and Ibn Hajar al-Asqalani (Fath al-Bari) treat it as a real future event and explain the prohibition on taking the gold by the bloodshed/fitna surrounding it. No date is set.",
+    "Geography: the Euphrates is the longest river of western Asia (~2,800 km), rising in eastern Turkey and flowing through Syria and Iraq to join the Tigris and reach the Persian Gulf; Mesopotamia is the cradle of the earliest cities (Sumer, Uruk, Babylon).",
+    "Science (kept separate from scripture): NASA GRACE satellite gravimetry, 2003-2009, found the Tigris-Euphrates basin lost ~144 cubic km of freshwater, one of the fastest losses on Earth, largely groundwater (Voss, Famiglietti et al., 2013, Water Resources Research). Upstream dams and drought have reduced downstream flow; researchers warn the river is in long-term decline.",
+    "Framing: presented as reflection, NOT as a fulfilled prophecy. The 'mountain of gold' has not appeared; only the documented drying is claimed as present-day fact. Qur'an 47:18 is shown on screen (Arabic from Quran.com), never recited or synthesized. No human faces; all imagery is footage/maps, sourced."
+  ]
+}

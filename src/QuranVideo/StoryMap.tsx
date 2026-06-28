@@ -19,10 +19,15 @@ export const PLACES: Record<string, Place> = {
   tabuk: { label: "Tabuk", lat: 28.38, lon: 36.57 },
   petra: { label: "Petra", lat: 30.33, lon: 35.44 },
   busra: { label: "Busra", lat: 32.52, lon: 36.48 },
+  // Euphrates river: source in eastern Turkey, through Syria and Iraq, to the Gulf.
+  eupSource: { label: "Source · E. Turkey", lat: 38.8, lon: 38.7 },
+  eupSyria: { label: "Syria", lat: 35.95, lon: 39.0 },
+  eupIraq: { label: "Iraq", lat: 32.5, lon: 44.4 },
+  eupGulf: { label: "Persian Gulf", lat: 30.4, lon: 47.9 },
 };
 
 export type Bounds = { lonMin: number; lonMax: number; latMin: number; latMax: number };
-export type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds };
+export type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds; chip?: string };
 export const VIEWS: Record<string, MapView> = {
   // Madinah -> Busra: the fire's glow was recorded reaching this far north, into
   // southern Syria. Window widened north to include the Levant.
@@ -31,6 +36,14 @@ export const VIEWS: Record<string, MapView> = {
     pins: ["medina", "busra"],
     route: ["medina", "busra"],
     bounds: { lonMin: 33.5, lonMax: 42.5, latMin: 21, latMax: 34 },
+    chip: "≈ 1,300 km",
+  },
+  // The Euphrates, source to sea: the river the hadith names.
+  euphrates: {
+    title: "",
+    pins: ["eupSource", "eupSyria", "eupIraq", "eupGulf"],
+    route: ["eupSource", "eupSyria", "eupIraq", "eupGulf"],
+    bounds: { lonMin: 36.5, lonMax: 49.5, latMin: 28.5, latMax: 40 },
   },
   hijaz: {
     title: "AL-ULA, NORTH-WEST ARABIA",

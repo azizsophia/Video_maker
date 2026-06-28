@@ -28,16 +28,29 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
 
   const ids = def.route && def.route.length >= 2 ? def.route : def.pins;
   const pts = ids.map((id) => ({ id, place: PLACES[id], ...proj(b, PLACES[id].lon, PLACES[id].lat) }));
+  const twoPoint = ids.length === 2; // a 2-point journey gets FROM / destination eyebrows
   const a = pts[0];
   const z = pts[pts.length - 1];
 
-  // Curved (great-circle-ish) route: a quadratic bezier bowed to the west.
+  // Route geometry. A 2-point journey bows into a gentle arc; a multi-point river
+  // path is drawn as a smooth polyline through every point.
   const mx = (a.x + z.x) / 2, my = (a.y + z.y) / 2;
   const dx = z.x - a.x, dy = z.y - a.y, len = Math.hypot(dx, dy) || 1;
   const nx = -dy / len, ny = dx / len; // perpendicular
   const bow = 120;
   const cx = mx + nx * bow, cy = my + ny * bow;
   const bez = (t: number) => {
+    if (!twoPoint) {
+      // piecewise-linear along all points
+      const seg = pts.slice(1).map((p, i) => Math.hypot(p.x - pts[i].x, p.y - pts[i].y));
+      const total = seg.reduce((s, v) => s + v, 0) || 1;
+      let target = total * t;
+      for (let i = 0; i < seg.length; i++) {
+        if (target <= seg[i]) { const r = seg[i] ? target / seg[i] : 0; return { x: pts[i].x + (pts[i + 1].x - pts[i].x) * r, y: pts[i].y + (pts[i + 1].y - pts[i].y) * r }; }
+        target -= seg[i];
+      }
+      return z;
+    }
     const u = 1 - t;
     return { x: u * u * a.x + 2 * u * t * cx + t * t * z.x, y: u * u * a.y + 2 * u * t * cy + t * t * z.y };
   };
@@ -140,9 +153,11 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
               width: 240, textAlign: left ? "right" : "left",
               opacity: appear, transform: `translateY(${(1 - appear) * 8}px)`,
             }}>
-              <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 17, letterSpacing: 4, color: GOLD, marginBottom: 2 }}>
-                {pt.id === ids[0] ? "FROM" : "SEEN AS FAR AS"}
-              </div>
+              {twoPoint ? (
+                <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 17, letterSpacing: 4, color: GOLD, marginBottom: 2 }}>
+                  {pt.id === ids[0] ? "FROM" : "SEEN AS FAR AS"}
+                </div>
+              ) : null}
               <div style={{ fontFamily: TRANSLATION_FONT, fontWeight: 700, fontSize: 40, color: CREAM, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
                 {pt.place.label}
               </div>
@@ -150,15 +165,17 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
           );
         })}
 
-        {/* distance chip near the route midpoint */}
-        <div style={{
-          position: "absolute", left: routeMid.x - 110, top: routeMid.y - 24, width: 220, textAlign: "center",
-          opacity: clamp01(interpolate(frame, [70, 92], [0, 1])),
-        }}>
-          <span style={{ fontFamily: TRANSLATION_FONT, fontSize: 24, letterSpacing: 2, fontWeight: 600, color: "#0b140f", background: GOLD, padding: "6px 16px", borderRadius: 20 }}>
-            ≈ 1,300 km
-          </span>
-        </div>
+        {/* optional distance chip near the route midpoint (per-view) */}
+        {def.chip ? (
+          <div style={{
+            position: "absolute", left: routeMid.x - 110, top: routeMid.y - 24, width: 220, textAlign: "center",
+            opacity: clamp01(interpolate(frame, [70, 92], [0, 1])),
+          }}>
+            <span style={{ fontFamily: TRANSLATION_FONT, fontSize: 24, letterSpacing: 2, fontWeight: 600, color: "#0b140f", background: GOLD, padding: "6px 16px", borderRadius: 20 }}>
+              {def.chip}
+            </span>
+          </div>
+        ) : null}
       </AbsoluteFill>
 
       {/* drifting dust */}
