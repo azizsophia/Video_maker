@@ -1,8 +1,8 @@
-# Cover photo search for the Fire of the Hijaz feed cover.
-# First line "--photos" switches pexels-pick into still-photo mode.
+# Picnic interior photo for the keepsake ad (the photo "inside" the book).
+# --photos = still-photo search mode.
 --photos
-volcano eruption at night
-lava glowing dark
-volcanic desert landscape
-molten lava rock
-night desert dunes stars
+mother children picnic blanket park
+family picnic outdoors blanket
+mom and kids picnic grass sunset
+mother daughter picnic park
+family picnic basket blanket
