@@ -17,11 +17,11 @@ const GOLD = "#C9A84C";
 const ease = (t: number) => 1 - Math.pow(1 - t, 3);
 
 // A simple floating product tile (used for the second book in the back).
-const Tile: React.FC<{ src: string; w: number; cx: number; cy: number; depth: number; baseRot: number; delay: number }>
-  = ({ src, w, cx, cy, depth, baseRot, delay }) => {
+const Tile: React.FC<{ src: string; w: number; cx: number; cy: number; depth: number; baseRot: number; delay: number; total: number }>
+  = ({ src, w, cx, cy, depth, baseRot, delay, total }) => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
-  const p = ease(interpolate(frame, [0, durationInFrames], [0, 1], { extrapolateRight: "clamp" }));
+  const { fps } = useVideoConfig();
+  const p = ease(interpolate(frame, [0, total], [0, 1], { extrapolateRight: "clamp" }));
   const panX = interpolate(p, [0, 1], [34, -34]) * depth;
   const floatY = Math.sin((frame / fps) * 0.8 + delay) * 9 * depth;
   const rotY = baseRot + Math.sin((frame / fps) * 0.5 + delay) * 2;
@@ -93,10 +93,14 @@ const GoldDust: React.FC = () => {
   })}</>);
 };
 
-export const ParallaxAd: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
+// `frames` overrides the duration used for the slow camera/parallax drift, so
+// the ad animates correctly whether it's its own composition (standalone ad) or
+// embedded as a fixed-length outro inside a longer story video.
+export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ audioSrc, frames }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
-  const cam = interpolate(ease(interpolate(frame, [0, durationInFrames], [0, 1])), [0, 1], [1, 1.06]);
+  const total = frames ?? durationInFrames;
+  const cam = interpolate(ease(interpolate(frame, [0, total], [0, 1])), [0, 1], [1, 1.06]);
   const glowDrift = Math.sin(frame / 40) * 40;
   const headIn = spring({ frame: frame - 6, fps, config: { damping: 200 } });
   const subIn = spring({ frame: frame - 116, fps, config: { damping: 200 } });
@@ -111,7 +115,7 @@ export const ParallaxAd: React.FC<{ audioSrc?: string }> = ({ audioSrc }) => {
 
       <AbsoluteFill style={{ transform: `scale(${cam})` }}>
         {/* second book (closed) in the back for "two books" */}
-        <Tile src="ad/book-baba.png" w={264} cx={258} cy={788} depth={0.42} baseRot={-9} delay={1.4} />
+        <Tile src="ad/book-baba.png" w={264} cx={258} cy={788} depth={0.42} baseRot={-9} delay={1.4} total={total} />
         {/* hero book that opens to its inner photo page (centered when open) */}
         <OpeningBook coverSrc="ad/book-mama.png" spreadSrc="ad/spread-mama-sq.png" w={470} cx={775} cy={1000} open0={42} open1={108} />
       </AbsoluteFill>

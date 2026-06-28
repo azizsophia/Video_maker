@@ -17,6 +17,7 @@ import { StoryMap } from "./StoryMap";
 import { Scene } from "./Scenes";
 import { Slide, InstitutionalScene, InkCaption } from "./Slides";
 import { CinematicBeat } from "./Cinematic";
+import { ParallaxAd } from "./ParallaxAd";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT, CAPTION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -27,10 +28,18 @@ const resolveAudio = (src: string): string =>
 const contentEndSeconds = (props: StoryProps): number =>
   props.segments.reduce((m, s) => Math.max(m, s.fromSeconds + s.durationInSeconds), 0);
 
+// Seconds of outro appended after the content. The default outro is the
+// ParallaxAd product spot (keepsake books + "Join the waitlist · ketabistudio.com"),
+// which needs ~8s to play its open-the-book + CTA timeline. Set outroAd:false to
+// use the lightweight text end card (ctaSeconds) instead.
+export const outroSeconds = (props: StoryProps): number => {
+  if (!props.showOutro) return 0;
+  return props.outroAd === false ? props.ctaSeconds ?? 5.5 : props.adSeconds ?? 8;
+};
+
 export const storyDurationInFrames = (props: StoryProps): number => {
   const end = contentEndSeconds(props);
-  const outro = props.showOutro ? props.ctaSeconds ?? 4.5 : 0;
-  return Math.max(1, Math.round((end + outro + 0.5) * STORY_FPS));
+  return Math.max(1, Math.round((end + outroSeconds(props) + 0.5) * STORY_FPS));
 };
 
 // Group words into short caption lines (subtitle style).
@@ -320,12 +329,11 @@ const AyahCard: React.FC<{
   );
 };
 
-// Auto-appended end card. Deliberately NOT an ad: TikTok's ranking suppresses
-// videos that look promotional or push viewers off-platform (a website
-// screenshot + a "buy/join" button + a URL is the exact pattern it throttles).
-// So the primary ask is an ON-PLATFORM action the algorithm rewards: follow the
-// handle, and/or comment a keyword (which we answer with the waitlist link). The
-// link itself stays in the bio + a pinned comment, not on the video.
+// Auto-appended end card. The ask is explicit and website-first: a headline that
+// says what to do ("Join the founding list") and the destination (ketabistudio.com)
+// shown as a clear gold button, so the viewer knows exactly where to go and why.
+// Kept to the END card only (never over an ayah / the spiritual climax — adab).
+// A handle / comment-keyword can be layered in via props but are optional + off.
 const OutroCard: React.FC<{
   theme: ThemePalette;
   websiteUrl: string;
@@ -363,11 +371,11 @@ const OutroCard: React.FC<{
         </div>
       </div>
 
-      {/* primary, on-platform ask */}
+      {/* the ask: what to do */}
       <div
         style={{
           fontFamily: CAPTION_FONT,
-          fontSize: 62,
+          fontSize: 60,
           fontWeight: 900,
           lineHeight: 1.12,
           textAlign: "center",
@@ -378,27 +386,12 @@ const OutroCard: React.FC<{
         {headline}
       </div>
 
-      {handle ? (
-        <div
-          style={{
-            marginTop: 22,
-            fontFamily: CAPTION_FONT,
-            fontSize: 56,
-            fontWeight: 900,
-            color: theme.accent,
-            transform: `translateY(${rise}px)`,
-          }}
-        >
-          {handle}
-        </div>
-      ) : null}
-
       {sub ? (
         <div
           style={{
-            marginTop: 18,
+            marginTop: 16,
             fontFamily: TRANSLATION_FONT,
-            fontSize: 34,
+            fontSize: 32,
             fontWeight: 600,
             textAlign: "center",
             color: soft,
@@ -409,42 +402,67 @@ const OutroCard: React.FC<{
         </div>
       ) : null}
 
-      {/* comment-keyword funnel: looks like a native TikTok comment, keeps the
-          link off-screen, and the reply you post drives the signup. */}
+      {/* the destination: the clear "go here" button (the website / waitlist) */}
+      {showUrl ? (
+        <div
+          style={{
+            marginTop: 42,
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
+            background: theme.accent,
+            color: "#0b1410",
+            fontFamily: CAPTION_FONT,
+            fontSize: 46,
+            fontWeight: 900,
+            letterSpacing: 0.5,
+            padding: "20px 44px",
+            borderRadius: 999,
+            boxShadow: "0 18px 50px rgba(0,0,0,0.45)",
+            transform: `translateY(${rise}px) scale(${0.96 + 0.04 * appear})`,
+          }}
+        >
+          {websiteUrl}
+          <span style={{ fontSize: 40 }}>→</span>
+        </div>
+      ) : null}
+
+      {/* optional secondary follow line (off unless a handle is set) */}
+      {handle ? (
+        <div
+          style={{
+            marginTop: 24,
+            fontFamily: TRANSLATION_FONT,
+            fontSize: 28,
+            fontWeight: 700,
+            color: soft,
+            transform: `translateY(${rise}px)`,
+          }}
+        >
+          or follow {handle}
+        </div>
+      ) : null}
+
+      {/* optional comment-keyword funnel (off by default) */}
       {comment ? (
         <div
           style={{
-            marginTop: 44,
+            marginTop: 28,
             display: "flex",
             alignItems: "center",
             gap: 16,
             background: onLight ? "rgba(28,58,43,0.08)" : "rgba(255,255,255,0.12)",
             border: `2px solid ${theme.accent}`,
             borderRadius: 999,
-            padding: "16px 30px",
+            padding: "14px 28px",
             transform: `translateY(${rise}px)`,
           }}
         >
-          <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 32, fontWeight: 700, color: ink }}>
+          <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 30, fontWeight: 700, color: ink }}>
             Comment{" "}
             <span style={{ color: theme.accent, fontWeight: 900 }}>{`“${comment}”`}</span>
             {" "}and I’ll send it to you
           </div>
-        </div>
-      ) : null}
-
-      {showUrl ? (
-        <div
-          style={{
-            position: "absolute",
-            bottom: 120,
-            fontFamily: TRANSLATION_FONT,
-            fontSize: 28,
-            letterSpacing: 2,
-            color: soft,
-          }}
-        >
-          {websiteUrl}
         </div>
       ) : null}
     </AbsoluteFill>
@@ -454,7 +472,8 @@ const OutroCard: React.FC<{
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
   const contentEndFrames = Math.round(contentEndSeconds(props) * STORY_FPS);
-  const outroFrames = Math.round((props.ctaSeconds ?? 4.5) * STORY_FPS);
+  const outroFrames = Math.round(outroSeconds(props) * STORY_FPS);
+  const adOutro = props.outroAd !== false;
   const institutional = props.theme === "atlas";
   const cinematic = props.cinematic === true;
   return (
@@ -536,19 +555,25 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
         </Sequence>
       ) : null}
 
-      {/* Auto-appended, TikTok-safe end card (follow + comment funnel). */}
+      {/* Auto-appended outro. Default: the ParallaxAd product spot (keepsake
+          books + "Join the waitlist · ketabistudio.com"). outroAd:false falls
+          back to the lightweight text end card. */}
       {props.showOutro ? (
         <Sequence from={contentEndFrames} durationInFrames={outroFrames}>
-          <OutroCard
-            theme={theme}
-            websiteUrl={props.websiteUrl}
-            headline={props.ctaHeadline}
-            handle={props.ctaHandle}
-            sub={props.ctaSub}
-            comment={props.ctaComment}
-            showUrl={props.ctaShowUrl}
-            onLight={props.theme === "noor" || props.theme === "atlas"}
-          />
+          {adOutro ? (
+            <ParallaxAd frames={outroFrames} />
+          ) : (
+            <OutroCard
+              theme={theme}
+              websiteUrl={props.websiteUrl}
+              headline={props.ctaHeadline}
+              handle={props.ctaHandle}
+              sub={props.ctaSub}
+              comment={props.ctaComment}
+              showUrl={props.ctaShowUrl}
+              onLight={props.theme === "noor" || props.theme === "atlas"}
+            />
+          )}
         </Sequence>
       ) : null}
     </AbsoluteFill>

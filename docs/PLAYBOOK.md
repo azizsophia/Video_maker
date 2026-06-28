@@ -231,13 +231,13 @@ Elephant, the Sun racing through space, the Dead Sea / Romans prophecy.
 
 ## 7. The waitlist ad
 
-- **Run the hard product ad as a TikTok Spark Ad, not as an organic post.** The
-  ParallaxAd is an explicit product pitch; TikTok's organic ranking suppresses
-  pitches like this (and your audience scrolls past them). Promote it through the
-  TikTok Ads Manager (Spark Ads boost a real post) so it reaches a *targeted*
-  audience instead of dragging down your educational reach. Keep the organic feed
-  for the story videos; let their soft end card (§9) do the funnelling.
-- `src/QuranVideo/ParallaxAd.tsx` — a 3D parallax ad, rendered **locally**.
+- **The ParallaxAd now also plays as the ~8s outro on every story video** (owner's
+  call: a clear, visual "join the waitlist at ketabistudio.com" ask). See §8 for
+  the tradeoff and the `outroAd` toggle. You can ALSO run it as a standalone
+  **TikTok Spark Ad** (via Ads Manager) to put paid spend behind a targeted
+  audience — that's the highest-intent path and doesn't risk your organic reach.
+- `src/QuranVideo/ParallaxAd.tsx` — a 3D parallax ad, rendered **locally** and
+  embedded as the story outro (`StoryVideo.tsx`).
   Current version: the two personalized **keepsake books**, one **opening on its
   spine** to reveal an inner photo page; headline **"Your photos, a keepsake
   forever"** + **"hardcover books made from your own photos"**; gold **"Join the
@@ -255,54 +255,52 @@ Elephant, the Sun racing through space, the Dead Sea / Romans prophecy.
 
 ---
 
-## 8. Conversion funnel — waitlist signups WITHOUT the shadowban
+## 8. Conversion funnel — driving waitlist signups
 
-The problem: nobody signs up, and TikTok throttles anything that looks like an
-ad. TikTok's ranking demotes (a) content that pushes viewers **off-platform**
-(a visible URL, "link in bio, go now") and (b) anything that **reads as an ad**
-(product screenshot + a "buy/join" button). The old end card was both. So the
-fix is to make the ask an **on-platform action the algorithm rewards**, and move
-the actual link to where it doesn't cost reach.
+Goal: drive viewers to **ketabistudio.com to join the founding list.** The funnel:
 
-**The end card (now built into every story; `src/QuranVideo/StoryVideo.tsx`).**
-Story-JSON fields drive it, no code edits needed:
-- `ctaHeadline` — the primary ask. Lead with **follow**, not "join": e.g.
-  *"Follow for more signs like this"*. Following is on-platform = algorithm-safe.
-- `ctaHandle` — your @handle (shown big, in gold).
-- `ctaSub` — one soft brand line (e.g. *"Sourced Islamic stories, every day."*).
-- `ctaComment` — OPTIONAL and **off by default** (leave it out). It puts a
-  *Comment "WORD" and I'll send it* line on the card. It works mechanically
-  (comments boost reach, the reply carries the link) but reads corny on a calm
-  spiritual video, so we don't use it on-card. Drive the same behaviour from the
-  caption/pinned comment instead (below). Only set it if you ever want the
-  on-card prompt back.
-- `ctaShowUrl` — keep **false** for organic. Only flip it on for content you're
-  promoting as a paid Spark Ad, where off-platform links are expected.
+```
+ajr-earning video  →  trust  →  the outro ad  →  ketabistudio.com  →  join the list
+```
 
-**Where the link actually lives (off the video):**
-1. **Bio link** — `ketabistudio.com` waitlist, always.
-2. **Pinned comment** — first thing you post on every video: a warm one-liner +
-   "the link's in my bio 🤍". Pinning it keeps it at the top.
-3. **DM / comment reply** — when someone comments the keyword, reply with the
-   link. This is the highest-intent path and TikTok loves the engagement.
+**The outro is the product ad (built into every story; `StoryVideo.tsx` +
+`ParallaxAd.tsx`).** Every story auto-appends the **ParallaxAd spot** (~8s): the
+keepsake books opening to a family photo, *"Your photos, a keepsake forever,"* a
+gold **"Join the waitlist"** button, and **ketabistudio.com**. It's the clear,
+visual ask, and it plays **after** the content lands — never over an ayah or the
+spiritual climax (adab).
 
-**Give people a REASON to sign up.** "Join the waitlist" is weak. Offer a real,
-deliverable lead magnet — e.g. *early access + a small founding-member discount*,
-or a free printable (a dua card / a "family keepsake" template). Put the offer in
-the caption and the DM reply. Decide the offer, then keep it consistent.
+Story-JSON fields:
+- `outroAd` — **default true** (the ParallaxAd spot). The clear website CTA.
+- `adSeconds` — default `8` (enough for the book to open + the CTA to land).
+- `outroAd:false` → the lightweight **text end card** instead, driven by
+  `ctaHeadline` / `ctaSub` / `ctaShowUrl` (shows ketabistudio.com as a gold
+  button) and optional `ctaHandle` / `ctaComment`. Use it for a minimal CTA.
+
+**Tradeoff (know it, we're choosing signups):** an on-screen product spot + URL is
+the most "ad-like" pattern, and TikTok *can* damp reach for it. We accept that
+because the point is waitlist signups. Soften it by: keeping the spot to the END
+only, keeping the story genuinely worth watching, and reinforcing the link
+off-video too. If a particular video is purely for reach, set `outroAd:false`.
+
+**Reinforce the link everywhere off the video:**
+1. **Bio link** — `ketabistudio.com`, always.
+2. **Pinned comment** — post it first on every upload.
+3. **Caption** — lead with the hook, mention the founding list once.
+
+**Give people a REASON.** The site already promises **early shop access + first
+previews + a founding-member welcome** — say that in the caption and lean on it.
 
 **Caption template (lead with the hook, ≤5 hashtags, no em dashes):**
 > The Prophet ﷺ named a fire that would light up Arabia. 600 years later, in
-> 1256, the ground tore open outside Medina. Full sources in the video. Follow
-> for more, the founding-list link is in my bio. #islam #prophecy #quran
-> #history #fyp
+> 1256, the ground tore open outside Medina. Full sources in the video. Join the
+> founding list at ketabistudio.com (link in bio) for early access. #islam
+> #prophecy #quran #history #fyp
 
 **Pinned comment template:**
-> Sources are in the video. If you want the keepsake we're building for families,
-> the founding-list link is in my bio 🤍
-
-> Rule of thumb: **the video earns the reach, the comment/bio earns the signup.**
-> Never make the video itself the billboard.
+> Sources are in the video 🤍 We're building personalized keepsakes for Muslim
+> families, join the founding list at ketabistudio.com (link in bio) for early
+> access before the shop opens.
 
 ---
 

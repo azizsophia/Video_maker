@@ -38,23 +38,27 @@ export const storyPropsSchema = z.object({
   // Auto-appended end card (on by default). The standalone brand ad sets
   // showOutro:false so it doesn't get a redundant second CTA.
   //
-  // TikTok-safe CTA: the primary ask is an ON-PLATFORM action (follow, or a
-  // comment keyword) instead of an off-platform link/website screenshot, which
-  // TikTok's ranking suppresses as "ad-like". The website url is shown small
-  // (or hidden) so the card reads as content, not an ad.
+  // Website-first CTA: the ask names the action ("Join the founding list") and
+  // shows the destination (ctaShowUrl -> the websiteUrl as a gold button), so
+  // viewers know exactly where to go to join the waitlist. Kept to the end card
+  // only — never over an ayah / the spiritual climax (adab). The bio + a pinned
+  // comment carry the link too.
   showOutro: z.boolean().default(true),
-  ctaHeadline: z.string().default("Follow for more signs like this"),
-  // Optional handle to follow (e.g. "@ketabistudio"). Empty -> hidden.
+  // Default outro = the ParallaxAd product spot (keepsake books + "Join the
+  // waitlist · ketabistudio.com"). Set false for the lightweight text end card.
+  outroAd: z.boolean().default(true),
+  adSeconds: z.number().default(8),
+  ctaHeadline: z.string().default("Join the founding list"),
+  // Optional handle, rendered small as "or follow @handle". Empty -> hidden.
   ctaHandle: z.string().default(""),
-  // Optional soft value line under the headline. Empty -> hidden.
-  ctaSub: z.string().default(""),
-  // Optional comment-keyword funnel: viewers comment this word and you reply
-  // with the waitlist link (keeps the link OFF the video, boosts engagement).
-  // Empty -> the line is hidden.
+  // Optional value line under the headline (e.g. the waitlist benefit). Empty -> hidden.
+  ctaSub: z.string().default("Early access before the shop opens."),
+  // Optional comment-keyword funnel (off by default): viewers comment this word
+  // and you reply with the link. Empty -> the line is hidden.
   ctaComment: z.string().default(""),
-  // Show the website url on the end card. Off by default (off-platform push is
-  // the most-throttled pattern). The link belongs in the bio + pinned comment.
-  ctaShowUrl: z.boolean().default(false),
+  // Show the website url as the clear destination button. On by default — the
+  // funnel goal is signups at the site.
+  ctaShowUrl: z.boolean().default(true),
   ctaSeconds: z.number().default(5.5),
   // Cinematic mode: full-bleed stock footage backgrounds + calm captions.
   cinematic: z.boolean().default(false),
