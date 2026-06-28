@@ -130,9 +130,16 @@ Stories live in `scripts/stories/*.json`. Example shape:
 ### Pexels footage
 - Free, commercial-OK, **no attribution required.** Streamed at render via
   `OffthreadVideo` (no key needed in CI).
-- The **Pexels API key is only for searching** (`scripts/pexels-pick.mjs`,
-  `/tmp/photopick.mjs`). **Never commit the key. It was shared in plaintext —
-  rotate it.**
+- The **Pexels API key is only for searching** and lives as the GitHub secret
+  `PEXELS_API_KEY` (never in the repo). To find clips/photos: edit
+  `scripts/pexels-queries.txt` (one query per line; a first line `--photos`
+  switches to still-photo mode for covers), commit, and push — the **Pexels
+  Search** workflow logs candidate `{id, link, image}` for each. Then verify each
+  pick is human-free (open the `image` thumbnail) and that the clip URL returns
+  HTTP 206 before using it. **Still rotate the key** — it was shared in plaintext
+  once.
+- **One distinct NEW clip per beat — never reuse a clip across the library.** The
+  Fire of the Hijaz cut was sourced this way (11 clips, all thumbnail-checked).
 
 ---
 
@@ -197,8 +204,10 @@ verse, off-brand tone).
 ### Prophecy (lesser-known, fulfilled)
 **Build next:**
 - **Fire of the Hijaz → the 1256 CE volcano (Bukhari/Muslim)** — SOLID, huge hook.
-  A predicted fire from the Hijaz; the Harrat Rahat eruption near Medina in 1256,
-  documented, its glow seen far north. Closest thing to the Euphrates format.
+  ✅ BUILT: `scripts/stories/prophecy-fire-of-hijaz.json` (cinematic, ~70s, 11
+  distinct human-free clips) + cover `13-fire-hijaz`. A predicted fire from the
+  Hijaz; the Harrat Rahat eruption near Medina in 1256, documented, its glow seen
+  far north. Closest thing to the Euphrates format. Render via `render-story.yml`.
 - **Barefoot shepherds competing to build tall towers (Sahih Muslim)** —
   DEFENSIBLE. The destitute Bedouin land now holds the tallest tower on Earth.
   Use aerial cityscapes with **no people.**
@@ -222,6 +231,12 @@ Elephant, the Sun racing through space, the Dead Sea / Romans prophecy.
 
 ## 7. The waitlist ad
 
+- **Run the hard product ad as a TikTok Spark Ad, not as an organic post.** The
+  ParallaxAd is an explicit product pitch; TikTok's organic ranking suppresses
+  pitches like this (and your audience scrolls past them). Promote it through the
+  TikTok Ads Manager (Spark Ads boost a real post) so it reaches a *targeted*
+  audience instead of dragging down your educational reach. Keep the organic feed
+  for the story videos; let their soft end card (§9) do the funnelling.
 - `src/QuranVideo/ParallaxAd.tsx` — a 3D parallax ad, rendered **locally**.
   Current version: the two personalized **keepsake books**, one **opening on its
   spine** to reveal an inner photo page; headline **"Your photos, a keepsake
@@ -240,8 +255,61 @@ Elephant, the Sun racing through space, the Dead Sea / Romans prophecy.
 
 ---
 
-## 8. Security / housekeeping
+## 8. Conversion funnel — waitlist signups WITHOUT the shadowban
 
-- **Rotate the Pexels API key** (it was pasted in chat). Never commit it.
+The problem: nobody signs up, and TikTok throttles anything that looks like an
+ad. TikTok's ranking demotes (a) content that pushes viewers **off-platform**
+(a visible URL, "link in bio, go now") and (b) anything that **reads as an ad**
+(product screenshot + a "buy/join" button). The old end card was both. So the
+fix is to make the ask an **on-platform action the algorithm rewards**, and move
+the actual link to where it doesn't cost reach.
+
+**The end card (now built into every story; `src/QuranVideo/StoryVideo.tsx`).**
+Story-JSON fields drive it, no code edits needed:
+- `ctaHeadline` — the primary ask. Lead with **follow**, not "join": e.g.
+  *"Follow for more signs like this"*. Following is on-platform = algorithm-safe.
+- `ctaHandle` — your @handle (shown big, in gold).
+- `ctaSub` — one soft brand line (e.g. *"Sourced Islamic stories, every day."*).
+- `ctaComment` — the **comment-keyword funnel** (the real signup driver). The
+  card shows *Comment "FIRE" and I'll send it to you*. Viewers comment → that
+  spikes the comment count (a top ranking signal, so the video gets pushed to
+  MORE people) → you reply to each comment (or auto-DM) with the waitlist link.
+  The link never appears on the video, so there's nothing for TikTok to demote.
+- `ctaShowUrl` — keep **false** for organic. Only flip it on for content you're
+  promoting as a paid Spark Ad, where off-platform links are expected.
+
+**Where the link actually lives (off the video):**
+1. **Bio link** — `ketabistudio.com` waitlist, always.
+2. **Pinned comment** — first thing you post on every video: a warm one-liner +
+   "the link's in my bio 🤍". Pinning it keeps it at the top.
+3. **DM / comment reply** — when someone comments the keyword, reply with the
+   link. This is the highest-intent path and TikTok loves the engagement.
+
+**Give people a REASON to sign up.** "Join the waitlist" is weak. Offer a real,
+deliverable lead magnet — e.g. *early access + a small founding-member discount*,
+or a free printable (a dua card / a "family keepsake" template). Put the offer in
+the caption and the DM reply. Decide the offer, then keep it consistent.
+
+**Caption template (lead with the hook, ≤5 hashtags, no em dashes):**
+> The Prophet ﷺ named a fire that would light up Arabia. 600 years later, in
+> 1256, the ground tore open outside Medina. Comment "FIRE" and I'll send you the
+> full sourced story + how to join the founding list. #islam #prophecy #quran
+> #history #fyp
+
+**Pinned comment template:**
+> Sources are in the video. If you want the keepsake we're building for families,
+> the founding-list link is in my bio 🤍
+
+> Rule of thumb: **the video earns the reach, the comment/bio earns the signup.**
+> Never make the video itself the billboard.
+
+---
+
+## 9. Security / housekeeping
+
+- **Rotate the Pexels API key** (it was pasted in chat once). It now lives only as
+  the `PEXELS_API_KEY` GitHub secret — never commit it.
 - Keep the repo **private** when you're not rendering (public exposes the docs).
-- All work is committed to the branch `claude/video-performance-analysis-3bjmgv`.
+  Quick API-search jobs (Pexels Search) are seconds and fine on free minutes;
+  only the long video renders need the public-minutes dance.
+- Active development branch: `claude/video-performance-analysis-1o75wa`.
