@@ -12,7 +12,6 @@ const JOST = 'Jost, "Helvetica Neue", Arial, sans-serif';
 const FOREST = "#2E4A3A";
 const FOREST_DEEP = "#233A2D";
 const CREAM = "#F6F4EF";
-const PAPER = "#F3EFE6";
 const GOLD = "#C9A84C";
 
 const ease = (t: number) => 1 - Math.pow(1 - t, 3);
@@ -44,12 +43,14 @@ const OpenBook: React.FC<{ coverSrc: string; interiorSrc: string; w: number; cx:
   const rot = -open * 156; // front cover swings open to the left around the spine
   const sweep = clamp01(interpolate(frame, [open1 - 16, open1 + 24], [0, 1]));
 
+  // Thin, warm-toned page edges (the fore-edge of the book seen side-on) so the
+  // closed cover reads as a thick hardcover, not an awkward white border.
   const PageEdge = ({ side }: { side: "right" | "bottom" }) => (
-    <>{[0, 1, 2, 3, 4, 5].map((i) => (
+    <>{[0, 1, 2, 3, 4].map((i) => (
       <div key={i} style={{
         position: "absolute", inset: 0,
-        transform: side === "right" ? `translateX(${(i + 1) * 2.4}px)` : `translateY(${(i + 1) * 2.4}px)`,
-        background: i % 2 ? "#efe9da" : "#e4ddca",
+        transform: side === "right" ? `translateX(${(i + 1) * 1.5}px)` : `translateY(${(i + 1) * 1.5}px)`,
+        background: i % 2 ? "#d8cdb4" : "#c9bfa3",
         borderRadius: 8, zIndex: -1,
       }} />
     ))}</>
@@ -84,8 +85,10 @@ const OpenBook: React.FC<{ coverSrc: string; interiorSrc: string; w: number; cx:
           <Img src={staticFile(coverSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           <AbsoluteFill style={{ background: "#000", opacity: open * 0.42 }} />
         </div>
-        {/* back face: plain cream inside-front-cover (as in the real book) */}
-        <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: "rotateY(180deg)", borderRadius: 8, overflow: "hidden", background: `linear-gradient(135deg, ${PAPER}, ${CREAM})`, border: "1px solid rgba(180,160,120,0.35)" }}>
+        {/* back face: the real dedication page (left page of the open spread) */}
+        <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: "rotateY(180deg)", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(180,160,120,0.35)" }}>
+          <Img src={staticFile("ad/dedication-mama.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          {/* gutter shadow on the inner (right) edge */}
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(270deg, rgba(0,0,0,0.2), rgba(0,0,0,0) 12%)" }} />
           {/* warm light sweep as the cover lays open */}
           <AbsoluteFill style={{ background: `linear-gradient(115deg, transparent ${sweep * 120 - 35}%, rgba(255,245,210,0.5) ${sweep * 120}%, transparent ${sweep * 120 + 20}%)`, opacity: sweep > 0 && sweep < 1 ? 0.9 : 0, mixBlendMode: "screen" }} />
@@ -122,7 +125,7 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
 
       {/* The real keepsake, opening (centered) */}
       <AbsoluteFill style={{ transform: `scale(${cam})` }}>
-        <OpenBook coverSrc="ad/book-mama.png" interiorSrc="ad/spread-mama-sq.png" w={470} cx={726} cy={1000} open0={46} open1={116} />
+        <OpenBook coverSrc="ad/book-mama.png" interiorSrc="ad/photopage-mama.jpg" w={470} cx={726} cy={1000} open0={46} open1={116} />
       </AbsoluteFill>
 
       {/* Subline */}
