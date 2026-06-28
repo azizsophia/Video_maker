@@ -9,9 +9,9 @@ on:
         required: true
         default: "scripts/stories/gog-and-magog.json"
       theme:
-        description: "Theme: midnight | emerald | sand | noor"
-        required: true
-        default: "midnight"
+        description: "Theme (blank = use the story's own; cinematic stories want 'ketabi'). Options: ketabi | atlas | midnight | emerald | sand | noor"
+        required: false
+        default: ""
 
 jobs:
   render:

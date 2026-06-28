@@ -104,7 +104,9 @@ async function main() {
   const model = args.model ?? "eleven_multilingual_v2";
   const recitation = String(story.reciter ?? 3);
   const translation = args.translation ?? "20";
-  const theme = args.theme ?? story.look ?? "midnight";
+  // Honor the story's own theme (cinematic stories set "ketabi") when no --theme
+  // is given. Use || so an empty CLI value falls through to the story default.
+  const theme = args.theme || story.theme || story.look || "midnight";
   const GAP = 0.35; // small breath between segments
 
   const segments: any[] = [];
