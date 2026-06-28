@@ -1,8 +1,8 @@
-# Picnic interior photo for the keepsake ad (the photo "inside" the book).
-# --photos = still-photo search mode.
+# Hijab mom picnic photo for the keepsake interior. --photos = still-photo mode.
 --photos
-mother children picnic blanket park
-family picnic outdoors blanket
-mom and kids picnic grass sunset
-mother daughter picnic park
-family picnic basket blanket
+hijab mother children picnic
+muslim family picnic park
+hijab mom kids picnic blanket
+muslim mother children outdoors
+hijab family picnic grass
+hijab woman children park
