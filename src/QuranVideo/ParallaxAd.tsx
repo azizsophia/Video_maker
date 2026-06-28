@@ -40,7 +40,10 @@ const OpenBook: React.FC<{ coverSrc: string; interiorSrc: string; w: number; cx:
   const enter = spring({ frame, fps, config: { damping: 200, mass: 0.8 } });
   const open = ease(clamp01(interpolate(frame, [open0, open1], [0, 1])));
   const floatY = Math.sin(frame / fps * 0.7) * 6;
-  const rot = -open * 156; // front cover swings open to the left around the spine
+  const rot = -open * 178; // cover swings nearly flat -> a clean, aligned 2-page spread
+  // keep the book centred: closed = single cover centred; open = the cover adds a
+  // page to the LEFT, so slide the whole book right by half a page as it opens.
+  const shiftX = open * (w / 2);
   const sweep = clamp01(interpolate(frame, [open1 - 16, open1 + 24], [0, 1]));
 
   // Thin, warm-toned page edges (the fore-edge of the book seen side-on) so the
@@ -60,7 +63,7 @@ const OpenBook: React.FC<{ coverSrc: string; interiorSrc: string; w: number; cx:
     <div style={{
       position: "absolute", left: cx - w / 2, top: cy - h / 2 + floatY, width: w, height: h,
       opacity: interpolate(enter, [0, 1], [0, 1]),
-      transform: `perspective(2200px) rotateX(4deg) scale(${interpolate(enter, [0, 1], [0.9, 1])})`,
+      transform: `translateX(${shiftX}px) perspective(2200px) rotateX(3deg) scale(${interpolate(enter, [0, 1], [0.9, 1])})`,
       transformStyle: "preserve-3d",
       filter: "drop-shadow(0 42px 66px rgba(0,0,0,0.48))",
     }}>
@@ -105,8 +108,7 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
   const cam = interpolate(ease(interpolate(frame, [0, total], [0, 1])), [0, 1], [1, 1.05]);
   const glowDrift = Math.sin(frame / 40) * 40;
   const headIn = spring({ frame: frame - 6, fps, config: { damping: 200 } });
-  const subIn = spring({ frame: frame - 120, fps, config: { damping: 200 } });
-  const ctaIn = spring({ frame: frame - 152, fps, config: { damping: 200 } });
+  const ctaIn = spring({ frame: frame - 150, fps, config: { damping: 200 } });
   const pulse = 1 + 0.03 * (0.5 + 0.5 * Math.sin(frame / 9));
 
   return (
@@ -123,20 +125,15 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
         </div>
       </div>
 
-      {/* The real keepsake, opening (centered) */}
+      {/* The real keepsake, opening (centered as it opens) */}
       <AbsoluteFill style={{ transform: `scale(${cam})` }}>
-        <OpenBook coverSrc="ad/book-mama.png" interiorSrc="ad/photopage-mama.jpg" w={470} cx={726} cy={1000} open0={46} open1={116} />
+        <OpenBook coverSrc="ad/book-mama.png" interiorSrc="ad/photopage-mama.jpg" w={470} cx={540} cy={980} open0={46} open1={116} />
       </AbsoluteFill>
 
-      {/* Subline */}
-      <div style={{ position: "absolute", top: 1408, width: "100%", textAlign: "center", padding: "0 70px", boxSizing: "border-box", opacity: interpolate(subIn, [0, 1], [0, 1]) }}>
-        <span style={{ fontFamily: JOST, fontWeight: 500, fontSize: 44, lineHeight: 1.28, color: CREAM, textShadow: "0 3px 18px rgba(0,0,0,0.55)" }}>Hardcover books made<br />from your own photos</span>
-      </div>
-
-      {/* CTA */}
-      <div style={{ position: "absolute", bottom: 130, width: "100%", display: "flex", flexDirection: "column", alignItems: "center", opacity: interpolate(ctaIn, [0, 1], [0, 1]), transform: `translateY(${interpolate(ctaIn, [0, 1], [30, 0])}px)` }}>
-        <div style={{ fontFamily: JOST, fontWeight: 400, fontSize: 30, color: "rgba(246,244,239,0.85)", marginBottom: 22 }}>be the first to make yours</div>
-        <div style={{ transform: `scale(${pulse})`, fontFamily: JOST, fontWeight: 500, letterSpacing: 1, fontSize: 42, color: FOREST_DEEP, background: `linear-gradient(180deg, #f0e6c8, ${GOLD})`, padding: "22px 56px", borderRadius: 100, boxShadow: "0 14px 40px rgba(201,168,76,0.35)" }}>
+      {/* CTA — one clear, unhurried signup ask (no competing copy to read) */}
+      <div style={{ position: "absolute", bottom: 200, width: "100%", display: "flex", flexDirection: "column", alignItems: "center", opacity: interpolate(ctaIn, [0, 1], [0, 1]), transform: `translateY(${interpolate(ctaIn, [0, 1], [30, 0])}px)` }}>
+        <div style={{ fontFamily: JOST, fontWeight: 400, fontSize: 32, letterSpacing: 1, color: "rgba(246,244,239,0.88)", marginBottom: 24 }}>Join the founding list for early access</div>
+        <div style={{ transform: `scale(${pulse})`, fontFamily: JOST, fontWeight: 600, letterSpacing: 1, fontSize: 46, color: FOREST_DEEP, background: `linear-gradient(180deg, #f0e6c8, ${GOLD})`, padding: "24px 60px", borderRadius: 100, boxShadow: "0 14px 40px rgba(201,168,76,0.35)" }}>
           ketabistudio.com →
         </div>
       </div>
