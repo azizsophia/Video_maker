@@ -1,0 +1,38 @@
+name: Pexels Search
+
+# Searches Pexels for portrait, human-free-intent clip candidates using the
+# PEXELS_API_KEY secret, and prints them to the run log (id, duration, link,
+# thumbnail). Used to pick ONE distinct clip per video beat. No render, no
+# commit — just discovery.
+#
+# How to use: put one search query per line in scripts/pexels-queries.txt,
+# commit, and push to this branch. The run log lists the candidates.
+on:
+  push:
+    branches: ["claude/video-performance-analysis-1o75wa"]
+    paths:
+      - "scripts/pexels-queries.txt"
+      - "scripts/pexels-pick.mjs"
+      - ".github/workflows/pexels-search.yml"
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Search Pexels
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: |
+          if [ -z "$PEXELS_API_KEY" ]; then
+            echo "::error::PEXELS_API_KEY secret is not set on this repo/environment."
+            exit 1
+          fi
+          echo "===PEXELS-RESULTS-BEGIN==="
+          # Read queries (skip blank lines and # comments) and pass each as one arg.
+          mapfile -t QS < <(grep -vE '^\s*(#|$)' scripts/pexels-queries.txt)
+          node scripts/pexels-pick.mjs "${QS[@]}"
+          echo "===PEXELS-RESULTS-END==="
