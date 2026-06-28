@@ -270,11 +270,12 @@ Story-JSON fields drive it, no code edits needed:
   *"Follow for more signs like this"*. Following is on-platform = algorithm-safe.
 - `ctaHandle` — your @handle (shown big, in gold).
 - `ctaSub` — one soft brand line (e.g. *"Sourced Islamic stories, every day."*).
-- `ctaComment` — the **comment-keyword funnel** (the real signup driver). The
-  card shows *Comment "FIRE" and I'll send it to you*. Viewers comment → that
-  spikes the comment count (a top ranking signal, so the video gets pushed to
-  MORE people) → you reply to each comment (or auto-DM) with the waitlist link.
-  The link never appears on the video, so there's nothing for TikTok to demote.
+- `ctaComment` — OPTIONAL and **off by default** (leave it out). It puts a
+  *Comment "WORD" and I'll send it* line on the card. It works mechanically
+  (comments boost reach, the reply carries the link) but reads corny on a calm
+  spiritual video, so we don't use it on-card. Drive the same behaviour from the
+  caption/pinned comment instead (below). Only set it if you ever want the
+  on-card prompt back.
 - `ctaShowUrl` — keep **false** for organic. Only flip it on for content you're
   promoting as a paid Spark Ad, where off-platform links are expected.
 
@@ -292,8 +293,8 @@ the caption and the DM reply. Decide the offer, then keep it consistent.
 
 **Caption template (lead with the hook, ≤5 hashtags, no em dashes):**
 > The Prophet ﷺ named a fire that would light up Arabia. 600 years later, in
-> 1256, the ground tore open outside Medina. Comment "FIRE" and I'll send you the
-> full sourced story + how to join the founding list. #islam #prophecy #quran
+> 1256, the ground tore open outside Medina. Full sources in the video. Follow
+> for more, the founding-list link is in my bio. #islam #prophecy #quran
 > #history #fyp
 
 **Pinned comment template:**
