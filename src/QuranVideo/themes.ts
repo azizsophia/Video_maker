@@ -51,6 +51,34 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     accent: "#f0cd78",
     vignette: "rgba(0,0,0,0.55)",
   },
+  // Brand theme — the website's palette: deep ink-green + gold + cream.
+  // Dark/cinematic for story videos, but on-brand (no blue).
+  ketabi: {
+    background: "#0c1c14",
+    gradientFrom: "#15301f",
+    gradientTo: "#050d09",
+    patternColor: "rgba(199, 154, 62, 0.12)",
+    arabicIdle: "rgba(244, 236, 216, 0.45)",
+    arabicActive: "#f6efdc",
+    arabicGlow: "rgba(199, 154, 62, 0.55)",
+    translation: "rgba(244, 236, 216, 0.9)",
+    accent: "#cda24a",
+    vignette: "rgba(0,0,0,0.55)",
+  },
+  // Institutional "atlas" theme — premium ivory paper, ink-green, real gold.
+  // The lecture-hall / documentary look (timelines, maps, data, line-art).
+  atlas: {
+    background: "#f3ead6",
+    gradientFrom: "#faf5e9",
+    gradientTo: "#efe4cd",
+    patternColor: "rgba(150, 115, 40, 0.06)",
+    arabicIdle: "rgba(22, 53, 40, 0.4)",
+    arabicActive: "#163528",
+    arabicGlow: "rgba(199, 154, 62, 0.4)",
+    translation: "#2c5240",
+    accent: "#9e7320",
+    vignette: "rgba(120, 90, 30, 0.22)",
+  },
   // Light "noor" theme — cream paper, deep ink-green Arabic, gold accents.
   // Stands out on a feed full of dark Quran videos.
   noor: {

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Jost:wght@300;400;500&family=Amiri:wght@700&display=swap');
+  :root{ --ivory:#f7f1e2; --ink:#163528; --ink2:#2c5240; --gold:#9e7320; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:#222; display:flex; flex-wrap:wrap; gap:30px; padding:30px;}
+  .frame{width:1080px; height:1920px; position:relative; overflow:hidden;
+    background:radial-gradient(circle at 50% 36%, #faf5e9 0%, #efe4cd 100%);
+    font-family:'Jost',system-ui,sans-serif; color:var(--ink);}
+  .tex{position:absolute; inset:0; opacity:.45; background-image:radial-gradient(rgba(150,115,40,.06) 1px, transparent 1px); background-size:26px 26px;}
+  .vign{position:absolute; inset:0; box-shadow:inset 0 0 260px rgba(120,90,30,.22);}
+  .border{position:absolute; inset:48px; border:2px solid rgba(158,115,32,.5); border-radius:8px;}
+  .border:after{content:""; position:absolute; inset:11px; border:1px solid rgba(158,115,32,.3); border-radius:4px;}
+  .dia{position:absolute; width:16px; height:16px; background:linear-gradient(135deg,#9e7320,#eccd80,#9e7320); transform:rotate(45deg);}
+  .dia.tl{top:41px;left:41px;} .dia.tr{top:41px;right:41px;} .dia.bl{bottom:41px;left:41px;} .dia.br{bottom:41px;right:41px;}
+  .goldtext{background:linear-gradient(135deg,#946b1d,#eccd80 42%,#c79a3e 66%,#8c6720); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .kicker{position:absolute; top:140px; left:0; width:100%; text-align:center; font-weight:500; letter-spacing:9px; font-size:29px;}
+  .cap{position:absolute; bottom:200px; left:0; width:100%; text-align:center; padding:0 110px; font-family:'Playfair Display'; font-weight:900; font-size:80px; line-height:1.12;}
+  .cap em{font-family:'Cormorant Garamond'; font-style:italic; font-weight:600;}
+  .foot{position:absolute; bottom:96px; left:0; width:100%; text-align:center; font-family:'Cormorant Garamond'; font-style:italic; font-size:34px; color:var(--ink2);}
+  text{font-family:'Jost';}
+
+  /* ── timeline / chart ── */
+  .axislbl{font-size:24px; fill:var(--ink2); font-weight:400;}
+  .erlabel{font-family:'Playfair Display'; font-weight:700; font-size:38px; fill:var(--ink);}
+  .erdate{font-size:24px; fill:var(--ink2);}
+
+  /* ── stat card ── */
+  .stat{position:absolute; left:120px; right:120px; top:560px; text-align:center;}
+  .statnum{font-family:'Playfair Display'; font-weight:900; font-size:280px; line-height:1;}
+  .statlbl{font-family:'Cormorant Garamond'; font-style:italic; font-size:58px; color:var(--ink); margin-top:6px;}
+  .statsub{font-size:30px; letter-spacing:2px; color:var(--ink2); margin-top:30px; text-transform:uppercase;}
+  .hr{height:1.5px; width:60%; margin:46px auto; background:linear-gradient(90deg,transparent,#b8902f,transparent);}
+  .stat2{display:flex; justify-content:center; gap:90px; margin-top:10px;}
+  .s2n{font-family:'Playfair Display'; font-weight:700; font-size:84px;} .s2l{font-size:26px; color:var(--ink2); letter-spacing:1px;}
+
+  /* ── quote ── */
+  .card{position:absolute; left:96px; right:96px; top:540px; padding:78px 60px 64px; background:rgba(255,253,247,.6); border:1.5px solid rgba(158,115,32,.5); border-radius:20px; box-shadow:0 30px 70px rgba(60,45,15,.18);}
+  .ar{font-family:'Amiri',serif; direction:rtl; font-size:100px; line-height:1.85; text-align:center;}
+  .flourish{display:flex; align-items:center; justify-content:center; gap:18px; margin:44px 0;}
+  .flourish .ln{height:1.5px; width:150px; background:linear-gradient(90deg,transparent,#b8902f);}
+  .flourish .ln.r{background:linear-gradient(90deg,#b8902f,transparent);}
+  .flourish .d{width:16px; height:16px; transform:rotate(45deg); background:linear-gradient(135deg,#9e7320,#eccd80,#9e7320);}
+  .en{font-family:'Cormorant Garamond'; font-style:italic; font-weight:600; font-size:60px; line-height:1.3; text-align:center;}
+  .cite{text-align:center; margin-top:38px; font-weight:500; letter-spacing:5px; font-size:30px; text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+  <!-- FRAME 1 — CHRONOLOGY (timeline + gridlines = a real graph) -->
+  <div class="frame">
+    <div class="tex"></div><div class="vign"></div><div class="border"></div>
+    <div class="dia tl"></div><div class="dia tr"></div><div class="dia bl"></div><div class="dia br"></div>
+    <div class="kicker goldtext">A CHRONOLOGY OF AL&middot;ULA</div>
+    <svg width="1080" height="1920" style="position:absolute;inset:0">
+      <!-- gridlines -->
+      <g stroke="rgba(158,115,32,.22)" stroke-width="1">
+        <line x1="150" y1="560" x2="150" y2="1180"/><line x1="334" y1="560" x2="334" y2="1180"/>
+        <line x1="518" y1="560" x2="518" y2="1180"/><line x1="702" y1="560" x2="702" y2="1180"/><line x1="886" y1="560" x2="886" y2="1180"/>
+      </g>
+      <!-- axis -->
+      <line x1="150" y1="1180" x2="930" y2="1180" stroke="#163528" stroke-width="3"/>
+      <g text-anchor="middle">
+        <text class="axislbl" x="150" y="1230">1000 BC</text><text class="axislbl" x="426" y="1230">500 BC</text>
+        <text class="axislbl" x="702" y="1230">1 AD</text><text class="axislbl" x="886" y="1230">300 AD</text>
+      </g>
+      <!-- era bars (x = 150 + (year+1000)/1300*780) -->
+      <g>
+        <rect x="210" y="620" width="206" height="64" rx="10" fill="#1f4632"/>
+        <text class="erlabel" x="222" y="664" fill="#f7f1e2">Dadan</text>
+        <text class="erdate" x="210" y="610">9th–6th c. BC</text>
+
+        <rect x="416" y="724" width="232" height="64" rx="10" fill="#2c5a40"/>
+        <text class="erlabel" x="428" y="768" fill="#f7f1e2">Lihyan</text>
+        <text class="erdate" x="416" y="714">5th–2nd c. BC</text>
+
+        <rect x="648" y="828" width="186" height="64" rx="10" fill="#3a7152"/>
+        <text class="erlabel" x="660" y="872" fill="#f7f1e2">Nabataeans</text>
+        <text class="erdate" x="648" y="818">100 BC – 106 AD</text>
+      </g>
+      <!-- Thamud — Qur'anic marker, dating annotated as debated -->
+      <g>
+        <line x1="150" y1="980" x2="320" y2="980" stroke="#b8902f" stroke-width="3" stroke-dasharray="8 8"/>
+        <rect x="150" y="956" width="16" height="16" transform="rotate(45 158 964)" fill="#b8902f"/>
+        <text class="erlabel" x="190" y="994" fill="#163528">Thamud</text>
+        <text class="erdate" x="150" y="1024" fill="#2c5240">Qur'anic · al-Hijr (dating debated)</text>
+      </g>
+    </svg>
+    <div class="cap">Empires rose here for<br><em>three thousand years.</em></div>
+    <div class="foot">Sources: UNESCO; Ibn al-Kalbī; Hoyland, <i>Arabia and the Arabs</i></div>
+  </div>
+
+  <!-- FRAME 2 — ANNOTATED MAP (scale bar, north arrow, callouts) -->
+  <div class="frame">
+    <div class="tex"></div><div class="vign"></div><div class="border"></div>
+    <div class="dia tl"></div><div class="dia tr"></div><div class="dia bl"></div><div class="dia br"></div>
+    <div class="kicker goldtext">THE INCENSE ROAD</div>
+    <svg width="1080" height="1920" style="position:absolute;inset:0">
+      <!-- north arrow -->
+      <g transform="translate(840,470)"><line x1="0" y1="40" x2="0" y2="-10" stroke="#163528" stroke-width="3"/>
+        <path d="M-10,-2 L0,-22 L10,-2 z" fill="#163528"/><text x="-8" y="62" class="axislbl">N</text></g>
+      <!-- route -->
+      <path d="M300,1180 L380,940 L520,720 L470,500" fill="none" stroke="#b8902f" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+      <!-- nodes -->
+      <g font-family="Playfair Display" font-weight="700">
+        <circle cx="300" cy="1180" r="12" fill="#163528"/><text x="326" y="1190" font-size="40" fill="#163528">Makkah</text>
+        <circle cx="380" cy="940" r="12" fill="#163528"/><text x="406" y="950" font-size="40" fill="#163528">Madinah</text>
+        <circle cx="520" cy="720" r="16" fill="#b8902f"/><text x="548" y="712" font-size="42" fill="#163528">AlUla · Hegra</text>
+        <text x="548" y="750" font-size="25" fill="#2c5240" font-family="Jost">Dadan · Lihyan · Nabataean</text>
+        <circle cx="470" cy="500" r="12" fill="#163528"/><text x="496" y="510" font-size="40" fill="#163528">Petra</text>
+      </g>
+      <!-- callout -->
+      <g><rect x="150" y="560" width="360" height="120" rx="12" fill="rgba(255,253,247,.75)" stroke="#b8902f"/>
+        <text x="172" y="606" font-size="30" font-family="Playfair Display" font-weight="700" fill="#163528">Frankincense &amp; myrrh</text>
+        <text x="172" y="648" font-size="26" fill="#2c5240">carried N → from south Arabia</text></g>
+      <!-- scale bar -->
+      <g transform="translate(630,1250)"><line x1="0" y1="0" x2="200" y2="0" stroke="#163528" stroke-width="4"/>
+        <line x1="0" y1="-8" x2="0" y2="8" stroke="#163528" stroke-width="4"/><line x1="200" y1="-8" x2="200" y2="8" stroke="#163528" stroke-width="4"/>
+        <text x="100" y="40" text-anchor="middle" class="axislbl">≈ 300 km</text></g>
+    </svg>
+    <div class="cap">Whoever held this oasis<br>taxed the <em>richest trade on earth.</em></div>
+    <div class="foot">After: Healey, <i>The Nabataean Tomb Inscriptions of Madāʾin Ṣāliḥ</i></div>
+  </div>
+
+  <!-- FRAME 3 — DATA CALLOUT (replaces the cartoon facade) -->
+  <div class="frame">
+    <div class="tex"></div><div class="vign"></div><div class="border"></div>
+    <div class="dia tl"></div><div class="dia tr"></div><div class="dia bl"></div><div class="dia br"></div>
+    <div class="kicker goldtext">HEGRA · MADĀʾIN ṢĀLIḤ</div>
+    <div class="stat">
+      <div class="statnum goldtext">111+</div>
+      <div class="statlbl">monumental rock-cut tombs</div>
+      <div class="statsub">carved by the Nabataeans · 1<sup>st</sup> c. BCE – 1<sup>st</sup> c. CE</div>
+      <div class="hr"></div>
+      <div class="stat2">
+        <div><div class="s2n goldtext">2008</div><div class="s2l">1<sup>st</sup> UNESCO site in Saudi Arabia</div></div>
+        <div><div class="s2n goldtext">~52 km²</div><div class="s2l">archaeological zone</div></div>
+      </div>
+    </div>
+    <div class="cap">An entire city,<br>carved from <em>solid stone.</em></div>
+    <div class="foot">Source: UNESCO World Heritage Centre, Hegra Archaeological Site (al-Ḥijr)</div>
+  </div>
+
+  <!-- FRAME 5 — properly drawn Nabataean tomb facade (crow-step crown) -->
+  <div class="frame">
+    <div class="tex"></div><div class="vign"></div><div class="border"></div>
+    <div class="dia tl"></div><div class="dia tr"></div><div class="dia bl"></div><div class="dia br"></div>
+    <div class="kicker goldtext">A NABATAEAN TOMB · HEGRA</div>
+    <svg width="1080" height="1920" style="position:absolute;inset:0">
+      <defs><radialGradient id="halo2" cx="50%" cy="42%" r="55%">
+        <stop offset="0%" stop-color="#e7c873" stop-opacity="0.4"/><stop offset="100%" stop-color="#e7c873" stop-opacity="0"/></radialGradient></defs>
+      <ellipse cx="540" cy="840" rx="380" ry="440" fill="url(#halo2)"/>
+      <g stroke="#163528" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" fill="none">
+        <!-- rock face -->
+        <rect x="334" y="450" width="412" height="930" rx="46" fill="#efe4cd" stroke="rgba(22,53,40,.22)"/>
+        <!-- crow-step crown (the iconic Nabataean double staircase) -->
+        <path d="M378,604 L378,560 L414,560 L414,528 L450,528 L450,496 L486,496 L486,470 L518,470 L518,604 Z" fill="#e7d6ad"/>
+        <path d="M702,604 L702,560 L666,560 L666,528 L630,528 L630,496 L594,496 L594,470 L562,470 L562,604 Z" fill="#e7d6ad"/>
+        <!-- cornice -->
+        <rect x="360" y="604" width="360" height="28" fill="#e7d6ad"/>
+        <line x1="360" y1="664" x2="720" y2="664"/>
+        <!-- pilasters + capitals -->
+        <rect x="372" y="632" width="48" height="32" fill="#e7d6ad"/>
+        <rect x="385" y="664" width="22" height="648" fill="#efe4cd"/>
+        <rect x="660" y="632" width="48" height="32" fill="#e7d6ad"/>
+        <rect x="673" y="664" width="22" height="648" fill="#efe4cd"/>
+        <!-- rosette -->
+        <circle cx="540" cy="726" r="26" stroke="#9e7320"/>
+        <circle cx="540" cy="726" r="9" fill="#c79a3e" stroke="none"/>
+        <!-- recessed doorway -->
+        <rect x="468" y="772" width="144" height="468" rx="4" fill="#e3d2a8"/>
+        <rect x="492" y="804" width="96" height="436" rx="3" stroke="#9e7320" fill="#c79a3e" fill-opacity="0.16"/>
+        <rect x="468" y="746" width="144" height="26" fill="#e7d6ad"/>
+        <!-- base steps -->
+        <line x1="332" y1="1312" x2="722" y2="1312"/>
+        <line x1="314" y1="1350" x2="740" y2="1350"/>
+      </g>
+    </svg>
+    <div class="cap">They carved these tombs<br>into the cliffs of <em>al-Hijr.</em></div>
+    <div class="foot">Elevation after a Hegra rock-cut tomb facade (crow-step type)</div>
+  </div>
+
+  <!-- FRAME 4 — PULL-QUOTE (approved style) -->
+  <div class="frame">
+    <div class="tex"></div><div class="vign"></div><div class="border"></div>
+    <div class="dia tl"></div><div class="dia tr"></div><div class="dia bl"></div><div class="dia br"></div>
+    <div class="kicker goldtext">AS THE QUR'AN REMINDS US</div>
+    <div class="card">
+      <div class="ar">قُلْ سِيرُوا فِى ٱلْأَرْضِ فَٱنظُرُوا۟ كَيْفَ كَانَ عَـٰقِبَةُ ٱلَّذِينَ مِن قَبْلُ</div>
+      <div class="flourish"><span class="ln"></span><span class="d"></span><span class="ln r"></span></div>
+      <div class="en">“Travel through the land and see how the story of those before you ended.”</div>
+      <div class="cite goldtext">Qur'an &middot; Ar-Rum 30:42</div>
+    </div>
+  </div>
+
+</body>
+</html>

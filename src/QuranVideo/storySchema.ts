@@ -17,6 +17,13 @@ export const storySegmentSchema = z.object({
   // narration
   words: z.array(storyWordSchema).optional(), // for synced captions
   source: z.string().optional(), // small citation chip (e.g. "Tirmidhi 3153 (hasan)")
+  map: z.string().optional(), // optional animated history map behind a narration beat
+  scene: z.string().optional(), // institutional visual: statement|chronology|facade|map|quote
+  kicker: z.string().optional(), // small gold eyebrow label at the top of the slide
+  foot: z.string().optional(), // small italic source/footnote at the bottom
+  highlight: z.string().optional(), // chronology: which era to emphasise (dadan|lihyan|nabataean)
+  videoSrc: z.string().optional(), // cinematic: background clip (remote Pexels URL or /public path)
+  videoDuration: z.number().optional(), // clip length in seconds — slows playback to fill the beat (no end freeze)
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),
@@ -28,6 +35,13 @@ export const storyPropsSchema = z.object({
   reciterName: z.string().default("Sheikh Abdur-Rahman as-Sudais"),
   voiceName: z.string().default("Daniel"),
   websiteUrl: z.string().default("ketabistudio.com"),
+  // Auto-appended founding-list "ad" end card (on by default). The standalone
+  // brand ad sets showOutro:false so it doesn't get a redundant second CTA.
+  showOutro: z.boolean().default(true),
+  ctaHeadline: z.string().default("Join the founding list"),
+  ctaSeconds: z.number().default(4.5),
+  // Cinematic mode: full-bleed stock footage backgrounds + calm captions.
+  cinematic: z.boolean().default(false),
   segments: z.array(storySegmentSchema),
 });
 

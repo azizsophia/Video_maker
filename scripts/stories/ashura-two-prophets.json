@@ -1,0 +1,29 @@
+{
+  "id": "ashura-two-prophets",
+  "title": "The Day Two Prophets, a Thousand Years Apart, Gave Thanks for the Same Rescue — Ashura",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "_note": "CINEMATIC, hook-first, 60s+. FRESH ASHURA ANGLE: gratitude, NOT fasting-guilt, and NOT a retelling of the sea-splitting (that was just posted). Story = the Prophet pbuh reaching Madinah, finding the Jewish community fasting Ashura for Musa's rescue, and saying 'We have more right to Musa than you.' Two prophets, 1000 years apart, united by gratitude. NO recital; voice speaks English only. Qur'an 14:7 (gratitude) shown Arabic+English, not recited. EVERY beat has its OWN distinct clip (no reuse). All Pexels clips downloaded + visually verified human-free. SOURCES: Sahih al-Bukhari 2004; Sahih Muslim 1130 (Ibn Abbas); Qur'an Ibrahim 14:7. Safe-zone, legible captions.",
+  "segments": [
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/18360844/18360844-hd_1080_1920_30fps.mp4", "text": "There is one day so powerful that two different nations, living a thousand years apart, both stopped everything to honor it." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/32873862/14011446_1080_1920_30fps.mp4", "text": "It is called the day of Ashura. And behind it is one of the greatest rescues in all of history." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/19244922/19244922-uhd_1440_1920_30fps.mp4", "text": "Fourteen hundred years ago, the Prophet Muhammad, peace be upon him, arrived in the city of Madinah." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/11384843/11384843-hd_1080_1920_25fps.mp4", "text": "There, he found the Jewish community fasting. No food, no water, all for a single special day." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/11758612/11758612-hd_1080_1920_30fps.mp4", "foot": "Sahih al-Bukhari 2004", "text": "So he asked them a simple question. Why this day? What makes it so important?" },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35657553/15110503_1080_1920_30fps.mp4", "text": "They answered: this is the day Allah saved the Prophet Musa, and his people, from a tyrant who wanted them dead." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/28265381/12344308_1080_1920_30fps.mp4", "text": "The sea had opened in front of them. And the army chasing them was swallowed by the water." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/12222644/12222644-hd_1080_1920_30fps.mp4", "text": "And on that day, Musa fasted. Not out of fear. But out of pure gratitude to the One who rescued him." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/30148493/12928003_1080_1920_60fps.mp4", "foot": "Sahih Muslim 1130", "text": "Then the Prophet Muhammad, peace be upon him, said something beautiful. We have more right to Musa than you." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/35231069/14926182_1080_1920_30fps.mp4", "text": "Two prophets. A thousand years apart. Joined by the same act of thanks to the same God." },
+    { "type": "narration", "quote": "14:7", "kicker": "AS THE QUR'AN SAYS", "video": "https://videos.pexels.com/video-files/27740324/12215656_1080_1920_30fps.mp4", "text": "And remember when your Lord proclaimed: if you are grateful, I will surely increase you." },
+    { "type": "narration", "video": "https://videos.pexels.com/video-files/34982656/14819326_1080_1920_60fps.mp4", "text": "One day. Two prophets. One quiet thank you, still remembered today." }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 2004 & Sahih Muslim 1130 (narrated Ibn Abbas): the Prophet pbuh came to Madinah, found the Jews fasting Ashura, and they said it was the day Allah saved Musa and the Children of Israel from Pharaoh, so Musa fasted in thanks; the Prophet said 'We have more right to Musa than you,' and fasted it.",
+    "Ashura = the 10th of Muharram. The rescue of Musa and the drowning of Pharaoh's army is recounted across the Qur'an (e.g. Surah Ash-Shu'ara 26:52-66; Surah Yunus 10:90).",
+    "Closing verse: Qur'an, Surah Ibrahim 14:7 — 'If you are grateful, I will surely increase you.' Shown Arabic + English; NOT recited (voice speaks English only).",
+    "Angle is gratitude (not fasting-guilt) and is distinct from the previously-posted sea-splitting video. Every beat uses its own distinct clip. All Pexels clips downloaded and visually verified human-free (no faces/bodies)."
+  ]
+}

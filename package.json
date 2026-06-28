@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@fontsource/amiri": "^5.0.13",
+    "@fontsource/jost": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/scheherazade-new": "^5.0.13",
     "@remotion/cli": "^4.0.0",
     "@remotion/google-fonts": "^4.0.0",

@@ -116,6 +116,16 @@ async function main() {
       const dest = join("public", "story", `n${i}.mp3`);
       const { words, duration } = await tts(text, voice, model, dest);
       console.log(`  narration ${i}: ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
+      // Optional on-screen Arabic verse (shown, never recited). Pulled from the
+      // validated Quran.com source so Arabic is never hand-typed.
+      let arabicQuote: string | undefined;
+      if (seg.quote) {
+        const qv = await getJson<any>(
+          `${API}/verses/by_key/${String(seg.quote)}?language=en&fields=text_uthmani`
+        );
+        arabicQuote = qv.verse?.text_uthmani as string | undefined;
+        if (arabicQuote) console.log(`  quote ${seg.quote}: Arabic shown (not recited)`);
+      }
       segments.push({
         kind: "narration",
         audioSrc: `story/n${i}.mp3`,
@@ -123,6 +133,14 @@ async function main() {
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         words,
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
+        map: seg.map,
+        scene: seg.scene,
+        kicker: seg.kicker,
+        foot: seg.foot,
+        highlight: seg.highlight,
+        videoSrc: seg.video, // remote Pexels URL — streamed at render (no download)
+        videoDuration: typeof seg.videoDuration === "number" ? seg.videoDuration : undefined, // clip seconds → fill-the-beat slowdown
+        arabic: arabicQuote,
       });
       cursor += duration + GAP;
     } else if (seg.type === "ayah") {
@@ -133,15 +151,27 @@ async function main() {
       const verse = v.verse;
       const arabic = verse.text_uthmani as string;
       const tr = stripHtml(verse.translations?.[0]?.text ?? "");
+
+      // Audio source: a verified free-license clip (seg.audioUrl) when provided,
+      // otherwise the Quran.com reciter — the copyrighted default, fine for
+      // testing but NOT for monetized >60s. See docs/RECITERS.md. We always keep
+      // the validated Uthmani text + translation from Quran.com regardless.
+      const custom = typeof seg.audioUrl === "string" && seg.audioUrl.length > 0;
+      if (custom && typeof seg.seconds !== "number") {
+        throw new Error(`Ayah ${key}: a custom audioUrl requires "seconds" (clip length). See docs/RECITERS.md.`);
+      }
+      const audioUrl: string = custom ? seg.audioUrl : verse.audio.url;
       const segsArr: number[][] = verse.audio?.segments ?? [];
       const lastEnd = segsArr.length ? segsArr[segsArr.length - 1][segsArr[0].length - 1] / 1000 : 6;
-      const duration = Math.max(2, lastEnd + 0.6);
-      const dest = join("public", "story", `a${i}.mp3`);
-      await download(resolveAudioUrl(verse.audio.url), dest);
+      const duration = custom ? Math.max(1, Number(seg.seconds)) : Math.max(2, lastEnd + 0.6);
+      const ext = (custom && audioUrl.match(/\.(ogg|mp3|m4a|wav)(?:\?|$)/i)?.[1]?.toLowerCase()) || "mp3";
+      const dest = join("public", "story", `a${i}.${ext}`);
+      await download(resolveAudioUrl(audioUrl), dest);
+      if (custom) console.log(`  ayah ${key}: free-license audio${seg.audioCredit ? ` — ${seg.audioCredit}` : ""}`);
       console.log(`  ayah ${key}: ${duration.toFixed(1)}s`);
       segments.push({
         kind: "ayah",
-        audioSrc: `story/a${i}.mp3`,
+        audioSrc: `story/a${i}.${ext}`,
         fromSeconds: Number(cursor.toFixed(2)),
         durationInSeconds: Number((duration + GAP).toFixed(2)),
         arabic,
@@ -159,6 +189,12 @@ async function main() {
     reciterName: args.reciterName ?? "Sheikh Abdur-Rahman as-Sudais",
     voiceName: story.voiceName ?? "Daniel",
     websiteUrl: args.website ?? "ketabistudio.com",
+    // Founding-list ad end card: on by default, but a story can opt out
+    // (e.g. the standalone brand ad, which is itself the CTA).
+    showOutro: story.showOutro ?? true,
+    ctaHeadline: story.ctaHeadline ?? "Join the founding list",
+    ctaSeconds: story.ctaSeconds ?? 4.5,
+    cinematic: story.cinematic ?? false,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";

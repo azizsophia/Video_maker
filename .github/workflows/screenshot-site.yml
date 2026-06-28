@@ -1,0 +1,60 @@
+name: Capture Site Screenshots
+
+# Snaps clean retina screenshots of the website and commits them to public/promo/
+# so video outros can show the real site/books (no phone status bars).
+# workflow_dispatch only works from the default branch, so we also run on push
+# to this feature branch when the screenshot script/workflow changes. The paths
+# filter excludes the captured PNGs, so the auto-commit can't retrigger a loop.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Site URL"
+        required: true
+        default: "https://ketabistudio.com"
+  push:
+    branches: ["claude/video-performance-analysis-3bjmgv"]
+    paths:
+      - "scripts/screenshot-site.mjs"
+      - ".github/workflows/screenshot-site.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  shoot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm i -D playwright@1.48.0
+          npx playwright install --with-deps chromium
+
+      - name: Capture screenshots
+        run: SITE_URL="${{ inputs.url }}" node scripts/screenshot-site.mjs
+
+      - name: Commit screenshots to the branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/promo/site-*.png
+          if git diff --cached --quiet; then
+            echo "No screenshot changes."
+          else
+            git commit -m "Add clean website screenshots (automated capture)"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Upload screenshots artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-screenshots
+          path: public/promo/site-*.png
+          retention-days: 14

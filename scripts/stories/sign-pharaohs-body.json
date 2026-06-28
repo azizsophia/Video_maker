@@ -1,0 +1,46 @@
+{
+  "id": "sign-pharaohs-body",
+  "title": "The Tyrant the Quran Said Would Be Preserved",
+  "reciter": 3,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "cinematic-dark",
+  "_note": "TTS pronunciation: Musa = 'Moo-saa'. On-screen captions use proper spelling. ACCURACY GUARDRAIL: the Quran does NOT name which pharaoh, and identifying a specific museum mummy (e.g. Ramesses II or Merneptah) as the Pharaoh of Moses is a modern hypothesis, not established fact — the narration deliberately avoids asserting it. AUDIO/COPYRIGHT: the ayah clip (10:92) currently pulls Sudais via Quran.com; swap to a VERIFIED free-license recording or recite in-house before commercial publishing.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "A tyrant drowning three thousand years ago. And one verse that said his body would be saved, as a sign for everyone who came after him.",
+      "caption": "Surah Yunus 10:92"
+    },
+    {
+      "type": "narration",
+      "text": "As the sea closed over him, chasing Musa and his people, Pharaoh finally cried out that he believed. But the door had already shut.",
+      "caption": "Surah Yunus 10:90"
+    },
+    {
+      "type": "narration",
+      "text": "And then came the words that no one at the time could have explained.",
+      "caption": "Surah Yunus 10:92"
+    },
+    { "type": "ayah", "surah": 10, "ayah": 92, "source": "Surah Yunus 10:92" },
+    {
+      "type": "narration",
+      "text": "Not destroyed. Preserved. As a sign. For centuries no one knew what that could mean, until the dry sands of Egypt gave back the preserved bodies of its pharaohs, and the world filed past them behind glass.",
+      "caption": "Royal mummies on display, Egypt"
+    },
+    {
+      "type": "narration",
+      "text": "The Quran never named which pharaoh, so neither will we. But the point it made stands in front of you in a museum: a drowned tyrant's body, kept, exactly as the verse promised.",
+      "caption": "The Quran does not name the pharaoh"
+    },
+    {
+      "type": "narration",
+      "text": "A promise made fourteen hundred years ago, about an event three thousand years before that. Kept.",
+      "caption": "Ketabi Studio — sourced Islamic stories"
+    }
+  ],
+  "sources": [
+    "Surah Yunus 10:90-92 — Pharaoh's drowning, his belated belief, and 'today We will preserve your body that you may be a sign to those after you' (10:92, Saheeh International)",
+    "ACCURACY NOTE: the Quran does not identify the pharaoh. Linking a specific museum mummy (Ramesses II / Merneptah) to the Exodus is a modern hypothesis (popularized by Maurice Bucaille) and is NOT established fact. The script states only that pharaohs' bodies are preserved and displayed — which is documented — and avoids naming one as 'the' pharaoh."
+  ]
+}

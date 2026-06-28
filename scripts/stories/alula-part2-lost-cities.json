@@ -1,0 +1,34 @@
+{
+  "id": "alula-part2-lost-cities",
+  "title": "AlUla Part 2: A Graveyard of Empires",
+  "theme": "atlas",
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "look": "atlas",
+  "_note": "INSTITUTIONAL / lecture-grade style (theme 'atlas': ivory + ink-green + gold). Every beat is an animated slide — annotated map, chronology timeline, drawn-on Nabataean facade, pull-quote, or statement — all with constant motion. NO RECITAL: the Qur'an appears as on-screen Arabic + English only (beat 12); voice speaks English. ACCURACY: the Nabataean facade (beat 10) is shown ONLY for the Nabataeans; Thamud's carving (beat 4) is a statement, never illustrated with the Nabataean tombs. Every beat carries a sourced footnote. TTS: AlUla='al-OO-la', al-Hijr='al-HIJR', Thamud='tha-MOOD', Dadan='da-DAN', Lihyan='LIH-yan', Nabataeans='nab-a-TEE-ans'. For #HistoryTikTokContest (1min+).",
+  "segments": [
+    { "type": "narration", "scene": "map", "kicker": "AL·ULA · NORTH-WEST ARABIA", "foot": "Hegra (Madāʾin Ṣāliḥ) & AlUla, the Hejaz, Saudi Arabia", "text": "This valley in Saudi Arabia hides a secret almost no tourist is ever told." },
+    { "type": "narration", "scene": "chronology", "kicker": "A CHRONOLOGY OF AL·ULA", "foot": "Sources: UNESCO; Hoyland, Arabia and the Arabs", "text": "It isn't one lost city. It's four, stacked on the very same sand." },
+    { "type": "narration", "scene": "statement", "kicker": "", "text": "And the Quran named the most terrifying of them first." },
+    { "type": "narration", "scene": "statement", "kicker": "QUR'AN · SURAH AL-HIJR 15:82", "foot": "Qur'an 15:82 — 'they carved homes from the mountains, feeling secure'", "text": "Thamud carved their homes into solid mountains, then defied their own prophet." },
+    { "type": "narration", "scene": "statement", "kicker": "QUR'AN · SURAH AL-HIJR 15:83", "foot": "Qur'an 15:83 — 'the shriek seized them at morning'", "text": "He warned them. They refused. And a single blast left their cliffs empty forever." },
+    { "type": "narration", "scene": "map", "kicker": "THE INCENSE ROAD", "foot": "After: Healey, The Nabataean Tomb Inscriptions of Madāʾin Ṣāliḥ", "text": "So why did empire after empire bleed for this one patch of desert?" },
+    { "type": "narration", "scene": "statement", "kicker": "FRANKINCENSE · MYRRH · GOLD", "foot": "The caravan incense route, South Arabia → the Mediterranean", "text": "It sat on the incense road, the richest trade route in the ancient world. Whoever held the oasis taxed it all." },
+    { "type": "narration", "scene": "chronology", "highlight": "dadan", "kicker": "A CHRONOLOGY OF AL·ULA", "foot": "Dadan (Dedan): centred at al-Khuraybah, AlUla", "text": "First rose the kingdom of Dadan, already powerful nearly three thousand years ago." },
+    { "type": "narration", "scene": "chronology", "highlight": "lihyan", "kicker": "A CHRONOLOGY OF AL·ULA", "foot": "Colossal Lihyanite statues, excavated at Dadan", "text": "Then mighty Lihyan, whose giant stone statues are still being pulled from the sand." },
+    { "type": "narration", "scene": "facade", "kicker": "NABATAEAN HEGRA", "foot": "Hegra: 100+ monumental rock-cut tombs · 1st c. BCE – 1st c. CE", "text": "Then the Nabataeans, the builders of Petra, who carved the tombs every tourist photographs today." },
+    { "type": "narration", "scene": "chronology", "kicker": "FOUR POWERS · ONE VALLEY", "foot": "Sources: UNESCO; Qur'an 7:73–79; 15:80–84", "text": "Four powers. One valley. Each certain it could never fall. Every one now silent stone." },
+    { "type": "narration", "quote": "30:42", "kicker": "AS THE QUR'AN REMINDS US", "text": "And the Quran tells us exactly what to do with a place like this. Travel the earth, and see how the story of those before you ended." },
+    { "type": "narration", "scene": "statement", "kicker": "", "text": "AlUla was never a luxury escape. It is a graveyard of empires." },
+    { "type": "narration", "scene": "statement", "kicker": "", "foot": "Qur'an 30:42 · 27:69", "text": "A sign, the Quran says, left standing for anyone willing to reflect." }
+  ],
+  "sources": [
+    "Qur'an, Surah Al-Hijr 15:80-84 — Thamud of al-Hijr; 15:82 they carved homes in the mountains; 15:83 the shriek (sayhah). Also Surah Al-A'raf 7:73-79.",
+    "Dadan (Dedan): oasis kingdom at al-Khuraybah, AlUla; early-mid 1st millennium BCE.",
+    "Lihyan (Lihyanite kingdom): c. 5th-2nd c. BCE; monumental Lihyanite statues excavated at Dadan.",
+    "Nabataeans (1st c. BCE - 1st c. CE): builders of Petra; carved the monumental tombs of Hegra (Madāʾin Ṣāliḥ). The facade shown belongs ONLY to the Nabataean beat; Thamud's carving (beat 4) is a statement, never the Nabataean tombs.",
+    "Incense road: AlUla/Dadan was a key caravan station carrying frankincense and myrrh north from southern Arabia.",
+    "Qur'an, Surah Ar-Rum 30:42 (cf. 27:69) — 'Travel through the land and observe how was the end of those before' (shown as Arabic + English; NOT recited).",
+    "ACCURACY: dating of Qur'anic Thamud is debated; the chronology presents the dated kingdoms alongside the Qur'anic account without forcing a strict order. The false 'ozone hole over AlUla' claim is excluded."
+  ]
+}

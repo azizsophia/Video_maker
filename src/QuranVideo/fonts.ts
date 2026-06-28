@@ -8,6 +8,10 @@ import "@fontsource/scheherazade-new/700.css";
 export const ARABIC_FONT = "Amiri";
 export const ARABIC_DISPLAY_FONT = '"Scheherazade New"';
 export const TRANSLATION_FONT = 'Georgia, "Times New Roman", serif';
+// Heavy sans for modern, punchy short-form captions (TikTok/Reels style).
+// Uses fonts present in the headless render (Liberation/Arial, DejaVu).
+export const CAPTION_FONT =
+  'Arial, "Helvetica Neue", "Liberation Sans", system-ui, sans-serif';
 
 // The Arabic fonts are bundled locally via @fontsource — the CSS imports above
 // register their @font-face rules at load time, so they apply effectively
