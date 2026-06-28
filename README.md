@@ -1,5 +1,10 @@
 # Ketabi Studio 🎬
 
+> 📌 **START HERE → [docs/PLAYBOOK.md](docs/PLAYBOOK.md)** — the full production
+> playbook: every rule (visuals, accuracy, captions, posting), the story-script
+> format, the cover-image process, the rendering workflow, the vetted list of
+> future video ideas, and the waitlist ad. Read it first so nothing is lost.
+
 A **code-driven video engine** for Islamic content — your own replacement for
 InVideo, built so every visual is programmable, reusable, and free to render.
 
