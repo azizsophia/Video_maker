@@ -120,3 +120,30 @@ Preview it live as the `QuranHifz` composition in `npm run dev`.
 - [ ] **M4 — Auto-publish** helpers for YouTube / TikTok
 
 See `docs/SETUP.md` to get the live pipeline running.
+
+---
+
+## Session handoff — where we left off (read this first)
+
+**Branch:** `claude/video-performance-analysis-1o75wa` (all work here; never push elsewhere).
+
+**Built and working**
+- Short-form engine `src/QuranVideo/StoryVideo.tsx` (cinematic mode) + `CineMap`/`StoryMap` (animated, real-lat/lon maps) + `ParallaxAd` outro = the REAL keepsake book opening (cover `public/ad/book-mama.png` → `dedication-mama.jpg` + `photopage-mama.jpg`). Outro CTA: "Join the founding list for early access" + ketabistudio.com.
+- Footage search: GitHub Actions `pexels-search.yml` — edit `scripts/pexels-queries.txt` (1 query/line; first line `--photos` for stills), commit+push, read candidates from the run log. Pexels key = repo secret `PEXELS_API_KEY`. Download thumbnails with **curl** (urllib gets 403).
+- **Fire of the Hijaz** short: done (map beat 4, red-sky beat 8, lava-field beat 10). Renders via `render-story.yml`.
+- Research done: TikTok-safe CTA (PLAYBOOK §8); long-form gap analysis → chose **Euphrates** as the first long-form.
+
+**IN PROGRESS — Long-form Euphrates documentary (the pilot)**
+- Script: `scripts/stories/longform-euphrates.json` — 30 beats, chaptered, accuracy-verified: **Sahih Muslim 2894 = "mountain of gold" (jabal); Sahih al-Bukhari 7119 = "treasure of gold" (kanz)**; NASA GRACE = 144 km³ lost 2003-2009 (Voss 2013). Has a river map beat (`map:"euphrates"`) and the Qur'an 47:18 quote beat.
+- Footage: one clip now filled into every narration beat (videoDuration set; **all URLs verified HTTP 206**). ⚠️ Selection was slug-filtered only — do a **visual human-free QC** (curl each thumb, swap any with people) before posting; the no-faces/adab rule is strict.
+
+**NEXT STEPS**
+1. Visual human-free QC of the 29 Euphrates clips; swap any with people.
+2. Render: dispatch `render-story.yml` (inputs: `story=scripts/stories/longform-euphrates.json`, theme blank → uses `ketabi`) on this branch.
+3. The run shows **"failure" = ONLY the optional Google Drive step**; the `story-video` artifact is still produced — download it and send the user the **artifact link** (long videos: link, not MP4).
+
+**Rules to keep**
+- Accuracy: every claim primary-source verified; hadith graded; science cited separately; never call a prophecy "fulfilled" that isn't (the gold has NOT appeared).
+- Delivery: long videos → ARTIFACT LINK; short clips (≤~15s) → MP4 is fine.
+- Captions: short-form = simple one-line title; TikTok adds 5 hashtags with `#edutokcontest` in the middle; long-form description only when asked.
+- Keep tool outputs SMALL (curl+parse, low-res images) — big dumps blow the request-size limit.
