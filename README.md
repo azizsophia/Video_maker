@@ -147,3 +147,9 @@ See `docs/SETUP.md` to get the live pipeline running.
 - Delivery: long videos → ARTIFACT LINK; short clips (≤~15s) → MP4 is fine.
 - Captions: short-form = simple one-line title; TikTok adds 5 hashtags with `#edutokcontest` in the middle; long-form description only when asked.
 - Keep tool outputs SMALL (curl+parse, low-res images) — big dumps blow the request-size limit.
+
+### ⚠️ Long-form format correction (important)
+The first Euphrates long-form render came out **9:16 vertical, ~5 min** — WRONG for YouTube. Long-form must be:
+- **16:9 horizontal, 1920×1080.** The TikTok engine is 1080×1920; long-form needs a NEW landscape composition (e.g. `StoryVideoWide`) with the cinematic layout adapted for landscape: caption lower-third, `CineMap` BOX, `CineQuote`, and the `ParallaxAd`/OpenBook outro all reposition for 16:9 (use `useVideoConfig()` width/height, not hardcoded 1080×1920).
+- **Target ~8–10 min:** expand `scripts/stories/longform-euphrates.json` narration (~+60–80% words / more beats). Daniel narrates ~180–200 wpm, so plan ~1,500–1,800 words.
+- Keep vertical 9:16 for the Shorts cut of the same topic.
