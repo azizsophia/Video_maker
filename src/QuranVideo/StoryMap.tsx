@@ -10,8 +10,8 @@ import { ThemePalette } from "./themes";
 import { TRANSLATION_FONT } from "./fonts";
 
 // Real coordinates (lat/lon) so the geography is honest, not decorative.
-type Place = { label: string; lat: number; lon: number };
-const PLACES: Record<string, Place> = {
+export type Place = { label: string; lat: number; lon: number };
+export const PLACES: Record<string, Place> = {
   makkah: { label: "Makkah", lat: 21.42, lon: 39.83 },
   medina: { label: "Madinah", lat: 24.47, lon: 39.61 },
   alula: { label: "AlUla (Dadan · Hegra)", lat: 26.62, lon: 37.92 },
@@ -21,9 +21,9 @@ const PLACES: Record<string, Place> = {
   busra: { label: "Busra", lat: 32.52, lon: 36.48 },
 };
 
-type Bounds = { lonMin: number; lonMax: number; latMin: number; latMax: number };
-type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds };
-const VIEWS: Record<string, MapView> = {
+export type Bounds = { lonMin: number; lonMax: number; latMin: number; latMax: number };
+export type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds };
+export const VIEWS: Record<string, MapView> = {
   // Madinah -> Busra: the fire's glow was recorded reaching this far north, into
   // southern Syria. Window widened north to include the Levant.
   "medina-busra": {
@@ -68,7 +68,7 @@ const pointAlong = (pts: { x: number; y: number }[], frac: number) => {
 };
 
 // Default projection window over NW Arabia (a view may override via bounds).
-const DEFAULT_BOUNDS: Bounds = { lonMin: 34.5, lonMax: 41.5, latMin: 19.5, latMax: 30.5 };
+export const DEFAULT_BOUNDS: Bounds = { lonMin: 34.5, lonMax: 41.5, latMin: 19.5, latMax: 30.5 };
 const BOX = { left: 140, right: 940, top: 320, bottom: 1480 };
 
 const makeProject = (b: Bounds) => (p: Place) => ({

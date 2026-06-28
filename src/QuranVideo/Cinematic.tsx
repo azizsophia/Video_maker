@@ -10,6 +10,7 @@ import {
 import { StorySegment, StoryWord } from "./storySchema";
 import { PLAYFAIR, CORMORANT, JOST } from "./luxFonts";
 import { ARABIC_DISPLAY_FONT } from "./fonts";
+import { CineMap } from "./CineMap";
 
 const GOLD = "#e7c873";
 const CREAM = "#f7f1e2";
@@ -165,7 +166,13 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
 export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
   return (
     <AbsoluteFill>
-      {seg.videoSrc ? <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} /> : <AbsoluteFill style={{ background: "#0b1410" }} />}
+      {seg.map ? (
+        <CineMap view={seg.map} />
+      ) : seg.videoSrc ? (
+        <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} />
+      ) : (
+        <AbsoluteFill style={{ background: "#0b1410" }} />
+      )}
       {seg.arabic ? (
         <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} />
       ) : (

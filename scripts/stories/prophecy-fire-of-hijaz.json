@@ -31,9 +31,7 @@
     },
     {
       "type": "narration",
-      "video": "https://videos.pexels.com/video-files/8829603/8829603-hd_1080_1920_30fps.mp4",
-      "videoDuration": 10,
-      "foot": "Busra · southern Syria",
+      "map": "medina-busra",
       "text": "Busra sits in southern Syria, more than a thousand kilometers north of Medina. A fire near the city being seen that far away sounded impossible."
     },
     {
@@ -58,8 +56,8 @@
     },
     {
       "type": "narration",
-      "video": "https://videos.pexels.com/video-files/12139633/12139633-hd_1080_1920_60fps.mp4",
-      "videoDuration": 19,
+      "video": "https://videos.pexels.com/video-files/10452251/10452251-hd_1080_1920_30fps.mp4",
+      "videoDuration": 16,
       "text": "The people who lived through it wrote that the night turned to fire, and the sky over Medina glowed red."
     },
     {
@@ -71,8 +69,8 @@
     },
     {
       "type": "narration",
-      "video": "https://videos.pexels.com/video-files/34300579/14531529_1080_1920_60fps.mp4",
-      "videoDuration": 13,
+      "video": "https://videos.pexels.com/video-files/31973150/13623936_1080_1920_30fps.mp4",
+      "videoDuration": 11,
       "foot": "Harrat Rahat lava field · visible today",
       "text": "The lava cooled just short of the city. That black rock field still lies outside Medina today, where anyone can go and stand on it."
     },
