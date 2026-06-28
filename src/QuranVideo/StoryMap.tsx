@@ -18,10 +18,20 @@ const PLACES: Record<string, Place> = {
   hegra: { label: "Al-Hijr · Hegra", lat: 26.79, lon: 37.95 },
   tabuk: { label: "Tabuk", lat: 28.38, lon: 36.57 },
   petra: { label: "Petra", lat: 30.33, lon: 35.44 },
+  busra: { label: "Busra", lat: 32.52, lon: 36.48 },
 };
 
-type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[] };
+type Bounds = { lonMin: number; lonMax: number; latMin: number; latMax: number };
+type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds };
 const VIEWS: Record<string, MapView> = {
+  // Madinah -> Busra: the fire's glow was recorded reaching this far north, into
+  // southern Syria. Window widened north to include the Levant.
+  "medina-busra": {
+    title: "",
+    pins: ["medina", "busra"],
+    route: ["medina", "busra"],
+    bounds: { lonMin: 33.5, lonMax: 42.5, latMin: 21, latMax: 34 },
+  },
   hijaz: {
     title: "AL-ULA, NORTH-WEST ARABIA",
     subtitle: "One valley — beside Islam's holiest cities",
@@ -57,16 +67,13 @@ const pointAlong = (pts: { x: number; y: number }[], frac: number) => {
   return pts[pts.length - 1];
 };
 
-// Projection window over NW Arabia.
-const LON_MIN = 34.5;
-const LON_MAX = 41.5;
-const LAT_MIN = 19.5;
-const LAT_MAX = 30.5;
+// Default projection window over NW Arabia (a view may override via bounds).
+const DEFAULT_BOUNDS: Bounds = { lonMin: 34.5, lonMax: 41.5, latMin: 19.5, latMax: 30.5 };
 const BOX = { left: 140, right: 940, top: 320, bottom: 1480 };
 
-const project = (p: Place) => ({
-  x: BOX.left + ((p.lon - LON_MIN) / (LON_MAX - LON_MIN)) * (BOX.right - BOX.left),
-  y: BOX.top + ((LAT_MAX - p.lat) / (LAT_MAX - LAT_MIN)) * (BOX.bottom - BOX.top),
+const makeProject = (b: Bounds) => (p: Place) => ({
+  x: BOX.left + ((p.lon - b.lonMin) / (b.lonMax - b.lonMin)) * (BOX.right - BOX.left),
+  y: BOX.top + ((b.latMax - p.lat) / (b.latMax - b.latMin)) * (BOX.bottom - BOX.top),
 });
 
 // Animated schematic history map: pins drop in, a route draws on. Stylised on
@@ -75,6 +82,7 @@ export const StoryMap: React.FC<{ view: string; theme: ThemePalette }> = ({ view
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const def = VIEWS[view] ?? VIEWS.hijaz;
+  const project = makeProject(def.bounds ?? DEFAULT_BOUNDS);
 
   const pins = def.pins.map((id) => ({ id, place: PLACES[id], pt: project(PLACES[id]) }));
   const routePts = (def.route ?? []).map((id) => project(PLACES[id]));
@@ -95,7 +103,8 @@ export const StoryMap: React.FC<{ view: string; theme: ThemePalette }> = ({ view
 
   return (
     <AbsoluteFill>
-      <div style={{ position: "absolute", top: 150, width: "100%", textAlign: "center", padding: "0 80px" }}>
+      <div style={{ position: "absolute", top: 150, width: "100%", textAlign: "center", padding: "0 80px", display: def.title || def.subtitle ? "block" : "none" }}>
+        {def.title ? (
         <div
           style={{
             display: "inline-block",
@@ -111,6 +120,7 @@ export const StoryMap: React.FC<{ view: string; theme: ThemePalette }> = ({ view
         >
           {def.title}
         </div>
+        ) : null}
         {def.subtitle ? (
           <div
             style={{
