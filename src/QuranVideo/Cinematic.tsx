@@ -11,6 +11,7 @@ import { StorySegment, StoryWord } from "./storySchema";
 import { PLAYFAIR, CORMORANT, JOST } from "./luxFonts";
 import { ARABIC_DISPLAY_FONT } from "./fonts";
 import { CineMap } from "./CineMap";
+import { FingerprintScene, isFingerprintScene } from "./Fingerprint";
 
 const GOLD = "#e7c873";
 const CREAM = "#f7f1e2";
@@ -192,6 +193,10 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
     <AbsoluteFill>
       {seg.map ? (
         <CineMap view={seg.map} />
+      ) : isFingerprintScene(seg.scene) ? (
+        // Code-generated fingerprint-ridge backdrop (no stock footage): the
+        // subject of this short IS a fingerprint, so the visual is one.
+        <FingerprintScene name={seg.scene as string} />
       ) : seg.videoSrc ? (
         <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} />
       ) : (

@@ -41,10 +41,15 @@ Google Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.k
 
 ## In-progress batch (Tuesday)
 
-- SHORT - Fingerprints (`scripts/stories/fingerprints.json`): DONE + footage wired
-  (abstract ink/gold-dust/galaxy, human-free by construction), ~1.4 min, validated.
-  TODO: render (StoryVideo vertical, orientation=vertical), then CoverCard cover +
-  TikTok/Shorts captions.
+- SHORT - Fingerprints (`scripts/stories/fingerprints.json`): DONE. Footage REDONE
+  with code-generated fingerprint-ridge visuals (`src/QuranVideo/Fingerprint.tsx`)
+  so the visual matches the subject exactly - the abstract ink/gold-dust/galaxy
+  stock clips are gone. Each beat uses an `fp-*` scene chosen to match its line
+  (whorl forms / core spotlight / crumble to dust / restore the tips over 75:4 /
+  Galton scan / two different prints for twins / one ridge as a signature /
+  pressed seal / gathered from dust). Human-free and text-free by construction,
+  on the dark-green/gold palette; ~1.4 min; stills validated. TODO: render
+  (StoryVideo, orientation=vertical), then CoverCard cover + TikTok/Shorts captions.
 - LONG-FORM - Story of Yusuf (`scripts/stories/longform-yusuf.json`): script written
   (~4.6 min) but NEEDS EXPANSION to ~9 min (add the banquet 12:31, the two
   prisoners' dreams 12:36-42, the cup in Binyamin's bag 12:70, Yaqub's grief 12:84;
@@ -62,8 +67,17 @@ risk), do the footage sourcing + QC early in a FRESH chat. Abstract-only footage
 ## Per-video production checklist
 
 1. Script in `scripts/stories/` (sourced; verses shown not recited; no date-setting).
-2. Footage: Pexels search workflow -> frame-grab QC (human-free, text-free, no
-   haram/other-faith symbols) -> wire video + videoDuration (beat <= ~1.8x clip).
+2. Visuals MUST match the scene (the rule). Per beat, pick whichever matches the
+   line best:
+   - a code-generated `scene` (`src/QuranVideo/Scenes.tsx`, or a subject-specific
+     one like `Fingerprint.tsx`) when the topic has a concrete shape stock can't
+     reliably show - this is preferred for anything literal (a fingerprint, a
+     wall, a map) because it matches exactly and is human-free/text-free by
+     construction (no QC needed); OR
+   - Pexels footage via the search workflow -> frame-grab QC (human-free,
+     text-free, no haram/other-faith symbols) -> wire `video` + `videoDuration`
+     (beat <= ~1.8x clip) when real-world texture beats an abstract drawing.
+   Never leave a beat on generic footage that contradicts what is being said.
 3. Render via `render-story.yml` (orientation vertical|wide). "failure" badge =
    only the optional Drive step; artifact still produced; share the artifact link.
 4. Covers: `CoverCard` (9:16) + `CoverWide` (16:9) brand template, never PIL.

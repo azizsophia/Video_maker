@@ -6,22 +6,22 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
-  "_note": "Vertical 9:16 short (~80s). Pillar: Qur'an and creation (Tuesday). Authentic: Qur'an 75:3-4 (Al-Qiyamah) shown on screen, never recited. Science separate: Galton, 'Finger Prints' (1892). Footage chosen from abstract categories only (black ink in water, gold dust, abstract liquid, galaxy) which cannot contain people/text - QC-by-construction, on the dark/gold brand palette. Captions in the vertical safe area (clear of the right icon rail).",
+  "_note": "Vertical 9:16 short (~80s). Pillar: Qur'an and creation (Tuesday). Authentic: Qur'an 75:3-4 (Al-Qiyamah) shown on screen, never recited. Science separate: Galton, 'Finger Prints' (1892). VISUALS MATCH THE SCENE: the footage is a code-generated fingerprint (concentric friction ridges + delta) on the dark-green/gold brand palette, NOT abstract stock. Human-free and text-free by construction (no Pexels QC), and each beat's ridge pattern is chosen to match its line (forms / core spotlight / crumble to dust / restore / Galton scan / two different prints for twins / one ridge as a signature / a pressed seal / gathered again from dust). Captions in the vertical safe area (clear of the right icon rail).",
   "segments": [
-    { "type": "narration", "kicker": "QUR'AN & CREATION", "text": "Look closely at the tip of your finger. The pattern on it belongs to you, and to no one else who has ever lived.", "video": "https://videos.pexels.com/video-files/7565428/7565428-hd_1080_1920_25fps.mp4", "videoDuration": 40 },
-    { "type": "narration", "text": "Fourteen hundred years ago, the Qur'an pointed to this exact part of the body, while answering a man who doubted he could ever be brought back to life.", "video": "https://videos.pexels.com/video-files/15168366/15168366-hd_1080_1920_30fps.mp4", "videoDuration": 62 },
-    { "type": "narration", "text": "He asked, in effect: how could God ever gather my bones once I have crumbled into dust?", "video": "https://videos.pexels.com/video-files/9665234/9665234-hd_1080_1920_25fps.mp4", "videoDuration": 49 },
-    { "type": "narration", "quote": "75:4", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Al-Qiyamah 75:3-4 (shown, not recited)", "text": "Yes. We are able to restore even the very tips of his fingers.", "video": "https://videos.pexels.com/video-files/7565882/7565882-hd_1080_1920_25fps.mp4", "videoDuration": 50 },
-    { "type": "narration", "kicker": "THE SCIENCE", "foot": "Sir Francis Galton, 1892", "text": "Of every part of the body it could have named, it named the fingertips. And in 1892, a scientist named Francis Galton showed why that is remarkable.", "video": "https://videos.pexels.com/video-files/17256943/17256943-hd_1080_1920_30fps.mp4", "videoDuration": 22 },
-    { "type": "narration", "text": "He proved that no two fingerprints are ever the same. Not between strangers. Not even between identical twins.", "video": "https://videos.pexels.com/video-files/15168378/15168378-hd_1080_1920_30fps.mp4", "videoDuration": 39 },
-    { "type": "narration", "text": "Every ridge is a signature that was never issued twice in all of human history.", "video": "https://videos.pexels.com/video-files/15168361/15168361-hd_1080_1920_30fps.mp4", "videoDuration": 24 },
-    { "type": "narration", "text": "So when the Qur'an singled out the fingertips, it pointed to the one small mark that makes every single person unmistakable.", "video": "https://videos.pexels.com/video-files/7565636/7565636-hd_1080_1920_25fps.mp4", "videoDuration": 18 },
-    { "type": "narration", "kicker": "REFLECT", "text": "The One who can tell you apart by a fingerprint can surely gather you again from dust. That was the whole point.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "text": "Reflect on the signs hidden in your own hands.", "video": "https://videos.pexels.com/video-files/35044924/14845176_1080_1920_30fps.mp4", "videoDuration": 10 }
+    { "type": "narration", "kicker": "QUR'AN & CREATION", "text": "Look closely at the tip of your finger. The pattern on it belongs to you, and to no one else who has ever lived.", "scene": "fp-whorl" },
+    { "type": "narration", "text": "Fourteen hundred years ago, the Qur'an pointed to this exact part of the body, while answering a man who doubted he could ever be brought back to life.", "scene": "fp-core" },
+    { "type": "narration", "text": "He asked, in effect: how could God ever gather my bones once I have crumbled into dust?", "scene": "fp-dust" },
+    { "type": "narration", "quote": "75:4", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Al-Qiyamah 75:3-4 (shown, not recited)", "text": "Yes. We are able to restore even the very tips of his fingers.", "scene": "fp-restore" },
+    { "type": "narration", "kicker": "THE SCIENCE", "foot": "Sir Francis Galton, 1892", "text": "Of every part of the body it could have named, it named the fingertips. And in 1892, a scientist named Francis Galton showed why that is remarkable.", "scene": "fp-scan" },
+    { "type": "narration", "text": "He proved that no two fingerprints are ever the same. Not between strangers. Not even between identical twins.", "scene": "fp-twins" },
+    { "type": "narration", "text": "Every ridge is a signature that was never issued twice in all of human history.", "scene": "fp-signature" },
+    { "type": "narration", "text": "So when the Qur'an singled out the fingertips, it pointed to the one small mark that makes every single person unmistakable.", "scene": "fp-seal" },
+    { "type": "narration", "kicker": "REFLECT", "text": "The One who can tell you apart by a fingerprint can surely gather you again from dust. That was the whole point.", "scene": "fp-gather" },
+    { "type": "narration", "text": "Reflect on the signs hidden in your own hands.", "scene": "fp-whorl" }
   ],
   "sources": [
     "Qur'an 75:3-4 (Al-Qiyamah), shown with translation, never recited: 'Does man think that We will not assemble his bones? Yes, We are Able to proportion his fingertips (bananah).' Arabic from Quran.com.",
     "Science (separate): Sir Francis Galton, 'Finger Prints' (1892) established the uniqueness and lifelong permanence of fingerprint ridge patterns, including between identical twins.",
-    "Framing: reflection on a sign, no coded-miracle overclaim, no date-setting. Footage is abstract (ink/gold-dust/galaxy) so it is human-free and text-free by construction; captions kept inside the vertical safe area."
+    "Framing: reflection on a sign, no coded-miracle overclaim, no date-setting. Visuals are code-generated fingerprint ridges (no stock footage), so they match the subject exactly and are human-free / text-free by construction; captions kept inside the vertical safe area."
   ]
 }
