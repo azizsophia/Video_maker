@@ -34,7 +34,9 @@ export type CoverProps = {
 // TikTok grid reads as one brand.
 export const Cover: React.FC<CoverProps> = ({ title, kicker, image, wordmark = "KETABI STUDIO" }) => {
   const { width, height } = useVideoConfig();
+  const wide = width > height; // 16:9 YouTube thumbnail vs 9:16 feed cover
   const lines = title.split("\n");
+  const longLine = lines.some((l) => l.length > 16);
   return (
     <AbsoluteFill style={{ background: "#0b1410", width, height }}>
       {/* Photo */}
@@ -51,7 +53,7 @@ export const Cover: React.FC<CoverProps> = ({ title, kicker, image, wordmark = "
       <AbsoluteFill style={{ inset: 34, border: "1.5px solid rgba(231,200,115,0.45)", borderRadius: 10 }} />
 
       {/* Top wordmark */}
-      <div style={{ position: "absolute", top: 92, width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 20 }}>
+      <div style={{ position: "absolute", top: wide ? 56 : 92, width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 20 }}>
         <div style={{ height: 1.5, width: 64, background: "linear-gradient(90deg,transparent,rgba(231,200,115,0.85))" }} />
         <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 9, fontSize: 30, color: GOLD }}>{wordmark}</span>
         <div style={{ height: 1.5, width: 64, background: "linear-gradient(90deg,rgba(231,200,115,0.85),transparent)" }} />
@@ -59,13 +61,13 @@ export const Cover: React.FC<CoverProps> = ({ title, kicker, image, wordmark = "
 
       {/* Title block — kept in the vertical center band so it survives TikTok's
           profile-grid center crop (which clips ~270px top & bottom). */}
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 470, padding: "0 110px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: wide ? 110 : 470, padding: wide ? "0 150px" : "0 110px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
         {kicker ? (
           <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 32, color: GOLD, marginBottom: 28, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
             {kicker}
           </span>
         ) : null}
-        <div style={{ fontFamily: PLAYFAIR, fontWeight: 900, fontSize: lines.some((l) => l.length > 16) ? 92 : 112, lineHeight: 1.06, color: CREAM, textShadow: "0 6px 34px rgba(0,0,0,0.92)", maxWidth: 880 }}>
+        <div style={{ fontFamily: PLAYFAIR, fontWeight: 900, fontSize: wide ? (longLine ? 86 : 104) : (longLine ? 92 : 112), lineHeight: 1.06, color: CREAM, textShadow: "0 6px 34px rgba(0,0,0,0.92)", maxWidth: wide ? 1400 : 880 }}>
           {lines.map((l, i) => (
             <div key={i}>{l}</div>
           ))}

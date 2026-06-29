@@ -124,6 +124,23 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
+
+      {/* Landscape branded thumbnail for long-form YouTube (rendered as a still).
+          Same Cover template, 16:9 — use this for every long-form video. */}
+      <Composition
+        id="CoverWide"
+        component={Cover}
+        defaultProps={{
+          title: "A Mountain\nof Gold",
+          kicker: "THE EUPHRATES PROPHECY",
+          image: "https://images.pexels.com/videos/35846101/free-video-35846101.jpg?auto=compress&cs=tinysrgb&fit=crop&w=1280&h=720",
+          wordmark: "KETABI STUDIO",
+        }}
+        fps={30}
+        durationInFrames={1}
+        width={1920}
+        height={1080}
+      />
     </>
   );
 };

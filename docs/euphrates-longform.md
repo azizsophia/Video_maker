@@ -30,15 +30,24 @@ Authority / documentary:
 
 Recommended: "He Warned Us About This River 1,400 Years Ago" (pairs with thumbnail C).
 
-## Thumbnails
+## Thumbnail (final = brand template)
 
-Saved at `public/promo/euphrates/`:
-- `thumb-C-river-warned.png` - "He Warned Us About This River" over the aerial river. Best click-through.
-- `thumb-A-mountain-of-gold.png` - "A Mountain of Gold" over the river. Clear and descriptive.
-- `thumb-B-prophecy-gold.png` - "The Euphrates Prophecy" over molten gold. Dark/premium.
+CANONICAL: `public/promo/euphrates/thumb-brand-mountain-of-gold.png` - rendered
+through the brand `CoverWide` composition (Playfair title, gold frame + flourish,
+green/gold grade), so it matches the channel covers. This is the rule for ALL
+long-form thumbnails now: use `CoverWide`, not PIL mockups.
 
-All 1280x720, brand gold/cream serif, "KETABI STUDIO" mark. Built with PIL in
-`scratchpad/thumbs.py` (regenerate from verified clip frames if needed).
+Regenerate / make variants:
+```
+NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npx remotion still CoverWide \
+  out/euph-thumb.png \
+  --props='{"title":"A Mountain\nof Gold","kicker":"THE EUPHRATES PROPHECY","image":"<https poster url>","wordmark":"KETABI STUDIO"}' \
+  --ignore-certificate-errors
+```
+Swap `title` (Title Case, \n for line breaks), `kicker`, and `image` (a real
+https image URL, e.g. a Pexels video poster cropped w=1280&h=720) for variants.
+
+Superseded PIL mockups (kept for reference only, do not use): `thumb-A/B/C-*.png`.
 
 ## YouTube description (copy-paste, timestamps are estimates - confirm after a watch)
 

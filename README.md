@@ -159,4 +159,5 @@ artifact. Publishing pack (titles, description, thumbnails) is in
 - Accuracy: every claim primary-source verified; hadith graded; science cited separately; never call a prophecy "fulfilled" that isn't (the gold has NOT appeared); no date-setting.
 - Footage: strict no-faces / no-people / adab. No alcohol, drugs, music instruments, luck/superstition charms, other-faith symbols (crosses etc.), or legible unverifiable text. QC every clip visually (see method above), not by search slug.
 - Delivery: long videos -> ARTIFACT LINK; short clips (<=~15s) -> MP4 is fine.
+- Thumbnails/covers: ALWAYS use the brand `Cover` template, never ad-hoc PIL text mockups for finals. Long-form (16:9) uses the `CoverWide` composition; vertical feed covers use `CoverCard`. Render a still: `NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npx remotion still CoverWide out.png --props=<json> --ignore-certificate-errors` (props: title with \n line breaks, kicker, image = a real https poster URL, wordmark). Title in Title Case (Playfair), no emojis/dashes.
 - Keep tool outputs SMALL (curl+parse, low-res images, slice big GH-API/log files by char range) - big dumps blow the request-size limit.
