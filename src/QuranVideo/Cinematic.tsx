@@ -76,9 +76,12 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
   // Lower-third caption. Wide has far less vertical room, so the safe-area
   // bottom inset and type shrink; the line gets wider to use the extra width.
   const padBottom = wide ? 96 : 600;
-  const padX = wide ? 160 : 90;
+  // 9:16: wider side margins + a narrower text column keep the centred caption
+  // clear of the right-side icon rail (profile/like/comment/share) on
+  // TikTok / Reels / Shorts. 16:9 has no overlay UI so it stays full-width.
+  const padX = wide ? 160 : 150;
   const fontSize = wide ? 52 : 70;
-  const maxWidth = wide ? 1520 : 940;
+  const maxWidth = wide ? 1520 : 780;
   return (
     <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", padding: `0 ${padX}px ${padBottom}px` }}>
       <div
