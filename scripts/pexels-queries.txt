@@ -1,20 +1,13 @@
-# Replacement footage for the long-form Euphrates QC fixes (video mode, human-free).
-# One query per line. Targets, by beat:
-#   B01 river-awe intro / B05+B19 mountain/pile of gold / B06 receding riverbed /
-#   B11 tension / B18 graves / B28 river drying / B30 vast empty desert.
-aerial river desert sunrise
-river canyon aerial dawn
-gold nuggets pile macro
-gold bars stacked
-molten gold flowing
-gold coins falling dark
-dry cracked riverbed sand
-exposed riverbed drought aerial
-dark storm clouds time lapse
-sandstorm desert approaching
-old stone graves desert
-ancient cemetery headstones dusk
-drought dried up river aerial
-cracked earth dry river channel
-vast empty desert dunes
-barren desert dusk wind
+# Round 2 replacements (video mode, human-free, NO legible text where possible).
+# B07/B08/B21 scholarship beats -> old books / library / quill (no readable Arabic).
+# B12 -> clean gold / treasure with no lettering.
+old leather bound books stack
+antique library bookshelf dark
+candle burning beside old books
+quill pen writing ink parchment
+rolled parchment scrolls dark
+ancient open book turning pages
+gold bars bullion stacked
+pile of gold treasure glowing
+gold ingots dark background
+shimmering gold dust macro
