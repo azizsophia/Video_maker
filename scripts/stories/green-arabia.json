@@ -1,0 +1,94 @@
+{
+  "id": "green-arabia",
+  "title": "Arabia Will Be Green Again",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "_note": "Vertical 9:16 short (>=60s content). Authentic: hadith in Sahih Muslim 157 (Abu Hurayrah) that the land of the Arabs will become meadows and rivers again; framed within the larger 'wealth abundant' narration, not detached. Science kept separate: 2025 Nature paper 'Recurrent humid phases in Arabia over the past 8 million years' (speleothem record; Max Planck; rivers/lakes/grasslands/hippos), plus present-day greening. Qur'an 36:33 (dead earth revived) shown on screen, never recited. No claim of fulfilment, no date-setting. All footage frame-grab QC'd: human-free, text-free. Render the vertical StoryVideo composition (orientation=vertical).",
+  "segments": [
+    {
+      "type": "narration",
+      "kicker": "GREEN ARABIA",
+      "text": "This is one of the driest places on the entire planet. And the Prophet, peace be upon him, told us it will not always look like this.",
+      "video": "https://videos.pexels.com/video-files/12902301/12902301-hd_1080_1920_30fps.mp4",
+      "videoDuration": 10
+    },
+    {
+      "type": "narration",
+      "foot": "Sahih Muslim 157",
+      "text": "He said the Hour will not come until the land of the Arabs becomes meadows and rivers, once again.",
+      "video": "https://videos.pexels.com/video-files/12902302/12902302-hd_1080_1920_30fps.mp4",
+      "videoDuration": 6
+    },
+    {
+      "type": "narration",
+      "text": "Once again. As if all of this endless sand had been green before, long before any human being could have known it.",
+      "video": "https://videos.pexels.com/video-files/36216582/15358130_1080_1920_30fps.mp4",
+      "videoDuration": 14
+    },
+    {
+      "type": "narration",
+      "quote": "36:33",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Ya-Sin 36:33 (shown, not recited)",
+      "text": "And a sign for them is the dead earth. We give it life, and bring forth from it grain, from which they eat.",
+      "video": "https://videos.pexels.com/video-files/34524977/14629153_1080_1920_30fps.mp4",
+      "videoDuration": 31
+    },
+    {
+      "type": "narration",
+      "kicker": "THE SCIENCE",
+      "foot": "Nature, 2025",
+      "text": "And here is what we have only just been able to confirm. In 2025, a study in the journal Nature read the climate history hidden inside Arabian caves.",
+      "video": "https://videos.pexels.com/video-files/12312738/12312738-hd_1080_1920_24fps.mp4",
+      "videoDuration": 25
+    },
+    {
+      "type": "narration",
+      "foot": "Max Planck Institute of Geoanthropology",
+      "text": "It found that for the last eight million years, Arabia has turned green again and again.",
+      "video": "https://videos.pexels.com/video-files/29158889/12594321_1080_1920_60fps.mp4",
+      "videoDuration": 15
+    },
+    {
+      "type": "narration",
+      "foot": "National Geographic",
+      "text": "Rivers. Lakes. Open grasslands. Hippos once waded through water where there is now nothing but dunes.",
+      "video": "https://videos.pexels.com/video-files/38090894/16172099_1080_1920_30fps.mp4",
+      "videoDuration": 14
+    },
+    {
+      "type": "narration",
+      "text": "At least six separate humid periods turned this desert into savannah, every time the rains came back.",
+      "video": "https://videos.pexels.com/video-files/12234252/12234252-hd_1080_1920_60fps.mp4",
+      "videoDuration": 22
+    },
+    {
+      "type": "narration",
+      "text": "And in our own time, the rains are returning. In places, the Arabian desert is quietly flowering green again.",
+      "video": "https://videos.pexels.com/video-files/25252204/11900224_1080_1920_30fps.mp4",
+      "videoDuration": 39
+    },
+    {
+      "type": "narration",
+      "kicker": "BE HONEST",
+      "text": "We are not saying the Hour has arrived. No soul knows that day. We only know that the One who described this land, fourteen centuries early, was not guessing.",
+      "video": "https://videos.pexels.com/video-files/35237402/14928221_1080_1920_60fps.mp4",
+      "videoDuration": 11
+    },
+    {
+      "type": "narration",
+      "text": "He was telling the truth. So watch the land, and reflect.",
+      "video": "https://videos.pexels.com/video-files/32157392/13711314_1080_1920_30fps.mp4",
+      "videoDuration": 12
+    }
+  ],
+  "sources": [
+    "Sahih Muslim 157 (Abu Hurayrah): the Hour will not come until wealth is so abundant no one accepts charity, and until the land of the Arabs returns to meadows and rivers. Verified on sunnah.com (muslim:157c). Quoted within its context, not detached.",
+    "Qur'an 36:33 (Ya-Sin), shown on screen with translation, never recited or synthesized: 'And a sign for them is the dead earth. We give it life and bring forth from it grain, and from it they eat.' Arabic pulled from Quran.com.",
+    "Science (kept separate from scripture): 'Recurrent humid phases in Arabia over the past 8 million years', Nature, 2025 (speleothem/cave-mineral record; Max Planck Institute of Geoanthropology). Paleoclimate evidence of rivers, lakes, grasslands and large fauna (incl. hippos) during repeated humid phases; reported by National Geographic and Phys.org. Present-day greening/unusual rainfall noted as current fact, not as fulfilment.",
+    "Framing: presented as reflection, NOT a claim that the prophecy is fulfilled; no date-setting. No human faces; all imagery human-free, frame-grab QC'd."
+  ]
+}
