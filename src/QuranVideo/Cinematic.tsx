@@ -27,7 +27,7 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 // and the clip is slowed (playbackRate) to fill the whole beat so it never runs
 // out and FREEZES on its last frame at the cut. Pass videoDuration (seconds) so
 // the slow-down is computed exactly; otherwise a gentle slow-mo default is used.
-const CinematicBg: React.FC<{ src: string; videoDuration?: number }> = ({ src, videoDuration }) => {
+const CinematicBg: React.FC<{ src: string; videoDuration?: number; dim?: number }> = ({ src, videoDuration, dim }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
   const beatSeconds = durationInFrames / fps;
@@ -52,6 +52,8 @@ const CinematicBg: React.FC<{ src: string; videoDuration?: number }> = ({ src, v
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(13,40,28,0.45) 0%, rgba(11,20,16,0.15) 35%, rgba(11,20,16,0.35) 70%, rgba(8,16,12,0.85) 100%)" }} />
       <AbsoluteFill style={{ boxShadow: "inset 0 0 320px rgba(0,0,0,0.55)", mixBlendMode: "multiply" }} />
       <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 42%, rgba(231,200,115,0.10), transparent 60%)" }} />
+      {/* per-clip extra darkening for footage that is brighter than the grade */}
+      {dim ? <AbsoluteFill style={{ background: `rgba(6,12,9,${clamp(dim, 0, 1)})` }} /> : null}
     </AbsoluteFill>
   );
 };
@@ -284,7 +286,7 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
           <FingerprintScene name={seg.scene as string} />
         )
       ) : seg.videoSrc ? (
-        <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} />
+        <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} dim={seg.dim} />
       ) : (
         <AbsoluteFill style={{ background: "#0b1410" }} />
       )}

@@ -26,6 +26,7 @@ export const storySegmentSchema = z.object({
   videoDuration: z.number().optional(), // clip length in seconds — slows playback to fill the beat (no end freeze)
   title: z.string().optional(), // cinematic film-open: gold-on-black title card over the beat
   titleSub: z.string().optional(), // small line under the title (e.g. "alayhi salam")
+  dim: z.number().optional(), // extra darkening (0..1) for clips that are too bright for the grade
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),

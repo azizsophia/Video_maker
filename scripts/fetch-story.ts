@@ -179,11 +179,14 @@ async function main() {
         arabicQuote = cleanArabic(qv.verse?.text_uthmani as string | undefined);
         if (arabicQuote) console.log(`  quote ${seg.quote}: Arabic shown (not recited)`);
       }
+      // Optional extra hold (seconds) so a beat lingers after the line ends —
+      // used to let the title card and the closing reflection breathe.
+      const hold = typeof seg.holdSeconds === "number" ? seg.holdSeconds : 0;
       segments.push({
         kind: "narration",
         audioSrc: `story/n${i}.mp3`,
         fromSeconds: Number(cursor.toFixed(2)),
-        durationInSeconds: Number((duration + GAP).toFixed(2)),
+        durationInSeconds: Number((duration + GAP + hold).toFixed(2)),
         words,
         source: seg.caption && /\d|hasan|Muslim|Tirmidhi|Quran/i.test(seg.caption) ? seg.caption : undefined,
         map: seg.map,
@@ -195,9 +198,10 @@ async function main() {
         videoDuration: typeof seg.videoDuration === "number" ? seg.videoDuration : undefined, // clip seconds → fill-the-beat slowdown
         title: seg.title, // cinematic gold-on-black title card (film open)
         titleSub: seg.titleSub,
+        dim: typeof seg.dim === "number" ? seg.dim : undefined, // extra darkening for bright clips
         arabic: arabicQuote,
       });
-      cursor += duration + GAP;
+      cursor += duration + GAP + hold;
     } else if (seg.type === "ayah") {
       const key = `${seg.surah}:${seg.ayah}`;
       const v = await getJson<any>(
