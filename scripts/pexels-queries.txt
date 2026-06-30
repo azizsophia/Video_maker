@@ -1,35 +1,6 @@
-# Yusuf strict re-query - flagged beats. RULES: no on-screen text/writing; no
-# identifiable person where a prophet (Yusuf/Yaqub) is implied; no immodesty; no
-# alcohol; objects / light / unidentifiable silhouettes only. Landscape, dark,
-# cinematic.
-
-# 1 lamp (object only, NO writing/text)
-burning oil lamp flame on black background
-antique brass lamp small flame dark
-# 3 father and child (HANDS ONLY, modest, no bodies/legs)
-elderly hand holding a small child hand close up
-grandfather and grandchild hands together warm
-# 12 refusal (NO person - light through a window only)
-sunlight streaming through a window empty dark room
-god rays through a window with dust particles no people
-# 15 prison (NO person)
-empty dark prison cell iron bars
-abandoned stone dungeon cell dim
-# 16 prison (NO person)
-shadow of bars on a dark stone wall
-empty old prison interior low light
-# 17 light only (NO person)
-volumetric god rays light shafts dust dark room
-beams of light through a dark empty hall
-# 18 goblet (NO alcohol, no pouring)
-ornate empty golden goblet dark still life
-antique metal chalice on a dark table
-# 22 doorway to light (NO person)
-dark stone archway opening to bright light empty
-light at the end of a dark tunnel no people
-# 28 grief (NO person - object/atmosphere)
-single candle flame flickering in the dark
-rain drops on a window pane at night
-# 29 the brothers freeze (NO single person - silhouettes/shadows)
-silhouettes of a group of robed figures in the dark
-long shadows of people on a stone wall dramatic
+# Beat 18 only - an ornate EMPTY goblet/cup as a still object. NO liquid, NO wine,
+# NO pouring, NO people, NO faith symbols, NO text. Dark, cinematic.
+empty ornate brass chalice still life dark background
+antique silver goblet object on black background
+golden metal cup empty dark cinematic still life
+ornate medieval chalice prop dark no liquid
