@@ -29,6 +29,12 @@ jobs:
           mkdir -p out
           python3 scripts/tts.py --text "${{ inputs.text }}" \
             --voice "${{ inputs.voice }}" --out out/names-test.mp3
+      - name: Emit base64 (so the audio can be pulled from the run log)
+        run: |
+          echo "===MP3-B64-BEGIN==="
+          base64 -w0 out/names-test.mp3
+          echo ""
+          echo "===MP3-B64-END==="
       - uses: actions/upload-artifact@v4
         with:
           name: tts-names-test
