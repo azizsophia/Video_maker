@@ -106,7 +106,7 @@ reused) and the narration, written with pauses for an emotional read.
 29. **[SHOT: a circle of brothers frozen, faces falling]**
     "At last, when the brothers stood before him one final time, broken and desperate, Yusuf could hold it back no longer. I am Yusuf, he said. And this is my brother. They froze. And they knew, in that instant, exactly what they had done." *(Qur'an 12:89-90)*
 
-30. **[SHOT: two hands reaching toward each other in warm golden light]** + on-screen ayah
+30. **[SHOT: a single open hand extended palm-up toward soft light]** + on-screen ayah
     "They were completely in his power. He could have done anything to them. Instead, he said, there is no blame upon you today. May Allah forgive you. He is the most merciful of the merciful." *(Qur'an 12:92, shown not recited)*
 
 31. **[SHOT: the gates of a city, a vast crowd gathered in the sun]**
