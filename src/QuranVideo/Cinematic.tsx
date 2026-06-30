@@ -194,9 +194,18 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
       {seg.map ? (
         <CineMap view={seg.map} />
       ) : isFingerprintScene(seg.scene) ? (
-        // Code-generated fingerprint-ridge backdrop (no stock footage): the
-        // subject of this short IS a fingerprint, so the visual is one.
-        <FingerprintScene name={seg.scene as string} />
+        seg.videoSrc ? (
+          // Premium composite: real cinematic texture (ink / gold dust / bokeh)
+          // behind, the code-generated fingerprint glowing on top — so the beat
+          // has filmic depth AND its subject (a fingerprint) is literally drawn.
+          <>
+            <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} />
+            <FingerprintScene name={seg.scene as string} overlay />
+          </>
+        ) : (
+          // No texture wired: the self-contained fingerprint backdrop.
+          <FingerprintScene name={seg.scene as string} />
+        )
       ) : seg.videoSrc ? (
         <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} />
       ) : (

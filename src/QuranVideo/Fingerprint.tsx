@@ -76,7 +76,8 @@ const RidgeField: React.FC<{
   cfg: RidgeConfig;
   highlightRing?: number; // -1 = none; index of a ring to warm to bright gold
   draw?: boolean; // animate the ridges drawing on
-}> = ({ cfg, highlightRing = -1, draw = true }) => {
+  bright?: boolean; // brighter ridges for compositing over footage
+}> = ({ cfg, highlightRing = -1, draw = true, bright = false }) => {
   const frame = useCurrentFrame();
   const { cx, cy, rings, base, gap, squish, seed, scale = 1 } = cfg;
   const breathe = 1 + 0.018 * Math.sin(frame * 0.045 + seed);
@@ -95,10 +96,10 @@ const RidgeField: React.FC<{
         key={i}
         d={ridgePath(cx, cyi, rx, ry, seed + i * 13, 0.03 + (i % 3) * 0.008)}
         fill="none"
-        stroke={isHi ? GOLD : GOLD_DEEP}
-        strokeWidth={isHi ? 3 : 1.6 - Math.min(0.8, i * 0.03)}
+        stroke={isHi ? GOLD : bright ? GOLD : GOLD_DEEP}
+        strokeWidth={isHi ? 3 : (bright ? 2 : 1.6) - Math.min(0.8, i * 0.03)}
         strokeLinecap="round"
-        opacity={(isHi ? 0.95 : 0.6 - i * 0.014) * p}
+        opacity={(isHi ? 0.98 : (bright ? 0.8 : 0.6) - i * 0.014) * p}
         pathLength={1}
         strokeDasharray={1}
         strokeDashoffset={1 - p}
@@ -254,7 +255,14 @@ const sceneConfig = (
 export const isFingerprintScene = (name?: string): boolean =>
   typeof name === "string" && name.startsWith("fp-");
 
-export const FingerprintScene: React.FC<{ name: string }> = ({ name }) => {
+// overlay = composite the ridges over real cinematic footage (CinematicBg) for
+// the premium look: no opaque base, ridges brightened + a soft gold glow, and a
+// faint dark "seat" so they read over a busy clip. Otherwise the scene is a
+// self-contained dark-green backdrop.
+export const FingerprintScene: React.FC<{ name: string; overlay?: boolean }> = ({
+  name,
+  overlay = false,
+}) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const { cfg, cfg2, highlightRing, scan, dust, pulseCore, draw } = sceneConfig(name);
@@ -264,22 +272,39 @@ export const FingerprintScene: React.FC<{ name: string }> = ({ name }) => {
   });
   const opacity = Math.min(fade, out);
   return (
-    <AbsoluteFill style={{ background: "#0b1410", opacity }}>
-      <AbsoluteFill
-        style={{ background: "radial-gradient(circle at 50% 40%, #15301f 0%, #050d09 72%)" }}
-      />
+    <AbsoluteFill style={{ background: overlay ? "transparent" : "#0b1410", opacity }}>
+      {overlay ? (
+        // Seat the print on the footage: a soft dark vignette focused behind the
+        // ridge cluster so the fine gold lines stay legible over bright texture.
+        <AbsoluteFill
+          style={{
+            background:
+              "radial-gradient(ellipse 46% 34% at 50% 38%, rgba(5,13,9,0.55) 0%, rgba(5,13,9,0.15) 55%, transparent 72%)",
+          }}
+        />
+      ) : (
+        <AbsoluteFill
+          style={{ background: "radial-gradient(circle at 50% 40%, #15301f 0%, #050d09 72%)" }}
+        />
+      )}
       <CoreGlow pulse={pulseCore} />
       <svg
         viewBox={`0 0 ${VB_W} ${VB_H}`}
         preserveAspectRatio="xMidYMid slice"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          filter: overlay ? "drop-shadow(0 0 7px rgba(231,200,115,0.45))" : undefined,
+        }}
       >
-        <RidgeField cfg={cfg} highlightRing={highlightRing} draw={draw} />
-        {cfg2 ? <RidgeField cfg={cfg2} draw={draw} /> : null}
+        <RidgeField cfg={cfg} highlightRing={highlightRing} draw={draw} bright={overlay} />
+        {cfg2 ? <RidgeField cfg={cfg2} draw={draw} bright={overlay} /> : null}
       </svg>
       {scan ? <ScanLine /> : null}
-      {dust ? <Dust count={dust} /> : null}
-      <Grade />
+      {dust ? <Dust count={dust} opacity={overlay ? 0.85 : 1} /> : null}
+      {overlay ? null : <Grade />}
     </AbsoluteFill>
   );
 };

@@ -42,14 +42,17 @@ Google Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.k
 ## In-progress batch (Tuesday)
 
 - SHORT - Fingerprints (`scripts/stories/fingerprints.json`): DONE. Footage REDONE
-  with code-generated fingerprint-ridge visuals (`src/QuranVideo/Fingerprint.tsx`)
-  so the visual matches the subject exactly - the abstract ink/gold-dust/galaxy
-  stock clips are gone. Each beat uses an `fp-*` scene chosen to match its line
-  (whorl forms / core spotlight / crumble to dust / restore the tips over 75:4 /
-  Galton scan / two different prints for twins / one ridge as a signature /
-  pressed seal / gathered from dust). Human-free and text-free by construction,
-  on the dark-green/gold palette; ~1.4 min; stills validated. TODO: render
-  (StoryVideo, orientation=vertical), then CoverCard cover + TikTok/Shorts captions.
+  as a PREMIUM COMPOSITE so it is both cinematic and on-subject: each beat layers
+  a real abstract texture clip (ink / gold dust / bokeh / galaxy from Pexels -
+  human-free and text-free by construction) BEHIND a code-generated fingerprint
+  (`src/QuranVideo/Fingerprint.tsx`, scene `fp-*`) drawn glowing on top. The
+  footage gives filmic depth/grain/light; the fingerprint is the literal subject.
+  Per-beat patterns match the line (whorl forms / core spotlight / crumble to dust
+  / restore the tips over 75:4 / Galton scan / two different prints for twins /
+  one ridge as a signature / pressed seal / gathered from dust). On the
+  dark-green/gold palette; ~1.4 min; composite stills validated (footage +
+  ridges). TODO: render (StoryVideo, orientation=vertical), then CoverCard cover +
+  TikTok/Shorts captions.
 - LONG-FORM - Story of Yusuf (`scripts/stories/longform-yusuf.json`): script written
   (~4.6 min) but NEEDS EXPANSION to ~9 min (add the banquet 12:31, the two
   prisoners' dreams 12:36-42, the cup in Binyamin's bag 12:70, Yaqub's grief 12:84;
