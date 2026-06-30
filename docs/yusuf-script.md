@@ -68,7 +68,7 @@ reused) and the narration, written with pauses for an emotional read.
 17. **[SHOT: a single shaft of light through a barred window]** + on-screen ayah
     "O my two companions of prison. Are many scattered lords better, or Allah, the One, the Supreme?" *(Qur'an 12:39, shown not recited)*
 
-18. **[SHOT: an ornate cup being filled with wine]**
+18. **[SHOT: dark wine grapes ripening on the vine, close up (no wine, no goblet)]**
     "Then he told them what their dreams meant. One of you will be set free, he said, and will pour wine for the king once more. The other will be put to death. And to the one who would live, Yusuf said softly, remember me to your master." *(Qur'an 12:41-42)*
 
 19. **[SHOT: an empty cell, a slow shaft of light crossing the floor]**
