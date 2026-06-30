@@ -8,8 +8,8 @@ name: Pexels Search
 # How to use: put one search query per line in scripts/pexels-queries.txt,
 # commit, and push to this branch. The run log lists the candidates.
 on:
+  workflow_dispatch: {}
   push:
-    branches: ["claude/video-performance-analysis-1o75wa"]
     paths:
       - "scripts/pexels-queries.txt"
       - "scripts/pexels-pick.mjs"

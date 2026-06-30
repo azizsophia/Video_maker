@@ -1,9 +1,80 @@
-# Fingerprints short - footage (human-free, NO hands/fingers, no legible text).
-ink fingerprint pattern macro
-sand dune ridges aerial top down
-ink drop blooming in water dark
-spiral galaxy stars rotating
-concentric water ripples slow motion
-gold dust particles floating dark
-swirling smoke black background
-desert dunes minimal dawn light
+# Yusuf long-form - one literal query per beat (landscape 16:9). Faces /
+# silhouettes / hands OK, never a depicted prophet, no on-screen text. The run
+# log lists candidates per query (id, dur, link, thumbnail). One distinct clip
+# per beat, no reuse.
+
+# 1 title / lamp
+oil lamp flame in the dark
+# 2 the dream, night sky
+starry night sky milky way
+# 3 father and child (hands)
+old hand holding a child hand
+# 4 brothers, envy, field at dusk
+shepherds silhouette desert dusk
+# 5 the well
+old stone water well
+# 6 the wolf
+lone wolf in forest
+# 7 caravan to Egypt
+camel caravan desert sunset
+# 9 Egypt, house of power
+ancient egyptian temple columns
+# 10 half of beauty, light of the heavens
+sun rays beaming through clouds
+# 11 the locked house, corridor
+dark old mansion corridor candlelight
+# 12 refusal, turning to the light
+silhouette standing at a bright window
+# 13 the torn shirt
+torn fabric cloth slow motion
+# 14 the banquet
+candlelit banquet table feast
+# 15 thrown in prison
+old prison cell iron bars
+# 16 two prisoners
+prisoner silhouette in dark cell
+# 17 tawhid in prison, light through bars
+god rays light beam through window dark room
+# 18 the two dreams, the cup
+pouring wine into a goblet
+# 19 forgotten in prison, time passing
+light moving across an empty stone wall
+# 20 the king's dream, cattle and grain
+cattle grazing in a field at dawn
+# 21 seven years, wheat and store
+golden wheat field harvest
+# 22 the prison door opens
+door opening into bright light
+# 23 his patience, sun through clouds
+dramatic sunbeam through storm clouds
+# 24 in charge of the storehouses
+sacks of grain in a warehouse
+# 25 the famine
+cracked dry earth drought
+# 26 the brothers return and bow
+travellers bowing silhouette
+# 27 the king's cup in the bag
+ornate golden cup goblet
+# 28 Yaqub's grief, white eyes
+elderly man praying with raised hands
+# 29 I am Yusuf, the brothers freeze
+man in shadow shocked face
+# 30 no blame upon you
+open hands reaching into light
+# 31 the conquest of Makkah echo
+ancient city gate stone wall
+# 32 the shirt and his sight returns
+white cloth blowing in the wind
+# 33 the dream fulfilled, stars sun moon
+full moon and stars over the horizon
+# 34 the closing dua
+hands raised in prayer at sunrise
+# 35 reflect, footprints to the dawn
+footprints in desert sand at sunrise
+# extras (alternatives to avoid reuse)
+egyptian pyramids desert dusk
+the nile river egypt aerial
+emotional human eyes close up
+crowd of people walking ancient
+empty wooden bowl on table
+desert sandstorm dramatic

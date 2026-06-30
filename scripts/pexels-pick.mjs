@@ -23,15 +23,16 @@ for (const q of args) {
     }
     continue;
   }
+  // Landscape (16:9) clips for the long-form. Prefer a ~1080p landscape file.
   const r = await fetch(
-    `https://api.pexels.com/videos/search?query=${encodeURIComponent(q)}&per_page=12&orientation=portrait&size=medium`,
+    `https://api.pexels.com/videos/search?query=${encodeURIComponent(q)}&per_page=15&orientation=landscape&size=medium`,
     { headers: { Authorization: KEY } }
   );
   const j = await r.json();
   for (const v of j.videos || []) {
     const f =
-      v.video_files.find((f) => f.width === 1080 && f.height === 1920) ||
-      v.video_files.find((f) => f.height >= 1280 && f.height >= f.width) ||
+      v.video_files.find((f) => f.width === 1920 && f.height === 1080) ||
+      v.video_files.find((f) => f.width >= 1280 && f.width >= f.height) ||
       v.video_files[0];
     console.log(JSON.stringify({ q, id: v.id, dur: v.duration, w: f.width, h: f.height, link: f.link, image: v.image }));
   }
