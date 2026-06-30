@@ -66,7 +66,7 @@ const beats = [
   { n: 27, foot: "Surah Yusuf 12:70, 12:76",
     text: "Yusuf knew them at once. He tested them. And to keep his youngest brother safely at his side, he had the king's own cup hidden in the boy's bag. It was a plan, the Qur'an tells us, that Allah Himself taught him." },
   { n: 28, kicker: "AS THE QUR'AN SAYS", quote: "12:86", foot: "Surah Yusuf 12:84, 12:86 (shown, not recited)",
-    text: "And far away in Canaan, Yaqub was still grieving. He had wept for Yusuf for so many years that his eyesight had faded to white. And still, he would not give up hope. I complain, he said, only of my grief and my sorrow, to Allah." },
+    text: "And far away in Canaan, Yaqub was still grieving. He had wept for Yusuf for so many years that his eyesight had faded to white. And still, he would not give up hope. I only complain of my grief and my sorrow to Allah, he said. And I know, from Allah, what you do not know." },
   { n: 29, kicker: "I AM YUSUF", foot: "Surah Yusuf 12:89-90",
     text: "At last, when the brothers stood before him one final time, broken and desperate, Yusuf could hold it back no longer. I am Yusuf, he said. And this is my brother. They froze. And they knew, in that instant, exactly what they had done." },
   { n: 30, kicker: "AS THE QUR'AN SAYS", quote: "12:92", foot: "Surah Yusuf 12:92 (shown, not recited)",

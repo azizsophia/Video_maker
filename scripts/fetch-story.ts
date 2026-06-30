@@ -31,6 +31,15 @@ const parseArgs = (): Args => {
 const stripHtml = (s: string): string =>
   s.replace(/<sup[^>]*>.*?<\/sup>/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 
+// The Uthmani text from Quran.com carries small Qur'anic annotation signs
+// (waqf / pause marks, sajdah, rub, end-of-ayah). Our display font does not
+// have glyphs for some of them, so they render as empty boxes (tofu). They are
+// recitation aids, not part of the verse's letters or harakat, so we drop them
+// for a clean on-screen verse. The essential superscript "dagger" alef (U+0670)
+// sits below this range and is preserved.
+const cleanArabic = (s?: string): string | undefined =>
+  s ? s.replace(/[ۖ-ۜ۝۞۩]/g, "").replace(/\s{2,}/g, " ").trim() : s;
+
 async function getJson<T>(url: string): Promise<T> {
   const res = await fetch(url, { headers: { Accept: "application/json" } });
   if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
@@ -167,7 +176,7 @@ async function main() {
         const qv = await getJson<any>(
           `${API}/verses/by_key/${String(seg.quote)}?language=en&fields=text_uthmani`
         );
-        arabicQuote = qv.verse?.text_uthmani as string | undefined;
+        arabicQuote = cleanArabic(qv.verse?.text_uthmani as string | undefined);
         if (arabicQuote) console.log(`  quote ${seg.quote}: Arabic shown (not recited)`);
       }
       segments.push({
@@ -195,7 +204,7 @@ async function main() {
         `${API}/verses/by_key/${key}?language=en&audio=${recitation}&translations=${translation}&fields=text_uthmani`
       );
       const verse = v.verse;
-      const arabic = verse.text_uthmani as string;
+      const arabic = cleanArabic(verse.text_uthmani as string) as string;
       const tr = stripHtml(verse.translations?.[0]?.text ?? "");
 
       // Audio source: a verified free-license clip (seg.audioUrl) when provided,
