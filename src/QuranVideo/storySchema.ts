@@ -24,6 +24,8 @@ export const storySegmentSchema = z.object({
   highlight: z.string().optional(), // chronology: which era to emphasise (dadan|lihyan|nabataean)
   videoSrc: z.string().optional(), // cinematic: background clip (remote Pexels URL or /public path)
   videoDuration: z.number().optional(), // clip length in seconds — slows playback to fill the beat (no end freeze)
+  title: z.string().optional(), // cinematic film-open: gold-on-black title card over the beat
+  titleSub: z.string().optional(), // small line under the title (e.g. "alayhi salam")
   // ayah
   arabic: z.string().optional(),
   translation: z.string().optional(),

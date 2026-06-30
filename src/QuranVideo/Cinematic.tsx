@@ -160,12 +160,13 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   const fade = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp" });
   const flourish = interpolate(frame, [18, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   // 16:9 has more width but much less height: tighten the vertical padding,
-  // shrink the Arabic + translation a touch, and widen the text column.
-  const padY = wide ? 110 : 200;
-  const padX = wide ? 160 : 90;
-  const arabicSize = wide ? 74 : 92;
-  const transSize = wide ? 46 : 58;
-  const maxWidth = wide ? 1320 : 900;
+  // shrink the Arabic + translation a touch, and widen the text column so even
+  // a longer narration line under the ayah never overflows the short frame.
+  const padY = wide ? 70 : 200;
+  const padX = wide ? 150 : 90;
+  const arabicSize = wide ? 66 : 92;
+  const transSize = wide ? 40 : 58;
+  const maxWidth = wide ? 1500 : 900;
   return (
     <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: `${padY}px ${padX}px`, opacity: fade }}>
       {kicker ? (
@@ -190,7 +191,62 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   );
 };
 
-// One cinematic beat: footage + (quote OR caption + labels).
+// Cinematic film-open title card: a gold, letter-spaced title rises out of the
+// dark over the opening footage (the trembling lamp), with a gold flourish, like
+// the open of a film. The narration plays underneath; no running caption here.
+const CineTitle: React.FC<{ title: string; sub?: string; kicker?: string }> = ({ title, sub, kicker }) => {
+  const frame = useCurrentFrame();
+  const { fps, width, height } = useVideoConfig();
+  const wide = width > height;
+  const t = frame / fps;
+  const rise = interpolate(t, [0.6, 2.2], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const flourish = interpolate(t, [1.8, 3.2], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const kfade = interpolate(t, [0.2, 1.2], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const titleSize = wide ? 132 : 120;
+  return (
+    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 8%" }}>
+      {/* deepen the frame so the gold reads like a film title */}
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(6,12,9,0.45) 0%, rgba(5,10,8,0.82) 70%, rgba(4,8,6,0.95) 100%)" }} />
+      {kicker ? (
+        <div style={{ position: "relative", fontFamily: JOST, fontWeight: 300, letterSpacing: 14, fontSize: wide ? 26 : 30, color: GOLD, opacity: kfade, marginBottom: wide ? 30 : 44 }}>
+          {kicker}
+        </div>
+      ) : null}
+      <div
+        style={{
+          position: "relative",
+          fontFamily: PLAYFAIR,
+          fontWeight: 900,
+          fontSize: titleSize,
+          lineHeight: 1.04,
+          letterSpacing: 3,
+          textAlign: "center",
+          color: GOLD,
+          background: "linear-gradient(180deg,#f6e7b8 0%,#e7c873 46%,#bf9a45 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          textShadow: "0 0 60px rgba(231,200,115,0.35)",
+          opacity: rise,
+          transform: `translateY(${(1 - rise) * 26}px)`,
+        }}
+      >
+        {title}
+      </div>
+      <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center", gap: 18, margin: wide ? "34px 0 0" : "46px 0 0" }}>
+        <div style={{ height: 1.5, width: 180 * flourish, background: "linear-gradient(90deg,transparent,#e7c873)" }} />
+        <div style={{ width: 13, height: 13, transform: "rotate(45deg)", background: GOLD, opacity: flourish }} />
+        <div style={{ height: 1.5, width: 180 * flourish, background: "linear-gradient(90deg,#e7c873,transparent)" }} />
+      </div>
+      {sub ? (
+        <div style={{ position: "relative", fontFamily: CORMORANT, fontStyle: "italic", fontWeight: 600, fontSize: wide ? 44 : 50, color: CREAM, opacity: flourish, marginTop: wide ? 22 : 30 }}>
+          {sub}
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
+// One cinematic beat: footage + (title OR quote OR caption + labels).
 export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
   return (
     <AbsoluteFill>
@@ -232,7 +288,9 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
       ) : (
         <AbsoluteFill style={{ background: "#0b1410" }} />
       )}
-      {seg.arabic ? (
+      {seg.title ? (
+        <CineTitle title={seg.title} sub={seg.titleSub} kicker={seg.kicker} />
+      ) : seg.arabic ? (
         <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} />
       ) : (
         <>

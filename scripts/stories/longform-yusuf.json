@@ -6,56 +6,306 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
-  "cover": { "title": "The Story\nof Yusuf", "kicker": "THE MOST BEAUTIFUL STORY", "scene": "nightsky" },
+  "cover": {
+    "title": "The Story\nof Yusuf",
+    "kicker": "THE MOST BEAUTIFUL STORY",
+    "scene": "nightsky"
+  },
   "captions": {
     "youtube": "The Story of Yusuf is the only chapter in the Qur'an that tells a single story from beginning to end, and Allah Himself calls it the most beautiful of stories (12:3). This is a faithful, fully sourced retelling of Surah Yusuf, with the lesser-known authentic details most retellings leave out: his lineage of four prophets in a row (Sahih al-Bukhari), that he was given half of all beauty (Sahih Muslim), his call to tawhid inside the prison (12:39), his refusal to leave prison until his name was cleared and the Prophet's words about that patience (Sahih al-Bukhari), Ya'qub's grief (12:84-86), the scent of Yusuf (12:94), and the way the Prophet echoed 'no blame upon you today' at the Conquest of Makkah. Seven verses are shown on screen with translation. Nothing is embellished; every claim is on-screen sourced to the Qur'an or to Sahih al-Bukhari and Sahih Muslim.\n\nSources: Surah Yusuf (Qur'an 12), text from Quran.com; Sahih al-Bukhari (3390 lineage; 3372 his patience in prison); Sahih Muslim (162, given half of beauty); the Conquest of Makkah from the books of seerah. Arabic is shown with translation, never recited or synthesized.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp",
     "tiktok": "The only chapter in the Qur'an that tells one whole story, and Allah calls it the most beautiful of them. The Story of Yusuf.",
     "shorts": "Betrayed, enslaved, imprisoned, and every step was carrying him exactly where Allah meant him to be. The Story of Yusuf.",
-    "hashtags": ["#quran", "#yusuf", "#edutokcontest", "#propheticstories", "#islam"]
+    "hashtags": [
+      "#quran",
+      "#yusuf",
+      "#edutokcontest",
+      "#propheticstories",
+      "#islam"
+    ]
   },
   "_note": "Long-form 16:9 (~12 min). Pillar: Prophet stories (Tuesday long-form). Faithful, deeply sourced retelling of Surah Yusuf. Every claim is shown on screen with its source (foot): Qur'an by verse, hadith by collection (Sahih al-Bukhari 3390 lineage; Sahih al-Bukhari 3372 his patience in prison; Sahih Muslim 162 half of beauty), and the Conquest of Makkah from seerah. Seven verses shown on screen (12:4, 12:18, 12:39, 12:86, 12:92, 12:101 + others quoted in narration), fetched from Quran.com, never recited or synthesized. NO Israiliyyat or weak narrations, NO embellishment. Visuals: real Pexels footage on every beat (human-free, text-free, frame-grab QC'd); the ONLY code-generated visual is the premium Canaan->Egypt map. Render StoryVideoWide (orientation=wide).",
   "segments": [
-    { "type": "narration", "foot": "Surah Yusuf 12:3", "text": "It is the only chapter in the Qur'an that tells a single story from beginning to end. And Allah Himself calls it the most beautiful of stories.", "video": "https://videos.pexels.com/video-files/7565882/7565882-hd_1080_1920_25fps.mp4", "videoDuration": 50 },
-    { "type": "narration", "foot": "Surah Yusuf 12:3", "text": "And the Qur'an says something striking. Before this was revealed, the Prophet, peace be upon him, knew nothing of it. It reached him only from above.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "kicker": "A NOBLE HOUSE", "foot": "Sahih al-Bukhari 3390", "text": "Yusuf was born into a house unlike any other. The Prophet, peace be upon him, called him the noble, son of the noble, son of the noble, son of the noble: Yusuf, son of Yaqub, son of Ishaq, son of Ibrahim. Four prophets, one after another.", "video": "https://videos.pexels.com/video-files/35044924/14845176_1080_1920_30fps.mp4", "videoDuration": 10 },
-    { "type": "narration", "kicker": "THE DREAM", "text": "And it begins with a boy and a dream. Young Yusuf comes to his father one morning and tells him what he saw in his sleep.", "video": "https://videos.pexels.com/video-files/9665234/9665234-hd_1080_1920_25fps.mp4", "videoDuration": 49 },
-    { "type": "narration", "quote": "12:4", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Yusuf 12:4 (shown, not recited)", "text": "O my father, I saw eleven stars, and the sun and the moon. I saw them prostrating to me.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "foot": "Surah Yusuf 12:5", "text": "His father knew at once the boy had been chosen for something great. And he warned him: do not tell this dream to your brothers.", "video": "https://videos.pexels.com/video-files/10740616/10740616-hd_1080_1920_30fps.mp4", "videoDuration": 57 },
-    { "type": "narration", "kicker": "ENVY", "text": "Because they were already jealous. They saw how their father loved him, and they could not bear it. So they made a plan to be rid of their own brother.", "video": "https://videos.pexels.com/video-files/7565428/7565428-hd_1080_1920_25fps.mp4", "videoDuration": 40 },
-    { "type": "narration", "foot": "Surah Yusuf 12:15", "text": "They took him out to play, and threw him down into the darkness of a deep well. A child, alone, at the bottom of a pit.", "video": "https://videos.pexels.com/video-files/15168366/15168366-hd_1080_1920_30fps.mp4", "videoDuration": 62 },
-    { "type": "narration", "foot": "Surah Yusuf 12:16-18", "text": "Then they came to their father in the night, weeping false tears, holding out a shirt soaked in blood that was not Yusuf's. A wolf, they said, had devoured him.", "video": "https://videos.pexels.com/video-files/9665234/9665234-hd_1080_1920_25fps.mp4", "videoDuration": 49 },
-    { "type": "narration", "foot": "Surah Yusuf 12:18", "text": "Yaqub knew they were lying. And a prophet's heart, breaking, chose patience.", "video": "https://videos.pexels.com/video-files/10740616/10740616-hd_1080_1920_30fps.mp4", "videoDuration": 57 },
-    { "type": "narration", "quote": "12:18", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Yusuf 12:18 (shown, not recited)", "text": "So beautiful patience is most fitting. And it is Allah whose help is sought against what you describe.", "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4", "videoDuration": 65 },
-    { "type": "narration", "kicker": "SOLD INTO EGYPT", "foot": "Surah Yusuf 12:19-20", "text": "A passing caravan pulled the boy from the well and carried him down to Egypt, where they sold him for a few coins, as if he were worth nothing.", "map": "yusuf-egypt" },
-    { "type": "narration", "foot": "Surah Yusuf 12:21", "text": "But Allah had placed him in the house of one of the most powerful men in Egypt. Thus, the Qur'an says, We established Yusuf in the land, and most people simply do not know.", "video": "https://videos.pexels.com/video-files/37617054/15943819_1080_1920_60fps.mp4", "videoDuration": 13 },
-    { "type": "narration", "kicker": "HALF OF ALL BEAUTY", "foot": "Sahih Muslim 162", "text": "He grew into a young man of extraordinary beauty. On the night of the Ascension, the Prophet, peace be upon him, met him, and said that Yusuf had been given half of all beauty.", "video": "https://videos.pexels.com/video-files/35044924/14845176_1080_1920_30fps.mp4", "videoDuration": 10 },
-    { "type": "narration", "kicker": "THE TEMPTATION", "foot": "Surah Yusuf 12:23", "text": "And there came his hardest test. The wife of the master desired him. The doors were locked. No one would ever know.", "video": "https://videos.pexels.com/video-files/15168366/15168366-hd_1080_1920_30fps.mp4", "videoDuration": 62 },
-    { "type": "narration", "foot": "Surah Yusuf 12:23", "text": "And Yusuf refused, with the words of a man who feared his Lord far more than he feared any man: I seek refuge in Allah.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "kicker": "THE BANQUET", "foot": "Surah Yusuf 12:31-32", "text": "The women of the city mocked her for it. So she gathered them, gave them knives and fruit, and called him out before them. They were so overcome they cut their own hands. And she admitted what she wanted, and threatened him with prison.", "video": "https://videos.pexels.com/video-files/7565428/7565428-hd_1080_1920_25fps.mp4", "videoDuration": 40 },
-    { "type": "narration", "foot": "Surah Yusuf 12:33", "text": "And Yusuf made a choice almost no one would. He prayed that prison was dearer to him than the sin they were calling him to.", "video": "https://videos.pexels.com/video-files/7565882/7565882-hd_1080_1920_25fps.mp4", "videoDuration": 50 },
-    { "type": "narration", "foot": "Surah Yusuf 12:35", "text": "And so, though the signs of his innocence were plain, the young man was thrown into prison for years.", "video": "https://videos.pexels.com/video-files/15168366/15168366-hd_1080_1920_30fps.mp4", "videoDuration": 62 },
-    { "type": "narration", "kicker": "THE PRISON", "foot": "Surah Yusuf 12:36-37", "text": "Two young men were jailed with him, each troubled by a dream. But before he read a single one, Yusuf turned them to something far greater.", "video": "https://videos.pexels.com/video-files/9665234/9665234-hd_1080_1920_25fps.mp4", "videoDuration": 49 },
-    { "type": "narration", "quote": "12:39", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Yusuf 12:39 (shown, not recited)", "text": "O my two companions of prison, are many differing lords better, or Allah, the One, the Prevailing?", "video": "https://videos.pexels.com/video-files/7565428/7565428-hd_1080_1920_25fps.mp4", "videoDuration": 40 },
-    { "type": "narration", "foot": "Surah Yusuf 12:41-42", "text": "Then he told them the truth of their dreams: one would be freed to serve his king again, the other would not survive. And he asked the one who would be saved to remember him to his master.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "kicker": "THE KING'S DREAM", "foot": "Surah Yusuf 12:43", "text": "Years passed. Then the king of Egypt saw a dream that no one in his court could explain. Seven fat cows devoured by seven lean ones. Seven green ears of grain, and seven dry.", "video": "https://videos.pexels.com/video-files/10921268/10921268-hd_1080_1920_24fps.mp4", "videoDuration": 34 },
-    { "type": "narration", "foot": "Surah Yusuf 12:47-49", "text": "They finally remembered the man in the prison. Yusuf read it for them: seven years of plenty are coming, then seven of famine. So store your grain, and prepare.", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "videoDuration": 52 },
-    { "type": "narration", "kicker": "HE WOULD NOT RUSH OUT", "foot": "Surah Yusuf 12:50-51", "text": "And here Yusuf did something extraordinary. When the king summoned him, he did not rush from his cell. He asked first that his name be cleared, that the women be questioned, so he would leave not as an accused man, but as an innocent one.", "video": "https://videos.pexels.com/video-files/37617054/15943819_1080_1920_60fps.mp4", "videoDuration": 13 },
-    { "type": "narration", "foot": "Sahih al-Bukhari 3372", "text": "The Prophet, peace be upon him, marveled at that patience. He said that had he himself waited in prison as long as Yusuf, and then been called, he would have hurried straight out.", "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4", "videoDuration": 65 },
-    { "type": "narration", "kicker": "POWER", "foot": "Surah Yusuf 12:54-55", "text": "His innocence was proven. And Yusuf, once a slave and a prisoner, was placed in charge of the storehouses of all of Egypt.", "video": "https://videos.pexels.com/video-files/35319246/14965651_1080_1920_60fps.mp4", "videoDuration": 20 },
-    { "type": "narration", "text": "And when the seven years of famine came, it spread far beyond Egypt, all the way back to the land of his father, and the brothers who had thrown him away.", "video": "https://videos.pexels.com/video-files/27062765/12061293_1080_1920_30fps.mp4", "videoDuration": 23 },
-    { "type": "narration", "kicker": "THE RETURN", "foot": "Surah Yusuf 12:58", "text": "They came to Egypt, begging for food. They stood before the most powerful man in the land and did not recognise the brother they had buried in a well.", "video": "https://videos.pexels.com/video-files/35846101/15200124_1080_1920_30fps.mp4", "videoDuration": 52 },
-    { "type": "narration", "foot": "Surah Yusuf 12:70, 12:76", "text": "He tested them, and by a plan Allah taught him, he kept his youngest brother at his side: the king's own cup, hidden in the boy's bag.", "video": "https://videos.pexels.com/video-files/15168366/15168366-hd_1080_1920_30fps.mp4", "videoDuration": 62 },
-    { "type": "narration", "foot": "Surah Yusuf 12:84", "text": "Back in Canaan, the loss broke the old man all over again. He wept for Yusuf until his eyes turned white with grief.", "video": "https://videos.pexels.com/video-files/10740616/10740616-hd_1080_1920_30fps.mp4", "videoDuration": 57 },
-    { "type": "narration", "quote": "12:86", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Yusuf 12:86 (shown, not recited)", "text": "I only complain of my deep grief and sorrow to Allah.", "video": "https://videos.pexels.com/video-files/7565882/7565882-hd_1080_1920_25fps.mp4", "videoDuration": 50 },
-    { "type": "narration", "foot": "Surah Yusuf 12:87", "text": "And still, he told his sons: go back, and never lose hope in the mercy of Allah.", "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4", "videoDuration": 65 },
-    { "type": "narration", "kicker": "I AM YUSUF", "foot": "Surah Yusuf 12:89-90", "text": "When they returned and stood before him once more, broken and desperate, the moment finally came. He said to them: I am Yusuf.", "video": "https://videos.pexels.com/video-files/35044924/14845176_1080_1920_30fps.mp4", "videoDuration": 10 },
-    { "type": "narration", "text": "They froze, completely in his power, knowing exactly what they had done to him, and what he could now do to them.", "video": "https://videos.pexels.com/video-files/7565428/7565428-hd_1080_1920_25fps.mp4", "videoDuration": 40 },
-    { "type": "narration", "quote": "12:92", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Yusuf 12:92 (shown, not recited)", "text": "He said: there is no blame upon you today. May Allah forgive you, and He is the most merciful of the merciful.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "kicker": "AN ECHO, CENTURIES LATER", "foot": "Conquest of Makkah (seerah)", "text": "Centuries later, the Prophet, peace be upon him, would stand over the people of Makkah who had driven him out and tortured his companions, and echo these very words: Go, for you are free.", "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4", "videoDuration": 65 },
-    { "type": "narration", "foot": "Surah Yusuf 12:93-94", "text": "Yusuf sent his shirt to be laid over his father's face. And far away, before it had even arrived, the old man lifted his head: I sense the scent of Yusuf, though you will think I have lost my mind.", "video": "https://videos.pexels.com/video-files/10740616/10740616-hd_1080_1920_30fps.mp4", "videoDuration": 57 },
-    { "type": "narration", "kicker": "THE DREAM FULFILLED", "foot": "Surah Yusuf 12:96, 12:100", "text": "The shirt was laid over his eyes, and his sight returned. And his parents and his eleven brothers bowed before him in honour. The dream of the boy, the eleven stars, the sun and the moon, had finally come true.", "video": "https://videos.pexels.com/video-files/35044924/14845176_1080_1920_30fps.mp4", "videoDuration": 10 },
-    { "type": "narration", "quote": "12:101", "kicker": "AS THE QUR'AN SAYS", "foot": "Surah Yusuf 12:101 (shown, not recited)", "text": "You are my protector in this world and the next. Let me die in submission to You, and join me with the righteous.", "video": "https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4", "videoDuration": 19 },
-    { "type": "narration", "kicker": "REFLECT", "text": "He was betrayed by his own blood, enslaved, lied about, and imprisoned for years. And every single step was quietly carrying him exactly where Allah meant him to be. So trust the One who is writing your story too.", "video": "https://videos.pexels.com/video-files/13575058/13575058-hd_1080_1920_60fps.mp4", "videoDuration": 65 }
+    {
+      "type": "narration",
+      "text": "Of all the stories in the Qur'an, only one is told from beginning to end, in a single chapter. And Allah Himself calls it the most beautiful of them all. This is the story of Yusuf, alayhi salam.",
+      "kicker": "KETABI STUDIO",
+      "foot": "Surah Yusuf 12:3",
+      "title": "THE STORY OF YUSUF",
+      "titleSub": "alayhi salam",
+      "video": "https://videos.pexels.com/video-files/4765799/4765799-hd_1920_1080_24fps.mp4",
+      "videoDuration": 14
+    },
+    {
+      "type": "narration",
+      "text": "It begins with a boy, and a dream. One night, young Yusuf sees eleven stars, and the sun, and the moon, all bowing down before him. Frightened and amazed, he runs to his father, the Prophet Yaqub, alayhi salam.",
+      "kicker": "THE DREAM",
+      "foot": "Surah Yusuf 12:4 (shown, not recited)",
+      "quote": "12:4",
+      "video": "https://videos.pexels.com/video-files/18358235/18358235-hd_1920_1080_24fps.mp4",
+      "videoDuration": 7
+    },
+    {
+      "type": "narration",
+      "text": "His father's face softens, then turns serious. He knows what a dream like this means. This boy has been chosen. So he holds him close, and warns him, gently. Keep this between us. Do not breathe a word of it to your brothers.",
+      "kicker": "A FATHER'S WARNING",
+      "foot": "Surah Yusuf 12:5",
+      "video": "https://videos.pexels.com/video-files/8164676/8164676-hd_1920_1080_30fps.mp4",
+      "videoDuration": 9
+    },
+    {
+      "type": "narration",
+      "text": "Because his brothers were already jealous. They were grown men, strong and many, and still their father's heart leaned toward this one boy. They could not forgive him for it. And quietly, that jealousy hardened into a plan.",
+      "kicker": "ENVY",
+      "foot": "Surah Yusuf 12:8-9",
+      "video": "https://videos.pexels.com/video-files/26736390/11996810_1920_1080_25fps.mp4",
+      "videoDuration": 12
+    },
+    {
+      "type": "narration",
+      "text": "They begged their father to let Yusuf come and play with them. And out in the open, far from home, they threw him down into the darkness of a deep well. Then they stood at the top, and listened to a child cry out, and they turned and walked away.",
+      "kicker": "THE WELL",
+      "foot": "Surah Yusuf 12:15",
+      "video": "https://videos.pexels.com/video-files/20192712/20192712-hd_1920_1080_24fps.mp4",
+      "videoDuration": 39
+    },
+    {
+      "type": "narration",
+      "text": "That night they came home weeping, with a story ready. A wolf had taken Yusuf while they raced ahead. And they held up his shirt, stained with blood. But Yaqub knew, deep in his heart, that his own sons were lying to his face. And he turned to the only thing that could hold him. Beautiful patience.",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Yusuf 12:16-18 (shown, not recited)",
+      "quote": "12:18",
+      "video": "https://videos.pexels.com/video-files/13907493/13907493-hd_1920_1080_30fps.mp4",
+      "videoDuration": 25
+    },
+    {
+      "type": "narration",
+      "text": "Days later, a passing caravan stopped at that well to draw water. And when they pulled up the bucket, they found a boy. They took him to Egypt, and there they sold him, for a few cheap coins, as if he were worth nothing at all.",
+      "kicker": "SOLD INTO EGYPT",
+      "foot": "Surah Yusuf 12:19-20",
+      "video": "https://videos.pexels.com/video-files/19069013/19069013-hd_1920_1080_30fps.mp4",
+      "videoDuration": 8
+    },
+    {
+      "type": "narration",
+      "text": "A prophet's son, of the line of Ibrahim, carried hundreds of miles from his father, and sold in the markets of a foreign land.",
+      "kicker": "CANAAN TO EGYPT",
+      "foot": "Surah Yusuf 12:21",
+      "map": "yusuf-egypt"
+    },
+    {
+      "type": "narration",
+      "text": "But Allah does not abandon His own. Yusuf was bought by one of the most powerful men in Egypt, who told his wife, take good care of him. And in that grand house, the boy grew into a young man.",
+      "kicker": "THE HOUSE OF POWER",
+      "foot": "Surah Yusuf 12:21-22",
+      "video": "https://videos.pexels.com/video-files/38144362/16194326_1920_1080_50fps.mp4",
+      "videoDuration": 7
+    },
+    {
+      "type": "narration",
+      "text": "And he grew into no ordinary man. On the night the Prophet, peace be upon him, was raised up through the heavens, he met Yusuf. And he told us that Yusuf had been given half of all the beauty in creation.",
+      "kicker": "HALF OF ALL BEAUTY",
+      "foot": "Sahih Muslim 162",
+      "video": "https://videos.pexels.com/video-files/13069522/13069522-hd_1920_1080_30fps.mp4",
+      "videoDuration": 14
+    },
+    {
+      "type": "narration",
+      "text": "In that house lived the minister's wife. And as the years passed, she fell for the young man under her own roof. Until one day, she sent every servant away, and closed the doors of the house, one after another, until there was nowhere left for him to go. And she turned to him.",
+      "kicker": "THE LOCKED DOORS",
+      "foot": "Surah Yusuf 12:23",
+      "video": "https://videos.pexels.com/video-files/6814635/6814635-hd_1920_1080_25fps.mp4",
+      "videoDuration": 52
+    },
+    {
+      "type": "narration",
+      "text": "And Yusuf refused her. I seek refuge in Allah, he said. Your husband has trusted me, and treated me well. How could I ever wrong him? How could I disobey my Lord?",
+      "kicker": "HE REFUSED",
+      "foot": "Surah Yusuf 12:23",
+      "video": "https://videos.pexels.com/video-files/5401861/5401861-hd_2048_1080_24fps.mp4",
+      "videoDuration": 8
+    },
+    {
+      "type": "narration",
+      "text": "He turned and ran for the door. She caught him, and his shirt tore in her hands. And just as the door flew open, her husband was standing on the other side.",
+      "foot": "Surah Yusuf 12:25",
+      "video": "https://videos.pexels.com/video-files/7677180/7677180-hd_1920_1080_25fps.mp4",
+      "videoDuration": 28
+    },
+    {
+      "type": "narration",
+      "text": "Word of it spread through the city. The women whispered that the great minister's wife had fallen for a servant boy. So she invited them all to a banquet, and placed a knife and a piece of fruit in every hand. And then she called Yusuf to walk into the room. The moment they laid eyes on him, they were so overwhelmed that they cut their own hands, and never even felt the blade.",
+      "kicker": "THE BANQUET",
+      "foot": "Surah Yusuf 12:31",
+      "video": "https://videos.pexels.com/video-files/8180938/8180938-uhd_2732_1440_25fps.mp4",
+      "videoDuration": 17
+    },
+    {
+      "type": "narration",
+      "text": "Now you see, she told them. Then she turned back to Yusuf, with a threat. Obey me, or you will be thrown into prison. And Yusuf made his choice. My Lord, he prayed, prison is dearer to me than the sin they are calling me to. And so, though he had done nothing wrong, the doors of a prison closed behind him.",
+      "kicker": "THE CHOICE",
+      "foot": "Surah Yusuf 12:32-35",
+      "video": "https://videos.pexels.com/video-files/5243257/5243257-hd_1920_1080_24fps.mp4",
+      "videoDuration": 23
+    },
+    {
+      "type": "narration",
+      "text": "But even there, Yusuf was still Yusuf. Two young men were thrown in beside him, each carrying a strange dream he could not understand. They came to him for answers. And before he said a single word about their dreams, he asked them something far more important.",
+      "kicker": "THE PRISON",
+      "foot": "Surah Yusuf 12:36-37",
+      "video": "https://videos.pexels.com/video-files/11594314/11594314-hd_1920_1080_30fps.mp4",
+      "videoDuration": 8
+    },
+    {
+      "type": "narration",
+      "text": "O my two companions of prison. Are many scattered lords better, or Allah, the One, the Supreme?",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Yusuf 12:39 (shown, not recited)",
+      "quote": "12:39",
+      "video": "https://videos.pexels.com/video-files/29471049/12686162_1920_1080_30fps.mp4",
+      "videoDuration": 20
+    },
+    {
+      "type": "narration",
+      "text": "Then he told them what their dreams meant. One of you will be set free, he said, and will pour wine for the king once more. The other will be put to death. And to the one who would live, Yusuf said softly, remember me to your master.",
+      "foot": "Surah Yusuf 12:41-42",
+      "video": "https://videos.pexels.com/video-files/13514851/13514851-hd_1920_1080_30fps.mp4",
+      "videoDuration": 10
+    },
+    {
+      "type": "narration",
+      "text": "But when that man walked free, he forgot all about Yusuf. And so Yusuf stayed in that prison, forgotten by everyone, for several more years.",
+      "foot": "Surah Yusuf 12:42",
+      "video": "https://videos.pexels.com/video-files/5155190/5155190-hd_1920_1080_30fps.mp4",
+      "videoDuration": 12
+    },
+    {
+      "type": "narration",
+      "text": "Until one night, the king of Egypt woke from a dream that shook him. Seven fat cows, swallowed whole by seven starving ones. Seven green ears of grain, and seven dry. No one in his court could explain it.",
+      "kicker": "THE KING'S DREAM",
+      "foot": "Surah Yusuf 12:43",
+      "video": "https://videos.pexels.com/video-files/13158900/13158900-uhd_2730_1440_25fps.mp4",
+      "videoDuration": 24
+    },
+    {
+      "type": "narration",
+      "text": "And at last, the freed servant remembered the young man in the prison. They brought the dream to Yusuf, and he read it clearly. Seven years of plenty are coming, he said, and after them, seven years of famine. Plant all you can, and store it. It will keep your people alive.",
+      "kicker": "SEVEN YEARS",
+      "foot": "Surah Yusuf 12:46-49",
+      "video": "https://videos.pexels.com/video-files/4830195/4830195-hd_1920_1080_25fps.mp4",
+      "videoDuration": 15
+    },
+    {
+      "type": "narration",
+      "text": "Amazed, the king ordered him set free at once. But Yusuf would not simply walk out. First, he said, go back and ask about the women who cut their hands. Let the truth be known. He would leave that cell with his name cleared, or he would not leave at all.",
+      "kicker": "HE WOULD NOT RUSH OUT",
+      "foot": "Surah Yusuf 12:50-51",
+      "video": "https://videos.pexels.com/video-files/8720605/8720605-hd_1920_1080_25fps.mp4",
+      "videoDuration": 12
+    },
+    {
+      "type": "narration",
+      "text": "It is a patience almost beyond us. The Prophet, peace be upon him, once said that had he been kept in prison as long as Yusuf, and then the call to freedom came, he would have hurried straight out. But Yusuf waited, for his honour.",
+      "foot": "Sahih al-Bukhari 3372",
+      "video": "https://videos.pexels.com/video-files/33737918/14324333_1920_1080_30fps.mp4",
+      "videoDuration": 20
+    },
+    {
+      "type": "narration",
+      "text": "His innocence was proven before the whole court. And the boy who had been thrown into a well, sold, and forgotten in a cell, was placed in charge of the storehouses of all of Egypt.",
+      "kicker": "GIVEN CHARGE OF EGYPT",
+      "foot": "Surah Yusuf 12:54-55",
+      "video": "https://videos.pexels.com/video-files/3967206/3967206-hd_1366_720_24fps.mp4",
+      "videoDuration": 15
+    },
+    {
+      "type": "narration",
+      "text": "Then, just as he had foretold, the famine came. And it spread far beyond Egypt, until it reached the hills of Canaan, and a grieving old father, and ten desperate brothers.",
+      "kicker": "THE FAMINE",
+      "foot": "Surah Yusuf 12:58",
+      "video": "https://videos.pexels.com/video-files/8239245/8239245-hd_1920_1080_25fps.mp4",
+      "videoDuration": 20
+    },
+    {
+      "type": "narration",
+      "text": "They came down to Egypt to beg for grain. And they bowed before the most powerful man in the land, never once realizing that they were looking into the eyes of the little brother they had buried in a well.",
+      "kicker": "THE BROTHERS RETURN",
+      "foot": "Surah Yusuf 12:58",
+      "video": "https://videos.pexels.com/video-files/5988897/5988897-hd_1920_1080_25fps.mp4",
+      "videoDuration": 8
+    },
+    {
+      "type": "narration",
+      "text": "Yusuf knew them at once. He tested them. And to keep his youngest brother safely at his side, he had the king's own cup hidden in the boy's bag. It was a plan, the Qur'an tells us, that Allah Himself taught him.",
+      "foot": "Surah Yusuf 12:70, 12:76",
+      "video": "https://videos.pexels.com/video-files/8180941/8180941-uhd_2732_1440_25fps.mp4",
+      "videoDuration": 22
+    },
+    {
+      "type": "narration",
+      "text": "And far away in Canaan, Yaqub was still grieving. He had wept for Yusuf for so many years that his eyesight had faded to white. And still, he would not give up hope. I complain, he said, only of my grief and my sorrow, to Allah.",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Yusuf 12:84, 12:86 (shown, not recited)",
+      "quote": "12:86",
+      "video": "https://videos.pexels.com/video-files/15950418/15950418-hd_1920_1080_60fps.mp4",
+      "videoDuration": 11
+    },
+    {
+      "type": "narration",
+      "text": "At last, when the brothers stood before him one final time, broken and desperate, Yusuf could hold it back no longer. I am Yusuf, he said. And this is my brother. They froze. And they knew, in that instant, exactly what they had done.",
+      "kicker": "I AM YUSUF",
+      "foot": "Surah Yusuf 12:89-90",
+      "video": "https://videos.pexels.com/video-files/34659666/14691382_1920_1080_60fps.mp4",
+      "videoDuration": 22
+    },
+    {
+      "type": "narration",
+      "text": "They were completely in his power. He could have done anything to them. Instead, he said, there is no blame upon you today. May Allah forgive you. He is the most merciful of the merciful.",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Yusuf 12:92 (shown, not recited)",
+      "quote": "12:92",
+      "video": "https://videos.pexels.com/video-files/5155181/5155181-hd_1920_1080_25fps.mp4",
+      "videoDuration": 9
+    },
+    {
+      "type": "narration",
+      "text": "And centuries later, another man would stand exactly where Yusuf stood. When the Prophet, peace be upon him, entered Makkah, over the very people who had driven him out and killed his companions, he asked them what they thought he would do. Then he forgave them, with almost the same words. Go, he said. You are free.",
+      "kicker": "AN ECHO AT MAKKAH",
+      "foot": "Conquest of Makkah (seerah)",
+      "video": "https://videos.pexels.com/video-files/7469514/7469514-hd_1920_1080_24fps.mp4",
+      "videoDuration": 13
+    },
+    {
+      "type": "narration",
+      "text": "Yusuf sent his shirt home to his father. And before it had even arrived, the old man lifted his head and said, I can sense the scent of Yusuf, though you will think I am a foolish old man. They laid the shirt over his face. And his sight came rushing back.",
+      "kicker": "THE SCENT OF YUSUF",
+      "foot": "Surah Yusuf 12:93-96",
+      "video": "https://videos.pexels.com/video-files/8055213/8055213-hd_1920_1080_30fps.mp4",
+      "videoDuration": 10
+    },
+    {
+      "type": "narration",
+      "text": "Then his family came to him. His parents, and his eleven brothers, bowed before him in honour. And the dream of that little boy, the eleven stars, the sun and the moon, had come true, exactly as he had seen it all those years before.",
+      "kicker": "THE DREAM FULFILLED",
+      "foot": "Surah Yusuf 12:100",
+      "video": "https://videos.pexels.com/video-files/28180439/12320118_1920_1080_30fps.mp4",
+      "videoDuration": 21
+    },
+    {
+      "type": "narration",
+      "text": "My Lord, Yusuf prayed, You have given me power, and taught me. You are my protector in this world, and the next. Let me die in submission to You, and join me with the righteous.",
+      "kicker": "AS THE QUR'AN SAYS",
+      "foot": "Surah Yusuf 12:101 (shown, not recited)",
+      "quote": "12:101",
+      "video": "https://videos.pexels.com/video-files/7298370/7298370-hd_1920_1080_30fps.mp4",
+      "videoDuration": 8
+    },
+    {
+      "type": "narration",
+      "text": "He was betrayed by his own blood. Enslaved. Lied about. And left to rot in a prison for years. And every single step of it was quietly carrying him exactly where Allah meant for him to be. So whatever you are walking through tonight, do not lose hope. Trust the One who is writing your story.",
+      "kicker": "REFLECT",
+      "video": "https://videos.pexels.com/video-files/17833701/17833701-hd_1920_1080_25fps.mp4",
+      "videoDuration": 10
+    }
   ],
   "sources": [
     "Qur'an: Surah Yusuf (chapter 12), text from Quran.com. Verses shown on screen with translation, never recited or synthesized: 12:4, 12:18, 12:39, 12:86, 12:92, 12:101 (plus 12:5, 12:15-18, 12:21, 12:23, 12:31-35, 12:41-50, 12:54-58, 12:70-76, 12:84, 12:87, 12:93-100 cited per beat in the foot line).",

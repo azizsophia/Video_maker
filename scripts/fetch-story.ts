@@ -75,6 +75,36 @@ function groupWords(align: any): { text: string; start: number; end: number }[] 
   return words;
 }
 
+// Arabic names are VOICED from a light phonetic respelling so ElevenLabs says
+// them correctly, while the on-screen caption keeps the proper spelling. The
+// respelling is a pure token-for-token swap (no spaces added/removed), so the
+// spoken word count always matches the caption word count and the two stay in
+// sync. Captions are remapped back to the proper tokens after timing.
+const PHONETIC: Record<string, string> = {
+  yaqub: "Yaqoob",
+  ishaq: "Is-haaq",
+  ibrahim: "Ibraheem",
+  binyamin: "Bin-yameen",
+  "qur'an": "Quraan",
+  quran: "Quraan",
+  alayhi: "alayhee",
+  salam: "salaam",
+};
+const stripEdges = (tok: string): [string, string, string] => {
+  const m = tok.match(/^([^A-Za-z']*)(.*?)([^A-Za-z']*)$/s);
+  return m ? [m[1], m[2], m[3]] : ["", tok, ""];
+};
+const phoneticize = (text: string): string =>
+  text
+    .split(/(\s+)/)
+    .map((tok) => {
+      if (/^\s+$/.test(tok) || !tok) return tok;
+      const [pre, core, post] = stripEdges(tok);
+      const repl = PHONETIC[core.toLowerCase()];
+      return repl ? pre + repl + post : tok;
+    })
+    .join("");
+
 async function tts(text: string, voice: string, model: string, dest: string) {
   const key = (process.env.ELEVENLABS_API_KEY || "").trim();
   if (!key) throw new Error("ELEVENLABS_API_KEY is not set.");
@@ -116,10 +146,20 @@ async function main() {
   let i = 0;
   for (const seg of story.segments as any[]) {
     if (seg.type === "narration") {
-      const text: string = seg.say ?? seg.text;
+      // Caption keeps the proper spelling; the voice speaks a light phonetic
+      // respelling of the Arabic names so they are pronounced correctly.
+      const display: string = seg.text ?? seg.say;
+      const spoken: string = seg.say ?? phoneticize(display);
       const dest = join("public", "story", `n${i}.mp3`);
-      const { words, duration } = await tts(text, voice, model, dest);
-      console.log(`  narration ${i}: ${duration.toFixed(1)}s (${text.slice(0, 40)}...)`);
+      const { words, duration } = await tts(spoken, voice, model, dest);
+      // Remap the timed caption words back to the proper spelling (token-for-token).
+      const displayTokens = display.trim().split(/\s+/);
+      if (displayTokens.length === words.length) {
+        for (let k = 0; k < words.length; k++) words[k] = { ...words[k], text: displayTokens[k] };
+      } else if (spoken !== display) {
+        console.warn(`  caption remap skipped (n${i}): ${displayTokens.length} caption vs ${words.length} spoken tokens`);
+      }
+      console.log(`  narration ${i}: ${duration.toFixed(1)}s (${display.slice(0, 40)}...)`);
       // Optional on-screen Arabic verse (shown, never recited). Pulled from the
       // validated Quran.com source so Arabic is never hand-typed.
       let arabicQuote: string | undefined;
@@ -144,6 +184,8 @@ async function main() {
         highlight: seg.highlight,
         videoSrc: seg.video, // remote Pexels URL — streamed at render (no download)
         videoDuration: typeof seg.videoDuration === "number" ? seg.videoDuration : undefined, // clip seconds → fill-the-beat slowdown
+        title: seg.title, // cinematic gold-on-black title card (film open)
+        titleSub: seg.titleSub,
         arabic: arabicQuote,
       });
       cursor += duration + GAP;
