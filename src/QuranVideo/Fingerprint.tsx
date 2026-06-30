@@ -80,8 +80,11 @@ const RidgeField: React.FC<{
 }> = ({ cfg, highlightRing = -1, draw = true, bright = false }) => {
   const frame = useCurrentFrame();
   const { cx, cy, rings, base, gap, squish, seed, scale = 1 } = cfg;
-  const breathe = 1 + 0.018 * Math.sin(frame * 0.045 + seed);
-  const driftR = Math.sin(frame * 0.006 + seed) * 1.4;
+  // bright = composited over footage (the short). Keep it CALM: no breathing,
+  // no rotation drift, and a single slow draw-on that then holds perfectly
+  // still, so the only ambient motion in the beat is the gentle footage itself.
+  const breathe = bright ? 1 : 1 + 0.018 * Math.sin(frame * 0.045 + seed);
+  const driftR = bright ? 0 : Math.sin(frame * 0.006 + seed) * 1.4;
   const items = [] as React.ReactNode[];
   for (let i = 0; i < rings; i++) {
     const rx = (base + i * gap) * scale;
@@ -89,7 +92,8 @@ const RidgeField: React.FC<{
     // Nudge inner rings up so the core sits slightly high — a loop-ish core
     // instead of a dead-centre bullseye.
     const cyi = cy - (rings - 1 - i) * 1.6;
-    const p = draw ? clamp01((frame - i * 1.0) / 20) : 1;
+    // Slower, gentler reveal when composited (calm), quicker for the standalone.
+    const p = draw ? clamp01((frame - i * (bright ? 1.6 : 1.0)) / (bright ? 34 : 20)) : 1;
     const isHi = i === highlightRing;
     items.push(
       <path
@@ -291,7 +295,7 @@ export const FingerprintScene: React.FC<{ name: string; overlay?: boolean; still
           style={{ background: "radial-gradient(circle at 50% 40%, #15301f 0%, #050d09 72%)" }}
         />
       )}
-      <CoreGlow pulse={pulseCore} />
+      <CoreGlow pulse={pulseCore && !overlay} />
       <svg
         viewBox={`0 0 ${VB_W} ${VB_H}`}
         preserveAspectRatio="xMidYMid slice"
@@ -306,8 +310,11 @@ export const FingerprintScene: React.FC<{ name: string; overlay?: boolean; still
         <RidgeField cfg={cfg} highlightRing={highlightRing} draw={draw} bright={overlay} />
         {cfg2 ? <RidgeField cfg={cfg2} draw={draw} bright={overlay} /> : null}
       </svg>
-      {scan ? <ScanLine /> : null}
-      {dust ? <Dust count={dust} opacity={overlay ? 0.85 : 1} /> : null}
+      {/* The sweeping scan line and rising dust are motion-heavy, so they are
+          only used by the standalone (non-overlay) treatment. In the composited
+          short, the fingerprint holds still over the calm footage. */}
+      {scan && !overlay ? <ScanLine /> : null}
+      {dust && !overlay ? <Dust count={dust} opacity={1} /> : null}
       {overlay ? null : <Grade />}
     </AbsoluteFill>
   );

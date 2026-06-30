@@ -36,11 +36,12 @@ const CinematicBg: React.FC<{ src: string; videoDuration?: number }> = ({ src, v
     ? clamp(videoDuration / (beatSeconds + 0.3), 0.5, 1)
     : 0.7;
   const p = interpolate(frame, [0, durationInFrames], [0, 1], { extrapolateRight: "clamp" });
-  // Continuous motion: zoom in + a slow directional pan (direction varies per clip).
-  const zoom = 1.06 + 0.16 * p;
+  // Slow, restrained Ken Burns — gentle enough to feel luxurious rather than
+  // busy (zoom ~1.05 -> 1.14 with a small directional pan that varies per clip).
+  const zoom = 1.05 + 0.09 * p;
   const dir = src.length % 2 === 0 ? 1 : -1;
-  const panX = dir * interpolate(p, [0, 1], [-26, 26]);
-  const panY = interpolate(p, [0, 1], [18, -18]);
+  const panX = dir * interpolate(p, [0, 1], [-16, 16]);
+  const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ background: "#0b1410" }}>
