@@ -42,7 +42,10 @@ def main():
     body = json.dumps({
         "text": args.text,
         "model_id": args.model,
-        "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.0,
+        # Lower stability + some style = a warmer, more emotional read with
+        # natural variation (not a flat newsreader). Pacing/pauses come from the
+        # script punctuation (commas, full stops, ellipses, line breaks).
+        "voice_settings": {"stability": 0.35, "similarity_boost": 0.8, "style": 0.45,
                            "use_speaker_boost": True},
     }).encode("utf-8")
     req = urllib.request.Request(

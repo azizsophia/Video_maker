@@ -84,7 +84,9 @@ async function tts(text: string, voice: string, model: string, dest: string) {
     body: JSON.stringify({
       text,
       model_id: model,
-      voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0.0, use_speaker_boost: true },
+      // Warmer, more emotional read (lower stability + some style); pacing and
+      // pauses come from the script punctuation (commas, full stops, ellipses).
+      voice_settings: { stability: 0.35, similarity_boost: 0.8, style: 0.45, use_speaker_boost: true },
     }),
   });
   if (!res.ok) throw new Error(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 300)}`);
