@@ -1,21 +1,35 @@
-# Yusuf re-query - weak beats only (landscape, dark/cinematic/premium, no people-
-# in-modern-dress, no other-faith symbols, no text, no prophet faces).
+# Yusuf strict re-query - flagged beats. RULES: no on-screen text/writing; no
+# identifiable person where a prophet (Yusuf/Yaqub) is implied; no immodesty; no
+# alcohol; objects / light / unidentifiable silhouettes only. Landscape, dark,
+# cinematic.
 
-# 14 banquet (no period costumes; objects/hands only)
-hands cutting fruit by candlelight dark
-candlelit table pomegranates knife still life
-# 22 prison door opening to light
-dark stone dungeon doorway opening to light
-silhouette walking toward a bright doorway dark
-# 24 storehouses, grain sacks
-antique burlap sacks of grain warehouse sunlit
-golden grain pouring close up dark
-# 26 the brothers bow before him
-robed figures kneeling silhouette desert sunset
-people bowing in supplication silhouette dark
-# 31 the conquest gate (period, golden hour)
-ancient stone city gate golden hour
-silhouette crowd walking through old stone arch sunset
-# 34 the closing dua
-cupped hands raised in prayer dark background sunrise
-muslim man praying hands silhouette dawn
+# 1 lamp (object only, NO writing/text)
+burning oil lamp flame on black background
+antique brass lamp small flame dark
+# 3 father and child (HANDS ONLY, modest, no bodies/legs)
+elderly hand holding a small child hand close up
+grandfather and grandchild hands together warm
+# 12 refusal (NO person - light through a window only)
+sunlight streaming through a window empty dark room
+god rays through a window with dust particles no people
+# 15 prison (NO person)
+empty dark prison cell iron bars
+abandoned stone dungeon cell dim
+# 16 prison (NO person)
+shadow of bars on a dark stone wall
+empty old prison interior low light
+# 17 light only (NO person)
+volumetric god rays light shafts dust dark room
+beams of light through a dark empty hall
+# 18 goblet (NO alcohol, no pouring)
+ornate empty golden goblet dark still life
+antique metal chalice on a dark table
+# 22 doorway to light (NO person)
+dark stone archway opening to bright light empty
+light at the end of a dark tunnel no people
+# 28 grief (NO person - object/atmosphere)
+single candle flame flickering in the dark
+rain drops on a window pane at night
+# 29 the brothers freeze (NO single person - silhouettes/shadows)
+silhouettes of a group of robed figures in the dark
+long shadows of people on a stone wall dramatic
