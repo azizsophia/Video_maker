@@ -9,6 +9,14 @@ asked. This file is the durable memory for this repo.
 - For any non-trivial video, gate the expensive render behind sign-off: send the
   rewritten script and a footage CONTACT SHEET (a visual grid of the actual,
   vetted clip chosen for every beat) and only render after approval.
+- TIMING IS PART OF THE BAR. Each beat's visual must land WITH the words it
+  illustrates, never seconds ahead of them. Front-load every beat so it opens on
+  the image that matches its clip; keep beats tight (~10-15s) so one clip never
+  drifts out of sync with the narration. Before shipping, watch the cut in your
+  head beat by beat (image vs line vs caption vs music) and if ANYTHING feels off
+  (sync, pacing, a too-bright clip, a glyph box on an ayah, an abrupt cut), FIX
+  IT before delivering. Do not ship something you sense is off and wait to be
+  told. These videos must be professional and premium, every time.
 
 ## Visuals — the #1 rule: they must MATCH the scene, literally
 - Every beat's footage must literally depict what is being said (a well shows a
