@@ -14,7 +14,7 @@ const CREAM = "#f7f1e2";
 // 9:16 short and the 16:9 long-form frame.
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
 
-export const CineMap: React.FC<{ view: string }> = ({ view }) => {
+export const CineMap: React.FC<{ view: string; backdrop?: boolean }> = ({ view, backdrop = false }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames, width: W, height: H } = useVideoConfig();
   const wide = W > H; // 16:9 long-form vs 9:16 short
@@ -92,8 +92,16 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
 
   return (
     <AbsoluteFill>
-      {/* atmosphere */}
-      <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 40%, rgba(31,64,44,0.65), rgba(8,16,12,0.96) 72%)" }} />
+      {/* atmosphere — lighter when sitting over a backdrop scene (e.g. dunes)
+          so the backdrop reads while the gold route still pops and labels stay
+          legible. */}
+      <AbsoluteFill
+        style={{
+          background: backdrop
+            ? "radial-gradient(circle at 50% 40%, rgba(8,16,12,0.30), rgba(6,13,10,0.66) 75%)"
+            : "radial-gradient(circle at 50% 40%, rgba(31,64,44,0.65), rgba(8,16,12,0.96) 72%)",
+        }}
+      />
       <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 36%, rgba(231,200,115,0.14), transparent 55%)" }} />
 
       <AbsoluteFill style={{ transform: `scale(${driftScale}) translateX(${driftX}px)` }}>
@@ -169,7 +177,7 @@ export const CineMap: React.FC<{ view: string }> = ({ view }) => {
             }}>
               {twoPoint ? (
                 <div style={{ fontFamily: TRANSLATION_FONT, fontSize: 17, letterSpacing: 4, color: GOLD, marginBottom: 2 }}>
-                  {pt.id === ids[0] ? "FROM" : "SEEN AS FAR AS"}
+                  {pt.id === ids[0] ? def.fromLabel ?? "FROM" : def.toLabel ?? "SEEN AS FAR AS"}
                 </div>
               ) : null}
               <div style={{ fontFamily: TRANSLATION_FONT, fontWeight: 700, fontSize: wide ? 34 : 40, color: CREAM, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>

@@ -1,26 +1,44 @@
 import { registerRoot } from "remotion";
 import React from "react";
-import { Composition, registerRoot as _r } from "remotion";
+import { Composition } from "remotion";
 import { Cover } from "./QuranVideo/Cover";
 
-// Minimal root that registers ONLY the cover still. Keeps the bundle free of
+// Minimal root that registers ONLY the cover stills. Keeps the bundle free of
 // the video compositions (and their gstatic webfont loaders), so a headless
 // render behind the proxy never blocks on Google Fonts.
+//
+// CoverCard = 9:16 feed / TikTok cover; CoverWide = 16:9 YouTube long-form
+// thumbnail. Same Cover component — it adapts its layout via useVideoConfig.
+const defaultProps = {
+  title: "Two Seas\nThat Never Mix",
+  kicker: "QUR'AN & SCIENCE",
+  image:
+    "https://images.pexels.com/photos/6388945/pexels-photo-6388945.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920",
+  wordmark: "KETABI STUDIO",
+};
+
 const CoverRoot: React.FC = () =>
-  React.createElement(Composition, {
-    id: "CoverCard",
-    component: Cover,
-    defaultProps: {
-      title: "Two Seas\nThat Never Mix",
-      kicker: "QUR'AN & SCIENCE",
-      image:
-        "https://images.pexels.com/photos/6388945/pexels-photo-6388945.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920",
-      wordmark: "KETABI STUDIO",
-    },
-    fps: 30,
-    durationInFrames: 1,
-    width: 1080,
-    height: 1920,
-  });
+  React.createElement(
+    React.Fragment,
+    null,
+    React.createElement(Composition, {
+      id: "CoverCard",
+      component: Cover,
+      defaultProps,
+      fps: 30,
+      durationInFrames: 1,
+      width: 1080,
+      height: 1920,
+    }),
+    React.createElement(Composition, {
+      id: "CoverWide",
+      component: Cover,
+      defaultProps,
+      fps: 30,
+      durationInFrames: 1,
+      width: 1920,
+      height: 1080,
+    })
+  );
 
 registerRoot(CoverRoot);

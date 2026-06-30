@@ -2,9 +2,6 @@ import React from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
 import { ThemePalette } from "./themes";
 
-const W = 1080;
-const H = 1920;
-
 // Deterministic pseudo-random (Remotion renders frames in parallel workers, so
 // never use Math.random at render time — seed everything by index).
 const rand = (n: number) => {
@@ -40,9 +37,14 @@ const Glow: React.FC<{ x: number; y: number; r: number; color: string; opacity?:
   />
 );
 
+// Every scene reads its pixel box from useVideoConfig() and anchors everything
+// to W/H (as fractions), so the same scene composes correctly in the 9:16 short
+// and the 16:9 long-form frame.
+
 // ── Desert dunes: layered silhouettes with parallax drift + sand motes ────────
 const Dunes: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   const frame = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
   const e = useEntrance();
   const greens = ["#0f2418", "#16301f", "#1f4029", "#2b5436"];
   const wave = (baseY: number, amp: number, k: number, phase: number) => {
@@ -55,18 +57,18 @@ const Dunes: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
     <AbsoluteFill
       style={{ background: `linear-gradient(180deg, ${theme.gradientFrom} 0%, ${theme.gradientTo} 100%)`, opacity: e }}
     >
-      <Glow x={W * 0.7} y={360} r={420} color={theme.accent} opacity={0.28} />
+      <Glow x={W * 0.7} y={H * 0.19} r={420} color={theme.accent} opacity={0.28} />
       <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
         {[0, 1, 2, 3].map((i) => (
           <path
             key={i}
-            d={wave(1080 + i * 230, 50 + i * 18, 0.0016 + i * 0.0004, frame * (0.18 + i * 0.12) * 0.04 + i)}
+            d={wave(H * 0.5625 + i * H * 0.12, 50 + i * 18, 0.0016 + i * 0.0004, frame * (0.18 + i * 0.12) * 0.04 + i)}
             fill={greens[i]}
           />
         ))}
         {/* gold rim on the front dune */}
         <path
-          d={wave(1080 + 3 * 230, 50 + 3 * 18, 0.0016 + 3 * 0.0004, frame * (0.18 + 3 * 0.12) * 0.04 + 3)}
+          d={wave(H * 0.5625 + 3 * H * 0.12, 50 + 3 * 18, 0.0016 + 3 * 0.0004, frame * (0.18 + 3 * 0.12) * 0.04 + 3)}
           fill="none"
           stroke={theme.accent}
           strokeWidth={3}
@@ -75,7 +77,7 @@ const Dunes: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
       </svg>
       {Array.from({ length: 36 }).map((_, i) => {
         const x = (rand(i) * W + frame * (0.3 + rand(i + 9))) % W;
-        const y = 200 + rand(i + 3) * 760;
+        const y = H * 0.1 + rand(i + 3) * H * 0.4;
         return (
           <div
             key={i}
@@ -96,9 +98,10 @@ const Dunes: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   );
 };
 
-// ── Light rays from above (revelation/drama) ──────────────────────────────────
+// ── Light rays from above (revelation / drama / mercy) ────────────────────────
 const Rays: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   const frame = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
   const e = useEntrance();
   return (
     <AbsoluteFill
@@ -115,7 +118,7 @@ const Rays: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
               left: W / 2,
               top: -40,
               width: 26 + (i % 3) * 10,
-              height: 1700,
+              height: H * 0.92,
               background: `linear-gradient(180deg, ${theme.accent}, transparent)`,
               opacity: 0.1 + 0.05 * ((i + 1) % 3),
               transformOrigin: "top center",
@@ -126,7 +129,7 @@ const Rays: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
         );
       })}
       {Array.from({ length: 30 }).map((_, i) => {
-        const y = (rand(i) * H - frame * (0.4 + rand(i + 2))) ;
+        const y = (rand(i) * H - frame * (0.4 + rand(i + 2)));
         const yy = ((y % H) + H) % H;
         return (
           <div
@@ -148,9 +151,10 @@ const Rays: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   );
 };
 
-// ── Carved cliffs / canyon silhouettes (evokes Hegra without depicting it) ────
+// ── Carved cliffs / canyon silhouettes (the well, the prison, ancient stone) ──
 const Stone: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   const frame = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
   const e = useEntrance();
   const drift = Math.sin(frame * 0.01) * 14;
   const cliff = (baseY: number, seed: number, color: string) => {
@@ -164,14 +168,14 @@ const Stone: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   };
   return (
     <AbsoluteFill style={{ background: `linear-gradient(180deg, ${theme.gradientFrom}, ${theme.gradientTo})`, opacity: e }}>
-      <Glow x={W * 0.5} y={500} r={460} color={theme.accent} opacity={0.22} />
+      <Glow x={W * 0.5} y={H * 0.26} r={460} color={theme.accent} opacity={0.22} />
       <svg width={W} height={H} style={{ position: "absolute", inset: 0, transform: `translateX(${drift}px)` }}>
-        <path d={cliff(1150, 10, "#13281b")} fill="#13281b" />
-        <path d={cliff(1320, 50, "#1c3a26")} fill="#1c3a26" />
-        {/* carved glowing doorways */}
+        <path d={cliff(H * 0.6, 10, "#13281b")} fill="#13281b" />
+        <path d={cliff(H * 0.6875, 50, "#1c3a26")} fill="#1c3a26" />
+        {/* carved glowing doorways / shafts of light */}
         {Array.from({ length: 5 }).map((_, i) => {
-          const x = 150 + i * 190;
-          const y = 1180 + rand(i + 20) * 90;
+          const x = W * 0.14 + i * W * 0.176;
+          const y = H * 0.615 + rand(i + 20) * H * 0.047;
           return (
             <g key={i}>
               <rect x={x} y={y} width={54} height={92} rx={6} fill={theme.accent} opacity={0.18} />
@@ -184,13 +188,14 @@ const Stone: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   );
 };
 
-// ── Night sky with gold stars + crescent (reflective beats) ───────────────────
+// ── Night sky with gold stars + crescent (the dream; reflective beats) ────────
 const NightSky: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   const frame = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
   const e = useEntrance();
   return (
     <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 80%, ${theme.gradientFrom}, ${theme.gradientTo})`, opacity: e }}>
-      {Array.from({ length: 80 }).map((_, i) => {
+      {Array.from({ length: 90 }).map((_, i) => {
         const tw = 0.3 + 0.7 * Math.abs(Math.sin(frame * 0.04 + i));
         return (
           <div
@@ -209,7 +214,7 @@ const NightSky: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
         );
       })}
       {/* crescent */}
-      <div style={{ position: "absolute", left: W * 0.66, top: 300 }}>
+      <div style={{ position: "absolute", left: W * 0.66, top: H * 0.16 }}>
         <div style={{ position: "absolute", width: 150, height: 150, borderRadius: "50%", background: theme.accent, filter: "blur(2px)", boxShadow: `0 0 60px ${theme.accent}` }} />
         <div style={{ position: "absolute", left: 42, top: -16, width: 150, height: 150, borderRadius: "50%", background: theme.gradientTo }} />
       </div>
@@ -217,9 +222,10 @@ const NightSky: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   );
 };
 
-// ── Rising embers (destruction / punishment beat) ─────────────────────────────
+// ── Rising embers (tension / dryness / the brothers' envy) ────────────────────
 const Embers: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   const frame = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
   const e = useEntrance();
   return (
     <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 110%, #3a2410, ${theme.gradientTo})`, opacity: e, overflow: "hidden" }}>
@@ -250,6 +256,40 @@ const Embers: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
   );
 };
 
+// ── Calm water / river surface with drifting light (the Nile; mercy) ──────────
+const Water: React.FC<{ theme: ThemePalette }> = ({ theme }) => {
+  const frame = useCurrentFrame();
+  const { width: W, height: H } = useVideoConfig();
+  const e = useEntrance();
+  return (
+    <AbsoluteFill style={{ background: `linear-gradient(180deg, ${theme.gradientFrom} 0%, #07140d 100%)`, opacity: e, overflow: "hidden" }}>
+      <Glow x={W * 0.5} y={H * 0.22} r={420} color={theme.accent} opacity={0.26} />
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+        {Array.from({ length: 22 }).map((_, i) => {
+          const y = H * 0.5 + i * ((H * 0.5) / 22);
+          const amp = 6 + i * 1.1;
+          const phase = frame * (0.02 + i * 0.002) + i;
+          let d = `M0,${y}`;
+          for (let x = 0; x <= W; x += 30) d += ` L${x},${y + amp * Math.sin(x * 0.01 + phase)}`;
+          return <path key={i} d={d} fill="none" stroke={theme.accent} strokeWidth={1.2} opacity={0.06 + (i / 22) * 0.16} />;
+        })}
+      </svg>
+      {Array.from({ length: 26 }).map((_, i) => {
+        const x = (rand(i) * W + Math.sin(frame * 0.02 + i) * 20) % W;
+        const y = H * 0.52 + rand(i + 3) * H * 0.46;
+        const tw = 0.3 + 0.7 * Math.abs(Math.sin(frame * 0.06 + i));
+        return (
+          <div key={i} style={{ position: "absolute", left: x, top: y, width: 3, height: 3, borderRadius: "50%", background: theme.accent, opacity: tw * 0.5 }} />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+export const SCENE_NAMES = ["dunes", "rays", "stone", "nightsky", "embers", "water"] as const;
+export const isSceneName = (name?: string): boolean =>
+  typeof name === "string" && (SCENE_NAMES as readonly string[]).includes(name);
+
 export const Scene: React.FC<{ name?: string; theme: ThemePalette }> = ({ name = "dunes", theme }) => {
   switch (name) {
     case "rays":
@@ -260,6 +300,8 @@ export const Scene: React.FC<{ name?: string; theme: ThemePalette }> = ({ name =
       return <NightSky theme={theme} />;
     case "embers":
       return <Embers theme={theme} />;
+    case "water":
+      return <Water theme={theme} />;
     case "dunes":
     default:
       return <Dunes theme={theme} />;

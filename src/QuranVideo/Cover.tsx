@@ -1,6 +1,8 @@
 import React from "react";
 import { AbsoluteFill, Img, useVideoConfig } from "remotion";
 import { FingerprintScene, isFingerprintScene } from "./Fingerprint";
+import { Scene, isSceneName } from "./Scenes";
+import { themes } from "./themes";
 // Locally-bundled fonts (no gstatic network at render — the headless browser
 // can't reach Google Fonts through the proxy CA). @fontsource registers the
 // @font-face rules at import.
@@ -45,6 +47,8 @@ export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordm
           matches the video's subject) or a full-bleed photo. */}
       {isFingerprintScene(scene) ? (
         <FingerprintScene name={scene as string} still />
+      ) : isSceneName(scene) ? (
+        <Scene name={scene} theme={themes.ketabi} />
       ) : image ? (
         <AbsoluteFill style={{ transform: "scale(1.04)" }}>
           <Img src={image} style={{ width: "100%", height: "100%", objectFit: "cover" }} />

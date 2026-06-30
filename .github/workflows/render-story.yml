@@ -18,6 +18,10 @@ on:
         description: "Theme (blank = use the story's own; cinematic stories want 'ketabi'). Options: ketabi | atlas | midnight | emerald | sand | noor"
         required: false
         default: ""
+      scale:
+        description: "Render scale (1 = native; 2 = 4K-class, sharper but slower/bigger). Long-form premium = 2."
+        required: false
+        default: "1"
 
 jobs:
   render:
@@ -56,7 +60,8 @@ jobs:
           # Use every core; --crf 23 keeps the (low-motion) video crisp but far
           # smaller, so long-form episodes fit under the Drive web-app limit.
           npx remotion render "$COMP" "out/story.mp4" \
-            --props=src/data/story-render.json --concurrency=$(nproc) --crf 23
+            --props=src/data/story-render.json --concurrency=$(nproc) --crf 20 \
+            --scale="${{ inputs.scale }}"
 
       - name: Cover + captions
         # Branded cover still (out/cover.png) and platform captions
@@ -64,7 +69,7 @@ jobs:
         # Non-fatal: a missing block is skipped, and a cover hiccup must not cost
         # us the rendered video.
         continue-on-error: true
-        run: node scripts/cover-and-captions.mjs --story="${{ inputs.story }}" --out=out
+        run: node scripts/cover-and-captions.mjs --story="${{ inputs.story }}" --orientation="${{ inputs.orientation }}" --out=out
 
       - name: Upload video artifact
         uses: actions/upload-artifact@v4

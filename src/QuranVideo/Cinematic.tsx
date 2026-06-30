@@ -12,6 +12,8 @@ import { PLAYFAIR, CORMORANT, JOST } from "./luxFonts";
 import { ARABIC_DISPLAY_FONT } from "./fonts";
 import { CineMap } from "./CineMap";
 import { FingerprintScene, isFingerprintScene } from "./Fingerprint";
+import { Scene, isSceneName } from "./Scenes";
+import { themes } from "./themes";
 
 const GOLD = "#e7c873";
 const CREAM = "#f7f1e2";
@@ -192,7 +194,25 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
   return (
     <AbsoluteFill>
       {seg.map ? (
-        <CineMap view={seg.map} />
+        isSceneName(seg.scene) ? (
+          // Premium map composited over a code-generated backdrop (e.g. dunes),
+          // kept legible by CineMap's lighter base.
+          <>
+            <Scene name={seg.scene} theme={themes.ketabi} />
+            <CineMap view={seg.map} backdrop />
+          </>
+        ) : (
+          <CineMap view={seg.map} />
+        )
+      ) : isSceneName(seg.scene) ? (
+        // Code-generated cinematic scene (night sky, dunes, stone, rays, water,
+        // embers) with a bottom scrim so the lower-third caption stays readable.
+        <>
+          <Scene name={seg.scene} theme={themes.ketabi} />
+          <AbsoluteFill
+            style={{ background: "linear-gradient(180deg, transparent 42%, rgba(6,13,10,0.55) 78%, rgba(5,11,8,0.9) 100%)" }}
+          />
+        </>
       ) : isFingerprintScene(seg.scene) ? (
         seg.videoSrc ? (
           // Premium composite: real cinematic texture (ink / gold dust / bokeh)

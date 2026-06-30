@@ -24,10 +24,13 @@ export const PLACES: Record<string, Place> = {
   eupSyria: { label: "Syria", lat: 35.95, lon: 39.0 },
   eupIraq: { label: "Iraq", lat: 32.5, lon: 44.4 },
   eupGulf: { label: "Persian Gulf", lat: 30.4, lon: 47.9 },
+  // Yusuf: from the land of Canaan (his father's home, the Levant) to Egypt.
+  canaan: { label: "Canaan", lat: 31.9, lon: 35.2 },
+  egypt: { label: "Egypt", lat: 29.85, lon: 31.25 },
 };
 
 export type Bounds = { lonMin: number; lonMax: number; latMin: number; latMax: number };
-export type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds; chip?: string };
+export type MapView = { title: string; subtitle?: string; pins: string[]; route?: string[]; bounds?: Bounds; chip?: string; fromLabel?: string; toLabel?: string };
 export const VIEWS: Record<string, MapView> = {
   // Madinah -> Busra: the fire's glow was recorded reaching this far north, into
   // southern Syria. Window widened north to include the Levant.
@@ -55,6 +58,16 @@ export const VIEWS: Record<string, MapView> = {
     subtitle: "The army's path ran straight through the ruins",
     pins: ["medina", "hegra", "tabuk"],
     route: ["medina", "hegra", "tabuk"],
+  },
+  // Yusuf's journey: taken by caravan from Canaan down to Egypt.
+  "yusuf-egypt": {
+    title: "",
+    pins: ["canaan", "egypt"],
+    route: ["canaan", "egypt"],
+    bounds: { lonMin: 29.5, lonMax: 37, latMin: 27.5, latMax: 33.5 },
+    chip: "≈ 400 km",
+    fromLabel: "FROM",
+    toLabel: "TO",
   },
   "incense-road": {
     title: "THE INCENSE ROAD",

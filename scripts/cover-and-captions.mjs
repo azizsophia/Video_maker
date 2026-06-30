@@ -53,6 +53,9 @@ if (c) {
 // ── Cover -> out/cover.png (branded CoverCard still, 1080x1920) ────────────────
 const cov = story.cover;
 if (cov) {
+  // 16:9 thumbnail for long-form (orientation=wide), else the 9:16 feed cover.
+  const wide = (args.orientation ?? "").toLowerCase() === "wide";
+  const compId = wide ? "CoverWide" : "CoverCard";
   const inputProps = {
     title: cov.title ?? story.title ?? "",
     kicker: cov.kicker,
@@ -60,15 +63,16 @@ if (cov) {
     scene: cov.scene,
     wordmark: cov.wordmark ?? "KETABI STUDIO",
   };
-  console.log("Bundling cover...");
+  console.log(`Bundling cover (${compId})...`);
   const serveUrl = await bundle({ entryPoint: path.resolve("src/cover-index.ts") });
-  const composition = await selectComposition({ serveUrl, id: "CoverCard", inputProps });
+  const composition = await selectComposition({ serveUrl, id: compId, inputProps });
   const dest = path.join(outDir, "cover.png");
   await renderStill({
     composition,
     serveUrl,
     output: dest,
     inputProps,
+    scale: 2, // crisp, retina/4K-friendly cover
     chromiumOptions: { gl: "angle", ignoreCertificateErrors: true },
   });
   console.log("cover ->", dest);
