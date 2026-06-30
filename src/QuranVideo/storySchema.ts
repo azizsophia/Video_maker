@@ -52,7 +52,7 @@ export const storyPropsSchema = z.object({
   // Optional handle, rendered small as "or follow @handle". Empty -> hidden.
   ctaHandle: z.string().default(""),
   // Optional value line under the headline (e.g. the waitlist benefit). Empty -> hidden.
-  ctaSub: z.string().default("Early access before the shop opens."),
+  ctaSub: z.string().default("Founding members get 15% off the first order."),
   // Optional comment-keyword funnel (off by default): viewers comment this word
   // and you reply with the link. Empty -> the line is hidden.
   ctaComment: z.string().default(""),

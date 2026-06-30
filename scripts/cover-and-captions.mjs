@@ -34,14 +34,18 @@ if (c) {
   const tags = Array.isArray(c.hashtags) ? c.hashtags.join(" ") : "";
   const block = (label, line, withTags) =>
     line ? `== ${label} ==\n${line}${withTags && tags ? `\n${tags}` : ""}\n\n` : "";
+  // Standing founding-offer call to action, appended to each social caption and
+  // the long-form description so every post drives to the waitlist.
+  const cta = c.cta ?? "Founding members get 15% off the first order. Join the founding list at ketabistudio.com.";
+  const withCta = (line) => (line ? `${line}\n${cta}` : line);
   const txt =
     `${story.title ?? "Untitled"} - captions\n` +
     `(no emojis, no dashes; one asset across platforms)\n\n` +
     // TikTok carries the hashtags (with #edutokcontest in the middle).
-    block("TikTok", c.tiktok, true) +
-    block("YouTube Shorts", c.shorts, false) +
-    block("Instagram / FB Reels", c.reels ?? c.shorts, true) +
-    (c.youtube ? `== YouTube (long-form description) ==\n${c.youtube}\n\n` : "") +
+    block("TikTok", withCta(c.tiktok), true) +
+    block("YouTube Shorts", withCta(c.shorts), false) +
+    block("Instagram / FB Reels", withCta(c.reels ?? c.shorts), true) +
+    (c.youtube ? `== YouTube (long-form description) ==\n${c.youtube}\n\n${cta}\n\n` : "") +
     (tags ? `Hashtags: ${tags}\n` : "");
   const dest = path.join(outDir, "captions.txt");
   await writeFile(dest, txt);
