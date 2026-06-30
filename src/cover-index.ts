@@ -21,12 +21,15 @@ const CoverRoot: React.FC = () =>
   React.createElement(
     React.Fragment,
     null,
+    // durationInFrames is > the scene entrance (frames 0-10) so the cover still
+    // can be captured AFTER any animated backdrop (e.g. the night sky) has faded
+    // in. A frame-0 still would catch the scene fully transparent (blank).
     React.createElement(Composition, {
       id: "CoverCard",
       component: Cover,
       defaultProps,
       fps: 30,
-      durationInFrames: 1,
+      durationInFrames: 90,
       width: 1080,
       height: 1920,
     }),
@@ -35,7 +38,7 @@ const CoverRoot: React.FC = () =>
       component: Cover,
       defaultProps,
       fps: 30,
-      durationInFrames: 1,
+      durationInFrames: 90,
       width: 1920,
       height: 1080,
     })

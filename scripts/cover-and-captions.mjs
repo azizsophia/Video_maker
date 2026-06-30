@@ -76,6 +76,7 @@ if (cov) {
     serveUrl,
     output: dest,
     inputProps,
+    frame: 45, // capture AFTER the scene entrance (frames 0-10) so animated backdrops show
     scale: 2, // crisp, retina/4K-friendly cover
     chromiumOptions: { gl: "angle", ignoreCertificateErrors: true },
   });
