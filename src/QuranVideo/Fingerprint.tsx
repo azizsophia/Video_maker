@@ -107,7 +107,7 @@ const RidgeField: React.FC<{
     );
   }
   // delta fork sits just below-right of the core
-  const dp = clamp01((frame - rings * 1.0) / 26);
+  const dp = draw ? clamp01((frame - rings * 1.0) / 26) : 1;
   // Breathe + drift about the fingerprint core (translate → scale/rotate → back).
   return (
     <g
@@ -259,18 +259,22 @@ export const isFingerprintScene = (name?: string): boolean =>
 // the premium look: no opaque base, ridges brightened + a soft gold glow, and a
 // faint dark "seat" so they read over a busy clip. Otherwise the scene is a
 // self-contained dark-green backdrop.
-export const FingerprintScene: React.FC<{ name: string; overlay?: boolean }> = ({
+export const FingerprintScene: React.FC<{ name: string; overlay?: boolean; still?: boolean }> = ({
   name,
   overlay = false,
+  still = false,
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const { cfg, cfg2, highlightRing, scan, dust, pulseCore, draw } = sceneConfig(name);
+  const cfgs = sceneConfig(name);
+  const { cfg, cfg2, highlightRing, scan, dust, pulseCore } = cfgs;
+  // still = a settled, fully-drawn frame (for cover stills): no draw-on, no fade.
+  const draw = still ? false : cfgs.draw;
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
   const out = interpolate(frame, [durationInFrames - 12, durationInFrames - 1], [1, 0], {
     extrapolateLeft: "clamp",
   });
-  const opacity = Math.min(fade, out);
+  const opacity = still ? 1 : Math.min(fade, out);
   return (
     <AbsoluteFill style={{ background: overlay ? "transparent" : "#0b1410", opacity }}>
       {overlay ? (

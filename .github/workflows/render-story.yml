@@ -58,14 +58,25 @@ jobs:
           npx remotion render "$COMP" "out/story.mp4" \
             --props=src/data/story-render.json --concurrency=$(nproc) --crf 23
 
+      - name: Cover + captions
+        # Branded cover still (out/cover.png) and platform captions
+        # (out/captions.txt), driven by the story JSON's `cover` / `captions`.
+        # Non-fatal: a missing block is skipped, and a cover hiccup must not cost
+        # us the rendered video.
+        continue-on-error: true
+        run: node scripts/cover-and-captions.mjs --story="${{ inputs.story }}" --out=out
+
       - name: Upload video artifact
         uses: actions/upload-artifact@v4
         with:
           name: story-video
           path: |
             out/story.mp4
+            out/cover.png
+            out/captions.txt
             src/data/story-render.json
           retention-days: 14
+          if-no-files-found: warn
 
       - name: Check Drive credentials
         id: drive

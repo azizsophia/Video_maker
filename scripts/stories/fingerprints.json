@@ -6,6 +6,13 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
+  "cover": { "title": "The Fingerprint\nVerse", "kicker": "QUR'AN & CREATION", "scene": "fp-whorl" },
+  "captions": {
+    "tiktok": "Fourteen hundred years ago the Quran pointed to the one mark that makes you unrepeatable: your fingertips.",
+    "shorts": "The Quran named the fingertips, the one mark no two people have ever shared. Surah Al-Qiyamah 75:3-4.",
+    "reels": "The Quran named the fingertips, the one mark no two people have ever shared. Surah Al-Qiyamah 75:3-4.",
+    "hashtags": ["#quran", "#islam", "#edutokcontest", "#fingerprint", "#science"]
+  },
   "_note": "Vertical 9:16 short (~80s). Pillar: Qur'an and creation (Tuesday). Authentic: Qur'an 75:3-4 (Al-Qiyamah) shown on screen, never recited. Science separate: Galton, 'Finger Prints' (1892). PREMIUM COMPOSITE so the visual both matches the scene and looks filmic: each beat layers a real cinematic TEXTURE clip (abstract ink / gold dust / bokeh / galaxy from Pexels - human-free and text-free by construction, no QC needed) BEHIND a code-generated fingerprint (`src/QuranVideo/Fingerprint.tsx`, scene `fp-*`) drawn glowing on top. The fingerprint is the literal subject; the footage gives depth, grain and lighting. Per beat the ridge pattern matches its line (whorl forms / core spotlight / crumble to dust / restore the tips over 75:4 / Galton scan / two different prints for twins / one ridge as a signature / pressed seal / gathered from dust). Captions in the vertical safe area (clear of the right icon rail).",
   "segments": [
     { "type": "narration", "kicker": "QUR'AN & CREATION", "text": "Look closely at the tip of your finger. The pattern on it belongs to you, and to no one else who has ever lived.", "scene": "fp-whorl", "video": "https://videos.pexels.com/video-files/7565428/7565428-hd_1080_1920_25fps.mp4", "videoDuration": 40 },

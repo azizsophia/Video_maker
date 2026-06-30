@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Img, useVideoConfig } from "remotion";
+import { FingerprintScene, isFingerprintScene } from "./Fingerprint";
 // Locally-bundled fonts (no gstatic network at render — the headless browser
 // can't reach Google Fonts through the proxy CA). @fontsource registers the
 // @font-face rules at import.
@@ -24,7 +25,8 @@ if (typeof document !== "undefined" && "fonts" in document) {
 export type CoverProps = {
   title: string; // use \n to force line breaks
   kicker?: string;
-  image: string;
+  image?: string; // full-bleed photo; omit when using a code-generated `scene`
+  scene?: string; // e.g. an `fp-*` fingerprint scene — the cover matches the video's subject
   wordmark?: string;
 };
 
@@ -32,17 +34,22 @@ export type CoverProps = {
 // the same green/gold grade as the videos, a top wordmark, and a gold-accented
 // title in the lower third. Every cover shares this exact treatment so the
 // TikTok grid reads as one brand.
-export const Cover: React.FC<CoverProps> = ({ title, kicker, image, wordmark = "KETABI STUDIO" }) => {
+export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordmark = "KETABI STUDIO" }) => {
   const { width, height } = useVideoConfig();
   const wide = width > height; // 16:9 YouTube thumbnail vs 9:16 feed cover
   const lines = title.split("\n");
   const longLine = lines.some((l) => l.length > 16);
   return (
     <AbsoluteFill style={{ background: "#0b1410", width, height }}>
-      {/* Photo */}
-      <AbsoluteFill style={{ transform: "scale(1.04)" }}>
-        <Img src={image} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-      </AbsoluteFill>
+      {/* Backdrop: a code-generated scene (e.g. the fingerprint, so the cover
+          matches the video's subject) or a full-bleed photo. */}
+      {isFingerprintScene(scene) ? (
+        <FingerprintScene name={scene as string} still />
+      ) : image ? (
+        <AbsoluteFill style={{ transform: "scale(1.04)" }}>
+          <Img src={image} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        </AbsoluteFill>
+      ) : null}
 
       {/* Brand grade + legibility scrims (green tint, vignette, heavier bottom) */}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(8,22,16,0.62) 0%, rgba(11,20,16,0.10) 26%, rgba(8,16,12,0.30) 58%, rgba(6,13,10,0.86) 84%, rgba(5,11,8,0.96) 100%)" }} />
