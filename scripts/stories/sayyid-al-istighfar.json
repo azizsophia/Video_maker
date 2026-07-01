@@ -15,7 +15,9 @@
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, called one dua... the MASTER of all seeking of forgiveness. Whoever says it in the morning with certainty, and dies that day... enters Paradise. Here is what it actually says.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/15238832/15238832-hd_1080_1920_30fps.mp4",
+      "videoDuration": 39
     },
     {
       "type": "narration",
@@ -26,41 +28,57 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/34317040/14537852_1080_1920_60fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "It begins... O Allah, You are my Lord. There is no god but You. You created me... and I am Your slave. Before asking for anything... you remember whose you are.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/11106485/11106485-hd_1080_1920_30fps.mp4",
+      "videoDuration": 35
     },
     {
       "type": "narration",
       "text": "And I am upon Your covenant and Your promise... as much as I am able. As much as I am able. The dua itself admits you will fall short... and Allah accepted those words into it.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/36962592/15659370_1080_1920_60fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "I seek refuge in You... from the evil of what I have done.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/12160331/12160331-hd_1080_1920_30fps.mp4",
+      "videoDuration": 33
     },
     {
       "type": "narration",
       "text": "Then come the two confessions that give the dua its power. I fully admit Your blessings upon me... and I fully admit my sin. Both hands open. No pretending the good is yours... no pretending the bad is not.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/15789473/15789473-hd_1080_1920_30fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "So forgive me... for no one forgives sins... except You.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/35000438/14827953_1080_1920_60fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, promised... whoever says it in the day with conviction and dies before evening is of the people of Paradise. And whoever says it in the night with conviction, and dies before morning... the same.",
-      "foot": "Sahih al-Bukhari 6306"
+      "foot": "Sahih al-Bukhari 6306",
+      "video": "https://videos.pexels.com/video-files/19712391/19712391-hd_1080_1920_30fps.mp4",
+      "videoDuration": 47
     },
     {
       "type": "narration",
-      "text": "It never asks you to be sinless. It asks you to be honest... about His goodness, and about yours. Learn it. Say it tonight... and say it like you mean it."
+      "text": "It never asks you to be sinless. It asks you to be honest... about His goodness, and about yours. Learn it. Say it tonight... and say it like you mean it.",
+      "video": "https://videos.pexels.com/video-files/36124126/15319572_1080_1920_24fps.mp4",
+      "videoDuration": 25
     }
   ],
   "captions": {

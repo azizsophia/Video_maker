@@ -1,22 +1,16 @@
-# sayyid-al-istighfar - 9 beats, plus zamzam beat 8 retry
---portrait
-# beat 1 - first light through morning mist
-first light morning mist sunrise trees
-# beat 2 - slow dark gold light (title card)
-soft golden light flare dark background
-# beat 3 - vast sky over small silhouetted landscape
-dramatic vast sky small horizon silhouette
-# beat 4 - a steady flame holding in wind
-oil lamp flame steady night
-# beat 5 - dark clouds slowly clearing
-dark clouds parting clearing timelapse
-# beat 6 - light on sand ripples, no people
-golden light shadows sand ripples texture
-# beat 7 - rain beginning over dry earth
-rain drops falling dry soil earth
-# beat 8 - day-to-night sky timelapse
-day to night timelapse sky stars
-# beat 9 - calm night sky filling with stars
-peaceful night sky full of stars
-# retry zamzam beat 8 - clear water poured into a simple cup, backlit
-fresh drinking water pouring glass sunlight
+# cover photos - one query per story (real photos, premium, literal)
+--photos
+# signs-of-the-hour cover - towers rising into a dark sky
+skyscrapers night sky dark towers
+# the-bee cover - bee on lavender
+bee lavender flower macro
+# al-kawthar cover - river of light / abundance
+river golden sunlight flowing
+# sumayya cover - single star in deep night sky
+lone star night sky desert
+# yunus cover - deep ocean light from above
+deep ocean underwater light rays
+# zamzam cover - desert spring water
+desert oasis spring water rocks
+# sayyid-al-istighfar cover - morning mist golden light
+golden sunrise morning mist landscape
