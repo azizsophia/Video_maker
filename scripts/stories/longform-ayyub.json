@@ -8,14 +8,17 @@
   "showOutro": true,
   "cover": {
     "title": "Ayyub",
-    "kicker": "THE MOST PATIENT MAN"
+    "kicker": "THE MOST PATIENT MAN",
+    "image": "https://images.pexels.com/photos/30036674/pexels-photo-30036674.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2560&h=1440"
   },
   "_note": "TUE long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [
     {
       "type": "narration",
       "text": "In the entire Qur'an, only a handful of people are praised by Allah with the words... what an excellent servant. One of them was a man who lost everything. And the reason Allah praised him... is what he did next.",
-      "foot": "Qur'an 38:44"
+      "foot": "Qur'an 38:44",
+      "video": "https://videos.pexels.com/video-files/29135111/12586041_1920_1080_30fps.mp4",
+      "videoDuration": 33
     },
     {
       "type": "narration",
@@ -26,58 +29,80 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/26346980/11948956_1920_1080_60fps.mp4",
+      "videoDuration": 14
     },
     {
       "type": "narration",
       "text": "He was a prophet of abundance. Wealth. Land. Cattle. A large family. And a heart that never let the blessings make him forget the Giver.",
-      "foot": "Seerah"
+      "foot": "Seerah",
+      "video": "https://videos.pexels.com/video-files/12869243/12869243-hd_1920_1080_30fps.mp4",
+      "videoDuration": 56
     },
     {
       "type": "narration",
       "text": "Then the tests came... in waves. His wealth went. His children were taken. And then the illness came for his own body... until the people who once sat at his table... withdrew from him.",
-      "foot": "Seerah"
+      "foot": "Seerah",
+      "video": "https://videos.pexels.com/video-files/37533724/15903361_1920_1080_30fps.mp4",
+      "videoDuration": 48
     },
     {
       "type": "narration",
       "text": "Years upon years passed. And through all of it, one person never left... his wife. She stayed, she worked, she carried him. And still, Ayyub did not curse his fate. He did not demand. He did not despair.",
-      "foot": "Qur'an 21:83"
+      "foot": "Qur'an 21:83",
+      "video": "https://videos.pexels.com/video-files/32540553/13877383_1920_1080_30fps.mp4",
+      "videoDuration": 85
     },
     {
       "type": "narration",
       "text": "Listen to how a prophet complains. He turned to his Lord and said only this... indeed, adversity has touched me... and You are the Most Merciful of the merciful. That is the whole dua. He states his pain... he praises his Lord... and he does not even name a request. He leaves the answer to Allah.",
       "quote": "21:83",
-      "foot": "Qur'an 21:83 (shown, not recited)"
+      "foot": "Qur'an 21:83 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/13322952/13322952-hd_1920_1080_30fps.mp4",
+      "videoDuration": 18
     },
     {
       "type": "narration",
-      "text": "No accusation. No how could You. Not even, cure me. Just... You see me, and You are Mercy itself. Fourteen centuries later, we are still learning what that sentence knows."
+      "text": "No accusation. No how could You. Not even, cure me. Just... You see me, and You are Mercy itself. Fourteen centuries later, we are still learning what that sentence knows.",
+      "video": "https://videos.pexels.com/video-files/6601416/6601416-hd_1920_1080_30fps.mp4",
+      "videoDuration": 26
     },
     {
       "type": "narration",
       "text": "And the answer came. Strike the ground with your foot... here is cool water, to wash with, and to drink. The cure had been under his feet all along... waiting for the moment Allah willed.",
       "quote": "38:42",
-      "foot": "Qur'an 38:42 (shown, not recited)"
+      "foot": "Qur'an 38:42 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/4180685/4180685-hd_1920_1080_30fps.mp4",
+      "videoDuration": 43
     },
     {
       "type": "narration",
       "text": "So We responded to him, and removed what afflicted him. And We gave him back his family... and the like of them with them... a mercy from Us, and a reminder for the worshippers.",
       "quote": "21:84",
-      "foot": "Qur'an 21:84 (shown, not recited)"
+      "foot": "Qur'an 21:84 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/27332558/12119867_1920_1080_30fps.mp4",
+      "videoDuration": 52
     },
     {
       "type": "narration",
       "text": "And one day, while Ayyub bathed, golden locusts began to fall on him... and he rushed to gather them in his garment. His Lord called to him... O Ayyub, did I not make you rich enough? He said... yes, my Lord. But I can never have enough... of Your blessing.",
-      "foot": "Sahih al-Bukhari 279"
+      "foot": "Sahih al-Bukhari 279",
+      "video": "https://videos.pexels.com/video-files/10296171/10296171-hd_1920_1080_25fps.mp4",
+      "videoDuration": 28
     },
     {
       "type": "narration",
       "text": "During the illness he had sworn an oath to discipline his wife, a hundred strikes... and now he regretted it, for she had been nothing but faithful. So Allah Himself showed him the way out... take a bundle of grass in your hand, and touch her with it once, and your oath is kept. The Lord who tested him... protected her, and softened the law for him.",
-      "foot": "Qur'an 38:44"
+      "foot": "Qur'an 38:44",
+      "video": "https://videos.pexels.com/video-files/32393894/13817850_1920_1080_120fps.mp4",
+      "videoDuration": 36
     },
     {
       "type": "narration",
-      "text": "Sabr does not mean feeling no pain. Ayyub felt all of it. Sabr means complaining TO Allah... instead of complaining ABOUT Allah. That is why, forever, Allah calls him... what an excellent servant, always turning back to his Lord."
+      "text": "Sabr does not mean feeling no pain. Ayyub felt all of it. Sabr means complaining TO Allah... instead of complaining ABOUT Allah. That is why, forever, Allah calls him... what an excellent servant, always turning back to his Lord.",
+      "video": "https://videos.pexels.com/video-files/11268264/11268264-hd_1920_1080_30fps.mp4",
+      "videoDuration": 54
     }
   ],
   "captions": {
