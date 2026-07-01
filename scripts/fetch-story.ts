@@ -124,7 +124,21 @@ const phoneticize = (text: string): string =>
     })
     .join("");
 
-async function tts(text: string, voice: string, model: string, dest: string) {
+// Default read: warmer, more emotional (lower stability + some style); pacing and
+// pauses come from the script punctuation (commas, full stops, ellipses).
+const DEFAULT_VOICE_SETTINGS = { stability: 0.32, similarity_boost: 0.8, style: 0.55, use_speaker_boost: true };
+// A fixed seed makes ElevenLabs reproducible: the SAME text + settings + seed
+// returns the SAME audio every render, so re-rendering to fix one line no longer
+// re-rolls (and mispronounces) the others. Override per story via `voiceSeed`.
+const DEFAULT_VOICE_SEED = 71421;
+
+async function tts(
+  text: string,
+  voice: string,
+  model: string,
+  dest: string,
+  opts: { settings?: Record<string, unknown>; seed?: number } = {}
+) {
   const key = (process.env.ELEVENLABS_API_KEY || "").trim();
   if (!key) throw new Error("ELEVENLABS_API_KEY is not set.");
   const res = await fetch(`${ELEVEN}/text-to-speech/${voice}/with-timestamps`, {
@@ -133,9 +147,10 @@ async function tts(text: string, voice: string, model: string, dest: string) {
     body: JSON.stringify({
       text,
       model_id: model,
-      // Warmer, more emotional read (lower stability + some style); pacing and
-      // pauses come from the script punctuation (commas, full stops, ellipses).
-      voice_settings: { stability: 0.32, similarity_boost: 0.8, style: 0.55, use_speaker_boost: true },
+      // Per-segment overrides (e.g. a deeper, steadier read for the title card)
+      // merge over the emotional default.
+      voice_settings: { ...DEFAULT_VOICE_SETTINGS, ...(opts.settings ?? {}) },
+      seed: opts.seed ?? DEFAULT_VOICE_SEED,
     }),
   });
   if (!res.ok) throw new Error(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 300)}`);
@@ -170,7 +185,10 @@ async function main() {
       const display: string = seg.text ?? seg.say;
       const spoken: string = seg.say ?? phoneticize(display);
       const dest = join("public", "story", `n${i}.mp3`);
-      const { words, duration } = await tts(spoken, voice, model, dest);
+      const { words, duration } = await tts(spoken, voice, model, dest, {
+        settings: seg.voiceSettings,
+        seed: story.voiceSeed ?? DEFAULT_VOICE_SEED,
+      });
       // Remap the timed caption words back to the proper spelling (token-for-token).
       const displayTokens = display.trim().split(/\s+/);
       if (displayTokens.length === words.length) {

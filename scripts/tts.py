@@ -32,6 +32,12 @@ def main():
     ap.add_argument("--timestamps", default=None)
     ap.add_argument("--voice", default=DANIEL)
     ap.add_argument("--model", default="eleven_multilingual_v2")
+    # Faithful-test knobs: match whatever fetch-story will use for a segment so a
+    # voice test sounds exactly like the final render.
+    ap.add_argument("--stability", type=float, default=0.32)
+    ap.add_argument("--style", type=float, default=0.55)
+    ap.add_argument("--similarity", type=float, default=0.8)
+    ap.add_argument("--seed", type=int, default=71421)
     args = ap.parse_args()
 
     key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
@@ -42,11 +48,12 @@ def main():
     body = json.dumps({
         "text": args.text,
         "model_id": args.model,
-        # Lower stability + some style = a warmer, more emotional read with
-        # natural variation (not a flat newsreader). Pacing/pauses come from the
-        # script punctuation (commas, full stops, ellipses, line breaks).
-        "voice_settings": {"stability": 0.35, "similarity_boost": 0.8, "style": 0.45,
-                           "use_speaker_boost": True},
+        # Settings/seed are passed in so a test can exactly mirror a render segment
+        # (e.g. the deeper, steadier title card). Pacing/pauses come from the script
+        # punctuation (commas, full stops, ellipses, line breaks).
+        "voice_settings": {"stability": args.stability, "similarity_boost": args.similarity,
+                           "style": args.style, "use_speaker_boost": True},
+        "seed": args.seed,
     }).encode("utf-8")
     req = urllib.request.Request(
         url, data=body, method="POST",

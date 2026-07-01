@@ -37,6 +37,7 @@
       "text": "This is the story of Khadijah... may Allah be pleased with her.",
       "title": "KHADIJAH",
       "titleSub": "may Allah be pleased with her",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
       "video": "https://videos.pexels.com/video-files/16829181/16829181-hd_1080_1920_30fps.mp4",
       "videoDuration": 10
     },
