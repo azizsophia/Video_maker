@@ -27,14 +27,14 @@
   "segments": [
     {
       "type": "narration",
-      "text": "There was a woman so beloved to Allah, that He sent her His own greetings of peace, carried down by an angel.",
+      "text": "There was a woman, so beloved to Allah, that He sent her His own greetings of peace... carried down by an angel. But to understand why... you have to go back, to the night that changed the world.",
+      "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432",
       "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4",
-      "videoDuration": 10,
-      "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432"
+      "videoDuration": 10
     },
     {
       "type": "narration",
-      "text": "This is the story of Khadijah, may Allah be pleased with her.",
+      "text": "This is the story of Khadijah... may Allah be pleased with her.",
       "title": "KHADIJAH",
       "titleSub": "may Allah be pleased with her",
       "video": "https://videos.pexels.com/video-files/16829181/16829181-hd_1080_1920_30fps.mp4",
@@ -42,51 +42,72 @@
     },
     {
       "type": "narration",
-      "foot": "Sahih al-Bukhari 3",
-      "text": "When the first revelation came, and the Prophet, peace be upon him, ran home trembling, she became the first soul alive to believe in him. Before anyone.",
-      "video": "https://videos.pexels.com/video-files/6227239/6227239-hd_1080_1920_29fps.mp4",
-      "videoDuration": 13
-    },
-    {
-      "type": "narration",
-      "foot": "Sahih al-Bukhari 3",
-      "text": "She held him and said: By Allah, Allah will never disgrace you. You keep the ties of family. You carry the weak. You honor your guest. You stand by the truth.",
+      "text": "For years, high above Makkah, her husband would climb alone... to the cave of Hira. To sit in the silence... and search for his Lord.",
+      "foot": "Seerah",
       "video": "https://videos.pexels.com/video-files/12312738/12312738-hd_1080_1920_24fps.mp4",
       "videoDuration": 25
     },
     {
       "type": "narration",
+      "text": "Then one night... the angel Jibril came to him, and said a single word. Read. I cannot read, he answered. So the angel held him, and pressed him... until he could bear no more. Then let him go, and said again. Read.",
       "foot": "Sahih al-Bukhari 3",
-      "text": "But she did not only comfort him. She took him to her cousin Waraqah, an old man who knew the earlier scriptures. Waraqah listened, and understood at once. This, he said, is the same angel that came to Musa. It was no madness. Her husband was being made a prophet. So she did not just calm his fear. She helped him carry it.",
+      "video": "https://videos.pexels.com/video-files/5712539/5712539-hd_1080_1920_25fps.mp4",
+      "videoDuration": 26
+    },
+    {
+      "type": "narration",
+      "text": "Read... in the name of your Lord, who created. And with those words... the very first verse of the Qur'an, came down to the earth.",
+      "foot": "Qur'an 96:1 (shown, not recited)",
+      "quote": "96:1"
+    },
+    {
+      "type": "narration",
+      "text": "He ran down that mountain, trembling... his heart pounding. Cover me, he cried. Cover me. I fear for myself, he said.",
+      "foot": "Sahih al-Bukhari 3",
       "video": "https://videos.pexels.com/video-files/35092789/14866783_1080_1920_60fps.mp4",
       "videoDuration": 14,
       "dim": 0.15
     },
     {
       "type": "narration",
+      "text": "And it was Khadijah, who held him... and calmed him. The first soul on earth, to believe him. Before any man... any woman... or child.",
+      "foot": "Sahih al-Bukhari 3",
+      "video": "https://videos.pexels.com/video-files/6227239/6227239-hd_1080_1920_29fps.mp4",
+      "videoDuration": 13
+    },
+    {
+      "type": "narration",
+      "text": "By Allah, she told him... Allah will never disgrace you. You keep the ties of family. You carry the weak. You honor your guest. You stand by the truth.",
+      "foot": "Sahih al-Bukhari 3"
+    },
+    {
+      "type": "narration",
+      "text": "Then she took him, to her cousin Waraqah... an old man who knew the earlier scriptures. And Waraqah understood at once. This, he said... is the same angel that came to Musa. Your husband... is being made a prophet.",
+      "foot": "Sahih al-Bukhari 3"
+    },
+    {
+      "type": "narration",
+      "text": "From that day, she poured her whole life into him. The richest woman in Makkah... gave her fortune away, until nothing was left. And she never once complained.",
       "foot": "Seerah (Ibn Hisham)",
-      "text": "She poured her entire fortune into his message. And when their own people starved them in the boycott, the richest woman in Makkah gave until nothing was left. She never complained.",
       "video": "https://videos.pexels.com/video-files/34912718/14789262_1080_1920_60fps.mp4",
       "videoDuration": 16
     },
     {
       "type": "narration",
+      "text": "So one day, the angel Jibril descended, and said: when Khadijah comes... give her peace, from her Lord. And tell her... of a home in Paradise, made of hollowed pearl. Where there is no noise... and no sorrow, ever.",
       "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432",
-      "text": "So one day the angel Jibril descended and said: when Khadijah comes, give her greetings of peace from her Lord. And give her the good news of a home in Paradise, made of hollowed pearl, where there is no noise, and no weariness, ever.",
       "video": "https://videos.pexels.com/video-files/34631259/14677264_1080_1920_30fps.mp4",
       "videoDuration": 10
     },
     {
       "type": "narration",
-      "foot": "Sahih al-Bukhari 3818 and Sahih Muslim 2435",
-      "text": "For twenty five years, he loved only her. And long after she was gone, he still sent gifts to her friends. Aisha said she was never jealous of anyone the way she was of Khadijah, a woman she never even met.",
-      "video": "https://videos.pexels.com/video-files/5712539/5712539-hd_1080_1920_25fps.mp4",
-      "videoDuration": 26
+      "text": "For twenty five years, he loved only her. And long after she was gone... he still honored her friends. Aisha, may Allah be pleased with her, said she was never jealous of anyone... the way she was of Khadijah. A woman she never even met.",
+      "foot": "Sahih al-Bukhari 3818 and Sahih Muslim 2435"
     },
     {
       "type": "narration",
+      "text": "She believed in me... when no one else did, he said. And Allah gave me children through her. That was Khadijah... may Allah be pleased with her.",
       "foot": "Musnad Ahmad (hasan)",
-      "text": "He said: she believed in me when no one else did, and Allah gave me children through her. That was Khadijah, may Allah be pleased with her.",
       "video": "https://videos.pexels.com/video-files/36973151/15663761_1080_1920_30fps.mp4",
       "videoDuration": 13
     }
