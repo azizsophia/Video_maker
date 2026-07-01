@@ -34,6 +34,25 @@ asked. This file is the durable memory for this repo.
 - Always source via the Pexels search workflow, build the contact sheet, and keep
   a per-beat shot list.
 
+## Story cadence — the STANDARD cut (copy the Khadijah template every time)
+- Use `scripts/stories/khadijah.json` as the structural template for all
+  short-form stories. Same rhythm, same feel:
+  1. Open on a HOOK beat (one striking, sourced line that opens a loop).
+  2. Beat ~2 is a CINEMATIC GOLD-ON-BLACK TITLE CARD: the name drops in gold
+     (`title`), captions are suppressed, an honorific rides underneath
+     (`titleSub`, e.g. "may Allah be pleased with her") over a slow dark clip.
+  3. Then the sourced narrative beats, each ~10-15s, front-loaded, one distinct
+     literal clip per beat, every claim with its `foot` source, ayat shown via
+     `quote` (never recited).
+  4. Close on a reflective, sourced button (no corny "share this" CTA).
+- Cinematic mode ON (`"cinematic": true`, theme `ketabi`). Vertical 9:16 for
+  shorts (render StoryVideo), 16:9 for long-form (StoryVideoWide).
+- The TITLE CARD line is read DEEP and SERIOUS, then the voice returns to the
+  regular warm, emotional, paced tone. Achieve this with a per-segment
+  `voiceSettings` override on the title beat (steadier + less exaggerated, e.g.
+  `{ "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }`); every other
+  beat keeps the emotional default.
+
 ## Accuracy & adab
 - Authentic sources only. Every claim shown ON SCREEN with its source (Qur'an by
   verse; hadith by collection, e.g. Sahih al-Bukhari / Sahih Muslim; seerah noted
@@ -46,8 +65,18 @@ asked. This file is the durable memory for this repo.
 - Narration must be natural, warm, emotional, and paced (write pauses with commas,
   full stops, ellipses; ElevenLabs settings tuned for emotion). Send a short voice
   test before a full render when the voice or tone changed.
-- Arabic pronunciation must be correct: voice from a phonetic script while the
-  on-screen text keeps proper spelling. Send a names-only voice test to confirm.
+- Arabic pronunciation must be correct: voice from a phonetic script (the
+  `PHONETIC` map in `scripts/fetch-story.ts`) while the on-screen text keeps
+  proper spelling. Send a names-only voice test to confirm. Locked so far:
+  Khadijah -> "Kadeeja", Aisha -> "Aisha", Waraqah -> "Warahkah", Jibril ->
+  "Jibreel", Musa -> "Moosa", Read (the command Iqra) -> "reed" (never "red").
+- The voice is SEED-LOCKED (`DEFAULT_VOICE_SEED` in fetch-story, per-story via
+  `voiceSeed`). This makes ElevenLabs reproducible: the same text + settings +
+  seed returns the same audio, so re-rendering to fix ONE line no longer re-rolls
+  and mispronounces the others. Keep it locked; only change a segment on purpose.
+- `scripts/tts.py` and the `tts-test` workflow accept `stability`, `style`, and
+  `seed` so a voice test can EXACTLY mirror the render segment before spending a
+  full render (e.g. testing the deep title read, or a name's spelling).
 - NO emojis. NO em or en dashes (plain hyphens only). This applies to scripts,
   captions, descriptions, and covers.
 
