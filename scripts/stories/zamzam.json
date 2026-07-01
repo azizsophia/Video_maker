@@ -8,7 +8,8 @@
   "showOutro": true,
   "cover": {
     "title": "Zamzam",
-    "kicker": "THE WELL THAT NEVER STOPPED"
+    "kicker": "THE WELL THAT NEVER STOPPED",
+    "image": "https://images.pexels.com/photos/36549187/pexels-photo-36549187.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1440&h=2560"
   },
   "_note": "SAT short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [

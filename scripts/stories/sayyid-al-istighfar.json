@@ -8,7 +8,8 @@
   "showOutro": true,
   "cover": {
     "title": "Sayyid al-Istighfar",
-    "kicker": "THE MASTER DUA"
+    "kicker": "THE MASTER DUA",
+    "image": "https://images.pexels.com/photos/35283674/pexels-photo-35283674.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1440&h=2560"
   },
   "_note": "SUN short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [

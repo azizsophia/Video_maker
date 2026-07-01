@@ -8,7 +8,8 @@
   "showOutro": true,
   "cover": {
     "title": "Al-Kawthar",
-    "kicker": "THREE VERSES, ONE ANSWER"
+    "kicker": "THREE VERSES, ONE ANSWER",
+    "image": "https://images.pexels.com/photos/1060417/pexels-photo-1060417.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1440&h=2560"
   },
   "_note": "WED short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [
