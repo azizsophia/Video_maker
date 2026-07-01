@@ -1,0 +1,83 @@
+{
+  "id": "longform-ant-bee-spider",
+  "title": "The Ant, the Bee, and the Spider",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Three Small Teachers",
+    "kicker": "THE ANT, THE BEE, THE SPIDER"
+  },
+  "_note": "SAT long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Allah named chapters of the Qur'an after three of the smallest creatures on earth. An ant. A bee. A spider. Not the lion. Not the eagle. And when you see what each one is doing in its surah... you realize the three of them together are a complete map... for your life.",
+      "foot": "Qur'an 2:26"
+    },
+    {
+      "type": "narration",
+      "text": "The ant... the bee... and the spider. Three small teachers.",
+      "title": "THE ANT, THE BEE, THE SPIDER",
+      "titleSub": "three surahs, three lessons",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an announces this method itself... indeed, Allah is not shy to present an example... even of a mosquito, or what is smaller. Nothing is too small to carry a lesson... if the teacher is Allah.",
+      "quote": "2:26",
+      "foot": "Qur'an 2:26 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Sulayman, alayhi salam... the king whose army included jinn and birds, whose power no ruler has matched... marches through a valley. And one ant speaks... O ants, enter your homes, lest Sulayman and his soldiers crush you... while they do not perceive.",
+      "quote": "27:18",
+      "foot": "Qur'an 27:18 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Listen to her precision. She warns her people... she acts... and then she EXCUSES the powerful... while they do not perceive. She assumed no evil. The smallest creature in the story... has the biggest heart in the valley."
+    },
+    {
+      "type": "narration",
+      "text": "And the mightiest man alive... smiled, amused at her word, and prayed... My Lord, enable me to be grateful for Your favor. The lesson of the ant... true power hears small voices, and answers with gratitude, not pride.",
+      "quote": "27:19",
+      "foot": "Qur'an 27:19 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And your Lord inspired the bee... take homes in the mountains and the trees. Of all creatures, this one receives wahy... inspiration. Her whole life is an instruction followed.",
+      "quote": "16:68",
+      "foot": "Qur'an 16:68 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Eat from all the fruits, and follow the paths of your Lord made easy... and from her comes a drink of many colors, in which there is healing for people. The lesson of the bee... a small life of obedience, on the path your Lord smoothed for you... becomes healing for everyone around you.",
+      "quote": "16:69",
+      "foot": "Qur'an 16:69 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And then the warning. The example of those who take protectors other than Allah... is the spider, who builds a house. And indeed, the flimsiest of houses... is the house of the spider.",
+      "quote": "29:41",
+      "foot": "Qur'an 29:41 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "A spider's web looks like architecture... until the first real wind. Whatever you lean your life on besides Allah... wealth, status, people's approval... it holds only until it is tested. The lesson of the spider... check what your house is made of, before the weather does."
+    },
+    {
+      "type": "narration",
+      "text": "Three tiny creatures. The ant teaches how to lead... act, warn, excuse, thank. The bee teaches how to live... obey, and leave healing behind you. The spider warns what not to lean on... anything but Him. Allah was not shy to teach you with the smallest of His creation. Do not be too proud to learn from it."
+    }
+  ],
+  "captions": {
+    "youtube": "Allah named chapters of the Qur'an after an ant, a bee and a spider. The ant teaches how to lead, the bee teaches how to live, and the spider warns what not to lean on. Three small teachers, entirely from the Qur'an, shown on screen.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}

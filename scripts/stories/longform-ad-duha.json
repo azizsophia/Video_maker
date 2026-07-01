@@ -1,0 +1,85 @@
+{
+  "id": "longform-ad-duha",
+  "title": "Surah ad-Duha: When the Heavens Went Silent",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Ad-Duha",
+    "kicker": "WHEN THE HEAVENS WENT SILENT"
+  },
+  "_note": "FRI long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There was a time when revelation stopped... and the Prophet, peace be upon him, feared his Lord had left him. What came down next are eleven verses so tender... they read like a letter from Allah to a grieving heart. And every verse of them... is also about you.",
+      "foot": "Sahih al-Bukhari 4950"
+    },
+    {
+      "type": "narration",
+      "text": "This is Surah ad-Duha... the morning light.",
+      "title": "AD-DUHA",
+      "titleSub": "the morning light",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "In the early days in Makkah, the Prophet, peace be upon him, fell ill... and for some nights he did not rise in prayer. And a woman of Quraysh came to him and sneered... O Muhammad, I see your shaytan has finally abandoned you.",
+      "foot": "Sahih al-Bukhari 4950"
+    },
+    {
+      "type": "narration",
+      "text": "Imagine the weight of it. The heavens had gone quiet. The mockery from outside... and the ache inside. Has my Lord... left me?",
+      "foot": "Sahih al-Bukhari 4951"
+    },
+    {
+      "type": "narration",
+      "text": "Then dawn broke. By the morning light... and by the night when it settles... your Lord has not forsaken you, and He does not hate you. Allah swears by the daybreak itself... the silence was never abandonment.",
+      "quote": "93:3",
+      "foot": "Qur'an 93:3 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And what is to come... will be better for you than what has passed. Read that again. It was revealed to a man in his hardest hour... and it is the direction of every believer's life. Forward is better.",
+      "quote": "93:4",
+      "foot": "Qur'an 93:4 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And your Lord is going to give you... until you are pleased. Scholars have called this the widest promise in the whole Qur'an. Allah does not say, until I have given enough. He says... until YOU are pleased.",
+      "quote": "93:5",
+      "foot": "Qur'an 93:5 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Then Allah reminds him of the record. Did He not find you an orphan... and shelter you? His father died before he was born. His mother when he was six. His grandfather at eight. Orphan, three times over... and never once unheld.",
+      "quote": "93:6",
+      "foot": "Qur'an 93:6 and Seerah"
+    },
+    {
+      "type": "narration",
+      "text": "And He found you searching... and guided you. And He found you in need... and made you rich. Every emptiness in his story, Allah had already filled. That was the evidence... the future is safe with the One who handled the past.",
+      "quote": "93:8",
+      "foot": "Qur'an 93:8 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And then the surah turns outward. So the orphan... do not oppress him. And the one who asks... do not turn him away. And the blessing of your Lord... speak of it. Allah heals him... then sends him to heal. That is the pattern. Comforted people... comfort people.",
+      "quote": "93:11",
+      "foot": "Qur'an 93:11 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "If the heavens ever feel silent in your life... if your duas seem to hang unanswered in the air... read the surah that was sent into that exact silence. The morning light always comes. Your Lord has not forsaken you... and He does not hate you."
+    }
+  ],
+  "captions": {
+    "youtube": "When revelation paused and the mockers said his Lord had abandoned him, Allah answered with eleven of the most tender verses in the Qur'an. Surah ad-Duha, verse by verse, from Sahih al-Bukhari and the seerah.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}

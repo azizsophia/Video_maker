@@ -1,0 +1,74 @@
+{
+  "id": "the-bee",
+  "title": "The Creature That Receives Revelation",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "An-Nahl",
+    "kicker": "THE BEE"
+  },
+  "_note": "TUE short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is one creature on this earth that receives direct inspiration from Allah. It is not an angel. It is not a prophet. It fits... on your fingertip.",
+      "foot": "Qur'an 16:68"
+    },
+    {
+      "type": "narration",
+      "text": "This is the bee... the creature Allah named a surah after.",
+      "title": "AN-NAHL",
+      "titleSub": "the bee",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "And your Lord inspired the bee... take for yourself homes in the mountains, and in the trees, and in what they build.",
+      "quote": "16:68",
+      "foot": "Qur'an 16:68 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Then eat from all the fruits... and follow the paths of your Lord, made easy for you. That is her entire life. Obedience... on a path her Lord already smoothed.",
+      "foot": "Qur'an 16:69"
+    },
+    {
+      "type": "narration",
+      "text": "From their bellies comes a drink of varying colors... in which there is healing for people.",
+      "quote": "16:69",
+      "foot": "Qur'an 16:69 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "A man came to the Prophet, peace be upon him, and said... my brother's stomach is ill. He said, give him honey. Then again. And again. Until he said... Allah has spoken the truth, and your brother's stomach has lied. And the man was cured.",
+      "foot": "Sahih al-Bukhari 5684"
+    },
+    {
+      "type": "narration",
+      "text": "She never eats except what is pure. She never follows except the path made for her. And what comes out of her... heals other people."
+    },
+    {
+      "type": "narration",
+      "text": "An entire chapter of the Qur'an carries her name. Not the lion. Not the eagle. The bee. Perhaps because Allah is telling us... a small life, lived in obedience, that leaves healing behind it... is a great life."
+    }
+  ],
+  "captions": {
+    "tiktok": "One creature on earth receives inspiration from Allah. It fits on your fingertip.",
+    "shorts": "The bee: the creature Allah named a surah after.",
+    "reels": "One creature on earth receives inspiration from Allah. It fits on your fingertip.",
+    "hashtags": [
+      "#quran",
+      "#nature",
+      "#edutokcontest",
+      "#islam",
+      "#muslimtiktok"
+    ]
+  }
+}

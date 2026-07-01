@@ -282,8 +282,7 @@ Visual: light flooding through clouds.
 
 6. [Sahih Muslim 400]
 "The Prophet, peace be upon him, later described it... a river in Paradise,
-promised to him by his Lord, upon it abundant good. Whiter than milk...
-sweeter than honey."
+promised to him by his Lord... upon it, abundant good."
 Visual: pristine flowing water catching light.
 
 7. QUOTE - Qur'an 108:3 (shown)
@@ -324,7 +323,8 @@ went with it."
 CHAPTER 3 - MONK TO MONK
 6. [Musnad Ahmad] "In Sham he served the bishop of the church... and found him
 corrupt. A man who commanded charity, then hoarded it in jars of gold. When he
-died, Salman exposed him... and they stoned the dead man's grave."
+died, Salman showed the people his hidden jars of gold and silver... and
+they denied him an honored burial."
 7. [Musnad Ahmad] "Then came a righteous teacher... and when he was dying,
 Salman asked, to whom do you send me? Man by man... Mosul... Nasibin...
 Ammuriyyah... each teacher dying, each pointing onward. Decades of his life,
@@ -498,7 +498,8 @@ came for the bounty... was guarding the man he hunted."
 CHAPTER 5 - ARRIVAL
 11. [Sahih al-Bukhari 3906] "And then, Madinah. The city had been climbing to
 the rooftops every morning, watching the horizon. And when he arrived, peace
-be upon him, the city rang with takbir. Children singing... the city that
+be upon him, the city rang with takbir... Allahu akbar, the Messenger of Allah has
+come. The city that
 would carry his name forever. Madinat an-Nabi. The city of the Prophet."
 12. CLOSE (reflection) "Everything about the Hijra was planned to perfection...
 the decoy, the supplies, the spy, the tracks, the route. And still, in the
@@ -533,7 +534,7 @@ Visual: storm gathering over sea horizon.
 
 4. [Qur'an 37:140-141]
 "He boarded a loaded ship. The storm came. And the sailors cast lots to
-lighten the load... and the lot fell... on him. Three times."
+lighten the load... and the lot fell... on him."
 Visual: violent waves in darkness.
 
 5. [Qur'an 37:142]

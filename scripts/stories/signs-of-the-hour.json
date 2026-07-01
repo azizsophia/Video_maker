@@ -1,0 +1,93 @@
+{
+  "id": "signs-of-the-hour",
+  "title": "The Signs Already Here",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Signs",
+    "kicker": "ALREADY HERE"
+  },
+  "_note": "MON short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Fourteen hundred years ago, a man who could not read or write... listed the signs that would come before the end of the world. Towers. Wealth. Time speeding up. And you are living inside that list... right now.",
+      "foot": "Sahih al-Bukhari 50 and Sahih Muslim 8"
+    },
+    {
+      "type": "narration",
+      "text": "These are the signs of the Hour... and they are already here.",
+      "title": "THE SIGNS",
+      "titleSub": "of the Final Hour",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "One day, a stranger appeared before the Prophet, peace be upon him. Clothes of pure white... hair jet black... no trace of travel on him. Yet no one in the city knew him. He sat knee to knee with the Prophet... and began to ask.",
+      "foot": "Sahih Muslim 8"
+    },
+    {
+      "type": "narration",
+      "text": "He asked about Islam. About faith. And then he asked... when is the Hour? And the Prophet, peace be upon him, gave the only truthful answer there is. The one who is asked... knows no more than the one who asks.",
+      "foot": "Sahih Muslim 8"
+    },
+    {
+      "type": "narration",
+      "text": "But I will tell you its signs, he said. The slave woman will give birth to her own mistress. And you will see barefoot, destitute shepherds of goats... competing in building the tallest towers.",
+      "foot": "Sahih al-Bukhari 50"
+    },
+    {
+      "type": "narration",
+      "text": "Look at the skylines rising from the Gulf today... glass towers racing each other upward... on the very sands where shepherds walked barefoot, within living memory."
+    },
+    {
+      "type": "narration",
+      "text": "And he told us more. Time itself will feel like it is shrinking. Good deeds will grow fewer. And killing... will increase.",
+      "foot": "Sahih al-Bukhari 6037"
+    },
+    {
+      "type": "narration",
+      "text": "And wealth will flood the earth... until a man walks out with charity in his hand, searching for someone who will accept it... and finds no one.",
+      "foot": "Sahih al-Bukhari 1412"
+    },
+    {
+      "type": "narration",
+      "text": "And knowledge will not be ripped out of hearts. It will leave quietly... with the death of the scholars. Until people take ignorant leaders... who are asked, and answer without knowledge... misguided, and misguiding.",
+      "foot": "Sahih al-Bukhari 100"
+    },
+    {
+      "type": "narration",
+      "text": "Then the stranger rose... and vanished. And the Prophet, peace be upon him, said... that was Jibril. He came to teach you your religion.",
+      "foot": "Sahih Muslim 8"
+    },
+    {
+      "type": "narration",
+      "text": "And the Qur'an says it plainly... do they wait for anything but the Hour, to come upon them suddenly? Its signs... have already come.",
+      "quote": "47:18",
+      "foot": "Qur'an 47:18 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "He never gave us a date. Because the signs were never for counting down... they were for waking up. The question was never, when is the Hour. It is... where will you be standing, when it finds you."
+    }
+  ],
+  "captions": {
+    "tiktok": "He listed the signs of the Final Hour fourteen centuries ago. You are living inside that list.",
+    "shorts": "The signs of the Hour, already here. Every claim sourced on screen.",
+    "reels": "He listed the signs of the Final Hour fourteen centuries ago. You are living inside that list.",
+    "hashtags": [
+      "#signsofthehour",
+      "#endtimes",
+      "#edutokcontest",
+      "#islam",
+      "#muslimtiktok"
+    ]
+  }
+}

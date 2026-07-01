@@ -1,0 +1,75 @@
+{
+  "id": "al-kawthar",
+  "title": "The Three Verses That Answered a Taunt",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Al-Kawthar",
+    "kicker": "THREE VERSES, ONE ANSWER"
+  },
+  "_note": "WED short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The shortest surah in the Qur'an is three verses long. You can say it in ten seconds. And it came down from heaven... to defend a grieving father.",
+      "foot": "Tafsir of Surah 108"
+    },
+    {
+      "type": "narration",
+      "text": "This is Surah al-Kawthar... the shortest surah in the Qur'an.",
+      "title": "AL-KAWTHAR",
+      "titleSub": "the abundance",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, buried his infant sons... Qasim, and later Abdullah. He was a father lowering his own children into the earth.",
+      "foot": "Seerah"
+    },
+    {
+      "type": "narration",
+      "text": "And the men of Quraysh saw his grief... and mocked it. He is abtar, they said. Cut off. No sons, no line, no future. When he dies... his name dies with him.",
+      "foot": "Tafsir of Surah 108"
+    },
+    {
+      "type": "narration",
+      "text": "And Allah answered from above seven heavens... Indeed, We have granted you al-Kawthar. The abundance. Not one son. Not one legacy. Abundance itself.",
+      "quote": "108:1",
+      "foot": "Qur'an 108:1 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, later described it... a river in Paradise, promised to him by his Lord... upon it, abundant good.",
+      "foot": "Sahih Muslim 400"
+    },
+    {
+      "type": "narration",
+      "text": "And the surah ends with the reversal... indeed, your enemy is the one cut off. Not you. Him.",
+      "quote": "108:3",
+      "foot": "Qur'an 108:3 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Today, no one names their sons after the men who mocked him. And the man they called cut off... is honored by name, billions of times a day, in every prayer on earth. When people mock what you lost... remember the One who counts what you have been given."
+    }
+  ],
+  "captions": {
+    "tiktok": "The shortest surah in the Qur'an came down to defend a grieving father.",
+    "shorts": "Surah al-Kawthar: three verses that answered a taunt.",
+    "reels": "The shortest surah in the Qur'an came down to defend a grieving father.",
+    "hashtags": [
+      "#quran",
+      "#surah",
+      "#edutokcontest",
+      "#islam",
+      "#muslimtiktok"
+    ]
+  }
+}

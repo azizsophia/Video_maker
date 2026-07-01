@@ -1,0 +1,86 @@
+{
+  "id": "longform-ayyub",
+  "title": "Ayyub: The Most Patient Man Who Ever Lived",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Ayyub",
+    "kicker": "THE MOST PATIENT MAN"
+  },
+  "_note": "TUE long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "In the entire Qur'an, only a handful of people are praised by Allah with the words... what an excellent servant. One of them was a man who lost everything. And the reason Allah praised him... is what he did next.",
+      "foot": "Qur'an 38:44"
+    },
+    {
+      "type": "narration",
+      "text": "This is the story of Ayyub... alayhi salam.",
+      "title": "AYYUB",
+      "titleSub": "alayhi salam (deep read) \"This is the story of",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "He was a prophet of abundance. Wealth. Land. Cattle. A large family. And a heart that never let the blessings make him forget the Giver.",
+      "foot": "Seerah"
+    },
+    {
+      "type": "narration",
+      "text": "Then the tests came... in waves. His wealth went. His children were taken. And then the illness came for his own body... until the people who once sat at his table... withdrew from him.",
+      "foot": "Seerah"
+    },
+    {
+      "type": "narration",
+      "text": "Years upon years passed. And through all of it, one person never left... his wife. She stayed, she worked, she carried him. And still, Ayyub did not curse his fate. He did not demand. He did not despair.",
+      "foot": "Qur'an 21:83"
+    },
+    {
+      "type": "narration",
+      "text": "Listen to how a prophet complains. He turned to his Lord and said only this... indeed, adversity has touched me... and You are the Most Merciful of the merciful. That is the whole dua. He states his pain... he praises his Lord... and he does not even name a request. He leaves the answer to Allah.",
+      "quote": "21:83",
+      "foot": "Qur'an 21:83 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "No accusation. No how could You. Not even, cure me. Just... You see me, and You are Mercy itself. Fourteen centuries later, we are still learning what that sentence knows."
+    },
+    {
+      "type": "narration",
+      "text": "And the answer came. Strike the ground with your foot... here is cool water, to wash with, and to drink. The cure had been under his feet all along... waiting for the moment Allah willed.",
+      "quote": "38:42",
+      "foot": "Qur'an 38:42 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "So We responded to him, and removed what afflicted him. And We gave him back his family... and the like of them with them... a mercy from Us, and a reminder for the worshippers.",
+      "quote": "21:84",
+      "foot": "Qur'an 21:84 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And one day, while Ayyub bathed, golden locusts began to fall on him... and he rushed to gather them in his garment. His Lord called to him... O Ayyub, did I not make you rich enough? He said... yes, my Lord. But I can never have enough... of Your blessing.",
+      "foot": "Sahih al-Bukhari 279"
+    },
+    {
+      "type": "narration",
+      "text": "During the illness he had sworn an oath to discipline his wife, a hundred strikes... and now he regretted it, for she had been nothing but faithful. So Allah Himself showed him the way out... take a bundle of grass in your hand, and touch her with it once, and your oath is kept. The Lord who tested him... protected her, and softened the law for him.",
+      "foot": "Qur'an 38:44"
+    },
+    {
+      "type": "narration",
+      "text": "Sabr does not mean feeling no pain. Ayyub felt all of it. Sabr means complaining TO Allah... instead of complaining ABOUT Allah. That is why, forever, Allah calls him... what an excellent servant, always turning back to his Lord."
+    }
+  ],
+  "captions": {
+    "youtube": "Allah praised him with the words: what an excellent servant. Ayyub, alayhi salam, lost his wealth, his children and his health, and never once complained about his Lord. The story of the most patient man who ever lived, told from the Qur'an and Sahih al-Bukhari, including the dua that changed everything.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}

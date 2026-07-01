@@ -1,0 +1,94 @@
+{
+  "id": "longform-salman",
+  "title": "Salman al-Farisi: The Search Across Empires",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Salman",
+    "kicker": "THE SEARCH ACROSS EMPIRES"
+  },
+  "_note": "WED long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "He was born worshipping fire in Persia... and he died a companion of the Prophet, peace be upon him. Between those two sentences lie two empires, five teachers, chains, slavery... and the longest search for truth ever told. And we have it in his own words.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "This is the story of Salman al-Farisi... may Allah be pleased with him.",
+      "title": "SALMAN AL-FARISI",
+      "titleSub": "may Allah be pleased with him",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "His father was a Persian chief who loved him so much he kept him home... like a girl kept behind curtains. And he made him keeper of the sacred fire... the flame that must never go out.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "Sent one day to the family estate, he passed a church... and heard men praying. He walked in. And he stayed until sunset. This, he said... is better than the religion we are upon.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "His father's answer was iron on his ankles... a chain, and a locked house. But you cannot chain a question. Salman sent word to the Christians... when a caravan leaves for Sham, tell me. And he broke free, and went with it.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "In Sham he served the bishop of the church... and found him corrupt. A man who commanded charity, then hoarded it in jars of gold. When he died, Salman showed the people his hidden jars of gold and silver... and they denied him an honored burial.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "Then came a righteous teacher... and when he was dying, Salman asked, to whom do you send me? Man by man... Mosul... Nasibin... Ammuriyyah... each teacher dying, each pointing onward. Decades of his life, handed from one dying light to the next.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "And the last one told him... the time of a prophet is near. He will appear in a land of date palms, between two tracts of black stone. He accepts a gift, but will not eat charity. And between his shoulders... is the seal of prophethood.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "Salman paid a caravan of merchants to carry him toward that land. And in the middle of the desert... they betrayed him. They sold him as a slave. The seeker of truth... traded like cattle, carried off to serve, until he was sold again... to a man from Yathrib. And when Salman saw the date palms... he knew.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "Then one day, working atop a palm tree, he heard it... a man has arrived in Quba, claiming to be a prophet. Salman says... I began to tremble so hard I nearly fell on my master below.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "He tested him. He brought food and said, this is charity... and the Prophet, peace be upon him, told his companions eat, and did not touch it. Sign one. He brought food and said, this is a gift... and he ate. Sign two. Then at a funeral, Salman circled behind him... and the Prophet, knowing, let his cloak fall from his back. And there it was... the seal. And Salman fell upon it, kissing it, weeping.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "His freedom was bought the way everything in his life was earned... slowly, with his hands. Three hundred date palms, planted one by one... and the Prophet, peace be upon him, planted them with his own hands. Every single tree took root.",
+      "foot": "Musnad Ahmad"
+    },
+    {
+      "type": "narration",
+      "text": "Years later, when ten thousand enemies marched on Madinah, it was Salman who said... in Persia, we would dig a trench. And the trench saved the city.",
+      "foot": "Seerah"
+    },
+    {
+      "type": "narration",
+      "text": "He crossed two empires, five teachers, chains, and slavery... across decades... for one truth. Most of us were handed that truth at birth... and some of us have never once opened it. Ask yourself what Salman would have given... for what is already in your hands."
+    }
+  ],
+  "captions": {
+    "youtube": "Born the son of a Persian fire keeper, he crossed two empires, served five dying teachers, was sold into slavery, and finally found the Prophet, peace be upon him, in Madinah. The story of Salman al-Farisi, may Allah be pleased with him, in his own words, from Musnad Ahmad.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}

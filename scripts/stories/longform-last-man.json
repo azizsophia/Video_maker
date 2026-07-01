@@ -1,0 +1,80 @@
+{
+  "id": "longform-last-man",
+  "title": "The Last Man to Enter Paradise",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Last Man",
+    "kicker": "TEN WORLDS FOR THE LEAST"
+  },
+  "_note": "SUN long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, once described the very last human being to leave the Fire... and enter Paradise. It is a story about the lowest rank in Jannah... the least of everyone. And while telling it... the Prophet laughed. By the end, you will know why.",
+      "foot": "Sahih Muslim 186"
+    },
+    {
+      "type": "narration",
+      "text": "This is the story of the last man... to enter Paradise.",
+      "title": "THE LAST MAN",
+      "titleSub": "the least of the people of Paradise",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "He crawls out of the Fire... the last one. And he turns to face it, and says... blessed is He who saved me from you. Then he lifts his eyes... and sees nothing ahead but emptiness.",
+      "foot": "Sahih Muslim 186"
+    },
+    {
+      "type": "narration",
+      "text": "Then he sees a tree in the distance... and he cannot help himself. My Lord... bring me near that tree, only that I may rest in its shade and drink of its water. And Allah says... son of Adam, if I grant it, will you ask Me for more? He says... no, my Lord. And he promises. And his Lord excuses him... because he is seeing what he cannot endure.",
+      "foot": "Sahih Muslim 187"
+    },
+    {
+      "type": "narration",
+      "text": "So he is brought near. And then... a more beautiful tree. And the promise breaks. My Lord, just this one... I will ask nothing else. And again He excuses him... and again, a third tree, at the very gate of Paradise.",
+      "foot": "Sahih Muslim 187"
+    },
+    {
+      "type": "narration",
+      "text": "And at the gate, he hears them... the voices of the people of Paradise. And his heart cannot bear it. My Lord... enter me into it. And Allah says... son of Adam, what will finally end your asking? Would it please you if I gave you the world... and the like of it with it?",
+      "foot": "Sahih Muslim 187"
+    },
+    {
+      "type": "narration",
+      "text": "And the man says something so human it stops you... My Lord... are You mocking me... and You are the Lord of the worlds? A man who just crawled out of the Fire cannot believe mercy this size is aimed at him.",
+      "foot": "Sahih Muslim 187"
+    },
+    {
+      "type": "narration",
+      "text": "And this is where the Prophet, peace be upon him, laughed until his back teeth showed. They asked him why. He said... because the Lord of the worlds laughed when the man said it, and answered... I am not mocking you. But I am able to do... whatever I will.",
+      "foot": "Sahih Muslim 187"
+    },
+    {
+      "type": "narration",
+      "text": "And the verdict comes. For you is the world... and ten times the like of it. Ten worlds. For the LAST man. The least of them. The one who broke his promise three times at three trees.",
+      "foot": "Sahih al-Bukhari 6571 and Sahih Muslim 186"
+    },
+    {
+      "type": "narration",
+      "text": "Now hear the ayah this story lives inside... Say, O My servants who have transgressed against their own souls... do not despair of the mercy of Allah. Indeed, Allah forgives all sins.",
+      "quote": "39:53",
+      "foot": "Qur'an 39:53 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "If the floor of Paradise is ten worlds wide... what is its ceiling? That is what is being offered... to the person who almost did not make it. So whatever you have done, and however far you feel... do not despair of the mercy of Allah. The worst finisher in Jannah... is richer than this whole earth. And the door, right now... is still open."
+    }
+  ],
+  "captions": {
+    "youtube": "The Prophet, peace be upon him, laughed when he told this story: the last man to crawl out of the Fire, who breaks his promise at three trees, and is answered with ten worlds. From Sahih Muslim and Sahih al-Bukhari.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}

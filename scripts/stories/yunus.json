@@ -1,0 +1,80 @@
+{
+  "id": "yunus",
+  "title": "The Dua From the Belly of the Whale",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Yunus",
+    "kicker": "THE DUA FROM THE DEEP"
+  },
+  "_note": "FRI short - vertical 9:16, render StoryVideo, scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "From inside a living whale... at the bottom of the sea... in the black of night... one sentence saved a prophet. And the Prophet Muhammad, peace be upon him, said... no Muslim ever says it, for anything, except that Allah answers him.",
+      "foot": "Jami at-Tirmidhi 3505, sahih"
+    },
+    {
+      "type": "narration",
+      "text": "This is the story of Yunus... alayhi salam.",
+      "title": "YUNUS",
+      "titleSub": "alayhi salam",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "He had called his city to Allah for years... and they refused. So he left them, angry... before his Lord gave him leave. And he thought no decree would tighten around him.",
+      "foot": "Qur'an 21:87"
+    },
+    {
+      "type": "narration",
+      "text": "He boarded a loaded ship. The storm came. And the sailors cast lots to lighten the load... and the lot fell... on him.",
+      "foot": "Qur'an 37:140-141"
+    },
+    {
+      "type": "narration",
+      "text": "And the whale swallowed him. A living prison, inside the sea, inside the night. Darkness... upon darkness... upon darkness.",
+      "foot": "Qur'an 37:142"
+    },
+    {
+      "type": "narration",
+      "text": "And from inside all three darknesses, he called... There is no god but You. Glory be to You. Indeed, I was of the wrongdoers. No excuses. Praise... then honesty.",
+      "quote": "21:87",
+      "foot": "Qur'an 21:87 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And the answer is recorded forever... So We responded to him, and saved him from the distress. And listen to the ending... AND THUS do We save the believers. That promise is not his. It is ours.",
+      "quote": "21:88",
+      "foot": "Qur'an 21:88 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, said... the dua of my brother Yunus. No Muslim says it, in any difficulty, except that Allah answers him.",
+      "foot": "Jami at-Tirmidhi 3505"
+    },
+    {
+      "type": "narration",
+      "text": "Whatever you are inside right now... it is not three darknesses at the bottom of the sea. Say the words. La ilaha illa anta... subhanaka... inni kuntu minaz-zalimin."
+    }
+  ],
+  "captions": {
+    "tiktok": "From inside a whale, one sentence saved a prophet. And the promise at the end is for you.",
+    "shorts": "The dua of Yunus, alayhi salam, and the promise Allah attached to it.",
+    "reels": "From inside a whale, one sentence saved a prophet. And the promise at the end is for you.",
+    "hashtags": [
+      "#dua",
+      "#prophetyunus",
+      "#edutokcontest",
+      "#islam",
+      "#muslimtiktok"
+    ]
+  }
+}

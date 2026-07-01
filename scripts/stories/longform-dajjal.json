@@ -1,0 +1,95 @@
+{
+  "id": "longform-dajjal",
+  "title": "The Dajjal: The Trial Every Prophet Warned About",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Dajjal",
+    "kicker": "THE GREATEST TRIAL"
+  },
+  "_note": "MON long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is one trial so severe... that every single prophet, from Nuh onward, warned his own people about it. One man. One test. And the Prophet Muhammad, peace be upon him, told us more about him than anyone before.",
+      "foot": "Sahih al-Bukhari 7131"
+    },
+    {
+      "type": "narration",
+      "text": "This is what the Prophet, peace be upon him, taught us about the Dajjal... so that we would never be deceived.",
+      "title": "THE DAJJAL",
+      "titleSub": "the greatest trial (deep read) \"This is what the",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      }
+    },
+    {
+      "type": "narration",
+      "text": "He will come as a man... young, with crisp curled hair, and one eye... like a floating grape. And between his eyes, written... kaf, fa, ra. Disbeliever. And every believer will read it... whether he can read or not.",
+      "foot": "Sahih al-Bukhari 7131 and Sahih Muslim 2934"
+    },
+    {
+      "type": "narration",
+      "text": "He will emerge on a road between Sham and Iraq... and he will move through the earth quickly, like rain driven by wind.",
+      "foot": "Sahih Muslim 2937"
+    },
+    {
+      "type": "narration",
+      "text": "He will come to a people and call them, and they will believe him. He will command the sky... and it will rain. The earth... and it will grow. Their herds will return to them fat, with full udders.",
+      "foot": "Sahih Muslim 2937"
+    },
+    {
+      "type": "narration",
+      "text": "He will carry with him something like Paradise, and something like Fire. But his paradise will be fire... and his fire, cool water. That is the trick at the heart of him... everything reversed.",
+      "foot": "Sahih al-Bukhari 3450"
+    },
+    {
+      "type": "narration",
+      "text": "In Madinah's outskirts, a believer will face him and call him a liar. The Dajjal will kill him... then bring him back to life. And the man will say... by Allah, I have never been more certain of who you are than I am now.",
+      "foot": "Sahih al-Bukhari 1882"
+    },
+    {
+      "type": "narration",
+      "text": "He will remain forty days. One day like a year... one like a month... one like a week. The companions asked, will one day's prayers be enough for the day like a year? He said no... estimate its measure.",
+      "foot": "Sahih Muslim 2937"
+    },
+    {
+      "type": "narration",
+      "text": "But two cities he will never enter... Makkah and Madinah. At every gate, angels standing guard.",
+      "foot": "Sahih al-Bukhari 1881"
+    },
+    {
+      "type": "narration",
+      "text": "Then Isa, son of Maryam, alayhi salam, will descend at the white minaret east of Damascus... and the Dajjal will melt before him like salt melting in water... and it will end at the gate of Ludd.",
+      "foot": "Sahih Muslim 2937"
+    },
+    {
+      "type": "narration",
+      "text": "So how do you protect yourself from the greatest trial ever to walk the earth? The Prophet, peace be upon him, left us the keys. Memorize the first ten verses of Surah al-Kahf.",
+      "foot": "Sahih Muslim 809"
+    },
+    {
+      "type": "narration",
+      "text": "And in every single prayer, before the salam... seek refuge in Allah from four things. The punishment of the grave, the punishment of the Fire, the trial of life and death... and the trial of the Dajjal.",
+      "foot": "Sahih Muslim 588"
+    },
+    {
+      "type": "narration",
+      "text": "And if you hear of him... do not go to look. Keep far from him. For a man will come thinking himself firm in faith... and follow him, because of the doubts he raises.",
+      "foot": "Sunan Abi Dawud 4319, sahih"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, said... if he comes while I am among you, I will contend with him for you. And if he comes after me... then each of you must contend for himself, and Allah is my successor over every Muslim. He told us everything... not to frighten us. To arm us.",
+      "foot": "Sahih Muslim 2937"
+    }
+  ],
+  "captions": {
+    "youtube": "Every prophet warned his people about the Dajjal, the greatest trial to ever walk the earth. This is what the Prophet Muhammad, peace be upon him, taught us: who he is, how his trial works, the two cities he can never enter, how he ends, and the exact protections he left every believer. Every claim is shown on screen with its source: Sahih al-Bukhari and Sahih Muslim. No speculation, no date-setting.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}
