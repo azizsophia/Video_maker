@@ -103,7 +103,7 @@ const PHONETIC: Record<string, string> = {
   musa: "Moosa",
   aisha: "Aisha",
   makkah: "Makkah",
-  waraqah: "Waraka",
+  waraqah: "Warahkah",
   hira: "Heera",
   // "Read" here is the command Iqra (present/imperative), so it must sound
   // "reed", never past-tense "red". On-screen caption keeps the spelling "Read".
