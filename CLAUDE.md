@@ -69,7 +69,13 @@ asked. This file is the durable memory for this repo.
   `PHONETIC` map in `scripts/fetch-story.ts`) while the on-screen text keeps
   proper spelling. Send a names-only voice test to confirm. Locked so far:
   Khadijah -> "Kadeeja", Aisha -> "Aisha", Waraqah -> "Warahkah", Jibril ->
-  "Jibreel", Musa -> "Moosa", Read (the command Iqra) -> "reed" (never "red").
+  "Jibreel", Musa -> "Moosa", Read (the command Iqra) -> "reed" (never "red"),
+  plus the full week-batch set in the PHONETIC map (Dajjal, Ayyub, Salman
+  al-Farisi, Suraqah, Yunus, Sulayman, Hajar, Ismail, Ammar, Yasir, Isa, Nuh,
+  Sham, ad-Duha, al-Kawthar, Qasim, Quba, Nasibin, Ammuriyyah, Thawr, wahy,
+  istighfar) - all ear-tested and approved 2026-07-01. Spoken transliterated
+  Arabic (e.g. the dua of Yunus) is approved BUT must never sit flush at the
+  end of a segment: keep a trailing ellipsis after it so the tail never clips.
 - The voice is SEED-LOCKED (`DEFAULT_VOICE_SEED` in fetch-story, per-story via
   `voiceSeed`). This makes ElevenLabs reproducible: the same text + settings +
   seed returns the same audio, so re-rendering to fix ONE line no longer re-rolls

@@ -562,7 +562,7 @@ Visual: calm sea at dawn.
 9. CLOSE (reflection)
 "Whatever you are inside right now... it is not three darknesses at the
 bottom of the sea. Say the words. La ilaha illa anta... subhanaka... inni
-kuntu minaz-zalimin."
+kuntu minaz-zalimin..."
 Visual: wide serene sunrise over still water.
 
 ### FRI LONG - Surah ad-Duha: When the Heavens Went Silent (~9 min)
