@@ -1,28 +1,30 @@
-# al-kawthar - 8 beats, plus retries (signs b4, bee b2/b6/b7)
+# sumayya - 12 beats, plus bee beat 7 retry
 --portrait
-# kawthar beat 1 - dark still desert night
-desert landscape night dark moonlight
-# kawthar beat 2 - slow gold dust in black (title card)
-golden particles rising black background
-# kawthar beat 3 - single dim lantern in darkness
-single candle lantern glowing darkness
-# kawthar beat 4 - wind stripping sand off a dune crest
-sand blowing off dune crest
-# kawthar beat 5 - light flooding through clouds
-sunbeams flooding through clouds heaven
-# kawthar beat 6 - pristine flowing water catching light
-crystal clear stream flowing sunlight sparkle
-# kawthar beat 7 - a dead branch in dark wind
-bare dead tree branches dark sky
-# kawthar beat 8 - crowds of lights / city glow at night (no faces)
-city lights bokeh night glow aerial
-# retry signs beat 4 - vast night desert sky
-milky way galaxy timelapse mountains
-# retry signs beat 4b
-night sky stars over desert rocks
-# retry bee beat 2 - slow dark honey glow (title card)
-golden liquid swirling slow motion dark
-# retry bee beat 6 - warm honey in glass jar, dark background
-honey jar moody dark wooden table
+# beat 1 - lone dead tree in desert dusk
+lone dead tree desert twilight
+# beat 2 - slow dark starfield (title card)
+dark starry sky stars twinkling night
+# beat 3 - narrow dark alley of old stone
+narrow old stone alley night
+# beat 4 - three small flames in darkness
+three candles burning darkness
+# beat 5 - heat shimmer over blinding sand
+scorching desert sun heat sand
+# beat 6 - single shaft of light through dust
+light shaft dust particles dark
+# beat 7 - rock steadfast against crashing waves
+waves crashing rock cliff storm
+# beat 8 - a flame going out, ember smoke rising
+candle blown out smoke rising dark
+# beat 9 - storm clouds breaking
+dramatic storm clouds swirling sky
+# beat 10 - calm light after rain
+gentle sunlight after rain leaves
+# beat 11 - strong dawn light over mountains
+dawn golden light mountain peaks
+# beat 12 - single star brightening in deep night sky
+bright star night sky deep space calm
 # retry bee beat 7 - sunlit honeycomb texture
-honeycomb macro hexagon honey glistening
+honeycomb cells dripping honey macro
+# retry bee beat 7b
+bees working honeycomb close up

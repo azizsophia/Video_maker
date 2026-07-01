@@ -15,7 +15,9 @@
     {
       "type": "narration",
       "text": "The shortest surah in the Qur'an is three verses long. You can say it in ten seconds. And it came down from heaven... to defend a grieving father.",
-      "foot": "Tafsir of Surah 108"
+      "foot": "Tafsir of Surah 108",
+      "video": "https://videos.pexels.com/video-files/18202294/18202294-hd_1080_1920_25fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
@@ -26,38 +28,52 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/35459062/15022765_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, buried his infant sons... Qasim, and later Abdullah. He was a father lowering his own children into the earth.",
-      "foot": "Seerah"
+      "foot": "Seerah",
+      "video": "https://videos.pexels.com/video-files/13206265/13206265-hd_1080_1920_30fps.mp4",
+      "videoDuration": 32
     },
     {
       "type": "narration",
       "text": "And the men of Quraysh saw his grief... and mocked it. He is abtar, they said. Cut off. No sons, no line, no future. When he dies... his name dies with him.",
-      "foot": "Tafsir of Surah 108"
+      "foot": "Tafsir of Surah 108",
+      "video": "https://videos.pexels.com/video-files/27740324/12215656_1080_1920_30fps.mp4",
+      "videoDuration": 30
     },
     {
       "type": "narration",
       "text": "And Allah answered from above seven heavens... Indeed, We have granted you al-Kawthar. The abundance. Not one son. Not one legacy. Abundance itself.",
       "quote": "108:1",
-      "foot": "Qur'an 108:1 (shown, not recited)"
+      "foot": "Qur'an 108:1 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/29702428/12772300_1080_1920_30fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, later described it... a river in Paradise, promised to him by his Lord... upon it, abundant good.",
-      "foot": "Sahih Muslim 400"
+      "foot": "Sahih Muslim 400",
+      "video": "https://videos.pexels.com/video-files/34257819/14515880_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "And the surah ends with the reversal... indeed, your enemy is the one cut off. Not you. Him.",
       "quote": "108:3",
-      "foot": "Qur'an 108:3 (shown, not recited)"
+      "foot": "Qur'an 108:3 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/29599775/12739357_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
-      "text": "Today, no one names their sons after the men who mocked him. And the man they called cut off... is honored by name, billions of times a day, in every prayer on earth. When people mock what you lost... remember the One who counts what you have been given."
+      "text": "Today, no one names their sons after the men who mocked him. And the man they called cut off... is honored by name, billions of times a day, in every prayer on earth. When people mock what you lost... remember the One who counts what you have been given.",
+      "video": "https://videos.pexels.com/video-files/10888495/10888495-hd_1080_1920_30fps.mp4",
+      "videoDuration": 52
     }
   ],
   "captions": {

@@ -15,7 +15,9 @@
     {
       "type": "narration",
       "text": "There is one creature on this earth that receives direct inspiration from Allah. It is not an angel. It is not a prophet. It fits... on your fingertip.",
-      "foot": "Qur'an 16:68"
+      "foot": "Qur'an 16:68",
+      "video": "https://videos.pexels.com/video-files/32915889/14028244_1080_1920_25fps.mp4",
+      "videoDuration": 16
     },
     {
       "type": "narration",
@@ -26,29 +28,39 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/15168374/15168374-hd_1080_1920_24fps.mp4",
+      "videoDuration": 38
     },
     {
       "type": "narration",
       "text": "And your Lord inspired the bee... take for yourself homes in the mountains, and in the trees, and in what they build.",
       "quote": "16:68",
-      "foot": "Qur'an 16:68 (shown, not recited)"
+      "foot": "Qur'an 16:68 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/9806659/9806659-hd_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "Then eat from all the fruits... and follow the paths of your Lord, made easy for you. That is her entire life. Obedience... on a path her Lord already smoothed.",
-      "foot": "Qur'an 16:69"
+      "foot": "Qur'an 16:69",
+      "video": "https://videos.pexels.com/video-files/12216964/12216964-hd_1080_1920_30fps.mp4",
+      "videoDuration": 14
     },
     {
       "type": "narration",
       "text": "From their bellies comes a drink of varying colors... in which there is healing for people.",
       "quote": "16:69",
-      "foot": "Qur'an 16:69 (shown, not recited)"
+      "foot": "Qur'an 16:69 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/6421446/6421446-hd_1080_1920_30fps.mp4",
+      "videoDuration": 18
     },
     {
       "type": "narration",
       "text": "A man came to the Prophet, peace be upon him, and said... my brother's stomach is ill. He said, give him honey. Then again. And again. Until he said... Allah has spoken the truth, and your brother's stomach has lied. And the man was cured.",
-      "foot": "Sahih al-Bukhari 5684"
+      "foot": "Sahih al-Bukhari 5684",
+      "video": "https://videos.pexels.com/video-files/5615244/5615244-uhd_1440_2732_30fps.mp4",
+      "videoDuration": 29
     },
     {
       "type": "narration",
@@ -56,7 +68,9 @@
     },
     {
       "type": "narration",
-      "text": "An entire chapter of the Qur'an carries her name. Not the lion. Not the eagle. The bee. Perhaps because Allah is telling us... a small life, lived in obedience, that leaves healing behind it... is a great life."
+      "text": "An entire chapter of the Qur'an carries her name. Not the lion. Not the eagle. The bee. Perhaps because Allah is telling us... a small life, lived in obedience, that leaves healing behind it... is a great life.",
+      "video": "https://videos.pexels.com/video-files/20690857/20690857-hd_1080_1920_60fps.mp4",
+      "videoDuration": 12
     }
   ],
   "captions": {
