@@ -8,14 +8,17 @@
   "showOutro": true,
   "cover": {
     "title": "Salman",
-    "kicker": "THE SEARCH ACROSS EMPIRES"
+    "kicker": "THE SEARCH ACROSS EMPIRES",
+    "image": "https://images.pexels.com/photos/10389880/pexels-photo-10389880.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2560&h=1440"
   },
   "_note": "WED long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [
     {
       "type": "narration",
       "text": "He was born worshipping fire in Persia... and he died a companion of the Prophet, peace be upon him. Between those two sentences lie two empires, five teachers, chains, slavery... and the longest search for truth ever told. And we have it in his own words.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/10157172/10157172-hd_1920_1080_30fps.mp4",
+      "videoDuration": 40
     },
     {
       "type": "narration",
@@ -26,66 +29,92 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/2895754/2895754-hd_2048_1080_25fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
       "text": "His father was a Persian chief who loved him so much he kept him home... like a girl kept behind curtains. And he made him keeper of the sacred fire... the flame that must never go out.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/4423711/4423711-hd_1920_1080_24fps.mp4",
+      "videoDuration": 24
     },
     {
       "type": "narration",
       "text": "Sent one day to the family estate, he passed a church... and heard men praying. He walked in. And he stayed until sunset. This, he said... is better than the religion we are upon.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/6212891/6212891-hd_1920_1080_30fps.mp4",
+      "videoDuration": 60
     },
     {
       "type": "narration",
       "text": "His father's answer was iron on his ankles... a chain, and a locked house. But you cannot chain a question. Salman sent word to the Christians... when a caravan leaves for Sham, tell me. And he broke free, and went with it.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/12797959/12797959-hd_1920_1080_30fps.mp4",
+      "videoDuration": 40
     },
     {
       "type": "narration",
       "text": "In Sham he served the bishop of the church... and found him corrupt. A man who commanded charity, then hoarded it in jars of gold. When he died, Salman showed the people his hidden jars of gold and silver... and they denied him an honored burial.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/5514238/5514238-hd_1920_1080_24fps.mp4",
+      "videoDuration": 30
     },
     {
       "type": "narration",
       "text": "Then came a righteous teacher... and when he was dying, Salman asked, to whom do you send me? Man by man... Mosul... Nasibin... Ammuriyyah... each teacher dying, each pointing onward. Decades of his life, handed from one dying light to the next.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/4061908/4061908-hd_1920_1080_24fps.mp4",
+      "videoDuration": 30
     },
     {
       "type": "narration",
       "text": "And the last one told him... the time of a prophet is near. He will appear in a land of date palms, between two tracts of black stone. He accepts a gift, but will not eat charity. And between his shoulders... is the seal of prophethood.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/29233144/12618635_1920_1080_50fps.mp4",
+      "videoDuration": 31
     },
     {
       "type": "narration",
       "text": "Salman paid a caravan of merchants to carry him toward that land. And in the middle of the desert... they betrayed him. They sold him as a slave. The seeker of truth... traded like cattle, carried off to serve, until he was sold again... to a man from Yathrib. And when Salman saw the date palms... he knew.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/33273166/14174210_1920_1080_30fps.mp4",
+      "videoDuration": 17
     },
     {
       "type": "narration",
       "text": "Then one day, working atop a palm tree, he heard it... a man has arrived in Quba, claiming to be a prophet. Salman says... I began to tremble so hard I nearly fell on my master below.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/24821068/11898314_1920_1080_30fps.mp4",
+      "videoDuration": 59
     },
     {
       "type": "narration",
       "text": "He tested him. He brought food and said, this is charity... and the Prophet, peace be upon him, told his companions eat, and did not touch it. Sign one. He brought food and said, this is a gift... and he ate. Sign two. Then at a funeral, Salman circled behind him... and the Prophet, knowing, let his cloak fall from his back. And there it was... the seal. And Salman fell upon it, kissing it, weeping.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/13617789/13617789-hd_1920_1080_25fps.mp4",
+      "videoDuration": 26
     },
     {
       "type": "narration",
       "text": "His freedom was bought the way everything in his life was earned... slowly, with his hands. Three hundred date palms, planted one by one... and the Prophet, peace be upon him, planted them with his own hands. Every single tree took root.",
-      "foot": "Musnad Ahmad"
+      "foot": "Musnad Ahmad",
+      "video": "https://videos.pexels.com/video-files/32055121/13663452_1920_1080_60fps.mp4",
+      "videoDuration": 25
     },
     {
       "type": "narration",
       "text": "Years later, when ten thousand enemies marched on Madinah, it was Salman who said... in Persia, we would dig a trench. And the trench saved the city.",
-      "foot": "Seerah"
+      "foot": "Seerah",
+      "video": "https://videos.pexels.com/video-files/36783205/15587406_1920_1080_60fps.mp4",
+      "videoDuration": 18
     },
     {
       "type": "narration",
-      "text": "He crossed two empires, five teachers, chains, and slavery... across decades... for one truth. Most of us were handed that truth at birth... and some of us have never once opened it. Ask yourself what Salman would have given... for what is already in your hands."
+      "text": "He crossed two empires, five teachers, chains, and slavery... across decades... for one truth. Most of us were handed that truth at birth... and some of us have never once opened it. Ask yourself what Salman would have given... for what is already in your hands.",
+      "video": "https://videos.pexels.com/video-files/17207183/17207183-hd_1920_1080_24fps.mp4",
+      "videoDuration": 50
     }
   ],
   "captions": {
