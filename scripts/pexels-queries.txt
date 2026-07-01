@@ -1,13 +1,10 @@
-# Khadijah detailed cut - 2 NON-CANDLE warm replacements for beats 8 & 12
-# (beats 7 and 9 stay candle; need variety so 8 & 12 must NOT be a candle flame).
-# No person as subject, no on-screen text, no other-faith symbols, warm/cinematic,
-# vertical 9:16. Distinct, must differ from all clips already used.
+# Khadijah beat 8 ONLY - her reassurance "Allah will never disgrace you".
+# Need a clean, timeless, WARM visual (NOT a candle, NOT a desert, NO modern
+# interiors/people/text). Vertical 9:16.
 --portrait
-# beat 8 - her reassurance "Allah will never disgrace you": dust drifting in a warm sunbeam
-dust particles floating in warm sunbeam light
-# beat 8 alt - warm golden light through a window onto a wall
-warm golden sunlight through window on wall
-# beat 12 - his enduring love, 25 years: golden hour warm glow over calm water
-golden hour warm light over calm desert
-# beat 12 alt - soft warm silk fabric flowing in golden light
-warm golden silk fabric flowing slow motion
+# dappled golden sunlight through leaves - warm, natural, timeless
+golden sunlight through green leaves gentle breeze
+# soft warm light rays in a forest
+warm sun rays through forest morning mist
+# abstract soft warm golden bokeh light
+soft warm golden bokeh light dark background
