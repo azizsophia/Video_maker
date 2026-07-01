@@ -98,11 +98,11 @@ const PHONETIC: Record<string, string> = {
   quran: "Quraan",
   alayhi: "alayhee",
   salam: "salaam",
-  khadijah: "Khadeeja",
-  jibril: "Jibreel",
-  musa: "Moosa",
-  aisha: "Aaisha",
-  makkah: "Makkah",
+  khadijah: "Kha-dee-jah",
+  jibril: "Jib-reel",
+  musa: "Moo-saa",
+  aisha: "Aa-ee-sha",
+  makkah: "Mak-kah",
 };
 const stripEdges = (tok: string): [string, string, string] => {
   const m = tok.match(/^([^A-Za-z']*)(.*?)([^A-Za-z']*)$/s);
