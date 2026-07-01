@@ -27,9 +27,17 @@
   "segments": [
     {
       "type": "narration",
-      "text": "There was a woman so beloved to Allah, that He sent her His own greetings of peace, carried down by an angel. Only her. This is her story.",
-      "video": "https://videos.pexels.com/video-files/20349691/20349691-hd_1080_1920_60fps.mp4",
-      "videoDuration": 12
+      "text": "There was a woman so beloved to Allah, that He sent her His own greetings of peace, carried down by an angel. Only her.",
+      "video": "https://videos.pexels.com/video-files/33110126/14113175_1080_1920_30fps.mp4",
+      "videoDuration": 10
+    },
+    {
+      "type": "narration",
+      "text": "This is the story of Khadijah, may Allah be pleased with her.",
+      "title": "KHADIJAH",
+      "titleSub": "may Allah be pleased with her",
+      "video": "https://videos.pexels.com/video-files/16829181/16829181-hd_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",

@@ -1,7 +1,6 @@
-# Khadijah - calm cinematic desert clips (beat 1 opener + the title-card beat).
-# VERTICAL, no person, no text, dark/cinematic, calm slow motion. Distinct, no reuse.
---portrait
-calm cinematic desert sand dunes golden hour
-vast desert dunes at dusk slow aerial
-starry night sky over desert dunes
-lone desert dune ridge at sunset wind
+# Khadijah COVER - a calm cinematic Pexels photo behind the gold title (9:16).
+# No person, no text, dark/warm, premium. Hi-res.
+--photos
+desert sand dunes at dusk cinematic
+starry night sky over desert
+golden desert dunes sunset minimal
