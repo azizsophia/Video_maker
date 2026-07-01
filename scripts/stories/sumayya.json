@@ -15,7 +15,9 @@
     {
       "type": "narration",
       "text": "The first person to ever die for Islam... was not a soldier. It was an old woman. With no tribe, no wealth, and no one to protect her. And her name has been honored for fourteen hundred years.",
-      "foot": "Seerah (Ibn Sa'd)"
+      "foot": "Seerah (Ibn Sa'd)",
+      "video": "https://videos.pexels.com/video-files/33476207/14241218_1080_1920_60fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
@@ -26,22 +28,30 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/35461866/15024051_1080_1920_24fps.mp4",
+      "videoDuration": 12
     },
     {
       "type": "narration",
       "text": "In the earliest days of Makkah, when the believers could be counted on two hands... she was one of them. A freed slave. Among the weakest, most powerless people in the whole city.",
-      "foot": "Seerah (Ibn Ishaq)"
+      "foot": "Seerah (Ibn Ishaq)",
+      "video": "https://videos.pexels.com/video-files/34379425/14564491_1080_1920_24fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "With her husband Yasir... and her son Ammar... she believed in one God. And in a city that bowed to hundreds of idols, for people with no protection... that belief was a death sentence.",
-      "foot": "Seerah (Ibn Hisham)"
+      "foot": "Seerah (Ibn Hisham)",
+      "video": "https://videos.pexels.com/video-files/38173396/16206337_1080_1920_30fps.mp4",
+      "videoDuration": 31
     },
     {
       "type": "narration",
       "text": "So Quraysh dragged the family of Yasir into the burning desert sun. Day after day, they laid them on the scorching sand... to force them to abandon their Lord. And they would not.",
-      "foot": "Seerah (Ibn Ishaq)"
+      "foot": "Seerah (Ibn Ishaq)",
+      "video": "https://videos.pexels.com/video-files/38114880/16182405_1080_1920_30fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
@@ -51,32 +61,44 @@
     {
       "type": "narration",
       "text": "Abu Jahl himself came to break her. He mocked her. He beat her. But this old woman would not bow to him... or to his idols. She held on to her God... to her very last breath.",
-      "foot": "Seerah (Ibn Sa'd)"
+      "foot": "Seerah (Ibn Sa'd)",
+      "video": "https://videos.pexels.com/video-files/32176547/13721653_1080_1920_30fps.mp4",
+      "videoDuration": 59
     },
     {
       "type": "narration",
       "text": "So in his rage... he killed her. And Sumayya, an elderly woman who owned nothing in this world... became the first soul ever to die for Islam. The first martyr... of this entire religion.",
-      "foot": "Seerah (Ibn Sa'd)"
+      "foot": "Seerah (Ibn Sa'd)",
+      "video": "https://videos.pexels.com/video-files/7311792/7311792-uhd_1440_2496_30fps.mp4",
+      "videoDuration": 16
     },
     {
       "type": "narration",
       "text": "Her son Ammar was tortured so brutally... they forced words of disbelief from his mouth. He came to the Prophet, shaking and weeping. And Allah Himself... sent down his defense.",
-      "foot": "Tafsir of Qur'an 16:106"
+      "foot": "Tafsir of Qur'an 16:106",
+      "video": "https://videos.pexels.com/video-files/12328908/12328908-hd_1080_1920_60fps.mp4",
+      "videoDuration": 19
     },
     {
       "type": "narration",
       "text": "Except the one who is forced... while his heart is at peace... with faith.",
       "quote": "16:106",
-      "foot": "Qur'an 16:106 (shown, not recited)"
+      "foot": "Qur'an 16:106 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/32765994/13968357_1080_1920_60fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "Her son lived on to become one of the most beloved of companions. And of him, the Prophet, peace be upon him, said... Ammar is filled with faith, to the very marrow of his bones.",
-      "foot": "Sunan an-Nasa'i 5010"
+      "foot": "Sunan an-Nasa'i 5010",
+      "video": "https://videos.pexels.com/video-files/14977364/14977364-hd_1080_1920_30fps.mp4",
+      "videoDuration": 17
     },
     {
       "type": "narration",
-      "text": "She had no army... no wealth... no name Makkah respected. But she gave the one thing she owned. And Allah made her the first, forever. That was Sumayya... may Allah be pleased with her."
+      "text": "She had no army... no wealth... no name Makkah respected. But she gave the one thing she owned. And Allah made her the first, forever. That was Sumayya... may Allah be pleased with her.",
+      "video": "https://videos.pexels.com/video-files/36434286/15449089_1080_1920_25fps.mp4",
+      "videoDuration": 9
     }
   ],
   "captions": {

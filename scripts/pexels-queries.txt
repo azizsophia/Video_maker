@@ -1,30 +1,24 @@
-# sumayya - 12 beats, plus bee beat 7 retry
+# yunus - 9 beats, plus sumayya beat 6 retry
 --portrait
-# beat 1 - lone dead tree in desert dusk
-lone dead tree desert twilight
-# beat 2 - slow dark starfield (title card)
-dark starry sky stars twinkling night
-# beat 3 - narrow dark alley of old stone
-narrow old stone alley night
-# beat 4 - three small flames in darkness
-three candles burning darkness
-# beat 5 - heat shimmer over blinding sand
-scorching desert sun heat sand
-# beat 6 - single shaft of light through dust
-light shaft dust particles dark
-# beat 7 - rock steadfast against crashing waves
-waves crashing rock cliff storm
-# beat 8 - a flame going out, ember smoke rising
-candle blown out smoke rising dark
-# beat 9 - storm clouds breaking
-dramatic storm clouds swirling sky
-# beat 10 - calm light after rain
-gentle sunlight after rain leaves
-# beat 11 - strong dawn light over mountains
-dawn golden light mountain peaks
-# beat 12 - single star brightening in deep night sky
-bright star night sky deep space calm
-# retry bee beat 7 - sunlit honeycomb texture
-honeycomb cells dripping honey macro
-# retry bee beat 7b
-bees working honeycomb close up
+# beat 1 - deep dark ocean water, faint light from above
+deep dark ocean underwater light above
+# beat 2 - slow moonlit sea (title card)
+moonlight reflecting ocean night
+# beat 3 - storm gathering over sea horizon
+storm clouds gathering over ocean horizon
+# beat 4 - violent waves in darkness
+stormy sea huge waves dark
+# beat 5 - descending into deep black water
+sinking deep underwater dark blue abyss
+# beat 6 - a single beam of light piercing deep water
+light rays piercing underwater deep
+# beat 7 - sunlight breaking the surface from below
+underwater looking up sunlight surface
+# beat 8 - calm sea at dawn
+calm ocean sunrise gentle waves
+# beat 9 - wide serene sunrise over still water
+serene sunrise still water golden reflection
+# retry sumayya beat 6 - single shaft of light through dust
+sunbeam through window dark room dust
+# retry sumayya beat 6b
+volumetric light ray dark forest fog
