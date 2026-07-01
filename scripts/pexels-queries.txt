@@ -1,16 +1,6 @@
-# Round 4: cover photos (16:9 landscape, CoverWide) for the 7 long-form stories.
---photos
-# longform-dajjal
-dark storm clouds dramatic sky lightning
-# longform-ayyub
-lone tree field dramatic golden sky
-# longform-salman
-date palm trees desert oasis sunset
-# longform-hijra
-desert mountain cave starry night
-# longform-ad-duha
-soft golden sunrise glowing clouds
-# longform-ant-bee-spider
-bee honeycomb macro golden
-# longform-last-man
-sun rays breaking through clouds golden
+# Hijra beat 4 replacement (owner: "just do light beam") - LANDSCAPE 16:9.
+# Divine protection as he walks out unseen. No people, no text.
+light beam through darkness dust
+shaft of light dark room
+sun rays breaking into dark cave
+single ray of light in the dark
