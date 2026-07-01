@@ -8,14 +8,17 @@
   "showOutro": true,
   "cover": {
     "title": "The Hijra",
-    "kicker": "THE GREATEST ESCAPE"
+    "kicker": "THE GREATEST ESCAPE",
+    "image": "https://images.pexels.com/photos/38153697/pexels-photo-38153697.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2560&h=1440"
   },
   "_note": "THU long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [
     {
       "type": "narration",
       "text": "A bounty of one hundred camels... a fortune... placed on the heads of two unarmed men. Every tracker in Arabia hunting them. And their hiding place... a hole in a rock, three days, with the hunters standing close enough to touch.",
-      "foot": "Sahih al-Bukhari 3905"
+      "foot": "Sahih al-Bukhari 3905",
+      "video": "https://videos.pexels.com/video-files/12987909/12987909-hd_1920_1080_30fps.mp4",
+      "videoDuration": 45
     },
     {
       "type": "narration",
@@ -26,57 +29,79 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/10881198/10881198-hd_1920_1080_30fps.mp4",
+      "videoDuration": 78
     },
     {
       "type": "narration",
       "text": "Makkah had decided... one young man from every clan, one strike together, so the blood would be on every tribe. And the Qur'an records it... and when those who disbelieved plotted against you, to confine you, or kill you, or expel you. They plan... and Allah plans. And Allah is the best of planners.",
       "quote": "8:30",
-      "foot": "Qur'an 8:30 (shown, not recited)"
+      "foot": "Qur'an 8:30 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/34433081/14588919_1920_1080_24fps.mp4",
+      "videoDuration": 18
     },
     {
       "type": "narration",
       "text": "That night, Ali, may Allah be pleased with him, lay down in the Prophet's bed, wrapped in his cloak... a young man volunteering to absorb the swords meant for someone else. And the Prophet, peace be upon him, walked out past the assassins... unseen.",
-      "foot": "Seerah"
+      "foot": "Seerah",
+      "video": "https://videos.pexels.com/video-files/10387417/10387417-uhd_4096_2160_25fps.mp4",
+      "videoDuration": 45
     },
     {
       "type": "narration",
       "text": "Aisha, may Allah be pleased with her, tells it... the Prophet came to our house at noon, an hour he never came. And when he told Abu Bakr, you are my companion on the journey... my father wept. I had never known, she said, that a person could weep... from joy.",
-      "foot": "Sahih al-Bukhari 3905"
+      "foot": "Sahih al-Bukhari 3905",
+      "video": "https://videos.pexels.com/video-files/9834836/9834836-hd_1920_1080_25fps.mp4",
+      "videoDuration": 34
     },
     {
       "type": "narration",
       "text": "The plan was exact. Two camels, prepared. Asma binte Abi Bakr carried food in secret... Abdullah ibn Abi Bakr slept among Quraysh and brought their plans each night... and Amir ibn Fuhayrah grazed sheep over the footprints, wiping the trail clean.",
-      "foot": "Sahih al-Bukhari 3905"
+      "foot": "Sahih al-Bukhari 3905",
+      "video": "https://videos.pexels.com/video-files/32410109/13825310_1920_1080_60fps.mp4",
+      "videoDuration": 42
     },
     {
       "type": "narration",
       "text": "For three nights they hid in the cave of Thawr. And the trackers came... all the way to the mouth of the cave. Abu Bakr whispered... if one of them looks down at his feet, he will see us. And the Prophet, peace be upon him, answered with one of the greatest sentences ever spoken... O Abu Bakr, what do you think of two... whose third is Allah?",
-      "foot": "Sahih al-Bukhari 3653"
+      "foot": "Sahih al-Bukhari 3653",
+      "video": "https://videos.pexels.com/video-files/34143825/14476688_1920_1080_60fps.mp4",
+      "videoDuration": 25
     },
     {
       "type": "narration",
       "text": "And Allah sealed that moment into the Qur'an forever... when the two were in the cave, when he said to his companion, do not grieve... indeed Allah is with us.",
       "quote": "9:40",
-      "foot": "Qur'an 9:40 (shown, not recited)"
+      "foot": "Qur'an 9:40 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/17145872/17145872-hd_1920_1080_30fps.mp4",
+      "videoDuration": 14
     },
     {
       "type": "narration",
-      "text": "You may have heard that a spider spun a web across the cave mouth, and a dove nested there. Here is the truth... that detail does not appear in the authentic narrations. And honestly, the authentic account is greater. Because it was not a web that blinded the trackers... it was Allah."
+      "text": "You may have heard that a spider spun a web across the cave mouth, and a dove nested there. Here is the truth... that detail does not appear in the authentic narrations. And honestly, the authentic account is greater. Because it was not a web that blinded the trackers... it was Allah.",
+      "video": "https://videos.pexels.com/video-files/13751769/13751769-hd_1920_1080_30fps.mp4",
+      "videoDuration": 25
     },
     {
       "type": "narration",
       "text": "They rode north by the coast road, and the bounty did its work. A horseman named Suraqah spotted them... the hundred camels within his reach. Twice... three times... his horse sank to its knees in firm ground. And Suraqah understood he was chasing something protected. The hunter turned back... and turned the other hunters away. By nightfall, the man who came for the bounty... was guarding the man he hunted.",
-      "foot": "Sahih al-Bukhari 3906"
+      "foot": "Sahih al-Bukhari 3906",
+      "video": "https://videos.pexels.com/video-files/27979818/12280381_1920_1080_25fps.mp4",
+      "videoDuration": 24
     },
     {
       "type": "narration",
       "text": "And then, Madinah. The city had been climbing to the rooftops every morning, watching the horizon. And when he arrived, peace be upon him, the city rang with takbir... Allahu akbar, the Messenger of Allah has come. The city that would carry his name forever. Madinat an-Nabi. The city of the Prophet.",
-      "foot": "Sahih al-Bukhari 3906"
+      "foot": "Sahih al-Bukhari 3906",
+      "video": "https://videos.pexels.com/video-files/3687764/3687764-hd_1920_1080_30fps.mp4",
+      "videoDuration": 29
     },
     {
       "type": "narration",
-      "text": "Everything about the Hijra was planned to perfection... the decoy, the supplies, the spy, the tracks, the route. And still, in the end, it came down to a moment where planning could do nothing at all... and trust did everything. Tie your camel, plan your escape... and when the hunters reach the mouth of your cave, say what he said... do not grieve. Indeed, Allah is with us."
+      "text": "Everything about the Hijra was planned to perfection... the decoy, the supplies, the spy, the tracks, the route. And still, in the end, it came down to a moment where planning could do nothing at all... and trust did everything. Tie your camel, plan your escape... and when the hunters reach the mouth of your cave, say what he said... do not grieve. Indeed, Allah is with us.",
+      "video": "https://videos.pexels.com/video-files/9339066/9339066-hd_1920_1080_24fps.mp4",
+      "videoDuration": 53
     }
   ],
   "captions": {
