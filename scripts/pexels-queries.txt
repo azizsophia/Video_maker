@@ -1,4 +1,26 @@
-# Fetch exact poster images for the 3 unchanged clips (candle beat 7, candle
-# beat 9 / Waraqah, desert valley beat 10) to rebuild the 13-beat contact sheet.
---ids
-6227239,4098246,34912718
+# signs-of-the-hour - 12 beats, vertical clip candidates
+--portrait
+# beat 1 - night city skyline timelapse
+night city skyline timelapse
+# beat 2 - slow dark storm clouds (title card)
+dark storm clouds timelapse
+# beat 3 - white fabric moving in dark wind
+white fabric flowing dark background
+# beat 4 - vast night desert sky
+desert night sky stars
+# beat 5 - skyscrapers shot from below, glass and sky
+skyscrapers looking up glass towers
+# beat 6 - modern desert-city skyline at dusk
+dubai skyline dusk
+# beat 7 - fast-moving clouds timelapse over city lights
+clouds moving over city night lights timelapse
+# beat 8 - gold dust drifting in the dark
+gold dust particles floating dark
+# beat 9 - a lamp dimming in a dark room
+old lantern flame dark room
+# beat 10 - empty desert horizon, wind over sand
+wind blowing sand desert dunes
+# beat 11 - dark clouds parting over light
+sun rays breaking through dark clouds
+# beat 12 - sunrise breaking over a still landscape
+sunrise golden light calm landscape
