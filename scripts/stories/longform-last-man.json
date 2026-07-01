@@ -8,14 +8,17 @@
   "showOutro": true,
   "cover": {
     "title": "The Last Man",
-    "kicker": "TEN WORLDS FOR THE LEAST"
+    "kicker": "TEN WORLDS FOR THE LEAST",
+    "image": "https://images.pexels.com/photos/16515278/pexels-photo-16515278.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2560&h=1440"
   },
   "_note": "SUN long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, once described the very last human being to leave the Fire... and enter Paradise. It is a story about the lowest rank in Jannah... the least of everyone. And while telling it... the Prophet laughed. By the end, you will know why.",
-      "foot": "Sahih Muslim 186"
+      "foot": "Sahih Muslim 186",
+      "video": "https://videos.pexels.com/video-files/18109936/18109936-hd_1920_1080_60fps.mp4",
+      "videoDuration": 26
     },
     {
       "type": "narration",
@@ -26,52 +29,72 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/9694807/9694807-hd_1920_1080_25fps.mp4",
+      "videoDuration": 39
     },
     {
       "type": "narration",
       "text": "He crawls out of the Fire... the last one. And he turns to face it, and says... blessed is He who saved me from you. Then he lifts his eyes... and sees nothing ahead but emptiness.",
-      "foot": "Sahih Muslim 186"
+      "foot": "Sahih Muslim 186",
+      "video": "https://videos.pexels.com/video-files/37643014/15956394_1920_1080_60fps.mp4",
+      "videoDuration": 40
     },
     {
       "type": "narration",
       "text": "Then he sees a tree in the distance... and he cannot help himself. My Lord... bring me near that tree, only that I may rest in its shade and drink of its water. And Allah says... son of Adam, if I grant it, will you ask Me for more? He says... no, my Lord. And he promises. And his Lord excuses him... because he is seeing what he cannot endure.",
-      "foot": "Sahih Muslim 187"
+      "foot": "Sahih Muslim 187",
+      "video": "https://videos.pexels.com/video-files/10340467/10340467-hd_1920_1080_30fps.mp4",
+      "videoDuration": 62
     },
     {
       "type": "narration",
       "text": "So he is brought near. And then... a more beautiful tree. And the promise breaks. My Lord, just this one... I will ask nothing else. And again He excuses him... and again, a third tree, at the very gate of Paradise.",
-      "foot": "Sahih Muslim 187"
+      "foot": "Sahih Muslim 187",
+      "video": "https://videos.pexels.com/video-files/12219129/12219129-hd_1920_1080_60fps.mp4",
+      "videoDuration": 32
     },
     {
       "type": "narration",
       "text": "And at the gate, he hears them... the voices of the people of Paradise. And his heart cannot bear it. My Lord... enter me into it. And Allah says... son of Adam, what will finally end your asking? Would it please you if I gave you the world... and the like of it with it?",
-      "foot": "Sahih Muslim 187"
+      "foot": "Sahih Muslim 187",
+      "video": "https://videos.pexels.com/video-files/4787839/4787839-hd_1920_1080_30fps.mp4",
+      "videoDuration": 21
     },
     {
       "type": "narration",
       "text": "And the man says something so human it stops you... My Lord... are You mocking me... and You are the Lord of the worlds? A man who just crawled out of the Fire cannot believe mercy this size is aimed at him.",
-      "foot": "Sahih Muslim 187"
+      "foot": "Sahih Muslim 187",
+      "video": "https://videos.pexels.com/video-files/33737930/14324385_1920_1080_30fps.mp4",
+      "videoDuration": 37
     },
     {
       "type": "narration",
       "text": "And this is where the Prophet, peace be upon him, laughed until his back teeth showed. They asked him why. He said... because the Lord of the worlds laughed when the man said it, and answered... I am not mocking you. But I am able to do... whatever I will.",
-      "foot": "Sahih Muslim 187"
+      "foot": "Sahih Muslim 187",
+      "video": "https://videos.pexels.com/video-files/10823026/10823026-hd_1920_1080_24fps.mp4",
+      "videoDuration": 42
     },
     {
       "type": "narration",
       "text": "And the verdict comes. For you is the world... and ten times the like of it. Ten worlds. For the LAST man. The least of them. The one who broke his promise three times at three trees.",
-      "foot": "Sahih al-Bukhari 6571 and Sahih Muslim 186"
+      "foot": "Sahih al-Bukhari 6571 and Sahih Muslim 186",
+      "video": "https://videos.pexels.com/video-files/36600672/15517826_1920_1080_60fps.mp4",
+      "videoDuration": 48
     },
     {
       "type": "narration",
       "text": "Now hear the ayah this story lives inside... Say, O My servants who have transgressed against their own souls... do not despair of the mercy of Allah. Indeed, Allah forgives all sins.",
       "quote": "39:53",
-      "foot": "Qur'an 39:53 (shown, not recited)"
+      "foot": "Qur'an 39:53 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/33859149/14369501_1920_1080_30fps.mp4",
+      "videoDuration": 77
     },
     {
       "type": "narration",
-      "text": "If the floor of Paradise is ten worlds wide... what is its ceiling? That is what is being offered... to the person who almost did not make it. So whatever you have done, and however far you feel... do not despair of the mercy of Allah. The worst finisher in Jannah... is richer than this whole earth. And the door, right now... is still open."
+      "text": "If the floor of Paradise is ten worlds wide... what is its ceiling? That is what is being offered... to the person who almost did not make it. So whatever you have done, and however far you feel... do not despair of the mercy of Allah. The worst finisher in Jannah... is richer than this whole earth. And the door, right now... is still open.",
+      "video": "https://videos.pexels.com/video-files/6134369/6134369-hd_1920_1080_25fps.mp4",
+      "videoDuration": 44
     }
   ],
   "captions": {
