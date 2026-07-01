@@ -1,24 +1,24 @@
-# yunus - 9 beats, plus sumayya beat 6 retry
+# zamzam - 9 beats, plus yunus beat 6 and 7 retries
 --portrait
-# beat 1 - deep dark ocean water, faint light from above
-deep dark ocean underwater light above
-# beat 2 - slow moonlit sea (title card)
-moonlight reflecting ocean night
-# beat 3 - storm gathering over sea horizon
-storm clouds gathering over ocean horizon
-# beat 4 - violent waves in darkness
-stormy sea huge waves dark
-# beat 5 - descending into deep black water
-sinking deep underwater dark blue abyss
-# beat 6 - a single beam of light piercing deep water
-light rays piercing underwater deep
-# beat 7 - sunlight breaking the surface from below
-underwater looking up sunlight surface
-# beat 8 - calm sea at dawn
-calm ocean sunrise gentle waves
-# beat 9 - wide serene sunrise over still water
-serene sunrise still water golden reflection
-# retry sumayya beat 6 - single shaft of light through dust
-sunbeam through window dark room dust
-# retry sumayya beat 6b
-volumetric light ray dark forest fog
+# beat 1 - barren desert valley between dark mountains
+barren rocky desert valley mountains
+# beat 2 - slow dark water surface catching light (title card)
+dark water surface ripples moonlight
+# beat 3 - lone path of footprints across untouched sand
+footprints trail sand dunes
+# beat 4 - vast still desert under enormous sky
+vast empty desert landscape big sky
+# beat 5 - heat shimmer between two rocky hills
+rocky arid hills canyon desert
+# beat 6 - long flowing crowd lights in motion blur (no faces)
+kaaba tawaf pilgrims aerial night
+# beat 7 - spring water bubbling up, close and clear
+spring water bubbling up rocks close
+# beat 8 - clear water poured into a simple cup, backlit
+pouring water glass dark backlit
+# beat 9 - dawn rising over a desert city skyline
+makkah city skyline dawn
+# retry yunus beat 6 - single beam of light piercing deep water
+sun beam deep blue ocean underwater rays
+# retry yunus beat 7 - sunlight breaking the surface from below
+under water surface sun shining waves below

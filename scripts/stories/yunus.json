@@ -15,7 +15,9 @@
     {
       "type": "narration",
       "text": "From inside a living whale... at the bottom of the sea... in the black of night... one sentence saved a prophet. And the Prophet Muhammad, peace be upon him, said... no Muslim ever says it, for anything, except that Allah answers him.",
-      "foot": "Jami at-Tirmidhi 3505, sahih"
+      "foot": "Jami at-Tirmidhi 3505, sahih",
+      "video": "https://videos.pexels.com/video-files/37761773/16017521_1080_1920_60fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
@@ -26,22 +28,30 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/29717249/12777649_1080_1920_24fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "He had called his city to Allah for years... and they refused. So he left them, angry... before his Lord gave him leave. And he thought no decree would tighten around him.",
-      "foot": "Qur'an 21:87"
+      "foot": "Qur'an 21:87",
+      "video": "https://videos.pexels.com/video-files/37095632/15715050_1080_1920_50fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "He boarded a loaded ship. The storm came. And the sailors cast lots to lighten the load... and the lot fell... on him.",
-      "foot": "Qur'an 37:140-141"
+      "foot": "Qur'an 37:140-141",
+      "video": "https://videos.pexels.com/video-files/28265381/12344308_1080_1920_30fps.mp4",
+      "videoDuration": 17
     },
     {
       "type": "narration",
       "text": "And the whale swallowed him. A living prison, inside the sea, inside the night. Darkness... upon darkness... upon darkness.",
-      "foot": "Qur'an 37:142"
+      "foot": "Qur'an 37:142",
+      "video": "https://videos.pexels.com/video-files/38077964/16165304_1080_1920_60fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
@@ -58,11 +68,15 @@
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, said... the dua of my brother Yunus. No Muslim says it, in any difficulty, except that Allah answers him.",
-      "foot": "Jami at-Tirmidhi 3505"
+      "foot": "Jami at-Tirmidhi 3505",
+      "video": "https://videos.pexels.com/video-files/36316616/15401795_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
-      "text": "Whatever you are inside right now... it is not three darknesses at the bottom of the sea. Say the words. La ilaha illa anta... subhanaka... inni kuntu minaz-zalimin."
+      "text": "Whatever you are inside right now... it is not three darknesses at the bottom of the sea. Say the words. La ilaha illa anta... subhanaka... inni kuntu minaz-zalimin.",
+      "video": "https://videos.pexels.com/video-files/16998611/16998611-hd_1080_1920_30fps.mp4",
+      "videoDuration": 49
     }
   ],
   "captions": {
