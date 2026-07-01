@@ -1,11 +1,7 @@
-# Khadijah short - re-source beats 4 and 7. VERTICAL. No person as subject,
-# no on-screen text/watermark, no other-faith symbols, dark/cinematic.
+# Khadijah beat 4 ONLY - "a man who knew the old scriptures". Must be TEXT-FREE
+# (no legible writing), no person as subject, dark/cinematic, VERTICAL.
 --portrait
-# beat 4 - old scriptures (NO hands): an antique book / scroll by candlelight
-antique open book candlelight dark background
-old leather book pages in candlelight
-ancient scroll parchment dark still
-# beat 7 - a light beam / shaft of light (the love that outlived her)
-god rays light beam through darkness dust
-shaft of light beam in dark room
-volumetric light rays dark background
+closed antique leather book on table candlelight
+quill pen and inkwell dark moody candlelight
+stack of old closed books dark candle glow
+feather quill writing candlelight dark close up
