@@ -1,63 +1,58 @@
-# Round 1: long-form 16:9 footage (landscape default, no --portrait).
-# Stories: longform-dajjal (14), longform-ayyub (12), longform-salman (14), longform-hijra (12).
-# One query per beat, in order.
+# Round 2: long-form 16:9 (landscape default).
+# Stories: longform-ad-duha (11), longform-ant-bee-spider (11), longform-last-man (11)
+# plus gap requeries for salman b4/b5/b6/b8, hijra b3/b4/b6.
 
-# --- longform-dajjal ---
-dark storm clouds rolling timelapse
-ominous dark clouds night slow
-black smoke swirling dark abstract
-empty desert road storm sky
-rain falling over green fields
-fire flames burning darkness close up
-lightning strikes dramatic night sky
-sun timelapse clouds moving sky
-kaaba mecca night aerial
-mosque minaret dawn sky
-prayer beads dark background
-mosque interior architecture light
-empty road fog dark moody
-powerful sunrise breaking over horizon
+# --- longform-ad-duha ---
+dying ember glow dark
+dark sky before dawn horizon
+sand blowing over dunes wind
+calm dark sea night horizon
+soft sunrise golden sky clouds
+morning sun rays through trees mist
+sunbeams through clouds heavenly sky
+small green sprout seedling sunlight
+sunlit path through forest morning
+morning light golden meadow flowers
+bright sunrise timelapse horizon
 
-# --- longform-ayyub ---
-lone tree field dramatic storm sky
-dark desert dunes night
-cattle herd green pasture aerial
-cracked dry earth drought
-oil lamp flame flickering dark
-milky way stars night sky timelapse
-moonlit clouds night sky
-spring water flowing over rocks
-green meadow morning sunlight
-golden particles falling dark background
-grass swaying wind close up
-serene dawn pastel sky clouds
+# --- longform-ant-bee-spider ---
+ant macro close up leaf
+dark nature bokeh night background
+dandelion seeds macro backlit
+epic green valley aerial mist
+ants colony walking macro
+ants teamwork carrying macro
+bee collecting nectar flower macro
+honey dripping golden honeycomb
+spider spinning web macro
+spider web dew drops morning
+sunrise golden field wildflowers
 
-# --- longform-salman ---
-large fire burning flames night
-dark mountains silhouette night sky
-torch flame burning darkness
-candles glowing dark room
-rusty old chain close up
-gold coins dark treasure
-old lantern dim light darkness
-date palm trees oasis desert
-camel caravan desert dunes
-palm trees looking up sunlight
-warm golden bokeh lights abstract
-date palm plantation aerial
-desert canyon ravine aerial
-desert sunrise golden horizon
+# --- longform-last-man ---
+burning embers sparks rising night
+dark smoke slow black background
+light at end of dark tunnel
+lone acacia tree sunset savanna
+flowering tree pink blossoms sky
+golden light rays through clouds heaven
+sunbeam breaking through storm clouds sea
+warm golden light over landscape aerial
+vast mountain landscape epic aerial
+dawn light over calm ocean horizon
+sunrise above sea of clouds aerial
 
-# --- longform-hijra ---
-full moon desert night
-dark night clouds moon slow
-old city rooftops night
-blanket on bed dark room
-empty narrow old town street
-sheep flock grazing hillside
-cave entrance view from inside
-light rays inside dark cave
-dark cave interior rocks
-horse galloping desert sand
-madinah prophet mosque
-coastal desert road aerial sunrise
+# --- gap requeries ---
+# salman b4 (chains)
+heavy iron chain links dark
+# salman b5 (hoarded gold)
+antique gold treasure dark
+# salman b6 (fading lamps, teacher to teacher)
+candle flame blowing out smoke dark
+# salman b8 (caravan that betrayed him)
+camel caravan silhouette sunset
+# hijra b3 (cloak on a bed, no person)
+empty bed moonlight dark room night
+# hijra b4 (noon empty street)
+old city alley empty sunlight stone
+# hijra b6 (cave of Thawr mouth)
+cave opening from inside rock silhouette
