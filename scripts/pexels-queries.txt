@@ -1,11 +1,16 @@
-# Round 3: video gap fills (landscape).
-# ant-bee-spider b1 (title card slow dark macro)
-water drops on leaf dark macro
-# ant-bee-spider b5 (ants teamwork, clean literal)
-leafcutter ants carrying leaves
-# ant-bee-spider b7 (honey healing, premium dark)
-honey pouring slow motion dark background
-# last-man b3 (first tree: lone tree golden light)
-single tree silhouette sunset hill
-# ad-duha b7 (orphan beat: small plant in light)
-seedling sprout growing soil sunlight nature
+# Round 4: cover photos (16:9 landscape, CoverWide) for the 7 long-form stories.
+--photos
+# longform-dajjal
+dark storm clouds dramatic sky lightning
+# longform-ayyub
+lone tree field dramatic golden sky
+# longform-salman
+date palm trees desert oasis sunset
+# longform-hijra
+desert mountain cave starry night
+# longform-ad-duha
+soft golden sunrise glowing clouds
+# longform-ant-bee-spider
+bee honeycomb macro golden
+# longform-last-man
+sun rays breaking through clouds golden
