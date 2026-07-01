@@ -34,9 +34,9 @@ if (c) {
   const tags = Array.isArray(c.hashtags) ? c.hashtags.join(" ") : "";
   const block = (label, line, withTags) =>
     line ? `== ${label} ==\n${line}${withTags && tags ? `\n${tags}` : ""}\n\n` : "";
-  // Standing founding-offer call to action, appended to each social caption and
-  // the long-form description so every post drives to the waitlist.
-  const cta = c.cta ?? "Founding members get 15% off the first order. Join the founding list at ketabistudio.com.";
+  // Standing launch call to action, appended to each social caption and the
+  // long-form description so every post drives the keepsake + book waitlist.
+  const cta = c.cta ?? "Our keepsake and children's book launch this month. Join the waitlist at ketabistudio.com for 15% off your first order.";
   const withCta = (line) => (line ? `${line}\n${cta}` : line);
   const txt =
     `${story.title ?? "Untitled"} - captions\n` +

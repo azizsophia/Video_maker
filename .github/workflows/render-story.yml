@@ -44,6 +44,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Restore narration cache
+        # Narration audio is seed-locked, so identical lines are reusable across
+        # runs. Restoring this cache means a re-render (visual/caption fix) bills
+        # ZERO ElevenLabs characters; only new/changed lines are generated.
+        uses: actions/cache@v4
+        with:
+          path: public/story-cache
+          key: tts-cache-${{ inputs.story }}-${{ github.run_id }}
+          restore-keys: |
+            tts-cache-${{ inputs.story }}-
+
       - name: Build story (narration + ayahs)
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}

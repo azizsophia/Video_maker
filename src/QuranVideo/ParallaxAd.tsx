@@ -134,7 +134,7 @@ export const ParallaxAd: React.FC<{ audioSrc?: string; frames?: number }> = ({ a
   );
   const cta = (
     <>
-      <div style={{ fontFamily: JOST, fontWeight: 400, fontSize: wide ? 30 : 32, letterSpacing: 1, color: "rgba(246,244,239,0.88)", marginBottom: 24 }}>Founding members get 15% off the first order</div>
+      <div style={{ fontFamily: JOST, fontWeight: 400, fontSize: wide ? 30 : 32, letterSpacing: 1, color: "rgba(246,244,239,0.88)", marginBottom: 24 }}>Launching this month. Join the waitlist for 15% off your first order</div>
       <div style={{ transform: `scale(${pulse})`, transformOrigin: wide ? "left center" : "center", fontFamily: JOST, fontWeight: 600, letterSpacing: 1, fontSize: wide ? 42 : 46, color: FOREST_DEEP, background: `linear-gradient(180deg, #f0e6c8, ${GOLD})`, padding: "24px 60px", borderRadius: 100, boxShadow: "0 14px 40px rgba(201,168,76,0.35)" }}>
         ketabistudio.com →
       </div>

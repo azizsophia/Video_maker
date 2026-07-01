@@ -77,17 +77,27 @@ asked. This file is the durable memory for this repo.
 - `scripts/tts.py` and the `tts-test` workflow accept `stability`, `style`, and
   `seed` so a voice test can EXACTLY mirror the render segment before spending a
   full render (e.g. testing the deep title read, or a name's spelling).
+- Narration is CACHED (`public/story-cache`, persisted by actions/cache keyed per
+  story): a re-render bills ZERO ElevenLabs characters for unchanged lines; only
+  new or edited text is generated. Keep the cache step in render-story.yml.
 - NO emojis. NO em or en dashes (plain hyphens only). This applies to scripts,
   captions, descriptions, and covers.
 
 ## Packaging (every finished video)
 - Cover (CoverCard 9:16 for shorts, CoverWide 16:9 for long-form).
 - captions.txt: TikTok / Shorts / Reels + long-form YouTube description with the
-  app footer, and the founding-offer CTA: "Founding members get 15% off the first
-  order. Join the founding list at ketabistudio.com."
-- Render premium (4K / scale 2 for long-form). Deliver the artifact link, not the
-  mp4 in chat. The "failure" badge on render-story is usually just the optional
-  Drive upload; the artifact is still produced.
+  app footer, and the LAUNCH CTA (July 2026, keepsake + children's book):
+  "Our keepsake and children's book launch this month. Join the waitlist at
+  ketabistudio.com for 15% off your first order." The built-in ParallaxAd end
+  card carries the same launch line. After launch, update both to a buy CTA.
+- Render at scale 1 (1080p) for the daily cadence - it looks identical on phones
+  and halves render minutes; reserve scale 2 / 4K for special releases. Deliver
+  the artifact link, not the mp4 in chat. The "failure" badge on render-story is
+  usually just the optional Drive upload; the artifact is still produced.
+- Daily output is 1 short + 1 long-form per the content-calendar pillars. Batch
+  the week: ALL scripts in one review message, ALL contact sheets in one message,
+  then render the batch, so the owner schedules everything in one sitting
+  (YouTube native, TikTok web, Meta Business Suite).
 
 ## Process
 - See docs/content-calendar.md (schedule, pillars, posted list, app footer) and

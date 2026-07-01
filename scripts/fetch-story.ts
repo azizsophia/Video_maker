@@ -8,8 +8,9 @@
  *   npx tsx scripts/fetch-story.ts --story=scripts/stories/gog-and-magog.json \
  *       --out=src/data/story-render.json [--voice <id>] [--theme midnight]
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, writeFile } from "node:fs/promises";
 import { createWriteStream } from "node:fs";
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { Readable } from "node:stream";
 import { dirname, join } from "node:path";
@@ -139,18 +140,39 @@ async function tts(
   dest: string,
   opts: { settings?: Record<string, unknown>; seed?: number } = {}
 ) {
-  const key = (process.env.ELEVENLABS_API_KEY || "").trim();
-  if (!key) throw new Error("ELEVENLABS_API_KEY is not set.");
+  // Per-segment overrides (e.g. a deeper, steadier read for the title card)
+  // merge over the emotional default.
+  const settings = { ...DEFAULT_VOICE_SETTINGS, ...(opts.settings ?? {}) };
+  const seed = opts.seed ?? DEFAULT_VOICE_SEED;
+  // Narration cache. Audio is seed-locked, so identical text + voice + settings
+  // + seed would return identical audio anyway - reuse it instead of re-billing
+  // ElevenLabs. render-story.yml persists public/story-cache between runs, so a
+  // re-render (visual fix, caption fix) bills ZERO characters and only lines
+  // whose text or delivery actually changed are generated fresh.
+  const cacheKey = createHash("sha1")
+    .update(JSON.stringify({ text, voice, model, settings, seed }))
+    .digest("hex");
+  const cachedMp3 = join("public", "story-cache", `${cacheKey}.mp3`);
+  const cachedMeta = join("public", "story-cache", `${cacheKey}.json`);
+  try {
+    const meta = JSON.parse(await readFile(cachedMeta, "utf8"));
+    await mkdir(dirname(dest), { recursive: true });
+    await copyFile(cachedMp3, dest);
+    console.log(`  (narration cache hit ${cacheKey.slice(0, 8)})`);
+    return meta;
+  } catch {
+    /* miss -> generate */
+  }
+  const apiKey = (process.env.ELEVENLABS_API_KEY || "").trim();
+  if (!apiKey) throw new Error("ELEVENLABS_API_KEY is not set.");
   const res = await fetch(`${ELEVEN}/text-to-speech/${voice}/with-timestamps`, {
     method: "POST",
-    headers: { "xi-api-key": key, "Content-Type": "application/json" },
+    headers: { "xi-api-key": apiKey, "Content-Type": "application/json" },
     body: JSON.stringify({
       text,
       model_id: model,
-      // Per-segment overrides (e.g. a deeper, steadier read for the title card)
-      // merge over the emotional default.
-      voice_settings: { ...DEFAULT_VOICE_SETTINGS, ...(opts.settings ?? {}) },
-      seed: opts.seed ?? DEFAULT_VOICE_SEED,
+      voice_settings: settings,
+      seed,
     }),
   });
   if (!res.ok) throw new Error(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 300)}`);
@@ -159,6 +181,13 @@ async function tts(
   await writeFile(dest, Buffer.from(data.audio_base64, "base64"));
   const words = groupWords(data.alignment);
   const duration = words.length ? words[words.length - 1].end : 0;
+  try {
+    await mkdir(dirname(cachedMp3), { recursive: true });
+    await copyFile(dest, cachedMp3);
+    await writeFile(cachedMeta, JSON.stringify({ words, duration }));
+  } catch {
+    /* cache write is best-effort; never fail the build over it */
+  }
   return { words, duration };
 }
 
@@ -281,9 +310,9 @@ async function main() {
     showOutro: story.showOutro ?? true,
     outroAd: story.outroAd ?? true,
     adSeconds: story.adSeconds ?? 8,
-    ctaHeadline: story.ctaHeadline ?? "Join the founding list",
+    ctaHeadline: story.ctaHeadline ?? "Launching this month",
     ctaHandle: story.ctaHandle ?? "",
-    ctaSub: story.ctaSub ?? "Early access before the shop opens.",
+    ctaSub: story.ctaSub ?? "Our keepsake and children's book. Join the waitlist for 15% off your first order.",
     ctaComment: story.ctaComment ?? "",
     ctaShowUrl: story.ctaShowUrl ?? true,
     ctaSeconds: story.ctaSeconds ?? 5.5,
