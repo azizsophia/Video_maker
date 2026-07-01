@@ -1,8 +1,25 @@
-# Cover photo for "The Story of Yusuf" — a real warm flame / oil lamp in the dark,
-# matching the opening scene. Photo mode (first line --photos). Want: single warm
-# flame, dark background, no people, no text, no church/cross context. Hi-res.
---photos
-single oil lamp flame glowing in the dark
-lit oil lamp warm flame black background
-brass arabian oil lamp lit in darkness
-single candle flame warm glow dark background
+# Khadijah (RA) short - VERTICAL (9:16). One distinct clip per beat, no reuse
+# (must differ from the Yusuf clips). Adab: no person as subject, no on-screen
+# text, no haram/other-faith symbols. Light / desert / lamp / pearl / Kaaba.
+--portrait
+# 1 hook - gold light in darkness
+golden light glowing in the dark
+# 2 first to believe - a single flame
+single candle flame in the dark
+# 3 her words at Hira - cloak, cave at dawn
+cave entrance dawn light desert
+# 4 Waraqah - old scripture by candlelight
+old parchment manuscript candlelight
+# 5 gave her fortune - empty desert valley
+empty desert valley at dusk
+# 6 the payoff - a glowing pearl
+glowing white pearl in darkness
+# 7 love that outlived her - two oil lamps
+vintage oil lamp glowing in the dark
+# 8 close - the Kaaba at dawn
+kaaba mecca pilgrims dawn
+# extras (alternates to avoid reuse)
+gold dust particles floating black background
+soft sunlight rays through clouds
+sand dunes desert night stars
+warm lantern light bokeh dark

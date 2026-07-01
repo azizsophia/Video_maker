@@ -8,6 +8,9 @@ if (!KEY) throw new Error("PEXELS_API_KEY not set");
 let args = process.argv.slice(2);
 const photos = args[0] === "--photos";
 if (photos) args = args.slice(1);
+// --portrait: vertical (9:16) clips for shorts. Default stays landscape (long-form).
+const portrait = args[0] === "--portrait";
+if (portrait) args = args.slice(1);
 
 for (const q of args) {
   if (photos) {
@@ -23,17 +26,22 @@ for (const q of args) {
     }
     continue;
   }
-  // Landscape (16:9) clips for the long-form. Prefer a ~1080p landscape file.
+  // Vertical (9:16) for shorts, or landscape (16:9) for long-form. Prefer a
+  // ~1080p file in the chosen orientation.
+  const orientation = portrait ? "portrait" : "landscape";
   const r = await fetch(
-    `https://api.pexels.com/videos/search?query=${encodeURIComponent(q)}&per_page=15&orientation=landscape&size=medium`,
+    `https://api.pexels.com/videos/search?query=${encodeURIComponent(q)}&per_page=15&orientation=${orientation}&size=medium`,
     { headers: { Authorization: KEY } }
   );
   const j = await r.json();
   for (const v of j.videos || []) {
-    const f =
-      v.video_files.find((f) => f.width === 1920 && f.height === 1080) ||
-      v.video_files.find((f) => f.width >= 1280 && f.width >= f.height) ||
-      v.video_files[0];
+    const f = portrait
+      ? v.video_files.find((f) => f.width === 1080 && f.height === 1920) ||
+        v.video_files.find((f) => f.height > f.width) ||
+        v.video_files[0]
+      : v.video_files.find((f) => f.width === 1920 && f.height === 1080) ||
+        v.video_files.find((f) => f.width >= 1280 && f.width >= f.height) ||
+        v.video_files[0];
     console.log(JSON.stringify({ q, id: v.id, dur: v.duration, w: f.width, h: f.height, link: f.link, image: v.image }));
   }
 }

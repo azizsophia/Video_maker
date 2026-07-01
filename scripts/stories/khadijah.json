@@ -1,0 +1,31 @@
+{
+  "id": "khadijah",
+  "title": "Khadijah: The Woman Allah Sent Salaam To",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Khadijah",
+    "kicker": "THE ONE ALLAH SENT SALAAM",
+    "scene": "nightsky"
+  },
+  "captions": {
+    "tiktok": "Allah sent this woman His own greetings of peace. The untold depth of Khadijah, may Allah be pleased with her.",
+    "shorts": "The woman Allah sent His salaam to, through the angel Jibril. This is Khadijah, may Allah be pleased with her.",
+    "reels": "Allah sent this woman His own greetings of peace. The untold depth of Khadijah, may Allah be pleased with her.",
+    "hashtags": ["#khadijah", "#islam", "#seerah", "#edutokcontest", "#muslimtiktok"]
+  },
+  "_note": "Short-form VERTICAL (9:16, ~75s). Pillar: Wednesday (Surah/companions-adjacent seerah). Every claim shown on screen with its source (foot): Sahih al-Bukhari 3, 3818, 3820; Sahih Muslim 2432, 2435; Musnad Ahmad (hasan); seerah (Ibn Hisham). No depiction of the Prophet pbuh, Khadijah, or the family. One distinct clip per beat, no reuse (must differ from the Yusuf set). Render StoryVideo (orientation=vertical).",
+  "segments": [
+    { "type": "narration", "text": "There was a woman so beloved to Allah, that He sent her His own greetings of peace, carried down by an angel. Only her. This is her story." },
+    { "type": "narration", "foot": "Sahih al-Bukhari 3", "text": "When the first revelation came, and the Prophet, peace be upon him, ran home trembling, she became the first soul alive to believe in him. Before anyone." },
+    { "type": "narration", "foot": "Sahih al-Bukhari 3", "text": "She held him and said: By Allah, Allah will never disgrace you. You keep the ties of family. You carry the weak. You honor your guest. You stand by the truth." },
+    { "type": "narration", "foot": "Sahih al-Bukhari 3", "text": "Then she took him to a man who knew the old scriptures, who confirmed it. This is the same angel that came to Musa. She did not only comfort him. She helped him carry it." },
+    { "type": "narration", "foot": "Seerah (Ibn Hisham)", "text": "She poured her entire fortune into his message. And when their own people starved them in the boycott, the richest woman in Makkah gave until nothing was left. She never complained." },
+    { "type": "narration", "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432", "text": "So one day the angel Jibril descended and said: when Khadijah comes, give her greetings of peace from her Lord. And give her the good news of a home in Paradise, made of hollowed pearl, where there is no noise, and no weariness, ever." },
+    { "type": "narration", "foot": "Sahih al-Bukhari 3818 and Sahih Muslim 2435", "text": "For twenty five years, he loved only her. And long after she was gone, he still sent gifts to her friends. Aisha said she was never jealous of anyone the way she was of Khadijah, a woman she never even met." },
+    { "type": "narration", "foot": "Musnad Ahmad (hasan)", "text": "He said: she believed in me when no one else did, and Allah gave me children through her. That was Khadijah, may Allah be pleased with her. Send this to a woman who needs to know her worth." }
+  ]
+}
