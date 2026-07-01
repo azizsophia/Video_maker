@@ -1,24 +1,22 @@
-# zamzam - 9 beats, plus yunus beat 6 and 7 retries
+# sayyid-al-istighfar - 9 beats, plus zamzam beat 8 retry
 --portrait
-# beat 1 - barren desert valley between dark mountains
-barren rocky desert valley mountains
-# beat 2 - slow dark water surface catching light (title card)
-dark water surface ripples moonlight
-# beat 3 - lone path of footprints across untouched sand
-footprints trail sand dunes
-# beat 4 - vast still desert under enormous sky
-vast empty desert landscape big sky
-# beat 5 - heat shimmer between two rocky hills
-rocky arid hills canyon desert
-# beat 6 - long flowing crowd lights in motion blur (no faces)
-kaaba tawaf pilgrims aerial night
-# beat 7 - spring water bubbling up, close and clear
-spring water bubbling up rocks close
-# beat 8 - clear water poured into a simple cup, backlit
-pouring water glass dark backlit
-# beat 9 - dawn rising over a desert city skyline
-makkah city skyline dawn
-# retry yunus beat 6 - single beam of light piercing deep water
-sun beam deep blue ocean underwater rays
-# retry yunus beat 7 - sunlight breaking the surface from below
-under water surface sun shining waves below
+# beat 1 - first light through morning mist
+first light morning mist sunrise trees
+# beat 2 - slow dark gold light (title card)
+soft golden light flare dark background
+# beat 3 - vast sky over small silhouetted landscape
+dramatic vast sky small horizon silhouette
+# beat 4 - a steady flame holding in wind
+oil lamp flame steady night
+# beat 5 - dark clouds slowly clearing
+dark clouds parting clearing timelapse
+# beat 6 - light on sand ripples, no people
+golden light shadows sand ripples texture
+# beat 7 - rain beginning over dry earth
+rain drops falling dry soil earth
+# beat 8 - day-to-night sky timelapse
+day to night timelapse sky stars
+# beat 9 - calm night sky filling with stars
+peaceful night sky full of stars
+# retry zamzam beat 8 - clear water poured into a simple cup, backlit
+fresh drinking water pouring glass sunlight

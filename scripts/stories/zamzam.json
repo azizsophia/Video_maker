@@ -15,7 +15,9 @@
     {
       "type": "narration",
       "text": "In a desert valley with no river and no rain... there is a well that has flowed since the time of Ibrahim, alayhi salam. Millions drink from it every single year. And it began... with a mother who ran out of water.",
-      "foot": "Sahih al-Bukhari 3364"
+      "foot": "Sahih al-Bukhari 3364",
+      "video": "https://videos.pexels.com/video-files/28408260/12376977_1080_1920_30fps.mp4",
+      "videoDuration": 12
     },
     {
       "type": "narration",
@@ -26,32 +28,44 @@
         "stability": 0.72,
         "style": 0.1,
         "similarity_boost": 0.85
-      }
+      },
+      "video": "https://videos.pexels.com/video-files/34554207/14641020_1080_1920_30fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "Ibrahim, alayhi salam, was commanded to leave his wife Hajar and their baby Ismail in an empty valley... no people, no water, no shade. And as he walked away, she called after him... Did Allah command you to do this? He said yes. And she answered... then He will not abandon us.",
-      "foot": "Sahih al-Bukhari 3364"
+      "foot": "Sahih al-Bukhari 3364",
+      "video": "https://videos.pexels.com/video-files/32909168/14025681_1080_1920_30fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "That sentence... is one of the greatest sentences of trust ever spoken. She did not know how. She did not know when. She only knew Who.",
-      "foot": "Sahih al-Bukhari 3364"
+      "foot": "Sahih al-Bukhari 3364",
+      "video": "https://videos.pexels.com/video-files/20065899/20065899-hd_1080_1920_30fps.mp4",
+      "videoDuration": 26
     },
     {
       "type": "narration",
       "text": "Then the waterskin emptied. The baby cried. And Hajar ran... to the hill of Safa, looking. Down, across, up the hill of Marwa. Seven times... between two hills... in the heat, for her child.",
-      "foot": "Sahih al-Bukhari 3364"
+      "foot": "Sahih al-Bukhari 3364",
+      "video": "https://videos.pexels.com/video-files/24811239/11897345_1080_1920_30fps.mp4",
+      "videoDuration": 21
     },
     {
       "type": "narration",
       "text": "Fourteen centuries later, every pilgrim in Makkah walks those exact seven laps... Safa to Marwa. Millions of people, every year... retracing the footsteps of one desperate mother. Allah loved her running so much, He made it worship... forever.",
-      "foot": "Sahih al-Bukhari 3364"
+      "foot": "Sahih al-Bukhari 3364",
+      "video": "https://videos.pexels.com/video-files/17469567/17469567-hd_1080_1920_30fps.mp4",
+      "videoDuration": 22
     },
     {
       "type": "narration",
       "text": "On the seventh crossing... she heard it. The angel struck the ground... and water rose from dead sand. She cupped it with her hands, and the Prophet, peace be upon him, smiled when he told it... may Allah have mercy on the mother of Ismail. Had she left it, Zamzam would be a river flowing.",
-      "foot": "Sahih al-Bukhari 3364"
+      "foot": "Sahih al-Bukhari 3364",
+      "video": "https://videos.pexels.com/video-files/6174203/6174203-hd_1080_1920_30fps.mp4",
+      "videoDuration": 16
     },
     {
       "type": "narration",
@@ -60,7 +74,9 @@
     },
     {
       "type": "narration",
-      "text": "Birds began to circle the water. A tribe came and settled. Around the well grew a city... and in that city was born the Prophet, peace be upon him. All of it... downstream of one woman who said... He will not abandon us."
+      "text": "Birds began to circle the water. A tribe came and settled. Around the well grew a city... and in that city was born the Prophet, peace be upon him. All of it... downstream of one woman who said... He will not abandon us.",
+      "video": "https://videos.pexels.com/video-files/36503838/15478525_1080_1920_30fps.mp4",
+      "videoDuration": 16
     }
   ],
   "captions": {
