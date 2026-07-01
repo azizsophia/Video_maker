@@ -105,6 +105,9 @@ const PHONETIC: Record<string, string> = {
   makkah: "Makkah",
   waraqah: "Waraka",
   hira: "Heera",
+  // "Read" here is the command Iqra (present/imperative), so it must sound
+  // "reed", never past-tense "red". On-screen caption keeps the spelling "Read".
+  read: "reed",
 };
 const stripEdges = (tok: string): [string, string, string] => {
   const m = tok.match(/^([^A-Za-z']*)(.*?)([^A-Za-z']*)$/s);
