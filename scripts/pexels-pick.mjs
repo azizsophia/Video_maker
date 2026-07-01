@@ -21,20 +21,23 @@ if (args[0] === "--ids") {
 }
 const photos = args[0] === "--photos";
 if (photos) args = args.slice(1);
-// --portrait: vertical (9:16) clips for shorts. Default stays landscape (long-form).
+// --portrait: vertical (9:16) for shorts. Default stays landscape (long-form).
+// Applies to both photos (covers) and videos.
 const portrait = args[0] === "--portrait";
 if (portrait) args = args.slice(1);
 
 for (const q of args) {
   if (photos) {
+    const orientation = portrait ? "portrait" : "landscape";
     const r = await fetch(
-      `https://api.pexels.com/v1/search?query=${encodeURIComponent(q)}&per_page=12&orientation=portrait&size=large`,
+      `https://api.pexels.com/v1/search?query=${encodeURIComponent(q)}&per_page=12&orientation=${orientation}&size=large`,
       { headers: { Authorization: KEY } }
     );
     const j = await r.json();
     for (const p of j.photos || []) {
-      // Request a cover-resolution portrait crop of the original.
-      const image = `${p.src.original}?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920`;
+      // Request a cover-resolution crop of the original in the chosen orientation.
+      const crop = portrait ? "w=1080&h=1920" : "w=2560&h=1440";
+      const image = `${p.src.original}?auto=compress&cs=tinysrgb&fit=crop&${crop}`;
       console.log(JSON.stringify({ q, id: p.id, w: p.width, h: p.height, alt: p.alt, image }));
     }
     continue;

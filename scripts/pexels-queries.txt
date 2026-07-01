@@ -1,7 +1,63 @@
-# Yunus beat 5 - the whale swallows him. Need a REAL whale in deep dark water,
-# vertical, no divers/boats/people, no text. Literal per the #1 visuals rule.
---portrait
-whale swimming deep dark ocean
-humpback whale underwater deep blue
-whale silhouette deep sea dark
-sperm whale diving deep ocean
+# Round 1: long-form 16:9 footage (landscape default, no --portrait).
+# Stories: longform-dajjal (14), longform-ayyub (12), longform-salman (14), longform-hijra (12).
+# One query per beat, in order.
+
+# --- longform-dajjal ---
+dark storm clouds rolling timelapse
+ominous dark clouds night slow
+black smoke swirling dark abstract
+empty desert road storm sky
+rain falling over green fields
+fire flames burning darkness close up
+lightning strikes dramatic night sky
+sun timelapse clouds moving sky
+kaaba mecca night aerial
+mosque minaret dawn sky
+prayer beads dark background
+mosque interior architecture light
+empty road fog dark moody
+powerful sunrise breaking over horizon
+
+# --- longform-ayyub ---
+lone tree field dramatic storm sky
+dark desert dunes night
+cattle herd green pasture aerial
+cracked dry earth drought
+oil lamp flame flickering dark
+milky way stars night sky timelapse
+moonlit clouds night sky
+spring water flowing over rocks
+green meadow morning sunlight
+golden particles falling dark background
+grass swaying wind close up
+serene dawn pastel sky clouds
+
+# --- longform-salman ---
+large fire burning flames night
+dark mountains silhouette night sky
+torch flame burning darkness
+candles glowing dark room
+rusty old chain close up
+gold coins dark treasure
+old lantern dim light darkness
+date palm trees oasis desert
+camel caravan desert dunes
+palm trees looking up sunlight
+warm golden bokeh lights abstract
+date palm plantation aerial
+desert canyon ravine aerial
+desert sunrise golden horizon
+
+# --- longform-hijra ---
+full moon desert night
+dark night clouds moon slow
+old city rooftops night
+blanket on bed dark room
+empty narrow old town street
+sheep flock grazing hillside
+cave entrance view from inside
+light rays inside dark cave
+dark cave interior rocks
+horse galloping desert sand
+madinah prophet mosque
+coastal desert road aerial sunrise
