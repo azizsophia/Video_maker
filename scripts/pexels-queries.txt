@@ -1,16 +1,5 @@
-# cover photos - one query per story (real photos, premium, literal)
---photos
-# signs-of-the-hour cover - towers rising into a dark sky
-skyscrapers night sky dark towers
-# the-bee cover - bee on lavender
-bee lavender flower macro
-# al-kawthar cover - river of light / abundance
-river golden sunlight flowing
-# sumayya cover - single star in deep night sky
-lone star night sky desert
-# yunus cover - deep ocean light from above
-deep ocean underwater light rays
-# zamzam cover - desert spring water
-desert oasis spring water rocks
-# sayyid-al-istighfar cover - morning mist golden light
-golden sunrise morning mist landscape
+--portrait
+gold ember particles rising dark
+gold glitter bokeh slow motion dark
+oil lamp flame dark room
+antique lantern flame darkness
