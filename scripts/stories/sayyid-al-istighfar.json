@@ -31,7 +31,8 @@
         "similarity_boost": 0.85
       },
       "video": "https://videos.pexels.com/video-files/34317040/14537852_1080_1920_60fps.mp4",
-      "videoDuration": 9
+      "videoDuration": 9,
+      "holdSeconds": 1.8
     },
     {
       "type": "narration",
