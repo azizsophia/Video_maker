@@ -6,6 +6,19 @@
 const KEY = process.env.PEXELS_API_KEY;
 if (!KEY) throw new Error("PEXELS_API_KEY not set");
 let args = process.argv.slice(2);
+// --ids 111,222,333 : fetch specific videos by id and print their poster image
+// (used to rebuild contact sheets when the poster slug is unknown).
+if (args[0] === "--ids") {
+  const ids = (args[1] || "").split(",").map((s) => s.trim()).filter(Boolean);
+  for (const id of ids) {
+    const r = await fetch(`https://api.pexels.com/videos/videos/${id}`, {
+      headers: { Authorization: KEY },
+    });
+    const v = await r.json();
+    console.log(JSON.stringify({ id: v.id, dur: v.duration, image: v.image }));
+  }
+  process.exit(0);
+}
 const photos = args[0] === "--photos";
 if (photos) args = args.slice(1);
 // --portrait: vertical (9:16) clips for shorts. Default stays landscape (long-form).

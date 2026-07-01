@@ -1,10 +1,4 @@
-# Khadijah beat 8 ONLY - her reassurance "Allah will never disgrace you".
-# Need a clean, timeless, WARM visual (NOT a candle, NOT a desert, NO modern
-# interiors/people/text). Vertical 9:16.
---portrait
-# dappled golden sunlight through leaves - warm, natural, timeless
-golden sunlight through green leaves gentle breeze
-# soft warm light rays in a forest
-warm sun rays through forest morning mist
-# abstract soft warm golden bokeh light
-soft warm golden bokeh light dark background
+# Fetch exact poster images for the 3 unchanged clips (candle beat 7, candle
+# beat 9 / Waraqah, desert valley beat 10) to rebuild the 13-beat contact sheet.
+--ids
+6227239,4098246,34912718
