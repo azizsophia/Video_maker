@@ -1,58 +1,11 @@
-# Round 2: long-form 16:9 (landscape default).
-# Stories: longform-ad-duha (11), longform-ant-bee-spider (11), longform-last-man (11)
-# plus gap requeries for salman b4/b5/b6/b8, hijra b3/b4/b6.
-
-# --- longform-ad-duha ---
-dying ember glow dark
-dark sky before dawn horizon
-sand blowing over dunes wind
-calm dark sea night horizon
-soft sunrise golden sky clouds
-morning sun rays through trees mist
-sunbeams through clouds heavenly sky
-small green sprout seedling sunlight
-sunlit path through forest morning
-morning light golden meadow flowers
-bright sunrise timelapse horizon
-
-# --- longform-ant-bee-spider ---
-ant macro close up leaf
-dark nature bokeh night background
-dandelion seeds macro backlit
-epic green valley aerial mist
-ants colony walking macro
-ants teamwork carrying macro
-bee collecting nectar flower macro
-honey dripping golden honeycomb
-spider spinning web macro
-spider web dew drops morning
-sunrise golden field wildflowers
-
-# --- longform-last-man ---
-burning embers sparks rising night
-dark smoke slow black background
-light at end of dark tunnel
-lone acacia tree sunset savanna
-flowering tree pink blossoms sky
-golden light rays through clouds heaven
-sunbeam breaking through storm clouds sea
-warm golden light over landscape aerial
-vast mountain landscape epic aerial
-dawn light over calm ocean horizon
-sunrise above sea of clouds aerial
-
-# --- gap requeries ---
-# salman b4 (chains)
-heavy iron chain links dark
-# salman b5 (hoarded gold)
-antique gold treasure dark
-# salman b6 (fading lamps, teacher to teacher)
-candle flame blowing out smoke dark
-# salman b8 (caravan that betrayed him)
-camel caravan silhouette sunset
-# hijra b3 (cloak on a bed, no person)
-empty bed moonlight dark room night
-# hijra b4 (noon empty street)
-old city alley empty sunlight stone
-# hijra b6 (cave of Thawr mouth)
-cave opening from inside rock silhouette
+# Round 3: video gap fills (landscape).
+# ant-bee-spider b1 (title card slow dark macro)
+water drops on leaf dark macro
+# ant-bee-spider b5 (ants teamwork, clean literal)
+leafcutter ants carrying leaves
+# ant-bee-spider b7 (honey healing, premium dark)
+honey pouring slow motion dark background
+# last-man b3 (first tree: lone tree golden light)
+single tree silhouette sunset hill
+# ad-duha b7 (orphan beat: small plant in light)
+seedling sprout growing soil sunlight nature
