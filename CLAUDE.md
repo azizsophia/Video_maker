@@ -72,6 +72,11 @@ asked. This file is the durable memory for this repo.
 - Authentic sources only. Every claim shown ON SCREEN with its source (Qur'an by
   verse; hadith by collection, e.g. Sahih al-Bukhari / Sahih Muslim; seerah noted
   as seerah). NO Israiliyyat, NO weak narrations, no embellishment.
+- VERIFY BEFORE WRITING: every citation in a batch is checked against sunnah.com
+  / quran.com (exact number, wording, grading) BEFORE scripts are written, and
+  the finished scripts get an independent claim-by-claim fact-check pass before
+  the owner sees them. Wrong-numbered or weak narrations are corrected or cut,
+  never shipped.
 - The Qur'an is shown (Arabic from Quran.com), never recited by AI or synthesized.
 - Honorifics: prophets get "alayhi salam"; the Prophet Muhammad gets "peace be
   upon him". No depiction of the prophets.
