@@ -79,10 +79,7 @@ Target: ~1,500 narration words. Chaptered.
 CHAPTER 1 - A DESCRIPTION NO ONE RECOGNIZED
 1. HOOK [Sahih al-Bukhari 2928]
 "In the seventh century, in the deserts of Arabia, the Prophet Muhammad, peace
-be upon him, described an enemy no Arab had ever seen. Small eyes. Broad red
-faces. Flat noses... faces like hammered shields, coated in leather. For six
-hundred years, nobody could say who they were. And then they came... and the
-world has never forgotten them."
+be upon him, described an invader in astonishing detail. Small eyes. Broad red faces. Flat noses... faces like hammered shields, coated in leather. And six hundred years later, scholars watching an invasion sweep the Muslim world wrote... this is them. Feature... by feature."
 Visual: dust storm swallowing a horizon.
 
 2. TITLE CARD - THE HORSEMEN / a prophecy of the Prophet, peace be upon him
@@ -108,7 +105,7 @@ Visual: rows of dark round shields texture / hammered metal macro.
 physical details so specific they sound like a police sketch. Boots of leather and felt. Lamellar armor of leather and iron. Faces the Arabs had simply never seen."
 Visual: frost-covered steppe, wind in dry grass.
 
-CHAPTER 2 - SIX CENTURIES OF SILENCE
+CHAPTER 2 - THE PORTRAIT WAITS
 6. (context, no new claim)
 "Now hold that description against the world the Prophet, peace be upon him,
 actually lived in. Arabia's neighbors were the Romans of Byzantium and the
@@ -117,14 +114,11 @@ battle. Neither looked anything like the men he described."
 Visual: ancient ruined columns at dusk.
 
 7. (context)
-"His companions fought Rome and Persia and the description did not fit. His
-followers' children conquered from Spain to India... and it still did not
-fit. Generations of Muslims read this hadith... a hadith is a preserved,
-authenticated saying of the Prophet... and waited."
+"His companions fought Rome and Persia... and the description did not fit them. In the centuries after, Muslims met many peoples of the steppe... but the scholars kept reading this hadith... a hadith is a preserved, authenticated saying of the Prophet... and watching. Because the full portrait... feature by feature, war and all... had not yet arrived."
 Visual: old open landscape with a long empty road.
 
 8. (context)
-"Six hundred years is a long time for a prophecy to stay unclaimed. Long
+"Six hundred years is a long time for a portrait to wait. Long
 enough for it to be forgotten... except it was written down, memorized, and
 carried in the most rigorously authenticated hadith collection in Islam,
 Sahih al-Bukhari... centuries before the answer arrived."
@@ -146,7 +140,7 @@ Visual: dark horsemen silhouettes at full gallop in dust (no faces).
 11. [History]
 "City after city fell. And in February 1258, the Mongol prince Hulagu reached
 the capital of the Muslim world itself... Baghdad. The city of scholars and
-libraries. After a siege of days, it fell. The caliph was killed. And
+libraries. After a siege of days, it fell. The caliph... the successor-ruler of the Muslim world... was killed. And
 chroniclers describe the Tigris river running dark... with the ink of the
 books thrown into it."
 Visual: dark river at dusk, slow current.
@@ -415,8 +409,7 @@ CHAPTER 3 - YAMAMA
 9. [History]
 "Then the Prophet, peace be upon him, passed away... and Musaylima saw his
 moment. His movement swelled to tens of thousands. The young Muslim state,
-barely a year old under Abu Bakr, the Prophet's closest companion and first
-successor... had to face him or fall."
+barely a year old under Abu Bakr... may Allah be pleased with him... the Prophet's closest companion and first successor... had to face him or fall."
 Visual: storm gathering over desert plain.
 
 10. [History]
@@ -428,15 +421,12 @@ Visual: high mud-brick walls at dusk, empty.
 11. [History]
 "And in that garden, Musaylima fell. Among those who brought him down was
 a man named Wahshi... the same man who, years before, as a slave before
-his Islam, had killed the Prophet's beloved uncle Hamza with a thrown
-spear. Wahshi later said... with that same spear, I struck the worst of
-people, after having struck one of the best."
+his Islam, had killed the Prophet's beloved uncle Hamza... may Allah be pleased with him... with a thrown spear. The histories record it was the same spear... and that Wahshi hoped that, having once killed one of the best of people, he had now killed the worst."
 Visual: a spear of light / single shaft of light hitting dark ground.
 
 12. (reflection)
 "The first false prophet was gone within a year of the true Prophet's
-death... exactly as the seal had been set. But the hadith said... about
-thirty."
+death... exactly as the seal had been set. But the hadith... the Prophet's preserved words... had said, about thirty."
 Visual: embers cooling in darkness.
 
 CHAPTER 4 - THE COUNT CONTINUES
@@ -450,10 +440,8 @@ Visual: sand dunes shifting in timelapse.
 14. [History]
 "In 1889, in British India, Mirza Ghulam Ahmad founded a movement at
 Qadian... claiming to be the promised Messiah... and later, a prophet.
-His followers continue today... and the ummah's answer has never changed. In the twentieth century,
-new claimants rose in Africa, in America, in the Gulf. Scholars who track
-the count say we are deep into the twenties... approaching the number the
-Prophet, peace be upon him, gave."
+His followers continue today... and the answer of the ummah... the worldwide Muslim community... has never changed. In the twentieth century,
+new claimants rose in Africa, in America, in the Gulf. Scholars have compiled lists of the claimants down the centuries... and the count keeps climbing toward the number the Prophet, peace be upon him, gave."
 Visual: a world map of city lights at night (no borders/text).
 
 15. (honesty beat, no source, deliberately)
@@ -612,15 +600,13 @@ Will."
 Visual: vast night sky over silhouetted dunes.
 
 6. (context)
-"How low is the bar? The shortest surah in the Qur'an, al-Kawthar, is ten
-words... not counting the opening Bismillah. Ten words. Against every
+"How low is the bar? The shortest surah... that is, chapter... in the Qur'an, al-Kawthar, is ten words... not counting the opening Bismillah. Ten words. Against every
 poet, every genius, every committee, every century."
 Visual: ten small lights igniting one by one in darkness.
 
 7. [History]
 "The very people with the most to gain... the masters of Arabic who fought
-the Prophet, peace be upon him, with armies... never answered with ten
-words instead. Swords were cheaper than a sentence. Fourteen hundred years
+the Prophet, peace be upon him, with armies... never met it with ten words. Swords were cheaper than a sentence. Fourteen hundred years
 later... the silence stands."
 Visual: still, empty desert at dusk, wind only.
 
@@ -638,8 +624,7 @@ CHAPTER 1 - THE HEAVIEST KNOWLEDGE
 "Imagine knowing how your closest friends will die. Not guessing...
 knowing. The Prophet Muhammad, peace be upon him, carried that knowledge.
 He looked at the men he loved most in the world... and one by one, he told
-them their endings. And one by one, across the next fifty years... every
-ending arrived exactly as spoken."
+them their endings. And one by one, across the decades that followed... every ending arrived exactly as spoken."
 Visual: long shadows of dusk across an empty stone courtyard.
 
 2. TITLE CARD - HE TOLD THEM / prophecies fulfilled, name by name
@@ -658,7 +643,7 @@ Visual: night sky dense with stars.
 CHAPTER 2 - THE MOUNTAIN THAT SHOOK
 4. [Sahih al-Bukhari 3675]
 "Begin on a mountain. Uhud, just outside the Prophet's city of Madinah.
-One day he climbed it with three men... Abu Bakr, his dearest friend and
+One day he climbed it with three men... may Allah be pleased with them all... Abu Bakr, his dearest friend and
 the first adult man to believe in him... Umar, once his fiercest enemy,
 now his iron-willed companion... and Uthman, the gentle, generous merchant
 who had married two of his daughters."
@@ -729,8 +714,7 @@ Paradise... and they will be calling him to the Fire."
 Visual: dust drifting in a beam over a building site, no people.
 
 13. [History]
-"Forty years passed. Ammar grew old in the service of Islam... past
-ninety. And then came the darkest hour of the first Muslim century...
+"Some thirty five years passed. Ammar grew old in the service of Islam... past ninety. And then came the darkest hour of the first Muslim century...
 the civil strife at Siffin, in 657, when two Muslim armies faced each
 other. Ammar stood with Ali, the Prophet's cousin... and on that field,
 the old man fell."
@@ -738,8 +722,7 @@ Visual: storm light over an empty plain.
 
 14. (adab beat, no new claim)
 "We will not curse anyone in this story. The scholars of Islam handled
-this moment with careful respect, and so do we... the hadith itself named
-no battle and no names. What it named was a fate, four decades early...
+this moment with careful respect, and so do we... the hadith... the preserved record of his words... itself named no battle and no names. What it named was a fate, four decades early...
 and the fate arrived to the letter. Even men on the other side that day
 remembered the hadith... and trembled."
 Visual: rain beginning over dry ground.
@@ -755,7 +738,7 @@ Muslims."
 Visual: soft morning light through palm fronds.
 
 16. [History]
-"Half a century later, those two great parties stood armed and facing
+"Thirty years later, those two great parties stood armed and facing
 each other... the armies of Iraq and Syria, on the edge of another
 catastrophe. Hasan, now leader of one side, held victory within
 reach... and gave it away. He signed peace with Muawiya in the year 661,
@@ -765,16 +748,15 @@ Visual: two rivers merging into one, aerial.
 
 17. (reflection)
 "He will make peace between two great parties of Muslims... notice, of
-MUSLIMS. The scholar Bukhari himself pointed at that word... both sides
+MUSLIMS. The scholars of hadith pointed at that word... both sides
 of that terrible feud remained believers. A grandfather's sentence, on a
-pulpit, healing a war fifty years before it began."
+pulpit, healing a war three decades before it began."
 Visual: calm water at dawn, mist lifting.
 
 CHAPTER 6 - WHAT THIS MEANS
 18. (reflection)
 "Count what you have just heard. Two martyrdoms named on a mountain. A
-calamity promised at a garden gate. A death on a battlefield named forty
-years early. A peace treaty foretold from a pulpit while its maker was
+calamity promised at a garden gate. A death on a battlefield named decades early. A peace treaty foretold from a pulpit while its maker was
 still a child. Specific people. Specific fates. Decades in advance. All
 of it preserved in Sahih al-Bukhari... the most rigorously authenticated
 book in Islam after the Qur'an itself."
@@ -789,8 +771,8 @@ who ruled an empire from a mosque floor. For ten years he carried the
 mountain's sentence... two martyrs... knowing he was one of them."
 Visual: worn stone steps in an ancient city at dawn.
 
-20. [History]
-"And the histories record that Umar used to pray for it... O Allah,
+20. [Sahih al-Bukhari 1890]
+"And Sahih al-Bukhari records the dua... the personal prayer... Umar used to make. O Allah,
 grant me martyrdom in Your cause, and let my death be in the city of
 Your Messenger. Both halves of that dua were, humanly speaking, almost
 impossible for a ruler in Madinah at peace. He got both... at dawn
@@ -819,8 +801,7 @@ Visual: footprints in sand leading toward a horizon of light.
 "And ask the historian's question... what are the odds? Four specific
 fates. Public statements, witnessed, memorized, transmitted... decades
 before fulfillment, in an age with no way to engineer the outcomes.
-One lucky guess is a coincidence. Four, aimed at named men, across
-fifty years... is a pattern demanding an explanation."
+One lucky guess is a coincidence. Four, aimed at named men, across four decades... is a pattern demanding an explanation."
 Visual: stars aligning over a dark ridge, timelapse.
 
 24. (context)
@@ -849,8 +830,7 @@ Visual: a lantern-free warm glow over Madinah skyline at dawn (distant).
 
 1. HOOK [Sahih al-Bukhari 447]
 "The Prophet Muhammad, peace be upon him, once told a man exactly how he
-would die... who would kill him... and whose side he would be on. The man
-lived FORTY more years. And then every word of it happened."
+would die... who would kill him... and whose side he would be on. The man lived THIRTY FIVE more years. And then every word of it happened."
 Visual: a long single road vanishing into haze.
 
 2. TITLE CARD - AMMAR / may Allah be pleased with him (deep read)
@@ -881,16 +861,15 @@ Visual: dust motes drifting through a shaft of light.
 
 6. (context)
 "Sit with that. A death sentence... spoken in mercy... with no date, no
-place, and no enemy named. Ammar heard it, and kept building. He carried
-that sentence through every battle and every year of his long life."
+place, and no enemy named. Ammar heard it, and kept building. He carried that sentence through every battle and every year of his long life."
 Visual: time-worn stone wall, light moving across it.
 
 7. [History]
-"Forty years later, when Ammar was past ninety, a tragedy the Prophet had
+"Thirty five years later, when Ammar was past ninety, a tragedy the Prophet had
 not lived to see split the Muslims into two armies... at a place called
 Siffin, in the year 657. Ammar stood in the ranks of Ali, the Prophet's
 cousin. And on that field... the old man was killed. By the other side.
-Exactly as the sentence had said... four decades before."
+Exactly as the sentence had said... three and a half decades before."
 Visual: storm clouds breaking over an empty plain.
 
 8. (honesty and adab beat)
@@ -901,7 +880,7 @@ prophecy itself... precise, public, and fulfilled to the letter."
 Visual: rain falling gently on stone.
 
 9. CLOSE (reflection)
-"Ammar spent forty years knowing how his story would end... and it never
+"Ammar spent thirty five years knowing how his story would end... and it never
 slowed him down. Because if the sentence about your death is true... so
 is the one about Paradise. That is Ammar... may Allah be pleased with
 him."
@@ -1026,24 +1005,20 @@ it be kept."
 Visual: warm light growing across a vast landscape.
 
 CHAPTER 3B - HOW THE BOOK WAS GATHERED
-16. [Sahih al-Bukhari (compilation narrations) - VERIFY numbers in fact-check pass]
+16. [Sahih al-Bukhari 4986]
 "Now the human story of the guarding... because Allah guards through
 means. A year after the Prophet's death, peace be upon him, the battle
 of Yamama... the same battle from Tuesday's video... cost the lives of
-many memorizers. Umar went to the caliph Abu Bakr with an urgent
-counsel... gather the Qur'an into one collected volume, before any of
+many memorizers. Umar went to Abu Bakr... may Allah be pleased with them both... the caliph, the Muslims' first leader after the Prophet... with an urgent counsel... gather the Qur'an into one collected volume, before any of
 it rides out on the chest of a martyr."
 Visual: scattered embers gathered into one brazier glow.
 
-17. [Sahih al-Bukhari (compilation narrations) - VERIFY]
+17. [Sahih al-Bukhari 4986]
 "The task fell to Zayd ibn Thabit... a young companion who had been one
-of the Prophet's own scribes of revelation. His method was double
-lock... nothing entered the collection unless it was found in WRITING
-from the Prophet's era AND confirmed by the memory of witnesses. Written
-proof, plus living memory... for every verse."
+of the Prophet's own scribes of revelation. And he hunted the Qur'an down twice over... gathering it from where it was written... on parchment, palm stalks and thin white stones... and from the hearts of the men who carried it by memory. Writing, plus living memory... for the whole book."
 Visual: two keys of light crossing on dark, abstract.
 
-18. [Sahih al-Bukhari (compilation narrations) - VERIFY]
+18. [Sahih al-Bukhari 4987]
 "A generation later, as Islam spread from Africa to Persia, the caliph
 Uthman... the same Uthman from Wednesday's video... commissioned master
 copies from that collection and sent them to the great cities, so every
@@ -1088,7 +1063,7 @@ deciding which reading is original. That is the NORMAL biography of
 an old book... entropy, everywhere... except here."
 Visual: scattered loose pages blowing in wind, dark room (no text).
 
-23. [Sahih al-Bukhari (Jibril review) - VERIFY number in fact-check pass]
+23. [Sahih al-Bukhari 4998]
 "And the guarding began in the Prophet's own lifetime, peace be upon
 him. The hadith records that every Ramadan, the angel Jibril would
 review the entire revealed Qur'an with him... a full annual audit from
@@ -1167,7 +1142,7 @@ upon him... knew that sound better than any sound on earth."
 Visual: prayer beads in soft light, still.
 
 4. [Sahih al-Bukhari 3579]
-"Abdullah ibn Mas'ud, one of those companions, tells it plainly. We
+"Abdullah ibn Mas'ud... may Allah be pleased with him... one of those companions, tells it plainly. We
 considered miracles a blessing from Allah... he said... while you people
 consider them a warning. And then he remembered. We were with Allah's
 Messenger... and we HEARD the food glorifying Allah... while it was
@@ -1176,8 +1151,7 @@ Visual: steam rising from food in warm low light.
 
 5. [Sahih al-Bukhari 3579]
 "And in the very same narration, he describes water flowing from between
-the Prophet's fingers... peace be upon him... when the people had none.
-Two impossibilities... one sentence... recorded in the most authenticated
+the Prophet's fingers... peace be upon him... when the water had all but run out. Two impossibilities... one sentence... recorded in the most authenticated
 hadith collection in Islam."
 Visual: water trickling over fingers-free stones, backlit.
 
@@ -1202,8 +1176,7 @@ CHAPTER 1 - THE LAST MORNING
 1. HOOK [Qur'an 81]
 "Every civilization has wondered how the universe ends. The Qur'an
 answers... in order... image by image... in one of the most cinematic
-passages ever revealed. Scholars say whoever wants to see the Day of
-Rising as if with his own eyes... should read this surah. So let us
+passages ever revealed. A hadith promises... whoever wants to see the Day of Rising, as if with his own eyes... should read this surah. So let us
 read it... slowly."
 Visual: sun flaring low over a dark horizon.
 
@@ -1348,7 +1321,7 @@ to walk straight."
 Visual: a crossroads of paths under an immense sky at dusk.
 
 21. (reflection)
-"Scholars across the centuries wept at that question. Because every
+"Scholars across the centuries trembled at that question. Because every
 life is an answer to it. Every morning you rise, you are going...
 somewhere. The surah that showed you the destination now asks for your
 direction."
@@ -1410,7 +1383,7 @@ secret kindness no one ever thanked you for. Both kinds of forgotten
 things... found."
 Visual: sheets of light unfurling in darkness.
 
-29. [Jami at-Tirmidhi 3333 - VERIFY in fact-check pass]
+29. [Jami at-Tirmidhi 3333, hasan]
 "There is a reason we walked it verse by verse. The Prophet, peace be
 upon him, is reported to have said... whoever wishes to look at the
 Day of Rising as if seeing it with his own eye, let him recite... when
@@ -1442,8 +1415,7 @@ Visual: slow clouds over a dark ridge.
 
 3. (context)
 "Uhud is a red granite mountain just outside Madinah, the city of the
-Prophet Muhammad, peace be upon him. One day he climbed it with the
-three men closest to him. Abu Bakr... his best friend, and the first
+Prophet Muhammad, peace be upon him. One day he climbed it with the three men closest to him... may Allah be pleased with them all. Abu Bakr... his best friend, and the first
 man to believe him. Umar... once his fiercest opponent, now his iron
 right hand. And Uthman... the gentle merchant who gave his wealth away
 and married two of the Prophet's daughters."
@@ -1471,9 +1443,8 @@ rebels while reading the Qur'an, in 656... a martyr. Exactly two.
 Exactly them."
 Visual: two flames extinguished in sequence in the dark.
 
-7. [Sahih al-Bukhari 4083 - VERIFY in fact-check pass]
-"And the Prophet, peace be upon him, loved that mountain anyway. He
-said of it... Uhud is a mountain that loves us, and we love it."
+7. [Sahih al-Bukhari 4083]
+"And the Prophet, peace be upon him, loved that mountain anyway. He said of it... this is a mountain that loves us... and is loved by us."
 Visual: Uhud-like mountain glowing at sunrise.
 
 8. CLOSE (reflection)
@@ -1531,7 +1502,7 @@ without a lamp down there cannot see his own hand. Literally."
 Visual: submersible-style light beam in black water, abstract.
 
 7. [Oceanography - WHOI and published research]
-"And the waves upon waves? Oceanographers describe INTERNAL waves... giant waves that travel underwater, along the boundaries between layers of different density... some, published research records, more than two hundred meters tall... beneath the surface waves we see. Waves... under the waves."
+"And the waves upon waves? Oceanographers describe INTERNAL waves... giant waves that travel underwater, along the boundaries between layers of different density... the biggest measured at more than two hundred meters tall... beneath the surface waves we see. Waves... under the waves."
 Visual: undulating layered water gradients, slow motion.
 
 8. (honesty beat, deliberately)
@@ -1769,7 +1740,7 @@ HOW it begins... with a sound."
 Visual: vast quiet desert night, waiting stillness.
 
 4. [Jami at-Tirmidhi 2431, hasan]
-"He described that readiness in a hadith graded hasan... reliable. How
+"He described that readiness in a hadith... a preserved saying of his... graded hasan, meaning reliable. How
 can I be at ease... he said... when the bearer of the Horn has put the
 Horn to his lips, and bent his ear, listening... waiting to be
 commanded to blow. The scholars name that angel Israfil. The image is
@@ -1794,11 +1765,9 @@ WHOEVER is in the heavens, WHOEVER is on the earth. The blast misses
 no one."
 Visual: city lights winking out district by district at night.
 
-7. [Sahih al-Bukhari 4935 - VERIFY in fact-check pass]
+7. [Sahih al-Bukhari 4935]
 "Then... silence. In a hadith in Sahih al-Bukhari, the Prophet, peace
-be upon him, said that between the two blasts... is forty. His
-students asked, forty days? He would not say. Forty months? He would
-not say. Forty years? He would not say. A silence with no witnesses...
+be upon him, said that between the two blasts... is forty. Forty days, they asked Abu Hurayra... may Allah be pleased with him... the companion who carried this hadith to us? He would not say. Forty months? He would not say. Forty years? He would not say. A silence with no witnesses...
 however long its Lord wills."
 Visual: utterly still, empty landscape, no motion at all.
 
@@ -1862,8 +1831,7 @@ is the doorbell of home."
 Visual: golden gates of light in cloud, abstract.
 
 CHAPTER 2B - HOW ORDINARY THE LAST MOMENT WILL BE
-15. [Sahih al-Bukhari (the Hour amid daily life) - VERIFY number in
-fact-check pass]
+15. [Sahih al-Bukhari 6506]
 "And the Prophet, peace be upon him, told us the eeriest detail of
 all... how ORDINARY that moment will be. The Hour will come, he said,
 while two men have spread a cloth between them, trading... and they
@@ -1920,7 +1888,7 @@ the greatest terror in history... untouched. Admission is a good deed,
 brought sincerely."
 Visual: a calm lit path through a dark storm landscape.
 
-22. [Sahih Muslim 1631 - VERIFY in fact-check pass]
+22. [Sahih Muslim 1631]
 "So what do you actually DO tonight? The Prophet, peace be upon him,
 gave the strategy... when a person dies, his deeds end except three.
 A continuing charity... knowledge that people still benefit from...
@@ -1972,9 +1940,7 @@ Visual: night sky giving way to a calm, immense dawn. Hold long.
 ---
 
 ## Production notes for this batch
-- Verified source table on file; the two flagged citations (Bukhari 4083
-  Uhud love; Bukhari 4935 forty between blasts) MUST clear the independent
-  fact-check pass before render, or those beats are cut.
+- TWO-PASS VERIFICATION COMPLETE (2026-07-02): pre-writing source table + independent adversarial fact-check of the finished scripts. All flagged citations RESOLVED and cleared for screen: Sahih al-Bukhari 4083, 4935, 4986, 4987, 4998, 6506, 1890, 4072; Sahih Muslim 1631; Jami at-Tirmidhi 3333 (hasan). All 13 required corrections applied.
 - All caveats from the verification report are already honored in the
   wording above (lawaqih framing, parchment-not-ink, an-Nawawi/al-Qurtubi
   attribution, "about thirty", Wahshi "among those", la'alla in the Hasan
