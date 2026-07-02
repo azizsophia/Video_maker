@@ -34,6 +34,21 @@ asked. This file is the durable memory for this repo.
 - Always source via the Pexels search workflow, build the contact sheet, and keep
   a per-beat shot list.
 
+## Writing rules learned the hard way (owner feedback 2026-07-02, non-negotiable)
+- LONG-FORM MEANS LONG. Minimum ~8 minutes of narration: roughly 1,300+ words
+  across 25+ beats in chapters. Before ANY long-form render, compute the
+  estimated runtime (narration words / 140 wpm) and expand the script if it is
+  under 8 minutes. The 3-4 minute "long-forms" of the first week batch were
+  rejected for this; never repeat.
+- WRITE FOR SOMEONE NEW TO ISLAM. Every video must be self-contained: open with
+  who/where/when context BEFORE events; introduce every person the first time
+  they appear (who they are, why they matter); translate or define every Arabic
+  term on first use (istighfar, wahy, seerah...); connect beats causally (so,
+  because, meanwhile) instead of jumping event to event. The Khadijah script's
+  "but to understand why... you have to go back" bridge is the model. The owner
+  pulled Sumayya, Yunus, and Sayyid al-Istighfar from the schedule for lacking
+  this; a script that assumes prior knowledge fails review.
+
 ## Story cadence — the STANDARD cut (copy the Khadijah template every time)
 - Use `scripts/stories/khadijah.json` as the structural template for all
   short-form stories. Same rhythm, same feel:
