@@ -155,13 +155,8 @@ occurred... a miracle of the Prophet, peace be upon him. Al-Qurtubi wrote the
 same of the Tatars of his own day."
 Visual: lamplight in a dark stone study, no text visible.
 
-13. (honesty beat, no source, deliberately)
-"And here is our honesty beat. The Prophet, peace be upon him, said the word
-Turks... a name the Arabs of his time used broadly for the peoples of the
-Central Asian steppe. He did not say the word Mongols. The identification
-came from the scholars who watched the description walk off the page. We
-tell you exactly what the text says... and exactly who said what. That is
-how this channel works."
+13. (precision beat, no source, deliberately)
+"One precision matters here. The Prophet, peace be upon him, said the word Turks... a name the Arabs of his time used broadly for the peoples of the Central Asian steppe. He did not say the word Mongols. That identification came from the scholars who watched the description walk off the page... and the difference between the text and its readers is worth keeping, always."
 Visual: scales-of-light abstract / balanced stones at dusk.
 
 CHAPTER 5 - THE ENDING NO CONQUEROR EXPECTED
@@ -444,11 +439,10 @@ His followers continue today... and the answer of the ummah... the worldwide Mus
 new claimants rose in Africa, in America, in the Gulf. Scholars have compiled lists of the claimants down the centuries... and the count keeps climbing toward the number the Prophet, peace be upon him, gave."
 Visual: a world map of city lights at night (no borders/text).
 
-15. (honesty beat, no source, deliberately)
-"Our honesty beat. The hadith says ABOUT thirty... qareeb min thalatheen
+15. (precision beat, no source, deliberately)
+"A precision the text itself demands. The hadith says ABOUT thirty... qareeb min thalatheen
 ... close to thirty. It is not an exact countdown clock, and no one can
-declare the list complete or set a date from it. What the prophecy gives
-us is a pattern... announced in advance... that has held for fourteen
+declare the list complete or set a date from it. What the prophecy gives is a pattern... announced in advance... that has held for fourteen
 centuries without a single decade of exception."
 Visual: balanced stones by still water at dusk.
 
@@ -472,9 +466,7 @@ Visual: a crooked market scale in shadow.
 
 18. [History]
 "Third... imitate the product. He produced rhymed verses in the style of
-revelation. But put his frog verses beside Surah at-Takwir... beside the
-verses you heard on this channel on Friday... and even his own tribe
-could hear the difference. One of his followers is recorded admitting...
+revelation. But put his frog verses beside a real surah... a chapter of the Qur'an... like at-Takwir, the surah of the Day the sun is wrapped up... and even his own tribe could hear the difference. One of his followers is recorded admitting...
 I know Musaylima is a liar and Muhammad is truthful... but the liar of
 our tribe is dearer to us than the truthful man of another. Tribe over
 truth. Say it plainly... that sentence still runs the world."
@@ -721,8 +713,7 @@ the old man fell."
 Visual: storm light over an empty plain.
 
 14. (adab beat, no new claim)
-"We will not curse anyone in this story. The scholars of Islam handled
-this moment with careful respect, and so do we... the hadith... the preserved record of his words... itself named no battle and no names. What it named was a fate, four decades early...
+"No one is cursed in this story. The scholars of Islam handled this moment with careful respect... the hadith... the preserved record of his words... itself named no battle and no names. What it named was a fate, four decades early...
 and the fate arrived to the letter. Even men on the other side that day
 remembered the hadith... and trembled."
 Visual: rain beginning over dry ground.
@@ -872,8 +863,8 @@ cousin. And on that field... the old man was killed. By the other side.
 Exactly as the sentence had said... three and a half decades before."
 Visual: storm clouds breaking over an empty plain.
 
-8. (honesty and adab beat)
-"Two things we owe you here. The hadith itself named no battle... history
+8. (precision and adab beat)
+"Two precisions. The hadith itself named no battle... history
 filled that in. And Muslims do not curse the other side of that tragedy...
 they were believers in a terrible fitna, a trial. What stands is the
 prophecy itself... precise, public, and fulfilled to the letter."
@@ -955,9 +946,8 @@ skin those verses are written on... comes from within living memory of
 the man himself. Among the oldest Qur'an fragments known on earth."
 Visual: aged parchment texture in raking light (no legible text).
 
-10. (honesty beat, deliberately)
-"Our honesty beat... because precision is worship on this channel. The
-lab dated the PARCHMENT, not the ink. The university itself says so.
+10. (precision beat, deliberately)
+"And the university itself insists on one precision... the lab dated the PARCHMENT, not the ink.
 Radiocarbon dating tells you when the animal lived, not the day the
 scribe wrote. What it establishes is that this material, carrying these
 verses, belongs to Islam's very first decades... not centuries of
@@ -1027,8 +1017,8 @@ sits in every mosque on earth tonight."
 Visual: rays spreading from one light source across a dark map-free
 surface.
 
-19. (honesty beat, deliberately)
-"Honesty beat. You may hear that Muslims recite in several styles...
+19. (precision beat, deliberately)
+"One question deserves a straight answer. You may hear that Muslims recite in several styles...
 the qira'at... and wonder if that means versions. It does not. The
 qira'at are transmitted modes of RECITATION... pronunciation and
 dialect readings taught by the Prophet himself, peace be upon him...
@@ -1087,7 +1077,7 @@ contents. It simply... never changed. The promise did not ask for your
 trust. It generated evidence... for as long as anyone cared to check."
 Visual: still water perfectly reflecting stars.
 
-26. (honesty beat)
+26. (precision beat)
 "One more precision, because people ask. Translations of the Qur'an
 differ... of course they do, translation is interpretation. But
 translations were never the preserved text. The guarded book is the
@@ -1384,7 +1374,7 @@ things... found."
 Visual: sheets of light unfurling in darkness.
 
 29. [Jami at-Tirmidhi 3333, hasan]
-"There is a reason we walked it verse by verse. The Prophet, peace be
+"There is a reason to walk it verse by verse. The Prophet, peace be
 upon him, is reported to have said... whoever wishes to look at the
 Day of Rising as if seeing it with his own eye, let him recite... when
 the sun is wrapped up. This surah is the closest a living person gets
@@ -1505,14 +1495,8 @@ Visual: submersible-style light beam in black water, abstract.
 "And the waves upon waves? Oceanographers describe INTERNAL waves... giant waves that travel underwater, along the boundaries between layers of different density... the biggest measured at more than two hundred meters tall... beneath the surface waves we see. Waves... under the waves."
 Visual: undulating layered water gradients, slow motion.
 
-8. (honesty beat, deliberately)
-"Now our honesty beat, because this is where many channels overreach
-and we will not. The classical commentators read the verse as stacked
-SURFACE waves beneath clouds... and that reading is complete and true.
-Reading internal waves into it is a modern reflection... beautiful,
-striking, worth pondering... but we will not tell you the Qur'an
-taught oceanography. We will tell you something better... what the
-verse is actually about."
+8. (precision beat, deliberately)
+"And here, precision is owed. The classical commentators read the verse as stacked SURFACE waves beneath clouds... and that reading is complete and true on its own. Reading internal waves into it is a modern reflection... beautiful, striking, worth pondering... but the verse was never teaching oceanography. It is teaching something far greater... and that is where it aims."
 Visual: balanced stones by dark water.
 
 CHAPTER 4 - WHAT THE VERSE IS REALLY ABOUT
@@ -1589,7 +1573,7 @@ Visual: descending gradient bands of blue into black.
 
 CHAPTER 5B - THE SHIPS THAT STAND STILL
 18. QUOTE - Qur'an 42:33 (shown)
-"And the ships verse has a second half we owe you. If He willed, He could still the wind... and the ships would stand motionless on its surface.
+"And the ships verse has a second half worth hearing. If He willed, He could still the wind... and the ships would stand motionless on its surface.
 Indeed in that are signs for everyone patient and grateful. Every
 sailor becalmed for weeks on a dead sea has lived this verse. The
 highway works... only while its Owner keeps it open."
@@ -1653,8 +1637,7 @@ Visual: one seascape, half in storm shadow, half in gold light.
 "Here is tonight's homework, and it takes four minutes. Open the
 twenty-fourth chapter, an-Nur, and read verses thirty five to forty...
 the Light verse down to the deep sea... as one passage, the way it
-was revealed. Feel the architecture yourself. No video, ours included,
-compares to standing inside it."
+was revealed. Feel the architecture yourself. No video compares to standing inside it."
 Visual: warm reading lamp glow in a dark quiet room.
 
 27. CLOSE (reflection) [Qur'an 24:35 callback]
@@ -1700,13 +1683,8 @@ Dog. Of the thousands of stars visible to the naked eye... the Qur'an
 put its finger on the one that outshines them all."
 Visual: telescope-style starfield slowly zooming toward one star.
 
-6. (honesty beat)
-"To be precise, as always... the verse does not say brightest. It says
-LORD of it. The astronomy is our layer. The verse's point is sharper...
-the brighter the created thing, the more it needs a Maker. And you
-will find versions of this video online decorated with number codes
-and letter counts. We checked. That is not in the classical scholarship
-... so it is not on this channel."
+6. (precision beat)
+"To be precise... the verse does not say brightest. It says LORD of it. The astronomy is a separate layer. The verse's point is sharper... the brighter the created thing, the more it needs a Maker. As for the number codes and letter counts that decorate some tellings of this verse... they are not found in the classical scholarship... and precision leaves them aside."
 Visual: still balanced stones under stars.
 
 7. CLOSE (reflection)
@@ -1824,8 +1802,7 @@ CHAPTER 5 - THE OTHER SIDE OF THE SOUND
 14. (reflection)
 "And remember what the second blast actually opens. Yes... the
 reckoning. But past it, for the people of faith... the gates this
-whole channel keeps pointing to. The last man to crawl out of the
-Fire, as we told you in another story, receives ten worlds. That is
+whole channel keeps pointing to. The last man to crawl out of the Fire... a story the Prophet, peace be upon him, told in loving detail... receives ten worlds. That is
 the floor. The Trumpet is not only an ending... for the believer, it
 is the doorbell of home."
 Visual: golden gates of light in cloud, abstract.

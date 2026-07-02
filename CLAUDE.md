@@ -78,6 +78,11 @@ asked. This file is the durable memory for this repo.
   the owner sees them. Wrong-numbered or weak narrations are corrected or cut,
   never shipped.
 - The Qur'an is shown (Arabic from Quran.com), never recited by AI or synthesized.
+- TONE OF PRECISION (owner rule 2026-07-02): corrections and careful attributions
+  are delivered matter-of-factly, never self-referentially. The narration NEVER
+  says "honesty beat", "we checked", "this channel", "ours included", or praises
+  its own rigor. Show the precision; do not announce it. Professional, premium,
+  never cocky.
 - Honorifics: prophets get "alayhi salam"; the Prophet Muhammad gets "peace be
   upon him". No depiction of the prophets.
 
