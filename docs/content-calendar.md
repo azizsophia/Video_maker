@@ -4,6 +4,10 @@ Daily posting: one vertical short (posted to YouTube Shorts + TikTok + Reels, sa
 asset, different captions) and one long-form (YouTube 16:9). Build a backlog
 ahead, then post daily from it.
 
+OWNER DIRECTIVE (2026-07-02): after the prophecies/miracles batch, shift to
+large shorts-only batches (TikTok-first growth); long-form paused unless
+specifically requested.
+
 Copy rules everywhere: NO emojis, NO em/en dashes (plain hyphens only).
 
 ## Weekly theme rotations (offset so short and long never share a theme on the same day)

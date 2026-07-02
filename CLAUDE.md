@@ -125,7 +125,13 @@ asked. This file is the durable memory for this repo.
   and halves render minutes; reserve scale 2 / 4K for special releases. Deliver
   the artifact link, not the mp4 in chat. The "failure" badge on render-story is
   usually just the optional Drive upload; the artifact is still produced.
-- Daily output is 1 short + 1 long-form per the content-calendar pillars. Batch
+- STRATEGY (owner directive 2026-07-02): after the current batch, production
+  shifts to LARGE BATCHES OF SHORTS (TikTok / Reels / Shorts) as the engine of
+  channel growth; long-form becomes occasional, made only when specifically
+  requested. Shorts keep the full bar: Khadijah cadence, newcomer-first
+  writing, two-pass verification, eye-QCed literal footage, launch end card.
+- Batch output while long-form is active: 1 short + 1 long-form per the
+  content-calendar pillars. Batch
   the week: ALL scripts in one review message, ALL contact sheets in one message,
   then render the batch, so the owner schedules everything in one sitting
   (YouTube native, TikTok web, Meta Business Suite).
