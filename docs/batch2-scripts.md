@@ -198,8 +198,8 @@ Visual: abandoned caravan goods in blowing sand, no people.
 17. [History]
 "Genghis sent ambassadors demanding justice. The Shah humiliated and killed
 them too. And with that, one ruler's arrogance opened the gate of the
-steppe. The chroniclers record Genghis Khan declaring he had been sent as
-a punishment... and then the horizon filled with horsemen."
+steppe. The Persian chronicler Juvayni records Genghis Khan declaring he had
+been sent as a punishment... and then the horizon filled with horsemen."
 Visual: dark storm wall advancing over plains.
 
 18. [History]
@@ -231,8 +231,8 @@ Visual: golden domes and rooftops at dusk, distant aerial.
 "Hulagu's armies breached it in February. The caliph al-Mustasim was
 executed... the five century Abbasid caliphate of Baghdad ended in a
 week. And the House of Wisdom was thrown into the river... which is why
-the chroniclers describe the Tigris running black with ink... and then,
-they say, red."
+later chroniclers and tradition describe the Tigris running black with
+ink... and then, they say, red."
 Visual: dark river current carrying debris shadows at dusk.
 
 CHAPTER 4B - THE STORM IS STOPPED
@@ -245,8 +245,8 @@ Qutuz and Baybars met the Mongol advance head on."
 Visual: tense pre-dawn light over a rocky valley.
 
 23. [History]
-"And for the first time in the field, in a major battle... the
-unstoppable were stopped. Ain Jalut broke the spell. The storm that had
+"And for the first time, a Mongol army was beaten in a major open
+battle... and the advance never resumed. Ain Jalut broke the spell. The storm that had
 swallowed half the known world found its high-water mark... at the hands
 of the people it had come to erase."
 Visual: banners-free dust settling over a battlefield valley at dusk.
@@ -449,8 +449,9 @@ claim. Century after century, the pattern repeated."
 Visual: sand dunes shifting in timelapse.
 
 14. [History]
-"In 1889, in British India, Mirza Ghulam Ahmad claimed to be a prophet...
-and founded a movement that continues today. In the twentieth century,
+"In 1889, in British India, Mirza Ghulam Ahmad founded a movement at
+Qadian... claiming to be the promised Messiah... and later, a prophet.
+His followers continue today... and the ummah's answer has never changed. In the twentieth century,
 new claimants rose in Africa, in America, in the Gulf. Scholars who track
 the count say we are deep into the twenties... approaching the number the
 Prophet, peace be upon him, gave."
