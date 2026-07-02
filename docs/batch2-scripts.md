@@ -105,8 +105,7 @@ Visual: rows of dark round shields texture / hammered metal macro.
 
 5. [Sahih al-Bukhari 2929]
 "And in another narration... a people whose shoes are made of hair. Two
-physical details so specific they sound like a police sketch. Felt boots.
-Leather lamellar armor. Faces the Arabs had simply never seen."
+physical details so specific they sound like a police sketch. Boots of leather and felt. Lamellar armor of leather and iron. Faces the Arabs had simply never seen."
 Visual: frost-covered steppe, wind in dry grass.
 
 CHAPTER 2 - SIX CENTURIES OF SILENCE
@@ -136,7 +135,7 @@ CHAPTER 3 - THE STORM FROM THE STEPPE
 "In the year 1206, on grasslands three thousand miles from Makkah, the tribes
 of the Mongolian steppe united under one ruler... Genghis Khan. His people
 were horsemen of the high plains. Broad faces weathered red by wind and
-frost. Narrow eyes against the glare. Boots of felt... pressed hair."
+frost. Narrow eyes against the glare. Boots of leather and felt... hair, pressed into cloth."
 Visual: vast Mongolian steppe, storm light.
 
 10. [History]
@@ -947,7 +946,7 @@ it mouth to mouth, teacher to student, in unbroken chains."
 Visual: candlelit gathering space, warm and empty.
 
 6. [Observable today]
-"Today the estimates run into the MILLIONS of huffaz... millions of
+"Today, no one can count them exactly... but the estimates run into the MILLIONS of huffaz... millions of
 living people who carry all six thousand plus verses, letter perfect, in
 memory. A child in Indonesia, an imam in Senegal, a grandmother in
 Turkey, a teenager in Texas... recite together, and they do not diverge.
@@ -1216,8 +1215,7 @@ Visual: slow solar corona-like glow dimming on black.
 "Some grounding first. A surah is a chapter of the Qur'an. This one,
 the eighty-first, was revealed in Makkah, early in the Prophet's
 mission, peace be upon him... to a people who thought the world simply
-ran on forever. It opens with a chain of oaths... twelve images of the
-day everything stops. The word Takwir means to wrap or wind around...
+ran on forever. It opens with a cascade of twelve WHEN clauses... twelve images of the day everything stops. The word Takwir means to wrap or wind around...
 like a turban being wound. Remember that image."
 Visual: fabric slowly winding/folding in dark amber light.
 
@@ -1286,8 +1284,7 @@ Visual: embers rising against a black sky.
 
 13. QUOTE - Qur'an 81:13-14 (shown)
 "And when Paradise is brought near... listen to that... brought NEAR,
-as if it has been waiting just out of sight all along. Then the twelve
-oaths land on a single sentence... A SOUL WILL KNOW WHAT IT HAS BROUGHT.
+as if it has been waiting just out of sight all along. Then the twelve whens land on a single sentence... A SOUL WILL KNOW WHAT IT HAS BROUGHT.
 That is the entire surah. Twelve images... one point. On the last
 morning, only one question survives... what did you bring?"
 Visual: soft immense light source approaching through mist.
@@ -1375,8 +1372,7 @@ injustice on this planet has the same appointment."
 Visual: light breaking into a dark crevice in the earth.
 
 24. QUOTE - Qur'an 81:17-18 (shown)
-"Then the surah swears its final oaths... and by the night as it
-departs... and by the dawn when it BREATHES. The Arabic gives the
+"Then the surah swears its final oaths... and by the night as it wanes... and by the dawn when it BREATHES. The Arabic gives the
 morning lungs... idha tanaffas... as if daybreak itself inhales.
 After twelve images of endings, Allah swears by the most reliable
 new beginning there is."
@@ -1529,18 +1525,13 @@ Visual: layered underwater gradients, near black at frame bottom.
 
 CHAPTER 3 - WHAT THE INSTRUMENTS FOUND
 6. [NOAA Ocean Service]
-"Here is what modern oceanography says about light in the sea. By one
-hundred meters down, roughly one percent of sunlight remains. Below
-about a thousand meters... none at all. Permanent, total darkness...
+"Here is what modern oceanography says about light in the sea. Beyond two hundred meters down, there is rarely any significant light left at all. And below about a thousand meters... none. Ever. Permanent, total darkness...
 most of the ocean, most of the planet, is a lightless world. A diver
 without a lamp down there cannot see his own hand. Literally."
 Visual: submersible-style light beam in black water, abstract.
 
-7. [Woods Hole Oceanographic Institution]
-"And the waves upon waves? Oceanographers describe INTERNAL waves...
-giant waves that travel underwater, along the boundaries between
-layers of different density... some towering hundreds of meters,
-beneath the surface waves we see. Waves... under the waves."
+7. [Oceanography - WHOI and published research]
+"And the waves upon waves? Oceanographers describe INTERNAL waves... giant waves that travel underwater, along the boundaries between layers of different density... some, published research records, more than two hundred meters tall... beneath the surface waves we see. Waves... under the waves."
 Visual: undulating layered water gradients, slow motion.
 
 8. (honesty beat, deliberately)
@@ -1622,16 +1613,12 @@ Visual: split mood: shimmering heat, then deep dark water.
 
 17. (context)
 "And oceanographers, for their part, describe the sea in three storeys.
-The sunlight zone, where almost all life we know swims. The twilight
-zone, where the last one percent of light gives out. And below a
-thousand meters, the midnight zone... permanent, absolute night, most
-of the living space on this planet. Darknesses... one above another."
+The sunlit zone, the upper two hundred meters, where almost all life we know swims. The twilight zone, where the light fades toward nothing. And below a thousand meters, the zone scientists call aphotic... lightless... known to the world as the midnight zone. Permanent, absolute night... most of the living space on this planet. Darknesses... one above another."
 Visual: descending gradient bands of blue into black.
 
 CHAPTER 5B - THE SHIPS THAT STAND STILL
 18. QUOTE - Qur'an 42:33 (shown)
-"And the ships verse has a second half we owe you. If He willed, He
-could still the wind... and they would remain motionless on its back.
+"And the ships verse has a second half we owe you. If He willed, He could still the wind... and the ships would stand motionless on its surface.
 Indeed in that are signs for everyone patient and grateful. Every
 sailor becalmed for weeks on a dead sea has lived this verse. The
 highway works... only while its Owner keeps it open."
@@ -1724,9 +1711,7 @@ Visual: one star pulsing bright on deep black.
 3. (context)
 "The fifty-third chapter of the Qur'an is called an-Najm... The Star.
 It was revealed in Makkah, to people who knew the night sky like a
-road map... and worshipped pieces of it. One tribe near Makkah, Banu
-Khuza'a, bowed to one star above all... the blazing one the Arabs
-called ash-Shi'ra."
+road map... and worshipped pieces of it. The scholars of tafsir record that one tribe near Makkah... Banu Khuza'a... bowed to one star above all. The blazing one the Arabs called ash-Shi'ra."
 Visual: desert night, campfire glow under stars.
 
 4. QUOTE - Qur'an 53:49 (shown)
@@ -1922,7 +1907,7 @@ Visual: a doorway of light opening in darkness.
 20. QUOTE - Qur'an 14:48 (shown)
 "What world do the crowds wake into? The Qur'an says... the Day the
 earth will be exchanged for another earth, and the heavens as well...
-and they will all appear before Allah, the One, the Prevailing. Not
+and all creatures will come out before Allah, the One, the Prevailing. Not
 your planet, repaired... a new stage entirely, built for one purpose:
 the Reckoning."
 Visual: a horizon transforming under sweeping light, abstract.
