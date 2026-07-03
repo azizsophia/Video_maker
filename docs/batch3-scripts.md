@@ -39,7 +39,7 @@ Visual: star-filled sky, one bright object rising.
 
 5. [Sahih al-Bukhari 3869]
 "Abdullah ibn Mas'ud, may Allah be pleased with him, was standing there. We
-were with the Prophet at Mina... a valley just outside Makkah... he said. And
+were with the Prophet at Mina, he said... a valley just outside Makkah. And
 the moon was split. One piece went toward the mountain. And the
 Prophet said... bear witness. Be witnesses to this."
 Visual: moonlight over a jagged mountain ridge.
@@ -90,10 +90,11 @@ been there... the details would break him."
 Visual: aerial of old stone city, golden and worn.
 
 5. [Sahih al-Bukhari 3886]
-"He said... when Quraysh did not believe me, I stood in al-Hijr... the open
-enclosure beside the Ka'bah, the ancient sanctuary at the heart of Makkah...
-and Allah displayed Jerusalem in front of me.
-And I began describing it to them... while I was looking at it."
+"He described it himself. Standing in al-Hijr... the open enclosure beside
+the Ka'bah, the ancient sanctuary at the heart of Makkah... he said... when
+Quraysh, his own tribe, did not believe me... Allah displayed Jerusalem in
+front of me. And I began describing it to them... while I was looking at
+it."
 Visual: shaft of light falling into an ancient courtyard.
 
 6. [Sahih Muslim 170]
@@ -285,8 +286,8 @@ Visual: a lit village at dusk in a vast valley.
 5. [Musnad Ahmad 16957]
 "The narration is carried by the companion Tamim al-Dari... may Allah be
 pleased with him... and recorded in the Musnad of Imam Ahmad, one of the
-great early collections of the Prophet's words. The scholars whose work is
-grading those words, chain by chain... judged this one authentic."
+great early collections of the Prophet's words. The scholars whose lifework
+is to test such narrations, chain by chain... judged this one authentic."
 Visual: old handwritten manuscript pages turning slowly, no readable text as subject... use warm parchment texture.
 
 6. (context)
@@ -311,8 +312,8 @@ Visual: sunrise flooding over the curve of a wide horizon.
 
 1. HOOK [Musnad Ahmad 3848]
 "Among the great signs of the end of the world... armies, false prophets,
-the sun itself... one sign is so small you did it today. Or rather... you
-didn't."
+the sun itself... one sign is so small it hides inside an ordinary hello.
+And it may already have happened to you... today."
 Visual: crowded city crosswalk from above, anonymous motion.
 
 2. TITLE CARD - THE GREETING / the smallest sign of the Hour (deep read)
@@ -335,8 +336,8 @@ Visual: two paths diverging in an empty park, autumn.
 
 5. [Musnad Ahmad 3870]
 "A fuller narration from the same companion... Abdullah ibn Mas'ud, may
-Allah be pleased with him... also graded sound, lists what grows alongside
-it... trade spreading everywhere... family ties cut...
+Allah be pleased with him... also judged authentic, lists what grows
+alongside it... trade spreading everywhere... family ties cut...
 and false testimony. A world that is more connected... and less warm...
 at the same time."
 Visual: endless container port or lit highways at night.
@@ -428,8 +429,8 @@ each body carried along its own invisible lane."
 Visual: timelapse of sun and moon paths across a wide sky.
 
 6. (reflection, careful framing)
-"Today we know the moon is falling around the earth, the earth around the
-sun, the sun itself sweeping around the galaxy... nothing in the sky is
+"Today we know the moon glides around the earth... the earth around the
+sun... the sun itself around the galaxy... nothing in the sky is
 nailed anywhere. Everything floats along a path. The classical scholars did
 not know the physics... they simply trusted the verb. And the verb held."
 Visual: slow drift through a dense starfield.
@@ -568,8 +569,9 @@ Visual: towering ornate minarets, low dramatic angle.
 
 5. [Sunan an-Nasa'i 689]
 "Another collection carries the same warning with one sharper word...
-people will SHOW OFF in building mosques. Not build them... show off in
-them. My dome against your dome. My city's skyline against yours."
+people will SHOW OFF in building mosques. The building is not the sign...
+the showing off is. My dome against your dome. My city's skyline against
+yours."
 Visual: glittering chandeliers and gilded ceiling, tilt-up.
 
 6. [Sahih al-Bukhari 450]
@@ -600,8 +602,8 @@ Visual: slow spinning star trails on deep black.
 3. (context)
 "The Prophet Muhammad, peace be upon him, gave his companions a list of
 what the last stretch of history would feel like. Not just wars and
-wonders... textures. And the first texture on one famous list... is time
-itself."
+wonders... but how ordinary days would FEEL. And the first feeling on one
+famous list... is time itself."
 Visual: sand pouring steadily off a dune crest.
 
 4. [Sahih al-Bukhari 7061]
@@ -659,13 +661,14 @@ Visual: storm light over an ancient domed skyline silhouette.
 
 5. [Sahih Muslim 2920]
 "A second narration describes a city... one side on land, one side on
-sea... whose conquest arrives near the end of time, with the name of Allah
+sea... whose conquest arrives near the end of time. Taken not with
+weapons, the narration says... but with the name of Allah, called aloud...
 where siege engines should be. The scholars connect it to the same great
 story... and its fullest scene has not happened yet."
 Visual: waves crashing against enormous fortress stones.
 
 6. (context)
-"History, meanwhile, kept the appointment it could keep. Generation after
+"History, meanwhile, kept its own appointment. Generation after
 generation of Muslims sailed and marched at those walls... for eight
 hundred years... until 1453, when the city on land and sea finally opened.
 The drive across all those centuries began as one sentence... spoken by a
