@@ -1,18 +1,13 @@
-# Batch 3 pass 2: cover photos (portrait) for the 15 stories
---photos
+# Batch 3 pass 3: re-searches for 9 unfilled beats
 --portrait
-full moon dark clouds night
-jerusalem old city night
-skyscraper tower night fog
-desert dunes dark dramatic
-gold coins dark background
-twilight horizon dusk landscape
-city night bokeh lights winter
-night sky stars meteor
-sun ocean horizon golden dark
-dark shadow abstract wall
-honey golden dark background
-mosque dome minaret sunset silhouette
-light trails long exposure night
-istanbul bosphorus mosque silhouette sunset
-milky way galaxy night sky
+desert road night stars milky way
+mountains silhouette starry night sky
+arid path trail fork golden hour
+earth from space rotating night
+cabin house glowing windows night stars
+apartment window light night dark street
+honeycomb macro bees hive
+muslim prayer mat sajadah home
+milky way over desert dunes night
+canyon cliffs starry sky night
+old stone wall lantern night arabic
