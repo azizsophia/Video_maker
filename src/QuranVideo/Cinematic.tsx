@@ -154,7 +154,9 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
 };
 
 // Qur'an pull-quote over darkened footage (Arabic shown, never recited).
-const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: string }> = ({ arabic, words = [], kicker }) => {
+// The source reference (foot) renders INSIDE the quote card: an ayah on screen
+// must carry its citation on the same frame, per the accuracy rule.
+const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: string; foot?: string }> = ({ arabic, words = [], kicker, foot }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const wide = width > height;
@@ -189,6 +191,14 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
           </span>
         ))}
       </div>
+      {foot ? (
+        <div style={{ marginTop: wide ? 28 : 42, opacity: flourish * 0.95 }}>
+          <span style={{ fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.92)", background: "rgba(6,12,9,0.42)", padding: "7px 18px", borderRadius: 14, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
+            {/* strip the production note; the screen shows just the citation */}
+            {foot.replace(/\s*\(shown, not recited\)\s*$/i, "")}
+          </span>
+        </div>
+      ) : null}
     </AbsoluteFill>
   );
 };
@@ -293,7 +303,7 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
       {seg.title ? (
         <CineTitle title={seg.title} sub={seg.titleSub} kicker={seg.kicker} />
       ) : seg.arabic ? (
-        <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} />
+        <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} foot={seg.foot} />
       ) : (
         <>
           <CineLabel kicker={seg.kicker} foot={seg.foot} />
