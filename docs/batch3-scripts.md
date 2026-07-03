@@ -669,10 +669,10 @@ Visual: golden light flooding through an ancient stone gate.
 
 7. (precision beat)
 "One precision, always. The fuller end-times description is its own
-promise, still ahead... and the famous line praising the city's conqueror
-and his army rests on a narration whose grading the scholars dispute, so
-it stays off this screen. What stands in Sahih Muslim is enough... the
-name, the promise... and eight centuries of men who believed it."
+promise, still ahead. And there is a famous line praising the city's
+conqueror and his army... but it rests on a narration whose grading the
+scholars dispute. What stands in Sahih Muslim is enough... the name, the
+promise... and eight centuries of men who believed it."
 Visual: old handwritten map textures, slow pan, no readable text.
 
 8. CLOSE (reflection)
