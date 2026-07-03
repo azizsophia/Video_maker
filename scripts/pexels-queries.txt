@@ -2,20 +2,15 @@
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
 --portrait
-old scroll candlelight dark
-antique compass old map dark
-aged parchment scroll dark
-candle flame old paper dark
-old book pages candle dark
-mud brick mosque ancient
-adobe wall palm shadow
-clay brick alley old town warm
-desert village mud houses sunset
-empty prayer rug mosque light
-prayer mat sunbeam empty room
-mosque carpet sunlight rays empty
-prayer beads on rug warm light
-forked path forest dusk
-path splits two directions aerial
-crossroads dirt trail autumn
-fork in the road countryside dusk
+old world map vintage texture
+ancient map sepia
+medieval map parchment
+papyrus scroll
+old manuscript dark moody
+rolled scrolls old paper
+trail fork hiking two ways
+two dirt roads split field
+country road splits junction
+forest path bifurcation drone
+split pathway autumn evening
+two trails diverge woods
