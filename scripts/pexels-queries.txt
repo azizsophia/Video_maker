@@ -1,24 +1,36 @@
-# Batch 2 shorts: COVER photo candidates (portrait) for all 7 stories.
---photos
+# Batch 2 shorts: re-search for weak beats (vertical 9:16 video).
 --portrait
-# the-feast cover
-dramatic dark storm clouds
-storm sky lightning moody
-# fertilizing-winds cover (Lawaqih)
-golden wheat field wind
-wind swept grass field sunset
-# unanswered-challenge cover
-desert dunes dusk moody
-open book dramatic light dark
-# ammar cover
-lone desert road haze
-dust storm dramatic landscape
-# food-tasbih cover
-prayer beads misbaha
-islamic prayer beads dark
-# uhud-trembled cover
-red granite mountain
-rugged mountain golden hour
-# sirius cover (Ash-Shi'ra)
-bright star night sky
-starry night sky desert
+# challenge b1: single spotlight in darkness
+light beam through smoke dark
+projector beam dark room dust
+volumetric light rays dark
+# challenge b5: night sky over dunes
+milky way desert dunes timelapse
+starry night over sand desert
+# challenge b6: small lights igniting in darkness
+stars appearing night timelapse
+distant village lights night valley
+hanging lanterns glowing at night
+# ammar b4: mud bricks
+mud brick wall old village
+clay bricks drying in sun
+adobe mud wall texture
+# ammar b7: storm over plain
+storm clouds timelapse dark field
+thunderstorm rolling over plains
+lightning storm dark landscape
+# uhud b4: rocks trembling
+small rocks falling slope close
+gravel stones sliding
+dust falling from rocks
+# uhud b6: flame going out
+flame extinguished smoke black background
+smoke wisp rising black background
+dying fire embers smoke dark
+# sirius b5: starfield zoom
+starfield zoom timelapse
+milky way core timelapse
+stars twinkling close up dark sky
+# fert b4: clouds building over desert
+storm clouds over sand dunes
+dark clouds gathering desert sky
