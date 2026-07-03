@@ -1,0 +1,29 @@
+{
+  "slides": [
+    "promo/1_hook.png",
+    "promo/2_checkin.png",
+    "promo/3_adhkar.png",
+    "promo/4_garden.png",
+    "promo/5_journal.png"
+  ],
+  "slideAudio": [
+    "promo-audio/s1.mp3",
+    "promo-audio/s2.mp3",
+    "promo-audio/s3.mp3",
+    "promo-audio/s4.mp3",
+    "promo-audio/s5.mp3"
+  ],
+  "slideDurations": [
+    4.68,
+    3.74,
+    6.11,
+    6.11,
+    3.66
+  ],
+  "introAudio": "promo-audio/intro.mp3",
+  "introSeconds": 3.61,
+  "outroAudio": "promo-audio/outro.mp3",
+  "outroSeconds": 6.8,
+  "slideSeconds": 2.7,
+  "crossfadeFrames": 9
+}
