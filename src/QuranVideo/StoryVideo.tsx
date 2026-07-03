@@ -3,6 +3,7 @@ import {
   AbsoluteFill,
   Audio,
   Img,
+  OffthreadVideo,
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -560,7 +561,17 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           back to the lightweight text end card. */}
       {props.showOutro ? (
         <Sequence from={contentEndFrames} durationInFrames={outroFrames}>
-          {adOutro ? (
+          {props.outroVideoSrc ? (
+            // The studio's own produced ad spot (vertical 1080x1920). Exact fit
+            // on the vertical composition; letterboxed on dark for wide so no
+            // text is ever cropped.
+            <AbsoluteFill style={{ backgroundColor: "#0b0f0d" }}>
+              <OffthreadVideo
+                src={staticFile(props.outroVideoSrc)}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              />
+            </AbsoluteFill>
+          ) : adOutro ? (
             <ParallaxAd frames={outroFrames} />
           ) : (
             <OutroCard

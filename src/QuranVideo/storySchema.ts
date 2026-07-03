@@ -62,6 +62,9 @@ export const storyPropsSchema = z.object({
   // Show the website url as the clear destination button. On by default — the
   // funnel goal is signups at the site.
   ctaShowUrl: z.boolean().default(true),
+  // A produced video file (in public/) played as the outro instead of the
+  // code-generated ad. Takes precedence over outroAd.
+  outroVideoSrc: z.string().optional(),
   ctaSeconds: z.number().default(5.5),
   // Cinematic mode: full-bleed stock footage backgrounds + calm captions.
   cinematic: z.boolean().default(false),

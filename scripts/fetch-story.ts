@@ -380,7 +380,10 @@ async function main() {
     // (e.g. the standalone brand ad, which is itself the CTA).
     showOutro: story.showOutro ?? true,
     outroAd: story.outroAd ?? true,
-    adSeconds: story.adSeconds ?? 8,
+    // The owner's produced ad spot is the standing outro (2026-07-03). Set
+    // outroVideoSrc:null in a story to fall back to the generated ParallaxAd.
+    outroVideoSrc: story.outroVideoSrc === null ? undefined : (story.outroVideoSrc ?? "ad/ketabi-ad-12s.mp4"),
+    adSeconds: story.adSeconds ?? (story.outroVideoSrc === null ? 8 : 12.4),
     ctaHeadline: story.ctaHeadline ?? "Launching this month",
     ctaHandle: story.ctaHandle ?? "",
     ctaSub: story.ctaSub ?? "Our keepsake and children's book. Join the waitlist for 15% off your first order.",
