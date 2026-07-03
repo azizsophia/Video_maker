@@ -1,9 +1,18 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
---photos
 --portrait
-gold coins dark treasure
-antique gold coins pile moody
-old coins candlelight dark
-gold treasure dark background
+gold coins closeup macro
+ancient coins pile treasure
+coin stack dark background
+old coin collection dark
+money gold dark cinematic
+old islamic manuscript
+leather bound book candle dark
+old paper texture warm dark
+quill ink pot dark desk
+footprints sand dune ridge
+camel tracks in desert sand
+animal tracks sand dunes dusk
+sand dune ripples sunset shadow
+walking tracks desert aerial
