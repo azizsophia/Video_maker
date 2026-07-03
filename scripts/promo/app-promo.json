@@ -1,0 +1,20 @@
+{
+  "_note": "Voiceover spec for the AppPromo reel. Daniel (seed-locked). Per the studio spoken-Arabic-opt-in rule, the voice speaks English glosses for the riskiest transliterations (the slides already SHOW the Arabic term, e.g. 'adhkar'); only audience-native low-risk words are voiced, respelled for the English TTS (deen, Jannah, soorah, Ketaabee). No instrumental music.",
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceSeed": 71421,
+  "crossfadeFrames": 9,
+  "voiceSettings": { "stability": 0.45, "style": 0.35, "similarity_boost": 0.85 },
+  "intro": {
+    "text": "One quiet home... for your whole deen."
+  },
+  "slides": [
+    { "src": "promo/1_hook.png", "text": "Track your daily remembrance, without opening five apps." },
+    { "src": "promo/2_checkin.png", "text": "A gentle, daily check-in... for your heart." },
+    { "src": "promo/3_adhkar.png", "text": "Morning, evening, and night... all your remembrance, in one place." },
+    { "src": "promo/4_garden.png", "text": "And every thirty-three plants a date palm... in your garden in Jannah." },
+    { "src": "promo/5_journal.png", "text": "Reflect on any soorah... in your own words." }
+  ],
+  "outro": {
+    "text": "Ketaabee. Your Islamic companion. Free on the App Store... and Google Play."
+  }
+}

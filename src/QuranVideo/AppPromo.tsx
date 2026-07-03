@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Img,
+  Audio,
   staticFile,
   interpolate,
   useCurrentFrame,
@@ -15,9 +16,12 @@ import { PLAYFAIR, CORMORANT, JOST } from "./luxFonts";
 // Standalone app-promo reel for Ketabi (9:16). Turns the six pre-designed
 // marketing slides (public/promo/*.png, cream ground + gold wordmark + green
 // serif headline baked in) into a premium motion video: a branded hook card,
-// each slide with a slow cinematic push-in and crossfade, then a download CTA
-// card. Silent by design (works muted with the baked-in headlines); on-brand
-// for an Islamic app (no instrumental music). Colours sampled from the slides.
+// each slide with a slow cinematic push-in and quick crossfade, then a download
+// CTA card. Optional warm Daniel voiceover per beat (paced so each line lands on
+// its slide) - when audio + per-beat durations are supplied via props the beats
+// stretch to the narration; with no audio it plays silent on uniform timings.
+// On-brand for an Islamic app: no instrumental music. Colours sampled from the
+// slides.
 
 export const PROMO_FPS = 30;
 
@@ -31,6 +35,11 @@ export const appPromoSchema = z.object({
   slideSeconds: z.number(),
   outroSeconds: z.number(),
   crossfadeFrames: z.number(),
+  // Optional voiceover track (fetch-promo.ts fills these). Same order as slides.
+  slideAudio: z.array(z.string()).optional(),
+  slideDurations: z.array(z.number()).optional(),
+  introAudio: z.string().optional(),
+  outroAudio: z.string().optional(),
 });
 export type AppPromoProps = z.infer<typeof appPromoSchema>;
 
@@ -50,22 +59,35 @@ export const DEFAULT_PROMO_PROPS: AppPromoProps = {
   crossfadeFrames: 9,
 };
 
-export const appPromoDurationInFrames = (p: AppPromoProps): number => {
-  const intro = Math.round(p.introSeconds * PROMO_FPS);
-  const slide = Math.round(p.slideSeconds * PROMO_FPS);
-  const outro = Math.round(p.outroSeconds * PROMO_FPS);
-  // Slides overlap each neighbour by crossfadeFrames; intro/outro overlap too.
-  const advance = slide - p.crossfadeFrames;
-  return intro + advance * p.slides.length + outro;
+// Frames for each beat: intro, one per slide, outro. Honors per-beat VO
+// durations when present, else the uniform defaults.
+const beatFrames = (p: AppPromoProps) => {
+  const introF = Math.round(p.introSeconds * PROMO_FPS);
+  const outroF = Math.round(p.outroSeconds * PROMO_FPS);
+  const slideF = p.slides.map((_, i) =>
+    Math.round((p.slideDurations?.[i] ?? p.slideSeconds) * PROMO_FPS)
+  );
+  return { introF, slideF, outroF };
 };
+
+export const appPromoDurationInFrames = (p: AppPromoProps): number => {
+  const { introF, slideF, outroF } = beatFrames(p);
+  const all = [introF, ...slideF, outroF];
+  // Each beat overlaps its neighbour by the crossfade.
+  return all.reduce((sum, f) => sum + f, 0) - p.crossfadeFrames * (all.length - 1);
+};
+
+const BeatAudio: React.FC<{ src?: string }> = ({ src }) =>
+  src ? <Audio src={staticFile(src)} startFrom={0} /> : null;
 
 // One full-frame slide with a slow push-in (Ken Burns on the flat-cream slide
 // reads as a gentle camera dolly toward the phone) and symmetric crossfade.
-const Slide: React.FC<{ src: string; durationInFrames: number; fade: number }> = ({
-  src,
-  durationInFrames,
-  fade,
-}) => {
+const Slide: React.FC<{
+  src: string;
+  durationInFrames: number;
+  fade: number;
+  audio?: string;
+}> = ({ src, durationInFrames, fade, audio }) => {
   const frame = useCurrentFrame();
   const opacity = interpolate(
     frame,
@@ -88,6 +110,7 @@ const Slide: React.FC<{ src: string; durationInFrames: number; fade: number }> =
           transform: `scale(${scale})`,
         }}
       />
+      <BeatAudio src={audio} />
     </AbsoluteFill>
   );
 };
@@ -112,9 +135,10 @@ const Wordmark: React.FC<{ delay?: number; size?: number }> = ({ delay = 0, size
   );
 };
 
-const IntroCard: React.FC<{ durationInFrames: number; fade: number }> = ({
+const IntroCard: React.FC<{ durationInFrames: number; fade: number; audio?: string }> = ({
   durationInFrames,
   fade,
+  audio,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -157,13 +181,15 @@ const IntroCard: React.FC<{ durationInFrames: number; fade: number }> = ({
           whole deen
         </span>
       </div>
+      <BeatAudio src={audio} />
     </AbsoluteFill>
   );
 };
 
-const OutroCard: React.FC<{ durationInFrames: number; fade: number }> = ({
+const OutroCard: React.FC<{ durationInFrames: number; fade: number; audio?: string }> = ({
   durationInFrames,
   fade,
+  audio,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -247,38 +273,46 @@ const OutroCard: React.FC<{ durationInFrames: number; fade: number }> = ({
       >
         KETABISTUDIO.COM
       </div>
+      <BeatAudio src={audio} />
     </AbsoluteFill>
   );
 };
 
 export const AppPromo: React.FC<AppPromoProps> = (props) => {
-  const intro = Math.round(props.introSeconds * PROMO_FPS);
-  const slide = Math.round(props.slideSeconds * PROMO_FPS);
-  const outro = Math.round(props.outroSeconds * PROMO_FPS);
+  const { introF, slideF, outroF } = beatFrames(props);
   const fade = props.crossfadeFrames;
-  const advance = slide - fade;
 
+  // Place beats sequentially, each overlapping the previous by `fade`.
+  const starts: number[] = [];
   let cursor = 0;
-  const introFrom = cursor;
-  cursor += intro - fade;
-
-  const slideStarts = props.slides.map((_, i) => introFrom + (intro - fade) + i * advance);
-  const outroFrom = introFrom + (intro - fade) + props.slides.length * advance;
+  const durations = [introF, ...slideF, outroF];
+  durations.forEach((d, i) => {
+    starts.push(cursor);
+    cursor += d - fade;
+  });
+  const introFrom = starts[0];
+  const slideStarts = starts.slice(1, 1 + props.slides.length);
+  const outroFrom = starts[starts.length - 1];
 
   return (
     <AbsoluteFill style={{ backgroundColor: CREAM }}>
-      <Sequence from={introFrom} durationInFrames={intro}>
-        <IntroCard durationInFrames={intro} fade={fade} />
+      <Sequence from={introFrom} durationInFrames={introF}>
+        <IntroCard durationInFrames={introF} fade={fade} audio={props.introAudio} />
       </Sequence>
 
       {props.slides.map((src, i) => (
-        <Sequence key={src} from={slideStarts[i]} durationInFrames={slide}>
-          <Slide src={src} durationInFrames={slide} fade={fade} />
+        <Sequence key={src} from={slideStarts[i]} durationInFrames={slideF[i]}>
+          <Slide
+            src={src}
+            durationInFrames={slideF[i]}
+            fade={fade}
+            audio={props.slideAudio?.[i]}
+          />
         </Sequence>
       ))}
 
-      <Sequence from={outroFrom} durationInFrames={outro}>
-        <OutroCard durationInFrames={outro} fade={fade} />
+      <Sequence from={outroFrom} durationInFrames={outroF}>
+        <OutroCard durationInFrames={outroF} fade={fade} audio={props.outroAudio} />
       </Sequence>
     </AbsoluteFill>
   );

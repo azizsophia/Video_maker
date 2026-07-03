@@ -1,0 +1,69 @@
+name: Render App Promo
+
+# Standalone Ketabi app-promo reel (9:16). Builds a warm Daniel voiceover for
+# each beat (fetch-promo.ts) then renders the AppPromo composition over the six
+# marketing slides in public/promo. The "failure" badge, if any, is only the
+# optional Drive step; the artifact is still produced.
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Promo voiceover spec (JSON)"
+        required: true
+        default: "scripts/promo/app-promo.json"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 || \
+          sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm1 \
+            libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Restore voice cache
+        # Voice audio is seed-locked, so identical lines are reusable across runs.
+        # Shared with the story cache dir: a re-render bills ZERO ElevenLabs
+        # characters for unchanged lines.
+        uses: actions/cache@v4
+        with:
+          path: public/story-cache
+          key: tts-cache-promo-${{ inputs.spec }}-${{ github.run_id }}
+          restore-keys: |
+            tts-cache-promo-${{ inputs.spec }}-
+            tts-cache-
+
+      - name: Build promo voiceover
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          npx tsx scripts/fetch-promo.ts \
+            --spec="${{ inputs.spec }}" --out=src/data/promo-render.json
+
+      - name: Render promo
+        run: |
+          mkdir -p out
+          npx remotion render AppPromo "out/ketabi-app-promo.mp4" \
+            --props=src/data/promo-render.json --concurrency=$(nproc) --crf 18
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-promo
+          path: |
+            out/ketabi-app-promo.mp4
+            src/data/promo-render.json
+          retention-days: 14
+          if-no-files-found: warn
