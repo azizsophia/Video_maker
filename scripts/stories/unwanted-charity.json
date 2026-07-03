@@ -43,9 +43,9 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "https://videos.pexels.com/video-files/35157119/14893512_1080_1920_30fps.mp4",
-      "videoDuration": 10,
-      "_shot": "slow golden dust settling on black"
+      "video": "https://videos.pexels.com/video-files/35340113/14973755_1080_1920_60fps.mp4",
+      "videoDuration": 18,
+      "_shot": "dark gold particles drifting on near-black (title-safe, low contrast)"
     },
     {
       "type": "narration",
