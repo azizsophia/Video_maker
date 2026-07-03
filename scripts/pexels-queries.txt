@@ -1,3 +1,3 @@
-# Batch 3 pass 6: fetch full video_files lists for HD variants of 6 picks
---ids
-18194373,30560393,30573057,27893808,34307917,30558817
+# Scratch file for the Pexels Search workflow.
+# Put one query per line (first non-comment line may be --portrait / --photos / --ids)
+# and push to trigger .github/workflows/pexels-search.yml.

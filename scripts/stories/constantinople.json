@@ -9,7 +9,7 @@
   "cover": {
     "title": "Qustantiniyyah",
     "kicker": "THE PROMISED CITY",
-    "image": ""
+    "image": "https://images.pexels.com/photos/29048708/pexels-photo-29048708.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "A landlocked people were promised the queen of the seas, and pursued that promise for eight hundred years. Sahih Muslim 2897.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "There was one city every empire wanted... a fortress on two continents, wrapped in sea walls that ate armies for a thousand years. And the Prophet of Islam, peace be upon him... promised his followers its name.",
       "foot": "Sahih Muslim 2897",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/28277078/12347926_1080_1920_60fps.mp4",
+      "videoDuration": 20,
       "_shot": "massive ancient sea walls meeting the water"
     },
     {
@@ -43,14 +43,14 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/35655240/15109370_1080_1920_30fps.mp4",
+      "videoDuration": 20,
       "_shot": "slow fog rolling over dark water at night"
     },
     {
       "type": "narration",
       "text": "Constantinople... capital of the Roman empire of the east, the mightiest Christian city on earth, guarded by the sea on one side and land on the other. When this prophecy was spoken, the Muslims were a small community whose entire world was desert. They did not have a single ship.",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/30215863/12954418_1080_1920_60fps.mp4",
       "videoDuration": 15,
       "_shot": "aerial of a great strait dividing two shores"
     },
@@ -58,36 +58,36 @@
       "type": "narration",
       "text": "Yet in Sahih Muslim, in a narration about the great events to come, the promise is explicit... the Muslims, it says... will conquer Constantinople.",
       "foot": "Sahih Muslim 2897",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/34208154/14498674_1080_1920_25fps.mp4",
+      "videoDuration": 11,
       "_shot": "storm light over an ancient domed skyline silhouette"
     },
     {
       "type": "narration",
       "text": "A second narration describes a city... one side on land, one side on sea... whose conquest arrives near the end of time. Taken not with weapons, the narration says... but with the name of Allah, called aloud... where siege engines should be. The scholars connect it to the same great story... and its fullest scene has not happened yet.",
       "foot": "Sahih Muslim 2920",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/26110399/11932481_1080_1920_60fps.mp4",
+      "videoDuration": 20,
       "_shot": "waves crashing against enormous fortress stones"
     },
     {
       "type": "narration",
       "text": "History, meanwhile, kept its own appointment. Generation after generation of Muslims sailed and marched at those walls... for eight hundred years... until 1453, when the city on land and sea finally opened. The drive across all those centuries began as one sentence... spoken by a man who never saw the sea walls.",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/8720606/8720606-hd_1080_1920_25fps.mp4",
       "videoDuration": 15,
       "_shot": "golden light flooding through an ancient stone gate"
     },
     {
       "type": "narration",
       "text": "The fuller end-times description is its own promise, still ahead. And there is a famous line praising the city's conqueror and his army... but it rests on a narration whose grading the scholars dispute. What stands in Sahih Muslim is enough... the name, the promise... and eight centuries of men who believed it.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/7432024/7432024-hd_1080_2048_30fps.mp4",
+      "videoDuration": 18,
       "_shot": "old handwritten map textures, slow pan, no readable text"
     },
     {
       "type": "narration",
       "text": "A landlocked people were promised the queen of the seas... and generation after generation spent themselves on that promise, for eight hundred years, until the city opened. When a claim can hold men's hearts for eight centuries... the question is no longer whether he meant it. It is who told him.",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/30100149/12908597_1080_1920_60fps.mp4",
       "videoDuration": 15,
       "_shot": "sunrise over the strait, water like gold"
     }

@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Ceiling",
     "kicker": "WHAT THE QUR'AN CALLS THE SKY",
-    "image": ""
+    "image": "https://images.pexels.com/photos/11748423/pexels-photo-11748423.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "Tons of space rock hit the sky above you every day. You never hear one land. Qur'an 21:32.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "Right now, stones from space are hitting your roof. Tons of them, every single day. You have never heard one land... and the reason why is written in a fourteen hundred year old verse.",
       "foot": "Qur'an 21:32",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/30560393/13088589_1080_1622_30fps.mp4",
+      "videoDuration": 10,
       "_shot": "meteor streaking across a star-dense sky"
     },
     {
@@ -43,15 +43,15 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/28191115/12322530_1080_1920_60fps.mp4",
+      "videoDuration": 52,
       "_shot": "slow aurora-like glow rippling on dark sky"
     },
     {
       "type": "narration",
       "text": "The Qur'an, the book Muslims believe is the speech of Allah, often points up. To desert people sleeping under the open sky, it kept insisting that what hung above them was not emptiness... it was architecture.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/30573057/13092135_1080_1622_30fps.mp4",
+      "videoDuration": 10,
       "_shot": "vast desert night sky over dunes, camera tilted up"
     },
     {
@@ -59,30 +59,30 @@
       "text": "And We made the sky a protected ceiling... but they, from its signs, are turning away.",
       "quote": "21:32",
       "foot": "Qur'an 21:32 (shown, not recited)",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/12278131/12278131-hd_1080_1920_60fps.mp4",
+      "videoDuration": 23,
       "_shot": "clouds lit from above, cathedral-like light"
     },
     {
       "type": "narration",
       "text": "The classical scholars read it plainly. Ibn Kathir wrote that the sky is a roof over the earth... safe and well-guarded, raised high, protected from anything reaching it. A guarded roof... over every head, everywhere, at once.",
       "foot": "Tafsir Ibn Kathir",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/35626509/15097840_1080_1920_60fps.mp4",
+      "videoDuration": 17,
       "_shot": "sunlight bursting through towering cloudbanks"
     },
     {
       "type": "narration",
       "text": "Today we can describe some of what that guarding looks like. A blanket of air that burns up the daily rain of space rock into harmless streaks of light... fields that turn away the storms of charged particles the sun throws at us. The verse did not teach that science... it named the mercy, and left the signs open for whoever would look.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/5149094/5149094-hd_720_900_25fps.mp4",
+      "videoDuration": 10,
       "_shot": "shooting stars burning out high in the atmosphere"
     },
     {
       "type": "narration",
       "text": "The verse ends with the ache... but they turn away from its signs. Tonight the ceiling above you will quietly absorb a thousand small catastrophes. Don't be the one who never once looked up and said... thank You.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/30182682/12942115_1080_1920_60fps.mp4",
+      "videoDuration": 11,
       "_shot": "still night sky over a sleeping town"
     }
   ]

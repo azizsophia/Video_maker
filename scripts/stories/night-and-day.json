@@ -9,7 +9,7 @@
   "cover": {
     "title": "Night and Day",
     "kicker": "A PROPHECY THE SUN KEEPS CHECKING",
-    "image": ""
+    "image": "https://images.pexels.com/photos/13922023/pexels-photo-13922023.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "Spoken when the whole religion fit in one city: this matter will reach wherever night and day reach. Musnad Ahmad, sahih.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "When this sentence was first spoken, the entire religion fit inside one small city. Today, no sun rises anywhere on earth without finding it. And that... is exactly what the sentence said would happen.",
       "foot": "Musnad Ahmad 16957",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/35221616/14921374_1080_1920_60fps.mp4",
+      "videoDuration": 13,
       "_shot": "timelapse of the day line moving across the earth from space-style footage"
     },
     {
@@ -43,52 +43,52 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/14922976/14922976-hd_1080_1920_30fps.mp4",
+      "videoDuration": 9,
       "_shot": "slow drift of stars fading into pre-dawn blue"
     },
     {
       "type": "narration",
       "text": "Context first. Islam began with one man, the Prophet Muhammad, peace be upon him, in Makkah... rejected by his own tribe, his followers tortured, his message besieged. For years the religion could be erased by one bad afternoon. That is the moment this was said.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/15831537/15831537-hd_1080_1920_30fps.mp4",
+      "videoDuration": 50,
       "_shot": "single small campfire in an immense dark desert"
     },
     {
       "type": "narration",
       "text": "This matter will reach... wherever night and day reach. And Allah will not leave a house of mud... or a house of hair... but He will cause this religion to enter it. Houses of mud... the settled cities. Houses of hair... the woven tents of the nomads. Meaning... everyone.",
       "foot": "Musnad Ahmad 16957",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/31764596/13532429_1080_1920_30fps.mp4",
+      "videoDuration": 31,
       "_shot": "a lit village at dusk in a vast valley"
     },
     {
       "type": "narration",
       "text": "The narration is carried by the companion Tamim al-Dari... may Allah be pleased with him... and recorded in the Musnad of Imam Ahmad, one of the great early collections of the Prophet's words. The scholars whose lifework is to test such narrations, chain by chain... judged this one authentic.",
       "foot": "Musnad Ahmad 16957",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/8484385/8484385-hd_1080_1920_25fps.mp4",
+      "videoDuration": 11,
       "_shot": "old handwritten manuscript pages turning slowly, no readable text as subject... use warm parchment texture"
     },
     {
       "type": "narration",
       "text": "Now measure it. Today there are Muslims in nearly every country on earth... roughly one in four human beings. From the tundra to the equator, the prayer moves with the sunset, hour by hour, in an unbroken wave... night and day, literally, cannot outrun it.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/20631643/20631643-hd_1080_1920_24fps.mp4",
+      "videoDuration": 27,
       "_shot": "globe of city lights, slow rotation feel"
     },
     {
       "type": "narration",
       "text": "The great empires that bet against this sentence... are gone. The sentence is still arriving in new houses tonight.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/19960973/19960973-uhd_2160_3328_24fps.mp4",
+      "videoDuration": 27,
       "_shot": "doorway of a warm lit home under stars"
     },
     {
       "type": "narration",
       "text": "A man with no army, no press, and no map of the world... described the reach of his message with the only two things that touch every home on earth. Night... and day. Ask yourself how he knew.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/34078202/14453685_1080_1920_30fps.mp4",
+      "videoDuration": 23,
       "_shot": "sunrise flooding over the curve of a wide horizon"
     }
   ]

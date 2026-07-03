@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Moon",
     "kicker": "THE NIGHT IT SPLIT",
-    "image": ""
+    "image": "https://images.pexels.com/photos/12863822/pexels-photo-12863822.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "The moon split in two, and the men who saw it never stopped telling it. Qur'an 54:1 and Sahih al-Bukhari.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "Of all the miracles Muslims believe in... this is the one people find hardest to say out loud. The moon... the actual moon... split in two. And the men who saw it never stopped telling it.",
       "foot": "Qur'an 54:1",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/36898365/15630516_1080_1920_30fps.mp4",
+      "videoDuration": 45,
       "_shot": "full moon huge over a dark desert horizon"
     },
     {
@@ -43,31 +43,31 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/18194373/18194373-hd_1080_1960_30fps.mp4",
+      "videoDuration": 12,
       "_shot": "slow drifting clouds crossing a bright moon"
     },
     {
       "type": "narration",
       "text": "Makkah, before the migration. The Prophet Muhammad, peace be upon him, had been preaching for years, and the leaders of his city wanted proof. So they demanded a sign... something no man could fake. Not words. The sky.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/33446280/14232678_1080_1920_30fps.mp4",
+      "videoDuration": 11,
       "_shot": "rugged dark mountains under deep night"
     },
     {
       "type": "narration",
       "text": "The people of Makkah asked him to show them a sign... and he showed them the splitting of the moon. That demand, and what followed it, sits in Sahih al-Bukhari... the most rigorously authenticated book in Islam after the Qur'an.",
       "foot": "Sahih al-Bukhari 4867",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/32097578/13683716_1080_1920_24fps.mp4",
+      "videoDuration": 10,
       "_shot": "star-filled sky, one bright object rising"
     },
     {
       "type": "narration",
       "text": "Abdullah ibn Mas'ud, may Allah be pleased with him, was standing there. We were with the Prophet at Mina, he said... a valley just outside Makkah. And the moon was split. One piece went toward the mountain. And the Prophet said... bear witness. Be witnesses to this.",
       "foot": "Sahih al-Bukhari 3869",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/34626522/14674744_1080_1920_60fps.mp4",
+      "videoDuration": 22,
       "_shot": "moonlight over a jagged mountain ridge"
     },
     {
@@ -75,22 +75,22 @@
       "text": "And the Qur'an itself carries the event, in a chapter named The Moon. The Hour has come near... and the moon has split.",
       "quote": "54:1",
       "foot": "Qur'an 54:1 (shown, not recited)",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/27700493/12208466_1080_1920_60fps.mp4",
+      "videoDuration": 40,
       "_shot": "the moon reflected, trembling, on dark water"
     },
     {
       "type": "narration",
       "text": "Notice the order of that verse. Not... look what happened. But... the Hour has come near. The split moon was never just a spectacle. It was a clock, striking once... reminding every eye that looked up that this world has an end.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/35187590/14907622_1080_1920_30fps.mp4",
+      "videoDuration": 39,
       "_shot": "slow clouds swallowing the moon into darkness"
     },
     {
       "type": "narration",
       "text": "The same moon hangs over you tonight... whole, quiet, patient. The men who saw it torn in two changed their lives. It has never needed to happen twice.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/31160537/13313538_1080_1920_60fps.mp4",
+      "videoDuration": 21,
       "_shot": "calm night landscape, moonlit, vast and still"
     }
   ]

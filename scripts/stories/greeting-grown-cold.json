@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Greeting",
     "kicker": "THE SMALLEST SIGN OF THE HOUR",
-    "image": ""
+    "image": "https://images.pexels.com/photos/10636652/pexels-photo-10636652.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "A sign of the Hour so small it hides inside an ordinary hello. Musnad Ahmad, judged authentic.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "Among the great signs of the end of the world... armies, false prophets, the sun itself... one sign is so small it hides inside an ordinary hello. And it may already have happened to you... today.",
       "foot": "Musnad Ahmad 3848",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/36673526/15546948_1080_1920_50fps.mp4",
+      "videoDuration": 11,
       "_shot": "crowded city crosswalk from above, anonymous motion"
     },
     {
@@ -43,23 +43,23 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/32173273/13720468_1080_1920_25fps.mp4",
+      "videoDuration": 59,
       "_shot": "slow bokeh of cold city lights on black"
     },
     {
       "type": "narration",
       "text": "In Islam, the greeting is not small talk. As-salamu alaykum... peace be upon you... is a prayer offered to strangers, a right owed to whoever crosses your path. The Prophet Muhammad, peace be upon him, taught his companions to spread the greeting... to those you know, and those you do not.",
       "foot": "Sahih al-Bukhari 12",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/37345874/15818284_1080_1920_25fps.mp4",
+      "videoDuration": 13,
       "_shot": "warm light spilling through an old doorway"
     },
     {
       "type": "narration",
       "text": "And then he told them a day would come when that would quietly die. Among the signs of the Hour... he said... is that a man will give the greeting to another... only because he knows him.",
       "foot": "Musnad Ahmad 3848",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/34901393/14785516_1080_1920_30fps.mp4",
       "videoDuration": 15,
       "_shot": "two paths diverging in an empty park, autumn"
     },
@@ -67,22 +67,22 @@
       "type": "narration",
       "text": "A fuller narration from the same companion... Abdullah ibn Mas'ud, may Allah be pleased with him... also judged authentic, lists what grows alongside it... trade spreading everywhere... family ties cut... and false testimony. A world that is more connected... and less warm... at the same time.",
       "foot": "Musnad Ahmad 3870",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/34711278/14712604_1080_1920_30fps.mp4",
       "videoDuration": 15,
       "_shot": "endless container port or lit highways at night"
     },
     {
       "type": "narration",
       "text": "Feel how precise that is. Not... people will become evil. Just... the circle of your peace will shrink to the people already inside it. Warmth rationed to acquaintances. Kindness... privatized.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/25401762/11901194_1080_1920_30fps.mp4",
+      "videoDuration": 44,
       "_shot": "one lit window in a dark apartment block"
     },
     {
       "type": "narration",
       "text": "This is the rare prophecy you can push back on with one sentence. Peace be upon you... said to someone who was not expecting it. The sign is that the greeting grows cold. So warm it.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/33472428/14240279_1080_1920_24fps.mp4",
+      "videoDuration": 13,
       "_shot": "morning light warming a quiet street"
     }
   ]

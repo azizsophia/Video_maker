@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Boast",
     "kicker": "A SIGN INSIDE THE BEAUTIFUL",
-    "image": ""
+    "image": "https://images.pexels.com/photos/16737017/pexels-photo-16737017.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "The Hour will not come until people boast about their mosques. Sunan Abi Dawud 449, graded sahih.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "Some prophecies predict disasters. This one predicts something that looks, from the outside... like success. Golden domes. Record-breaking minarets. And a warning hiding inside the glitter.",
       "foot": "Sunan Abi Dawud 449",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/18090309/18090309-hd_1080_1920_50fps.mp4",
+      "videoDuration": 12,
       "_shot": "ornate golden dome gleaming at sunset, exterior only"
     },
     {
@@ -43,46 +43,46 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/17890037/17890037-hd_1080_1920_60fps.mp4",
+      "videoDuration": 18,
       "_shot": "slow gold filigree light patterns on black"
     },
     {
       "type": "narration",
       "text": "A mosque... masjid in Arabic... is simply a place of prostration, where Muslims pray. The Prophet Muhammad, peace be upon him, prayed in one built of mud brick and palm trunks, with a roof that leaked when it rained. From inside that simplicity... he saw what was coming.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/35074184/14864376_1080_1920_25fps.mp4",
+      "videoDuration": 16,
       "_shot": "simple mud-brick courtyard, palm shadows"
     },
     {
       "type": "narration",
       "text": "The Hour will not be established... he said... until people boast about their mosques. Narrated by his servant Anas ibn Malik, may Allah be pleased with him... recorded in Sunan Abi Dawud, and graded authentic.",
       "foot": "Sunan Abi Dawud 449",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/6010697/6010697-hd_1080_1920_25fps.mp4",
+      "videoDuration": 13,
       "_shot": "towering ornate minarets, low dramatic angle"
     },
     {
       "type": "narration",
       "text": "Another collection carries the same warning with one sharper word... people will SHOW OFF in building mosques. The building is not the sign... the showing off is. My dome against your dome. My city's skyline against yours.",
       "foot": "Sunan an-Nasa'i 689",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/36443278/15453314_1080_1920_30fps.mp4",
+      "videoDuration": 10,
       "_shot": "glittering chandeliers and gilded ceiling, tilt-up"
     },
     {
       "type": "narration",
       "text": "The precision matters. Building mosques is beloved in Islam... the Prophet, peace be upon him, promised a house in Paradise for it. The sign is not the marble. It is the motive... when houses built for humility become monuments to pride, while the prayer rows inside them thin out.",
       "foot": "Sahih al-Bukhari 450",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/34956636/14808114_1080_1920_30fps.mp4",
+      "videoDuration": 16,
       "_shot": "vast empty prayer hall, beams of light, no people"
     },
     {
       "type": "narration",
       "text": "He worshipped under a leaking roof and changed the world. The prophecy asks a question every generation answers for itself... is the beauty for Allah... or for the photograph?",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/7953223/7953223-hd_1080_1920_25fps.mp4",
+      "videoDuration": 27,
       "_shot": "simple prayer rug in a plain sunlit room"
     }
   ]

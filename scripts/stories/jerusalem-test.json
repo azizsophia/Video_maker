@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Test",
     "kicker": "THE NIGHT JOURNEY, EXAMINED",
-    "image": ""
+    "image": "https://images.pexels.com/photos/16733037/pexels-photo-16733037.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "They tested him with a city he had never lived in. He described it while looking at it. Sahih al-Bukhari 3886.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "They thought they finally had him. He claimed he had traveled, in one night, to a city a month's ride away... a city they knew, and he had never lived in. So they demanded he describe it. And he described it... looking at something they could not see.",
       "foot": "Sahih al-Bukhari 3886",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/37426379/15851250_1080_1920_60fps.mp4",
+      "videoDuration": 17,
       "_shot": "ancient stone city walls at night, lamplight"
     },
     {
@@ -43,21 +43,21 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/34142319/14476178_1080_1920_60fps.mp4",
       "videoDuration": 15,
       "_shot": "slow mist moving over dark ancient stone"
     },
     {
       "type": "narration",
       "text": "Muslims believe that in one night, the Prophet Muhammad, peace be upon him, was taken by Allah from Makkah to Bayt al-Maqdis... the holy sanctuary in Jerusalem... and then raised through the heavens. It is called the Night Journey. And when he told his city the next morning... they laughed. Two months of caravan riding, there and back... in a night?",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/3059486/3059486-hd_1080_1920_24fps.mp4",
+      "videoDuration": 11,
       "_shot": "long empty desert road under stars"
     },
     {
       "type": "narration",
       "text": "But here was their opening. Makkah's caravans had ridden north into Sham... greater Syria... for generations, and some of those merchants had seen Jerusalem with their own eyes. They knew its shape. If this man had never been there... the details would break him.",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/37994821/16123539_1080_1920_30fps.mp4",
       "videoDuration": 15,
       "_shot": "aerial of old stone city, golden and worn"
     },
@@ -65,30 +65,30 @@
       "type": "narration",
       "text": "He described it himself. Standing in al-Hijr... the open enclosure beside the Ka'bah, the ancient sanctuary at the heart of Makkah... he said... when Quraysh, his own tribe, did not believe me... Allah displayed Jerusalem in front of me. And I began describing it to them... while I was looking at it.",
       "foot": "Sahih al-Bukhari 3886",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/37426375/15851189_1080_1920_60fps.mp4",
+      "videoDuration": 11,
       "_shot": "shaft of light falling into an ancient courtyard"
     },
     {
       "type": "narration",
       "text": "The same account stands in Sahih Muslim. Allah lifted before me Bayt al-Maqdis... and I narrated its signs... while I was looking at it. Sign after sign... detail after detail... from a man staring past them at something only he could see.",
       "foot": "Sahih Muslim 170",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/19436907/19436907-hd_1080_1920_50fps.mp4",
+      "videoDuration": 25,
       "_shot": "dark room, one window of brilliant light"
     },
     {
       "type": "narration",
       "text": "The examiners chose the test. The examiners knew the answers. And the record of what happened next is not that the details failed... it is that the description held.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/16668201/16668201-hd_1080_1920_24fps.mp4",
+      "videoDuration": 10,
       "_shot": "empty ancient stone street at dawn, silent"
     },
     {
       "type": "narration",
       "text": "Fourteen centuries later, the two cities are still standing... still joined by that one night. He passed their test. The question the story leaves behind... is yours.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/37994817/16123417_1080_1920_30fps.mp4",
+      "videoDuration": 22,
       "_shot": "sunrise breaking over old city rooftops"
     }
   ]
