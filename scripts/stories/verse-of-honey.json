@@ -1,0 +1,89 @@
+{
+  "id": "verse-of-honey",
+  "title": "The Verse of Honey",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Honey",
+    "kicker": "A HEALING NAMED IN THE QUR'AN",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The one food the Qur'an calls a healing, and the man it cured. Qur'an 16:69 and Sahih al-Bukhari 5684.",
+    "shorts": "The one food the Qur'an calls a healing, and the man it cured. Qur'an 16:69 and Sahih al-Bukhari 5684.",
+    "reels": "The one food the Qur'an calls a healing, and the man it cured. Qur'an 16:69 and Sahih al-Bukhari 5684.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#sunnah",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #11. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is exactly one food in the Qur'an that Allah calls a healing. Not a blessing... not a provision. A healing. And it comes out of the body of an insect.",
+      "foot": "Qur'an 16:69",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "golden honey pouring in slow motion, backlit"
+    },
+    {
+      "type": "narration",
+      "text": "This is the verse... of the honey.",
+      "title": "THE HONEY",
+      "titleSub": "a healing named in the Qur'an",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow amber light refracting on black"
+    },
+    {
+      "type": "narration",
+      "text": "The sixteenth chapter of the Qur'an is named an-Nahl... The Bee. In it, Allah describes inspiring the bee to build homes in the mountains and trees, to feed from every fruit... and then to produce something that was never for the bee alone.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "bees working wildflowers in golden light"
+    },
+    {
+      "type": "narration",
+      "text": "There emerges from their bellies a drink, varying in colors... in which there is healing for people. Indeed in that is a sign... for a people who give thought.",
+      "quote": "16:69",
+      "foot": "Qur'an 16:69 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "honeycomb close-up, hexagons glowing amber"
+    },
+    {
+      "type": "narration",
+      "text": "And the Prophet, peace be upon him, staked a cure on that verse. A man came to him saying... my brother's stomach is ailing. He said... give him honey. The man came back... it grew worse. Again... honey. Until the Prophet said... Allah has spoken the truth, and your brother's stomach has lied. He drank it... and he was cured.",
+      "foot": "Sahih al-Bukhari 5684",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "tea-colored honey stirred into a glass cup, steam"
+    },
+    {
+      "type": "narration",
+      "text": "The verse says healing for people... it never said every disease, and Muslims do not read it as a replacement for medicine. But fourteen centuries later, honey sits in modern wound clinics and pharmacology journals... the pantry food found still edible in tombs thousands of years old... still earning its verse.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "jars of honey in warm window light"
+    },
+    {
+      "type": "narration",
+      "text": "Indeed in that is a sign for a people who give thought. The bee cannot know what it makes. The question the chapter asks is quieter... do you know who taught it?",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "a bee lifting off a flower into soft light"
+    }
+  ]
+}

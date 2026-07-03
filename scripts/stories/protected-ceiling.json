@@ -1,0 +1,89 @@
+{
+  "id": "protected-ceiling",
+  "title": "The Protected Ceiling",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Ceiling",
+    "kicker": "WHAT THE QUR'AN CALLS THE SKY",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "Tons of space rock hit the sky above you every day. You never hear one land. Qur'an 21:32.",
+    "shorts": "Tons of space rock hit the sky above you every day. You never hear one land. Qur'an 21:32.",
+    "reels": "Tons of space rock hit the sky above you every day. You never hear one land. Qur'an 21:32.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#quranandscience",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #8. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Right now, stones from space are hitting your roof. Tons of them, every single day. You have never heard one land... and the reason why is written in a fourteen hundred year old verse.",
+      "foot": "Qur'an 21:32",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "meteor streaking across a star-dense sky"
+    },
+    {
+      "type": "narration",
+      "text": "This is the verse... of the protected ceiling.",
+      "title": "THE CEILING",
+      "titleSub": "what the Qur'an calls the sky",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow aurora-like glow rippling on dark sky"
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an, the book Muslims believe is the speech of Allah, often points up. To desert people sleeping under the open sky, it kept insisting that what hung above them was not emptiness... it was architecture.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "vast desert night sky over dunes, camera tilted up"
+    },
+    {
+      "type": "narration",
+      "text": "And We made the sky a protected ceiling... but they, from its signs, are turning away.",
+      "quote": "21:32",
+      "foot": "Qur'an 21:32 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "clouds lit from above, cathedral-like light"
+    },
+    {
+      "type": "narration",
+      "text": "The classical scholars read it plainly. Ibn Kathir wrote that the sky is a roof over the earth... safe and well-guarded, raised high, protected from anything reaching it. A guarded roof... over every head, everywhere, at once.",
+      "foot": "Tafsir Ibn Kathir",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "sunlight bursting through towering cloudbanks"
+    },
+    {
+      "type": "narration",
+      "text": "Today we can describe some of what that guarding looks like. A blanket of air that burns up the daily rain of space rock into harmless streaks of light... fields that turn away the storms of charged particles the sun throws at us. The verse did not teach that science... it named the mercy, and left the signs open for whoever would look.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "shooting stars burning out high in the atmosphere"
+    },
+    {
+      "type": "narration",
+      "text": "The verse ends with the ache... but they turn away from its signs. Tonight the ceiling above you will quietly absorb a thousand small catastrophes. Don't be the one who never once looked up and said... thank You.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "still night sky over a sleeping town"
+    }
+  ]
+}

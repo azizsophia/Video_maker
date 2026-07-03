@@ -1,0 +1,89 @@
+{
+  "id": "mosque-boast",
+  "title": "When Mosques Become Trophies",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Boast",
+    "kicker": "A SIGN INSIDE THE BEAUTIFUL",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The Hour will not come until people boast about their mosques. Sunan Abi Dawud 449, graded sahih.",
+    "shorts": "The Hour will not come until people boast about their mosques. Sunan Abi Dawud 449, graded sahih.",
+    "reels": "The Hour will not come until people boast about their mosques. Sunan Abi Dawud 449, graded sahih.",
+    "hashtags": [
+      "#islam",
+      "#signsofthehour",
+      "#edutokcontest",
+      "#masjid",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #12. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Some prophecies predict disasters. This one predicts something that looks, from the outside... like success. Golden domes. Record-breaking minarets. And a warning hiding inside the glitter.",
+      "foot": "Sunan Abi Dawud 449",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "ornate golden dome gleaming at sunset, exterior only"
+    },
+    {
+      "type": "narration",
+      "text": "This is the sign... of the boast.",
+      "title": "THE BOAST",
+      "titleSub": "a sign inside the beautiful",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow gold filigree light patterns on black"
+    },
+    {
+      "type": "narration",
+      "text": "A mosque... masjid in Arabic... is simply a place of prostration, where Muslims pray. The Prophet Muhammad, peace be upon him, prayed in one built of mud brick and palm trunks, with a roof that leaked when it rained. From inside that simplicity... he saw what was coming.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "simple mud-brick courtyard, palm shadows"
+    },
+    {
+      "type": "narration",
+      "text": "The Hour will not be established... he said... until people boast about their mosques. Narrated by his servant Anas ibn Malik, may Allah be pleased with him... recorded in Sunan Abi Dawud, and graded authentic.",
+      "foot": "Sunan Abi Dawud 449",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "towering ornate minarets, low dramatic angle"
+    },
+    {
+      "type": "narration",
+      "text": "Another collection carries the same warning with one sharper word... people will SHOW OFF in building mosques. The building is not the sign... the showing off is. My dome against your dome. My city's skyline against yours.",
+      "foot": "Sunan an-Nasa'i 689",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "glittering chandeliers and gilded ceiling, tilt-up"
+    },
+    {
+      "type": "narration",
+      "text": "The precision matters. Building mosques is beloved in Islam... the Prophet, peace be upon him, promised a house in Paradise for it. The sign is not the marble. It is the motive... when houses built for humility become monuments to pride, while the prayer rows inside them thin out.",
+      "foot": "Sahih al-Bukhari 450",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "vast empty prayer hall, beams of light, no people"
+    },
+    {
+      "type": "narration",
+      "text": "He worshipped under a leaking roof and changed the world. The prophecy asks a question every generation answers for itself... is the beauty for Allah... or for the photograph?",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "simple prayer rug in a plain sunlit room"
+    }
+  ]
+}

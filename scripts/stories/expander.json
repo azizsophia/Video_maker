@@ -1,0 +1,89 @@
+{
+  "id": "expander",
+  "title": "And He Is Its Expander",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Musi'un",
+    "kicker": "THE ONE WHO MAKES VAST",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "A verse about the sky that held one majestic meaning for thirteen centuries, then had room for a second. Qur'an 51:47.",
+    "shorts": "A verse about the sky that held one majestic meaning for thirteen centuries, then had room for a second. Qur'an 51:47.",
+    "reels": "A verse about the sky that held one majestic meaning for thirteen centuries, then had room for a second. Qur'an 51:47.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#quranandscience",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #15. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is a verse about the sky that got bigger on its own. For thirteen centuries it meant one majestic thing. Then we built telescopes... and found a second meaning waiting inside the same four words.",
+      "foot": "Qur'an 51:47",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "immense night sky arching over a tiny lit tent"
+    },
+    {
+      "type": "narration",
+      "text": "This is the verse... of the expander.",
+      "title": "MUSI'UN",
+      "titleSub": "the One who makes vast",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow deep-space-style drift through faint stars"
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an speaks constantly about the heaven... as a building, raised without pillars, held without effort. And in the fifty-first chapter, it describes the builder... in the present tense.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "canyon walls opening to a river of stars above"
+    },
+    {
+      "type": "narration",
+      "text": "And the heaven We constructed with strength... and indeed, We are [its] expander.",
+      "quote": "51:47",
+      "foot": "Qur'an 51:47 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "clouds peeling back to reveal depth of stars"
+    },
+    {
+      "type": "narration",
+      "text": "The classical scholars read the Arabic word musi'un through its roots... vastness and capacity. Ibn Kathir wrote... We made it vast, and raised its roof without pillars. Others heard the root of power... He is well able, His capacity absorbs all things. The heaven is immense... because its Maker's ability is.",
+      "foot": "Tafsir Ibn Kathir",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "vast aerial of earth's curve-like horizon at high altitude"
+    },
+    {
+      "type": "narration",
+      "text": "Then, in the last century, astronomers found that the heavens are not a finished ceiling... the galaxies are receding, the vastness is still being made vaster, this very second. Some contemporary readers hear that in this verse. The classical meaning never needed it... but the verse lost nothing by the discovery. It simply had room.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "telescope-style deep field of galaxies, slow zoom"
+    },
+    {
+      "type": "narration",
+      "text": "With strength We built it... and We are its expander. Thirteen centuries of readers bowed to a vast sky. You get to bow to a vaster one. The verse was always big enough for both of you.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "a lone figure-free desert plain under the Milky Way"
+    }
+  ]
+}

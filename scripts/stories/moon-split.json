@@ -1,0 +1,97 @@
+{
+  "id": "moon-split",
+  "title": "The Night the Moon Split",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Moon",
+    "kicker": "THE NIGHT IT SPLIT",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The moon split in two, and the men who saw it never stopped telling it. Qur'an 54:1 and Sahih al-Bukhari.",
+    "shorts": "The moon split in two, and the men who saw it never stopped telling it. Qur'an 54:1 and Sahih al-Bukhari.",
+    "reels": "The moon split in two, and the men who saw it never stopped telling it. Qur'an 54:1 and Sahih al-Bukhari.",
+    "hashtags": [
+      "#islam",
+      "#miracle",
+      "#edutokcontest",
+      "#quran",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #1. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Of all the miracles Muslims believe in... this is the one people find hardest to say out loud. The moon... the actual moon... split in two. And the men who saw it never stopped telling it.",
+      "foot": "Qur'an 54:1",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "full moon huge over a dark desert horizon"
+    },
+    {
+      "type": "narration",
+      "text": "This is the night... the moon was split.",
+      "title": "THE MOON",
+      "titleSub": "the night it split",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow drifting clouds crossing a bright moon"
+    },
+    {
+      "type": "narration",
+      "text": "Makkah, before the migration. The Prophet Muhammad, peace be upon him, had been preaching for years, and the leaders of his city wanted proof. So they demanded a sign... something no man could fake. Not words. The sky.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "rugged dark mountains under deep night"
+    },
+    {
+      "type": "narration",
+      "text": "The people of Makkah asked him to show them a sign... and he showed them the splitting of the moon. That demand, and what followed it, sits in Sahih al-Bukhari... the most rigorously authenticated book in Islam after the Qur'an.",
+      "foot": "Sahih al-Bukhari 4867",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "star-filled sky, one bright object rising"
+    },
+    {
+      "type": "narration",
+      "text": "Abdullah ibn Mas'ud, may Allah be pleased with him, was standing there. We were with the Prophet at Mina, he said... a valley just outside Makkah. And the moon was split. One piece went toward the mountain. And the Prophet said... bear witness. Be witnesses to this.",
+      "foot": "Sahih al-Bukhari 3869",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "moonlight over a jagged mountain ridge"
+    },
+    {
+      "type": "narration",
+      "text": "And the Qur'an itself carries the event, in a chapter named The Moon. The Hour has come near... and the moon has split.",
+      "quote": "54:1",
+      "foot": "Qur'an 54:1 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "the moon reflected, trembling, on dark water"
+    },
+    {
+      "type": "narration",
+      "text": "Notice the order of that verse. Not... look what happened. But... the Hour has come near. The split moon was never just a spectacle. It was a clock, striking once... reminding every eye that looked up that this world has an end.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow clouds swallowing the moon into darkness"
+    },
+    {
+      "type": "narration",
+      "text": "The same moon hangs over you tonight... whole, quiet, patient. The men who saw it torn in two changed their lives. It has never needed to happen twice.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "calm night landscape, moonlit, vast and still"
+    }
+  ]
+}

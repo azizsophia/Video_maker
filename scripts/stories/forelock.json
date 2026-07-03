@@ -1,0 +1,97 @@
+{
+  "id": "forelock",
+  "title": "The Forelock That Lied",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Forelock",
+    "kicker": "TWO VERSES ABOUT ONE TYRANT",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The Qur'an described the most arrogant man in Makkah by the front of his head, and called it a liar. Qur'an 96:15-16.",
+    "shorts": "The Qur'an described the most arrogant man in Makkah by the front of his head, and called it a liar. Qur'an 96:15-16.",
+    "reels": "The Qur'an described the most arrogant man in Makkah by the front of his head, and called it a liar. Qur'an 96:15-16.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#tafsir",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #10. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The Qur'an once described the most arrogant man in Makkah... by a single patch of his body. Not his heart. Not his tongue. The front of his head... and it called that patch a liar.",
+      "foot": "Qur'an 96:15-16",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "harsh shadow of a lone figure on a wall, abstract, no face"
+    },
+    {
+      "type": "narration",
+      "text": "This is the verse... of the lying forelock.",
+      "title": "THE FORELOCK",
+      "titleSub": "two verses about one tyrant",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow smoke curling through a shaft of dark red light"
+    },
+    {
+      "type": "narration",
+      "text": "Meet the man first. Abu Jahl... a chief of Makkah, the fiercest enemy the Prophet Muhammad, peace be upon him, had. The Prophet would pray openly at the Ka'bah, the ancient sanctuary at the heart of the city... and Abu Jahl swore before his people that if he saw him pray again, he would trample his neck.",
+      "foot": "Sahih Muslim 2797",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "torchlit ancient stone columns, ominous mood"
+    },
+    {
+      "type": "narration",
+      "text": "And the answer came down from heaven, in the very chapter whose first word was Read. No! If he does not desist, We will surely drag him by the forelock... a lying, sinning forelock.",
+      "quote": "96:16",
+      "foot": "Qur'an 96:16 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "fist of storm cloud dragging across a dark sky"
+    },
+    {
+      "type": "narration",
+      "text": "The forelock... the nasiyah... is the front of the head, where the hair falls over the brow. In Arabic, to be dragged by it is total humiliation... the proud head, seized from the front. And the classical scholars explain the description... lying in its statements, sinful in its actions... the forelock standing for the man himself.",
+      "foot": "Tafsir Ibn Kathir",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "wind tearing dust off a cliff edge"
+    },
+    {
+      "type": "narration",
+      "text": "Some readers today pause at a further layer... that behind the forehead sits the part of the brain most tied to planning, choice, and deceit. Take that as a quiet reflection, not as the verse's claim... the tafsir needed no anatomy. The Qur'an aimed at the seat of arrogance... and arrogance has an address.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "close texture of furrowed stone, brooding light"
+    },
+    {
+      "type": "narration",
+      "text": "As for Abu Jahl... he never did trample that neck. He died at Badr, the first great battle, defeated by the people he had tortured... a humiliation as public as his threat had been.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "aftermath-quiet battlefield landscape at dusk, empty"
+    },
+    {
+      "type": "narration",
+      "text": "The forelock is where pride lives... the head you refuse to lower. Muslims touch theirs to the ground, on purpose, many times a day. The question the verse leaves behind... is what your forehead bows to.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "prayer mat in warm window light, no person"
+    }
+  ]
+}

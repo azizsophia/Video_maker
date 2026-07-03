@@ -1,0 +1,88 @@
+{
+  "id": "time-speeds-up",
+  "title": "When Time Speeds Up",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Shrinking Time",
+    "kicker": "A SIGN YOU CAN FEEL",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The year like a month, the month like a week, the day like an hour. Sahih al-Bukhari 7061 and Tirmidhi 2332.",
+    "shorts": "The year like a month, the month like a week, the day like an hour. Sahih al-Bukhari 7061 and Tirmidhi 2332.",
+    "reels": "The year like a month, the month like a week, the day like an hour. Sahih al-Bukhari 7061 and Tirmidhi 2332.",
+    "hashtags": [
+      "#islam",
+      "#signsofthehour",
+      "#edutokcontest",
+      "#prophecy",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #13. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Ask anyone over thirty and they will say it like a confession... the years are getting faster. Fourteen hundred years ago, that exact feeling was named... as a sign of the end.",
+      "foot": "Sahih al-Bukhari 7061",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "city timelapse, streaking lights, day to night"
+    },
+    {
+      "type": "narration",
+      "text": "This is the sign... of the shrinking time.",
+      "title": "THE SHRINKING TIME",
+      "titleSub": "a sign you can feel",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow spinning star trails on deep black"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet Muhammad, peace be upon him, gave his companions a list of what the last stretch of history would feel like. Not just wars and wonders... but how ordinary days would FEEL. And the first feeling on one famous list... is time itself.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "sand pouring steadily off a dune crest"
+    },
+    {
+      "type": "narration",
+      "text": "Time will pass rapidly... he said... good deeds will decrease... miserliness will be thrown into hearts... and afflictions will appear. It is recorded in Sahih al-Bukhari... and it reads like a diagnosis of a century he never saw.",
+      "foot": "Sahih al-Bukhari 7061",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "fast clouds racing over a static mountain"
+    },
+    {
+      "type": "narration",
+      "text": "Another narration paints the acceleration in detail. The Hour will not be established until time is constricted... the year like a month... the month like a week... the week like a day... the day like an hour... and the hour like the flare of a fire. A flare... the moment you see it, it is gone.",
+      "foot": "Jami at-Tirmidhi 2332 (graded sahih)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "a match-strike flare blooming and dying in darkness"
+    },
+    {
+      "type": "narration",
+      "text": "The scholars offered several readings... blessing draining out of time... life actually compressing... or hearts too distracted to feel the hours pass. The narration does not choose for us. It only promises that when the end approaches... time will feel like it is running away. Does it?",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "fast-forward crowds blurring through a station-free plaza, abstract"
+    },
+    {
+      "type": "narration",
+      "text": "You cannot slow the river. But anyone who has stood in prayer at dawn knows some minutes still run deep... remembrance slows the heart, even when nothing slows the clock. Slow minutes... are still for sale. Barely anyone is buying.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "still lake at dawn, absolute calm"
+    }
+  ]
+}

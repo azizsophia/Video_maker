@@ -1,0 +1,90 @@
+{
+  "id": "yasbahun",
+  "title": "Everything Is Swimming",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Yasbahun",
+    "kicker": "THEY ARE SWIMMING",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The Qur'an describes the sun and the moon with one strange verb: swimming. Qur'an 21:33 and 36:40.",
+    "shorts": "The Qur'an describes the sun and the moon with one strange verb: swimming. Qur'an 21:33 and 36:40.",
+    "reels": "The Qur'an describes the sun and the moon with one strange verb: swimming. Qur'an 21:33 and 36:40.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#quranandscience",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #9. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The Qur'an describes the sun and the moon with one strange verb. Not shining... not rising. Swimming. And the longer you sit with that word... the better it gets.",
+      "foot": "Qur'an 21:33",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "sun flaring low over an ocean horizon"
+    },
+    {
+      "type": "narration",
+      "text": "This is the verse... of the swimmers.",
+      "title": "YASBAHUN",
+      "titleSub": "they are swimming",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow star-trail circles on deep black"
+    },
+    {
+      "type": "narration",
+      "text": "Seventh century Arabia had no telescopes. The sky most people imagined was a fixed dome... lights pinned to it, wheeling around a still earth. Into that world came sentences that moved everything.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "ancient stone sundial or still desert monoliths at night"
+    },
+    {
+      "type": "narration",
+      "text": "And it is He who created the night and the day, and the sun and the moon... all in an orbit... swimming.",
+      "quote": "21:33",
+      "foot": "Qur'an 21:33 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "the moon gliding slowly behind thin clouds"
+    },
+    {
+      "type": "narration",
+      "text": "And again, in the chapter Ya-Sin... It is not allowable for the sun to reach the moon, nor does the night overtake the day... but each, in an orbit, is swimming. The Arabic verb is yasbahun... they swim, they glide... each body carried along its own invisible lane.",
+      "quote": "36:40",
+      "foot": "Qur'an 36:40 (shown, not recited)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "timelapse of sun and moon paths across a wide sky"
+    },
+    {
+      "type": "narration",
+      "text": "Today we know the moon glides around the earth... the earth around the sun... the sun itself around the galaxy... nothing in the sky is nailed anywhere. Everything floats along a path. The classical scholars did not know the physics... they simply trusted the verb. And the verb held.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow drift through a dense starfield"
+    },
+    {
+      "type": "narration",
+      "text": "Order without pillars... lanes without collisions... for billions of years. The verse does not ask you to be an astronomer. It asks you to ask... who is holding all of this in its lanes?",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "serene full night sky over mountains, immense"
+    }
+  ]
+}

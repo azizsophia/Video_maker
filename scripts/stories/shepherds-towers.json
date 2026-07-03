@@ -1,0 +1,95 @@
+{
+  "id": "shepherds-towers",
+  "title": "Barefoot Shepherds, Tall Towers",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Towers",
+    "kicker": "A SIGN GIVEN TO UMAR",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "Barefoot shepherds competing in the tallest buildings. A sign of the Hour from Sahih Muslim, fulfilled in living memory.",
+    "shorts": "Barefoot shepherds competing in the tallest buildings. A sign of the Hour from Sahih Muslim, fulfilled in living memory.",
+    "reels": "Barefoot shepherds competing in the tallest buildings. A sign of the Hour from Sahih Muslim, fulfilled in living memory.",
+    "hashtags": [
+      "#islam",
+      "#signsofthehour",
+      "#edutokcontest",
+      "#prophecy",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 3 short #3. Vertical 9:16, ~2-2.5 min. Approved 2026-07-03 after two-pass verification + independent fact-check + clarity pass. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical) AFTER owner sign-off on contact sheet + names ear-test.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Fourteen hundred years ago, a question was asked in a small mud-brick city... when is the end of the world? The answer pointed at shepherds... and said, watch what they build.",
+      "foot": "Sahih Muslim 8",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "vast desert dunes, a distant herd, no faces"
+    },
+    {
+      "type": "narration",
+      "text": "This is the sign... of the towers.",
+      "title": "THE TOWERS",
+      "titleSub": "a sign given to Umar",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow low clouds drifting across black sky"
+    },
+    {
+      "type": "narration",
+      "text": "The scene is one of the most famous in Islam. A stranger in pure white walks into the gathering of the Prophet Muhammad, peace be upon him... no dust of travel on him, though no one knows his face. He sits knee to knee with the Prophet and begins to examine him. The companion Umar ibn al-Khattab, may Allah be pleased with him, was watching... and narrated every word.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "wind moving over empty desert at dusk"
+    },
+    {
+      "type": "narration",
+      "text": "The stranger asks... tell me about the Hour, the end of everything. The Prophet, peace be upon him, answers... the one asked knows no more than the asker. Even he did not know the day. But signs... signs he was given.",
+      "foot": "Sahih Muslim 8",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "hourglass-free image: long shadows stretching over sand"
+    },
+    {
+      "type": "narration",
+      "text": "And then, this. You will find barefooted, destitute goat herders... vying with one another... in the construction of magnificent buildings. The stranger, the Prophet then revealed, was the angel Jibril... Gabriel... who had come to teach them their religion.",
+      "foot": "Sahih Muslim 8",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "gleaming skyscrapers rising, low angle, night"
+    },
+    {
+      "type": "narration",
+      "text": "Sit with the odds of that sentence. It names the poorest people of the poorest trade in a mud-brick land... and stakes the claim that THEY, not Rome, not Persia... would one day vie with one another over magnificent towers.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "cranes over a glittering skyline at dusk"
+    },
+    {
+      "type": "narration",
+      "text": "Today the deserts of Arabia hold the tallest tower ever built... raised within living memory of grandfathers who herded goats barefoot. The sign was not given to frighten. It was given so that, when you saw it... you would remember who said it.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "a needle-like supertall tower piercing clouds"
+    },
+    {
+      "type": "narration",
+      "text": "A prophecy is a message addressed to the generation that watches it come true. This one... was addressed to yours.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "city lights spreading to the horizon at night"
+    }
+  ]
+}
