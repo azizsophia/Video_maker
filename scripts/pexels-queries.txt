@@ -1,5 +1,6 @@
-# Batch 3 pass 4: earth-from-space for night-and-day beat 1
+# Batch 3 pass 5: alternative cover for greeting-grown-cold
+--photos
 --portrait
-earth from space satellite view
-planet earth globe night lights space
-earth orbit iss timelapse
+empty street lamp night winter cold
+two people passing silhouette street night
+cold blue city night snow street
