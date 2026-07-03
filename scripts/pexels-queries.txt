@@ -1,6 +1,3 @@
-# Batch 3 pass 5: alternative cover for greeting-grown-cold
---photos
---portrait
-empty street lamp night winter cold
-two people passing silhouette street night
-cold blue city night snow street
+# Batch 3 pass 6: fetch full video_files lists for HD variants of 6 picks
+--ids
+18194373,30560393,30573057,27893808,34307917,30558817
