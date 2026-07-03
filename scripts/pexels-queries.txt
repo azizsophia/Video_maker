@@ -1,28 +1,9 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
+--photos
 --portrait
-gold coins pile dark
-antique gold coins spilling
-gold coins slow motion dark
-treasure gold coins candlelight
-gold dust particles black background
-gold glitter falling dark slow motion
-golden sparks particles dark
-old manuscript pages warm candlelight
-parchment scroll moody light
-antique book pages turning warm dark
-footprints in sand dunes
-footprints desert sunset tracks
-line of tracks across sand aerial
-honey jar warm light rustic
-honey dripping golden dark
-honey pot golden hour kitchen
-night horizon from high altitude
-airplane window night horizon
-dusk horizon aerial vast landscape
-night landscape aerial dark mountains
-starry sky milky way dense
-deep starfield night sky
-milky way core timelapse
-stars night sky zoom
+gold coins dark treasure
+antique gold coins pile moody
+old coins candlelight dark
+gold treasure dark background
