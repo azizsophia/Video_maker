@@ -9,7 +9,7 @@
   "cover": {
     "title": "Lawaqih",
     "kicker": "THE FERTILIZING WINDS",
-    "image": ""
+    "image": "https://images.pexels.com/photos/17132579/pexels-photo-17132579.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "One word in the Qur'an describes something the wind does that no human eye can see. Surah al-Hijr 15:22.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "There is one word in the Qur'an... describing something the wind does... that no human eye can see. And the more science learns about wind... the deeper that one word gets.",
       "foot": "Qur'an 15:22",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/37806182/16036432_1080_1920_60fps.mp4",
+      "videoDuration": 14,
       "_shot": "wind moving visibly across a golden grass field"
     },
     {
@@ -38,16 +38,20 @@
       "text": "This... is the verse of the winds.",
       "title": "LAWAQIH",
       "titleSub": "the fertilizing winds",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
-      "video": "",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "https://videos.pexels.com/video-files/37342939/15816823_1080_1920_30fps.mp4",
       "videoDuration": 15,
       "_shot": "slow drifting seeds or pollen backlit in dark air"
     },
     {
       "type": "narration",
       "text": "The Qur'an, the book Muslims believe is the literal word of Allah, was revealed in seventh century Arabia... a desert land of date farmers. And date farmers knew a secret: a palm tree will not fruit on its own. They climbed each tree and pollinated it by hand. Their word for it... laqaha.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/6197264/6197264-hd_1080_1920_30fps.mp4",
+      "videoDuration": 16,
       "_shot": "date palm grove swaying, low sun"
     },
     {
@@ -55,30 +59,30 @@
       "text": "And the Qur'an took their farming word... and gave it to the wind. We sent the winds as LAWAQIH... as fertilizers... and sent down water from the sky, and gave you drink from it.",
       "foot": "Qur'an 15:22 (shown, not recited)",
       "quote": "15:22",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/34426354/14584037_1080_1920_60fps.mp4",
+      "videoDuration": 18,
       "_shot": "wind-driven clouds building over desert"
     },
     {
       "type": "narration",
       "text": "The classical scholars, explaining this verse a thousand years ago, said the winds fertilize the CLOUDS... loading them until they release their rain. Which is exactly how the verse itself continues... winds first, then water from the sky. And they added a second meaning... the winds fertilize the trees and blossoms, the way the farmers did by hand.",
       "foot": "Tafsir Ibn Kathir",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/32457244/13842739_1080_1920_30fps.mp4",
       "videoDuration": 15,
       "_shot": "rain curtain sweeping across a valley"
     },
     {
       "type": "narration",
       "text": "Today we can watch both meanings under a microscope. Winds carry pollen across continents... and seed the clouds with the particles rain forms around. The verse did not need correcting in fourteen hundred years. One word... and the more we learn, the more it holds.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/9668541/9668541-hd_1080_1920_25fps.mp4",
+      "videoDuration": 16,
       "_shot": "macro pollen drifting in a sunbeam"
     },
     {
       "type": "narration",
       "text": "The next time wind moves the trees outside your window... remember that the Qur'an calls it a courier, on an errand you cannot see. And ask who sent it.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/6578138/6578138-uhd_2160_3744_30fps.mp4",
+      "videoDuration": 18,
       "_shot": "leaves rippling in golden evening light"
     }
   ]

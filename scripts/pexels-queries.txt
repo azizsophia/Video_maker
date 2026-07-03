@@ -1,3 +1,3 @@
-# Batch 2: fetch full file lists for three picks that resolved to low-res files.
---ids
-18184370,30560632,9245420
+# Scratch file for Pexels searches. Put --portrait (and --photos for covers)
+# on the first non-comment lines, then one query per line, commit and push:
+# the Pexels Search workflow prints candidates (id, dur, link, image) to its log.

@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Tasbih",
     "kicker": "THE FOOD THEY HEARD PRAISING GOD",
-    "image": ""
+    "image": "https://images.pexels.com/photos/16212179/pexels-photo-16212179.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "The companions sat eating a meal and heard the food itself worshipping. A miracle recorded in Sahih al-Bukhari 3579.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "The companions of the Prophet Muhammad, peace be upon him, once sat eating a meal... and heard the food itself... worshipping.",
       "foot": "Sahih al-Bukhari 3579",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/15664236/15664236-hd_1080_1920_30fps.mp4",
+      "videoDuration": 18,
       "_shot": "warm simple meal setting in low dark glow, no candles as subject"
     },
     {
@@ -38,31 +38,35 @@
       "text": "This is the miracle... of the tasbih.",
       "title": "THE TASBIH",
       "titleSub": "a miracle in Sahih al-Bukhari",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
-      "video": "",
-      "videoDuration": 15,
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "https://videos.pexels.com/video-files/19594913/19594913-hd_1080_1920_24fps.mp4",
+      "videoDuration": 12,
       "_shot": "slow warm bokeh on black"
     },
     {
       "type": "narration",
       "text": "First, one word. Tasbih means glorifying Allah... saying His praise, declaring His perfection. Muslims do it with the words subhanallah. And the companions... the people who lived alongside the Prophet, peace be upon him... knew that sound better than any sound on earth.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/10943542/10943542-hd_1080_1920_30fps.mp4",
+      "videoDuration": 16,
       "_shot": "prayer beads in soft light, still"
     },
     {
       "type": "narration",
       "text": "Abdullah ibn Mas'ud... may Allah be pleased with him... one of those companions, tells it plainly. We considered miracles a blessing from Allah... he said... while you people consider them a warning. And then he remembered. We were with Allah's Messenger... and we HEARD the food glorifying Allah... while it was being eaten.",
       "foot": "Sahih al-Bukhari 3579",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/8094305/8094305-hd_1080_1920_25fps.mp4",
+      "videoDuration": 18,
       "_shot": "steam rising from food in warm low light"
     },
     {
       "type": "narration",
       "text": "And in the very same narration, he describes water flowing from between the Prophet's fingers... peace be upon him... when the water had all but run out. Two impossibilities... one sentence... recorded in the most authenticated hadith collection in Islam.",
       "foot": "Sahih al-Bukhari 3579",
-      "video": "",
+      "video": "https://videos.pexels.com/video-files/5873378/5873378-hd_1080_1920_24fps.mp4",
       "videoDuration": 15,
       "_shot": "water trickling over stones, backlit, no hands"
     },
@@ -71,15 +75,15 @@
       "text": "Now here is what makes it more than a wonder. The Qur'an says... there is not a single thing except that it glorifies His praise... but you do not understand their glorification. Everything is already praising Him... the miracle was not that the food began. It is that, for a moment... they were allowed to hear it.",
       "foot": "Qur'an 17:44 (shown, not recited)",
       "quote": "17:44",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/33897604/14385699_1080_1920_30fps.mp4",
+      "videoDuration": 18,
       "_shot": "forest, water and sky wide shot in golden light"
     },
     {
       "type": "narration",
       "text": "You are surrounded by worship right now... every leaf, every stone, every drop. Creation never went silent. The question the miracle leaves behind is quieter... will you join in?",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/6353217/6353217-hd_1080_1920_30fps.mp4",
+      "videoDuration": 19,
       "_shot": "wind moving through sunlit trees"
     }
   ]

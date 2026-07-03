@@ -9,7 +9,7 @@
   "cover": {
     "title": "The Challenge",
     "kicker": "FOURTEEN CENTURIES, STILL OPEN",
-    "image": ""
+    "image": "https://images.pexels.com/photos/35962891/pexels-photo-35962891.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1080&h=1920"
   },
   "captions": {
     "tiktok": "A book dared the entire human race to produce one chapter like it. The dare is fourteen hundred years old and still open. Qur'an 2:23.",
@@ -29,8 +29,8 @@
       "type": "narration",
       "text": "There is a book that dared the entire human race... produce one chapter like mine. The shortest chapter is ten words long. The dare has been open for fourteen hundred years. It has never been met.",
       "foot": "Qur'an 2:23",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/38292144/16260528_1080_1920_30fps.mp4",
+      "videoDuration": 17,
       "_shot": "a single spotlight on darkness, empty stage of light"
     },
     {
@@ -38,16 +38,20 @@
       "text": "This... is the challenge of the Qur'an.",
       "title": "THE CHALLENGE",
       "titleSub": "fourteen centuries, still open",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
-      "video": "",
-      "videoDuration": 15,
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "video": "https://videos.pexels.com/video-files/33098318/14108098_1080_1920_60fps.mp4",
+      "videoDuration": 18,
       "_shot": "slow gold dust on black"
     },
     {
       "type": "narration",
       "text": "Some background. The Qur'an is the book Muslims believe Allah, the Creator, revealed to the Prophet Muhammad, peace be upon him, in Arabic. And it arrived among a people whose greatest pride... was Arabic itself. Poetry was their currency, their news, their war and their peace. Verbal masters, everywhere.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/18319782/18319782-hd_1080_1920_30fps.mp4",
+      "videoDuration": 14,
       "_shot": "desert campfire sparks rising into night"
     },
     {
@@ -55,8 +59,8 @@
       "text": "And to those masters, the Qur'an said... if you are in doubt about what We revealed to Our servant... then produce a single surah like it. And call every helper you have besides Allah... if you are truthful.",
       "foot": "Qur'an 2:23 (shown, not recited)",
       "quote": "2:23",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/37734434/16005679_1080_1920_30fps.mp4",
+      "videoDuration": 19,
       "_shot": "towering canyon walls, tiny scale"
     },
     {
@@ -64,30 +68,30 @@
       "text": "Then the next verse does something no cautious author would ever do. It predicts the result... forever. But if you do not... AND YOU NEVER WILL... then fear the Fire. A challenge with a prophecy inside it. You. Never. Will.",
       "foot": "Qur'an 2:24 (shown, not recited)",
       "quote": "2:24",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/30560632/13088567_1080_1622_30fps.mp4",
+      "videoDuration": 10,
       "_shot": "vast night sky over silhouetted dunes"
     },
     {
       "type": "narration",
       "text": "How low is the bar? The shortest surah... that is, chapter... in the Qur'an, al-Kawthar, is ten words... not counting the opening Bismillah. Ten words. Against every poet, every genius, every committee, every century.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/5614408/5614408-hd_1080_1920_24fps.mp4",
+      "videoDuration": 22,
       "_shot": "ten small lights igniting one by one in darkness"
     },
     {
       "type": "narration",
       "text": "The very people with the most to gain... the masters of Arabic who fought the Prophet, peace be upon him, with armies... never met it with ten words. Swords were cheaper than a sentence. Fourteen hundred years later... the silence stands.",
       "foot": "History",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/30040077/12886653_1080_1920_30fps.mp4",
+      "videoDuration": 9,
       "_shot": "still, empty desert at dusk, wind only"
     },
     {
       "type": "narration",
       "text": "A dare this old, this small, this public... and this unanswered... asks you a question. Tonight, read those ten words yourself... and ask where they came from.",
-      "video": "",
-      "videoDuration": 15,
+      "video": "https://videos.pexels.com/video-files/8953693/8953693-hd_1080_1920_30fps.mp4",
+      "videoDuration": 20,
       "_shot": "soft light growing over a horizon at dawn"
     }
   ]
