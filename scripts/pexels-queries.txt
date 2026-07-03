@@ -1,3 +1,3 @@
-# Scratch file for Pexels searches. Put --portrait (and --photos for covers)
-# on the first non-comment lines, then one query per line, commit and push:
-# the Pexels Search workflow prints candidates (id, dur, link, image) to its log.
+# Fetch true poster URLs for sirius contact sheet tiles.
+--ids
+9245420,20713848,26955653,30056318,30436806
