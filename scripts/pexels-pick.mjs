@@ -15,7 +15,8 @@ if (args[0] === "--ids") {
       headers: { Authorization: KEY },
     });
     const v = await r.json();
-    console.log(JSON.stringify({ id: v.id, dur: v.duration, image: v.image }));
+    const files = (v.video_files || []).map((f) => ({ w: f.width, h: f.height, link: f.link }));
+    console.log(JSON.stringify({ id: v.id, dur: v.duration, image: v.image, files }));
   }
   process.exit(0);
 }
