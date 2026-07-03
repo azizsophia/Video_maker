@@ -130,9 +130,12 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
   const wide = width > height;
   const fade = interpolate(frame, [4, 16], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   // Kicker rides near the top; the source foot sits just above the lower-third
-  // caption. Both insets shrink for the shorter 16:9 frame.
+  // caption. Both insets shrink for the shorter 16:9 frame. The 9:16 caption
+  // box is bottom-anchored at 600 and grows upward, so a three-line caption
+  // tops out near 990 from the bottom - the pill sits above that to never
+  // collide with a tall caption.
   const kickerTop = wide ? 80 : 300;
-  const footBottom = wide ? 300 : 860;
+  const footBottom = wide ? 300 : 1000;
   return (
     <>
       {kicker ? (
