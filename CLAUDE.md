@@ -3,6 +3,35 @@
 These are owner instructions. Apply them to ALL videos, every time, without being
 asked. This file is the durable memory for this repo.
 
+## PRE-SHIP QC CHECKLIST (owner directive 2026-07-03: every batch, no exceptions)
+Run this whole gate on EVERY batch before contact sheets go to the owner and
+again before final delivery. Do not rely on the owner to catch these - she has;
+that is the point of the gate. Nothing ships with an open item.
+1. ACCURACY (blocking): pre-writing source table + independent adversarial
+   claim-by-claim fact-check by a separate pass; every flag fixed or cut;
+   report committed to docs/. (See Accuracy & adab.)
+2. READ IT ALOUD: an independent readability pass on every script - flowing
+   cadence, no chained-ellipsis stop-start, grammatical when spoken, no
+   point-of-view jumps, no interrupting nested asides, newcomer-clear. Fix every
+   stumble. (The Challenge short was pulled for failing this.)
+3. NO ALL-CAPS emphasis words in narration (they read as shouting in the
+   caption); only genuine acronyms stay capitalized.
+4. PRONUNCIATION: every spoken name/term is MSA-looked-up and in the PHONETIC
+   map, cross-checked by an INDEPENDENT pronunciation audit against authoritative
+   sources (report to docs/), then cleared by a names-only ear-test. No name on
+   Daniel's default English reading.
+5. SPOKEN ARABIC is opt-in: default is SHOW the Arabic on screen (title card or
+   ayah) and SPEAK the English; only voice a transliterated term once ear-tested.
+6. FOOTAGE eye-QC: every clip viewed by frame-grab - literal to the line, ONE
+   distinct clip per beat, unique repo-wide, no on-screen text/watermarks, no
+   people/prophet-as-subject, no other-faith symbols, no alcohol/instruments, no
+   CGI look, not too bright for the dark cinematic grade. Owner-side second QC
+   pass on the picks before render.
+7. RENDER-OUTPUT QC on stills: title cards readable (deep-read voice), every
+   ayah shows its citation on-screen, captions carry the launch CTA + hashtags,
+   the ad outro plays clean at the tail, no glyph-box tofu on Arabic.
+8. Deliver with day-labeled covers + captions + contact sheets + artifact links.
+
 ## The quality bar
 - ONLY show the owner work once it is a genuine PREMIUM, LUXURY, cinematic
   experience. No half-baked or first-pass drafts. Self-QC to that bar first.
