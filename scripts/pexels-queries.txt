@@ -1,18 +1,8 @@
-# Scratch file for the Pexels Search workflow.
-# Put one query per line (first non-comment line may be --portrait / --photos / --ids)
-# and push to trigger .github/workflows/pexels-search.yml.
+# round 2c: coins (no text), gold particles, honey jars dark
 --portrait
-gold coins closeup macro
-ancient coins pile treasure
-coin stack dark background
-old coin collection dark
-money gold dark cinematic
-old islamic manuscript
-leather bound book candle dark
-old paper texture warm dark
-quill ink pot dark desk
-footprints sand dune ridge
-camel tracks in desert sand
-animal tracks sand dunes dusk
-sand dune ripples sunset shadow
-walking tracks desert aerial
+gold coins pile dark table
+antique coins treasure dark
+gold particles floating black
+gold dust falling dark
+honey jar warm dark light
+honey pouring golden dark
