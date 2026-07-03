@@ -1,3 +1,8 @@
-# Scratch file for Pexels searches. Put --portrait (and --photos for covers)
-# on the first non-comment lines, then one query per line, commit and push:
-# the Pexels Search workflow prints candidates (id, dur, link, image) to its log.
+# Sirius beat 6 replacement: "still balanced stones", must be DARK/dusk/night
+# mood to match the starfield video (current pick is a bright daylight beach).
+--portrait
+stacked stones silhouette sunset
+balanced rocks dusk sky
+stone cairn twilight
+zen stones dark moody
+rock stack silhouette dawn
