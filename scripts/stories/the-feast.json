@@ -1,0 +1,108 @@
+{
+  "id": "the-feast",
+  "title": "They Will Feast On You",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Feast",
+    "kicker": "A PROPHECY OF THE PROPHET",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "He described this moment fourteen hundred years before it arrived. The prophecy of the feast, from Sunan Abi Dawud.",
+    "shorts": "Nations gathering around his people like diners around a plate. The prophecy of al-wahn, narrated in Sunan Abi Dawud.",
+    "reels": "He described this moment fourteen hundred years before it arrived. The prophecy of the feast, from Sunan Abi Dawud.",
+    "hashtags": [
+      "#islam",
+      "#prophecy",
+      "#edutokcontest",
+      "#muslimtiktok",
+      "#hadith"
+    ]
+  },
+  "_note": "Batch 2 MON short. Vertical 9:16, ~2.5 min. Pillar: prophecies. Source on screen: Sunan Abi Dawud 4297 (sahih). Khadijah cadence: hook, gold title card (deep read), sourced beats, reflective close. One distinct clip per beat, full-repo uniqueness. Render StoryVideo (orientation=vertical).",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Fourteen hundred years ago, the Prophet Muhammad, peace be upon him, described a scene... that reads like this morning's news. Nations, gathering around his people... the way hungry diners gather around a plate.",
+      "foot": "Sunan Abi Dawud 4297 (sahih)",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "dark storm front rolling over a city skyline"
+    },
+    {
+      "type": "narration",
+      "text": "This is the prophecy... of the feast.",
+      "title": "THE FEAST",
+      "titleSub": "a prophecy of the Prophet, peace be upon him",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow embers on black"
+    },
+    {
+      "type": "narration",
+      "text": "A prophecy, in Islam, is not a guess. Muslims believe the Prophet, peace be upon him, spoke of the future only by revelation from Allah... God Himself. And one day, he told his companions what was coming.",
+      "foot": "Sunan Abi Dawud 4297",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "vast night desert under stars"
+    },
+    {
+      "type": "narration",
+      "text": "The nations will soon call one another against you... he said... the way diners call one another to a dish. Whole nations. One table. And his people... the meal.",
+      "foot": "Sunan Abi Dawud 4297",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "circling storm clouds, aerial"
+    },
+    {
+      "type": "narration",
+      "text": "Someone asked... will that be because we are few? He answered... no. You will be MANY on that day. But you will be like foam... like the froth a flood carries on its surface.",
+      "foot": "Sunan Abi Dawud 4297",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "sea foam churning on dark water"
+    },
+    {
+      "type": "narration",
+      "text": "Numbers without weight. Presence without power. And then he named the reason. Allah will remove the fear of you from your enemies' chests... and cast into your hearts... al-wahn.",
+      "foot": "Sunan Abi Dawud 4297",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "dust scattering in wind on dark ground"
+    },
+    {
+      "type": "narration",
+      "text": "They asked... what is al-wahn, O Messenger of Allah? He said... love of this world... and hatred of death.",
+      "foot": "Sunan Abi Dawud 4297",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "city lights blurring out of focus at night"
+    },
+    {
+      "type": "narration",
+      "text": "Notice what he did not say. No year. No country. No enemy's name. He did not diagnose a nation... he diagnosed a heart. A heart so attached to this life that it cannot stand for anything beyond it.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "single dim lamp in a large dark room"
+    },
+    {
+      "type": "narration",
+      "text": "And that means the prophecy carries its own cure. If the disease is loving this world too much... the cure is loving what lasts, more.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "dawn light breaking over still water"
+    },
+    {
+      "type": "narration",
+      "text": "He saw this moment coming fourteen centuries away... and he told us, so we would not be foam. Hold your faith heavier than your fear. That is the whole answer... and it always was.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "sunrise over a vast calm landscape"
+    }
+  ]
+}

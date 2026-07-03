@@ -1,0 +1,86 @@
+{
+  "id": "sirius",
+  "title": "The Star Allah Named",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Ash-Shi'ra",
+    "kicker": "THE STAR ALLAH NAMED",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "Billions of stars over your head tonight. The Qur'an names exactly one, and it is the brightest in the entire night sky. Qur'an 53:49.",
+    "shorts": "And He is the Lord of Sirius. Why the Qur'an names the brightest star in the night sky. Qur'an 53:49.",
+    "reels": "Billions of stars over your head tonight. The Qur'an names exactly one, and it is the brightest in the entire night sky. Qur'an 53:49.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#quranandscience",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 2 SUN short. Vertical 9:16, ~2 min. Pillar: Qur'an and creation. Sources on screen: Qur'an 53:49 (shown, not recited); Tafsir (Banu Khuza'a); astronomy as its own layer. Precision beat rejects numerology per verification. One distinct clip per beat; starfields must all differ. Render StoryVideo (orientation=vertical).",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There are billions of stars over your head tonight. The Qur'an names exactly one of them. And the one it names... is the brightest star in the entire night sky.",
+      "foot": "Qur'an 53:49",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "dense starfield over silhouetted dunes"
+    },
+    {
+      "type": "narration",
+      "text": "This is Sirius... the star named in the Qur'an.",
+      "title": "ASH-SHI'RA",
+      "titleSub": "the star Allah named",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "one star pulsing bright on deep black"
+    },
+    {
+      "type": "narration",
+      "text": "The fifty third chapter of the Qur'an is called an-Najm... The Star. It was revealed in Makkah, to people who knew the night sky like a road map... and worshipped pieces of it. The scholars of tafsir record that one tribe near Makkah... Banu Khuza'a... bowed to one star above all. The blazing one the Arabs called ash-Shi'ra.",
+      "foot": "Tafsir",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "desert night, campfire glow under stars"
+    },
+    {
+      "type": "narration",
+      "text": "And into that world, the verse came down... And He... is the Lord of Sirius. Not... Sirius is mighty. Not... fear the star. But... the thing you are worshipping has an Owner. You are kneeling to something that is itself... owned.",
+      "foot": "Qur'an 53:49 (shown, not recited)",
+      "quote": "53:49",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "brilliant star low over a dark horizon"
+    },
+    {
+      "type": "narration",
+      "text": "Here is the layer astronomers add. Sirius really is the brightest star in the night sky... nearly twice the brightness of the next... eight and a half light years away in the constellation of the Great Dog. Of the thousands of stars visible to the naked eye... the Qur'an put its finger on the one that outshines them all.",
+      "foot": "Astronomy",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "telescope-style starfield slowly zooming toward one star"
+    },
+    {
+      "type": "narration",
+      "text": "To be precise... the verse does not say brightest. It says LORD of it. The astronomy is a separate layer. The verse's point is sharper... the brighter the created thing, the more it needs a Maker. As for the number codes and letter counts that decorate some tellings of this verse... they are not found in the classical scholarship... and precision leaves them aside.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "still balanced stones under stars"
+    },
+    {
+      "type": "narration",
+      "text": "Tonight, find the brightest star you can see... and do what Banu Khuza'a would not. Look past it... to its Lord. And whisper... how great is the One who made THAT.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow tilt from a bright star down to a dark quiet horizon"
+    }
+  ]
+}

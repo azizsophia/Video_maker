@@ -1,0 +1,100 @@
+{
+  "id": "ammar",
+  "title": "He Told a Man How He Would Die",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Ammar",
+    "kicker": "HE WAS TOLD HOW HE WOULD DIE",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "The Prophet, peace be upon him, told Ammar exactly how he would die. Ammar lived thirty five more years. Then every word happened. Sahih al-Bukhari 447.",
+    "shorts": "A prophecy spoken while building the first mosque, fulfilled thirty five years later at Siffin. The story of Ammar, may Allah be pleased with him. Sahih al-Bukhari 447.",
+    "reels": "The Prophet, peace be upon him, told Ammar exactly how he would die. Ammar lived thirty five more years. Then every word happened. Sahih al-Bukhari 447.",
+    "hashtags": [
+      "#islam",
+      "#prophecy",
+      "#edutokcontest",
+      "#seerah",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 2 THU short. Vertical 9:16, ~2.5 min. Pillar: prophecies. Source on screen: Sahih al-Bukhari 447; Siffin details as history. Precision beat kept matter-of-fact per tone rule. Timeline is ~35 years per fact-check. One distinct clip per beat. Render StoryVideo (orientation=vertical).",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The Prophet Muhammad, peace be upon him, once told a man exactly how he would die... who would kill him... and whose side he would be on. The man lived THIRTY FIVE more years. And then every word of it happened.",
+      "foot": "Sahih al-Bukhari 447",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "a long single road vanishing into haze"
+    },
+    {
+      "type": "narration",
+      "text": "This is the prophecy given to Ammar... may Allah be pleased with him.",
+      "title": "AMMAR",
+      "titleSub": "may Allah be pleased with him",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow dark starfield"
+    },
+    {
+      "type": "narration",
+      "text": "First, meet the man. Ammar ibn Yasir was the son of Sumayya... the first person ever to die for Islam... tortured to death in Makkah while her son was forced to watch. Ammar survived those years of persecution and became one of the Prophet's most beloved companions... a companion means one who knew and followed him directly.",
+      "foot": "Seerah",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "a single flame in darkness, steady"
+    },
+    {
+      "type": "narration",
+      "text": "Years later, in the city of Madinah, the Muslims were building their first mosque by hand... mud bricks, palm trunks, bare shoulders. Everyone carried one brick at a time. Ammar carried two.",
+      "foot": "Sahih al-Bukhari 447",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "sun-dried bricks and straw, warm close light"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, saw him struggling under the load, and began wiping the dust from his body with his own hands. And then, in front of everyone, he said... May Allah have mercy on Ammar. The transgressing party will kill him. He will be calling them to Paradise... and they will be calling him to the Fire.",
+      "foot": "Sahih al-Bukhari 447",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "dust motes drifting through a shaft of light"
+    },
+    {
+      "type": "narration",
+      "text": "Sit with that. A death sentence... spoken in mercy... with no date, no place, and no enemy named. Ammar heard it, and kept building. He carried that sentence through every battle and every year of his long life.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "time-worn stone wall, light moving across it"
+    },
+    {
+      "type": "narration",
+      "text": "Thirty five years later, when Ammar was past ninety, a tragedy the Prophet had not lived to see split the Muslims into two armies... at a place called Siffin, in the year 657. Ammar stood in the ranks of Ali, the Prophet's cousin. And on that field... the old man was killed. By the other side. Exactly as the sentence had said... three and a half decades before.",
+      "foot": "History",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "storm clouds breaking over an empty plain"
+    },
+    {
+      "type": "narration",
+      "text": "Two precisions. The hadith itself named no battle... history filled that in. And Muslims do not curse the other side of that tragedy... they were believers in a terrible fitna, a trial. What stands is the prophecy itself... precise, public, and fulfilled to the letter.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "rain falling gently on stone"
+    },
+    {
+      "type": "narration",
+      "text": "Ammar spent thirty five years knowing how his story would end... and it never slowed him down. Because if the sentence about your death is true... so is the one about Paradise. That is Ammar... may Allah be pleased with him.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "dawn light striking a mountain top"
+    }
+  ]
+}

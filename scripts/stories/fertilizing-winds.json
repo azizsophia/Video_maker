@@ -1,0 +1,85 @@
+{
+  "id": "fertilizing-winds",
+  "title": "The Fertilizing Winds",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Lawaqih",
+    "kicker": "THE FERTILIZING WINDS",
+    "image": ""
+  },
+  "captions": {
+    "tiktok": "One word in the Qur'an describes something the wind does that no human eye can see. Surah al-Hijr 15:22.",
+    "shorts": "The Qur'an calls the winds lawaqih, fertilizers. The deeper science looks, the deeper that one word gets. Qur'an 15:22.",
+    "reels": "One word in the Qur'an describes something the wind does that no human eye can see. Surah al-Hijr 15:22.",
+    "hashtags": [
+      "#quran",
+      "#islam",
+      "#edutokcontest",
+      "#quranandscience",
+      "#muslimtiktok"
+    ]
+  },
+  "_note": "Batch 2 TUE short. Vertical 9:16, ~2 min. Pillar: Qur'an and creation. Sources on screen: Qur'an 15:22 (shown, not recited), Tafsir Ibn Kathir. Careful framing per verification report (winds fertilize clouds AND trees, both classical). One distinct clip per beat. Render StoryVideo (orientation=vertical).",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is one word in the Qur'an... describing something the wind does... that no human eye can see. And the more science learns about wind... the deeper that one word gets.",
+      "foot": "Qur'an 15:22",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "wind moving visibly across a golden grass field"
+    },
+    {
+      "type": "narration",
+      "text": "This... is the verse of the winds.",
+      "title": "LAWAQIH",
+      "titleSub": "the fertilizing winds",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "slow drifting seeds or pollen backlit in dark air"
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an, the book Muslims believe is the literal word of Allah, was revealed in seventh century Arabia... a desert land of date farmers. And date farmers knew a secret: a palm tree will not fruit on its own. They climbed each tree and pollinated it by hand. Their word for it... laqaha.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "date palm grove swaying, low sun"
+    },
+    {
+      "type": "narration",
+      "text": "And the Qur'an took their farming word... and gave it to the wind. We sent the winds as LAWAQIH... as fertilizers... and sent down water from the sky, and gave you drink from it.",
+      "foot": "Qur'an 15:22 (shown, not recited)",
+      "quote": "15:22",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "wind-driven clouds building over desert"
+    },
+    {
+      "type": "narration",
+      "text": "The classical scholars, explaining this verse a thousand years ago, said the winds fertilize the CLOUDS... loading them until they release their rain. Which is exactly how the verse itself continues... winds first, then water from the sky. And they added a second meaning... the winds fertilize the trees and blossoms, the way the farmers did by hand.",
+      "foot": "Tafsir Ibn Kathir",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "rain curtain sweeping across a valley"
+    },
+    {
+      "type": "narration",
+      "text": "Today we can watch both meanings under a microscope. Winds carry pollen across continents... and seed the clouds with the particles rain forms around. The verse did not need correcting in fourteen hundred years. One word... and the more we learn, the more it holds.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "macro pollen drifting in a sunbeam"
+    },
+    {
+      "type": "narration",
+      "text": "The next time wind moves the trees outside your window... remember that the Qur'an calls it a courier, on an errand you cannot see. And ask who sent it.",
+      "video": "",
+      "videoDuration": 15,
+      "_shot": "leaves rippling in golden evening light"
+    }
+  ]
+}
