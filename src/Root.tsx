@@ -9,6 +9,13 @@ import { quranPropsSchema, QuranProps } from "./QuranVideo/schema";
 import { StoryVideo, STORY_FPS, storyDurationInFrames } from "./QuranVideo/StoryVideo";
 import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
 import { Cover } from "./QuranVideo/Cover";
+import {
+  AppPromo,
+  appPromoSchema,
+  PROMO_FPS,
+  DEFAULT_PROMO_PROPS,
+  appPromoDurationInFrames,
+} from "./QuranVideo/AppPromo";
 import sampleData from "./data/sample-al-ikhlas.json";
 import sampleStory from "./data/sample-story.json";
 import cinematicSample from "./data/cinematic-sample.json";
@@ -106,6 +113,22 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         calculateMetadata={({ props }) => ({
           durationInFrames: storyDurationInFrames(props),
+        })}
+      />
+
+      {/* Standalone app-promo reel (vertical 9:16) built from the six Ketabi
+          marketing slides in public/promo. Premium motion + branded hook/CTA
+          cards; silent by design. Render: AppPromo. */}
+      <Composition
+        id="AppPromo"
+        component={AppPromo}
+        schema={appPromoSchema}
+        defaultProps={DEFAULT_PROMO_PROPS}
+        fps={PROMO_FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: appPromoDurationInFrames(props),
         })}
       />
 
