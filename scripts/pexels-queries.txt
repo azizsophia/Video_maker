@@ -1,8 +1,7 @@
-# Sirius beat 6 replacement: "still balanced stones", must be DARK/dusk/night
-# mood to match the starfield video (current pick is a bright daylight beach).
+# Sirius beat 6 second pass: dark still-stone alternatives (no daylight beach).
 --portrait
-stacked stones silhouette sunset
-balanced rocks dusk sky
-stone cairn twilight
-zen stones dark moody
-rock stack silhouette dawn
+rock formation silhouette night sky
+lone rock desert dusk
+standing stone night stars
+boulder silhouette twilight
+dark stones riverbed moonlight
