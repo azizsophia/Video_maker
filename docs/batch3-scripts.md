@@ -38,8 +38,9 @@ Qur'an."
 Visual: star-filled sky, one bright object rising.
 
 5. [Sahih al-Bukhari 3869]
-"Abdullah ibn Mas'ud was standing there. We were with the Prophet at Mina, he
-said... and the moon was split. One piece went toward the mountain. And the
+"Abdullah ibn Mas'ud, may Allah be pleased with him, was standing there. We
+were with the Prophet at Mina... a valley just outside Makkah... he said. And
+the moon was split. One piece went toward the mountain. And the
 Prophet said... bear witness. Be witnesses to this."
 Visual: moonlight over a jagged mountain ridge.
 
@@ -65,8 +66,8 @@ Visual: calm night landscape, moonlit, vast and still.
 1. HOOK [Sahih al-Bukhari 3886]
 "They thought they finally had him. He claimed he had traveled, in one night,
 to a city a month's ride away... a city they knew, and he had never lived in.
-So they began asking questions. And he answered... looking at something they
-could not see."
+So they demanded he describe it. And he described it... looking at something
+they could not see."
 Visual: ancient stone city walls at night, lamplight.
 
 2. TITLE CARD - THE TEST / the night journey, examined (deep read)
@@ -77,34 +78,35 @@ Visual: slow mist moving over dark ancient stone.
 "Muslims believe that in one night, the Prophet Muhammad, peace be upon him,
 was taken by Allah from Makkah to Bayt al-Maqdis... the holy sanctuary in
 Jerusalem... and then raised through the heavens. It is called the Night
-Journey. And when he told his city the next morning... they laughed. A
-month's caravan ride, there and back... in a night?"
+Journey. And when he told his city the next morning... they laughed. Two
+months of caravan riding, there and back... in a night?"
 Visual: long empty desert road under stars.
 
 4. (context)
-"But here was their opening. Merchants of Makkah had traded through Jerusalem
-for generations. They knew its gates, its stones, its shape. Their own
-caravans had camped under its walls. If this man had never been there... the
-details would break him."
+"But here was their opening. Makkah's caravans had ridden north into Sham...
+greater Syria... for generations, and some of those merchants had seen
+Jerusalem with their own eyes. They knew its shape. If this man had never
+been there... the details would break him."
 Visual: aerial of old stone city, golden and worn.
 
 5. [Sahih al-Bukhari 3886]
 "He said... when Quraysh did not believe me, I stood in al-Hijr... the open
-enclosure beside the Ka'bah... and Allah displayed Jerusalem in front of me.
+enclosure beside the Ka'bah, the ancient sanctuary at the heart of Makkah...
+and Allah displayed Jerusalem in front of me.
 And I began describing it to them... while I was looking at it."
 Visual: shaft of light falling into an ancient courtyard.
 
 6. [Sahih Muslim 170]
 "The same account stands in Sahih Muslim. Allah lifted before me Bayt
-al-Maqdis... and I narrated its signs... while I was looking at it. Question
-after question... answer after answer... from a man staring past them at
-something only he could see."
+al-Maqdis... and I narrated its signs... while I was looking at it. Sign after
+sign... detail after detail... from a man staring past them at something
+only he could see."
 Visual: dark room, one window of brilliant light.
 
 7. (reflection)
 "The examiners chose the test. The examiners knew the answers. And the record
 of what happened next is not that the details failed... it is that the
-questions ran out."
+description held."
 Visual: empty ancient stone street at dawn, silent.
 
 8. CLOSE (reflection)
@@ -129,8 +131,8 @@ Visual: slow low clouds drifting across black sky.
 "The scene is one of the most famous in Islam. A stranger in pure white walks
 into the gathering of the Prophet Muhammad, peace be upon him... no dust of
 travel on him, though no one knows his face. He sits knee to knee with the
-Prophet and begins to examine him. The companion Umar ibn al-Khattab was
-watching... and narrated every word."
+Prophet and begins to examine him. The companion Umar ibn al-Khattab, may
+Allah be pleased with him, was watching... and narrated every word."
 Visual: wind moving over empty desert at dusk.
 
 4. [Sahih Muslim 8]
@@ -149,8 +151,8 @@ Visual: gleaming skyscrapers rising, low angle, night.
 6. (context)
 "Sit with the odds of that sentence. It names the poorest people of the
 poorest trade in a mud-brick land... and stakes the claim that THEY, not
-Rome, not Persia... would one day compete over the tallest silhouettes on
-earth."
+Rome, not Persia... would one day vie with one another over magnificent
+towers."
 Visual: cranes over a glittering skyline at dusk.
 
 7. (reflection)
@@ -211,7 +213,7 @@ Visual: dawn light over a long, straight desert road.
 
 ### 5. When No One Will Take Your Charity (~2 min)
 
-1. HOOK [Sahih al-Bukhari 1412]
+1. HOOK [Sahih al-Bukhari 1411]
 "There is a prophecy in Sahih al-Bukhari about money. Not a crash... not
 poverty. The opposite. A day when a man will carry his charity through the
 streets... and come home still holding it."
@@ -281,21 +283,22 @@ the woven tents of the nomads. Meaning... everyone."
 Visual: a lit village at dusk in a vast valley.
 
 5. [Musnad Ahmad 16957]
-"The narration is carried by the companion Tamim al-Dari, recorded in the
-Musnad of Imam Ahmad, and graded authentic... it is the third hadith in
-al-Albani's great collection of sound narrations."
+"The narration is carried by the companion Tamim al-Dari... may Allah be
+pleased with him... and recorded in the Musnad of Imam Ahmad, one of the
+great early collections of the Prophet's words. The scholars whose work is
+grading those words, chain by chain... judged this one authentic."
 Visual: old handwritten manuscript pages turning slowly, no readable text as subject... use warm parchment texture.
 
 6. (context)
-"Now measure it. Today there are Muslims in every country on earth...
-roughly one in four human beings. From the tundra to the equator, the
+"Now measure it. Today there are Muslims in nearly every country on
+earth... roughly one in four human beings. From the tundra to the equator, the
 prayer moves with the sunset, hour by hour, in an unbroken wave... night
 and day, literally, cannot outrun it."
 Visual: globe of city lights, slow rotation feel.
 
 7. (reflection)
-"Every empire of that age bet against this sentence... and every one of
-them is gone. The sentence is still arriving in new houses tonight."
+"The great empires that bet against this sentence... are gone. The sentence
+is still arriving in new houses tonight."
 Visual: doorway of a warm lit home under stars.
 
 8. CLOSE (reflection)
@@ -316,7 +319,7 @@ Visual: crowded city crosswalk from above, anonymous motion.
 "This is the sign... of the greeting."
 Visual: slow bokeh of cold city lights on black.
 
-3. (context)
+3. [Sahih al-Bukhari 12]
 "In Islam, the greeting is not small talk. As-salamu alaykum... peace be
 upon you... is a prayer offered to strangers, a right owed to whoever
 crosses your path. The Prophet Muhammad, peace be upon him, taught his
@@ -330,9 +333,10 @@ the signs of the Hour... he said... is that a man will give the greeting to
 another... only because he knows him."
 Visual: two paths diverging in an empty park, autumn.
 
-5. [Musnad Ahmad 3848]
-"The same narration, carried by Abdullah ibn Mas'ud and graded sound, lists
-what grows alongside it... trade spreading everywhere... family ties cut...
+5. [Musnad Ahmad 3870]
+"A fuller narration from the same companion... Abdullah ibn Mas'ud, may
+Allah be pleased with him... also graded sound, lists what grows alongside
+it... trade spreading everywhere... family ties cut...
 and false testimony. A world that is more connected... and less warm...
 at the same time."
 Visual: endless container port or lit highways at night.
@@ -382,7 +386,7 @@ Visual: sunlight bursting through towering cloudbanks.
 6. (reflection, careful framing)
 "Today we can describe some of what that guarding looks like. A blanket of
 air that burns up the daily rain of space rock into harmless streaks of
-light... fields that bend away radiation that would sterilize the ground.
+light... fields that turn away the storms of charged particles the sun throws at us.
 The verse did not teach that science... it named the mercy, and left the
 signs open for whoever would look."
 Visual: shooting stars burning out high in the atmosphere.
@@ -448,7 +452,7 @@ Visual: harsh shadow of a lone figure on a wall, abstract, no face.
 "This is the verse... of the lying forelock."
 Visual: slow smoke curling through a shaft of dark red light.
 
-3. (context)
+3. [Sahih Muslim 2797]
 "Meet the man first. Abu Jahl... a chief of Makkah, the fiercest enemy the
 Prophet Muhammad, peace be upon him, had. The Prophet would pray openly at
 the Ka'bah, the ancient sanctuary at the heart of the city... and Abu Jahl
@@ -480,8 +484,8 @@ Visual: close texture of furrowed stone, brooding light.
 
 7. (context)
 "As for Abu Jahl... he never did trample that neck. He died at Badr, the
-first great battle, defeated by the people he had tortured... exactly the
-humiliation the verses had promised in front of everyone."
+first great battle, defeated by the people he had tortured... a humiliation
+as public as his threat had been."
 Visual: aftermath-quiet battlefield landscape at dusk, empty.
 
 8. CLOSE (reflection)
@@ -527,8 +531,8 @@ Visual: tea-colored honey stirred into a glass cup, steam.
 "The verse says healing for people... it never said every disease, and
 Muslims do not read it as a replacement for medicine. But fourteen
 centuries later, honey sits in modern wound clinics and pharmacology
-journals... the one pantry food that never spoils, still earning its
-verse."
+journals... the pantry food found still edible in tombs thousands of years
+old... still earning its verse."
 Visual: jars of honey in warm window light.
 
 7. CLOSE (reflection)
@@ -558,8 +562,8 @@ Visual: simple mud-brick courtyard, palm shadows.
 
 4. [Sunan Abi Dawud 449]
 "The Hour will not be established... he said... until people boast about
-their mosques. Narrated by his servant Anas ibn Malik, recorded in Sunan
-Abi Dawud, and graded authentic."
+their mosques. Narrated by his servant Anas ibn Malik, may Allah be pleased with
+him... recorded in Sunan Abi Dawud, and graded authentic."
 Visual: towering ornate minarets, low dramatic angle.
 
 5. [Sunan an-Nasa'i 689]
@@ -568,7 +572,7 @@ people will SHOW OFF in building mosques. Not build them... show off in
 them. My dome against your dome. My city's skyline against yours."
 Visual: glittering chandeliers and gilded ceiling, tilt-up.
 
-6. (reflection)
+6. [Sahih al-Bukhari 450]
 "The precision matters. Building mosques is beloved in Islam... the
 Prophet, peace be upon him, promised a house in Paradise for it. The sign
 is not the marble. It is the motive... when houses built for humility
@@ -622,9 +626,10 @@ end approaches... time will feel like it is running away. Does it?"
 Visual: fast-forward crowds blurring through a station-free plaza, abstract.
 
 7. CLOSE (reflection)
-"You cannot slow the river. But the same tradition says one thing weighs
-the moments back down... remembrance of Allah. Slow minutes... are still
-for sale. Barely anyone is buying."
+"You cannot slow the river. But anyone who has stood in prayer at dawn
+knows some minutes still run deep... remembrance slows the heart, even when
+nothing slows the clock. Slow minutes... are still for sale. Barely anyone
+is buying."
 Visual: still lake at dawn, absolute calm.
 
 ### 14. The City on Land and Sea (~2.5 min)
@@ -668,18 +673,18 @@ man who never saw the sea walls."
 Visual: golden light flooding through an ancient stone gate.
 
 7. (precision beat)
-"One precision, always. The fuller end-times description is its own
-promise, still ahead. And there is a famous line praising the city's
+"The fuller end-times description is its own promise, still ahead. And there is a famous line praising the city's
 conqueror and his army... but it rests on a narration whose grading the
 scholars dispute. What stands in Sahih Muslim is enough... the name, the
 promise... and eight centuries of men who believed it."
 Visual: old handwritten map textures, slow pan, no readable text.
 
 8. CLOSE (reflection)
-"A landlocked people were promised the queen of the seas... and history
-bent until the promise was kept. When a claim holds its shape for eight
-hundred years... the question is no longer whether he meant it. It is who
-told him."
+"A landlocked people were promised the queen of the seas... and generation
+after generation spent themselves on that promise, for eight hundred years,
+until the city opened. When a claim can hold men's hearts for eight
+centuries... the question is no longer whether he meant it. It is who told
+him."
 Visual: sunrise over the strait, water like gold.
 
 ### 15. And He Is Its Expander (~2 min)
@@ -701,7 +706,7 @@ describes the builder... in the present tense."
 Visual: canyon walls opening to a river of stars above.
 
 4. QUOTE - Qur'an 51:47 (shown)
-"And the heaven We constructed with strength... and indeed, We are its
+"And the heaven We constructed with strength... and indeed, We are [its]
 expander."
 Visual: clouds peeling back to reveal depth of stars.
 
@@ -740,10 +745,14 @@ Visual: a lone figure-free desert plain under the Milky Way.
   Bukhari 1412 with 1411 quoted separately (script 5); no neuroscience claim
   on 96:16 (script 10 beat 6 is reflection-framed); classical-first framing on
   21:32, 21:33/36:40, 51:47.
-- STILL REQUIRED BEFORE OWNER REVIEW (accuracy QC gate step 2): independent
-  adversarial claim-by-claim fact-check of these finished scripts by a
-  reviewer that did not write them. Nothing renders until it passes and the
-  owner approves the scripts.
+- ACCURACY QC GATE STEP 2 COMPLETE (2026-07-03): independent adversarial
+  fact-check ran claim by claim against the sources (report:
+  docs/batch3-factcheck.md). 28 flags raised (1 hard, 13 medium, 14 minor);
+  ALL 28 fixed in this document, including the hard citation correction
+  (the trade/family-ties/false-testimony list sits in Musnad Ahmad 3870,
+  not 3848) and the batch-wide addition of companion honorifics. Every
+  Qur'an quote verified verbatim. Nothing renders until the owner approves
+  these scripts.
 - New phonetics to add to the PHONETIC map before rendering: yasbahun
   ("yas-ba-hoon"), musi'un ("moo-see-oon"), nasiyah ("naa-see-yah"),
   Qustantiniyyah ("Kus-tan-tee-nee-yah"), Bayt al-Maqdis ("Bayt al-Mak-dis"),
