@@ -77,6 +77,15 @@ asked. This file is the durable memory for this repo.
   the finished scripts get an independent claim-by-claim fact-check pass before
   the owner sees them. Wrong-numbered or weak narrations are corrected or cut,
   never shipped.
+- ACCURACY QC GATE (owner directive 2026-07-03, BLOCKING): no script advances to
+  voicing or render until it has passed ALL of: (1) the pre-writing source table
+  (exact number, wording, grading verified against primary sources); (2) an
+  INDEPENDENT adversarial claim-by-claim fact-check of the finished script by a
+  separate reviewer pass that did not write it, covering every date, name,
+  number, attribution, and paraphrase against the cited source; (3) every
+  flagged item fixed or the claim cut, with the fix re-checked. A script with
+  even one unresolved flag does NOT render. The verification report for each
+  batch is committed to docs/ so the trail is auditable.
 - The Qur'an is shown (Arabic from Quran.com), never recited by AI or synthesized.
 - TONE OF PRECISION (owner rule 2026-07-02): corrections and careful attributions
   are delivered matter-of-factly, never self-referentially. The narration NEVER
