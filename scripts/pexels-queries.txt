@@ -2,28 +2,20 @@
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
 --portrait
-desert dirt road dusk
-desert sand track dawn
-camel caravan desert sunset
-desert path twilight
-fog over dark sea night
-mist rolling over water night
-foggy ocean dark
-Istanbul skyline silhouette dusk
-Bosphorus strait aerial
-Istanbul mosque skyline sunset
-old map parchment candlelight
-antique map dark
-old parchment texture closeup
-mud brick courtyard palm trees
-adobe architecture desert
-old kasbah mud wall
-prayer rug sunlight window
-muslim prayer mat warm light
-old mosque interior empty warm
-construction cranes dusk silhouette
-skyscraper construction night
-tower crane skyline sunset
-forest path fork autumn
-diverging trail golden hour
-two paths woods dusk
+old scroll candlelight dark
+antique compass old map dark
+aged parchment scroll dark
+candle flame old paper dark
+old book pages candle dark
+mud brick mosque ancient
+adobe wall palm shadow
+clay brick alley old town warm
+desert village mud houses sunset
+empty prayer rug mosque light
+prayer mat sunbeam empty room
+mosque carpet sunlight rays empty
+prayer beads on rug warm light
+forked path forest dusk
+path splits two directions aerial
+crossroads dirt trail autumn
+fork in the road countryside dusk
