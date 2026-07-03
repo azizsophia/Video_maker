@@ -1,113 +1,18 @@
-# Batch 3 pass 1: one query per beat, 15 stories (agent run 2026-07-03)
+# Batch 3 pass 2: cover photos (portrait) for the 15 stories
+--photos
 --portrait
-full moon rising desert night
-clouds drifting across moon
-dark mountains under starry night
-night sky stars timelapse desert
-moonlight over mountain ridge
-moon reflection on dark water
-moon disappearing behind dark clouds
-calm moonlit landscape night
-ancient stone walls night lantern
-fog rolling over ancient stones
-empty desert road under stars
-jerusalem old city aerial
-light rays ancient stone courtyard
-dark interior bright window light
-old stone alley dawn empty
-sunrise over old city rooftops
-goat herd desert dunes distant
-dark storm clouds night sky
-wind blowing sand desert dusk
-long shadows on sand sunset
-skyscrapers night low angle
-construction cranes skyline dusk
-burj khalifa clouds
-city lights sprawling night aerial
-cracked dry desert earth crevice
-sand blowing over dark rocks
-ancient ruins desert stone
-footprints trail across sand dunes
-narrow dirt path branching field
-sand falling macro slow motion
-straight desert road dawn
-gold coins on dark table
-golden dust particles floating dark
-date palm grove sunlight
-wheat grain pouring overflowing
-empty old street golden hour
-sunbeam empty room dust
-quiet rooftops at dawn
-earth rotating from space night day
-stars fading into dawn timelapse
-small campfire vast dark desert
-village lights dusk mountain valley
-old parchment manuscript closeup
-earth city lights from space
-warm doorway light under stars
-sunrise wide horizon timelapse
-crosswalk crowd aerial top view
-city lights bokeh night blur
-warm light through old doorway
-empty autumn park path
-container port lights night
-single lit window dark building
-soft morning light quiet street
-meteor shooting star night sky
-aurora borealis dark sky
-milky way over desert dunes
-above clouds sunlight aerial
-sunbeams bursting through storm clouds
-meteor shower timelapse stars
-starry night sky small town
-sun setting ocean horizon flare
-star trails circles night sky
-desert rock formation night stars
-moon gliding thin clouds
-sun clouds sky wide timelapse
-starfield slow drift stars
-vast night sky over mountains
-shadow silhouette on wall abstract
-red smoke swirling darkness
-fire torch ancient stone night
-dramatic dark storm clouds timelapse
-dust blowing off cliff wind
-dark rock texture closeup moody
-empty field dusk moody landscape
-prayer mat sunlight window
-honey pouring slow motion golden
-amber liquid light abstract dark
-bee on flower golden light
-honeycomb closeup amber glow
-honey stirred into tea glass
-honey jars warm window light
-bee flying from flower macro
-mosque golden dome sunset
-golden light patterns dark abstract
-clay brick wall palm tree shadow
-mosque minaret low angle
-mosque chandelier ornate ceiling
-empty mosque prayer hall interior
-prayer rug simple room light
-city traffic light trails timelapse night
-rotating star trails dark sky
-sand pouring dune crest wind
-clouds racing over mountain timelapse
-match igniting flame darkness
-crowd walking blur motion timelapse
-still lake dawn mist calm
-ancient fortress wall by sea
-fog over dark sea night
-bosphorus strait aerial istanbul
-istanbul skyline silhouette dramatic sky
-waves crashing stone fortress rocks
-ancient stone gate golden light
-old vintage map texture
-sunrise golden water bosphorus
-glowing tent under night sky stars
-deep space stars slow drift
-canyon night sky stars above
-clouds parting revealing stars night
-high altitude horizon earth curve
-galaxy nebula deep space
-milky way desert plain night
+full moon dark clouds night
+jerusalem old city night
+skyscraper tower night fog
+desert dunes dark dramatic
+gold coins dark background
+twilight horizon dusk landscape
+city night bokeh lights winter
+night sky stars meteor
+sun ocean horizon golden dark
+dark shadow abstract wall
+honey golden dark background
+mosque dome minaret sunset silhouette
+light trails long exposure night
+istanbul bosphorus mosque silhouette sunset
+milky way galaxy night sky
