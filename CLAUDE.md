@@ -136,6 +136,23 @@ asked. This file is the durable memory for this repo.
   new or edited text is generated. Keep the cache step in render-story.yml.
 - NO emojis. NO em or en dashes (plain hyphens only). This applies to scripts,
   captions, descriptions, and covers.
+- NO ALL-CAPS emphasis words in narration (owner rule 2026-07-03). The word-by-
+  word caption renders text verbatim, so a capitalized word (LORD, THAT, MANY,
+  HEARD) reads on screen like random shouting. Emphasis comes from the gold
+  spoken-word highlight and pacing, never from caps. Only genuine acronyms
+  (NASA, UNESCO) stay capitalized. Proper nouns keep normal title case.
+- READABLE, FLOWING CADENCE (owner rule 2026-07-03): write for the ear. Do not
+  chain ellipses into a halting stop-start rhythm; use a pause only where a
+  speaker would truly breathe. No mid-sentence parenthetical asides that
+  interrupt the thought ("the shortest surah... that is, chapter... in the..."),
+  no point-of-view jumps (a third-person sentence must not switch to "mine"),
+  and every sentence must be grammatical read aloud. Read each script out loud
+  in your head before shipping; if a line is hard to follow in one hearing,
+  rewrite it. (The Challenge short was pulled for exactly this.)
+- SPOKEN ARABIC IS OPT-IN, NOT DEFAULT: an English TTS mangles transliterated
+  Arabic words (lawaqih, laqaha). Prefer to SHOW the Arabic on screen (title
+  card or the ayah quote) and SPEAK the English translation. Only voice a
+  transliterated Arabic term when it has been ear-tested and approved.
 
 ## Packaging (every finished video)
 - Cover (CoverCard 9:16 for shorts, CoverWide 16:9 for long-form).
