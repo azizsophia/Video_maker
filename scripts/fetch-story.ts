@@ -195,6 +195,28 @@ const PHONETIC: Record<string, string> = {
   laqaha: "la-kaha",
   mastigure: "masti-gyoor",
   bismillah: "bismillaah",
+  quraysh: "Koo-raysh",
+  "ka'bah": "Kaaba",
+  kaba: "Kaaba",
+  // Recurring companion + place names, MSA-vocalized. Locked here so they are
+  // never left to Daniel's default English reading (which turns Ali into
+  // "AL-eye", Anas into "AY-nas", Abu into "uh-BOO").
+  abu: "Aboo",
+  bakr: "Bakr",
+  ali: "Alee",
+  siddiq: "Siddeeq",
+  abdullah: "Abdullaah",
+  "mas'ud": "Mas-ood",
+  masud: "Mas-ood",
+  anas: "Anass",
+  malik: "Maalik",
+  khattab: "Khattaab",
+  banu: "Banoo",
+  harj: "Harj",
+  masjid: "masjid",
+  madinah: "Madeenah",
+  hurayra: "Hurayra",
+  "al-khudri": "al-Khudree",
   // "Read" here is the command Iqra (present/imperative), so it must sound
   // "reed", never past-tense "red". On-screen caption keeps the spelling "Read".
   read: "reed",

@@ -99,6 +99,20 @@ asked. This file is the durable memory for this repo.
 - Narration must be natural, warm, emotional, and paced (write pauses with commas,
   full stops, ellipses; ElevenLabs settings tuned for emotion). Send a short voice
   test before a full render when the voice or tone changed.
+- PRONOUNCE EVERY NAME IN MSA (owner rule 2026-07-03, non-negotiable): before
+  ANY render, every proper name and Arabic term spoken in the script is looked
+  up for its Modern Standard Arabic pronunciation and given an MSA-correct
+  respelling in the `PHONETIC` map. A name is NEVER left to Daniel's default
+  English reading - that is exactly what mangles a name (Ali becomes "AL-eye",
+  Anas becomes "AY-nas", Abu becomes "uh-BOO", a qaf becomes a hard "kw") and
+  makes a viewer swipe away in the first seconds. This applies to recurring
+  companion/place names too (Abu Bakr, Umar, Uthman, Ali, Abdullah ibn Mas'ud,
+  Anas ibn Malik, Quraysh, Ka'bah, Madinah...), not just the exotic ones. The
+  qaf ( q) is respelled "k" for the English TTS (Quraysh -> "Koo-raysh",
+  Qustantiniyyah -> "Kus-tan-tee-nee-yah") since Daniel cannot voice a uvular
+  qaf; that is the deliberate, consistent choice across the whole map. Every
+  new batch's names are added to the map and cleared by a names-only ear-test
+  BEFORE the batch renders.
 - Arabic pronunciation must be correct: voice from a phonetic script (the
   `PHONETIC` map in `scripts/fetch-story.ts`) while the on-screen text keeps
   proper spelling. Send a names-only voice test to confirm. Locked so far:
