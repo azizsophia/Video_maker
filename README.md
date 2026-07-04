@@ -125,40 +125,141 @@ See `docs/SETUP.md` to get the live pipeline running.
 
 ## Session handoff — where we left off (read this first)
 
-**Branch:** `claude/video-performance-analysis-1o75wa` (all work here; never push elsewhere).
+**Last updated: 2026-07-04.** Also read `CLAUDE.md` (the non-negotiable owner
+rules + pre-ship QC gate) and `docs/content-calendar.md` (schedule, posted list,
+app footer) before continuing the channel.
 
-**Built and working**
-- Short-form engine `src/QuranVideo/StoryVideo.tsx` (cinematic mode) + `CineMap`/`StoryMap` (animated, real-lat/lon maps) + `ParallaxAd` outro = the REAL keepsake book opening (cover `public/ad/book-mama.png` → `dedication-mama.jpg` + `photopage-mama.jpg`). Outro CTA: "Join the founding list for early access" + ketabistudio.com.
-- Footage search: GitHub Actions `pexels-search.yml` — edit `scripts/pexels-queries.txt` (1 query/line; first line `--photos` for stills), commit+push, read candidates from the run log. Pexels key = repo secret `PEXELS_API_KEY`. Download thumbnails with **curl** (urllib gets 403).
-- **Fire of the Hijaz** short: done (map beat 4, red-sky beat 8, lava-field beat 10). Renders via `render-story.yml`.
-- Research done: TikTok-safe CTA (PLAYBOOK §8); long-form gap analysis → chose **Euphrates** as the first long-form.
+**Branch:** `claude/fingerprints-ridge-visuals-6qbs6x` (all work here; never push
+elsewhere without explicit owner permission). GitHub is scoped to
+`azizsophia/video_maker` only.
 
-**DONE & RENDERED — Long-form Euphrates documentary (the 16:9 pilot)**
-The full pipeline is built, QC'd, and rendered. The clean video exists as a CI
-artifact. Publishing pack (titles, description, thumbnails) is in
-`docs/euphrates-longform.md`.
+### Current state (Ketabi Studio — Islamic shorts channel)
 
-- **Script:** `scripts/stories/longform-euphrates.json` — **37 beats, ~1,450 words (~9:02)**, chaptered, accuracy-verified against sunnah.com + the papers: **Sahih Muslim 2894 = "mountain of gold" (jabal) + 99-of-100; Sahih al-Bukhari 7119 = "treasure of gold" (kanz) + take-nothing**; both narrated by Abu Hurayrah. NASA GRACE ~144 km3 lost 2003-2009 (Voss 2013, WRR; ~60% groundwater; 2nd-fastest on Earth). Qur'an 100:8, 102:1, 47:18 shown on screen (never recited; deliberately short verses so the Arabic fits the pull-quote card). an-Nawawi / Ibn Hajar cited. River map beat (`map:"euphrates"`). Each beat's narration is within ~1.8x its clip length so the Ken Burns slow-down never freezes (0 freeze warnings).
-- **Format correction shipped:** cinematic engine reflows for landscape via `useVideoConfig()` — `StoryVideoWide` (1920x1080) in `Root.tsx`; `CineCaption`/`CineLabel`/`CineQuote` (Cinematic.tsx), `CineMap` (responsive BOX/SVG/compass/labels), and `ParallaxAd`/OpenBook (side-by-side book + CTA) all re-lay-out for 16:9. Vertical 9:16 `StoryVideo` unchanged (Shorts cut). `render-story.yml` picks the composition from an `orientation` input (default `wide`).
-- **Footage QC: COMPLETE (2 rounds, 12 clips swapped).** All footage is now human-free, text-free, no haram subjects, on-topic, HTTP-206 verified. Removed: a wine glass (B01), cannabis (B05 - slug filter matched "gold nugget"), distant people/foot/shadow (B06/B11/B19/B30), a "good luck / CHINA" novelty-coin clip and "$" dollar coins (greed beats - superstition + cheap branding), an unclear hourglass (B08), and two unverifiable Arabic-manuscript clips (B07/B21 - NOT Qur'an, swapped to be safe). Christian-cross cemeteries were rejected for the "graves" beat (wrong symbolism) in favour of neutral ruins. The one hourglass kept is B22 ("they did not set a date" - a clock fits).
-- **Rendered:** run #108, commit `b9b8fce`, `story-video` artifact (~9:02, 1920x1080). Link in `docs/euphrates-longform.md`. Render step is ~50-55 min.
-- **Publishing pack written:** `docs/euphrates-longform.md` has title options, the full YouTube description (waitlist CTA at the end), chapter timestamps, and the 3 thumbnails (`public/promo/euphrates/`, regen with `scripts/thumbs-euphrates.py`).
+Production has shifted to **large batches of short-form** (TikTok/Reels/Shorts) as
+the growth engine; long-form is occasional, made only when asked (CLAUDE.md).
+Every short copies the **Khadijah cadence** template (`scripts/stories/khadijah.json`):
+hook beat -> gold-on-black title card (deep serious read) -> sourced narrative
+beats (~10-15s, one literal clip each) -> reflective sourced button.
 
-**NEXT STEPS (if continuing)**
-1. Publish on YouTube: pick a title + thumbnail from `docs/euphrates-longform.md`, paste the description, confirm the chapter timestamps against the actual video (they are script-estimates).
-2. Optional **vertical 9:16 Shorts cut** of the same topic: dispatch `render-story.yml` with `story=scripts/stories/longform-euphrates.json`, `orientation=vertical`. (Captions auto-reflow; footage already QC'd.)
-3. To re-render after any edit: dispatch `render-story.yml`, `orientation=wide`, theme blank (-> `ketabi`). "failure" badge = ONLY the optional Drive step; the artifact is still produced. Deliver the **artifact link**, not the MP4 (long video).
+**Batch 3 (15 shorts) — shipped, then re-worked.** After the owner reviewed them
+1x1 she caught footage misses (a tourist-on-camel, a modern car) and bad Arabic
+pronunciation. Actions taken:
+- **Scrapped** (owner call, files git-rm'd): `lizards-hole`, `unwanted-charity`,
+  `constantinople`.
+- **Dense footage re-QC** of the rest (see `docs/batch3-footage-reqc.md`); ~37
+  clips re-sourced.
+- **6 shorts re-rendered 2026-07-04** with tightened footage + read-aloud/cadence
+  fixes + phonetic fixes: `jerusalem-test`, `shepherds-towers`, `forelock`,
+  `verse-of-honey`, `expander`, `mosque-boast`. All passed still-QC. Artifact
+  links (expire 2026-07-18; re-render is cheap — narration is cached):
+  - jerusalem-test: run 28718399458 / artifact 8085173174
+  - shepherds-towers: run 28718400300 / artifact 8085170686
+  - forelock: run 28718400902 / artifact 8085183776
+  - verse-of-honey: run 28718528758 / artifact 8085208057
+  - expander: run 28718529370 / artifact 8085195505
+  - mosque-boast: run 28719309711 / artifact 8085400898  (beat 2 tourist clip ->
+    clean stone arcade Pexels 34999752; beat 1 had a legible "BAZAAR" shop sign ->
+    clean grand-dome Pexels 30682382)
+- **moon-split** re-rendered (repetition fix + "Meena") but **held**: waiting on
+  the owner to pick a Mina pronunciation ("Meena" vs research-correct "mih-NAA");
+  a voice A/B was sent. Re-render only if she picks mih-NAA.
 
-**Footage QC method (reuse this - it caught the wine/cannabis/coin-text issues thumbnails missed):**
-- `ffmpeg -nostdin -ss <t> -i <pexels-url> -frames:v 1 out.jpg` grabs a frame straight from the remote URL (Pexels supports range requests; ~1s each). Sample 2-3 timestamps + sometimes 8 across the full clip to catch people/text that appear mid-clip.
-- Build contact sheets with **PIL** (Pillow); ffmpeg `tile` chokes on mixed sizes. Download Pexels thumbnails with **curl** (urllib gets 403).
-- Local `remotion still` works if you pass `--ignore-certificate-errors` and `NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt` (the sandbox proxy MITMs Google Fonts; CI has open internet so it just works there).
+**Phonetic audit (2026-07-04).** An independent research pass checked 23 spoken
+names against authoritative MSA sources (Wikipedia IPA, quran.com, sunnah.com,
+Forvo). Only one change needed and applied: **Ibn Kathir -> "Ka-theer"** (in
+`expander`). Everything else as-fed was correct, including the deliberate qaf->k
+convention. **New QC rule added to CLAUDE.md:** every spoken name must be
+researched against authoritative sources BEFORE it clears; the owner's ear-test
+is the final check, NOT the verification ("sounds fine" is not proof).
 
-**Rules to keep**
-- **Copy style: NO emojis. NO em dashes or en dashes** (plain hyphens only). Applies to captions, titles, descriptions, on-screen text.
-- Accuracy: every claim primary-source verified; hadith graded; science cited separately; never call a prophecy "fulfilled" that isn't (the gold has NOT appeared); no date-setting.
-- Footage: strict no-faces / no-people / adab. No alcohol, drugs, music instruments, luck/superstition charms, other-faith symbols (crosses etc.), or legible unverifiable text. QC every clip visually (see method above), not by search slug.
-- Delivery: long videos -> ARTIFACT LINK; short clips (<=~15s) -> MP4 is fine.
-- Thumbnails/covers: ALWAYS use the brand `Cover` template, never ad-hoc PIL text mockups for finals. Long-form (16:9) uses the `CoverWide` composition; vertical feed covers use `CoverCard`. Render a still: `NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npx remotion still CoverWide out.png --props=<json> --ignore-certificate-errors` (props: title with \n line breaks, kicker, image = a real https poster URL, wordmark). Title in Title Case (Playfair), no emojis/dashes.
-- Keep tool outputs SMALL (curl+parse, low-res images, slice big GH-API/log files by char range) - big dumps blow the request-size limit.
-- Content schedule, posted-list, app footer, and per-video production status live in `docs/content-calendar.md` (read it first when continuing the channel). Image previews fail in very long chats, so do footage-QC-heavy work early in a FRESH chat, or offload the image QC to a subagent so the images stay out of the main context.
+**Still scheduled from batch 3, NOT yet footage-re-QC'd** (do before their post
+dates): `greeting-grown-cold`, `time-speeds-up`, `night-and-day`, `yasbahun`
+(07-11 .. 07-16). `mosque-boast` is done.
+
+**Long-form available to post:** `scripts/stories/longform-ad-duha.json` (Surah
+ad-Duha, 11 beats, 16:9) — re-sourced footage + cover, rendered. Yusuf long-form
+already posted.
+
+**App promo (standalone marketing video):** `AppPromo` composition
+(`src/QuranVideo/AppPromo.tsx`, 9:16) built from 6 marketing slides
+(`public/promo/*.png`) with a Daniel voiceover assembled locally
+(`scripts/fetch-promo.ts`, `scripts/assemble-promo.mjs`, `render-promo.yml`).
+Delivered as an mp4 file. NOTE: `render-promo.yml` is only on this branch, so it
+is NOT dispatchable from the API until merged to the default branch.
+
+### The pipeline (how to make a short)
+
+1. **Footage search** — edit `scripts/pexels-queries.txt` (1 query/line; first
+   non-comment line may be `--portrait` for 9:16 video or `--photos` for stills),
+   commit+push -> triggers `pexels-search.yml`; read candidates from the run log
+   (JSON lines `{q,id,dur,w,h,link,image}`). Pexels key = repo secret
+   `PEXELS_API_KEY`.
+2. **Footage eye-QC (MANDATORY, multi-frame)** — grab >=6 frames spread across
+   each clip (~8/25/42/58/75/92%) and VIEW them; a single mid-clip frame misses
+   things (that is exactly how the tourist-camel and the BAZAAR sign slipped
+   through). Reject any clip that in ANY frame shows: on-screen text/signage/
+   watermark/logo/plate (scrutinize distant backgrounds), a person as subject,
+   tourists, modern objects out of period, other-faith symbols, alcohol,
+   instruments, CGI, or brightness too high for the dark grade. One distinct clip
+   per beat; unique repo-wide (grep `scripts/stories/*.json` for the id).
+3. **Wire the JSON** (`scripts/stories/<id>.json`), build a contact sheet, get
+   owner sign-off, then render.
+4. **Render** — dispatch `render-story.yml` with `story=scripts/stories/<id>.json`,
+   `orientation=vertical` (9:16 short) or `wide` (16:9 long-form), `scale=1`
+   (1080p daily cadence; identical on phones, half the minutes). The "failure"
+   badge is ONLY the optional Drive-upload step; the `story-video` artifact
+   (`out/story.mp4` + `out/cover.png` + `out/captions.txt`) is still produced.
+5. **Still-QC the render** — pull the artifact, grab 6 frames, confirm: title card
+   readable, every ayah shows its citation, no glyph-box tofu on Arabic, captions
+   readable + no ALL-CAPS shouting, ad outro clean.
+
+### Tooling notes (this remote environment)
+
+- **No system ffmpeg/ffprobe.** Use the bundled one:
+  `/home/user/Video_maker/node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg`
+  (decodes h264, grabs frames: `ffmpeg -ss <sec> -i <file> -frames:v 1 out.png`;
+  no volumedetect). Durations/tracks via `@remotion/media-parser`.
+- **GH Actions MCP list calls are huge** — they error but save to a file; parse
+  that file with python (slice by char range) instead of reading it raw.
+- **Pull an artifact:** `actions_get download_workflow_run_artifact` returns a
+  short-lived signed URL; `curl` it immediately, `unzip` (each zip has an `out/`
+  folder — extract to a per-video dir so they don't overwrite each other).
+- **Voice test:** dispatch `tts-test.yml` (inputs text/stability/style/seed);
+  the mp3 comes back base64 in the log AND as the `tts-names-test` artifact.
+- **Offload image-heavy QC to subagents** (they return a text verdict so the
+  frames stay out of the main context). Keep each subagent to <=5 beats / a
+  montage strip — ~90 images / 32MB overflows a subagent ("Request too large").
+
+### Voice / narration facts
+
+- Daniel `onwK4e9ZLuTAKqWW03F9`, `eleven_multilingual_v2`, seed **71421**,
+  default `{stability:0.32, style:0.55, similarity_boost:0.8}`; title-card override
+  `{0.72, 0.1, 0.85}` (deep serious read). Keys = repo secrets
+  `ELEVENLABS_API_KEY` (5-concurrent request limit).
+- **Narration is cached** in `public/story-cache` (key = sha1 of text+voice+model+
+  settings+seed), persisted by the cache step in `render-story.yml`. A re-render
+  bills ~zero ElevenLabs characters for unchanged lines; only new/edited text is
+  regenerated — so changing one name's respelling re-voices only the affected
+  lines.
+- **PHONETIC map** in `scripts/fetch-story.ts` maps token -> TTS respelling while
+  on-screen text keeps proper spelling. The qaf (ق) is deliberately respelled "k"
+  (Daniel cannot voice a uvular qaf). Every new name is added here and cleared by
+  research + a names-only ear-test before the batch renders.
+
+### Rules to keep (see CLAUDE.md for the full list)
+
+- **Copy: NO emojis, NO em/en dashes** (plain hyphens only). NO ALL-CAPS emphasis
+  words in narration (the word-by-word caption renders them as shouting); only
+  genuine acronyms stay capitalized.
+- Accuracy is BLOCKING: pre-writing source table + independent adversarial
+  claim-by-claim fact-check; every claim shown on screen with its source; no
+  Israiliyyat / weak narrations / date-setting; report committed to `docs/`.
+- Footage: strict no-faces (distant silhouettes/backs/hands/crowds ok) / adab; the
+  multi-frame eye-QC + owner contact-sheet sign-off gate above.
+- Delivery: `docs/PLAYBOOK.md` / CLAUDE.md say deliver the **artifact link**, not
+  the mp4, for the daily cadence. (For an owner review cycle, large mp4 files
+  sometimes fail to open on mobile — provide the artifact link as the reliable
+  path.)
+- Covers use the brand `Cover` templates: `CoverCard` (9:16 shorts) / `CoverWide`
+  (16:9 long-form). Never ad-hoc PIL text mockups for finals.
+- Do NOT put the model id in commits/PRs/code/artifacts — chat replies only.
