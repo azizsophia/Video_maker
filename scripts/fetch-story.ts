@@ -210,6 +210,7 @@ const PHONETIC: Record<string, string> = {
   masud: "Mas-ood",
   anas: "Anass",
   malik: "Maalik",
+  kathir: "Ka-theer",
   khattab: "Khattaab",
   banu: "Banoo",
   harj: "Harj",
