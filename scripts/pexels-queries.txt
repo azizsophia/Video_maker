@@ -1,18 +1,15 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
---portrait
-jerusalem old city walls night
-ancient stone fortress wall dusk
-old town stone alley night lantern
-desert fortress ruins night
-sandstone canyon walls night dark
-dust blowing desert dusk dark
-sandstorm haboob dark
-blowing sand dark ridge
-prayer rug carpet texture dark
-ornate carpet candlelight close up
-moonlit desert dunes night
-sand dune shadow dusk moody
-star trails deep space dark
-raw honeycomb macro amber dark
+dramatic sunrise dark clouds morning light
+dark moody clouds heavy sky
+dark stormy sea moody night
+light breaking through dark clouds
+first light dawn over dark horizon
+lone tree silhouette at dawn
+rain falling on dry desert earth
+desert oasis water at dawn dark
+dark field silhouette sunrise
+golden light through mist dark
+calm dark water reflection dawn
+warm sunlight rays dark forest
