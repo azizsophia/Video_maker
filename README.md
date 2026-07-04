@@ -160,9 +160,10 @@ pronunciation. Actions taken:
   - mosque-boast: run 28719309711 / artifact 8085400898  (beat 2 tourist clip ->
     clean stone arcade Pexels 34999752; beat 1 had a legible "BAZAAR" shop sign ->
     clean grand-dome Pexels 30682382)
-- **moon-split** re-rendered (repetition fix + "Meena") but **held**: waiting on
-  the owner to pick a Mina pronunciation ("Meena" vs research-correct "mih-NAA");
-  a voice A/B was sent. Re-render only if she picks mih-NAA.
+- **moon-split** re-rendered (repetition fix). Mina pronunciation locked to
+  **"Mee-nah"** (owner delegated the call; plain "Meena" risked the English
+  girl-name ending, strict "mih-NAA" she found distracting — "Mee-nah" is the
+  clear community reading). Final re-render dispatched 2026-07-04.
 
 **Phonetic audit (2026-07-04).** An independent research pass checked 23 spoken
 names against authoritative MSA sources (Wikipedia IPA, quran.com, sunnah.com,
