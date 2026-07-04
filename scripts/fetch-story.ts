@@ -122,8 +122,8 @@ const PHONETIC: Record<string, string> = {
   nuh: "Nooh",
   // "Sham" here is always the region (bilad ash-Sham), never the English word.
   sham: "Shaam",
-  "ad-duha": "ad-Duhaa",
-  duha: "Duhaa",
+  "ad-duha": "ad-Duha",
+  duha: "Duha",
   "al-kawthar": "al-Kowthar",
   kawthar: "Kowthar",
   "al-istighfar": "al-istighfaar",
