@@ -190,7 +190,7 @@ const PHONETIC: Record<string, string> = {
   jahl: "Jahal",
   badr: "Baadr",
   zakat: "zakaat",
-  mina: "Minaa",
+  mina: "Meena",
   "ya-sin": "Yaa-Seen",
   laqaha: "lak-ka-ha",
   mastigure: "masti-gyoor",
