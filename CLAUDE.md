@@ -17,9 +17,13 @@ that is the point of the gate. Nothing ships with an open item.
 3. NO ALL-CAPS emphasis words in narration (they read as shouting in the
    caption); only genuine acronyms stay capitalized.
 4. PRONUNCIATION: every spoken name/term is MSA-looked-up and in the PHONETIC
-   map, cross-checked by an INDEPENDENT pronunciation audit against authoritative
-   sources (report to docs/), then cleared by a names-only ear-test. No name on
-   Daniel's default English reading.
+   map, cross-checked by an INDEPENDENT pronunciation audit that RESEARCHES each
+   name against authoritative sources (Wikipedia IPA, Quran.com/corpus, sunnah.com,
+   Forvo, transliteration guides; report to docs/) BEFORE it clears - the owner is
+   not a native Arabic speaker, so a names-only ear-test is a final check, NOT the
+   verification; "sounds fine" is not proof. Confirm the respelling gives the right
+   vowel and stress, not just an approximate. No name on Daniel's default English
+   reading.
 5. SPOKEN ARABIC is opt-in: default is SHOW the Arabic on screen (title card or
    ayah) and SPEAK the English; only voice a transliterated term once ear-tested.
 6. FOOTAGE eye-QC (MULTI-FRAME, non-negotiable): every clip viewed by grabbing

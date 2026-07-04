@@ -1,9 +1,9 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
---photos
-dramatic sunrise dark clouds
-golden dawn light dark sky
-sunrise over dark mountains
-morning light through dark clouds
-dark clouds sunbeam dramatic sky
+--portrait
+old mud brick mosque interior dark
+ancient adobe mosque prayer hall dim
+simple old mosque stone interior lantern
+dim mosque interior candlelight arches
+old mosque mihrab dark warm light
