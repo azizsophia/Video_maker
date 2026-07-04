@@ -9,7 +9,7 @@
   "cover": {
     "title": "Ad-Duha",
     "kicker": "WHEN THE HEAVENS WENT SILENT",
-    "image": "https://images.pexels.com/photos/31497132/pexels-photo-31497132.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2560&h=1440"
+    "image": "https://images.pexels.com/photos/13036981/pexels-photo-13036981.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2560&h=1440"
   },
   "_note": "FRI long - 16:9 long-form, render StoryVideoWide (orientation=wide), scale 1. Footage per beat pending (see docs/week-batch-scripts.md Visual notes). Cover image pending. Approved script: do not reword without owner sign-off.",
   "segments": [
@@ -30,8 +30,9 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "video": "https://videos.pexels.com/video-files/6486016/6486016-hd_1920_1080_30fps.mp4",
-      "videoDuration": 46
+      "video": "https://videos.pexels.com/video-files/33458345/14236397_1920_1080_30fps.mp4",
+      "videoDuration": 22,
+      "_shot": "REDO: gold morning light through mist (Pexels 33458345)"
     },
     {
       "type": "narration",
@@ -44,24 +45,27 @@
       "type": "narration",
       "text": "Imagine the weight of it. The heavens had gone quiet. The mockery from outside... and the ache inside. Has my Lord... left me?",
       "foot": "Sahih al-Bukhari 4951",
-      "video": "https://videos.pexels.com/video-files/12178173/12178173-hd_1920_1080_24fps.mp4",
-      "videoDuration": 36
+      "video": "https://videos.pexels.com/video-files/11347224/11347224-hd_1920_1080_24fps.mp4",
+      "videoDuration": 16,
+      "_shot": "REDO: dark storm clouds over water (Pexels 11347224)"
     },
     {
       "type": "narration",
       "text": "Then dawn broke. By the morning light... and by the night when it settles... your Lord has not forsaken you, and He does not hate you. Allah swears by the daybreak itself... the silence was never abandonment.",
       "quote": "93:3",
       "foot": "Qur'an 93:3 (shown, not recited)",
-      "video": "https://videos.pexels.com/video-files/33118125/14115958_1920_1080_30fps.mp4",
-      "videoDuration": 35
+      "video": "https://videos.pexels.com/video-files/34608137/14667395_1920_1080_30fps.mp4",
+      "videoDuration": 25,
+      "_shot": "REDO: first light over dark sea, gold reflection (Pexels 34608137)"
     },
     {
       "type": "narration",
       "text": "And what is to come... will be better for you than what has passed. Read that again. It was revealed to a man in his hardest hour... and it is the direction of every believer's life. Forward is better.",
       "quote": "93:4",
       "foot": "Qur'an 93:4 (shown, not recited)",
-      "video": "https://videos.pexels.com/video-files/6338335/6338335-hd_1920_1080_24fps.mp4",
-      "videoDuration": 42
+      "video": "https://videos.pexels.com/video-files/9362165/9362165-hd_1920_1080_30fps.mp4",
+      "videoDuration": 15,
+      "_shot": "REDO: sunlight rays breaking through dark clouds (Pexels 9362165)"
     },
     {
       "type": "narration",
@@ -76,24 +80,27 @@
       "text": "Then Allah reminds him of the record. Did He not find you an orphan... and shelter you? His father died before he was born. His mother when he was six. His grandfather at eight. Orphan, three times over... and never once unheld.",
       "quote": "93:6",
       "foot": "Qur'an 93:6 and Seerah",
-      "video": "https://videos.pexels.com/video-files/9737873/9737873-hd_1920_1080_24fps.mp4",
-      "videoDuration": 28
+      "video": "https://videos.pexels.com/video-files/13853768/13853768-hd_1920_1080_30fps.mp4",
+      "videoDuration": 57,
+      "_shot": "REDO: misty lone trees at dawn (Pexels 13853768)"
     },
     {
       "type": "narration",
       "text": "And He found you searching... and guided you. And He found you in need... and made you rich. Every emptiness in his story, Allah had already filled. That was the evidence... the future is safe with the One who handled the past.",
       "quote": "93:8",
       "foot": "Qur'an 93:8 (shown, not recited)",
-      "video": "https://videos.pexels.com/video-files/32033447/13654075_1920_1080_30fps.mp4",
-      "videoDuration": 33
+      "video": "https://videos.pexels.com/video-files/9632864/9632864-hd_1920_1080_24fps.mp4",
+      "videoDuration": 31,
+      "_shot": "REDO: rain falling on dark water (Pexels 9632864)"
     },
     {
       "type": "narration",
       "text": "And then the surah turns outward. So the orphan... do not oppress him. And the one who asks... do not turn him away. And the blessing of your Lord... speak of it. Allah heals him... then sends him to heal. That is the pattern. Comforted people... comfort people.",
       "quote": "93:11",
       "foot": "Qur'an 93:11 (shown, not recited)",
-      "video": "https://videos.pexels.com/video-files/16380181/16380181-hd_1920_1080_30fps.mp4",
-      "videoDuration": 55
+      "video": "https://videos.pexels.com/video-files/27671875/12200210_1920_1080_24fps.mp4",
+      "videoDuration": 9,
+      "_shot": "REDO: calm dark lake, tree silhouette at dawn (Pexels 27671875)"
     },
     {
       "type": "narration",
