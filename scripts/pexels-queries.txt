@@ -2,8 +2,11 @@
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
 --portrait
-old mud brick mosque interior dark
-ancient adobe mosque prayer hall dim
-simple old mosque stone interior lantern
-dim mosque interior candlelight arches
-old mosque mihrab dark warm light
+adobe mosque interior
+mud brick mosque
+Djenne mosque
+old stone mosque arches dark
+desert mud mosque prayer hall
+ancient mosque columns shadow
+palm trunk mosque interior
+earthen mosque wall
