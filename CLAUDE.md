@@ -22,11 +22,21 @@ that is the point of the gate. Nothing ships with an open item.
    Daniel's default English reading.
 5. SPOKEN ARABIC is opt-in: default is SHOW the Arabic on screen (title card or
    ayah) and SPEAK the English; only voice a transliterated term once ear-tested.
-6. FOOTAGE eye-QC: every clip viewed by frame-grab - literal to the line, ONE
-   distinct clip per beat, unique repo-wide, no on-screen text/watermarks, no
-   people/prophet-as-subject, no other-faith symbols, no alcohol/instruments, no
-   CGI look, not too bright for the dark cinematic grade. Owner-side second QC
-   pass on the picks before render.
+6. FOOTAGE eye-QC (MULTI-FRAME, non-negotiable): every clip viewed by grabbing
+   AT LEAST 6 frames spread across the whole clip (approx 8/25/42/58/75/92%),
+   NEVER a single mid-clip frame - a car, tourist, face, logo or watermark can
+   appear only briefly and a one-frame check misses it (this exact failure
+   shipped a tourist-on-camel and a modern car in batch 3). Reject any clip that
+   in ANY frame shows: on-screen text/watermarks/brand logos (e.g. "DAMAC",
+   license plates), a person as the subject (distant silhouettes/backs/hands/
+   anonymous crowds are fine), tourists or tourism cues, modern objects out of
+   period (cars, roads, power/utility lines, solar panels, satellite dishes,
+   plastic), other-faith symbols (cross/church/temple/idol), alcohol (incl.
+   honey/amber liquid that reads as a glass of wine/whisky) or instruments, a
+   CGI look, or brightness too high for the dark cinematic grade. Also literal
+   to the line, ONE distinct clip per beat, unique repo-wide. Then the render is
+   GATED on owner sign-off of a per-short CONTACT SHEET - do NOT batch-render
+   without it (skipping this gate is what let batch 3 go out unvetted).
 7. RENDER-OUTPUT QC on stills: title cards readable (deep-read voice), every
    ayah shows its citation on-screen, captions carry the launch CTA + hashtags,
    the ad outro plays clean at the tail, no glyph-box tofu on Arabic.
