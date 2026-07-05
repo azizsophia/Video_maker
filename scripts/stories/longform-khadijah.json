@@ -21,10 +21,14 @@
     },
     {
       "type": "narration",
-      "text": "This is Khadijah... mother of the believers.",
+      "text": "Khadijah... mother of the believers.",
       "title": "KHADIJAH",
       "titleSub": "mother of the believers",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "_shot": "very slow drifting dark clouds, near black, gold light seam"
     },
     {
@@ -35,13 +39,13 @@
     },
     {
       "type": "narration",
-      "text": "Makkah lived by trade. Caravans of camels came and went... to Sham in the north, to Yemen in the south... carrying spice, cloth and silver. And in this city of merchants, where men held the wealth and men held the power... one of the most successful merchants was a woman.",
+      "text": "Makkah lived by trade. Caravans of camels came and went... to Sham... greater Syria... in the north, to Yemen in the south... carrying spice, cloth and silver. And in this city of merchants, where men held the wealth and men held the power... one of the most successful merchants was a woman.",
       "foot": "Seerah (Ibn Hisham)",
       "_shot": "camel caravan silhouette crossing dunes at sunset, distant, no faces"
     },
     {
       "type": "narration",
-      "text": "Khadijah, daughter of Khuwaylid, of the tribe of Quraysh. Noble by birth. Widowed. And wealthy by her own judgment... she hired honest men to carry her goods and trade on her behalf, and her caravans came home with profit. Her people called her at-Tahirah... the pure one.",
+      "text": "Khadijah, daughter of Khuwaylid, of the tribe of Quraysh. Noble by birth. Widowed. And wealthy by her own hand. She hired honest men to carry her goods and trade on her behalf, and her caravans came home with profit. Her people called her at-Tahirah... the pure one.",
       "foot": "Seerah (Ibn Hisham and Ibn Sa'd)",
       "_shot": "woven textiles, spice sacks and silver in warm lamplight, market still life, no people"
     },
@@ -53,7 +57,7 @@
     },
     {
       "type": "narration",
-      "text": "She hired him to lead her caravan north to Sham, and sent along her servant, Maysarah. The journey returned more profit than she had ever seen... and Maysarah returned with stories. Of honesty in every trade. Of a kindness that never slipped, the whole road long.",
+      "text": "She hired him to lead her caravan north to Sham, and sent along her servant, Maysarah. The journey returned more profit than she had ever seen... and Maysarah returned with stories. Of honesty in every trade. Of a kindness that never slipped, all the long road home.",
       "foot": "Seerah (Ibn Hisham)",
       "_shot": "long desert road or wadi stretching north, golden hour, empty"
     },
@@ -71,7 +75,7 @@
     },
     {
       "type": "narration",
-      "text": "When their baby sons died, a man of Makkah mocked the Prophet... called him abtar. Cut off. A man whose name would die with him. Heaven itself would later answer that insult with a promise... Indeed, We have granted you abundance. Grief... was a road Khadijah had already walked with him.",
+      "text": "When their baby sons died, a man of Makkah mocked her husband... called him abtar. Cut off. A man whose name would die with him. Heaven itself would later answer that insult with a promise... Indeed, We have granted you abundance. Grief... was a road Khadijah had already walked with him.",
       "quote": "108:1",
       "foot": "Qur'an 108:1 (shown, not recited) and Tafsir Ibn Kathir",
       "_shot": "rain falling on desert rock, dark, slow"
@@ -133,13 +137,13 @@
     },
     {
       "type": "narration",
-      "text": "Then she acted. She took him to her cousin Waraqah... an old blind scholar who had left the idols long before, become a Christian, and studied the earlier scriptures. Waraqah listened... and trembled. This, he said... is the same angel that Allah sent down to Musa.",
+      "text": "Then she acted. She took him to her cousin Waraqah... an old blind scholar who had left the idols long before, become a Christian, and studied the earlier scriptures. Waraqah listened... and trembled. This, he said... is the same angel that Allah sent down to Musa... to Moses.",
       "foot": "Sahih al-Bukhari 3",
       "_shot": "ancient weathered manuscript pages in candlelight, no legible text"
     },
     {
       "type": "narration",
-      "text": "Then the old man gave a warning. Your people will drive you out. The Prophet, peace be upon him, was stunned. Will they really expel me? Yes, said Waraqah. No man ever brought what you bring... without being met as an enemy. And if I live to see that day... I will stand with you, with all my strength.",
+      "text": "But the old man ended with a warning. Your people will drive you out. The Prophet, peace be upon him, was stunned. Will they really expel me? Yes, said Waraqah. No man ever brought what you bring... without being met as an enemy. And if I live to see that day... I will stand with you, with all my strength.",
       "foot": "Sahih al-Bukhari 3",
       "_shot": "storm clouds gathering over desert hills, slow and heavy"
     },
@@ -151,7 +155,7 @@
     },
     {
       "type": "narration",
-      "text": "Then Quraysh sharpened the weapon. A total boycott. No one would trade with his clan... sell them food... or marry into them, until they surrendered him. For about three years, the family was shut into a dry mountain pass outside the city. And hunger moved in with them.",
+      "text": "So Quraysh sharpened the weapon. A total boycott. No one would trade with his clan, sell them food, or marry into them... until they surrendered him. For about three years, the family was shut into a dry mountain pass outside the city. And hunger moved in with them.",
       "foot": "Seerah (Ibn Hisham)",
       "_shot": "narrow barren ravine between high rock walls, shadowed"
     },
@@ -163,19 +167,19 @@
     },
     {
       "type": "narration",
-      "text": "And it is against those years that the moment this story opened with... shines brightest. Jibril came to the Prophet and said... Khadijah is coming to you with a dish of food. When she reaches you, greet her with peace... from her Lord, and from me. And give her glad tidings of a house in Paradise, built of hollowed pearl... where there is no noise... and no weariness.",
+      "text": "Now return to the moment this story opened with. It happened here... in the hungry years. Jibril came to the Prophet and said... Khadijah is coming to you with a dish of food. When she reaches you, greet her with peace... from her Lord, and from me. And give her glad tidings of a house in Paradise, built of hollowed pearl... where there is no noise... and no weariness.",
       "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432",
       "_shot": "soft light rays descending through clouds onto desert, gentle"
     },
     {
       "type": "narration",
-      "text": "Hear it the way she heard it. The Lord of all the worlds... sending peace, by name, to a tired woman carrying a plate of food. And the promise fit her life like a key. A home where nothing is loud... and nothing is exhausting. For the woman who had given away her quiet, and her rest.",
+      "text": "Hear it the way she heard it. The Lord of all the worlds... sending peace, by name, to a tired woman carrying a plate of food. And the promise answered her life, point for point. A home where nothing is loud... and nothing is exhausting. For the woman who had given away her quiet, and her rest.",
       "foot": "Sahih al-Bukhari 3820",
       "_shot": "pearl-like moon behind thin silver clouds, serene"
     },
     {
       "type": "narration",
-      "text": "Three years before the migration to Madinah, the boycott finally ended... but the hunger had done its work. In one year, the Prophet lost Abu Talib, the uncle who had shielded him... and then he lost Khadijah. The scholars of seerah... the Prophet's biography... call that year Am al-Huzn. The Year of Sorrow.",
+      "text": "The boycott finally ended... but the hunger had done its work. In one year, the Prophet lost Abu Talib, the uncle who had shielded him... and then he lost Khadijah. The scholars who recorded his life... the seerah... gave that year a name. Am al-Huzn. The Year of Sorrow.",
       "foot": "Seerah (Ibn Hisham and Ibn Sa'd)",
       "_shot": "grey overcast desert, wind moving dust, muted and cold"
     },
@@ -187,7 +191,7 @@
     },
     {
       "type": "narration",
-      "text": "He never stopped loving her. Years later in Madinah, married again... he would slaughter a sheep, and quietly send portions to Khadijah's old friends. Aisha, may Allah be pleased with her, said... I was never jealous of any woman, the way I was jealous of Khadijah. And she had never even met her.",
+      "text": "He never stopped loving her. Years later in Madinah, married again... he would slaughter a sheep, and quietly send portions to Khadijah's old friends. His young wife in those later years, Aisha, may Allah be pleased with her, said... I was never jealous of any woman, the way I was jealous of Khadijah. And she had never even met her.",
       "foot": "Sahih al-Bukhari 3818 and Sahih Muslim 2435",
       "_shot": "warm bread and dishes being shared on a simple cloth, hands only"
     },
@@ -199,7 +203,7 @@
     },
     {
       "type": "narration",
-      "text": "The Prophet, peace be upon him, counted her among the most complete women who ever lived. The best of its women is Maryam, the mother of Isa... and the best of its women is Khadijah.",
+      "text": "The Prophet, peace be upon him, counted her among the most complete women who ever lived. The best of the women of her time was Maryam, the mother of Isa... Mary, the mother of Jesus... and the best of the women of her time is Khadijah.",
       "foot": "Sahih al-Bukhari 3432",
       "_shot": "two bright stars together in a clear night sky"
     },
