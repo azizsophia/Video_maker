@@ -1,0 +1,216 @@
+{
+  "id": "longform-khadijah",
+  "title": "Khadijah: The First Believer",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Khadijah",
+    "kicker": "THE FIRST BELIEVER",
+    "image": "PENDING-COVER"
+  },
+  "_note": "LONG-FORM 16:9 (StoryVideoWide, orientation=wide, scale 1), ~9.5 min, ~1330 words, 32 beats. Khadijah cadence expanded. Backbone claims reuse the two-pass-verified khadijah.json short; source table docs/khadijah-longform-sources.md; fact-check docs/khadijah-longform-factcheck.md. FOOTAGE PENDING (one literal landscape clip per beat, unique repo-wide, 6-frame QC). RENDER GATED on owner sign-off of script + contact sheet. No depiction of the Prophet pbuh, Khadijah, or any companion as a person.",
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Of all the human beings who ever lived... only a handful were greeted by name, from above the seven heavens. One of them was a woman. An angel came down to her husband and said... give her the greetings of peace, from her Lord. This is her story.",
+      "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432",
+      "_shot": "slow starfield over dark desert horizon, one bright star"
+    },
+    {
+      "type": "narration",
+      "text": "This is Khadijah... mother of the believers.",
+      "title": "KHADIJAH",
+      "titleSub": "mother of the believers",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "_shot": "very slow drifting dark clouds, near black, gold light seam"
+    },
+    {
+      "type": "narration",
+      "text": "To meet her, travel back fourteen centuries, to Makkah... a city of stone houses folded between bare black mountains, in the deserts of Arabia. At its heart stood the Ka'bah... the ancient house built for the worship of one God, now crowded with hundreds of idols.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "bare rocky desert mountains at dusk, wide, no city lights"
+    },
+    {
+      "type": "narration",
+      "text": "Makkah lived by trade. Caravans of camels came and went... to Sham in the north, to Yemen in the south... carrying spice, cloth and silver. And in this city of merchants, where men held the wealth and men held the power... one of the most successful merchants was a woman.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "camel caravan silhouette crossing dunes at sunset, distant, no faces"
+    },
+    {
+      "type": "narration",
+      "text": "Khadijah, daughter of Khuwaylid, of the tribe of Quraysh. Noble by birth. Widowed. And wealthy by her own judgment... she hired honest men to carry her goods and trade on her behalf, and her caravans came home with profit. Her people called her at-Tahirah... the pure one.",
+      "foot": "Seerah (Ibn Hisham and Ibn Sa'd)",
+      "_shot": "woven textiles, spice sacks and silver in warm lamplight, market still life, no people"
+    },
+    {
+      "type": "narration",
+      "text": "Then she began to hear about a young man of her city. He had no fortune to his name... but the whole of Makkah trusted him. They called him al-Amin... the trustworthy. His name was Muhammad.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "single oil lamp flame steady in the dark"
+    },
+    {
+      "type": "narration",
+      "text": "She hired him to lead her caravan north to Sham, and sent along her servant, Maysarah. The journey returned more profit than she had ever seen... and Maysarah returned with stories. Of honesty in every trade. Of a kindness that never slipped, the whole road long.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "long desert road or wadi stretching north, golden hour, empty"
+    },
+    {
+      "type": "narration",
+      "text": "So Khadijah, who had turned away the noblest men of Quraysh... sent him an offer of marriage. He was twenty five. She was older, wiser, and wealthier. He accepted. And for the next quarter of a century... she was his only wife.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "two date palms together against a warm evening sky"
+    },
+    {
+      "type": "narration",
+      "text": "Their home filled with children. Two sons, Qasim and Abdullah... who both died as infants. And four daughters. Zaynab. Ruqayyah. Umm Kulthum. And Fatimah.",
+      "foot": "Seerah (Ibn Hisham and Ibn Sa'd)",
+      "_shot": "small desert flowers or saplings growing between stones, soft light"
+    },
+    {
+      "type": "narration",
+      "text": "When their baby sons died, a man of Makkah mocked the Prophet... called him abtar. Cut off. A man whose name would die with him. Heaven itself would later answer that insult with a promise... Indeed, We have granted you abundance. Grief... was a road Khadijah had already walked with him.",
+      "quote": "108:1",
+      "foot": "Qur'an 108:1 (shown, not recited) and Tafsir Ibn Kathir",
+      "_shot": "rain falling on desert rock, dark, slow"
+    },
+    {
+      "type": "narration",
+      "text": "As her husband neared forty, a hunger grew in him... for something the idols of Makkah could not answer. Solitude was made beloved to him. He began climbing a mountain outside the city, to a small cave called Hira... to worship the One God, alone, night after night.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "steep bare mountain against deep blue night, wide"
+    },
+    {
+      "type": "narration",
+      "text": "And notice who kept him there. Between the long stays, he would come down to Khadijah... and she would pack provisions for the next one. There was no revelation yet. No angel. No religion to join. Just a wife... quietly carrying her husband's search for God.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "simple provisions still life: dates, bread, waterskin in lamplight"
+    },
+    {
+      "type": "narration",
+      "text": "Then one night in Ramadan, in his fortieth year... the silence of the cave broke. An angel filled it. Jibril... the angel of revelation, the same messenger sent to the prophets before. And he said one word. Read.",
+      "foot": "Sahih al-Bukhari 3 and Qur'an 2:185",
+      "_shot": "cave mouth from inside, night sky beyond, moonlight"
+    },
+    {
+      "type": "narration",
+      "text": "I cannot read, he answered. The angel seized him, and pressed him until he could bear no more... then released him. Read. A second time. A third. And then came the words...",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "dark rock texture trembling light, tight and tense"
+    },
+    {
+      "type": "narration",
+      "text": "Read, in the name of your Lord who created. The first verse of the Qur'an... had just entered the world.",
+      "quote": "96:1",
+      "foot": "Qur'an 96:1 (shown, not recited)",
+      "_shot": "first light breaking over a dark mountain ridge"
+    },
+    {
+      "type": "narration",
+      "text": "He fled down the mountain in the dark, his heart pounding... and he did not run to a chief, or a priest, or a friend. He ran to Khadijah. Cover me, he said. Cover me. She wrapped him until the terror passed... and he told her everything. I fear for myself, he said.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "rocky mountain path descending in darkness, handheld feel"
+    },
+    {
+      "type": "narration",
+      "text": "Her answer is one of the most beautiful sentences ever spoken to a frightened soul. Never... by Allah, Allah will never disgrace you. You keep the ties of family. You carry the weak. You give to the one who has nothing. You honor your guest. You stand with the truth.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "warm lamplit interior, old stone room, empty and calm"
+    },
+    {
+      "type": "narration",
+      "text": "Sit with what she did there. She did not argue with his fear... she answered it with his own character. As if to say... the One who made you this good, did not make you this good, to destroy you.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "single candle flame steadying after flicker, macro"
+    },
+    {
+      "type": "narration",
+      "text": "And with that... Khadijah became the first believer in Islam. Before any man. Before any other woman. Before any child on earth. A faith of nearly two billion souls today... traces its very first yes, to her.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "one star brightening in a deep twilight sky, vast and still"
+    },
+    {
+      "type": "narration",
+      "text": "Then she acted. She took him to her cousin Waraqah... an old blind scholar who had left the idols long before, become a Christian, and studied the earlier scriptures. Waraqah listened... and trembled. This, he said... is the same angel that Allah sent down to Musa.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "ancient weathered manuscript pages in candlelight, no legible text"
+    },
+    {
+      "type": "narration",
+      "text": "Then the old man gave a warning. Your people will drive you out. The Prophet, peace be upon him, was stunned. Will they really expel me? Yes, said Waraqah. No man ever brought what you bring... without being met as an enemy. And if I live to see that day... I will stand with you, with all my strength.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "storm clouds gathering over desert hills, slow and heavy"
+    },
+    {
+      "type": "narration",
+      "text": "Waraqah was right. When the message went public, Makkah turned. The same city that had called her husband the trustworthy... now called him a sorcerer, a poet, a madman. And the weakest of his followers... were made to suffer for believing.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "harsh midday desert, heat shimmer over cracked earth"
+    },
+    {
+      "type": "narration",
+      "text": "Then Quraysh sharpened the weapon. A total boycott. No one would trade with his clan... sell them food... or marry into them, until they surrendered him. For about three years, the family was shut into a dry mountain pass outside the city. And hunger moved in with them.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "narrow barren ravine between high rock walls, shadowed"
+    },
+    {
+      "type": "narration",
+      "text": "Khadijah was an old woman now. She had been the wealthiest woman in Makkah... and she chose the ravine. Her fortune... the caravans, the silver, the ease... was spent down to nothing for this message. And history records no complaint from her. Not one.",
+      "foot": "Seerah (Ibn Hisham)",
+      "_shot": "empty worn clay vessels in dim light, austere still life"
+    },
+    {
+      "type": "narration",
+      "text": "And it is against those years that the moment this story opened with... shines brightest. Jibril came to the Prophet and said... Khadijah is coming to you with a dish of food. When she reaches you, greet her with peace... from her Lord, and from me. And give her glad tidings of a house in Paradise, built of hollowed pearl... where there is no noise... and no weariness.",
+      "foot": "Sahih al-Bukhari 3820 and Sahih Muslim 2432",
+      "_shot": "soft light rays descending through clouds onto desert, gentle"
+    },
+    {
+      "type": "narration",
+      "text": "Hear it the way she heard it. The Lord of all the worlds... sending peace, by name, to a tired woman carrying a plate of food. And the promise fit her life like a key. A home where nothing is loud... and nothing is exhausting. For the woman who had given away her quiet, and her rest.",
+      "foot": "Sahih al-Bukhari 3820",
+      "_shot": "pearl-like moon behind thin silver clouds, serene"
+    },
+    {
+      "type": "narration",
+      "text": "Three years before the migration to Madinah, the boycott finally ended... but the hunger had done its work. In one year, the Prophet lost Abu Talib, the uncle who had shielded him... and then he lost Khadijah. The scholars of seerah... the Prophet's biography... call that year Am al-Huzn. The Year of Sorrow.",
+      "foot": "Seerah (Ibn Hisham and Ibn Sa'd)",
+      "_shot": "grey overcast desert, wind moving dust, muted and cold"
+    },
+    {
+      "type": "narration",
+      "text": "She was buried in the hills of Makkah. And her husband... went down into her grave himself, and laid her there with his own hands. The woman who had once wrapped him in a blanket against his fear... he wrapped her, one last time, in the earth.",
+      "foot": "Seerah (Ibn Sa'd)",
+      "_shot": "lone hillside at dusk, single tree or cairn silhouette, reverent"
+    },
+    {
+      "type": "narration",
+      "text": "He never stopped loving her. Years later in Madinah, married again... he would slaughter a sheep, and quietly send portions to Khadijah's old friends. Aisha, may Allah be pleased with her, said... I was never jealous of any woman, the way I was jealous of Khadijah. And she had never even met her.",
+      "foot": "Sahih al-Bukhari 3818 and Sahih Muslim 2435",
+      "_shot": "warm bread and dishes being shared on a simple cloth, hands only"
+    },
+    {
+      "type": "narration",
+      "text": "Once, Aisha asked him why. Has Allah not given you better than an old woman of Quraysh? And his answer settled the question forever. No... by Allah. She believed in me when the people rejected me. She trusted me when they called me a liar. She spent her wealth on me when the people cut me off. And Allah granted me children... through her.",
+      "foot": "Sahih al-Bukhari 3821 and Musnad Ahmad (hasan)",
+      "_shot": "gold embers glowing in darkness, slow, intimate"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, counted her among the most complete women who ever lived. The best of its women is Maryam, the mother of Isa... and the best of its women is Khadijah.",
+      "foot": "Sahih al-Bukhari 3432",
+      "_shot": "two bright stars together in a clear night sky"
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an began in a cave... but faith began in a home. Before Islam had an army, a state, or a single mosque... it had a wife, who looked at a trembling man and said... Allah will never disgrace you. Every believer since... stands in the shade of that sentence. Khadijah. May Allah be pleased with her.",
+      "foot": "Sahih al-Bukhari 3",
+      "_shot": "dawn light slowly filling a vast desert valley, hopeful"
+    }
+  ],
+  "captions": {
+    "youtube": "Before Islam had an army, a state, or a single mosque, it had Khadijah. The richest woman in Makkah who gave everything for the first revelation, the first person ever to believe, and the only human being greeted by name with peace from her Lord. Her full story, from Sahih al-Bukhari, Sahih Muslim and the seerah.\n\nABOUT KETABI STUDIO\nKetabi Studio makes Qur'an and Sunnah grounded videos for people who want depth without exaggeration. Every claim is sourced.\n\nVisit ketabistudio.com and join the founding waitlist for early access.\n\nDownload our free app, your Islamic companion: track your daily adhkar, check in on your ibadah and intentions, and keep a Qur'an journal to build your own tafsir and reflect with mood based journaling.\nApp Store (Ketabi): https://apps.apple.com/us/app/ketabi/id6768112231\nGoogle Play (Ketabi Studio): https://play.google.com/store/apps/details?id=com.ketabi.myapp"
+  }
+}
