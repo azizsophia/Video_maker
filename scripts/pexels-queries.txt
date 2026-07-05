@@ -1,10 +1,9 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
-# Khadijah long-form beat 16 re-query (warm lamplit humble interior, no people)
-clay wall interior oil lamp night
-old house candlelight wall shadow
-mud brick room fire glow
-adobe interior warm firelight
-stone cottage interior candlelight dark
-fireplace glow old room stone wall
+# Khadijah long-form beat 28 re-query (sharing food, hands only, rustic, >=12s)
+traditional flatbread baking tandoor dark
+rustic meal sharing hands wooden table dark
+arabic food hospitality traditional dark
+tea pouring traditional hospitality dark
+dates plate serving hands rustic
