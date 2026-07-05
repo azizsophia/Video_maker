@@ -1,9 +1,35 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
---portrait
-golden mosque dome sunset
-ornate mosque dome golden hour
-mosque dome minaret dusk silhouette
-grand mosque dome evening light
-gold dome mosque against sky
+# Khadijah long-form (16:9 landscape) round 1
+starry night sky desert timelapse
+dark clouds gold light night timelapse
+rocky desert mountains dusk
+camel caravan desert sunset silhouette
+spices textiles market still life dark
+oil lamp flame dark
+empty desert road golden hour
+date palm trees sunset sky
+desert wildflowers rocks soft light
+rain on rocks dark slow motion
+mountain night sky wide
+dates bread traditional food lamplight
+cave entrance night moonlight
+first light mountain ridge dawn
+rocky path mountain darkness
+old stone room lamplight interior
+candle flame macro dark
+single star twilight sky
+old manuscript candlelight
+storm clouds desert hills
+cracked earth desert heat
+narrow canyon ravine rock walls
+clay pots pottery dim light
+light rays through clouds desert
+full moon behind clouds night
+overcast desert wind dust
+lone tree hillside dusk silhouette
+flatbread meal cloth hands serving
+glowing embers fire dark
+two stars night sky clear
+dawn light desert valley wide
