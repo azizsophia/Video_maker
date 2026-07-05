@@ -11,4 +11,6 @@ __pycache__/
 *.pyc
 
 # Temp footage-QC candidate downloads (subagents); never commit stock mp4s
-/v*.mp4
+/*.mp4
+/f*_q*.png
+/cs_*.png
