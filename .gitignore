@@ -9,3 +9,6 @@ public/story-cache/
 .env.local
 __pycache__/
 *.pyc
+
+# Temp footage-QC candidate downloads (subagents); never commit stock mp4s
+/v*.mp4
