@@ -7,6 +7,15 @@ asked. This file is the durable memory for this repo.
 Run this whole gate on EVERY batch before contact sheets go to the owner and
 again before final delivery. Do not rely on the owner to catch these - she has;
 that is the point of the gate. Nothing ships with an open item.
+0. DUPLICATE CHECK (owner directive 2026-07-05, BLOCKING, comes FIRST): before
+   proposing, planning, or producing ANY video, read the PRODUCTION STATE
+   section of docs/content-calendar.md (posted / delivered / scheduled /
+   scrapped / in production) AND scan scripts/stories/ for an existing script
+   on the topic. Never propose or remake a topic that is already posted or
+   delivered (ad-Duha was re-proposed the day after it was posted - that is
+   the failure this rule exists to prevent). Whenever a video is produced,
+   delivered, posted, or scrapped, update that PRODUCTION STATE section in the
+   SAME work session - the tracker being stale is itself a QC failure.
 1. ACCURACY (blocking): pre-writing source table + independent adversarial
    claim-by-claim fact-check by a separate pass; every flag fixed or cut;
    report committed to docs/. (See Accuracy & adab.)

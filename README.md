@@ -177,9 +177,13 @@ is the final check, NOT the verification ("sounds fine" is not proof).
 dates): `greeting-grown-cold`, `time-speeds-up`, `night-and-day`, `yasbahun`
 (07-11 .. 07-16). `mosque-boast` is done.
 
-**Long-form available to post:** `scripts/stories/longform-ad-duha.json` (Surah
-ad-Duha, 11 beats, 16:9) — re-sourced footage + cover, rendered. Yusuf long-form
-already posted.
+**Long-forms POSTED (do not remake):** Yusuf, and **Surah ad-Duha (posted
+2026-07-04)**. A Khadijah long-form is in production (started 2026-07-05).
+**BEFORE proposing or making ANY video, read the PRODUCTION STATE section of
+`docs/content-calendar.md`** — it is the single source of truth for what is
+posted / delivered / scheduled / scrapped / in production, and updating it in
+the same session as any status change is now QC gate item 0 in CLAUDE.md.
+(This rule exists because ad-Duha was re-proposed the day after it was posted.)
 
 **App promo (standalone marketing video):** `AppPromo` composition
 (`src/QuranVideo/AppPromo.tsx`, 9:16) built from 6 marketing slides

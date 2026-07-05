@@ -25,12 +25,40 @@ Copy rules everywhere: NO emojis, NO em/en dashes (plain hyphens only).
 (2026-06-29 is a Monday; that Monday slot is already posted: Green Arabia short,
 Euphrates long.)
 
-## Already POSTED (do not remake)
+## PRODUCTION STATE (single source of truth - update EVERY time a video is
+## produced, delivered, posted, or scrapped. Check this BEFORE proposing or
+## producing ANY video. Proposing an already-posted topic is a QC failure.)
+
+### Already POSTED (do not remake, do not re-propose)
 
 Year of the Elephant; Surah Al-Kahf decoded; Ayat al-Kursi decoded; The Splitting
 of the Sea; Abu Bakr as-Siddiq; The Story of Ibrahim; The Only Woman Named in the
 Qur'an (Maryam); Hegra / Al-Hijr; Euphrates (short + long); Fire of the Hijaz;
-Green Arabia; Constantinople; Lowest land on Earth (Ar-Rum).
+Green Arabia; Constantinople; Lowest land on Earth (Ar-Rum);
+**Story of Yusuf (long-form 16:9)** - posted on or before 2026-07-04;
+**Surah ad-Duha: When the Heavens Went Silent (long-form 16:9)** - posted 2026-07-04.
+
+### PRODUCED + DELIVERED to owner (rendered, QC-passed; owner is scheduling)
+
+All final re-renders delivered 2026-07-04 (artifact links in README):
+moon-split; jerusalem-test; shepherds-towers; forelock; verse-of-honey;
+expander; mosque-boast.
+
+### On the owner's posting schedule (batch 3), still need dense footage re-QC
+### BEFORE their post dates
+
+greeting-grown-cold, time-speeds-up, night-and-day, yasbahun (07-11 .. 07-16).
+(mosque-boast was on the schedule and is already re-QC'd + delivered.)
+
+### SCRAPPED (owner call - do not resurrect)
+
+lizards-hole; unwanted-charity; constantinople-short (cross in footage +
+topic overlap).
+
+### In production
+
+Khadijah long-form (16:9, Khadijah cadence expanded to 8+ min) - started
+2026-07-05 at owner request; full QC gates apply.
 
 ## App footer for long-form descriptions (standing advert)
 
