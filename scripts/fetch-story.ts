@@ -129,6 +129,28 @@ const PHONETIC: Record<string, string> = {
   "al-istighfar": "al-istighfaar",
   istighfar: "istighfaar",
   qasim: "Kaasim",
+  // Khadijah long-form names, researched against authoritative MSA sources
+  // (Wikipedia IPA/vocalizations, Wiktionary) 2026-07-05; ear-test pending.
+  // NOTE deliberately NO bare "am" key (would poison the English word "am");
+  // the script spells the year "Aam al-Huzn" so the caption stays a valid
+  // romanization and the TTS gets the long vowel from the text itself.
+  khuwaylid: "Khoo-way-lid",
+  maysarah: "May-sarah",
+  "at-tahirah": "at-Taa-hirah",
+  tahirah: "Taa-hirah",
+  "al-amin": "al-Ameen",
+  amin: "Ameen",
+  zaynab: "Zay-nab",
+  ruqayyah: "Roo-kay-yah",
+  umm: "Oom",
+  kulthum: "Kool-thoom",
+  fatimah: "Faati-mah",
+  talib: "Taalib",
+  abtar: "ab-tar",
+  "al-huzn": "al-Hoozn",
+  maryam: "Marr-yam",
+  ramadan: "Rama-daan",
+  nawfal: "Now-fal",
   quba: "Kubaa",
   nasibin: "Naseebeen",
   ammuriyyah: "Ammooreeya",
