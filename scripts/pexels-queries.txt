@@ -1,4 +1,113 @@
-# Scratch file for the Pexels Search workflow.
-# Fetch file links for the locked Khadijah long-form picks (contact-sheet ids)
---ids
-7195103,32540543,4441072,26621652,36100216,9997825,9861586,6989120,9130077,7033615,11137423,13141957,8239245,28916959,8189917,5018908,30343257,34762877,13581385,12605103,10937543
+# Batch 4 shorts (9:16) - one query per beat, 10 scripts
+--portrait
+# sirat-bridge
+narrow bridge fog dark night
+dark clouds moving night timelapse
+glowing embers fire dark night
+sword blade macro dark
+thorn branch silhouette macro dark
+lightning storm night sky
+light rays darkness fog
+sparks falling dark slow motion
+praying hands silhouette dark
+path light horizon night
+# sun-from-west
+sunrise timelapse ocean horizon
+dark horizon glow night
+desert night stars wide sky
+sun timelapse sky clouds
+sunset red sky timelapse dramatic
+city skyline dawn silhouette
+golden light clouds dramatic sky
+hourglass sand macro dark
+candle burning low dark
+dawn light valley mist
+# first-night-grave
+feet walking away dirt path dusk
+moonlit clouds dark night
+desert mound earth dusk dark
+candle flame flicker dark room
+light beam window dark room dust
+starry sky vast night wide
+canyon vast light rays
+dark tunnel narrow stone
+mountain steady night sky
+lantern path night walking
+# skin-witness
+hand macro skin detail dark
+ink black water abstract
+lava fire glow night
+hands macro dark dramatic light
+mirror reflection dark room
+stone texture cracked dark
+kaaba makkah night
+old stone alley dark night
+dark water surface ripple night
+silhouette person walking toward light
+# seven-shade
+sun blazing sky heat haze
+sun rays clouds dramatic dark
+desert heat shimmer mirage
+old balance scale dark still life
+mosque silhouette sunset minaret
+two hands clasp silhouette dark
+wooden door light dark room
+coins hand giving dark
+water drop macro dark slow motion
+tree shade light desert lone
+# killed-ninety-nine
+dark figure walking desert night
+storm clouds dark timelapse
+stone hut candle dark interior
+red sky storm dark clouds
+old books candlelight dark
+desert road night moonlight
+desert sand wind dusk dark
+distant oasis palm silhouette dusk
+storm clouds lightning dark sky
+hand reaching light dark
+footprints sand horizon dusk
+# cave-boulder
+cave entrance night dark rock
+boulder rock dark mist mountain
+cave interior darkness light crack
+clay bowl milk dark still life
+light beam cave crack dark
+cracked dry earth drought dusk
+gold coins dark cloth still life
+sheep herd dusk hills silhouette
+cave mouth bright light exit
+starry sky mountain silhouette night
+# beast-that-speaks
+cracked earth crevice dark
+dust storm dark ominous desert
+desert night wind dark sand
+animal eye macro dark
+dark clouds gathering timelapse
+fog mist dark landscape night
+eclipse dark sun sky
+heavy old door closing dark
+old manuscript pages candlelight
+horizon night stars silence
+# thirsty-dog
+dog desert alone hot day
+old stone well desert
+heat haze desert path sun
+dog panting close up
+drawing water old well bucket
+light rays clouds sky heaven
+old stone well rope bucket
+lantern glow night desert
+bird drinking water macro
+desert flower bloom dawn
+# zalzalah
+earth soil macro dark
+mountain dust rockslide
+ground cracked debris dark
+deep canyon dark aerial
+sand ripples wind pattern dark
+empty old room light window
+dust particles light beam macro
+feather falling dark slow motion
+old scale weights macro dark
+footsteps sand dawn light
