@@ -242,3 +242,80 @@ sirat-bridge (quote 57:12 for a 57:12-13 narration).
 Total: 10 flags (1 major, 9 minor) + 5 advisory notes. Per the accuracy QC
 gate, no script with an open flag advances to voicing or render; every fix
 must be re-checked against this report.
+---
+
+## Fix log (same session, 2026-07-07)
+
+All 12 flags resolved and re-linted:
+- sirat-bridge: hook recast without the universal-crossing claim ("a crossing
+  on the Day of Judgment... the path to Paradise runs across it"); cover
+  kicker now THE FINAL CROSSING; all three captions recast; deeds-link beats
+  (6, 10) now footed "Sahih al-Bukhari 6573; Sahih Muslim 183".
+- sun-from-west: beat 8 rephrased as pure reflection, gun idiom dropped,
+  footed to Qur'an 6:158.
+- first-night-grave: the 14:27 link attributed to the Prophet, peace be upon
+  him, per Bukhari 1369.
+- skin-witness: honorific added at first mention.
+- seven-shade: advisory note applied ("answers with one sentence").
+- killed-ninety-nine: beat 9 footed to both collections (angels-of-mercy
+  ending is Muslim's).
+- cave-boulder: "while they slept" -> "in the dark" (2272 does not say
+  asleep); "for years" -> "in time" (2272 says after some time). The
+  actor-flip flag was already fixed in the readability pass (the laborer
+  drives the herd).
+- beast-that-speaks: Muslim 158's second clause restored ("or earned no good
+  through its faith"); "the prophet Isa, alayhi salam"; the tone-rule flag
+  was already fixed in the readability pass (no self-reference remains).
+- thirsty-dog: bucket/rope inference softened to "there was nothing to draw
+  with".
+- zalzalah + sirat quote-range note: left single-ayah on-screen quotes
+  (renderer standard); narration and foots carry the ranges.
+
+---
+
+## Re-check of applied fixes (same session, 2026-07-07, same independent reviewer)
+
+Each fixed beat re-read in the current committed text (5b2a9fa) and re-checked
+against its source:
+
+1. sirat-bridge beat 1 + cover kicker + captions - CLEARED. The universal
+   "every human being who has ever lived" claim is gone; "a crossing on the
+   Day of Judgment... the path to Paradise runs across it" matches the
+   crossing's function in Bukhari 6573 / Muslim 183a, and "no one can buy
+   their way past" is plainly rhetorical. Kicker THE FINAL CROSSING and all
+   three captions consistent.
+2. sirat-bridge beats 6 and 10 - CLEARED. Both deeds-link beats now footed
+   "Sahih al-Bukhari 6573; Sahih Muslim 183"; 6573 carries "snatch the
+   people according to their deeds".
+3. sun-from-west beat 8 - CLEARED. Now pure reflection ("belief costs
+   nothing... and so it counts for nothing"), gun idiom gone, footed to
+   Qur'an 6:158 whose second clause carries the idea.
+4. first-night-grave beat 9 - CLEARED. The 14:27 link is now the Prophet's
+   own teaching, peace be upon him, exactly per Bukhari 1369.
+5. skin-witness beat 7 - CLEARED. "A companion of the Prophet, peace be
+   upon him... Abdullah ibn Mas'ud" - honorific present at the script's
+   first (and only) mention.
+6. killed-ninety-nine beat 9 - CLEARED. Foot now "Sahih al-Bukhari 3470;
+   Sahih Muslim 2766", covering the Muslim-only "angels of mercy took him"
+   ending alongside Bukhari's span and "he was forgiven".
+7. cave-boulder beat 1 - CLEARED. "And in the dark..." matches 2272 (they
+   reached the cave at night; no sleep claimed).
+8. cave-boulder beat 9 - CLEARED. "until, in time, it grew" matches 2272's
+   "after some time" without the years extrapolation.
+9. beast-that-speaks beat 6 - CLEARED. "the return of the prophet Isa,
+   alayhi salam" - honorific present.
+10. beast-that-speaks beat 7 - CLEARED. Muslim 158's second clause restored:
+    "...had not believed before, or earned no good through its faith" -
+    faithful to "or has derived no good from his faith".
+11. thirsty-dog beat 4 - CLEARED. "there was nothing to draw with" is scene
+    description consistent with 3321 (she drew with her shoe), no longer a
+    flat factual claim about bucket and rope.
+12. seven-shade beat 5 (advisory) - CLEARED. "answers with one sentence"
+    removes the English-word-count artifact.
+
+No new problems introduced by any fix; every reworded line remains within
+its cited source, all foots verified, honorifics intact, no weak material
+added.
+
+VERDICT: ALL FLAGS CLEARED - GATE PASSED. All 10 scripts may advance to
+voicing and render per the accuracy QC gate.
