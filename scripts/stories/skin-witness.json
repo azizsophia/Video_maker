@@ -1,0 +1,79 @@
+{
+  "id": "skin-witness",
+  "title": "Your Own Skin Will Testify Against You",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Witness Within",
+    "kicker": "YOUR SKIN WILL SPEAK"
+  },
+  "captions": {
+    "tiktok": "On the Day of Judgment, some people will be betrayed by a witness they cannot silence. Their own skin. Qur'an 41:20.",
+    "shorts": "The Qur'an says your own hearing, sight and skin will testify about you. Surah Fussilat 41:19-22.",
+    "reels": "On the Day of Judgment, some people will be betrayed by a witness they cannot silence. Their own skin. Qur'an 41:20.",
+    "hashtags": ["#quran", "#judgmentday", "#edutokcontest", "#islam", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "On the Day of Judgment, some people will be convicted by a witness they cannot bribe, cannot silence, and cannot leave at home. Their own skin.",
+      "foot": "Qur'an 41:20"
+    },
+    {
+      "type": "narration",
+      "text": "This is in the Qur'an, in the chapter called Fussilat.",
+      "title": "THE WITNESS WITHIN",
+      "titleSub": "Surah Fussilat 41:19-22",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Qur'an 41:19-22"
+    },
+    {
+      "type": "narration",
+      "text": "The scene opens with the enemies of Allah being gathered to the Fire... driven, assembled in rows. And when they reach it, the trial begins. But no lawyer speaks. No witness is called from outside.",
+      "quote": "41:19",
+      "foot": "Qur'an 41:19 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Their hearing testifies. Their eyes testify. And their skins testify against them... of what they used to do.",
+      "quote": "41:20",
+      "foot": "Qur'an 41:20 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And the Qur'an records their shock. They turn to their own bodies and ask... why have you testified against us? And the answer comes back. We were made to speak by Allah... who has made everything speak.",
+      "quote": "41:21",
+      "foot": "Qur'an 41:21 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Another verse paints it even more starkly. That Day, We will seal over their mouths... and their hands will speak to Us, and their feet will testify about what they used to earn. The mouth that argued all its life... finally silent. The body, finally honest.",
+      "quote": "36:65",
+      "foot": "Qur'an 36:65 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Now, why did these verses come down? The Prophet's companion Abdullah ibn Mas'ud told the story. Three men were sitting by the Ka'bah, the sacred house in Makkah... heavy of body, he said, and light of understanding.",
+      "foot": "Sahih al-Bukhari 4817, Sahih Muslim 2775"
+    },
+    {
+      "type": "narration",
+      "text": "One of them asked... do you think Allah hears what we say? Another answered: He hears us if we speak loudly... but not if we whisper. They were measuring the Lord of the worlds... by their own ears.",
+      "foot": "Sahih al-Bukhari 4817"
+    },
+    {
+      "type": "narration",
+      "text": "And the answer came down from heaven, and it is still being read today. You were not hiding from your own hearing, your sight, or your skin... but you assumed that Allah does not know much of what you do.",
+      "quote": "41:22",
+      "foot": "Qur'an 41:22 (shown, not recited); Sahih al-Bukhari 4816-4817"
+    },
+    {
+      "type": "narration",
+      "text": "You will never whisper anything your skin did not hear. Live so that when your body finally speaks... it speaks for you, not against you.",
+      "foot": "Qur'an 41:20-22"
+    }
+  ]
+}

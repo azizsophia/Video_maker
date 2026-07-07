@@ -1,0 +1,75 @@
+{
+  "id": "beast-that-speaks",
+  "title": "The Beast That Will Speak to Mankind",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Beast",
+    "kicker": "IT WILL SPEAK"
+  },
+  "captions": {
+    "tiktok": "A creature will come out of the earth and speak to mankind. It is in the Qur'an. Surah an-Naml 27:82.",
+    "shorts": "The creature from the earth that will speak to mankind. Qur'an 27:82 and Sahih Muslim.",
+    "reels": "A creature will come out of the earth and speak to mankind. It is in the Qur'an. Surah an-Naml 27:82.",
+    "hashtags": ["#islam", "#signsofthehour", "#edutokcontest", "#quran", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Near the end of time, the earth itself will open... and something will come out of it. A creature. And the strangest thing about it is not how it looks. It is what it does. It speaks.",
+      "foot": "Qur'an 27:82"
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an calls it the creature of the earth.",
+      "title": "THE BEAST",
+      "titleSub": "Dabbat al-Ard",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Qur'an 27:82"
+    },
+    {
+      "type": "narration",
+      "text": "This is not folklore that crept in later. It is a verse of the Qur'an. And when the word befalls them, We will bring forth for them a creature from the earth, speaking to them... that the people were, of Our verses, not certain in faith.",
+      "quote": "27:82",
+      "foot": "Qur'an 27:82 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Sit with how strange that is. Mankind ends its story being addressed... by an animal. The order of the world flipped on its head, as a sign no one can argue with.",
+      "foot": "Qur'an 27:82"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, listed it among the ten great signs before the Hour. His companions said he came upon them while they were discussing the Hour, and he told them it will not come until ten signs appear... and one of them is the beast.",
+      "foot": "Sahih Muslim 2901"
+    },
+    {
+      "type": "narration",
+      "text": "Some of those signs already have their own stories... the false messiah, the return of Isa, the fire, the smoke. But the beast is different. The texts leave it almost entirely veiled. No shape. No size. Just the earth... and a voice.",
+      "foot": "Sahih Muslim 2901"
+    },
+    {
+      "type": "narration",
+      "text": "And here is what gives this sign its weight. The Prophet, peace be upon him, named three signs after which faith will no longer benefit a soul that had not believed before... the sun rising from its setting place, the false messiah... and the beast of the earth.",
+      "foot": "Sahih Muslim 158"
+    },
+    {
+      "type": "narration",
+      "text": "Three doors, and this is one of them. When the creature speaks, the time for choosing... is over. Whatever a person is on that day, is what they are.",
+      "foot": "Sahih Muslim 158"
+    },
+    {
+      "type": "narration",
+      "text": "You may hear vivid descriptions of this creature... what it carries, what it marks, what it looks like. Those details come from reports the hadith scholars graded weak, so this story leaves them out. What is certain is short... and heavier for it. The earth will speak, because people stopped being certain.",
+      "foot": "Qur'an 27:82; Sahih Muslim 2901, 158"
+    },
+    {
+      "type": "narration",
+      "text": "The verse gives the reason in one clause... the people were not certain of Our signs. The beast is the answer to doubt held too long. Certainty, while it is still a choice... is the whole point.",
+      "foot": "Qur'an 27:82"
+    }
+  ]
+}

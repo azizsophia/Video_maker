@@ -156,6 +156,16 @@ const PHONETIC: Record<string, string> = {
   ammuriyyah: "Ammooreeya",
   wahy: "wahee",
   thawr: "Thowr",
+  // Batch 4 names/terms, vocalized per MSA (verified against the vocalized
+  // hadith/Qur'an texts pulled during batch-4 source verification). NOTE:
+  // deliberately NO bare "said" key (would poison the English verb); the
+  // apostrophe form catches the name token "Sa'id".
+  "sa'id": "Sa-eed",
+  "as-sirat": "as-Si-raat",
+  sirat: "Si-raat",
+  "az-zalzalah": "az-Zal-zalah",
+  zalzalah: "Zal-zalah",
+  fussilat: "Fussi-lat",
   // Batch 2 names, vocalized per MSA (harakat cross-checked against the
   // vocalized texts pulled during source verification). Ear-test pending.
   musaylima: "Moosaylimah",

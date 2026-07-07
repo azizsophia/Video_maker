@@ -1,0 +1,74 @@
+{
+  "id": "thirsty-dog",
+  "title": "Forgiven Because of a Thirsty Dog",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Thirsty Dog",
+    "kicker": "ONE SHOE OF WATER"
+  },
+  "captions": {
+    "tiktok": "Her whole life was sin. Then she saw a dying dog at a well. Sahih al-Bukhari 3321.",
+    "shorts": "A sinful woman was forgiven everything, because of a dog. Sahih al-Bukhari and Sahih Muslim.",
+    "reels": "Her whole life was sin. Then she saw a dying dog at a well. Sahih al-Bukhari 3321.",
+    "hashtags": ["#islam", "#mercy", "#edutokcontest", "#forgiveness", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "She sold her body for a living. That is how the Prophet, peace be upon him, introduced her... a prostitute. And then he said... Allah forgave her. For one deed.",
+      "foot": "Sahih al-Bukhari 3321"
+    },
+    {
+      "type": "narration",
+      "text": "This is the story of the woman... and the dog.",
+      "title": "THE THIRSTY DOG",
+      "titleSub": "a story told by the Prophet, peace be upon him",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Sahih al-Bukhari 3321, Sahih Muslim 2245"
+    },
+    {
+      "type": "narration",
+      "text": "She lived long before Islam, among an earlier nation of believers. And one hot day, she was walking... and passed a well. Beside it was a dog, circling... panting, its tongue hanging out... about to die of thirst.",
+      "foot": "Sahih al-Bukhari 3467; Sahih Muslim 2245"
+    },
+    {
+      "type": "narration",
+      "text": "Nobody would have blamed her for walking past. It was only a dog. And a well is deep... she had no bucket, no rope. She had nothing to gain, and no one was watching.",
+      "foot": "Sahih al-Bukhari 3321"
+    },
+    {
+      "type": "narration",
+      "text": "So she took off her shoe. She tied it to her head-cover... lowered it into the well... and drew up water for the dog.",
+      "foot": "Sahih al-Bukhari 3321"
+    },
+    {
+      "type": "narration",
+      "text": "And the Prophet, peace be upon him, said... because of it, Allah forgave her. A lifetime the world had already judged... answered by a shoe full of water.",
+      "foot": "Sahih al-Bukhari 3321; Sahih Muslim 2245"
+    },
+    {
+      "type": "narration",
+      "text": "He told a matching story of a man. A traveler, dying of thirst himself, who climbed down a well and drank... and came up to find a dog licking the mud from thirst. He thought... this creature is suffering exactly what I was suffering. So he went back down, filled his shoe, held it in his teeth, and climbed. And Allah thanked him... and forgave him.",
+      "foot": "Sahih al-Bukhari 6009; Sahih Muslim 2244"
+    },
+    {
+      "type": "narration",
+      "text": "When the companions heard it, they asked... Messenger of Allah, is there a reward for us in the animals? And he answered... in every living being, there is reward.",
+      "foot": "Sahih al-Bukhari 2466; Sahih Muslim 2244"
+    },
+    {
+      "type": "narration",
+      "text": "Notice what this story refuses to let you believe... that anyone's ledger is finished. Heaven weighed her differently than her whole town did. Mercy shown to the smallest life... was heavy enough to tip everything.",
+      "foot": "Sahih al-Bukhari 3321"
+    },
+    {
+      "type": "narration",
+      "text": "Somewhere near you is a small, unglamorous kindness nobody will ever see. Do not skip it. In the ledger that matters... it may be the deed that outweighs the rest of your life.",
+      "foot": "Sahih al-Bukhari 3321, Sahih Muslim 2244"
+    }
+  ]
+}

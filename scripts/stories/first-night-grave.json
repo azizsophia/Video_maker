@@ -1,0 +1,75 @@
+{
+  "id": "first-night-grave",
+  "title": "Your First Night in the Grave",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The First Night",
+    "kicker": "WHAT THE BURIED HEAR"
+  },
+  "captions": {
+    "tiktok": "You will hear the footsteps of the people who buried you. Then the questions begin. Sahih al-Bukhari 1338.",
+    "shorts": "What happens on your first night in the grave, from Sahih al-Bukhari and Sahih Muslim.",
+    "reels": "You will hear the footsteps of the people who buried you. Then the questions begin. Sahih al-Bukhari 1338.",
+    "hashtags": ["#islam", "#hereafter", "#edutokcontest", "#grave", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, said that when you are laid in your grave and the people turn to leave... you hear them. You hear their footsteps, walking away.",
+      "foot": "Sahih al-Bukhari 1338"
+    },
+    {
+      "type": "narration",
+      "text": "And that is when your first night begins.",
+      "title": "THE FIRST NIGHT",
+      "titleSub": "what the Prophet taught about the grave",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Sahih al-Bukhari 1338"
+    },
+    {
+      "type": "narration",
+      "text": "Islam teaches that the grave is not empty waiting. Something happens there, and it happens to everyone. Two angels come to the one who has been buried... and sit them up.",
+      "foot": "Sahih al-Bukhari 1338"
+    },
+    {
+      "type": "narration",
+      "text": "And they ask about the man who brought the message. What did you use to say... about this man, Muhammad?",
+      "foot": "Sahih al-Bukhari 1338"
+    },
+    {
+      "type": "narration",
+      "text": "The believer answers plainly. I testify that he is the servant of Allah, and His messenger. And then something extraordinary is said. Look at your place in the Fire... Allah has exchanged it for a place in Paradise. And the Prophet said... they will see both.",
+      "foot": "Sahih al-Bukhari 1338"
+    },
+    {
+      "type": "narration",
+      "text": "A longer account adds three questions. Who is your Lord. What is your religion. Who is this man. And when the believer answers, a caller cries out from heaven... My servant has spoken the truth. So spread for him a bed from Paradise... and open for him a door to Paradise.",
+      "foot": "Sunan Abi Dawud 4753, graded sahih"
+    },
+    {
+      "type": "narration",
+      "text": "And his grave is made wide... as far as his eye can see.",
+      "foot": "Sunan Abi Dawud 4753, graded sahih"
+    },
+    {
+      "type": "narration",
+      "text": "But the one who never really believed... answers differently. I do not know. I used to say... whatever the people used to say. For him there is no window to Paradise. Only the narrowing... and a blow whose cry is heard by every creature nearby, except humans and jinn.",
+      "foot": "Sahih al-Bukhari 1338; Sunan Abi Dawud 4753, graded sahih"
+    },
+    {
+      "type": "narration",
+      "text": "The Qur'an speaks to this night directly. Allah keeps firm those who believe, with the firm word... in worldly life, and in the Hereafter. The Prophet's companions explained that this verse came down about the questioning of the grave.",
+      "quote": "14:27",
+      "foot": "Qur'an 14:27 (shown, not recited); Sahih al-Bukhari 1369"
+    },
+    {
+      "type": "narration",
+      "text": "One night. A few questions. And the strange mercy of it is that the exam is open book... every answer is being written by the way you live today.",
+      "foot": "Sahih al-Bukhari 1338"
+    }
+  ]
+}

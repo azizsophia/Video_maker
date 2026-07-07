@@ -1,0 +1,74 @@
+{
+  "id": "killed-ninety-nine",
+  "title": "The Man Who Killed Ninety-Nine",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Ninety-Nine",
+    "kicker": "THE ROAD BACK"
+  },
+  "captions": {
+    "tiktok": "He killed ninety-nine people. Then he went looking for a way back. Sahih al-Bukhari 3470, Sahih Muslim 2766.",
+    "shorts": "A man killed one hundred people, and the angels argued over his soul. Sahih al-Bukhari and Sahih Muslim.",
+    "reels": "He killed ninety-nine people. Then he went looking for a way back. Sahih al-Bukhari 3470, Sahih Muslim 2766.",
+    "hashtags": ["#islam", "#repentance", "#edutokcontest", "#tawbah", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "A man killed ninety-nine people. Ninety-nine. And then, one day... he went looking for a way back.",
+      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, told his story... and it ends in a way nobody expects.",
+      "title": "NINETY-NINE",
+      "titleSub": "a story told by the Prophet, peace be upon him",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "He lived among a people long before Islam... and he wanted to know if a man like him could still be forgiven. So he asked for the most knowledgeable person alive, and was pointed to a monk... a devoted worshipper.",
+      "foot": "Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "He told the monk everything. Ninety-nine lives. Is there repentance for me? And the monk said... no. So he killed him too. One hundred.",
+      "foot": "Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "But he did not stop asking. And this time he was sent to a scholar... a man of knowledge, not just devotion. One hundred lives, he said. Is there repentance for me? The scholar answered... yes. And who could stand between you and repentance?",
+      "foot": "Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "But leave this place, the scholar said. Your land is an evil land. Go to such and such a town... where people worship Allah... and worship with them. And do not come back.",
+      "foot": "Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "So the man set out. And halfway down that road... death came for him. He had reached nothing. No new town, no worship, not a single good deed written down... except a direction. And as he died, he turned his chest toward the town he was trying to reach.",
+      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "Then, above his body, the angels of mercy and the angels of punishment... argued. He came repenting, said one side. He never did a single good thing, said the other. And an angel was sent in human form to judge between them. He said... measure the ground between the two lands.",
+      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
+    },
+    {
+      "type": "narration",
+      "text": "And Allah commanded the good town to draw near... and the evil one to move away. They measured. He was closer to the land of worship... by a single hand-span. So the angels of mercy took him. And in the Prophet's words... he was forgiven.",
+      "foot": "Sahih al-Bukhari 3470"
+    },
+    {
+      "type": "narration",
+      "text": "He never prayed in the new town. He never even saw it. He just died... facing it. If a hand-span of direction outweighed a hundred graves... then no one listening to this is too far gone.",
+      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
+    }
+  ]
+}

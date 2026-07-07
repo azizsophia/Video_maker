@@ -1,0 +1,74 @@
+{
+  "id": "seven-shade",
+  "title": "Seven Given Shade When There Is None",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Seven in the Shade",
+    "kicker": "WHEN THERE IS NO SHADE"
+  },
+  "captions": {
+    "tiktok": "The sun a mile overhead, people drowning in their own sweat, and seven kinds of people standing in shade. Sahih al-Bukhari 660.",
+    "shorts": "Seven kinds of people will be shaded on the Day there is no shade but His. Sahih al-Bukhari and Sahih Muslim.",
+    "reels": "The sun a mile overhead, people drowning in their own sweat, and seven kinds of people standing in shade. Sahih al-Bukhari 660.",
+    "hashtags": ["#islam", "#judgmentday", "#edutokcontest", "#hereafter", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "On the Day of Judgment, the sun will be brought close... until it hangs, in the hadith's own words, a mile overhead. And on that day, seven kinds of people will stand in shade.",
+      "foot": "Sahih Muslim 2864; Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "Seven, whom Allah will shade... on the Day there is no shade but His.",
+      "title": "SEVEN IN THE SHADE",
+      "titleSub": "Sahih al-Bukhari 660",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "First, picture the day itself. The Prophet, peace be upon him, said people will be submerged in their own sweat according to their deeds... some to the knees, some to the waist... and some to the mouth, like a bridle.",
+      "foot": "Sahih Muslim 2864"
+    },
+    {
+      "type": "narration",
+      "text": "Now the list. One... a just ruler. Anyone given power over others, who did not let it corrupt them. Two... a young person who grew up in the worship of Allah. Youth spent on devotion, not burned and regretted.",
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "Three... a person whose heart is attached to the mosque. Not someone who lives there. Someone who leaves... and keeps looking back.",
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "Four... two people who loved each other for the sake of Allah alone. They met for Him... and they parted for Him. No profit in it, no status. Just love with a pure address.",
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "Five... a man called by a woman of beauty and standing... who answers with five words. I am afraid of Allah. The sin was available, hidden, and free. He paid for the shade instead.",
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "Six... one who gives charity so secretly that the left hand does not know what the right hand has given. No post. No plaque. An audience of One.",
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "And seven... a person who remembers Allah alone, in private... and their eyes overflow. Tears nobody ever saw. Counted, kept... and repaid with shade.",
+      "foot": "Sahih al-Bukhari 660"
+    },
+    {
+      "type": "narration",
+      "text": "Notice what is missing from this list. No fame. No wealth. No miracles. All seven are quiet, repeatable choices... and every single one of them is available to you tonight.",
+      "foot": "Sahih al-Bukhari 660"
+    }
+  ]
+}

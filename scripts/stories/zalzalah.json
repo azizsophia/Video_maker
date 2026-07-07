@@ -1,0 +1,79 @@
+{
+  "id": "zalzalah",
+  "title": "Surah az-Zalzalah: The Day the Earth Confesses",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Earth Confesses",
+    "kicker": "SURAH AZ-ZALZALAH"
+  },
+  "captions": {
+    "tiktok": "The ground under your feet is keeping records. One day it reports everything. Surah az-Zalzalah.",
+    "shorts": "Surah az-Zalzalah: the day the earth reports its news. Qur'an 99:1-8.",
+    "reels": "The ground under your feet is keeping records. One day it reports everything. Surah az-Zalzalah.",
+    "hashtags": ["#quran", "#surah", "#edutokcontest", "#islam", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The ground you are standing on right now... is keeping records. And the Qur'an says that one Day, it will report everything it saw.",
+      "foot": "Qur'an 99:4-5"
+    },
+    {
+      "type": "narration",
+      "text": "This is Surah az-Zalzalah. The Earthquake.",
+      "title": "AZ-ZALZALAH",
+      "titleSub": "the ninety-ninth surah of the Qur'an",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Qur'an, Surah 99"
+    },
+    {
+      "type": "narration",
+      "text": "Eight verses. It opens with the last morning the world will ever see. When the earth is shaken... with its final earthquake.",
+      "quote": "99:1",
+      "foot": "Qur'an 99:1 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And the earth discharges its burdens. Everything it has been holding... the dead it swallowed, the secrets buried in it... given up at once.",
+      "quote": "99:2",
+      "foot": "Qur'an 99:2 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "And man, standing on the one thing that was always solid, says... what is wrong with it? The most stable thing in every human life... the ground... in revolt.",
+      "quote": "99:3",
+      "foot": "Qur'an 99:3 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Then the verse this whole surah turns on. That Day, it will report its news... because your Lord has inspired it. The earth, addressed all along... a witness on the stand.",
+      "quote": "99:4",
+      "foot": "Qur'an 99:4-5 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "Every place you have ever stood was a location with a memory. The floor where you prayed. The room where you lied. The street where you gave... or took. On that Day, the venues themselves speak.",
+      "foot": "Qur'an 99:4-5"
+    },
+    {
+      "type": "narration",
+      "text": "And the surah ends with the finest scale ever described. So whoever does an atom's weight of good will see it... and whoever does an atom's weight of evil will see it.",
+      "quote": "99:7",
+      "foot": "Qur'an 99:7-8 (shown, not recited)"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, was once asked about donkeys... of all things... whether there was revelation about them. He answered that nothing had come down about them except this unique, comprehensive verse. Whoever does good equal to the weight of an atom... shall see it. One verse, he taught, that covers everything.",
+      "foot": "Sahih al-Bukhari 2371"
+    },
+    {
+      "type": "narration",
+      "text": "An atom's weight. Nothing you do is too small to be filed... and nothing too small to be repaid. You are leaving testimony in the ground behind you, everywhere you walk. Make it evidence for you... not against you.",
+      "foot": "Qur'an 99:7-8"
+    }
+  ]
+}

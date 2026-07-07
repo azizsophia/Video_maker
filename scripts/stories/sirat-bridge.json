@@ -1,0 +1,75 @@
+{
+  "id": "sirat-bridge",
+  "title": "The Bridge Thinner Than a Hair",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Bridge",
+    "kicker": "EVERYONE MUST CROSS"
+  },
+  "captions": {
+    "tiktok": "A bridge over Hell, and every human being has to cross it. Sahih al-Bukhari and Sahih Muslim.",
+    "shorts": "The bridge over Hell that every soul must cross. From Sahih al-Bukhari and Sahih Muslim.",
+    "reels": "A bridge over Hell, and every human being has to cross it. Sahih al-Bukhari and Sahih Muslim.",
+    "hashtags": ["#islam", "#judgmentday", "#edutokcontest", "#hereafter", "#muslimtiktok"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is a crossing in your future. Every human being who has ever lived will stand before it... a bridge, laid over the fire of Hell. And there is no way around it.",
+      "foot": "Sahih al-Bukhari 6573"
+    },
+    {
+      "type": "narration",
+      "text": "This is the bridge the Prophet, peace be upon him, warned of. As-Sirat.",
+      "title": "THE BRIDGE",
+      "titleSub": "as-Sirat, the crossing",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "foot": "Sahih al-Bukhari 6573, Sahih Muslim 183"
+    },
+    {
+      "type": "narration",
+      "text": "In Islam, the Day of Judgment does not end at the scales. After the reckoning comes a crossing. The Prophet, peace be upon him, described a bridge set over Hell itself, and said he would be the first to cross it.",
+      "foot": "Sahih al-Bukhari 6573"
+    },
+    {
+      "type": "narration",
+      "text": "How narrow is it? One of the men who learned this teaching, the companion Abu Sa'id, said that word reached him... that the bridge is thinner than a hair, and sharper than a sword.",
+      "foot": "Abu Sa'id al-Khudri, in Sahih Muslim 183"
+    },
+    {
+      "type": "narration",
+      "text": "Along it hang hooks, like the thorns of a desert plant the Arabs knew well... except that only Allah knows how large they are. And they snatch at people... according to their deeds.",
+      "foot": "Sahih al-Bukhari 6573, Sahih Muslim 183"
+    },
+    {
+      "type": "narration",
+      "text": "Not everyone crosses the same way. Some pass in the blink of an eye. Some like lightning. Some like wind... like birds... like the finest horses. Your speed on that bridge is not luck. It is your life, played back as motion.",
+      "foot": "Sahih Muslim 183"
+    },
+    {
+      "type": "narration",
+      "text": "And the Qur'an describes a light on that Day, running ahead of the believers... while the hypocrites are told to turn back and look for light, and a wall is placed between them. Commentators connect that scene to this crossing... light for some, darkness for others.",
+      "quote": "57:12",
+      "foot": "Qur'an 57:12-13 (shown, not recited); the link to the crossing is from the commentators"
+    },
+    {
+      "type": "narration",
+      "text": "Some escape unharmed. Some are cut... and let go. And some are pushed into the fire. The bridge sorts every soul that steps onto it.",
+      "foot": "Sahih Muslim 183"
+    },
+    {
+      "type": "narration",
+      "text": "And here is the detail that should stay with you. On that bridge, even the messengers of Allah... the strongest believers who ever lived... will only be able to say one thing. O Allah, save. Save.",
+      "foot": "Sahih al-Bukhari 6573"
+    },
+    {
+      "type": "narration",
+      "text": "You cannot practice the crossing. You can only pack for it. Because what carries a person over, at the speed of lightning or not at all... is what they did before they arrived.",
+      "foot": "Sahih Muslim 183"
+    }
+  ]
+}
