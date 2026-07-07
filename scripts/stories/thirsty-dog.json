@@ -14,7 +14,13 @@
     "tiktok": "Her whole life was sin. Then she saw a dying dog at a well. Sahih al-Bukhari 3321.",
     "shorts": "A sinful woman was forgiven everything, because of a dog. Sahih al-Bukhari and Sahih Muslim.",
     "reels": "Her whole life was sin. Then she saw a dying dog at a well. Sahih al-Bukhari 3321.",
-    "hashtags": ["#islam", "#mercy", "#edutokcontest", "#forgiveness", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#mercy",
+      "#edutokcontest",
+      "#forgiveness",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "This is the story of the woman... and the dog.",
       "title": "THE THIRSTY DOG",
       "titleSub": "a story told by the Prophet, peace be upon him",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih al-Bukhari 3321, Sahih Muslim 2245"
     },
     {
@@ -52,12 +62,17 @@
     },
     {
       "type": "narration",
-      "text": "He told a matching story of a man. A traveler, dying of thirst himself, who climbed down a well and drank... and came up to find a dog licking the mud from thirst. He thought... this creature is suffering exactly what I was suffering. So he went back down, filled his shoe, held it in his teeth, and climbed. And Allah thanked him... and forgave him.",
+      "text": "He told a matching story. A traveler, dying of thirst, climbed down a well and drank... and came up to find a dog licking the mud from thirst. He thought... this creature is suffering what I was suffering.",
       "foot": "Sahih al-Bukhari 6009; Sahih Muslim 2244"
     },
     {
       "type": "narration",
-      "text": "When the companions heard it, they asked... Messenger of Allah, is there a reward for us in the animals? And he answered... in every living being, there is reward.",
+      "text": "So he went back down, filled his shoe, held it in his teeth, and climbed. And Allah thanked him... and forgave him.",
+      "foot": "Sahih al-Bukhari 6009; Sahih Muslim 2244"
+    },
+    {
+      "type": "narration",
+      "text": "When the companions heard it, they asked... Messenger of Allah, is there a reward for us in serving the animals? And he answered... in every living being, there is reward.",
       "foot": "Sahih al-Bukhari 2466; Sahih Muslim 2244"
     },
     {

@@ -14,7 +14,13 @@
     "tiktok": "A boulder sealed three men inside a cave. Their only key was the good deeds nobody ever saw. Sahih al-Bukhari 2272.",
     "shorts": "Three men trapped in a cave, and the deeds that moved the boulder. Sahih al-Bukhari and Sahih Muslim.",
     "reels": "A boulder sealed three men inside a cave. Their only key was the good deeds nobody ever saw. Sahih al-Bukhari 2272.",
-    "hashtags": ["#islam", "#story", "#edutokcontest", "#dua", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#story",
+      "#edutokcontest",
+      "#dua",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "The Prophet, peace be upon him, told what happened inside that cave.",
       "title": "THE SEALED CAVE",
       "titleSub": "a story told by the Prophet, peace be upon him",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih al-Bukhari 2272, Sahih Muslim 2743"
     },
     {
@@ -37,7 +47,7 @@
     },
     {
       "type": "narration",
-      "text": "The first man spoke of his mother and father, grown old. Every night he brought them milk before anyone else... before his own children. One evening they were asleep, and he would not wake them, and would not serve anyone first. So he stood... the bowl in his hand... until dawn.",
+      "text": "The first man spoke of his mother and father, grown old. Every night he brought them milk before anyone else... before his own children. One evening they were asleep, and he would not wake them. So he stood... the bowl in his hand... until dawn.",
       "foot": "Sahih al-Bukhari 2272"
     },
     {
@@ -47,17 +57,27 @@
     },
     {
       "type": "narration",
-      "text": "The second man had loved his cousin... the deepest love a man can have for a woman, he said. She refused him. Then came a year of famine, and she had nothing. He offered her a hundred and twenty gold coins... for a night. And she, desperate, agreed.",
+      "text": "The second man had loved his cousin... the deepest love a man can have for a woman. She refused him. Then came a year of famine, and she had nothing. He offered a hundred and twenty gold coins... for a night. Desperate, she agreed.",
       "foot": "Sahih al-Bukhari 2272"
     },
     {
       "type": "narration",
-      "text": "But when he sat before her, she said... it is not lawful for you to break the seal, except by its right. And he stood up, and walked away... from the woman he loved most in the world. And he left her the gold. O Allah, if I did that seeking Your face... relieve us. The rock moved again. Still not enough.",
+      "text": "But when he sat before her, she said... this is not lawful for you, except by right of marriage. And he stood up, and walked away from the woman he loved most in the world... and he left her the gold.",
       "foot": "Sahih al-Bukhari 2272"
     },
     {
       "type": "narration",
-      "text": "The third man had once hired a laborer who left before collecting his wage. So the man invested it... for years... until it had grown into camels, cows, sheep. When the laborer finally returned, expecting a coin, the man pointed at the herds filling the valley. All of it is yours. And he drove every animal away, and left nothing.",
+      "text": "O Allah, he said... if I did that seeking Your face, relieve us of what we are in. And the rock moved again. Still... not enough.",
+      "foot": "Sahih al-Bukhari 2272"
+    },
+    {
+      "type": "narration",
+      "text": "The third man had once hired a laborer who left before taking his wage. So he invested it... for years... until it grew into camels, cows and sheep.",
+      "foot": "Sahih al-Bukhari 2272"
+    },
+    {
+      "type": "narration",
+      "text": "When the laborer finally returned, expecting a coin, the man pointed at the herds. All of it is yours. And the laborer drove every animal away... and left nothing.",
       "foot": "Sahih al-Bukhari 2272"
     },
     {
@@ -67,7 +87,7 @@
     },
     {
       "type": "narration",
-      "text": "Notice what unlocked the mountain. Not their prayers in public. Three private moments... a bowl held till dawn, a desire refused, a debt honored beyond reason. Somewhere in your past there may be a deed like that. Guard it. One day it may be the only key you have.",
+      "text": "Notice what unlocked the mountain. Not their prayers in public. Three private moments... a bowl held till dawn, a desire refused, a debt honored beyond reason. You may have a deed like that. Guard it. One day it may be the only key you have.",
       "foot": "Sahih al-Bukhari 2272, Sahih Muslim 2743"
     }
   ]

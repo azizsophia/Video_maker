@@ -14,7 +14,13 @@
     "tiktok": "You will hear the footsteps of the people who buried you. Then the questions begin. Sahih al-Bukhari 1338.",
     "shorts": "What happens on your first night in the grave, from Sahih al-Bukhari and Sahih Muslim.",
     "reels": "You will hear the footsteps of the people who buried you. Then the questions begin. Sahih al-Bukhari 1338.",
-    "hashtags": ["#islam", "#hereafter", "#edutokcontest", "#grave", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#hereafter",
+      "#edutokcontest",
+      "#grave",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "And that is when your first night begins.",
       "title": "THE FIRST NIGHT",
       "titleSub": "what the Prophet taught about the grave",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih al-Bukhari 1338"
     },
     {
@@ -42,12 +52,12 @@
     },
     {
       "type": "narration",
-      "text": "The believer answers plainly. I testify that he is the servant of Allah, and His messenger. And then something extraordinary is said. Look at your place in the Fire... Allah has exchanged it for a place in Paradise. And the Prophet said... they will see both.",
+      "text": "The believer answers plainly. I testify that he is the servant of Allah, and His messenger. Then he is told... look at your place in the Fire... Allah has exchanged it for a place in Paradise. And they will see both.",
       "foot": "Sahih al-Bukhari 1338"
     },
     {
       "type": "narration",
-      "text": "A longer account adds three questions. Who is your Lord. What is your religion. Who is this man. And when the believer answers, a caller cries out from heaven... My servant has spoken the truth. So spread for him a bed from Paradise... and open for him a door to Paradise.",
+      "text": "A longer account adds three questions. Who is your Lord. What is your religion. Who is this man. When the believer answers, a caller cries from heaven... My servant has spoken the truth. Spread for him a bed from Paradise... and open him a door to it.",
       "foot": "Sunan Abi Dawud 4753, graded sahih"
     },
     {
@@ -57,7 +67,7 @@
     },
     {
       "type": "narration",
-      "text": "But the one who never really believed... answers differently. I do not know. I used to say... whatever the people used to say. For him there is no window to Paradise. Only the narrowing... and a blow whose cry is heard by every creature nearby, except humans and jinn.",
+      "text": "But the one who never really believed answers differently. I do not know... I used to say whatever the people used to say. For him, only the narrowing... and a blow that makes him cry out, heard by every creature nearby except humans and jinn.",
       "foot": "Sahih al-Bukhari 1338; Sunan Abi Dawud 4753, graded sahih"
     },
     {
@@ -68,7 +78,7 @@
     },
     {
       "type": "narration",
-      "text": "One night. A few questions. And the strange mercy of it is that the exam is open book... every answer is being written by the way you live today.",
+      "text": "One night. A few questions. And the strange mercy of it is that the questions are known in advance... every answer is being written by the way you live today.",
       "foot": "Sahih al-Bukhari 1338"
     }
   ]

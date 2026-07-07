@@ -14,7 +14,13 @@
     "tiktok": "One morning the sun rises from the wrong side of the sky, and the door of repentance closes. Sahih Muslim 157.",
     "shorts": "The morning the sun rises from the west, faith will no longer be accepted. Sahih al-Bukhari and Sahih Muslim.",
     "reels": "One morning the sun rises from the wrong side of the sky, and the door of repentance closes. Sahih Muslim 157.",
-    "hashtags": ["#islam", "#signsofthehour", "#edutokcontest", "#endtimes", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#signsofthehour",
+      "#edutokcontest",
+      "#endtimes",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "This is one of the great signs of the Last Day.",
       "title": "SUN FROM THE WEST",
       "titleSub": "a sign of the Hour",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih Muslim 157"
     },
     {
@@ -52,7 +62,7 @@
     },
     {
       "type": "narration",
-      "text": "But listen to what the Qur'an says about that exact moment. The Day that some of the signs of your Lord will come, no soul will benefit from its faith... as long as it had not believed before, or had earned through its faith some good.",
+      "text": "But listen to what the Qur'an says about that exact moment. On the Day some of the signs of your Lord arrive, believing will no longer help a soul... if it had not believed before, or earned some good through its faith.",
       "quote": "6:158",
       "foot": "Qur'an 6:158 (shown, not recited)"
     },
@@ -63,12 +73,12 @@
     },
     {
       "type": "narration",
-      "text": "And notice the second clause of the verse. It is not only disbelief that is caught out. A faith that never earned anything... never moved a hand, never gave, never prayed... that soul, too, gains nothing from that morning.",
+      "text": "And notice the second clause of the verse. It is not only disbelief that is caught out. A soul whose faith never earned anything... never moved a hand, never gave, never prayed... that soul, too, gains nothing from that morning.",
       "foot": "Qur'an 6:158"
     },
     {
       "type": "narration",
-      "text": "No one knows the year, and no one knows the century. That was never given. What was given is simpler... the door is open today. And one dawn, mid-sky, mid-sentence... it will not be.",
+      "text": "No one knows the year, and no one knows the century. That was never given. What was given is simpler... the door is open today. And one dawn, mid-plan, mid-sentence... it will not be.",
       "foot": "Sahih Muslim 157"
     }
   ]

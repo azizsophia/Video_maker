@@ -14,7 +14,13 @@
     "tiktok": "A bridge over Hell, and every human being has to cross it. Sahih al-Bukhari and Sahih Muslim.",
     "shorts": "The bridge over Hell that every soul must cross. From Sahih al-Bukhari and Sahih Muslim.",
     "reels": "A bridge over Hell, and every human being has to cross it. Sahih al-Bukhari and Sahih Muslim.",
-    "hashtags": ["#islam", "#judgmentday", "#edutokcontest", "#hereafter", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#judgmentday",
+      "#edutokcontest",
+      "#hereafter",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "This is the bridge the Prophet, peace be upon him, warned of. As-Sirat.",
       "title": "THE BRIDGE",
       "titleSub": "as-Sirat, the crossing",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih al-Bukhari 6573, Sahih Muslim 183"
     },
     {
@@ -37,7 +47,7 @@
     },
     {
       "type": "narration",
-      "text": "How narrow is it? One of the men who learned this teaching, the companion Abu Sa'id, said that word reached him... that the bridge is thinner than a hair, and sharper than a sword.",
+      "text": "The companion Abu Sa'id, one of the men who learned this teaching, said word reached him that the bridge is thinner than a hair... and sharper than a sword.",
       "foot": "Abu Sa'id al-Khudri, in Sahih Muslim 183"
     },
     {
@@ -52,7 +62,7 @@
     },
     {
       "type": "narration",
-      "text": "And the Qur'an describes a light on that Day, running ahead of the believers... while the hypocrites are told to turn back and look for light, and a wall is placed between them. Commentators connect that scene to this crossing... light for some, darkness for others.",
+      "text": "And the Qur'an describes a light on that Day, running ahead of the believers... while the hypocrites are told to turn back and look for light... and a wall closes between them. Commentators connect that scene to this crossing.",
       "quote": "57:12",
       "foot": "Qur'an 57:12-13 (shown, not recited); the link to the crossing is from the commentators"
     },

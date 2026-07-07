@@ -14,7 +14,13 @@
     "tiktok": "On the Day of Judgment, some people will be betrayed by a witness they cannot silence. Their own skin. Qur'an 41:20.",
     "shorts": "The Qur'an says your own hearing, sight and skin will testify about you. Surah Fussilat 41:19-22.",
     "reels": "On the Day of Judgment, some people will be betrayed by a witness they cannot silence. Their own skin. Qur'an 41:20.",
-    "hashtags": ["#quran", "#judgmentday", "#edutokcontest", "#islam", "#muslimtiktok"]
+    "hashtags": [
+      "#quran",
+      "#judgmentday",
+      "#edutokcontest",
+      "#islam",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "This is in the Qur'an, in the chapter called Fussilat.",
       "title": "THE WITNESS WITHIN",
       "titleSub": "Surah Fussilat 41:19-22",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Qur'an 41:19-22"
     },
     {
@@ -50,18 +60,18 @@
     },
     {
       "type": "narration",
-      "text": "Another verse paints it even more starkly. That Day, We will seal over their mouths... and their hands will speak to Us, and their feet will testify about what they used to earn. The mouth that argued all its life... finally silent. The body, finally honest.",
+      "text": "Another verse paints it even more starkly. That Day, We will seal over their mouths... and their hands will speak to Us, and their feet will testify. The mouth that argued all its life... finally silent. The body, finally honest.",
       "quote": "36:65",
       "foot": "Qur'an 36:65 (shown, not recited)"
     },
     {
       "type": "narration",
-      "text": "Now, why did these verses come down? The Prophet's companion Abdullah ibn Mas'ud told the story. Three men were sitting by the Ka'bah, the sacred house in Makkah... heavy of body, he said, and light of understanding.",
+      "text": "Now, why did these verses come down? The Prophet's companion Abdullah ibn Mas'ud told the story. Three men were sitting by the Ka'bah, the sacred house in Makkah... men he described as heavy of body, and light of understanding.",
       "foot": "Sahih al-Bukhari 4817, Sahih Muslim 2775"
     },
     {
       "type": "narration",
-      "text": "One of them asked... do you think Allah hears what we say? Another answered: He hears us if we speak loudly... but not if we whisper. They were measuring the Lord of the worlds... by their own ears.",
+      "text": "One of them asked... do you think Allah hears what we say? Another answered... He hears us if we speak loudly, but not if we whisper. They were measuring the Lord of the worlds... by their own ears.",
       "foot": "Sahih al-Bukhari 4817"
     },
     {

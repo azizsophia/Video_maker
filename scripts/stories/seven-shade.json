@@ -14,12 +14,18 @@
     "tiktok": "The sun a mile overhead, people drowning in their own sweat, and seven kinds of people standing in shade. Sahih al-Bukhari 660.",
     "shorts": "Seven kinds of people will be shaded on the Day there is no shade but His. Sahih al-Bukhari and Sahih Muslim.",
     "reels": "The sun a mile overhead, people drowning in their own sweat, and seven kinds of people standing in shade. Sahih al-Bukhari 660.",
-    "hashtags": ["#islam", "#judgmentday", "#edutokcontest", "#hereafter", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#judgmentday",
+      "#edutokcontest",
+      "#hereafter",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
       "type": "narration",
-      "text": "On the Day of Judgment, the sun will be brought close... until it hangs, in the hadith's own words, a mile overhead. And on that day, seven kinds of people will stand in shade.",
+      "text": "On the Day of Judgment, the sun will be brought close... until, in the hadith's own words, it hangs a mile overhead. And on that day, seven kinds of people will stand in shade.",
       "foot": "Sahih Muslim 2864; Sahih al-Bukhari 660"
     },
     {
@@ -27,7 +33,11 @@
       "text": "Seven, whom Allah will shade... on the Day there is no shade but His.",
       "title": "SEVEN IN THE SHADE",
       "titleSub": "Sahih al-Bukhari 660",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih al-Bukhari 660"
     },
     {
@@ -37,7 +47,7 @@
     },
     {
       "type": "narration",
-      "text": "Now the list. One... a just ruler. Anyone given power over others, who did not let it corrupt them. Two... a young person who grew up in the worship of Allah. Youth spent on devotion, not burned and regretted.",
+      "text": "Now the list. One... a just ruler. Anyone given power over others, who did not let it corrupt them. Two... a young person who grew up in the worship of Allah. Youth spent on devotion, not wasted and regretted.",
       "foot": "Sahih al-Bukhari 660"
     },
     {
@@ -47,7 +57,7 @@
     },
     {
       "type": "narration",
-      "text": "Four... two people who loved each other for the sake of Allah alone. They met for Him... and they parted for Him. No profit in it, no status. Just love with a pure address.",
+      "text": "Four... two people who loved each other for the sake of Allah alone. They met for Him... and they parted for Him. No profit in it, no status. Just love, with no motive but Him.",
       "foot": "Sahih al-Bukhari 660"
     },
     {

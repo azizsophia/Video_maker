@@ -14,7 +14,13 @@
     "tiktok": "The ground under your feet is keeping records. One day it reports everything. Surah az-Zalzalah.",
     "shorts": "Surah az-Zalzalah: the day the earth reports its news. Qur'an 99:1-8.",
     "reels": "The ground under your feet is keeping records. One day it reports everything. Surah az-Zalzalah.",
-    "hashtags": ["#quran", "#surah", "#edutokcontest", "#islam", "#muslimtiktok"]
+    "hashtags": [
+      "#quran",
+      "#surah",
+      "#edutokcontest",
+      "#islam",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "This is Surah az-Zalzalah. The Earthquake.",
       "title": "AZ-ZALZALAH",
       "titleSub": "the ninety-ninth surah of the Qur'an",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Qur'an, Surah 99"
     },
     {
@@ -50,7 +60,7 @@
     },
     {
       "type": "narration",
-      "text": "Then the verse this whole surah turns on. That Day, it will report its news... because your Lord has inspired it. The earth, addressed all along... a witness on the stand.",
+      "text": "Then the verse this whole surah turns on. That Day, it will report its news... because your Lord has inspired it. The earth, watching all along... called as a witness to the stand.",
       "quote": "99:4",
       "foot": "Qur'an 99:4-5 (shown, not recited)"
     },
@@ -67,7 +77,7 @@
     },
     {
       "type": "narration",
-      "text": "The Prophet, peace be upon him, was once asked about donkeys... of all things... whether there was revelation about them. He answered that nothing had come down about them except this unique, comprehensive verse. Whoever does good equal to the weight of an atom... shall see it. One verse, he taught, that covers everything.",
+      "text": "The Prophet, peace be upon him, was once asked whether any revelation had come down about donkeys... of all things. And he answered that nothing had come down about them except one unique, comprehensive verse... the verse you just heard.",
       "foot": "Sahih al-Bukhari 2371"
     },
     {

@@ -14,7 +14,13 @@
     "tiktok": "He killed ninety-nine people. Then he went looking for a way back. Sahih al-Bukhari 3470, Sahih Muslim 2766.",
     "shorts": "A man killed one hundred people, and the angels argued over his soul. Sahih al-Bukhari and Sahih Muslim.",
     "reels": "He killed ninety-nine people. Then he went looking for a way back. Sahih al-Bukhari 3470, Sahih Muslim 2766.",
-    "hashtags": ["#islam", "#repentance", "#edutokcontest", "#tawbah", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#repentance",
+      "#edutokcontest",
+      "#tawbah",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
     {
@@ -27,7 +33,11 @@
       "text": "The Prophet, peace be upon him, told his story... and it ends in a way nobody expects.",
       "title": "NINETY-NINE",
       "titleSub": "a story told by the Prophet, peace be upon him",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
       "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
     },
     {
@@ -52,12 +62,12 @@
     },
     {
       "type": "narration",
-      "text": "So the man set out. And halfway down that road... death came for him. He had reached nothing. No new town, no worship, not a single good deed written down... except a direction. And as he died, he turned his chest toward the town he was trying to reach.",
+      "text": "So the man set out. And halfway down that road... death came for him. No new town, no worship, not one good deed written down... except a direction. As he died, he turned his chest toward the town he was trying to reach.",
       "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
     },
     {
       "type": "narration",
-      "text": "Then, above his body, the angels of mercy and the angels of punishment... argued. He came repenting, said one side. He never did a single good thing, said the other. And an angel was sent in human form to judge between them. He said... measure the ground between the two lands.",
+      "text": "Then the angels of mercy and the angels of punishment argued over him. He came repenting, said one side. He never did one good thing, said the other. So an angel in human form was sent to judge... measure the ground between the two lands.",
       "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
     },
     {
