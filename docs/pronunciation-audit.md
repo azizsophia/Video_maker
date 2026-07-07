@@ -104,3 +104,68 @@ an-nahl, an-najm, al-dari, jahl, badr, zakat, mina, ya-sin, mastigure,
 bismillah, quraysh, ka'bah, kaba, abu, bakr, ali, siddiq, abdullah, mas'ud,
 masud, anas, malik, khattab, banu, harj, masjid, madinah, hurayra,
 al-khudri, read
+
+## Batch 4 additions - independent audit (2026-07-07)
+
+Independent audit of the 4 new "Batch 4" PHONETIC entries in
+`scripts/fetch-story.ts` (auditor did not write them), plus confirmation of two
+existing entries flagged by the readability pass. Studio conventions (qaf->k,
+doubled letters for long vowels, hyphen syllable breaks, emphatics/ayn as
+best-effort plain consonants) are deliberate and not flagged.
+
+- **`sa'id -> Sa-eed`**: OK. Saʿīd (سَعِيد) = /sa.ʕiːd/, short a then LONG ii,
+  stress on the second syllable: sa-EED. "Sa-eed" gives Daniel exactly that
+  (suh-EED); the ayn (ع) cannot be voiced by an English TTS and is dropped per
+  the map's standing best-effort convention (same as mas'ud, ismail, isa).
+  Source: en.wiktionary.org/wiki/سعيد (IPA /sa.ʕiːd/).
+- **`sirat -> Si-raat` / `as-sirat -> as-Si-raat`**: OK. aṣ-Ṣirāṭ (الصِّرَاط)
+  = /sˤi.raːtˤ/: short i, LONG aa, stress si-RAAT. The doubled "aa" in "raat"
+  gives the long vowel and pulls the stress to the second syllable, which is
+  correct. The ṣad (ص) and ṭa (ط) are emphatics no English TTS can produce;
+  plain "s"/"t" is the accepted studio approximation (consistent with the
+  earlier audit's ruling on ka'bah/khuza'a-class items). Note: on-screen text
+  keeps the proper "as-Sirat" spelling; only the voice uses the respelling.
+  Sources: en.wiktionary.org/wiki/صراط (IPA /sˤi.raːtˤ/);
+  en.wikipedia.org/wiki/As-Sirat (Ṣirāṭ, الصراط).
+- **`zalzalah -> Zal-zalah` / `az-zalzalah -> az-Zal-zalah`**: MINOR. The surah
+  name is confirmed as az-Zalzalah, "The Earthquake" (quran.com surah 99).
+  Zalzalah (زَلْزَلَة) = /zal.za.la/: ALL vowels short, ta marbuta ending -ah
+  correct, and MSA stress falls on the first, heavy syllable: ZAL-za-lah. The
+  respelling has the right consonants and vowels, but the chunk "zalah" invites
+  an English reader to say zal-ZAH-lah (penult stress) or even a long-a
+  "zal-ZAY-lah". Works if the ear-test passes; if Daniel drifts, the fully
+  hyphenated `Zal-za-lah` pins each short syllable and keeps first-syllable
+  stress. Not a wrong-vowel flag, a TTS-behavior risk.
+  Sources: en.wiktionary.org/wiki/زلزلة (IPA /zal.za.la/);
+  quran.com/az-zalzalah ("99. Surah Az-Zalzalah - The Earthquake").
+- **`fussilat -> Fussi-lat`**: OK. Fuṣṣilat (فُصِّلَت) has a genuinely doubled
+  (geminated) ṣad - Wikipedia gives the transliteration fuṣṣilat and quran.com
+  titles surah 41 "Fussilat". Syllables fuṣ-ṣi-lat; the final CVC syllable is
+  not superheavy and the penult is light, so MSA stress is on the first
+  syllable: FUS-si-lat. "Fussi" reads like English "fussy" (FUSS-i), which
+  gives the first-syllable stress, keeps the u short (never "fyoo"), and the
+  "ss" is as close to gemination as English TTS gets. Emphatic ṣ -> plain s
+  per convention.
+  Sources: en.wikipedia.org/wiki/Fussilat ("Fuṣṣilat, فصلت");
+  quran.com/fussilat ("Fussilat - Explained in Detail").
+
+### Existing entries confirmed for the readability pass
+
+- **`abu -> Aboo`** (fetch-story.ts line 236): present and adequate. MSA Abū =
+  AH-boo, long final u; "Aboo" supplies the long "oo" and blocks the "AY-boo"/
+  "uh-BYOO" default. Owner-locked style, left as-is.
+- **`mas'ud -> Mas-ood`** (fetch-story.ts line 241): present and adequate.
+  Masʿūd = /mas.ʕuːd/, stress mas-OOD with long uu; "Mas-ood" lands it. The
+  ayn is unpronounceable and dropped per convention (already ruled OK in the
+  earlier audit above). Owner-locked style, left as-is.
+
+### Batch 4 verdicts
+
+| Key | Respelling | Verdict |
+| --- | --- | --- |
+| sa'id | Sa-eed | OK |
+| sirat / as-sirat | Si-raat / as-Si-raat | OK |
+| zalzalah / az-zalzalah | Zal-zalah / az-Zal-zalah | MINOR (suggest Zal-za-lah if ear-test drifts) |
+| fussilat | Fussi-lat | OK |
+| abu (existing) | Aboo | OK (confirmed present) |
+| mas'ud (existing) | Mas-ood | OK (confirmed present) |
