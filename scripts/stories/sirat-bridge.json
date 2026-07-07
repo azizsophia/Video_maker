@@ -8,12 +8,12 @@
   "showOutro": true,
   "cover": {
     "title": "The Bridge",
-    "kicker": "EVERYONE MUST CROSS"
+    "kicker": "THE FINAL CROSSING"
   },
   "captions": {
-    "tiktok": "A bridge over Hell, and every human being has to cross it. Sahih al-Bukhari and Sahih Muslim.",
-    "shorts": "The bridge over Hell that every soul must cross. From Sahih al-Bukhari and Sahih Muslim.",
-    "reels": "A bridge over Hell, and every human being has to cross it. Sahih al-Bukhari and Sahih Muslim.",
+    "tiktok": "A bridge over Hell, and the path to Paradise runs across it. Sahih al-Bukhari and Sahih Muslim.",
+    "shorts": "The bridge over Hell on the road to Paradise. From Sahih al-Bukhari and Sahih Muslim.",
+    "reels": "A bridge over Hell, and the path to Paradise runs across it. Sahih al-Bukhari and Sahih Muslim.",
     "hashtags": [
       "#islam",
       "#judgmentday",
@@ -25,7 +25,7 @@
   "segments": [
     {
       "type": "narration",
-      "text": "There is a crossing in your future. Every human being who has ever lived will stand before it... a bridge, laid over the fire of Hell. And there is no way around it.",
+      "text": "There is a crossing on the Day of Judgment that no one can buy their way past. A bridge, laid over the fire of Hell... and the path to Paradise runs across it.",
       "foot": "Sahih al-Bukhari 6573"
     },
     {
@@ -58,7 +58,7 @@
     {
       "type": "narration",
       "text": "Not everyone crosses the same way. Some pass in the blink of an eye. Some like lightning. Some like wind... like birds... like the finest horses. Your speed on that bridge is not luck. It is your life, played back as motion.",
-      "foot": "Sahih Muslim 183"
+      "foot": "Sahih al-Bukhari 6573; Sahih Muslim 183"
     },
     {
       "type": "narration",
@@ -79,7 +79,7 @@
     {
       "type": "narration",
       "text": "You cannot practice the crossing. You can only pack for it. Because what carries a person over, at the speed of lightning or not at all... is what they did before they arrived.",
-      "foot": "Sahih Muslim 183"
+      "foot": "Sahih al-Bukhari 6573; Sahih Muslim 183"
     }
   ]
 }
