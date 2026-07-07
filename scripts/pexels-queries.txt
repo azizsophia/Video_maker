@@ -1,13 +1,4 @@
 # Scratch file for the Pexels Search workflow.
-# Put one query per line (first non-comment line may be --portrait / --photos / --ids)
-# and push to trigger .github/workflows/pexels-search.yml.
-# Khadijah long-form - re-query for the two open beats (16 + 26), landscape.
-# Beat 16 (her answer: warm reassurance, lamplit home)
-oil lamp warm glow dark room
-candle light stone wall interior warm
-warm lantern glow night interior
-# Beat 26 (Year of Sorrow: grey, barren, wind and dust - previous pool all rejected)
-grey sky desert plain barren
-dust storm desert horizon
-barren valley overcast dark clouds
-desert wind sand blowing dusk
+# Fetch file links for the locked Khadijah long-form picks (contact-sheet ids)
+--ids
+7195103,32540543,4441072,26621652,36100216,9997825,9861586,6989120,9130077,7033615,11137423,13141957,8239245,28916959,8189917,5018908,30343257,34762877,13581385,12605103,10937543
