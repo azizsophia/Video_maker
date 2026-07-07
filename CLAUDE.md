@@ -86,6 +86,15 @@ that is the point of the gate. Nothing ships with an open item.
 - Always source via the Pexels search workflow, build the contact sheet, and keep
   a per-beat shot list.
 
+## Topic selection (owner directive 2026-07-07, non-negotiable)
+- Pick shorts topics for VIEW POTENTIAL, backed by research into what performs
+  in the Islamic short-form niche - not by what is merely interesting or obscure.
+- Keep the NAME-LOAD light. A slate full of hard-to-pronounce Arabic names
+  (Uwais al-Qarni, Julaybib...) was rejected 2026-07-07. Prefer topics whose
+  hook is a question, mystery, place, sign, or story-shape rather than an
+  unfamiliar name; an unfamiliar name must earn its place with an exceptional
+  hook, and never more than 1-2 name-heavy topics per batch.
+
 ## Writing rules learned the hard way (owner feedback 2026-07-02, non-negotiable)
 - LONG-FORM MEANS LONG. Minimum ~8 minutes of narration: roughly 1,300+ words
   across 25+ beats in chapters. Before ANY long-form render, compute the
