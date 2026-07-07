@@ -1,11 +1,13 @@
 # Scratch file for the Pexels Search workflow.
 # Put one query per line (first non-comment line may be --portrait / --photos / --ids)
 # and push to trigger .github/workflows/pexels-search.yml.
-# Khadijah long-form beats 12 + 15 re-query (literal cave mouth at night; barren desert descent)
-desert cave opening silhouette
-cave mouth stars night sky
-dark cave entrance rock silhouette
-cave opening light dark rock
-barren rocky slope path desert dusk
-desert mountain trail descending dark
-rocky scree slope barren dark
+# Khadijah long-form - re-query for the two open beats (16 + 26), landscape.
+# Beat 16 (her answer: warm reassurance, lamplit home)
+oil lamp warm glow dark room
+candle light stone wall interior warm
+warm lantern glow night interior
+# Beat 26 (Year of Sorrow: grey, barren, wind and dust - previous pool all rejected)
+grey sky desert plain barren
+dust storm desert horizon
+barren valley overcast dark clouds
+desert wind sand blowing dusk
