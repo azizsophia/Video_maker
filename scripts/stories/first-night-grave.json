@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, said that when you are laid in your grave and the people turn to leave... you hear them. You hear their footsteps, walking away.",
-      "foot": "Sahih al-Bukhari 1338"
+      "foot": "Sahih al-Bukhari 1338",
+      "video": "https://videos.pexels.com/video-files/38424425/16317041_1080_1920_30fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
@@ -38,48 +40,66 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih al-Bukhari 1338"
+      "foot": "Sahih al-Bukhari 1338",
+      "video": "https://videos.pexels.com/video-files/19962602/19962602-hd_1080_1920_30fps.mp4",
+      "videoDuration": 60
     },
     {
       "type": "narration",
       "text": "Islam teaches that the grave is not empty waiting. Something happens there, and it happens to everyone. Two angels come to the one who has been buried... and sit them up.",
-      "foot": "Sahih al-Bukhari 1338"
+      "foot": "Sahih al-Bukhari 1338",
+      "video": "https://videos.pexels.com/video-files/28407700/12376684_1080_1920_60fps.mp4",
+      "videoDuration": 23
     },
     {
       "type": "narration",
       "text": "And they ask about the man who brought the message. What did you use to say... about this man, Muhammad?",
-      "foot": "Sahih al-Bukhari 1338"
+      "foot": "Sahih al-Bukhari 1338",
+      "video": "https://videos.pexels.com/video-files/11267669/11267669-hd_1080_1920_30fps.mp4",
+      "videoDuration": 14
     },
     {
       "type": "narration",
       "text": "The believer answers plainly. I testify that he is the servant of Allah, and His messenger. Then he is told... look at your place in the Fire... Allah has exchanged it for a place in Paradise. And they will see both.",
-      "foot": "Sahih al-Bukhari 1338"
+      "foot": "Sahih al-Bukhari 1338",
+      "video": "https://videos.pexels.com/video-files/19150699/19150699-hd_1080_1920_60fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
       "text": "A longer account adds three questions. Who is your Lord. What is your religion. Who is this man. When the believer answers, a caller cries from heaven... My servant has spoken the truth. Spread for him a bed from Paradise... and open him a door to it.",
-      "foot": "Sunan Abi Dawud 4753, graded sahih"
+      "foot": "Sunan Abi Dawud 4753, graded sahih",
+      "video": "https://videos.pexels.com/video-files/16998437/16998437-hd_1080_1920_30fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "And his grave is made wide... as far as his eye can see.",
-      "foot": "Sunan Abi Dawud 4753, graded sahih"
+      "foot": "Sunan Abi Dawud 4753, graded sahih",
+      "video": "https://videos.pexels.com/video-files/35539095/15056268_1080_1920_60fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "But the one who never really believed answers differently. I do not know... I used to say whatever the people used to say. For him, only the narrowing... and a blow that makes him cry out, heard by every creature nearby except humans and jinn.",
-      "foot": "Sahih al-Bukhari 1338; Sunan Abi Dawud 4753, graded sahih"
+      "foot": "Sahih al-Bukhari 1338; Sunan Abi Dawud 4753, graded sahih",
+      "video": "https://videos.pexels.com/video-files/37126341/15728198_1080_1920_60fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "The Qur'an speaks to this night directly. Allah keeps firm those who believe, with the firm word... in worldly life, and in the Hereafter. And the Prophet, peace be upon him, taught that this verse speaks of the grave.",
       "quote": "14:27",
-      "foot": "Qur'an 14:27 (shown, not recited); Sahih al-Bukhari 1369"
+      "foot": "Qur'an 14:27 (shown, not recited); Sahih al-Bukhari 1369",
+      "video": "https://videos.pexels.com/video-files/11512717/11512717-hd_1080_1920_24fps.mp4",
+      "videoDuration": 33
     },
     {
       "type": "narration",
       "text": "One night. A few questions. And the strange mercy of it is that the questions are known in advance... every answer is being written by the way you live today.",
-      "foot": "Sahih al-Bukhari 1338"
+      "foot": "Sahih al-Bukhari 1338",
+      "video": "https://videos.pexels.com/video-files/11735432/11735432-hd_1080_1920_60fps.mp4",
+      "videoDuration": 14
     }
   ]
 }

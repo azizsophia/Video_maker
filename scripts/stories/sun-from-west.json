@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "One morning, the sun is going to rise from the wrong side of the sky. And the moment people see it... something will close that can never be opened again.",
-      "foot": "Sahih Muslim 157, Sahih al-Bukhari 4635"
+      "foot": "Sahih Muslim 157, Sahih al-Bukhari 4635",
+      "video": "https://videos.pexels.com/video-files/32189097/13727017_1080_1920_30fps.mp4",
+      "videoDuration": 19
     },
     {
       "type": "narration",
@@ -38,48 +40,66 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih Muslim 157"
+      "foot": "Sahih Muslim 157",
+      "video": "https://videos.pexels.com/video-files/30022034/12880727_1080_1920_50fps.mp4",
+      "videoDuration": 40
     },
     {
       "type": "narration",
       "text": "The Prophet Muhammad, peace be upon him, taught that before the end of the world, the Hour, there will be signs. Small ones first. Then great ones, unmistakable to every eye. This is one of the greatest.",
-      "foot": "Sahih Muslim 157"
+      "foot": "Sahih Muslim 157",
+      "video": "https://videos.pexels.com/video-files/32097578/13683716_1080_1920_24fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "He described the sun as a creation that obeys. It runs its course, and prostrates beneath the Throne of Allah... and asks permission to rise again. And each day, permission is given.",
-      "foot": "Sahih al-Bukhari 3199"
+      "foot": "Sahih al-Bukhari 3199",
+      "video": "https://videos.pexels.com/video-files/12279763/12279763-hd_1080_1920_60fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "Until one day... it will be ordered to return the way it came. And so it will rise... from the west, from the place where it has set every day since the world began.",
-      "foot": "Sahih al-Bukhari 3199"
+      "foot": "Sahih al-Bukhari 3199",
+      "video": "https://videos.pexels.com/video-files/15322657/15322657-hd_1080_1920_30fps.mp4",
+      "videoDuration": 58
     },
     {
       "type": "narration",
       "text": "Think about what that morning does to mankind. No argument survives it. No one shrugs it off. The Prophet, peace be upon him, said that when people see it... everyone on the face of the earth will believe.",
-      "foot": "Sahih al-Bukhari 4635"
+      "foot": "Sahih al-Bukhari 4635",
+      "video": "https://videos.pexels.com/video-files/14482002/14482002-hd_1080_1920_24fps.mp4",
+      "videoDuration": 22
     },
     {
       "type": "narration",
       "text": "But listen to what the Qur'an says about that exact moment. On the Day some of the signs of your Lord arrive, believing will no longer help a soul... if it had not believed before, or earned some good through its faith.",
       "quote": "6:158",
-      "foot": "Qur'an 6:158 (shown, not recited)"
+      "foot": "Qur'an 6:158 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/17471632/17471632-hd_1080_1920_30fps.mp4",
+      "videoDuration": 11
     },
     {
       "type": "narration",
       "text": "That morning, belief costs nothing... and so it counts for nothing. The test was always about trusting what you could not yet see.",
-      "foot": "Qur'an 6:158"
+      "foot": "Qur'an 6:158",
+      "video": "https://videos.pexels.com/video-files/7034338/7034338-hd_1080_1920_25fps.mp4",
+      "videoDuration": 16
     },
     {
       "type": "narration",
       "text": "And notice the second clause of the verse. It is not only disbelief that is caught out. A soul whose faith never earned anything... never moved a hand, never gave, never prayed... that soul, too, gains nothing from that morning.",
-      "foot": "Qur'an 6:158"
+      "foot": "Qur'an 6:158",
+      "video": "https://videos.pexels.com/video-files/19997487/19997487-hd_1080_1920_30fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "No one knows the year, and no one knows the century. That was never given. What was given is simpler... the door is open today. And one dawn, mid-plan, mid-sentence... it will not be.",
-      "foot": "Sahih Muslim 157"
+      "foot": "Sahih Muslim 157",
+      "video": "https://videos.pexels.com/video-files/33897597/14385709_1080_1920_30fps.mp4",
+      "videoDuration": 55
     }
   ]
 }

@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "On the Day of Judgment, some people will be convicted by a witness they cannot bribe, cannot silence, and cannot leave at home. Their own skin.",
-      "foot": "Qur'an 41:20"
+      "foot": "Qur'an 41:20",
+      "video": "https://videos.pexels.com/video-files/7477536/7477536-hd_1080_1920_24fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
@@ -38,52 +40,70 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Qur'an 41:19-22"
+      "foot": "Qur'an 41:19-22",
+      "video": "https://videos.pexels.com/video-files/9668300/9668300-hd_1080_1920_25fps.mp4",
+      "videoDuration": 77
     },
     {
       "type": "narration",
       "text": "The scene opens with the enemies of Allah being gathered to the Fire... driven, assembled in rows. And when they reach it, the trial begins. But no lawyer speaks. No witness is called from outside.",
       "quote": "41:19",
-      "foot": "Qur'an 41:19 (shown, not recited)"
+      "foot": "Qur'an 41:19 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/11210466/11210466-hd_1080_1920_30fps.mp4",
+      "videoDuration": 28
     },
     {
       "type": "narration",
       "text": "Their hearing testifies. Their eyes testify. And their skins testify against them... of what they used to do.",
       "quote": "41:20",
-      "foot": "Qur'an 41:20 (shown, not recited)"
+      "foot": "Qur'an 41:20 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/8732196/8732196-hd_1080_1920_30fps.mp4",
+      "videoDuration": 12
     },
     {
       "type": "narration",
       "text": "And the Qur'an records their shock. They turn to their own bodies and ask... why have you testified against us? And the answer comes back. We were made to speak by Allah... who has made everything speak.",
       "quote": "41:21",
-      "foot": "Qur'an 41:21 (shown, not recited)"
+      "foot": "Qur'an 41:21 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/15651019/15651019-hd_1080_1920_60fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "Another verse paints it even more starkly. That Day, We will seal over their mouths... and their hands will speak to Us, and their feet will testify. The mouth that argued all its life... finally silent. The body, finally honest.",
       "quote": "36:65",
-      "foot": "Qur'an 36:65 (shown, not recited)"
+      "foot": "Qur'an 36:65 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/36434287/15449141_1080_1920_60fps.mp4",
+      "videoDuration": 16
     },
     {
       "type": "narration",
       "text": "Now, why did these verses come down? A companion of the Prophet, peace be upon him... Abdullah ibn Mas'ud... told the story. Three men were sitting by the Ka'bah, the sacred house in Makkah... men he described as heavy of body, and light of understanding.",
-      "foot": "Sahih al-Bukhari 4817, Sahih Muslim 2775"
+      "foot": "Sahih al-Bukhari 4817, Sahih Muslim 2775",
+      "video": "https://videos.pexels.com/video-files/35189233/14908118_1080_1920_30fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "One of them asked... do you think Allah hears what we say? Another answered... He hears us if we speak loudly, but not if we whisper. They were measuring the Lord of the worlds... by their own ears.",
-      "foot": "Sahih al-Bukhari 4817"
+      "foot": "Sahih al-Bukhari 4817",
+      "video": "https://videos.pexels.com/video-files/19177439/19177439-hd_1080_1920_60fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "And the answer came down from heaven, and it is still being read today. You were not hiding from your own hearing, your sight, or your skin... but you assumed that Allah does not know much of what you do.",
       "quote": "41:22",
-      "foot": "Qur'an 41:22 (shown, not recited); Sahih al-Bukhari 4816-4817"
+      "foot": "Qur'an 41:22 (shown, not recited); Sahih al-Bukhari 4816-4817",
+      "video": "https://videos.pexels.com/video-files/35072027/14856546_1080_1920_30fps.mp4",
+      "videoDuration": 19
     },
     {
       "type": "narration",
       "text": "You will never whisper anything your skin did not hear. Live so that when your body finally speaks... it speaks for you, not against you.",
-      "foot": "Qur'an 41:20-22"
+      "foot": "Qur'an 41:20-22",
+      "video": "https://videos.pexels.com/video-files/34762874/14737308_1080_1920_30fps.mp4",
+      "videoDuration": 13
     }
   ]
 }

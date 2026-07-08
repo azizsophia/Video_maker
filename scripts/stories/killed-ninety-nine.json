@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "A man killed ninety-nine people. Ninety-nine. And then, one day... he went looking for a way back.",
-      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
+      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/33766127/14334188_1080_1920_60fps.mp4",
+      "videoDuration": 17
     },
     {
       "type": "narration",
@@ -38,47 +40,65 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
+      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/6707366/6707366-hd_1080_1920_30fps.mp4",
+      "videoDuration": 27
     },
     {
       "type": "narration",
       "text": "He lived among a people long before Islam... and he wanted to know if a man like him could still be forgiven. So he asked for the most knowledgeable person alive, and was pointed to a monk... a devoted worshipper.",
-      "foot": "Sahih Muslim 2766"
+      "foot": "Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/34969199/14813142_1080_1920_30fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "He told the monk everything. Ninety-nine lives. Is there repentance for me? And the monk said... no. So he killed him too. One hundred.",
-      "foot": "Sahih Muslim 2766"
+      "foot": "Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/12460328/12460328-hd_1080_1920_60fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "But he did not stop asking. And this time he was sent to a scholar... a man of knowledge, not just devotion. One hundred lives, he said. Is there repentance for me? The scholar answered... yes. And who could stand between you and repentance?",
-      "foot": "Sahih Muslim 2766"
+      "foot": "Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/12899247/12899247-hd_1080_1920_60fps.mp4",
+      "videoDuration": 12
     },
     {
       "type": "narration",
       "text": "But leave this place, the scholar said. Your land is an evil land. Go to such and such a town... where people worship Allah... and worship with them. And do not come back.",
-      "foot": "Sahih Muslim 2766"
+      "foot": "Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/37028274/15687505_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "So the man set out. And halfway down that road... death came for him. No new town, no worship, not one good deed written down... except a direction. As he died, he turned his chest toward the town he was trying to reach.",
-      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
+      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/31562160/13450991_1080_1920_60fps.mp4",
+      "videoDuration": 16
     },
     {
       "type": "narration",
       "text": "Then the angels of mercy and the angels of punishment argued over him. He came repenting, said one side. He never did one good thing, said the other. So an angel in human form was sent to judge... measure the ground between the two lands.",
-      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
+      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/33421809/14225271_1080_1920_30fps.mp4",
+      "videoDuration": 35
     },
     {
       "type": "narration",
       "text": "And Allah commanded the good town to draw near... and the evil one to move away. They measured. He was closer to the land of worship... by a single hand-span. So the angels of mercy took him. And in the Prophet's words... he was forgiven.",
-      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766"
+      "foot": "Sahih al-Bukhari 3470; Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/31945743/13609363_1080_1920_30fps.mp4",
+      "videoDuration": 17
     },
     {
       "type": "narration",
       "text": "He never prayed in the new town. He never even saw it. He just died... facing it. If a hand-span of direction outweighed a hundred graves... then no one listening to this is too far gone.",
-      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766"
+      "foot": "Sahih al-Bukhari 3470, Sahih Muslim 2766",
+      "video": "https://videos.pexels.com/video-files/8014422/8014422-hd_1080_1920_25fps.mp4",
+      "videoDuration": 9
     }
   ]
 }

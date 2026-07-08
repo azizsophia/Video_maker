@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "The ground you are standing on right now... is keeping records. And the Qur'an says that one Day, it will report everything it saw.",
-      "foot": "Qur'an 99:4-5"
+      "foot": "Qur'an 99:4-5",
+      "video": "https://videos.pexels.com/video-files/35819958/15187676_1080_1920_30fps.mp4",
+      "videoDuration": 17
     },
     {
       "type": "narration",
@@ -38,52 +40,70 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Qur'an, Surah 99"
+      "foot": "Qur'an, Surah 99",
+      "video": "https://videos.pexels.com/video-files/34617339/14671456_1080_1920_60fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "Eight verses. It opens with the last morning the world will ever see. When the earth is shaken... with its final earthquake.",
       "quote": "99:1",
-      "foot": "Qur'an 99:1 (shown, not recited)"
+      "foot": "Qur'an 99:1 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/36298433/15392740_1080_1920_60fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "And the earth discharges its burdens. Everything it has been holding... the dead it swallowed, the secrets buried in it... given up at once.",
       "quote": "99:2",
-      "foot": "Qur'an 99:2 (shown, not recited)"
+      "foot": "Qur'an 99:2 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/15340966/15340966-hd_1080_1920_30fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "And man, standing on the one thing that was always solid, says... what is wrong with it? The most stable thing in every human life... the ground... in revolt.",
       "quote": "99:3",
-      "foot": "Qur'an 99:3 (shown, not recited)"
+      "foot": "Qur'an 99:3 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/20608173/20608173-hd_1080_1920_60fps.mp4",
+      "videoDuration": 24
     },
     {
       "type": "narration",
       "text": "Then the verse this whole surah turns on. That Day, it will report its news... because your Lord has inspired it. The earth, watching all along... called as a witness to the stand.",
       "quote": "99:4",
-      "foot": "Qur'an 99:4-5 (shown, not recited)"
+      "foot": "Qur'an 99:4-5 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/16668194/16668194-hd_1080_1920_24fps.mp4",
+      "videoDuration": 9
     },
     {
       "type": "narration",
       "text": "Every place you have ever stood was a location with a memory. The floor where you prayed. The room where you lied. The street where you gave... or took. On that Day, the venues themselves speak.",
-      "foot": "Qur'an 99:4-5"
+      "foot": "Qur'an 99:4-5",
+      "video": "https://videos.pexels.com/video-files/15168410/15168410-hd_1080_1920_30fps.mp4",
+      "videoDuration": 13
     },
     {
       "type": "narration",
       "text": "And the surah ends with the finest scale ever described. So whoever does an atom's weight of good will see it... and whoever does an atom's weight of evil will see it.",
       "quote": "99:7",
-      "foot": "Qur'an 99:7-8 (shown, not recited)"
+      "foot": "Qur'an 99:7-8 (shown, not recited)",
+      "video": "https://videos.pexels.com/video-files/9667674/9667674-hd_1080_1920_25fps.mp4",
+      "videoDuration": 8
     },
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, was once asked whether any revelation had come down about donkeys... of all things. And he answered that nothing had come down about them except one unique, comprehensive verse... the verse you just heard.",
-      "foot": "Sahih al-Bukhari 2371"
+      "foot": "Sahih al-Bukhari 2371",
+      "video": "https://videos.pexels.com/video-files/36906606/15634180_1080_1920_60fps.mp4",
+      "videoDuration": 21
     },
     {
       "type": "narration",
       "text": "An atom's weight. Nothing you do is too small to be filed... and nothing too small to be repaid. You are leaving testimony in the ground behind you, everywhere you walk. Make it evidence for you... not against you.",
-      "foot": "Qur'an 99:7-8"
+      "foot": "Qur'an 99:7-8",
+      "video": "https://videos.pexels.com/video-files/11888528/11888528-hd_1080_1920_30fps.mp4",
+      "videoDuration": 34
     }
   ]
 }
