@@ -1,34 +1,96 @@
-# Batch-3 scheduled-shorts flagged-clip replacements (9:16 portrait)
+# Batch 5 (9:16 portrait) - one query per beat, 10 ajr-first shorts
 --portrait
-# night-and-day b0 (religion reaching everywhere; was bright town aerial)
-earth night lights from space
-night mountains moonlit aerial dark
-# night-and-day b4 (Tamim al-Dari narration; was blown-out parchment)
-old parchment scroll candlelight dark
-old book pages dark warm light
-# greeting-grown-cold b4 (ibn Mas'ud fuller narration; was port cranes)
-old stone city night lanterns
-dark alley old city night empty
-# greeting-grown-cold b5 (circle of peace shrinking)
-single lantern dark street night
-candle flame small dark room
-# greeting-grown-cold b6 (push back with one sentence; was bright signage street)
-two cups tea dark table warm
-doorway warm light night dark
-# greeting-grown-cold cover (was road signage)
-warm lantern night street empty dark
-# yasbahun b1 (the verse of the swimmers title card; was license plate)
-stars night sky rotation timelapse
-milky way dark sky vertical
-# yasbahun b2 (fixed dome sky imagined; was bright badlands)
-desert night sky dome stars
-night sky panorama dark silhouette
-# yasbahun b4 (sun cannot reach the moon; was bright clouds)
-moon night sky dark clouds
-crescent moon dark sky
-# time-speeds-up b2 (list of the last stretch; was dune-bashing tourism)
-sand dunes wind ripples dusk dark
+# night-call (9)
+sleeping city lights night aerial
+starry night sky slow timelapse
+dark clouds moving night sky
+single lit window night dark building
+hand raised silhouette dark night
+lantern glow dark night
+empty street night moonlight
+prayer mat dark room dim light
+dawn first light horizon dark
+# ocean-of-sins (8)
+sea foam waves black sand night
+dark ocean waves slow motion
+foam dissolving water macro dark
+ocean horizon dusk dark
+misty sea dark moody
+tongue-tied... calm dark water ripples
+counting beads tasbih dark hands
+gentle waves shore night dark
+# light-heavy (8)
+feather falling slow motion dark
+mountain silhouette dark mist
+old balance scale dark still life
+soft light dust particles dark
+dark sky faint stars
+warm light glow dark abstract
+mist over dark mountains
+feather floating dark backlight
+# last-night (9)
+dark bedroom dim light night
+water droplets slow motion dark
+candle flame flicker dark
+made bed dim room shadow
+hands cupped dua dark
+moonlight through window dark room
+still dark room night quiet
+silhouette lying down under sheet dark
+dawn light through curtains dim
+# angel-ameen (8)
+light rays through dark clouds
+two candles glowing dark
+whisper light abstract dark
+night sky stars vast
+soft light ascending dark
+single candle flame dark
+warm glow orb dark abstract
+hands raised prayer silhouette dark
+# friday-hour (8)
+golden hour sun setting dark clouds
+mosque silhouette sunset minaret
 hourglass sand dark macro
-# time-speeds-up b3 caution (bright overcast)
-clock hands macro dark
-fast moving clouds night timelapse
+sun arc sky timelapse dusk
+door light opening dark
+raised hands dua sunset silhouette
+last light horizon dusk dark
+sun dipping below horizon dark
+# fajr-protection (8)
+first light dawn desert dark
+mosque silhouette dawn blue hour
+protective clouds sky dark dawn
+predawn sky stars fading
+prayer mat unrolled dim dawn light
+dark horizon glow before sunrise
+lantern dawn path dark
+sunrise over dark mountains
+# two-verses (8)
+open book dim candlelight dark
+night sky calm stars
+mushaf pages soft light dark angle
+shield of light abstract dark
+candle beside book night
+hands holding open book dim
+moonlit calm night sky
+soft light glow dark peaceful
+# three-deeds (9)
+seed sprouting soil macro
+water ripples spreading dark
+tree growing time-lapse silhouette
+candle lighting another candle dark
+old well desert stone
+book pages turning dim light
+flowing water stream dark
+hand planting seed soil
+light passing on dark abstract
+# moving-branch (9)
+thorny branch on path dark
+hand moving branch ground
+empty dirt path dawn dark
+dry desert road dusk
+fallen branch trail forest dark
+clear path light ahead dark
+walking path sand footprints dusk
+stone path old road dark
+sunrise clear road horizon
