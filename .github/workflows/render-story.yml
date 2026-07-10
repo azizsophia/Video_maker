@@ -108,6 +108,11 @@ jobs:
           python-version: "3.11"
 
       - name: Upload to Google Drive
+        # Optional convenience step. continue-on-error is load-bearing: if this
+        # step fails the job, actions/cache never saves the narration cache and
+        # every subsequent render re-bills the FULL story narration (this
+        # exhausted the ElevenLabs quota on 2026-07-10).
+        continue-on-error: true
         if: ${{ steps.drive.outputs.method != 'none' }}
         env:
           DRIVE_UPLOAD_URL: ${{ secrets.DRIVE_UPLOAD_URL }}
