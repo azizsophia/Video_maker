@@ -55,10 +55,21 @@ greeting-grown-cold, time-speeds-up, night-and-day, yasbahun (07-11 .. 07-16).
 lizards-hole; unwanted-charity; constantinople-short (cross in footage +
 topic overlap).
 
+### PRODUCED + DELIVERED to owner - BATCH 4 (2026-07-10), owner is scheduling
+
+10 Hereafter/unseen shorts, all gates passed (source tables in
+docs/batch4-sources.md, fact-check + readability + pronunciation audits in
+docs/, tightened footage re-QC after owner nail-polish catch, render-still QC
+with fixes): sirat-bridge; sun-from-west; first-night-grave; skin-witness;
+seven-shade; killed-ninety-nine; cave-boulder; beast-that-speaks; thirsty-dog;
+zalzalah. Artifact links in the delivery message (session 2026-07-10).
+
 ### In production
 
 Khadijah long-form (16:9, Khadijah cadence expanded to 8+ min) - started
-2026-07-05 at owner request; full QC gates apply.
+2026-07-05 at owner request. Script, fact-check, readability, phonetics and
+all 32 footage beats DONE; contact sheet + names-test mp3 with the owner;
+renders on her sign-off.
 
 ## App footer for long-form descriptions (standing advert)
 
