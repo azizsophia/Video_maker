@@ -1,0 +1,27 @@
+{
+  "id": "three-deeds",
+  "title": "Most Deeds Die With You. Three Keep Earning Forever",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": { "title": "Three That Never Die", "kicker": "REWARD AFTER DEATH" },
+  "captions": {
+    "tiktok": "When you die, your record closes. Except for three things that keep earning for you in the grave. Sahih Muslim 1631.",
+    "shorts": "Three deeds that keep rewarding you after death. Sahih Muslim 1631.",
+    "reels": "When you die, your record closes. Except for three things that keep earning for you in the grave. Sahih Muslim 1631.",
+    "hashtags": ["#islam", "#sadaqahjariyah", "#edutokcontest", "#legacy", "#muslimtiktok"]
+  },
+  "segments": [
+    { "type": "narration", "text": "The moment you die, your book of deeds closes. No more prayers, no more charity, nothing added. Except for three things... that keep writing to your account long after you are gone.", "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "The Prophet, peace be upon him, named them exactly.", "title": "THREE THAT REMAIN", "titleSub": "the deeds that outlive you", "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }, "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "He said: when a person dies, all his deeds come to an end, except three.", "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "The first... an ongoing charity. Something you gave that keeps giving. A well that still gives water. A tree that still gives fruit. A thing that outlasts your hands.", "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "The second... knowledge that people still benefit from. A lesson you taught. A truth you passed on, that someone acts on, and teaches again, after you are gone.", "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "The third... a righteous child who prays for you. Someone you raised well, whose whispered dua reaches you in a place you can no longer earn anything for yourself.", "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "And notice the shape of all three. Each one is a seed. You plant it now, in a life that ends... and it keeps growing in a life that does not.", "foot": "Sahih Muslim 1631" },
+    { "type": "narration", "text": "There is even a fourth door hidden here. The Prophet, peace be upon him, said: whoever guides someone to good has a reward like the one who does it. Point a person to any of these three... and their harvest becomes yours too.", "foot": "Sahih Muslim 1893" },
+    { "type": "narration", "text": "So ask one question tonight. What have I planted that will still be growing when I am gone? If the answer is nothing yet... plant one thing this week. Your record does not have to close when you do.", "foot": "Sahih Muslim 1631, Sahih Muslim 1893" }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "friday-hour",
+  "title": "The Hour on Friday When the Door Is Open",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "The Open Hour",
+    "kicker": "EVERY FRIDAY"
+  },
+  "captions": {
+    "tiktok": "There is one hour every Friday when a dua is not refused. Most people miss it. Sahih al-Bukhari 935.",
+    "shorts": "The Friday hour when Allah will not refuse a dua. Sahih al-Bukhari 935, Sahih Muslim 852.",
+    "reels": "There is one hour every Friday when a dua is not refused. Most people miss it. Sahih al-Bukhari 935.",
+    "hashtags": [
+      "#islam",
+      "#jummah",
+      "#edutokcontest",
+      "#dua",
+      "#muslimtiktok"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Once every week, there is a single hour when whatever you ask of Allah... He will not refuse. It comes every Friday. And most people let it pass without noticing.",
+      "foot": "Sahih al-Bukhari 935, Sahih Muslim 852"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, called it the hour of Friday.",
+      "title": "THE HOUR",
+      "titleSub": "a window every Friday the Prophet, peace be upon him, told us to catch",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "foot": "Sahih al-Bukhari 935"
+    },
+    {
+      "type": "narration",
+      "text": "He said: on Friday there is an hour. If a Muslim happens to be standing in prayer, asking Allah for something good, when that hour comes... Allah will give him what he asked.",
+      "foot": "Sahih al-Bukhari 935"
+    },
+    {
+      "type": "narration",
+      "text": "And then he did something with his hand. He gestured, showing how short it is. A small window, hidden inside the biggest day of the week.",
+      "foot": "Sahih al-Bukhari 935"
+    },
+    {
+      "type": "narration",
+      "text": "In Islam, Friday is the greatest day of the week. The day of gathering, the day of the Friday prayer. And tucked inside it is this one moment when the door does not close.",
+      "foot": "Sahih al-Bukhari 935"
+    },
+    {
+      "type": "narration",
+      "text": "Its exact time was left hidden, on purpose. The same way the night of power is hidden in Ramadan. So that you do not wait for one minute... you stay ready across the whole day.",
+      "foot": "Sahih al-Bukhari 935"
+    },
+    {
+      "type": "narration",
+      "text": "But the scholars pointed to the strongest window. The last hour of Friday, just before the sun sets. As Friday ends, sit, raise your hands, and ask.",
+      "foot": "seerah / the scholars, on the strongest reported time"
+    },
+    {
+      "type": "narration",
+      "text": "So this Friday, do not let the sun go down in silence. In that last hour, bring the thing you have been asking for all year. This is the hour it is not refused.",
+      "foot": "Sahih al-Bukhari 935, Sahih Muslim 852"
+    }
+  ]
+}

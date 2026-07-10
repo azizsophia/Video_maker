@@ -1,0 +1,26 @@
+{
+  "id": "two-verses",
+  "title": "The Two Verses That Are Enough for You",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": { "title": "They Are Enough", "kicker": "TWO VERSES BEFORE SLEEP" },
+  "captions": {
+    "tiktok": "Two verses, recited before you sleep, and they are enough for you. Enough for what? Sahih al-Bukhari 5009.",
+    "shorts": "The last two verses of al-Baqarah: recite them at night and they suffice you. Sahih al-Bukhari 5009.",
+    "reels": "Two verses, recited before you sleep, and they are enough for you. Enough for what? Sahih al-Bukhari 5009.",
+    "hashtags": ["#quran", "#albaqarah", "#edutokcontest", "#islam", "#muslimtiktok"]
+  },
+  "segments": [
+    { "type": "narration", "text": "The Prophet, peace be upon him, said that if you recite two particular verses at night... they are enough for you. He did not finish the sentence. Enough for what?", "foot": "Sahih al-Bukhari 5009, Sahih Muslim 807" },
+    { "type": "narration", "text": "They are the last two verses of Surah al-Baqarah.", "title": "THE LAST TWO", "titleSub": "of Surah al-Baqarah, the longest chapter of the Qur'an", "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }, "foot": "Sahih al-Bukhari 5009" },
+    { "type": "narration", "text": "The Prophet, peace be upon him, said: whoever recites the last two verses of Surah al-Baqarah at night, they will suffice him. That single word, suffice, is the whole mystery.", "foot": "Sahih al-Bukhari 5009, Sahih Muslim 807" },
+    { "type": "narration", "text": "The verses themselves are a declaration of faith, and then a dua. The Messenger has believed... and the believers. Each one believes in Allah, His angels, His books, and His messengers.", "quote": "2:285", "foot": "Qur'an 2:285 (shown, not recited)" },
+    { "type": "narration", "text": "And then the asking begins. Our Lord, do not hold us to account if we forget or make a mistake. Our Lord, do not burden us beyond what we can bear.", "quote": "2:286", "foot": "Qur'an 2:286 (shown, not recited)" },
+    { "type": "narration", "text": "Pardon us. Forgive us. Have mercy on us. You are our protector, so give us victory. The chapter ends on a human being, at the edge of his strength, handing the weight back to Allah.", "quote": "2:286", "foot": "Qur'an 2:286 (shown, not recited)" },
+    { "type": "narration", "text": "So what does enough mean? The scholars offered several answers. Enough as a protection through the night. Enough in the place of standing in prayer. Enough against every harm. The Prophet left it open... so it would cover all of them.", "foot": "seerah / the scholars, on the meaning of 'suffice'" },
+    { "type": "narration", "text": "So tonight, before you close your eyes, read these two verses. Two verses, and whatever enough means for you... is yours.", "foot": "Sahih al-Bukhari 5009, Sahih Muslim 807" }
+  ]
+}

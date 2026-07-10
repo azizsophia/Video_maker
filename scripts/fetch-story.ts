@@ -156,6 +156,12 @@ const PHONETIC: Record<string, string> = {
   ammuriyyah: "Ammooreeya",
   wahy: "wahee",
   thawr: "Thowr",
+  // Batch 5 dhikr terms (spoken transliteration; opt-in per house rule).
+  // EAR-TEST REQUIRED before any batch-5 render - these are provisional.
+  subhaan: "sub-haan",
+  allahi: "al-laa-hi",
+  bihamdih: "bee-ham-dih",
+  "al-azeem": "al-a-zeem",
   // Batch 4 names/terms, vocalized per MSA (verified against the vocalized
   // hadith/Qur'an texts pulled during batch-4 source verification). NOTE:
   // deliberately NO bare "said" key (would poison the English verb); the

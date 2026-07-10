@@ -1,0 +1,74 @@
+{
+  "id": "light-heavy",
+  "title": "Two Words Lighter Than a Breath, Heavier Than Mountains",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": {
+    "title": "Light and Heavy",
+    "kicker": "BELOVED TO THE MOST MERCIFUL"
+  },
+  "captions": {
+    "tiktok": "Two phrases so light on the tongue, so heavy on the scale, and beloved to the Most Merciful. Sahih al-Bukhari 6682.",
+    "shorts": "Light on the tongue, heavy in the balance, beloved to the Most Merciful. Sahih al-Bukhari 6682, Sahih Muslim 2694.",
+    "reels": "Two phrases so light on the tongue, so heavy on the scale, and beloved to the Most Merciful. Sahih al-Bukhari 6682.",
+    "hashtags": [
+      "#islam",
+      "#dhikr",
+      "#edutokcontest",
+      "#jannah",
+      "#muslimtiktok"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There are two short phrases so light you could say them without thinking... and yet on the Day of Judgment, they land on the scale heavier than mountains.",
+      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, called them a treasure.",
+      "title": "LIGHT, YET HEAVY",
+      "titleSub": "two words beloved to ar-Rahman, the Most Merciful",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "foot": "Sahih al-Bukhari 6682"
+    },
+    {
+      "type": "narration",
+      "text": "He said: two words are light on the tongue, heavy on the scale, and beloved to the Most Merciful. Then he said them.",
+      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694"
+    },
+    {
+      "type": "narration",
+      "text": "Subhaan Allahi wa bihamdih. Glory to Allah, and all praise to Him.",
+      "foot": "Sahih al-Bukhari 6682"
+    },
+    {
+      "type": "narration",
+      "text": "Subhaan Allah al-Azeem. Glory to Allah, the Most Great.",
+      "foot": "Sahih al-Bukhari 6682"
+    },
+    {
+      "type": "narration",
+      "text": "Feel the strangeness of it. On that Day, deeds are weighed, and people watch their scale, terrified it is too light. These words, that cost you a breath, come down on it like a mountain.",
+      "foot": "Sahih al-Bukhari 6682"
+    },
+    {
+      "type": "narration",
+      "text": "And there is a second reward hidden in the same sentence. They are beloved to the Most Merciful. You are not just filling a scale. You are saying something your Lord loves to hear.",
+      "foot": "Sahih al-Bukhari 6682"
+    },
+    {
+      "type": "narration",
+      "text": "So take them with you. Two lines, under your breath, all day. Subhaan Allahi wa bihamdih... Subhaan Allah al-Azeem. The lightest thing you will do today... may be the heaviest thing you own tomorrow.",
+      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "moving-branch",
+  "title": "Forgiven Everything, for Moving a Branch",
+  "theme": "ketabi",
+  "cinematic": true,
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (ElevenLabs)",
+  "showOutro": true,
+  "cover": { "title": "One Branch", "kicker": "THE SMALLEST DEED" },
+  "captions": {
+    "tiktok": "A man was forgiven all his sins for one thing: he moved a branch off the road. Sahih Muslim 1914.",
+    "shorts": "Forgiven everything for moving a branch from the path. Sahih Muslim 1914.",
+    "reels": "A man was forgiven all his sins for one thing: he moved a branch off the road. Sahih Muslim 1914.",
+    "hashtags": ["#islam", "#charity", "#edutokcontest", "#mercy", "#muslimtiktok"]
+  },
+  "segments": [
+    { "type": "narration", "text": "A man was forgiven all of his sins... for one small thing. He saw a branch lying across the road, and he moved it. That was all. And Allah forgave him.", "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "The Prophet, peace be upon him, told this story to show how little it can take.", "title": "ONE BRANCH", "titleSub": "a story told by the Prophet, peace be upon him", "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }, "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "A man was walking along a road, and found a thorny branch lying across it. Something that would scratch or slow whoever came next.", "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "He could have stepped around it. It was not his problem. He did not put it there, and no one was watching to thank him.", "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "But he moved it. He took the branch off the path, thinking of the strangers he would never meet, who would now walk through safely.", "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "And the Prophet, peace be upon him, said: Allah appreciated it from him, and forgave him.", "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "One branch. No audience. No cost. And it was enough to move the mercy of Allah. Because He does not weigh the size of the act... He weighs the heart that did it.", "foot": "Sahih Muslim 1914" },
+    { "type": "narration", "text": "The Prophet, peace be upon him, even counted removing harm from the road among the best deeds of this entire nation. The small kindness you almost skip... may be the one that counts most.", "foot": "Sahih Muslim 553" },
+    { "type": "narration", "text": "So today, do not step around it. The glass on the pavement. The bag someone dropped. The branch across the path. Move it, for the strangers behind you. It may be the deed that empties your record of sin.", "foot": "Sahih Muslim 1914, Sahih Muslim 553" }
+  ]
+}
