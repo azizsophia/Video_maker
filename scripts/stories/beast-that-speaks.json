@@ -50,7 +50,8 @@
       "quote": "27:82",
       "foot": "Qur'an 27:82 (shown, not recited)",
       "video": "https://videos.pexels.com/video-files/7624037/7624037-hd_1080_1920_30fps.mp4",
-      "videoDuration": 11
+      "videoDuration": 11,
+      "dim": 0.3
     },
     {
       "type": "narration",

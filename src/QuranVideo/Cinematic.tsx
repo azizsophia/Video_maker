@@ -197,8 +197,8 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
       {foot ? (
         <div style={{ marginTop: wide ? 28 : 42, opacity: flourish * 0.95 }}>
           <span style={{ fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.92)", background: "rgba(6,12,9,0.42)", padding: "7px 18px", borderRadius: 14, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
-            {/* strip the production note; the screen shows just the citation */}
-            {foot.replace(/\s*\(shown, not recited\)\s*$/i, "")}
+            {/* strip the production note wherever it sits; the screen shows just the citation */}
+            {foot.replace(/\s*\(shown, not recited\)\s*/gi, " ").replace(/\s+;/g, ";").trim()}
           </span>
         </div>
       ) : null}
