@@ -1,113 +1,34 @@
-# Batch 4 shorts (9:16) - one query per beat, 10 scripts
+# Batch-3 scheduled-shorts flagged-clip replacements (9:16 portrait)
 --portrait
-# sirat-bridge
-narrow bridge fog dark night
-dark clouds moving night timelapse
-glowing embers fire dark night
-sword blade macro dark
-thorn branch silhouette macro dark
-lightning storm night sky
-light rays darkness fog
-sparks falling dark slow motion
-praying hands silhouette dark
-path light horizon night
-# sun-from-west
-sunrise timelapse ocean horizon
-dark horizon glow night
-desert night stars wide sky
-sun timelapse sky clouds
-sunset red sky timelapse dramatic
-city skyline dawn silhouette
-golden light clouds dramatic sky
-hourglass sand macro dark
-candle burning low dark
-dawn light valley mist
-# first-night-grave
-feet walking away dirt path dusk
-moonlit clouds dark night
-desert mound earth dusk dark
-candle flame flicker dark room
-light beam window dark room dust
-starry sky vast night wide
-canyon vast light rays
-dark tunnel narrow stone
-mountain steady night sky
-lantern path night walking
-# skin-witness
-hand macro skin detail dark
-ink black water abstract
-lava fire glow night
-hands macro dark dramatic light
-mirror reflection dark room
-stone texture cracked dark
-kaaba makkah night
-old stone alley dark night
-dark water surface ripple night
-silhouette person walking toward light
-# seven-shade
-sun blazing sky heat haze
-sun rays clouds dramatic dark
-desert heat shimmer mirage
-old balance scale dark still life
-mosque silhouette sunset minaret
-two hands clasp silhouette dark
-wooden door light dark room
-coins hand giving dark
-water drop macro dark slow motion
-tree shade light desert lone
-# killed-ninety-nine
-dark figure walking desert night
-storm clouds dark timelapse
-stone hut candle dark interior
-red sky storm dark clouds
-old books candlelight dark
-desert road night moonlight
-desert sand wind dusk dark
-distant oasis palm silhouette dusk
-storm clouds lightning dark sky
-hand reaching light dark
-footprints sand horizon dusk
-# cave-boulder
-cave entrance night dark rock
-boulder rock dark mist mountain
-cave interior darkness light crack
-clay bowl milk dark still life
-light beam cave crack dark
-cracked dry earth drought dusk
-gold coins dark cloth still life
-sheep herd dusk hills silhouette
-cave mouth bright light exit
-starry sky mountain silhouette night
-# beast-that-speaks
-cracked earth crevice dark
-dust storm dark ominous desert
-desert night wind dark sand
-animal eye macro dark
-dark clouds gathering timelapse
-fog mist dark landscape night
-eclipse dark sun sky
-heavy old door closing dark
-old manuscript pages candlelight
-horizon night stars silence
-# thirsty-dog
-dog desert alone hot day
-old stone well desert
-heat haze desert path sun
-dog panting close up
-drawing water old well bucket
-light rays clouds sky heaven
-old stone well rope bucket
-lantern glow night desert
-bird drinking water macro
-desert flower bloom dawn
-# zalzalah
-earth soil macro dark
-mountain dust rockslide
-ground cracked debris dark
-deep canyon dark aerial
-sand ripples wind pattern dark
-empty old room light window
-dust particles light beam macro
-feather falling dark slow motion
-old scale weights macro dark
-footsteps sand dawn light
+# night-and-day b0 (religion reaching everywhere; was bright town aerial)
+earth night lights from space
+night mountains moonlit aerial dark
+# night-and-day b4 (Tamim al-Dari narration; was blown-out parchment)
+old parchment scroll candlelight dark
+old book pages dark warm light
+# greeting-grown-cold b4 (ibn Mas'ud fuller narration; was port cranes)
+old stone city night lanterns
+dark alley old city night empty
+# greeting-grown-cold b5 (circle of peace shrinking)
+single lantern dark street night
+candle flame small dark room
+# greeting-grown-cold b6 (push back with one sentence; was bright signage street)
+two cups tea dark table warm
+doorway warm light night dark
+# greeting-grown-cold cover (was road signage)
+warm lantern night street empty dark
+# yasbahun b1 (the verse of the swimmers title card; was license plate)
+stars night sky rotation timelapse
+milky way dark sky vertical
+# yasbahun b2 (fixed dome sky imagined; was bright badlands)
+desert night sky dome stars
+night sky panorama dark silhouette
+# yasbahun b4 (sun cannot reach the moon; was bright clouds)
+moon night sky dark clouds
+crescent moon dark sky
+# time-speeds-up b2 (list of the last stretch; was dune-bashing tourism)
+sand dunes wind ripples dusk dark
+hourglass sand dark macro
+# time-speeds-up b3 caution (bright overcast)
+clock hands macro dark
+fast moving clouds night timelapse
