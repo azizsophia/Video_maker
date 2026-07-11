@@ -1,96 +1,14 @@
-# Batch 5 (9:16 portrait) - one query per beat, 10 ajr-first shorts
+# Batch 5 re-pull: 3 beats lacking a clean literal clip (9:16 portrait)
 --portrait
-# night-call (9)
-sleeping city lights night aerial
-starry night sky slow timelapse
-dark clouds moving night sky
-single lit window night dark building
-hand raised silhouette dark night
-lantern glow dark night
-empty street night moonlight
-prayer mat dark room dim light
-dawn first light horizon dark
-# ocean-of-sins (8)
-sea foam waves black sand night
-dark ocean waves slow motion
-foam dissolving water macro dark
-ocean horizon dusk dark
-misty sea dark moody
-tongue-tied... calm dark water ripples
-counting beads tasbih dark hands
-gentle waves shore night dark
-# light-heavy (8)
-feather falling slow motion dark
-mountain silhouette dark mist
-old balance scale dark still life
-soft light dust particles dark
-dark sky faint stars
-warm light glow dark abstract
-mist over dark mountains
-feather floating dark backlight
-# last-night (9)
-dark bedroom dim light night
-water droplets slow motion dark
-candle flame flicker dark
-made bed dim room shadow
-hands cupped dua dark
-moonlight through window dark room
-still dark room night quiet
-silhouette lying down under sheet dark
-dawn light through curtains dim
-# angel-ameen (8)
-light rays through dark clouds
-two candles glowing dark
-whisper light abstract dark
-night sky stars vast
-soft light ascending dark
-single candle flame dark
-warm glow orb dark abstract
-hands raised prayer silhouette dark
-# friday-hour (8)
-golden hour sun setting dark clouds
-mosque silhouette sunset minaret
-hourglass sand dark macro
-sun arc sky timelapse dusk
-door light opening dark
-raised hands dua sunset silhouette
-last light horizon dusk dark
-sun dipping below horizon dark
-# fajr-protection (8)
-first light dawn desert dark
-mosque silhouette dawn blue hour
-protective clouds sky dark dawn
-predawn sky stars fading
-prayer mat unrolled dim dawn light
-dark horizon glow before sunrise
-lantern dawn path dark
-sunrise over dark mountains
-# two-verses (8)
-open book dim candlelight dark
-night sky calm stars
-mushaf pages soft light dark angle
-shield of light abstract dark
-candle beside book night
-hands holding open book dim
-moonlit calm night sky
-soft light glow dark peaceful
-# three-deeds (9)
-seed sprouting soil macro
-water ripples spreading dark
-tree growing time-lapse silhouette
-candle lighting another candle dark
-old well desert stone
-book pages turning dim light
-flowing water stream dark
-hand planting seed soil
-light passing on dark abstract
-# moving-branch (9)
-thorny branch on path dark
-hand moving branch ground
-empty dirt path dawn dark
-dry desert road dusk
-fallen branch trail forest dark
-clear path light ahead dark
-walking path sand footprints dusk
-stone path old road dark
-sunrise clear road horizon
+# light-heavy b2: a real two-pan balance / weighing scale, dark, no hands/text
+antique brass balance scale dark background
+weighing scales black background still
+justice scale silhouette dark
+# friday-hour b2: a real hourglass / sand timer, dark (how short the hour is)
+hourglass sand timer black background
+sand timer running dark close up
+hourglass silhouette dark
+# friday-hour b7: clean sunset sky over horizon, no people, no city
+sunset sky clouds horizon no people
+sun setting sea horizon dark
+golden sunset clouds dark sky vertical
