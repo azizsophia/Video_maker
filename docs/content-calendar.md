@@ -64,6 +64,18 @@ with fixes): sirat-bridge; sun-from-west; first-night-grave; skin-witness;
 seven-shade; killed-ninety-nine; cave-boulder; beast-that-speaks; thirsty-dog;
 zalzalah. Artifact links in the delivery message (session 2026-07-10).
 
+RENDER-READY (rendered, no re-render needed - ready to schedule):
+- sun-from-west: runs/29097229052/artifacts/8229680026
+- skin-witness: runs/29064751201/artifacts/8216941573
+- seven-shade: runs/29097231093/artifacts/8229670268
+- killed-ninety-nine: runs/29097232974/artifacts/8229622687
+- cave-boulder: runs/29098672456/artifacts/8230259588
+- zalzalah: runs/29100079573/artifacts/8230731452
+HELD for re-render on ElevenLabs top-up (do NOT schedule current cut):
+sirat-bridge, first-night-grave (annotation/text leak); thirsty-dog,
+beast-that-speaks (too-bright beats regraded). Batch 5 (10 shorts) also
+awaits top-up.
+
 ### In production
 
 Khadijah long-form (16:9, Khadijah cadence expanded to 8+ min) - started
