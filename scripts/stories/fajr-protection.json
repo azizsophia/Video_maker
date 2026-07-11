@@ -6,21 +6,69 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
-  "cover": { "title": "Under Protection", "kicker": "SIGNED BEFORE SUNRISE" },
+  "cover": {
+    "title": "Under Protection",
+    "kicker": "SIGNED BEFORE SUNRISE"
+  },
   "captions": {
     "tiktok": "Pray Fajr, and you spend the whole day under the protection of Allah Himself. Sahih Muslim 657.",
     "shorts": "The dawn prayer that puts you under divine protection until night. Sahih Muslim 657.",
     "reels": "Pray Fajr, and you spend the whole day under the protection of Allah Himself. Sahih Muslim 657.",
-    "hashtags": ["#islam", "#fajr", "#edutokcontest", "#salah", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#fajr",
+      "#edutokcontest",
+      "#salah",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
-    { "type": "narration", "text": "There is a contract you can sign before the sun even rises. Sign it, and you spend the entire day under the protection of Allah Himself. And it costs you two units of prayer.", "foot": "Sahih Muslim 657" },
-    { "type": "narration", "text": "This is the dawn prayer. Fajr.", "title": "THE DAWN CONTRACT", "titleSub": "the protection the Prophet, peace be upon him, promised", "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }, "foot": "Sahih Muslim 657" },
-    { "type": "narration", "text": "The Prophet, peace be upon him, said: whoever prays the dawn prayer is under the protection of Allah for the rest of that day.", "foot": "Sahih Muslim 657" },
-    { "type": "narration", "text": "Feel the weight of that word. Not luck. Not a good mood. The protection, the guarantee, of the Lord of the worlds... draped over your whole day, from the first light.", "foot": "Sahih Muslim 657" },
-    { "type": "narration", "text": "And Fajr is the hardest prayer to keep. It comes when the bed is warmest and the world is silent. Which is exactly why it is the one that proves something.", "foot": "Sahih Muslim 657" },
-    { "type": "narration", "text": "The Prophet, peace be upon him, also said: whoever prays the night prayer in congregation, it is as if he prayed half the night. And whoever prays the dawn prayer too... it is as if he prayed the whole night through.", "foot": "Sahih Muslim 656" },
-    { "type": "narration", "text": "So the two ends of the dark, night and dawn, can be counted as a night spent standing before Allah. While you were asleep in between.", "foot": "Sahih Muslim 656" },
-    { "type": "narration", "text": "So set the alarm tonight for the hardest prayer. Get up, make wudu, and pray it. Before the world is even awake, your day is already under guard.", "foot": "Sahih Muslim 657, Sahih Muslim 656" }
+    {
+      "type": "narration",
+      "text": "There is a contract you can sign before the sun even rises. Sign it, and you spend the entire day under the protection of Allah Himself. And it costs you two units of prayer.",
+      "foot": "Sahih Muslim 657"
+    },
+    {
+      "type": "narration",
+      "text": "This is the dawn prayer. Fajr.",
+      "title": "THE DAWN CONTRACT",
+      "titleSub": "the protection the Prophet, peace be upon him, promised",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "foot": "Sahih Muslim 657"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, said: whoever prays the dawn prayer is under the protection of Allah. And the scholars explain that protection, that guarantee, stays over him through the day.",
+      "foot": "Sahih Muslim 657"
+    },
+    {
+      "type": "narration",
+      "text": "Feel the weight of that word. Not luck. Not a good mood. The protection, the guarantee, of the Lord of the worlds... draped over your whole day, from the first light.",
+      "foot": "Sahih Muslim 657"
+    },
+    {
+      "type": "narration",
+      "text": "And Fajr is the hardest prayer to keep. It comes when the bed is warmest and the world is silent. Which is exactly why it is the one that proves something.",
+      "foot": "Sahih Muslim 657"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, also said: whoever prays the night prayer in congregation, it is as if he prayed half the night. And whoever prays the dawn prayer in congregation... it is as if he prayed the whole night through.",
+      "foot": "Sahih Muslim 656"
+    },
+    {
+      "type": "narration",
+      "text": "So the two ends of the dark, night and dawn, can be counted as a night spent standing before Allah. While you were asleep in between.",
+      "foot": "Sahih Muslim 656"
+    },
+    {
+      "type": "narration",
+      "text": "So set the alarm tonight for the hardest prayer. Get up, make wudu, and pray it. Before the world is even awake, your day is already under guard.",
+      "foot": "Sahih Muslim 657, Sahih Muslim 656"
+    }
   ]
 }
