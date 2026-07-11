@@ -1,11 +1,10 @@
-# Batch 5 three-deeds fixes: b4 (well/fruit tree) + b7 (harvest, no body) (9:16 portrait)
+# Batch 5 final upgrades: angel-ameen b5 (de-dup candle) + last-night b2 (wudu=water) (9:16 portrait)
 --portrait
-# three-deeds b4: "a tree that still gives fruit" / "a well that still gives water" - literal, dark, no people/text
-dates hanging palm tree close up
-olives on branch tree dark
-ripe fruit hanging tree orchard dark
-old stone water well
-# three-deeds b7: "their harvest becomes yours" - ripe HARVEST, dark, no people/text/machinery
-golden wheat field sunset close up
-ripe wheat ears close up dark
-barley field dusk breeze
+# angel-ameen b5: "the angel says Ameen" - warm light from ABOVE, non-candle, dark, no people/text
+soft golden light rays from above dark
+warm sunlight breaking through dark clouds
+heavenly light beam glow dark sky
+# last-night b2: "first make wudu" - washing / running water over hands, dark, no face
+water pouring over hands dark
+clear water running hands close up dark
+water droplets flowing dark close up
