@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "There are two short phrases so light you could say them without thinking... and yet on the Day of Judgment, they land on the scale heavier than mountains.",
-      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694"
+      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694",
+      "video": "https://videos.pexels.com/video-files/15168376/15168376-hd_1080_1920_30fps.mp4",
+      "videoDuration": 41
     },
     {
       "type": "narration",
@@ -38,37 +40,52 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih al-Bukhari 6682"
+      "foot": "Sahih al-Bukhari 6682",
+      "video": "https://videos.pexels.com/video-files/28478881/12393505_1080_1920_60fps.mp4",
+      "videoDuration": 21
     },
     {
       "type": "narration",
       "text": "He said: two words are light on the tongue, heavy on the scale, and beloved to the Most Merciful. Then he said them.",
-      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694"
+      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694",
+      "video": "https://videos.pexels.com/video-files/19906163/19906163-hd_1080_1920_25fps.mp4",
+      "videoDuration": 16,
+      "dim": 0.5
     },
     {
       "type": "narration",
       "text": "Subhaan Allahi wa bihamdih. Glory to Allah, and all praise to Him.",
-      "foot": "Sahih al-Bukhari 6682"
+      "foot": "Sahih al-Bukhari 6682",
+      "video": "https://videos.pexels.com/video-files/7597753/7597753-hd_1080_1920_25fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "Subhaan Allah al-Azeem. Glory to Allah, the Most Great.",
-      "foot": "Sahih al-Bukhari 6682"
+      "foot": "Sahih al-Bukhari 6682",
+      "video": "https://videos.pexels.com/video-files/28123327/12305603_1080_1920_30fps.mp4",
+      "videoDuration": 11
     },
     {
       "type": "narration",
       "text": "Feel the strangeness of it. On that Day, deeds are weighed, and people watch their scale, terrified it is too light. These words, that cost you a breath, come down on it like a mountain.",
-      "foot": "Sahih al-Bukhari 6682"
+      "foot": "Sahih al-Bukhari 6682",
+      "video": "https://videos.pexels.com/video-files/7066736/7066736-hd_1080_1920_24fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "And there is a second reward hidden in the same sentence. They are beloved to the Most Merciful. You are not just filling a scale. You are saying something your Lord loves to hear.",
-      "foot": "Sahih al-Bukhari 6682"
+      "foot": "Sahih al-Bukhari 6682",
+      "video": "https://videos.pexels.com/video-files/28462200/12390771_1080_1920_60fps.mp4",
+      "videoDuration": 25
     },
     {
       "type": "narration",
       "text": "So take them with you. Two lines, under your breath, all day. Subhaan Allahi wa bihamdih... Subhaan Allah al-Azeem. The lightest thing you will do today... may be the heaviest thing you own tomorrow.",
-      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694"
+      "foot": "Sahih al-Bukhari 6682, Sahih Muslim 2694",
+      "video": "https://videos.pexels.com/video-files/8516378/8516378-hd_1080_1920_30fps.mp4",
+      "videoDuration": 12
     }
   ]
 }

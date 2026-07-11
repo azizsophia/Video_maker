@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "There is one sentence that, said enough times in a single day, can wipe out sins as many as the foam on the sea. And you can finish it before this video ends.",
-      "foot": "Sahih al-Bukhari 6405, Sahih Muslim 2691"
+      "foot": "Sahih al-Bukhari 6405, Sahih Muslim 2691",
+      "video": "https://videos.pexels.com/video-files/34640328/14682021_1080_1920_30fps.mp4",
+      "videoDuration": 12
     },
     {
       "type": "narration",
@@ -38,37 +40,51 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih al-Bukhari 6405"
+      "foot": "Sahih al-Bukhari 6405",
+      "video": "https://videos.pexels.com/video-files/33937728/14401510_1080_1920_30fps.mp4",
+      "videoDuration": 29
     },
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, said: whoever says these words a hundred times in a day... his sins are wiped away, even if they were like the foam of the sea.",
-      "foot": "Sahih al-Bukhari 6405, Sahih Muslim 2691"
+      "foot": "Sahih al-Bukhari 6405, Sahih Muslim 2691",
+      "video": "https://videos.pexels.com/video-files/8676956/8676956-hd_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "Sit with that picture. Stand at the shore and try to count the foam on the waves. You cannot. That is the measure of what one sentence can reach.",
-      "foot": "Sahih al-Bukhari 6405"
+      "foot": "Sahih al-Bukhari 6405",
+      "video": "https://videos.pexels.com/video-files/35684754/15123532_1080_1920_60fps.mp4",
+      "videoDuration": 35
     },
     {
       "type": "narration",
       "text": "And notice how light the price is. No money. No journey. Just your tongue moving, for a couple of minutes, once a day.",
-      "foot": "Sahih al-Bukhari 6405"
+      "foot": "Sahih al-Bukhari 6405",
+      "video": "https://videos.pexels.com/video-files/36777486/15585401_1080_1920_60fps.mp4",
+      "videoDuration": 20
     },
     {
       "type": "narration",
       "text": "The meaning matters as much as the sound. Subhaan Allah... You declare Allah far above every flaw. Wa bihamdih... and joined to His praise. In four words, you put the whole world in its right order.",
-      "foot": "meaning of the dhikr"
+      "foot": "meaning of the dhikr",
+      "video": "https://videos.pexels.com/video-files/15049445/15049445-hd_1080_1920_60fps.mp4",
+      "videoDuration": 22
     },
     {
       "type": "narration",
       "text": "A hundred sounds like a lot. It is not. On the walk to your car. Waiting for the kettle. In the last minutes before sleep. The count climbs on its own.",
-      "foot": "Sahih al-Bukhari 6405"
+      "foot": "Sahih al-Bukhari 6405",
+      "video": "https://videos.pexels.com/video-files/7126078/7126078-hd_1080_1920_24fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "So start now, while it is in front of you. Say it with me, and mean it. Subhaan Allahi wa bihamdih... one. The sea is large. So is what this erases.",
-      "foot": "Sahih al-Bukhari 6405, Sahih Muslim 2691"
+      "foot": "Sahih al-Bukhari 6405, Sahih Muslim 2691",
+      "video": "https://videos.pexels.com/video-files/19683564/19683564-hd_1080_1920_60fps.mp4",
+      "videoDuration": 50
     }
   ]
 }

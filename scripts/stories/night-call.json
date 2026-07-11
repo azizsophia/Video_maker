@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "Every single night, while most of the world is asleep, a question is asked from above. And almost no one is awake to answer it.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/12108471/12108471-hd_1080_1920_60fps.mp4",
+      "videoDuration": 59
     },
     {
       "type": "narration",
@@ -38,42 +40,58 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/30039749/12886534_1080_1920_30fps.mp4",
+      "videoDuration": 11
     },
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, said that in the last third of every night, our Lord descends to the lowest heaven, in a manner that befits Him. And He asks three things.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/32410878/13825441_1080_1920_30fps.mp4",
+      "videoDuration": 25
     },
     {
       "type": "narration",
       "text": "Is there anyone calling on Me... that I may answer him? The first question. An open line, and it is Allah Himself who is asking.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/19675280/19675280-hd_1080_1920_60fps.mp4",
+      "videoDuration": 11
     },
     {
       "type": "narration",
       "text": "Is there anyone asking of Me... that I may give him? The second. Whatever you need, this is the hour it is closest.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/11666243/11666243-hd_1080_1920_30fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "Is there anyone seeking My forgiveness... that I may forgive him? The third. No matter what the day held, the door is standing open in the dark.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/17392905/17392905-hd_1080_1920_60fps.mp4",
+      "videoDuration": 27
     },
     {
       "type": "narration",
       "text": "Think about the timing. Not at noon, when everyone is awake and busy. In the last hours before dawn, when almost nobody is listening. The offer is for the few who get up.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/26617030/11975118_1080_1920_30fps.mp4",
+      "videoDuration": 56
     },
     {
       "type": "narration",
       "text": "You do not need an hour. You do not need to be a scholar. Two units of prayer, and a whispered word, before the sky turns grey.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/20347208/20347208-hd_1080_1920_25fps.mp4",
+      "videoDuration": 10
     },
     {
       "type": "narration",
       "text": "So set an alarm tonight. Wake for the last stretch of the dark, even once. Someone is asking if anyone is there. Be the one who answers.",
-      "foot": "Sahih al-Bukhari 1145"
+      "foot": "Sahih al-Bukhari 1145",
+      "video": "https://videos.pexels.com/video-files/37002333/15675869_1080_1920_60fps.mp4",
+      "videoDuration": 26
     }
   ]
 }

@@ -26,7 +26,9 @@
     {
       "type": "narration",
       "text": "Once every week, there is a single hour when whatever you ask of Allah... He will not refuse. It comes every Friday. And most people let it pass without noticing.",
-      "foot": "Sahih al-Bukhari 935, Sahih Muslim 852"
+      "foot": "Sahih al-Bukhari 935, Sahih Muslim 852",
+      "video": "https://videos.pexels.com/video-files/17953504/17953504-hd_1080_1920_24fps.mp4",
+      "videoDuration": 53
     },
     {
       "type": "narration",
@@ -38,37 +40,51 @@
         "style": 0.1,
         "similarity_boost": 0.85
       },
-      "foot": "Sahih al-Bukhari 935"
+      "foot": "Sahih al-Bukhari 935",
+      "video": "https://videos.pexels.com/video-files/16162578/16162578-hd_1080_1920_50fps.mp4",
+      "videoDuration": 14
     },
     {
       "type": "narration",
       "text": "He said: on Friday there is an hour. If a Muslim happens to be standing in prayer, asking Allah for something good, when that hour comes... Allah will give him what he asked.",
-      "foot": "Sahih al-Bukhari 935"
+      "foot": "Sahih al-Bukhari 935",
+      "video": "https://videos.pexels.com/video-files/29668382/12762308_1080_1920_30fps.mp4",
+      "videoDuration": 15
     },
     {
       "type": "narration",
       "text": "And then he did something with his hand. He gestured, showing how short it is. A small window, hidden inside the biggest day of the week.",
-      "foot": "Sahih al-Bukhari 935"
+      "foot": "Sahih al-Bukhari 935",
+      "video": "https://videos.pexels.com/video-files/11333829/11333829-hd_1080_1920_25fps.mp4",
+      "videoDuration": 30
     },
     {
       "type": "narration",
       "text": "In Islam, Friday is the greatest day of the week. The day of gathering, the day of the Friday prayer. And tucked inside it is this one moment when the door does not close.",
-      "foot": "Sahih al-Bukhari 935"
+      "foot": "Sahih al-Bukhari 935",
+      "video": "https://videos.pexels.com/video-files/4547598/4547598-hd_1080_1920_25fps.mp4",
+      "videoDuration": 20
     },
     {
       "type": "narration",
       "text": "Its exact time was left hidden, on purpose. The same way the night of power is hidden in Ramadan. So that you do not wait for one minute... you stay ready across the whole day.",
-      "foot": "Sahih al-Bukhari 935"
+      "foot": "Sahih al-Bukhari 935",
+      "video": "https://videos.pexels.com/video-files/6173759/6173759-hd_1080_1920_30fps.mp4",
+      "videoDuration": 21
     },
     {
       "type": "narration",
       "text": "But the scholars pointed to the strongest window. The last hour of Friday, just before the sun sets. As Friday ends, sit, raise your hands, and ask.",
-      "foot": "seerah / the scholars, on the strongest reported time"
+      "foot": "seerah / the scholars, on the strongest reported time",
+      "video": "https://videos.pexels.com/video-files/26544628/11957221_1080_1920_60fps.mp4",
+      "videoDuration": 22
     },
     {
       "type": "narration",
       "text": "So this Friday, do not let the sun go down in silence. In that last hour, bring the thing you have been asking for all year. This is the hour it is not refused.",
-      "foot": "Sahih al-Bukhari 935, Sahih Muslim 852"
+      "foot": "Sahih al-Bukhari 935, Sahih Muslim 852",
+      "video": "https://videos.pexels.com/video-files/11888536/11888536-hd_1080_1920_30fps.mp4",
+      "videoDuration": 95
     }
   ]
 }

@@ -6,22 +6,92 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
-  "cover": { "title": "Your Last Night", "kicker": "THE SUNNAH OF SLEEP" },
+  "cover": {
+    "title": "Your Last Night",
+    "kicker": "THE SUNNAH OF SLEEP"
+  },
   "captions": {
     "tiktok": "The Prophet taught a way to sleep so that if you die that night, you die upon pure faith. Sahih al-Bukhari 247.",
     "shorts": "How to sleep as if it were your last night, from Sahih al-Bukhari 247.",
     "reels": "The Prophet taught a way to sleep so that if you die that night, you die upon pure faith. Sahih al-Bukhari 247.",
-    "hashtags": ["#islam", "#sunnah", "#edutokcontest", "#sleep", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#sunnah",
+      "#edutokcontest",
+      "#sleep",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
-    { "type": "narration", "text": "You lie down to sleep tonight, expecting to wake up. Most nights you will. But the Prophet, peace be upon him, taught his companions to lie down as if they might not.", "foot": "Sahih al-Bukhari 247" },
-    { "type": "narration", "text": "Sleep, he taught, is a small death. So he gave it a ritual.", "title": "THE LAST WORDS", "titleSub": "how the Prophet, peace be upon him, taught us to sleep", "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }, "foot": "Sahih al-Bukhari 247, Sahih al-Bukhari 6320" },
-    { "type": "narration", "text": "First, make wudu, he said, the same washing you make for prayer. Go to your bed already in a state of purity.", "foot": "Sahih al-Bukhari 247" },
-    { "type": "narration", "text": "Then dust off your bed before you lie down, and lie on your right side. Small acts, done with intention, that turn an ordinary bed into a place of worship.", "foot": "Sahih al-Bukhari 247, Sahih al-Bukhari 6320" },
-    { "type": "narration", "text": "Then say a dua that hands the whole self back to Allah... I submit my soul to You, and turn my face to You, and entrust my affair to You... out of hope in You and fear of You.", "foot": "Sahih al-Bukhari 247" },
-    { "type": "narration", "text": "And here is the promise. The Prophet, peace be upon him, said: if you die that night, you die upon the fitrah, the pure, natural faith. Whoever sleeps this way has ended his day on the safest possible ground.", "foot": "Sahih al-Bukhari 247" },
-    { "type": "narration", "text": "Then he added one instruction that changes everything. Make these words the last thing you say. Not the phone. Not the worry replaying in your head. This.", "foot": "Sahih al-Bukhari 247" },
-    { "type": "narration", "text": "Because if the sleep does become the death, your final act on Earth was to turn your face to your Lord.", "foot": "Sahih al-Bukhari 247" },
-    { "type": "narration", "text": "So tonight, try it once. Wudu, right side, and the dua as your last words. Fall asleep already facing home.", "foot": "Sahih al-Bukhari 247" }
+    {
+      "type": "narration",
+      "text": "You lie down to sleep tonight, expecting to wake up. Most nights you will. But the Prophet, peace be upon him, taught his companions to lie down as if they might not.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/19193293/19193293-hd_1080_1920_30fps.mp4",
+      "videoDuration": 11
+    },
+    {
+      "type": "narration",
+      "text": "Sleep, he taught, is a small death. So he gave it a ritual.",
+      "title": "THE LAST WORDS",
+      "titleSub": "how the Prophet, peace be upon him, taught us to sleep",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "foot": "Sahih al-Bukhari 247, Sahih al-Bukhari 6320",
+      "video": "https://videos.pexels.com/video-files/9166290/9166290-uhd_2160_4096_25fps.mp4",
+      "videoDuration": 19
+    },
+    {
+      "type": "narration",
+      "text": "First, make wudu, he said, the same washing you make for prayer. Go to your bed already in a state of purity.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/31987734/13631446_1080_1920_60fps.mp4",
+      "videoDuration": 22
+    },
+    {
+      "type": "narration",
+      "text": "Then dust off your bed before you lie down, and lie on your right side. Small acts, done with intention, that turn an ordinary bed into a place of worship.",
+      "foot": "Sahih al-Bukhari 247, Sahih al-Bukhari 6320",
+      "video": "https://videos.pexels.com/video-files/10473218/10473218-hd_1080_2048_25fps.mp4",
+      "videoDuration": 15
+    },
+    {
+      "type": "narration",
+      "text": "Then say a dua that hands the whole self back to Allah... I submit my soul to You, and turn my face to You, and entrust my affair to You... out of hope in You and fear of You.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/7507255/7507255-hd_1080_1920_25fps.mp4",
+      "videoDuration": 10
+    },
+    {
+      "type": "narration",
+      "text": "And here is the promise. The Prophet, peace be upon him, said: if you die that night, you die upon the fitrah, the pure, natural faith. Whoever sleeps this way has ended his day on the safest possible ground.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/8860236/8860236-uhd_2160_4096_25fps.mp4",
+      "videoDuration": 39
+    },
+    {
+      "type": "narration",
+      "text": "Then he added one instruction that changes everything. Make these words the last thing you say. Not the phone. Not the worry replaying in your head. This.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/35772987/15166464_1080_1920_60fps.mp4",
+      "videoDuration": 56
+    },
+    {
+      "type": "narration",
+      "text": "Because if the sleep does become the death, your final act on Earth was to turn your face to your Lord.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/36644498/15535640_1080_1920_25fps.mp4",
+      "videoDuration": 13
+    },
+    {
+      "type": "narration",
+      "text": "So tonight, try it once. Wudu, right side, and the dua as your last words. Fall asleep already facing home.",
+      "foot": "Sahih al-Bukhari 247",
+      "video": "https://videos.pexels.com/video-files/5482681/5482681-hd_1080_1920_30fps.mp4",
+      "videoDuration": 12
+    }
   ]
 }
