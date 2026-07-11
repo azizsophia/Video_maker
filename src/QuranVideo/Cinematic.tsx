@@ -2,6 +2,8 @@ import React from "react";
 import {
   AbsoluteFill,
   OffthreadVideo,
+  Img,
+  Loop,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -27,7 +29,7 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 // and the clip is slowed (playbackRate) to fill the whole beat so it never runs
 // out and FREEZES on its last frame at the cut. Pass videoDuration (seconds) so
 // the slow-down is computed exactly; otherwise a gentle slow-mo default is used.
-const CinematicBg: React.FC<{ src: string; videoDuration?: number; dim?: number }> = ({ src, videoDuration, dim }) => {
+const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number }> = ({ src, imageSrc, videoDuration, dim }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
   const beatSeconds = durationInFrames / fps;
@@ -35,18 +37,37 @@ const CinematicBg: React.FC<{ src: string; videoDuration?: number; dim?: number 
   const rate = videoDuration && videoDuration > 0
     ? clamp(videoDuration / (beatSeconds + 0.3), 0.5, 1)
     : 0.7;
+  // Frames one full play of the clip occupies at this rate. When the clip fills
+  // the beat this equals ~the whole beat (Loop never repeats); when the clip is
+  // too short it is < the beat, so Loop repeats it instead of freezing.
+  const loopFrames = videoDuration && videoDuration > 0
+    ? Math.min(durationInFrames, Math.max(1, Math.round((videoDuration / rate) * fps)))
+    : durationInFrames;
   const p = interpolate(frame, [0, durationInFrames], [0, 1], { extrapolateRight: "clamp" });
   // Slow, restrained Ken Burns — gentle enough to feel luxurious rather than
   // busy (zoom ~1.05 -> 1.14 with a small directional pan that varies per clip).
   const zoom = 1.05 + 0.09 * p;
-  const dir = src.length % 2 === 0 ? 1 : -1;
+  const key = imageSrc || src || "";
+  const dir = key.length % 2 === 0 ? 1 : -1;
   const panX = dir * interpolate(p, [0, 1], [-16, 16]);
   const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ background: "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
-        <OffthreadVideo src={resolve(src)} muted playbackRate={rate} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        {imageSrc ? (
+          // Still image (e.g. a beautiful cover photo): Ken Burns pan only — a
+          // still never runs out, so it can never freeze at the cut.
+          <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        ) : (
+          // Loop the clip so one shorter than its beat repeats instead of holding
+          // (freezing) on its last frame. One iteration plays `videoDuration`s of
+          // footage at `rate`; when the clip already fills the beat the period is
+          // ~the whole beat, so it never actually repeats (no-op for long clips).
+          <Loop durationInFrames={loopFrames} layout="none">
+            <OffthreadVideo src={resolve(src as string)} muted playbackRate={rate} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          </Loop>
+        )}
       </AbsoluteFill>
       {/* brand green tint + gold warmth */}
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(13,40,28,0.45) 0%, rgba(11,20,16,0.15) 35%, rgba(11,20,16,0.35) 70%, rgba(8,16,12,0.85) 100%)" }} />
@@ -298,6 +319,8 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
           // No texture wired: the self-contained fingerprint backdrop.
           <FingerprintScene name={seg.scene as string} />
         )
+      ) : seg.imageSrc ? (
+        <CinematicBg imageSrc={seg.imageSrc} dim={seg.dim} />
       ) : seg.videoSrc ? (
         <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} dim={seg.dim} />
       ) : (

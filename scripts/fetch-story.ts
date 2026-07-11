@@ -213,7 +213,6 @@ const PHONETIC: Record<string, string> = {
   subhanallah: "subhaanallah",
   hafiz: "haafiz",
   huffaz: "huffaaz",
-  "al-amin": "al-Ameen",
   dajjaloon: "dajjaaloon",
   // Batch 3 (prophecies/signs/Qur'an shorts) - MSA-checked, ear-test pending.
   yasbahun: "yas-ba-hoon",
@@ -402,6 +401,7 @@ async function main() {
         foot: seg.foot,
         highlight: seg.highlight,
         videoSrc: seg.video, // remote Pexels URL — streamed at render (no download)
+        imageSrc: seg.image, // remote/public still image — Ken Burns pan, never freezes (e.g. reuse a beautiful cover photo)
         videoDuration: typeof seg.videoDuration === "number" ? seg.videoDuration : undefined, // clip seconds → fill-the-beat slowdown
         title: seg.title, // cinematic gold-on-black title card (film open)
         titleSub: seg.titleSub,

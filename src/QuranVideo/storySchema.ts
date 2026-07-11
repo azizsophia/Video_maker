@@ -23,6 +23,7 @@ export const storySegmentSchema = z.object({
   foot: z.string().optional(), // small italic source/footnote at the bottom
   highlight: z.string().optional(), // chronology: which era to emphasise (dadan|lihyan|nabataean)
   videoSrc: z.string().optional(), // cinematic: background clip (remote Pexels URL or /public path)
+  imageSrc: z.string().optional(), // cinematic: background STILL (remote/public URL) — Ken Burns pan, never freezes
   videoDuration: z.number().optional(), // clip length in seconds — slows playback to fill the beat (no end freeze)
   title: z.string().optional(), // cinematic film-open: gold-on-black title card over the beat
   titleSub: z.string().optional(), // small line under the title (e.g. "alayhi salam")
