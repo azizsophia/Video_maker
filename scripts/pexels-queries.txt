@@ -1,14 +1,10 @@
-# Batch 5 re-pull: 3 beats lacking a clean literal clip (9:16 portrait)
+# Batch 5 fallback pull: 2 beats (no literal scale/hourglass exists clean on Pexels) (9:16 portrait)
 --portrait
-# light-heavy b2: a real two-pan balance / weighing scale, dark, no hands/text
-antique brass balance scale dark background
-weighing scales black background still
-justice scale silhouette dark
-# friday-hour b2: a real hourglass / sand timer, dark (how short the hour is)
-hourglass sand timer black background
-sand timer running dark close up
-hourglass silhouette dark
-# friday-hour b7: clean sunset sky over horizon, no people, no city
-sunset sky clouds horizon no people
-sun setting sea horizon dark
-golden sunset clouds dark sky vertical
+# light-heavy b2: "heavy on the scale" -> immense WEIGHT nature shot, dark, no people/text
+massive mountain peak dark storm clouds
+huge boulder rock formation dark moody
+towering cliff face dark dramatic
+# friday-hour b2: "on Friday there is an hour" -> TIME PASSING, dark, no people/text/clock-brand
+night sky stars time lapse dark
+clouds moving fast time lapse dusk dark
+star trails night sky long exposure
