@@ -6,21 +6,69 @@
   "voiceId": "onwK4e9ZLuTAKqWW03F9",
   "voiceName": "Daniel (ElevenLabs)",
   "showOutro": true,
-  "cover": { "title": "And For You The Same", "kicker": "THE SECRET DUA" },
+  "cover": {
+    "title": "And For You The Same",
+    "kicker": "THE SECRET DUA"
+  },
   "captions": {
     "tiktok": "Pray for someone when they are not there, and an angel says: Ameen, and may you have the same. Sahih Muslim 2733.",
     "shorts": "The dua an angel answers with Ameen and the same for you. Sahih Muslim 2733.",
     "reels": "Pray for someone when they are not there, and an angel says: Ameen, and may you have the same. Sahih Muslim 2733.",
-    "hashtags": ["#islam", "#dua", "#edutokcontest", "#brotherhood", "#muslimtiktok"]
+    "hashtags": [
+      "#islam",
+      "#dua",
+      "#edutokcontest",
+      "#brotherhood",
+      "#muslimtiktok"
+    ]
   },
   "segments": [
-    { "type": "narration", "text": "There is a way to make a dua that gets a guaranteed Ameen. Not from a person. From an angel assigned to you. And most people never use it.", "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "The secret is who you pray for.", "title": "THE SECRET DUA", "titleSub": "the dua the angels answer", "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85 }, "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "The Prophet, peace be upon him, said: the dua of a Muslim for his brother, in his absence, is answered.", "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "In his absence. Not to his face, where he can hear it and thank you. When he has no idea you are doing it. That is the condition.", "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "And the Prophet, peace be upon him, described what happens above you. At your head is an angel who has been appointed. Every time you pray for your brother with something good...", "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "the angel says: Ameen. And may you have the same.", "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "So look at the exchange. You ask for someone else, expecting nothing back. And an angel turns and asks Allah to give you the very thing you asked for them. Wanting good for others quietly loops it back to you.", "foot": "Sahih Muslim 2733" },
-    { "type": "narration", "text": "So do it now. Bring one person to mind, someone who does not know you are thinking of them. Ask Allah to give them what you would want for yourself. And an angel, right now, is saying it back over you.", "foot": "Sahih Muslim 2733" }
+    {
+      "type": "narration",
+      "text": "There is a way to make a dua that gets a guaranteed Ameen. Not from a person. From an angel assigned to you. And most people never use it.",
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "The secret is who you pray for.",
+      "title": "THE SECRET DUA",
+      "titleSub": "the dua the angels answer",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85
+      },
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, said: the dua of a Muslim for his brother, in his absence, is answered.",
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "In his absence. Not to his face, where he can hear it and thank you. When he has no idea you are doing it. That is the condition.",
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "And the Prophet, peace be upon him, described what happens above you. At your head is an angel who has been appointed. Every time you pray for your brother with something good...",
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "And the angel says... Ameen. And may you have the same.",
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "So look at the exchange. You ask for someone else, expecting nothing back. And an angel turns and asks Allah to give you the very thing you asked for them. Wanting good for others quietly loops it back to you.",
+      "foot": "Sahih Muslim 2733"
+    },
+    {
+      "type": "narration",
+      "text": "So do it now. Bring one person to mind, someone who does not know you are thinking of them. Ask Allah to give them what you would want for yourself. And an angel, right now, is saying it back over you.",
+      "foot": "Sahih Muslim 2733"
+    }
   ]
 }
