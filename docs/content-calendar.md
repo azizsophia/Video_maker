@@ -76,6 +76,15 @@ sirat-bridge, first-night-grave (annotation/text leak); thirsty-dog,
 beast-that-speaks (too-bright beats regraded). Batch 5 (10 shorts) also
 awaits top-up.
 
+OWNER-REVIEW FIXES (2026-07-11, committed, need top-up to render - July-4
+narration caches EXPIRED after 7 days so re-render re-bills ElevenLabs):
+- ENGINE: Cinematic now loops short clips (no more end-of-clip FREEZE in any
+  video) + supports still-image beat backgrounds (Ken Burns, freeze-proof).
+- jerusalem-test: ~:37 freeze fixed; cover photo now used on the Bayt
+  al-Maqdis beat (owner request).
+- verse-of-honey: nail-polish lady-hand clip (b5) replaced with the honey
+  cover still; the freeze before it resolved by the engine loop fix.
+
 ### In production
 
 Khadijah long-form (16:9, Khadijah cadence expanded to 8+ min) - started
