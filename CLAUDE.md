@@ -50,6 +50,23 @@ that is the point of the gate. Nothing ships with an open item.
    to the line, ONE distinct clip per beat, unique repo-wide. Then the render is
    GATED on owner sign-off of a per-short CONTACT SHEET - do NOT batch-render
    without it (skipping this gate is what let batch 3 go out unvetted).
+6b. NO-FREEZE / clip-length (owner directive 2026-07-11, BLOCKING - freezes
+   shipped across many videos and the owner had to catch them): every beat's
+   clip must be long enough to fill the beat. A clip shorter than its narration
+   holds on its last frame and FREEZES. The engine now LOOPS short clips
+   (Cinematic CinematicBg) so nothing hard-freezes, but a clip that has to loop
+   more than ~twice reads as an obvious repeat. So: run scripts/audit-freezes.mjs
+   (probes each clip's real duration vs its beat's narration length) and for any
+   beat flagged, source a LONGER clip (aim clip >= beat length) or use a still
+   image (imageSrc - Ken Burns, never freezes). QC the MOTION, not just a frame.
+6c. CROSS-VIDEO VISUAL VARIETY (owner directive 2026-07-11, BLOCKING): no
+   generic "wallpaper" motif - ocean/sea, sunset, drifting clouds, starfield,
+   dunes - may recur across videos, even as a different clip id. The owner
+   reviews the slate together and a repeated ocean/sunset reads as lazy
+   (skin-witness, cave-boulder and the sun-from-west cover all showed sea).
+   Keep a repo-wide motif tally; when a beat wants "ambient", pick something
+   distinct from what neighbouring videos already use. Literal-to-the-line
+   always beats another sea.
 7. RENDER-OUTPUT QC on stills: title cards readable (deep-read voice), every
    ayah shows its citation on-screen, captions carry the launch CTA + hashtags,
    the ad outro plays clean at the tail, no glyph-box tofu on Arabic.
