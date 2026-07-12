@@ -133,6 +133,71 @@ app footer) before continuing the channel.
 elsewhere without explicit owner permission). GitHub is scoped to
 `azizsophia/video_maker` only.
 
+---
+
+## RESUME HERE — session state (updated 2026-07-11)
+
+**Work branch (mention this in any new chat):**
+`claude/fingerprints-ridge-visuals-6qbs6x` — everything below is committed there.
+
+### Two active blockers (nothing renders until these clear)
+1. **ElevenLabs quota** — 16 credits left (~140 needed per short). The July-4
+   narration caches **expired** (GitHub evicts caches after 7 days), so a
+   re-render now re-bills the voice instead of hitting cache. Needs a top-up.
+2. **GitHub connection dropped mid-session** — can't run the Pexels footage
+   search or trigger/read renders until it's reconnected (claude.ai connector
+   settings, or `/mcp` in an interactive session). Covers (stills) can still be
+   rendered locally via `node scripts/render-one-cover.mjs`.
+
+### Ready to schedule NOW (rendered, no top-up needed) — 12 shorts
+Artifact links live in `docs/content-calendar.md`:
+- **Batch 4 (6):** sun-from-west, skin-witness, seven-shade, killed-ninety-nine,
+  cave-boulder, zalzalah.
+- **07-04 set (6):** jerusalem-test, shepherds-towers, forelock, verse-of-honey,
+  expander, mosque-boast. (These artifacts expire **2026-07-18**; re-render is
+  free-of-voice-cost only while their caches live — see blocker #1.)
+
+### Held for the top-up (do NOT schedule current cuts)
+- **Batch 5 (10 shorts):** night-call, ocean-of-sins, light-heavy, last-night,
+  angel-ameen, friday-hour, fajr-protection, two-verses, three-deeds,
+  moving-branch. Scripts + footage locked, both QC gates passed, contact sheets
+  sent. Needs top-up (+ dhikr ear-test for ocean-of-sins/light-heavy).
+- **Batch 4 fixes (4):** sirat-bridge, first-night-grave (annotation leak),
+  thirsty-dog, beast-that-speaks (regraded bright beats).
+- **Batch 3 scheduled fixes (4):** greeting-grown-cold, time-speeds-up,
+  night-and-day, yasbahun.
+- **Owner-review fixes (2):** jerusalem-test (freeze + cover-photo on the
+  Jerusalem beat) and verse-of-honey (nail-polish clip + freeze) — committed.
+
+### Engine + QC changes this session (all committed)
+- **No more freezes, anywhere:** `Cinematic` now **loops** a clip that is shorter
+  than its beat instead of holding (freezing) on its last frame. Also added
+  **still-image beat backgrounds** (`imageSrc`, Ken Burns, freeze-proof) and
+  local `/public` image support in `Cover`.
+- **Freeze QC is now systematic:** `scripts/audit-freezes.mjs` flags every beat
+  whose clip is < half its beat (report: `docs/freeze-audit-2026-07-11.txt`).
+  CLAUDE.md gained rules **6b** (no-freeze / clip-length) and **6c** (cross-video
+  visual variety — no repeated ocean/sunset "wallpaper").
+- **Covers can render locally, free:** `node scripts/render-one-cover.mjs
+  scripts/stories/<id>.json` → PNG (no GitHub/quota). Used to fix the
+  sun-from-west cover (now sun-over-ocean, committed at
+  `public/covers/sun-from-west.jpg`).
+
+### Queued footage tighten-up (owner review 2026-07-11) — `docs/footage-tighten-2026-07-11.md`
+- Swap generic ocean/sunset: **skin-witness** b8 (ocean) + b9 (sunset);
+  **cave-boulder** b1 (bright hilltop w/ a distant person) + b4/b7 (blue water).
+- Longer clips (or stills) for HARD rapid-loop beats: expander b4/b6,
+  moon-split b2, forelock b2, verse-of-honey b4, jerusalem-test b0.
+- All need Pexels access (blocker #2) to source, then re-render (blocker #1).
+
+### First moves in a new chat
+1. Confirm branch `claude/fingerprints-ridge-visuals-6qbs6x`.
+2. If GitHub is reconnected + ElevenLabs topped up: run the queued footage
+   tighten-up, then re-render the held sets and still-QC.
+3. `docs/content-calendar.md` = single source of truth (production state + links);
+   `docs/footage-tighten-2026-07-11.md` + `docs/freeze-audit-2026-07-11.txt` =
+   the open footage work.
+
 ### Current state (Ketabi Studio — Islamic shorts channel)
 
 Production has shifted to **large batches of short-form** (TikTok/Reels/Shorts) as
@@ -151,7 +216,8 @@ pronunciation. Actions taken:
 - **6 shorts re-rendered 2026-07-04** with tightened footage + read-aloud/cadence
   fixes + phonetic fixes: `jerusalem-test`, `shepherds-towers`, `forelock`,
   `verse-of-honey`, `expander`, `mosque-boast`. All passed still-QC. Artifact
-  links (expire 2026-07-18; re-render is cheap — narration is cached):
+  links (expire 2026-07-18; NOTE: the narration caches for these expired after 7
+  days, so a re-render now re-bills ElevenLabs — see "RESUME HERE" blocker #1):
   - jerusalem-test: run 28718399458 / artifact 8085173174
   - shepherds-towers: run 28718400300 / artifact 8085170686
   - forelock: run 28718400902 / artifact 8085183776
