@@ -210,6 +210,11 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   const t = frame / fps;
   const fade = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp" });
   const flourish = interpolate(frame, [18, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // Kids channel (warm): a subtle ketabistudio.com wordmark fades in on the verse
+  // card AFTER the translation finishes reading, so the brand lands last without
+  // touching the cozy bedtime vibe. Keyed to `warm` so every kids video gets it.
+  const lastEnd = words.length ? Math.max(...words.map((w) => w.end)) : 2.2;
+  const brandOp = interpolate(t, [lastEnd + 0.35, lastEnd + 1.15], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   // 16:9 has more width but much less height: tighten the vertical padding,
   // shrink the Arabic + translation a touch, and widen the text column so even
   // a longer narration line under the ayah never overflows the short frame.
@@ -243,6 +248,13 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
           <span style={{ fontFamily: JOST, fontWeight: 400, letterSpacing: 2, fontSize: 26, color: "rgba(247,241,226,0.92)", background: "rgba(6,12,9,0.42)", padding: "7px 18px", borderRadius: 14, textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
             {/* strip the production note wherever it sits; the screen shows just the citation */}
             {foot.replace(/\s*\(shown, not recited\)\s*/gi, " ").replace(/\s+;/g, ";").trim()}
+          </span>
+        </div>
+      ) : null}
+      {warm ? (
+        <div style={{ marginTop: wide ? 24 : 40, opacity: brandOp }}>
+          <span style={{ fontFamily: NUNITO, fontWeight: 800, letterSpacing: 3, fontSize: 25, color: WARM_HI, textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>
+            ketabistudio.com
           </span>
         </div>
       ) : null}
