@@ -24,7 +24,8 @@ const inputProps = {
   kicker: cover.kicker || "",
   image: cover.image,
   scene: cover.scene,
-  wordmark: "KETABI STUDIO",
+  wordmark: cover.wordmark || "KETABI STUDIO",
+  warm: cover.warm || false,
 };
 const out = path.resolve(process.argv[3] || `out/${story.id}-cover.png`);
 await mkdir(path.dirname(out), { recursive: true });

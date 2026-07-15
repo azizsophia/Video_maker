@@ -15,6 +15,7 @@ const JOST = 'Jost, "Helvetica Neue", Arial, sans-serif';
 
 const GOLD = "#e7c873";
 const CREAM = "#f7f1e2";
+const WARM = "#f0a45a"; // kids "shop.ketabi" warm accent
 
 if (typeof document !== "undefined" && "fonts" in document) {
   void Promise.allSettled([
@@ -30,17 +31,27 @@ export type CoverProps = {
   image?: string; // full-bleed photo; omit when using a code-generated `scene`
   scene?: string; // e.g. an `fp-*` fingerprint scene — the cover matches the video's subject
   wordmark?: string;
+  warm?: boolean; // kids "shop.ketabi" channel — warm amber grade instead of green/gold
 };
 
 // A single premium, brand-consistent cover (1080x1920). Full-bleed photo with
 // the same green/gold grade as the videos, a top wordmark, and a gold-accented
 // title in the lower third. Every cover shares this exact treatment so the
 // TikTok grid reads as one brand.
-export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordmark = "KETABI STUDIO" }) => {
+export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordmark = "KETABI STUDIO", warm = false }) => {
   const { width, height } = useVideoConfig();
   const wide = width > height; // 16:9 YouTube thumbnail vs 9:16 feed cover
   const lines = title.split("\n");
   const longLine = lines.some((l) => l.length > 16);
+  const accent = warm ? WARM : GOLD;
+  // Legibility scrims: green for the Ketabi brand, warm amber for the kids channel.
+  const scrim = warm
+    ? "linear-gradient(180deg, rgba(30,18,10,0.60) 0%, rgba(30,18,10,0.10) 26%, rgba(24,15,9,0.32) 58%, rgba(16,10,6,0.86) 84%, rgba(12,8,5,0.96) 100%)"
+    : "linear-gradient(180deg, rgba(8,22,16,0.62) 0%, rgba(11,20,16,0.10) 26%, rgba(8,16,12,0.30) 58%, rgba(6,13,10,0.86) 84%, rgba(5,11,8,0.96) 100%)";
+  const glow = warm
+    ? "radial-gradient(circle at 50% 30%, rgba(240,164,90,0.12), transparent 62%)"
+    : "radial-gradient(circle at 50% 30%, rgba(231,200,115,0.10), transparent 62%)";
+  const accentRGBA = warm ? "rgba(240,164,90,0.85)" : "rgba(231,200,115,0.85)";
   return (
     <AbsoluteFill style={{ background: "#0b1410", width, height }}>
       {/* Backdrop: a code-generated scene (e.g. the fingerprint, so the cover
@@ -55,26 +66,26 @@ export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordm
         </AbsoluteFill>
       ) : null}
 
-      {/* Brand grade + legibility scrims (green tint, vignette, heavier bottom) */}
-      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(8,22,16,0.62) 0%, rgba(11,20,16,0.10) 26%, rgba(8,16,12,0.30) 58%, rgba(6,13,10,0.86) 84%, rgba(5,11,8,0.96) 100%)" }} />
+      {/* Brand grade + legibility scrims (green for Ketabi, warm for shop.ketabi) */}
+      <AbsoluteFill style={{ background: scrim }} />
       <AbsoluteFill style={{ boxShadow: "inset 0 0 360px rgba(0,0,0,0.6)" }} />
-      <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 30%, rgba(231,200,115,0.10), transparent 62%)" }} />
+      <AbsoluteFill style={{ background: glow }} />
 
-      {/* Delicate inset gold frame */}
-      <AbsoluteFill style={{ inset: 34, border: "1.5px solid rgba(231,200,115,0.45)", borderRadius: 10 }} />
+      {/* Delicate inset accent frame */}
+      <AbsoluteFill style={{ inset: 34, border: `1.5px solid ${warm ? "rgba(240,164,90,0.45)" : "rgba(231,200,115,0.45)"}`, borderRadius: 10 }} />
 
       {/* Top wordmark */}
       <div style={{ position: "absolute", top: wide ? 56 : 92, width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 20 }}>
-        <div style={{ height: 1.5, width: 64, background: "linear-gradient(90deg,transparent,rgba(231,200,115,0.85))" }} />
-        <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 9, fontSize: 30, color: GOLD }}>{wordmark}</span>
-        <div style={{ height: 1.5, width: 64, background: "linear-gradient(90deg,rgba(231,200,115,0.85),transparent)" }} />
+        <div style={{ height: 1.5, width: 64, background: `linear-gradient(90deg,transparent,${accentRGBA})` }} />
+        <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 9, fontSize: 30, color: accent }}>{wordmark}</span>
+        <div style={{ height: 1.5, width: 64, background: `linear-gradient(90deg,${accentRGBA},transparent)` }} />
       </div>
 
       {/* Title block — kept in the vertical center band so it survives TikTok's
           profile-grid center crop (which clips ~270px top & bottom). */}
       <div style={{ position: "absolute", left: 0, right: 0, bottom: wide ? 110 : 470, padding: wide ? "0 150px" : "0 110px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
         {kicker ? (
-          <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 32, color: GOLD, marginBottom: 28, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
+          <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 32, color: accent, marginBottom: 28, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
             {kicker}
           </span>
         ) : null}
@@ -83,11 +94,11 @@ export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordm
             <div key={i}>{l}</div>
           ))}
         </div>
-        {/* gold flourish */}
+        {/* accent flourish */}
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 34 }}>
-          <div style={{ height: 1.5, width: 90, background: "linear-gradient(90deg,transparent,#e7c873)" }} />
-          <div style={{ width: 11, height: 11, transform: "rotate(45deg)", background: GOLD }} />
-          <div style={{ height: 1.5, width: 90, background: "linear-gradient(90deg,#e7c873,transparent)" }} />
+          <div style={{ height: 1.5, width: 90, background: `linear-gradient(90deg,transparent,${accent})` }} />
+          <div style={{ width: 11, height: 11, transform: "rotate(45deg)", background: accent }} />
+          <div style={{ height: 1.5, width: 90, background: `linear-gradient(90deg,${accent},transparent)` }} />
         </div>
       </div>
     </AbsoluteFill>

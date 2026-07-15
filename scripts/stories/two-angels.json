@@ -10,7 +10,10 @@
   "_brand": "Children's storytime channel (separate from Ketabi). Warm kitab theme, faces-out footage, English only (Arabic shown on the verse card, never recited). Two British voices: Mama=Lily, Son=Alice. Ends on a verse card like the Ketabi ayah cards.",
   "cover": {
     "title": "The Two Angels",
-    "kicker": "A BEDTIME LESSON"
+    "kicker": "A BEDTIME STORY",
+    "image": "kids/two-angels-window.png",
+    "wordmark": "shop.ketabi",
+    "warm": true
   },
   "captions": {
     "tiktok": "\"Mama, is someone watching everything I do?\" A gentle bedtime lesson on the two angels who write our deeds. Qur'an 82:10-12.",
