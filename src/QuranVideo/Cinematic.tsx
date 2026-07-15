@@ -20,8 +20,8 @@ import { themes } from "./themes";
 const GOLD = "#e7c873";
 const CREAM = "#f7f1e2";
 // Warm "kitab" (children's storytime) palette — soft amber/cream instead of the
-// dark green/gold cinematic grade, with a rounded friendly font.
-const WARM_INK = "rgba(46,30,20,0.52)";   // caption/label box
+// dark green/gold cinematic grade, with a rounded friendly font. Captions are
+// boxless (soft floating text), so only the highlight colour is needed.
 const WARM_HI = "#f0a45a";                // active-word highlight (warm amber)
 
 const resolve = (src: string) => (/^https?:\/\//.test(src) ? src : staticFile(src));
@@ -130,19 +130,23 @@ const CineCaption: React.FC<{ words?: StoryWord[]; warm?: boolean }> = ({ words 
         style={{
           fontFamily: warm ? NUNITO : PLAYFAIR,
           fontWeight: warm ? 800 : 700,
-          fontSize: warm ? Math.round(fontSize * 0.92) : fontSize,
+          fontSize: warm ? Math.round(fontSize * 0.94) : fontSize,
           lineHeight: 1.3,
           textAlign: "center",
           color: CREAM,
-          textShadow: "0 4px 26px rgba(0,0,0,0.95)",
+          // Warm kids look: NO caption box — soft floating text, kept legible over
+          // busy footage (rain) by a layered glow instead of a background pill.
+          textShadow: warm
+            ? "0 2px 10px rgba(0,0,0,0.9), 0 0 26px rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.6)"
+            : "0 4px 26px rgba(0,0,0,0.95)",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
           gap: "4px 16px",
           maxWidth,
-          background: warm ? WARM_INK : "rgba(6,12,9,0.5)",
-          padding: "20px 32px",
-          borderRadius: warm ? 34 : 28,
+          background: warm ? "transparent" : "rgba(6,12,9,0.5)",
+          padding: warm ? "6px 18px" : "20px 32px",
+          borderRadius: warm ? 0 : 28,
           opacity: lineFade,
           transform: `translateY(${(1 - lineFade) * 12}px)`,
         }}
@@ -178,7 +182,7 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string; warm?: boolean }> = 
       {kicker ? (
         <div style={{ position: "absolute", top: kickerTop, width: "100%", display: "flex", justifyContent: "center", opacity: fade }}>
           <span style={warm
-            ? { fontFamily: NUNITO, fontWeight: 800, letterSpacing: 4, fontSize: 30, color: "#fbe7cf", background: WARM_INK, padding: "10px 26px", borderRadius: 22, textShadow: "0 2px 16px rgba(0,0,0,0.7)" }
+            ? { fontFamily: NUNITO, fontWeight: 800, letterSpacing: 6, fontSize: 27, color: WARM_HI, background: "transparent", padding: "4px 8px", borderRadius: 0, textShadow: "0 2px 10px rgba(0,0,0,0.85), 0 0 24px rgba(0,0,0,0.7)" }
             : { fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, background: "rgba(6,12,9,0.42)", padding: "9px 22px", borderRadius: 16, textShadow: "0 2px 16px rgba(0,0,0,0.85)" }}>
             {kicker}
           </span>
