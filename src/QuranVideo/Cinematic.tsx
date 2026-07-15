@@ -56,6 +56,11 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
   const panX = dir * interpolate(p, [0, 1], [-16, 16]);
   const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
+  // Living-still flicker: for a warm STILL background (e.g. the cozy lantern-lit
+  // window), pulse a warm glow like a candle/lantern flame so the image feels
+  // alive rather than a dead pan. Layered sines give an organic, non-repeating
+  // flame wobble (never negative, hovers ~0.55..1.0).
+  const flick = 0.78 + 0.22 * (0.5 + 0.28 * Math.sin(frame * 0.7) + 0.16 * Math.sin(frame * 1.9 + 1.3) + 0.06 * Math.sin(frame * 3.7 + 0.6));
   return (
     <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
@@ -90,6 +95,13 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
           <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 42%, rgba(231,200,115,0.10), transparent 60%)" }} />
         </>
       )}
+      {/* Living-still: a gentle flickering warm glow over a warm STILL image, so a
+          lantern/candle in the picture reads as a live flame (Ken Burns alone can
+          feel static). Positioned lower-right where the window scene's lantern sits;
+          screen-blended and low-opacity so it only warms, never washes. */}
+      {warm && imageSrc ? (
+        <AbsoluteFill style={{ background: `radial-gradient(circle at 76% 74%, rgba(255,178,92,${(0.16 * flick).toFixed(3)}), transparent 32%)`, mixBlendMode: "screen" }} />
+      ) : null}
       {/* per-clip extra darkening for footage that is brighter than the grade */}
       {dim ? <AbsoluteFill style={{ background: `rgba(6,12,9,${clamp(dim, 0, 1)})` }} /> : null}
     </AbsoluteFill>
