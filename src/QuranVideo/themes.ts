@@ -65,6 +65,21 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     accent: "#cda24a",
     vignette: "rgba(0,0,0,0.55)",
   },
+  // Warm "kitab" — the children's storytime channel. Soft amber/cream instead of
+  // the dark cinematic grade; the warmth is applied in Cinematic (warm flag),
+  // this palette is the fallback for any non-cinematic surface.
+  kitab: {
+    background: "#20140c",
+    gradientFrom: "#3a2413",
+    gradientTo: "#160d06",
+    patternColor: "rgba(240, 175, 95, 0.14)",
+    arabicIdle: "rgba(251, 231, 207, 0.5)",
+    arabicActive: "#fdf3e6",
+    arabicGlow: "rgba(240, 175, 95, 0.55)",
+    translation: "rgba(251, 231, 207, 0.92)",
+    accent: "#f0a45a",
+    vignette: "rgba(34,20,10,0.6)",
+  },
   // Institutional "atlas" theme — premium ivory paper, ink-green, real gold.
   // The lecture-hall / documentary look (timelines, maps, data, line-art).
   atlas: {

@@ -10,7 +10,7 @@ import {
   staticFile,
 } from "remotion";
 import { StorySegment, StoryWord } from "./storySchema";
-import { PLAYFAIR, CORMORANT, JOST } from "./luxFonts";
+import { PLAYFAIR, CORMORANT, JOST, NUNITO } from "./luxFonts";
 import { ARABIC_DISPLAY_FONT } from "./fonts";
 import { CineMap } from "./CineMap";
 import { FingerprintScene, isFingerprintScene } from "./Fingerprint";
@@ -19,6 +19,10 @@ import { themes } from "./themes";
 
 const GOLD = "#e7c873";
 const CREAM = "#f7f1e2";
+// Warm "kitab" (children's storytime) palette — soft amber/cream instead of the
+// dark green/gold cinematic grade, with a rounded friendly font.
+const WARM_INK = "rgba(46,30,20,0.52)";   // caption/label box
+const WARM_HI = "#f0a45a";                // active-word highlight (warm amber)
 
 const resolve = (src: string) => (/^https?:\/\//.test(src) ? src : staticFile(src));
 
@@ -29,7 +33,7 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 // and the clip is slowed (playbackRate) to fill the whole beat so it never runs
 // out and FREEZES on its last frame at the cut. Pass videoDuration (seconds) so
 // the slow-down is computed exactly; otherwise a gentle slow-mo default is used.
-const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number }> = ({ src, imageSrc, videoDuration, dim }) => {
+const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number; warm?: boolean }> = ({ src, imageSrc, videoDuration, dim, warm }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
   const beatSeconds = durationInFrames / fps;
@@ -53,7 +57,7 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
   const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
   return (
-    <AbsoluteFill style={{ background: "#0b1410" }}>
+    <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
         {imageSrc ? (
           // Still image (e.g. a beautiful cover photo): Ken Burns pan only — a
@@ -69,10 +73,21 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
           </Loop>
         )}
       </AbsoluteFill>
-      {/* brand green tint + gold warmth */}
-      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(13,40,28,0.45) 0%, rgba(11,20,16,0.15) 35%, rgba(11,20,16,0.35) 70%, rgba(8,16,12,0.85) 100%)" }} />
-      <AbsoluteFill style={{ boxShadow: "inset 0 0 320px rgba(0,0,0,0.55)", mixBlendMode: "multiply" }} />
-      <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 42%, rgba(231,200,115,0.10), transparent 60%)" }} />
+      {warm ? (
+        <>
+          {/* warm cream/amber storytime grade — soft, cosy, lighter than cinematic */}
+          <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(60,38,22,0.42) 0%, rgba(60,38,22,0.08) 34%, rgba(46,28,16,0.24) 68%, rgba(34,20,10,0.72) 100%)" }} />
+          <AbsoluteFill style={{ boxShadow: "inset 0 0 300px rgba(40,22,10,0.42)", mixBlendMode: "multiply" }} />
+          <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 40%, rgba(240,175,95,0.14), transparent 62%)" }} />
+        </>
+      ) : (
+        <>
+          {/* brand green tint + gold warmth */}
+          <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(13,40,28,0.45) 0%, rgba(11,20,16,0.15) 35%, rgba(11,20,16,0.35) 70%, rgba(8,16,12,0.85) 100%)" }} />
+          <AbsoluteFill style={{ boxShadow: "inset 0 0 320px rgba(0,0,0,0.55)", mixBlendMode: "multiply" }} />
+          <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 42%, rgba(231,200,115,0.10), transparent 60%)" }} />
+        </>
+      )}
       {/* per-clip extra darkening for footage that is brighter than the grade */}
       {dim ? <AbsoluteFill style={{ background: `rgba(6,12,9,${clamp(dim, 0, 1)})` }} /> : null}
     </AbsoluteFill>
@@ -90,7 +105,7 @@ const toLines = (words: StoryWord[], per = 5) => {
 
 // Calm caption: lines fade in softly, the spoken word warms to gold. No jumpy
 // per-word scaling (that was the "blinking").
-const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
+const CineCaption: React.FC<{ words?: StoryWord[]; warm?: boolean }> = ({ words = [], warm }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const wide = width > height; // 16:9 long-form vs 9:16 short
@@ -113,10 +128,10 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
     <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", padding: `0 ${padX}px ${padBottom}px` }}>
       <div
         style={{
-          fontFamily: PLAYFAIR,
-          fontWeight: 700,
-          fontSize,
-          lineHeight: 1.25,
+          fontFamily: warm ? NUNITO : PLAYFAIR,
+          fontWeight: warm ? 800 : 700,
+          fontSize: warm ? Math.round(fontSize * 0.92) : fontSize,
+          lineHeight: 1.3,
           textAlign: "center",
           color: CREAM,
           textShadow: "0 4px 26px rgba(0,0,0,0.95)",
@@ -125,17 +140,18 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
           justifyContent: "center",
           gap: "4px 16px",
           maxWidth,
-          background: "rgba(6,12,9,0.5)",
+          background: warm ? WARM_INK : "rgba(6,12,9,0.5)",
           padding: "20px 32px",
-          borderRadius: 28,
+          borderRadius: warm ? 34 : 28,
           opacity: lineFade,
           transform: `translateY(${(1 - lineFade) * 12}px)`,
         }}
       >
         {line?.words.map((w, i) => {
           const active = t >= w.start - 0.03 && t < w.end + 0.12;
+          const hi = warm ? WARM_HI : GOLD;
           return (
-            <span key={i} style={{ color: active ? GOLD : CREAM, transition: "color 0.2s linear" }}>
+            <span key={i} style={{ color: active ? hi : CREAM, transition: "color 0.2s linear" }}>
               {w.text}
             </span>
           );
@@ -145,7 +161,7 @@ const CineCaption: React.FC<{ words?: StoryWord[] }> = ({ words = [] }) => {
   );
 };
 
-const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot }) => {
+const CineLabel: React.FC<{ kicker?: string; foot?: string; warm?: boolean }> = ({ kicker, foot, warm }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const wide = width > height;
@@ -161,7 +177,9 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
     <>
       {kicker ? (
         <div style={{ position: "absolute", top: kickerTop, width: "100%", display: "flex", justifyContent: "center", opacity: fade }}>
-          <span style={{ fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, background: "rgba(6,12,9,0.42)", padding: "9px 22px", borderRadius: 16, textShadow: "0 2px 16px rgba(0,0,0,0.85)" }}>
+          <span style={warm
+            ? { fontFamily: NUNITO, fontWeight: 800, letterSpacing: 4, fontSize: 30, color: "#fbe7cf", background: WARM_INK, padding: "10px 26px", borderRadius: 22, textShadow: "0 2px 16px rgba(0,0,0,0.7)" }
+            : { fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD, background: "rgba(6,12,9,0.42)", padding: "9px 22px", borderRadius: 16, textShadow: "0 2px 16px rgba(0,0,0,0.85)" }}>
             {kicker}
           </span>
         </div>
@@ -180,7 +198,8 @@ const CineLabel: React.FC<{ kicker?: string; foot?: string }> = ({ kicker, foot 
 // Qur'an pull-quote over darkened footage (Arabic shown, never recited).
 // The source reference (foot) renders INSIDE the quote card: an ayah on screen
 // must carry its citation on the same frame, per the accuracy rule.
-const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: string; foot?: string }> = ({ arabic, words = [], kicker, foot }) => {
+const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: string; foot?: string; warm?: boolean }> = ({ arabic, words = [], kicker, foot, warm }) => {
+  const ACC = warm ? WARM_HI : GOLD;
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const wide = width > height;
@@ -196,21 +215,21 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   const transSize = wide ? 40 : 58;
   const maxWidth = wide ? 1500 : 900;
   return (
-    <AbsoluteFill style={{ background: "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: `${padY}px ${padX}px`, opacity: fade }}>
+    <AbsoluteFill style={{ background: warm ? "rgba(34,20,10,0.62)" : "rgba(6,12,9,0.55)", justifyContent: "center", alignItems: "center", padding: `${padY}px ${padX}px`, opacity: fade }}>
       {kicker ? (
-        <div style={{ marginBottom: wide ? 28 : 40, fontFamily: JOST, fontWeight: 500, letterSpacing: 8, fontSize: 28, color: GOLD }}>{kicker}</div>
+        <div style={{ marginBottom: wide ? 28 : 40, fontFamily: warm ? NUNITO : JOST, fontWeight: warm ? 800 : 500, letterSpacing: warm ? 4 : 8, fontSize: 28, color: ACC }}>{kicker}</div>
       ) : null}
-      <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: arabicSize, lineHeight: 1.7, textAlign: "center", color: CREAM, textShadow: "0 0 50px rgba(231,200,115,0.4)" }}>
+      <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: arabicSize, lineHeight: 1.7, textAlign: "center", color: CREAM, textShadow: warm ? "0 0 50px rgba(240,175,95,0.45)" : "0 0 50px rgba(231,200,115,0.4)" }}>
         {arabic}
       </div>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 18, margin: wide ? "30px 0" : "44px 0" }}>
-        <div style={{ height: 1.5, width: 150 * flourish, background: "linear-gradient(90deg,transparent,#e7c873)" }} />
-        <div style={{ width: 14, height: 14, transform: "rotate(45deg)", background: GOLD, opacity: flourish }} />
-        <div style={{ height: 1.5, width: 150 * flourish, background: "linear-gradient(90deg,#e7c873,transparent)" }} />
+        <div style={{ height: 1.5, width: 150 * flourish, background: `linear-gradient(90deg,transparent,${ACC})` }} />
+        <div style={{ width: 14, height: 14, transform: "rotate(45deg)", background: ACC, opacity: flourish }} />
+        <div style={{ height: 1.5, width: 150 * flourish, background: `linear-gradient(90deg,${ACC},transparent)` }} />
       </div>
       <div style={{ fontFamily: CORMORANT, fontStyle: "italic", fontWeight: 600, fontSize: transSize, lineHeight: 1.3, textAlign: "center", color: CREAM, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2px 14px", maxWidth }}>
         {words.map((w, i) => (
-          <span key={i} style={{ opacity: t >= w.start - 0.12 ? 1 : 0.3, color: t >= w.start - 0.04 && t < w.end + 0.12 ? GOLD : CREAM }}>
+          <span key={i} style={{ opacity: t >= w.start - 0.12 ? 1 : 0.3, color: t >= w.start - 0.04 && t < w.end + 0.12 ? ACC : CREAM }}>
             {w.text}
           </span>
         ))}
@@ -283,7 +302,9 @@ const CineTitle: React.FC<{ title: string; sub?: string; kicker?: string }> = ({
 };
 
 // One cinematic beat: footage + (title OR quote OR caption + labels).
-export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
+// `warm` switches to the children's "kitab" storytime palette (soft amber grade,
+// rounded font) instead of the dark green/gold cinematic grade.
+export const CinematicBeat: React.FC<{ seg: StorySegment; warm?: boolean }> = ({ seg, warm }) => {
   return (
     <AbsoluteFill>
       {seg.map ? (
@@ -320,20 +341,20 @@ export const CinematicBeat: React.FC<{ seg: StorySegment }> = ({ seg }) => {
           <FingerprintScene name={seg.scene as string} />
         )
       ) : seg.imageSrc ? (
-        <CinematicBg imageSrc={seg.imageSrc} dim={seg.dim} />
+        <CinematicBg imageSrc={seg.imageSrc} dim={seg.dim} warm={warm} />
       ) : seg.videoSrc ? (
-        <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} dim={seg.dim} />
+        <CinematicBg src={seg.videoSrc} videoDuration={seg.videoDuration} dim={seg.dim} warm={warm} />
       ) : (
-        <AbsoluteFill style={{ background: "#0b1410" }} />
+        <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }} />
       )}
       {seg.title ? (
         <CineTitle title={seg.title} sub={seg.titleSub} kicker={seg.kicker} />
       ) : seg.arabic ? (
-        <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} foot={seg.foot} />
+        <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} foot={seg.foot} warm={warm} />
       ) : (
         <>
-          <CineLabel kicker={seg.kicker} foot={seg.foot} />
-          <CineCaption words={seg.words} />
+          <CineLabel kicker={seg.kicker} foot={seg.foot} warm={warm} />
+          <CineCaption words={seg.words} warm={warm} />
         </>
       )}
     </AbsoluteFill>

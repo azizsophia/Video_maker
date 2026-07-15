@@ -363,7 +363,10 @@ async function main() {
       const display: string = seg.text ?? seg.say;
       const spoken: string = seg.say ?? phoneticize(display);
       const dest = join("public", "story", `n${i}.mp3`);
-      const { words, duration } = await tts(spoken, voice, model, dest, {
+      // Per-line voice override (e.g. a two-person dialogue: Mom vs Son). Falls
+      // back to the story/default single narrator.
+      const segVoice: string = seg.voiceId ?? voice;
+      const { words, duration } = await tts(spoken, segVoice, model, dest, {
         settings: seg.voiceSettings,
         seed: story.voiceSeed ?? DEFAULT_VOICE_SEED,
       });
@@ -379,10 +382,19 @@ async function main() {
       // validated Quran.com source so Arabic is never hand-typed.
       let arabicQuote: string | undefined;
       if (seg.quote) {
-        const qv = await getJson<any>(
-          `${API}/verses/by_key/${String(seg.quote)}?language=en&fields=text_uthmani`
-        );
-        arabicQuote = cleanArabic(qv.verse?.text_uthmani as string | undefined);
+        // Accept a single key "S:A" or a range "S:A-B" (e.g. "82:10-12" for a
+        // multi-ayah verse card). Range -> fetch each ayah and join the Arabic.
+        const range = String(seg.quote).match(/^(\d+):(\d+)-(\d+)$/);
+        const keys: string[] = range
+          ? Array.from({ length: Number(range[3]) - Number(range[2]) + 1 }, (_, k) => `${range[1]}:${Number(range[2]) + k}`)
+          : [String(seg.quote)];
+        const parts: string[] = [];
+        for (const key of keys) {
+          const qv = await getJson<any>(`${API}/verses/by_key/${key}?language=en&fields=text_uthmani`);
+          const a = cleanArabic(qv.verse?.text_uthmani as string | undefined);
+          if (a) parts.push(a);
+        }
+        arabicQuote = parts.length ? parts.join(" ") : undefined;
         if (arabicQuote) console.log(`  quote ${seg.quote}: Arabic shown (not recited)`);
       }
       // Optional extra hold (seconds) so a beat lingers after the line ends —

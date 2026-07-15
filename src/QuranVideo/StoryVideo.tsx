@@ -477,6 +477,8 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   const adOutro = props.outroAd !== false;
   const institutional = props.theme === "atlas";
   const cinematic = props.cinematic === true;
+  // Children's "kitab" storytime look: warm amber grade + rounded font.
+  const warm = props.theme === "kitab";
   return (
     <AbsoluteFill style={{ background: cinematic ? "#0b1410" : institutional ? "#efe4cd" : undefined }}>
       {!institutional && !cinematic ? (
@@ -493,7 +495,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <Sequence key={i} from={from} durationInFrames={dur}>
             {seg.audioSrc ? <Audio src={resolveAudio(seg.audioSrc)} /> : null}
             {cinematic ? (
-              <CinematicBeat seg={seg} />
+              <CinematicBeat seg={seg} warm={warm} />
             ) : institutional ? (
               <>
                 <Slide kicker={seg.kicker} foot={seg.foot}>
