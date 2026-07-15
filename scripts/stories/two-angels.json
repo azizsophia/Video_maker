@@ -7,6 +7,7 @@
   "voiceName": "Lily (Mama) + Alice (Son)",
   "voiceSeed": 90210,
   "showOutro": false,
+  "ambient": { "rain": true, "flame": "81% 77%" },
   "_brand": "Children's storytime channel (separate from Ketabi). Warm kitab theme, faces-out footage, English only (Arabic shown on the verse card, never recited). Two British voices: Mama=Lily, Son=Alice. Ends on a verse card like the Ketabi ayah cards.",
   "cover": {
     "title": "The Two Angels",

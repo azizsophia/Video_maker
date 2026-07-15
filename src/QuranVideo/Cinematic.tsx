@@ -33,7 +33,8 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 // and the clip is slowed (playbackRate) to fill the whole beat so it never runs
 // out and FREEZES on its last frame at the cut. Pass videoDuration (seconds) so
 // the slow-down is computed exactly; otherwise a gentle slow-mo default is used.
-export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number; warm?: boolean }> = ({ src, imageSrc, videoDuration, dim, warm }) => {
+export type Ambient = { rain?: boolean; flame?: string; stars?: boolean };
+export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number; warm?: boolean; ambient?: Ambient }> = ({ src, imageSrc, videoDuration, dim, warm, ambient }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
   const beatSeconds = durationInFrames / fps;
@@ -71,24 +72,38 @@ export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDurat
           // still never runs out, so it never freezes.
           <>
             <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            {warm ? (
-              <>
-                {/* Animated rain — masked to the window view (an ellipse over the
-                    outdoor opening) so it never falls on the cosy interior. Two
-                    diagonal streak layers at different speeds give depth; the
-                    repeating gradient scrolls seamlessly via backgroundPosition. */}
-                <AbsoluteFill
-                  style={{
-                    WebkitMaskImage: "radial-gradient(ellipse 40% 31% at 50% 33%, #000 60%, transparent 84%)",
-                    maskImage: "radial-gradient(ellipse 40% 31% at 50% 33%, #000 60%, transparent 84%)",
-                  }}
-                >
-                  <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(101deg, rgba(228,240,255,0.11) 0px, rgba(228,240,255,0.11) 1px, transparent 1px, transparent 9px)", backgroundPosition: `0px ${(frame * 10).toFixed(1)}px`, opacity: 0.6, mixBlendMode: "screen" }} />
-                  <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(99deg, rgba(228,240,255,0.08) 0px, rgba(228,240,255,0.08) 1px, transparent 1px, transparent 14px)", backgroundPosition: `0px ${(frame * 6).toFixed(1)}px`, opacity: 0.5, mixBlendMode: "screen" }} />
-                </AbsoluteFill>
-                {/* flame-locked shimmer (only the lantern flame breathes) */}
-                <AbsoluteFill style={{ background: `radial-gradient(circle at 81% 77%, rgba(255,188,98,${(0.16 + 0.30 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.07 + 0.13 * flick).toFixed(3)}) 4%, transparent 9%)`, mixBlendMode: "screen" }} />
-              </>
+            {warm && ambient?.rain ? (
+              // Animated rain — masked to the window view (an ellipse over the
+              // outdoor opening) so it never falls on the cosy interior. Two
+              // diagonal streak layers at different speeds give depth; the
+              // repeating gradient scrolls seamlessly via backgroundPosition.
+              <AbsoluteFill
+                style={{
+                  WebkitMaskImage: "radial-gradient(ellipse 40% 31% at 50% 33%, #000 60%, transparent 84%)",
+                  maskImage: "radial-gradient(ellipse 40% 31% at 50% 33%, #000 60%, transparent 84%)",
+                }}
+              >
+                <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(101deg, rgba(228,240,255,0.11) 0px, rgba(228,240,255,0.11) 1px, transparent 1px, transparent 9px)", backgroundPosition: `0px ${(frame * 10).toFixed(1)}px`, opacity: 0.6, mixBlendMode: "screen" }} />
+                <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(99deg, rgba(228,240,255,0.08) 0px, rgba(228,240,255,0.08) 1px, transparent 1px, transparent 14px)", backgroundPosition: `0px ${(frame * 6).toFixed(1)}px`, opacity: 0.5, mixBlendMode: "screen" }} />
+              </AbsoluteFill>
+            ) : null}
+            {warm && ambient?.stars ? (
+              // Gentle star twinkle over the upper sky (for clear-night images):
+              // two faint speckled layers cross-fading, so a few stars breathe
+              // without any whole-screen flicker. Masked to the sky band.
+              <AbsoluteFill
+                style={{
+                  WebkitMaskImage: "linear-gradient(180deg, #000 0%, #000 40%, transparent 60%)",
+                  maskImage: "linear-gradient(180deg, #000 0%, #000 40%, transparent 60%)",
+                }}
+              >
+                <AbsoluteFill style={{ backgroundImage: "radial-gradient(1.4px 1.4px at 22% 18%, rgba(255,255,255,0.9), transparent), radial-gradient(1.2px 1.2px at 63% 12%, rgba(255,255,255,0.8), transparent), radial-gradient(1.3px 1.3px at 78% 26%, rgba(255,255,255,0.85), transparent), radial-gradient(1.1px 1.1px at 40% 30%, rgba(255,255,255,0.7), transparent)", opacity: 0.35 + 0.35 * (0.5 + 0.5 * Math.sin(frame * 0.16)), mixBlendMode: "screen" }} />
+                <AbsoluteFill style={{ backgroundImage: "radial-gradient(1.2px 1.2px at 33% 14%, rgba(255,255,255,0.8), transparent), radial-gradient(1.4px 1.4px at 55% 24%, rgba(255,255,255,0.85), transparent), radial-gradient(1.1px 1.1px at 70% 16%, rgba(255,255,255,0.75), transparent), radial-gradient(1.2px 1.2px at 48% 20%, rgba(255,255,255,0.7), transparent)", opacity: 0.35 + 0.35 * (0.5 + 0.5 * Math.sin(frame * 0.16 + Math.PI)), mixBlendMode: "screen" }} />
+              </AbsoluteFill>
+            ) : null}
+            {warm && ambient?.flame ? (
+              // flame-locked shimmer (only the flame breathes) at the image's flame
+              <AbsoluteFill style={{ background: `radial-gradient(circle at ${ambient.flame}, rgba(255,188,98,${(0.16 + 0.30 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.07 + 0.13 * flick).toFixed(3)}) 4%, transparent 9%)`, mixBlendMode: "screen" }} />
             ) : null}
           </>
         ) : (

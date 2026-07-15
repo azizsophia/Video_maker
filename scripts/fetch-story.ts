@@ -486,6 +486,7 @@ async function main() {
     ctaShowUrl: story.ctaShowUrl ?? true,
     ctaSeconds: story.ctaSeconds ?? 5.5,
     cinematic: story.cinematic ?? false,
+    ambient: story.ambient ?? undefined,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";

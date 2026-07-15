@@ -1,0 +1,90 @@
+{
+  "id": "where-we-go",
+  "title": "Where Do We Go When We Die?",
+  "theme": "kitab",
+  "cinematic": true,
+  "voiceId": "pFZP5JQG7iQjIQuC4Bku",
+  "voiceName": "Lily (Mama) + Alice (Son)",
+  "voiceSeed": 90211,
+  "showOutro": false,
+  "ambient": { "stars": true },
+  "_brand": "shop.ketabi children's storytime. Warm kitab theme, English only (Arabic shown on the verse card, never recited). Mama=Lily, child=Alice. Single cosy night-window background. Ends on a verse card.",
+  "cover": {
+    "title": "Where Do We Go\nWhen We Die?",
+    "kicker": "A BEDTIME STORY",
+    "image": "kids/where-we-go.png",
+    "wordmark": "shop.ketabi",
+    "warm": true
+  },
+  "captions": {
+    "tiktok": "\"Mama, where do we go when we die?\" The gentlest answer for a little heart. Qur'an 89:27-30.",
+    "shorts": "Where do we go when we die - explained gently for little ones. Qur'an 89:27-30.",
+    "reels": "\"Mama, where do we go when we die?\" The gentlest answer for a little heart. Qur'an 89:27-30.",
+    "hashtags": ["#muslimkids", "#islamicparenting", "#islam", "#muslimtiktok", "#bedtimestories"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Mama, where do we go when we die?",
+      "kicker": "SON",
+      "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
+      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 },
+      "image": "kids/where-we-go.png"
+    },
+    {
+      "type": "narration",
+      "text": "Somewhere gentle, my love. Our body rests, and the part of us that loves and feels goes back to Allah.",
+      "kicker": "MAMA",
+      "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 },
+      "image": "kids/where-we-go.png"
+    },
+    {
+      "type": "narration",
+      "text": "Back to Allah?",
+      "kicker": "SON",
+      "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
+      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 },
+      "image": "kids/where-we-go.png"
+    },
+    {
+      "type": "narration",
+      "text": "Yes. We came from Him, and one day we return to Him. It is not the end. It is like finally going home.",
+      "kicker": "MAMA",
+      "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 },
+      "image": "kids/where-we-go.png"
+    },
+    {
+      "type": "narration",
+      "text": "Will it be scary?",
+      "kicker": "SON",
+      "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
+      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 },
+      "image": "kids/where-we-go.png"
+    },
+    {
+      "type": "narration",
+      "text": "Not for a heart that loved Allah. A peaceful soul rests softly, waiting for a beautiful morning.",
+      "kicker": "MAMA",
+      "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 },
+      "image": "kids/where-we-go.png"
+    },
+    {
+      "type": "narration",
+      "text": "And when that morning comes, Allah welcomes the ones who loved Him into a garden that never ends.",
+      "kicker": "MAMA",
+      "voiceSettings": { "stability": 0.44, "style": 0.42, "similarity_boost": 0.9, "speed": 0.9 },
+      "image": "kids/where-we-go.png",
+      "holdSeconds": 0.6
+    },
+    {
+      "type": "narration",
+      "text": "O peaceful soul, return to your Lord, well pleased and pleasing to Him. Enter among My servants, and enter My Paradise.",
+      "quote": "89:27-30",
+      "foot": "Qur'an 89:27-30",
+      "kicker": "THE QUR'AN SAYS",
+      "voiceSettings": { "stability": 0.55, "style": 0.24, "similarity_boost": 0.9, "speed": 0.9 },
+      "image": "kids/where-we-go.png",
+      "holdSeconds": 1.8
+    }
+  ]
+}

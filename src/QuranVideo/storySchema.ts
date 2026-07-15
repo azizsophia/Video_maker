@@ -69,6 +69,16 @@ export const storyPropsSchema = z.object({
   ctaSeconds: z.number().default(5.5),
   // Cinematic mode: full-bleed stock footage backgrounds + calm captions.
   cinematic: z.boolean().default(false),
+  // Kids channel (single still background): per-image ambient motion. Each cosy
+  // image declares only the effects that fit it, so a rainy window gets rain and
+  // a clear starry night does not. All optional / off by default.
+  ambient: z
+    .object({
+      rain: z.boolean().optional(), // animated rain over the window view
+      flame: z.string().optional(), // CSS position of a flickering flame glow, e.g. "81% 77%"
+      stars: z.boolean().optional(), // gentle star twinkle over the upper sky
+    })
+    .optional(),
   segments: z.array(storySegmentSchema),
 });
 

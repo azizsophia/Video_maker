@@ -498,7 +498,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
       ) : null}
       {/* Continuous single background (kids channel): drawn once, spans the whole
           video, so the image never resets or flashes between beats. */}
-      {sharedBg ? <CinematicBg imageSrc={sharedBg} warm={warm} /> : null}
+      {sharedBg ? <CinematicBg imageSrc={sharedBg} warm={warm} ambient={props.ambient} /> : null}
       {props.segments.map((seg: StorySegment, i: number) => {
         const from = Math.round(seg.fromSeconds * STORY_FPS);
         const dur = Math.round(seg.durationInSeconds * STORY_FPS);
