@@ -140,7 +140,8 @@ const CineCaption: React.FC<{ words?: StoryWord[]; warm?: boolean }> = ({ words 
   const { fps, width, height } = useVideoConfig();
   const wide = width > height; // 16:9 long-form vs 9:16 short
   const t = frame / fps;
-  const lines = toLines(words, wide ? 7 : 5);
+  // Kids/warm captions read more aesthetic smaller and shorter (4 words/line).
+  const lines = toLines(words, wide ? 7 : warm ? 4 : 5);
   let idx = 0;
   for (let i = 0; i < lines.length; i++) if (t >= lines[i].start - 0.2) idx = i;
   const line = lines[idx];
@@ -159,9 +160,12 @@ const CineCaption: React.FC<{ words?: StoryWord[]; warm?: boolean }> = ({ words 
       <div
         style={{
           fontFamily: warm ? NUNITO : PLAYFAIR,
-          fontWeight: warm ? 800 : 700,
-          fontSize: warm ? Math.round(fontSize * 0.94) : fontSize,
-          lineHeight: 1.3,
+          fontWeight: warm ? 700 : 700,
+          // Smaller, more refined caption for the kids channel (owner: subtitles
+          // smaller = more aesthetic); the Ketabi size is unchanged.
+          fontSize: warm ? Math.round(fontSize * 0.7) : fontSize,
+          lineHeight: warm ? 1.35 : 1.3,
+          letterSpacing: warm ? 0.3 : 0,
           textAlign: "center",
           color: CREAM,
           // Warm kids look: NO caption box — soft floating text, kept legible over
