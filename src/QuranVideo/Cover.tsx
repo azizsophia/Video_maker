@@ -89,7 +89,7 @@ export const Cover: React.FC<CoverProps> = ({ title, kicker, image, scene, wordm
             {kicker}
           </span>
         ) : null}
-        <div style={{ fontFamily: PLAYFAIR, fontWeight: 900, fontSize: wide ? (longLine ? 86 : 104) : (longLine ? 92 : 112), lineHeight: 1.06, color: CREAM, textShadow: "0 6px 34px rgba(0,0,0,0.92)", maxWidth: wide ? 1400 : 880 }}>
+        <div style={{ fontFamily: PLAYFAIR, fontWeight: 900, fontSize: wide ? (longLine ? 86 : 104) : warm ? (longLine ? 78 : 90) : (longLine ? 92 : 112), lineHeight: 1.08, color: CREAM, textShadow: "0 6px 34px rgba(0,0,0,0.92)", maxWidth: wide ? 1400 : 900 }}>
           {lines.map((l, i) => (
             <div key={i}>{l}</div>
           ))}
