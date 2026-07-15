@@ -56,18 +56,25 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
   const panX = dir * interpolate(p, [0, 1], [-16, 16]);
   const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
-  // Living-still flicker: for a warm STILL background (e.g. the cozy lantern-lit
-  // window), pulse a warm glow like a candle/lantern flame so the image feels
-  // alive rather than a dead pan. Layered sines give an organic, non-repeating
-  // flame wobble (never negative, hovers ~0.55..1.0).
-  const flick = 0.78 + 0.22 * (0.5 + 0.28 * Math.sin(frame * 0.7) + 0.16 * Math.sin(frame * 1.9 + 1.3) + 0.06 * Math.sin(frame * 3.7 + 0.6));
+  // Gentle flame life for a warm STILL (e.g. the lantern-lit window): a TINY glow
+  // that shimmers only on the flame. Kept small (8% radius) and INSIDE the Ken
+  // Burns layer so it tracks the flame as the image drifts — it must not pulse the
+  // whole screen (owner: flame flicker good, screen flicker bad).
+  const flick = 0.9 + 0.1 * (0.6 * Math.sin(frame * 0.6) + 0.4 * Math.sin(frame * 1.5 + 0.9));
   return (
     <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
         {imageSrc ? (
           // Still image (e.g. a beautiful cover photo): Ken Burns pan only — a
           // still never runs out, so it can never freeze at the cut.
-          <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <>
+            <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            {warm ? (
+              // small flame-locked shimmer (moves WITH the image, so only the flame
+              // area breathes — the rest of the picture stays perfectly steady)
+              <AbsoluteFill style={{ background: `radial-gradient(circle at 80% 76%, rgba(255,170,80,${(0.13 * flick).toFixed(3)}) 0%, transparent 8%)`, mixBlendMode: "screen" }} />
+            ) : null}
+          </>
         ) : (
           // Loop the clip so one shorter than its beat repeats instead of holding
           // (freezing) on its last frame. One iteration plays `videoDuration`s of
@@ -95,13 +102,6 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
           <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 42%, rgba(231,200,115,0.10), transparent 60%)" }} />
         </>
       )}
-      {/* Living-still: a gentle flickering warm glow over a warm STILL image, so a
-          lantern/candle in the picture reads as a live flame (Ken Burns alone can
-          feel static). Positioned lower-right where the window scene's lantern sits;
-          screen-blended and low-opacity so it only warms, never washes. */}
-      {warm && imageSrc ? (
-        <AbsoluteFill style={{ background: `radial-gradient(circle at 76% 74%, rgba(255,178,92,${(0.16 * flick).toFixed(3)}), transparent 32%)`, mixBlendMode: "screen" }} />
-      ) : null}
       {/* per-clip extra darkening for footage that is brighter than the grade */}
       {dim ? <AbsoluteFill style={{ background: `rgba(6,12,9,${clamp(dim, 0, 1)})` }} /> : null}
     </AbsoluteFill>
