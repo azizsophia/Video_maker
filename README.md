@@ -125,13 +125,68 @@ See `docs/SETUP.md` to get the live pipeline running.
 
 ## Session handoff — where we left off (read this first)
 
-**Last updated: 2026-07-04.** Also read `CLAUDE.md` (the non-negotiable owner
-rules + pre-ship QC gate) and `docs/content-calendar.md` (schedule, posted list,
-app footer) before continuing the channel.
+**Last updated: 2026-07-15.** Two channels now: **Ketabi Studio** (Islamic shorts,
+below) and **shop.ketabi** (kids storytime — see its section just below). Also read
+`CLAUDE.md` (the non-negotiable owner rules + pre-ship QC gate) and
+`docs/content-calendar.md` (schedule, posted list, app footer) before continuing.
 
 **Branch:** `claude/fingerprints-ridge-visuals-6qbs6x` (all work here; never push
 elsewhere without explicit owner permission). GitHub is scoped to
 `azizsophia/video_maker` only.
+
+---
+
+## shop.ketabi — kids storytime channel (NEW, 2026-07-15)
+
+A **second channel**, separate from Ketabi Studio: **shop.ketabi**, promoting the
+children's books. Gentle mom/child (or dad/child) **dialogues** explaining one
+Islamic concept, **English only** (so nothing is mispronounced — Arabic appears
+only on the closing verse card, never recited). Same non-negotiable rules as
+Ketabi: Islam-accurate, every claim sourced, no Israiliyyat / weak narration, adab.
+
+**Look & engine (all committed on the work branch):**
+- Theme `kitab` (warm amber grade). A **single continuous** cozy background image
+  (the owner supplies it — e.g. a lantern-lit or starry-night window) is drawn
+  ONCE behind all beats (`sharedBg` in `StoryVideo`, beats pass `hideBg`) so it
+  never fades/resets between beats — that per-beat re-fade was the "looping
+  flicker." Ken Burns drift, never freezes.
+- **Per-image ambient** via a story-level `ambient` block: `rain` (masked falling
+  rain over the window view only), `flame` (a flame-locked flicker at a CSS
+  position, e.g. `"81% 77%"`), `stars` (subtle anti-phase star twinkle over the
+  sky — no whole-screen pulsing). Each supplied image declares only what fits it.
+- **Boxless captions**, smaller/refined (Nunito, 0.7×, 4 words/line, amber
+  highlight word) — deliberately distinct from Ketabi's Playfair boxed captions.
+- **British voices:** Mama = Lily `pFZP5JQG7iQjIQuC4Bku`, child = Alice
+  `Xb7hH8MSUJpSbSDYk0k2`. Per-line `voiceSettings` including `speed` (~0.9–0.92
+  for a calm bedtime pace). `speed` is set per-kids-video so **Ketabi caches stay
+  untouched**.
+- **Closing verse card** (like the Ketabi ayah cards) with a `ketabistudio.com`
+  end tag that fades in after the translation reads. **Warm cover** variant
+  (`Cover` `warm:true`, wordmark `shop.ketabi`) rendered locally via
+  `node scripts/render-one-cover.mjs`.
+
+**Workflow:** Claude picks the topic + writes the short (~30–52s) dialogue → owner
+supplies the cozy background image → render + QC + deliver. Keep them **short** for
+reach; hook in the first 2 seconds; end on a comment-trigger question.
+
+**Delivered (2026-07-15):**
+- `two-angels` — "Mama, is someone watching everything I do?" (two angels,
+  Qur'an 82:10-12). Lantern-window bg (`rain` + `flame`).
+- `where-we-go` — "Mama, where do we go when we die?" (Qur'an 89:27-30).
+  Starry-night window bg (`stars`), 52s.
+
+**Next-topic slate** (ranked by hook): does Allah still love me when I'm naughty ·
+where does Allah live · can Allah see me in the dark · what is Jannah like · if I
+whisper, can Allah hear me · who made the stars · why we say Bismillah · Allah
+comes close at night · why we wear hijab (save for later).
+
+**Files:** `scripts/stories/two-angels.json`, `scripts/stories/where-we-go.json`,
+backgrounds in `public/kids/`. Engine: `ambient` in `src/QuranVideo/storySchema.ts`,
+`sharedBg`/`hideBg` in `StoryVideo.tsx`, effects + warm captions in `Cinematic.tsx`,
+warm cover in `Cover.tsx`.
+
+**Branch to mention in a new chat:** same as Ketabi —
+`claude/fingerprints-ridge-visuals-6qbs6x`.
 
 ---
 
