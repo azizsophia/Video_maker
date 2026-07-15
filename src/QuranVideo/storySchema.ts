@@ -79,6 +79,11 @@ export const storyPropsSchema = z.object({
       stars: z.boolean().optional(), // gentle star twinkle over the upper sky
     })
     .optional(),
+  // Background audio bed (e.g. a vocal-only nasheed) mixed LOW under the
+  // narration. Path under /public (e.g. "audio/nasheed-bed.mp3") or a URL. Loops
+  // to fill the content. Volume is linear: 0.12 ~= -18dB (felt, not heard).
+  musicSrc: z.string().optional(),
+  musicVolume: z.number().default(0.12),
   segments: z.array(storySegmentSchema),
 });
 

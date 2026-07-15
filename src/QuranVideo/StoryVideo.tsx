@@ -499,6 +499,13 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
       {/* Continuous single background (kids channel): drawn once, spans the whole
           video, so the image never resets or flashes between beats. */}
       {sharedBg ? <CinematicBg imageSrc={sharedBg} warm={warm} ambient={props.ambient} /> : null}
+      {/* Background audio bed (e.g. a vocal-only nasheed) mixed LOW under the
+          narration, looped to fill the content (never over the outro). */}
+      {props.musicSrc ? (
+        <Sequence durationInFrames={Math.max(1, contentEndFrames)}>
+          <Audio src={resolveAudio(props.musicSrc)} loop volume={props.musicVolume} />
+        </Sequence>
+      ) : null}
       {props.segments.map((seg: StorySegment, i: number) => {
         const from = Math.round(seg.fromSeconds * STORY_FPS);
         const dur = Math.round(seg.durationInSeconds * STORY_FPS);

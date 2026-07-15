@@ -487,6 +487,8 @@ async function main() {
     ctaSeconds: story.ctaSeconds ?? 5.5,
     cinematic: story.cinematic ?? false,
     ambient: story.ambient ?? undefined,
+    musicSrc: story.musicSrc ?? undefined,
+    musicVolume: story.musicVolume ?? 0.12,
     segments,
   };
   const outFile = args.out ?? "src/data/story-render.json";
