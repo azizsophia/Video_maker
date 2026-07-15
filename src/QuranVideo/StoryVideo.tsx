@@ -17,7 +17,7 @@ import { Background } from "./Background";
 import { StoryMap } from "./StoryMap";
 import { Scene } from "./Scenes";
 import { Slide, InstitutionalScene, InkCaption } from "./Slides";
-import { CinematicBeat } from "./Cinematic";
+import { CinematicBeat, CinematicBg } from "./Cinematic";
 import { ParallaxAd } from "./ParallaxAd";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT, CAPTION_FONT } from "./fonts";
 
@@ -479,6 +479,14 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   const cinematic = props.cinematic === true;
   // Children's "kitab" storytime look: warm amber grade + rounded font.
   const warm = props.theme === "kitab";
+  // Single continuous background: when every cinematic beat shares the SAME still
+  // image (the kids channel's one cosy scene), render it ONCE behind all beats so
+  // it never resets/fades at a cut. Per-beat backgrounds would re-fade the image
+  // in from black on every beat = a flicker/loop. Beats then draw only captions.
+  const sharedBg =
+    cinematic && props.segments.length > 0 && props.segments.every((s) => s.imageSrc && s.imageSrc === props.segments[0].imageSrc)
+      ? props.segments[0].imageSrc
+      : undefined;
   return (
     <AbsoluteFill style={{ background: cinematic ? "#0b1410" : institutional ? "#efe4cd" : undefined }}>
       {!institutional && !cinematic ? (
@@ -488,6 +496,9 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <AbsoluteFill style={{ background: "rgba(0,0,0,0.28)" }} />
         </>
       ) : null}
+      {/* Continuous single background (kids channel): drawn once, spans the whole
+          video, so the image never resets or flashes between beats. */}
+      {sharedBg ? <CinematicBg imageSrc={sharedBg} warm={warm} /> : null}
       {props.segments.map((seg: StorySegment, i: number) => {
         const from = Math.round(seg.fromSeconds * STORY_FPS);
         const dur = Math.round(seg.durationInSeconds * STORY_FPS);
@@ -495,7 +506,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <Sequence key={i} from={from} durationInFrames={dur}>
             {seg.audioSrc ? <Audio src={resolveAudio(seg.audioSrc)} /> : null}
             {cinematic ? (
-              <CinematicBeat seg={seg} warm={warm} />
+              <CinematicBeat seg={seg} warm={warm} hideBg={!!sharedBg} />
             ) : institutional ? (
               <>
                 <Slide kicker={seg.kicker} foot={seg.foot}>

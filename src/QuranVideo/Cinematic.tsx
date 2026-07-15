@@ -33,7 +33,7 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v
 // and the clip is slowed (playbackRate) to fill the whole beat so it never runs
 // out and FREEZES on its last frame at the cut. Pass videoDuration (seconds) so
 // the slow-down is computed exactly; otherwise a gentle slow-mo default is used.
-const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number; warm?: boolean }> = ({ src, imageSrc, videoDuration, dim, warm }) => {
+export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: number; dim?: number; warm?: boolean }> = ({ src, imageSrc, videoDuration, dim, warm }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
   const beatSeconds = durationInFrames / fps;
@@ -56,14 +56,24 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
   const panX = dir * interpolate(p, [0, 1], [-16, 16]);
   const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
+  // Flame shimmer for a warm STILL (the lantern window). This background renders
+  // ONCE, continuously, behind every beat (see StoryVideo), so `frame` is the
+  // absolute video frame — the flicker is smooth and never resets at a cut. It is
+  // tiny (8% radius) and locked to the flame, so only the flame breathes.
+  const flick = 0.72 + 0.28 * (0.5 + 0.32 * Math.sin(frame * 0.55) + 0.14 * Math.sin(frame * 1.7 + 1.1) + 0.06 * Math.sin(frame * 3.9 + 0.4));
   return (
     <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
         {imageSrc ? (
-          // Still image (e.g. the cosy lantern window): a slow Ken Burns drift only,
-          // no flicker of any kind — the picture stays perfectly steady (owner
-          // disliked all screen flicker). A still never runs out, so it never freezes.
-          <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          // Still image (e.g. the cosy lantern window): slow Ken Burns drift + a
+          // small flame-locked shimmer so the lantern reads as a live flame. A
+          // still never runs out, so it never freezes.
+          <>
+            <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            {warm ? (
+              <AbsoluteFill style={{ background: `radial-gradient(circle at 80% 76%, rgba(255,168,78,${(0.22 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.08 * flick).toFixed(3)}) 4%, transparent 8%)`, mixBlendMode: "screen" }} />
+            ) : null}
+          </>
         ) : (
           // Loop the clip so one shorter than its beat repeats instead of holding
           // (freezing) on its last frame. One iteration plays `videoDuration`s of
@@ -323,10 +333,10 @@ const CineTitle: React.FC<{ title: string; sub?: string; kicker?: string }> = ({
 // One cinematic beat: footage + (title OR quote OR caption + labels).
 // `warm` switches to the children's "kitab" storytime palette (soft amber grade,
 // rounded font) instead of the dark green/gold cinematic grade.
-export const CinematicBeat: React.FC<{ seg: StorySegment; warm?: boolean }> = ({ seg, warm }) => {
+export const CinematicBeat: React.FC<{ seg: StorySegment; warm?: boolean; hideBg?: boolean }> = ({ seg, warm, hideBg }) => {
   return (
     <AbsoluteFill>
-      {seg.map ? (
+      {hideBg ? null : seg.map ? (
         isSceneName(seg.scene) ? (
           // Premium map composited over a code-generated backdrop (e.g. dunes),
           // kept legible by CineMap's lighter base.
