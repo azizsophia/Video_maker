@@ -60,7 +60,8 @@ export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDurat
   // ONCE, continuously, behind every beat (see StoryVideo), so `frame` is the
   // absolute video frame — the flicker is smooth and never resets at a cut. It is
   // tiny (8% radius) and locked to the flame, so only the flame breathes.
-  const flick = 0.72 + 0.28 * (0.5 + 0.32 * Math.sin(frame * 0.55) + 0.14 * Math.sin(frame * 1.7 + 1.1) + 0.06 * Math.sin(frame * 3.9 + 0.4));
+  const flickS = 0.55 * Math.sin(frame * 0.5) + 0.30 * Math.sin(frame * 1.3 + 1.1) + 0.15 * Math.sin(frame * 2.7 + 0.5); // ~ -1..1
+  const flick = 0.5 + 0.5 * flickS; // ~0..1, organic flame wobble
   return (
     <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
@@ -71,7 +72,7 @@ export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDurat
           <>
             <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             {warm ? (
-              <AbsoluteFill style={{ background: `radial-gradient(circle at 80% 76%, rgba(255,168,78,${(0.22 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.08 * flick).toFixed(3)}) 4%, transparent 8%)`, mixBlendMode: "screen" }} />
+              <AbsoluteFill style={{ background: `radial-gradient(circle at 81% 77%, rgba(255,188,98,${(0.16 + 0.30 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.07 + 0.13 * flick).toFixed(3)}) 4%, transparent 9%)`, mixBlendMode: "screen" }} />
             ) : null}
           </>
         ) : (
