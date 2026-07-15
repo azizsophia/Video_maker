@@ -56,25 +56,14 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
   const panX = dir * interpolate(p, [0, 1], [-16, 16]);
   const panY = interpolate(p, [0, 1], [11, -11]);
   const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
-  // Gentle flame life for a warm STILL (e.g. the lantern-lit window): a TINY glow
-  // that shimmers only on the flame. Kept small (8% radius) and INSIDE the Ken
-  // Burns layer so it tracks the flame as the image drifts — it must not pulse the
-  // whole screen (owner: flame flicker good, screen flicker bad).
-  const flick = 0.9 + 0.1 * (0.6 * Math.sin(frame * 0.6) + 0.4 * Math.sin(frame * 1.5 + 0.9));
   return (
     <AbsoluteFill style={{ background: warm ? "#20140c" : "#0b1410" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${panX}px, ${panY}px)`, opacity: fade }}>
         {imageSrc ? (
-          // Still image (e.g. a beautiful cover photo): Ken Burns pan only — a
-          // still never runs out, so it can never freeze at the cut.
-          <>
-            <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            {warm ? (
-              // small flame-locked shimmer (moves WITH the image, so only the flame
-              // area breathes — the rest of the picture stays perfectly steady)
-              <AbsoluteFill style={{ background: `radial-gradient(circle at 80% 76%, rgba(255,170,80,${(0.13 * flick).toFixed(3)}) 0%, transparent 8%)`, mixBlendMode: "screen" }} />
-            ) : null}
-          </>
+          // Still image (e.g. the cosy lantern window): a slow Ken Burns drift only,
+          // no flicker of any kind — the picture stays perfectly steady (owner
+          // disliked all screen flicker). A still never runs out, so it never freezes.
+          <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         ) : (
           // Loop the clip so one shorter than its beat repeats instead of holding
           // (freezing) on its last frame. One iteration plays `videoDuration`s of
