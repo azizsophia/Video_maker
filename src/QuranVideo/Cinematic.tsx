@@ -75,10 +75,12 @@ const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDuration?: n
       </AbsoluteFill>
       {warm ? (
         <>
-          {/* warm cream/amber storytime grade — soft, cosy, lighter than cinematic */}
-          <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(60,38,22,0.42) 0%, rgba(60,38,22,0.08) 34%, rgba(46,28,16,0.24) 68%, rgba(34,20,10,0.72) 100%)" }} />
-          <AbsoluteFill style={{ boxShadow: "inset 0 0 300px rgba(40,22,10,0.42)", mixBlendMode: "multiply" }} />
-          <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 40%, rgba(240,175,95,0.14), transparent 62%)" }} />
+          {/* cosy night storytime grade — protects a blue night sky + stars up top
+              (cool, near-neutral, NOT amber) and only warms the lower third for a
+              fire-glow feel and readable captions. Keeps campfire scenes magical. */}
+          <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,14,24,0.34) 0%, rgba(10,14,24,0.0) 30%, rgba(24,15,9,0.22) 66%, rgba(12,8,5,0.8) 100%)" }} />
+          <AbsoluteFill style={{ boxShadow: "inset 0 0 300px rgba(8,10,16,0.5)" }} />
+          <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 80%, rgba(240,150,70,0.12), transparent 55%)" }} />
         </>
       ) : (
         <>
