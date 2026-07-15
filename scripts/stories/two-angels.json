@@ -33,14 +33,24 @@
       "text": "Mama, is someone really watching everything I do?",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "Yes, my love. But it is the most loving kind of watching. Allah gave you two angels. One sits on your right, and one on your left.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.38, "style": 0.52, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.38,
+        "style": 0.52,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
@@ -48,14 +58,24 @@
       "text": "What do they do?",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "They write. The angel on your right writes your good deeds. The one on your left writes the mistakes.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.38, "style": 0.52, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.38,
+        "style": 0.52,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
@@ -63,14 +83,24 @@
       "text": "So they are catching me when I am bad?",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "Listen to how kind Allah is. If you even think about doing something good, the right angel writes it down, before you have done a single thing.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.38, "style": 0.52, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.38,
+        "style": 0.52,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
@@ -78,14 +108,24 @@
       "text": "Just for thinking it?",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "Just for thinking it. And when you actually do it, Allah multiplies it. Ten times, and more. But if you think about something wrong, and you stop yourself, the left angel writes nothing at all. Holding back even earns you a good deed.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.38, "style": 0.52, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.38,
+        "style": 0.52,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
@@ -93,14 +133,24 @@
       "text": "And if I do the wrong thing?",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "Then it is written as just one. And the moment you say sorry to Allah, it can be wiped away completely.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.38, "style": 0.52, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.38,
+        "style": 0.52,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
@@ -108,14 +158,24 @@
       "text": "So it is easier to earn good than bad?",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "Much easier, my love. Allah made it that way, because He loves for you to win. Your good is counted big, your bad is counted small, and forgiveness is always one dua away.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.38, "style": 0.52, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.38,
+        "style": 0.52,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
@@ -123,14 +183,24 @@
       "text": "I want to fill the right angel's page.",
       "kicker": "SON",
       "voiceId": "Xb7hH8MSUJpSbSDYk0k2",
-      "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png"
     },
     {
       "type": "narration",
       "text": "Then start with the smallest kind thing. It all counts. Every little bit of it.",
       "kicker": "MAMA",
-      "voiceSettings": { "stability": 0.42, "style": 0.48, "similarity_boost": 0.9 },
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.48,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png",
       "holdSeconds": 0.8
     },
@@ -140,7 +210,12 @@
       "quote": "82:10-12",
       "foot": "Qur'an 82:10-12",
       "kicker": "THE QUR'AN SAYS",
-      "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.25,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
       "image": "kids/two-angels-window.png",
       "holdSeconds": 1.8
     }

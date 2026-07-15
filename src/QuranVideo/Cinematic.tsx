@@ -72,7 +72,23 @@ export const CinematicBg: React.FC<{ src?: string; imageSrc?: string; videoDurat
           <>
             <Img src={resolve(imageSrc)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             {warm ? (
-              <AbsoluteFill style={{ background: `radial-gradient(circle at 81% 77%, rgba(255,188,98,${(0.16 + 0.30 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.07 + 0.13 * flick).toFixed(3)}) 4%, transparent 9%)`, mixBlendMode: "screen" }} />
+              <>
+                {/* Animated rain — masked to the window view (an ellipse over the
+                    outdoor opening) so it never falls on the cosy interior. Two
+                    diagonal streak layers at different speeds give depth; the
+                    repeating gradient scrolls seamlessly via backgroundPosition. */}
+                <AbsoluteFill
+                  style={{
+                    WebkitMaskImage: "radial-gradient(ellipse 40% 31% at 50% 33%, #000 60%, transparent 84%)",
+                    maskImage: "radial-gradient(ellipse 40% 31% at 50% 33%, #000 60%, transparent 84%)",
+                  }}
+                >
+                  <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(101deg, rgba(228,240,255,0.11) 0px, rgba(228,240,255,0.11) 1px, transparent 1px, transparent 9px)", backgroundPosition: `0px ${(frame * 10).toFixed(1)}px`, opacity: 0.6, mixBlendMode: "screen" }} />
+                  <AbsoluteFill style={{ backgroundImage: "repeating-linear-gradient(99deg, rgba(228,240,255,0.08) 0px, rgba(228,240,255,0.08) 1px, transparent 1px, transparent 14px)", backgroundPosition: `0px ${(frame * 6).toFixed(1)}px`, opacity: 0.5, mixBlendMode: "screen" }} />
+                </AbsoluteFill>
+                {/* flame-locked shimmer (only the lantern flame breathes) */}
+                <AbsoluteFill style={{ background: `radial-gradient(circle at 81% 77%, rgba(255,188,98,${(0.16 + 0.30 * flick).toFixed(3)}) 0%, rgba(255,150,60,${(0.07 + 0.13 * flick).toFixed(3)}) 4%, transparent 9%)`, mixBlendMode: "screen" }} />
+              </>
             ) : null}
           </>
         ) : (
