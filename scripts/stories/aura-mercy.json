@@ -105,5 +105,10 @@
       "videoDuration": 59,
       "holdSeconds": 2.4
     }
-  ]
+  ],
+  "cover": {
+    "title": "Do not despair\nof His mercy",
+    "kicker": "QUR'AN 39:53",
+    "image": "covers/aura-mercy.jpg"
+  }
 }
