@@ -1,0 +1,45 @@
+{
+  "id": "dua-listening",
+  "title": "Is Allah Even Listening?",
+  "theme": "kitab",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Asker (yJSTU8D97YocC6Dqg20L) + Answerer (Voice B)",
+  "voiceSeed": 21186,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "The questions we all carry",
+  "ctaSub": "",
+  "ctaSeconds": 5.5,
+  "_brand": "Ketabi Studio - ADULT DIALOGUE format (main channel pivot, research doc 2026-07-16). Two British voices at a kitchen table at night: a weary asker and a settled answerer. Cold-open question in second one, no title card. Asker=yJSTU8D97YocC6Dqg20L, Answerer=goT3UYdM9bhm0n2lmKQx (default). Single owner-supplied image bg. Sources verified pre-writing: Musnad Ahmad 11133 (hasan, Arna'ut; also al-Adab al-Mufrad 710), Qur'an 2:186, 21:87-88.",
+  "cover": {
+    "title": "Is Allah\nEven Listening?",
+    "kicker": "A LATE NIGHT QUESTION",
+    "image": "main/dua-listening.png",
+    "wordmark": "KETABI STUDIO",
+    "warm": true
+  },
+  "captions": {
+    "tiktok": "\"I make dua every night and nothing changes.\" If that is you, this is for you. Qur'an 2:186.",
+    "shorts": "Is Allah even listening? What the Prophet said about the dua that feels unanswered. Qur'an 2:186.",
+    "reels": "\"I make dua every night and nothing changes.\" If that is you, this is for you. Qur'an 2:186.",
+    "hashtags": ["#islam", "#dua", "#muslim", "#islamicreminder", "#deen", "#quran", "#faith"]
+  },
+  "segments": [
+    { "type": "narration", "text": "It's been months. I make dua every single night... and nothing changes. Is Allah even listening to me?", "kicker": "HIM", "voiceId": "yJSTU8D97YocC6Dqg20L", "voiceSettings": { "stability": 0.42, "style": 0.38, "similarity_boost": 0.85, "speed": 0.95 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "Can I tell you what the Prophet, peace be upon him, taught about exactly that? Not one of those duas was wasted. Not a single one.", "kicker": "THE ELDER", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "Then why has nothing changed?", "kicker": "HIM", "voiceId": "yJSTU8D97YocC6Dqg20L", "voiceSettings": { "stability": 0.42, "style": 0.38, "similarity_boost": 0.85, "speed": 0.95 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "Because an answer is not always a yes, today. He taught that every dua free of sin is answered in one of three ways. Sometimes Allah gives you what you asked for, quickly.", "kicker": "THE ELDER", "foot": "Musnad Ahmad 11133 (hasan)", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "Sometimes He stores it for you in the next life, a treasure waiting, worth more than the thing you asked for.", "kicker": "THE ELDER", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "And sometimes, He quietly turns away a harm that was coming for you. One you never even knew about.", "kicker": "THE ELDER", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png", "holdSeconds": 0.5 },
+    { "type": "narration", "text": "But it feels like silence.", "kicker": "HIM", "voiceId": "yJSTU8D97YocC6Dqg20L", "voiceSettings": { "stability": 0.42, "style": 0.38, "similarity_boost": 0.85, "speed": 0.95 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "Then listen to what Allah Himself says about the one who calls on Him.", "kicker": "THE ELDER", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png", "holdSeconds": 0.4 },
+    { "type": "narration", "text": "And when My servants ask you concerning Me, indeed I am near. I respond to the invocation of the supplicant when he calls upon Me.", "quote": "2:186", "foot": "Qur'an 2:186 - Saheeh International", "kicker": "THE QUR'AN SAYS", "voiceSettings": { "stability": 0.6, "style": 0.18, "similarity_boost": 0.85, "speed": 0.9 }, "image": "main/dua-listening.png", "holdSeconds": 1.4 },
+    { "type": "narration", "text": "Near...", "kicker": "HIM", "voiceId": "yJSTU8D97YocC6Dqg20L", "voiceSettings": { "stability": 0.42, "style": 0.38, "similarity_boost": 0.85, "speed": 0.95 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "Nearer than the silence. A prophet once called out from inside a whale, in darkness beneath darkness, at the bottom of the sea. And the answer still reached him.", "kicker": "THE ELDER", "foot": "Qur'an 21:87-88", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png" },
+    { "type": "narration", "text": "So keep asking. The dua you are tired of repeating may be the very thing standing between you and what you could not survive.", "kicker": "THE ELDER", "voiceSettings": { "stability": 0.55, "style": 0.25, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png", "holdSeconds": 0.6 },
+    { "type": "narration", "text": "Then I will keep asking.", "kicker": "HIM", "voiceId": "yJSTU8D97YocC6Dqg20L", "voiceSettings": { "stability": 0.44, "style": 0.36, "similarity_boost": 0.85, "speed": 0.93 }, "image": "main/dua-listening.png", "holdSeconds": 1.6 }
+  ]
+}

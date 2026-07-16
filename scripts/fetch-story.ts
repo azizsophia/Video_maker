@@ -159,6 +159,10 @@ const PHONETIC: Record<string, string> = {
   // Batch 5 dhikr terms (spoken transliteration; opt-in per house rule).
   // EAR-TEST REQUIRED before any batch-5 render - these are provisional.
   subhaan: "sub-haan",
+  // "Allah" itself was never in the map - every voice read it on English
+  // defaults. Ear-tested on yJSTU8D97YocC6Dqg20L 2026-07-16: owner approved
+  // "Allaah" (long second syllable, no hyphen so no mid-sentence pause).
+  allah: "Allaah",
   allahi: "al-laa-hi",
   bihamdih: "bee-ham-dih",
   "al-azeem": "al-a-zeem",
