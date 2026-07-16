@@ -486,10 +486,18 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   // image (the kids channel's one cosy scene), render it ONCE behind all beats so
   // it never resets/fades at a cut. Per-beat backgrounds would re-fade the image
   // in from black on every beat = a flicker/loop. Beats then draw only captions.
-  const sharedBg =
-    cinematic && props.segments.length > 0 && props.segments.every((s) => s.imageSrc && s.imageSrc === props.segments[0].imageSrc)
-      ? props.segments[0].imageSrc
+  const s0 = props.segments[0];
+  const sharedImg =
+    cinematic && props.segments.length > 0 && props.segments.every((s) => s.imageSrc && s.imageSrc === s0.imageSrc)
+      ? s0.imageSrc
       : undefined;
+  // Same for a shared cinematic CLIP (aura ayah videos: intro + ayah on one clip):
+  // play it ONCE continuously so there is no fade/flash at the intro->ayah cut.
+  const sharedVid =
+    cinematic && !sharedImg && props.segments.length > 0 && props.segments.every((s) => s.videoSrc && s.videoSrc === s0.videoSrc && !s.imageSrc && !s.map && !s.scene && !s.title)
+      ? s0
+      : undefined;
+  const hasSharedBg = !!sharedImg || !!sharedVid;
   return (
     <AbsoluteFill style={{ background: cinematic ? "#0b1410" : institutional ? "#efe4cd" : undefined }}>
       {!institutional && !cinematic ? (
@@ -501,7 +509,8 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
       ) : null}
       {/* Continuous single background (kids channel): drawn once, spans the whole
           video, so the image never resets or flashes between beats. */}
-      {sharedBg ? <CinematicBg imageSrc={sharedBg} warm={warm} ambient={props.ambient} /> : null}
+      {sharedImg ? <CinematicBg imageSrc={sharedImg} warm={warm} ambient={props.ambient} aura={aura} /> : null}
+      {sharedVid ? <CinematicBg src={sharedVid.videoSrc} videoDuration={sharedVid.videoDuration} warm={warm} aura={aura} /> : null}
       {/* Background audio bed (e.g. a vocal-only nasheed) mixed LOW under the
           narration, looped to fill the content (never over the outro). */}
       {props.musicSrc ? (
@@ -516,7 +525,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <Sequence key={i} from={from} durationInFrames={dur}>
             {seg.audioSrc ? <Audio src={resolveAudio(seg.audioSrc)} /> : null}
             {cinematic ? (
-              <CinematicBeat seg={seg} warm={warm} hideBg={!!sharedBg} aura={aura} />
+              <CinematicBeat seg={seg} warm={warm} hideBg={hasSharedBg} aura={aura} />
             ) : institutional ? (
               <>
                 <Slide kicker={seg.kicker} foot={seg.foot}>

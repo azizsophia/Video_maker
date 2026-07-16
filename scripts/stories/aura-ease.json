@@ -3,11 +3,11 @@
   "title": "With Hardship Comes Ease",
   "theme": "aura",
   "cinematic": true,
-  "voiceId": "onwK4e9ZLuTAKqWW03F9",
-  "voiceName": "Daniel (deep British)",
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British, Voice Library)",
   "voiceSeed": 55055,
   "showOutro": false,
-  "_brand": "Ketabi Studio - aesthetic Qur'an-translation format. Cinematic b-roll + a deep BRITISH voice reading a PUBLIC-DOMAIN translation (Yusuf Ali) + minimal glowing captions (2-3 words at a time). English spoken, Arabic only SHOWN (never AI-recited). Accuracy: verbatim public-domain translation, translator cited on screen.",
+  "_brand": "Ketabi Studio - aesthetic Qur'an-translation format. Gold-highlight hook intro + cinematic b-roll + deep British voice reading a PUBLIC-DOMAIN translation (Yusuf Ali) + minimal glowing captions. English spoken, Arabic only SHOWN. Verbatim public-domain translation, translator cited on screen.",
   "captions": {
     "tiktok": "With every difficulty, there is relief. A reminder from the Qur'an (94:5-6).",
     "shorts": "With every difficulty, there is relief - Qur'an 94:5-6.",
@@ -17,13 +17,22 @@
   "segments": [
     {
       "type": "narration",
+      "text": "Going through hardship? The Quran makes you a promise.",
+      "hook": true,
+      "hookMark": "promise",
+      "voiceSettings": { "stability": 0.5, "style": 0.25, "similarity_boost": 0.85, "speed": 0.95 },
+      "video": "https://videos.pexels.com/video-files/27604304/12183395_1080_1920_30fps.mp4",
+      "videoDuration": 106
+    },
+    {
+      "type": "narration",
       "text": "So, verily, with every difficulty, there is relief. Verily, with every difficulty, there is relief.",
       "quote": "94:5-6",
       "foot": "Qur'an 94:5-6 - Yusuf Ali (transl.)",
       "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 0.9 },
       "video": "https://videos.pexels.com/video-files/27604304/12183395_1080_1920_30fps.mp4",
       "videoDuration": 106,
-      "holdSeconds": 2.5
+      "holdSeconds": 2.2
     }
   ]
 }

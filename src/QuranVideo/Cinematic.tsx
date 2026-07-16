@@ -424,6 +424,45 @@ const CineTitle: React.FC<{ title: string; sub?: string; kicker?: string }> = ({
   );
 };
 
+// aura intro hook: the spoken line appears word-by-word over the b-roll, and a
+// GOLD highlight bar sweeps across the marked word as it is spoken (the word inks
+// dark once the sweep passes) — a premium, original take on the "highlighter"
+// intro. Then the video opens into the ayah.
+const CineHook: React.FC<{ words?: StoryWord[]; mark?: string }> = ({ words = [], mark }) => {
+  const frame = useCurrentFrame();
+  const { fps, width, height } = useVideoConfig();
+  const wide = width > height;
+  const t = frame / fps;
+  const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
+  const size = wide ? 54 : 66;
+  const markN = (mark || "").toLowerCase().replace(/[^a-z]/g, "");
+  return (
+    <AbsoluteFill style={{ opacity: fade }}>
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.08) 62%, rgba(0,0,0,0.74) 100%)" }} />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 10%" : "0 9%" }}>
+        <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: size, lineHeight: 1.32, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "6px 16px", maxWidth: wide ? 1400 : 840, textShadow: "0 0 30px rgba(255,255,255,0.18), 0 4px 26px rgba(0,0,0,0.92)" }}>
+          {words.map((w, i) => {
+            const shown = t >= w.start - 0.12;
+            const clean = w.text.toLowerCase().replace(/[^a-z]/g, "");
+            const isMark = markN.length > 0 && clean === markN;
+            if (isMark) {
+              const sweep = interpolate(t, [w.start - 0.02, w.start + 0.45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+              const inked = sweep > 0.55;
+              return (
+                <span key={i} style={{ position: "relative", display: "inline-block", opacity: shown ? 1 : 0 }}>
+                  <span style={{ position: "absolute", left: -6, right: -6, top: "12%", bottom: "8%", background: "linear-gradient(90deg,#f6e7b8,#e7c873)", transform: `scaleX(${sweep})`, transformOrigin: "left center", borderRadius: 4, boxShadow: "0 0 26px rgba(231,200,115,0.5)" }} />
+                  <span style={{ position: "relative", color: inked ? "#0b0b0b" : "#ffffff", fontWeight: 900, transition: "color 0.15s linear", padding: "0 4px" }}>{w.text}</span>
+                </span>
+              );
+            }
+            return <span key={i} style={{ display: "inline-block", opacity: shown ? 1 : 0.3, transition: "opacity 0.2s linear" }}>{w.text}</span>;
+          })}
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
 // One cinematic beat: footage + (title OR quote OR caption + labels).
 // `warm` switches to the children's "kitab" storytime palette (soft amber grade,
 // rounded font) instead of the dark green/gold cinematic grade.
@@ -470,7 +509,9 @@ export const CinematicBeat: React.FC<{ seg: StorySegment; warm?: boolean; hideBg
       ) : (
         <AbsoluteFill style={{ background: warm ? "#20140c" : aura ? "#05070c" : "#0b1410" }} />
       )}
-      {seg.title ? (
+      {seg.hook ? (
+        <CineHook words={seg.words} mark={seg.hookMark} />
+      ) : seg.title ? (
         <CineTitle title={seg.title} sub={seg.titleSub} kicker={seg.kicker} />
       ) : seg.arabic ? (
         <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} foot={seg.foot} warm={warm} aura={aura} />
