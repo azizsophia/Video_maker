@@ -243,6 +243,21 @@ that is the point of the gate. Nothing ships with an open item.
   and halves render minutes; reserve scale 2 / 4K for special releases. Deliver
   the artifact link, not the mp4 in chat. The "failure" badge on render-story is
   usually just the optional Drive upload; the artifact is still produced.
+- CRISPNESS / the owner posts the MASTER, not the chat preview (owner note
+  2026-07-16, BLOCKING for delivery): the chat file transfer has a hard ~25MB
+  cap, so any mp4 sent inline is downscaled + low-bitrate = SOFT. The owner
+  reposts whatever I hand her, so an inline preview ships a soft video. RULE:
+  the file the owner actually posts must be the full-quality master. Deliver the
+  master via a downloadable link (the GitHub Actions artifact, or the Drive
+  upload once fixed) - not the compressed chat mp4. If a chat preview is sent
+  for a quick look, LABEL it "preview only, soft - post the master link", and
+  always encode previews at full 1080 width (never 960) so text stays legible.
+- AURA format renders at scale 2 (owner note 2026-07-16): the glowing word-by-
+  word captions are the hero and are the softest thing at scale 1, so the
+  aesthetic Qur'an-translation shorts (theme "aura") render at scale=2 for
+  supersampled, razor-sharp caption edges (the b-roll is source-limited, but the
+  type carries the look). Prefer the highest-res source clip available (seek a
+  1440 or 2160 vertical rendition; 1080 only if that is all Pexels offers).
 - STRATEGY (owner directive 2026-07-02): after the current batch, production
   shifts to LARGE BATCHES OF SHORTS (TikTok / Reels / Shorts) as the engine of
   channel growth; long-form becomes occasional, made only when specifically
