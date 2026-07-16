@@ -103,6 +103,13 @@ that is the point of the gate. Nothing ships with an open item.
 - Always source via the Pexels search workflow, build the contact sheet, and keep
   a per-beat shot list.
 
+## Kids channel voices (owner locked 2026-07-16, non-negotiable)
+- shop.ketabi dialogue videos use EXACTLY these voices: Mama = Lily
+  (pFZP5JQG7iQjIQuC4Bku), child = 6fZce9LFNG3iEITDfqZZ. Settings as in
+  scripts/stories/see-allah.json (Mama stability 0.42 style 0.46, child
+  stability 0.40 style 0.45, speed 0.92). Do not swap voices without a new
+  owner-approved ear test.
+
 ## Topic selection (owner directive 2026-07-07, non-negotiable)
 - Pick shorts topics for VIEW POTENTIAL, backed by research into what performs
   in the Islamic short-form niche - not by what is merely interesting or obscure.
