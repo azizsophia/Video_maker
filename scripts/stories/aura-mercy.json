@@ -16,8 +16,8 @@
   "_brand": "Ketabi Studio - aesthetic Qur'an-translation format (main channel). Gold-highlight hook intro + one continuous cinematic b-roll + deep British voice reading the Saheeh International translation + WORD-BY-WORD glowing captions that pop one at a time. English spoken, Arabic only SHOWN. Verbatim translation, translator cited on screen. Website end card. Az-Zumar 39:53-55 (mercy / do-not-despair) - a fresher passage than the overused 94:5-6.",
   "captions": {
     "tiktok": "Do not despair of the mercy of Allah. He forgives all sins. Qur'an 39:53.",
-    "shorts": "Do not despair of the mercy of Allah - Qur'an 39:53-55.",
-    "reels": "No matter how far you feel you've gone - do not despair of His mercy. Qur'an 39:53-55.",
+    "shorts": "Do not despair of the mercy of Allah - Qur'an 39:53-56.",
+    "reels": "No matter how far you feel you've gone - do not despair of His mercy. Qur'an 39:53-56.",
     "hashtags": [
       "#quran",
       "#islam",
@@ -43,7 +43,7 @@
       },
       "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
       "videoDuration": 59,
-      "holdSeconds": 1.6
+      "holdSeconds": 0.6
     },
     {
       "type": "narration",
@@ -54,11 +54,11 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.88
+        "speed": 0.9
       },
       "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
       "videoDuration": 59,
-      "holdSeconds": 4.0
+      "holdSeconds": 0.8
     },
     {
       "type": "narration",
@@ -69,26 +69,41 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.88
+        "speed": 0.9
       },
       "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
       "videoDuration": 59,
-      "holdSeconds": 3.6
+      "holdSeconds": 0.7
     },
     {
       "type": "narration",
-      "text": "And follow the best of what was revealed to you from your Lord before the punishment comes upon you suddenly while you do not perceive.",
+      "text": "And follow the best of what was revealed to you from your Lord before the punishment comes upon you suddenly while you do not perceive,",
       "quote": "39:55",
       "foot": "Qur'an 39:55 - Saheeh International",
       "voiceSettings": {
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.88
+        "speed": 0.9
       },
       "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
       "videoDuration": 59,
-      "holdSeconds": 4.4
+      "holdSeconds": 0.5
+    },
+    {
+      "type": "narration",
+      "text": "Lest a soul should say, Oh, my regret over what I neglected in regard to Allah, and that I was among the mockers.",
+      "quote": "39:56",
+      "foot": "Qur'an 39:56 - Saheeh International",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
+      "videoDuration": 59,
+      "holdSeconds": 2.4
     }
   ]
 }
