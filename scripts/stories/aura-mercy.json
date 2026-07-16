@@ -1,0 +1,65 @@
+{
+  "id": "aura-mercy",
+  "title": "Do Not Despair",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British, Voice Library)",
+  "voiceSeed": 39053,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "A verse, every day",
+  "ctaSub": "",
+  "ctaSeconds": 6,
+  "_brand": "Ketabi Studio - aesthetic Qur'an-translation format (main channel). Gold-highlight hook intro + one continuous cinematic b-roll + deep British voice reading the Saheeh International translation + WORD-BY-WORD glowing captions that pop one at a time. English spoken, Arabic only SHOWN. Verbatim translation, translator cited on screen. Website end card. Az-Zumar 39:53-55 (mercy / do-not-despair) - a fresher passage than the overused 94:5-6.",
+  "captions": {
+    "tiktok": "Do not despair of the mercy of Allah. He forgives all sins. Qur'an 39:53.",
+    "shorts": "Do not despair of the mercy of Allah - Qur'an 39:53-55.",
+    "reels": "No matter how far you feel you've gone - do not despair of His mercy. Qur'an 39:53-55.",
+    "hashtags": ["#quran", "#islam", "#islamicreminder", "#mercy", "#dailyquran", "#muslim", "#deen", "#hope"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "You think you've gone too far to ever be forgiven?",
+      "hook": true,
+      "hookMark": "forgiven",
+      "voiceSettings": { "stability": 0.52, "style": 0.22, "similarity_boost": 0.85, "speed": 0.94 },
+      "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
+      "videoDuration": 59,
+      "holdSeconds": 0.9
+    },
+    {
+      "type": "narration",
+      "text": "Say, O My servants who have transgressed against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.",
+      "quote": "39:53",
+      "foot": "Qur'an 39:53 - Saheeh International",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.9 },
+      "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
+      "videoDuration": 59,
+      "holdSeconds": 1.8
+    },
+    {
+      "type": "narration",
+      "text": "And return to your Lord and submit to Him before the punishment comes upon you; then you will not be helped.",
+      "quote": "39:54",
+      "foot": "Qur'an 39:54 - Saheeh International",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.9 },
+      "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
+      "videoDuration": 59,
+      "holdSeconds": 1.6
+    },
+    {
+      "type": "narration",
+      "text": "And follow the best of what was revealed to you from your Lord before the punishment comes upon you suddenly while you do not perceive.",
+      "quote": "39:55",
+      "foot": "Qur'an 39:55 - Saheeh International",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.9 },
+      "video": "https://videos.pexels.com/video-files/27100094/12071907_1080_1920_30fps.mp4",
+      "videoDuration": 59,
+      "holdSeconds": 2.6
+    }
+  ]
+}

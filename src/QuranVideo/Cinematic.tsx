@@ -291,28 +291,52 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
       <AbsoluteFill style={{ opacity: fade }}>
         {/* soft top + bottom scrims so white type reads over any footage */}
         <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.78) 100%)" }} />
+        {/* soft centre scrim: a feathered dark ellipse behind the caption band so
+            the white translation stays legible even over a bright sun-bloom, while
+            the footage still reads at the edges (minimal, not a boxed card) */}
+        <AbsoluteFill style={{ background: "radial-gradient(ellipse 74% 32% at 50% 50%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 46%, rgba(0,0,0,0) 74%)" }} />
         {/* Arabic ayah — small, elegant, upper area */}
         {arabic ? (
           <div style={{ position: "absolute", top: wide ? "11%" : "14%", left: 0, right: 0, padding: "0 8%", textAlign: "center" }}>
             <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: arSize, lineHeight: 1.75, color: "#ffffff", textShadow: "0 0 34px rgba(255,255,255,0.35), 0 2px 18px rgba(0,0,0,0.85)", opacity: 0.94 }}>{arabic}</div>
           </div>
         ) : null}
-        {/* Translation — only the CURRENT short phrase shows (2-3 words) big and
-            glowing, replaced as the voice moves on. Premium minimal - never the
-            whole ayah at once. */}
+        {/* Translation — WORD BY WORD: the current short phrase (3-5 words) sits
+            centred, and each word POPS in one at a time exactly as the deep voice
+            says it (scale + fade), staying lit once spoken. Upcoming words in the
+            phrase are held invisible but still reserve their space, so the line
+            never reflows as words land. When the voice moves to the next phrase
+            the group clears and the next one builds. Premium, minimal, kinetic. */}
         {(() => {
           const trLines = toLines(words, wide ? 5 : 3);
           let li = 0;
           for (let i = 0; i < trLines.length; i++) if (t >= trLines[i].start - 0.15) li = i;
           const cur = trLines[li];
-          const lf = interpolate(t, [(cur?.start ?? 0) - 0.05, (cur?.start ?? 0) + 0.28], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+          const groupEnd = cur?.words.length ? cur.words[cur.words.length - 1].end : 0;
+          // gentle group fade so the swap between phrases is soft, not a hard cut
+          const gIn = interpolate(t, [(cur?.start ?? 0) - 0.14, (cur?.start ?? 0) + 0.12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+          const gOut = interpolate(t, [groupEnd + 0.14, groupEnd + 0.42], [1, 0.86], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
           return (
             <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 9%" : "0 10%" }}>
-              <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: trSize, lineHeight: 1.26, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "4px 18px", maxWidth: wide ? 1400 : 820, textShadow: "0 0 34px rgba(255,255,255,0.26), 0 4px 26px rgba(0,0,0,0.92)", opacity: lf, transform: `translateY(${(1 - lf) * 10}px)` }}>
+              <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: trSize, lineHeight: 1.3, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "6px 20px", maxWidth: wide ? 1400 : 820, opacity: Math.min(gIn, gOut) }}>
                 {cur?.words.map((w, i) => {
-                  const active = t >= w.start - 0.04 && t < w.end + 0.14;
+                  // each word pops in as it is spoken; a slight overshoot then settle
+                  const appear = interpolate(t, [w.start - 0.03, w.start + 0.15], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+                  const pop = interpolate(t, [w.start - 0.03, w.start + 0.13, w.start + 0.28], [0.72, 1.09, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+                  const active = t >= w.start - 0.04 && t < w.end + 0.2;
                   return (
-                    <span key={i} style={{ display: "inline-block", transition: "text-shadow 0.2s linear", color: "#ffffff", textShadow: active ? "0 0 46px rgba(255,255,255,0.55), 0 4px 26px rgba(0,0,0,0.95)" : undefined }}>
+                    <span
+                      key={i}
+                      style={{
+                        display: "inline-block",
+                        color: "#ffffff",
+                        opacity: appear,
+                        transform: `scale(${pop})`,
+                        textShadow: active
+                          ? "0 0 48px rgba(255,255,255,0.6), 0 4px 26px rgba(0,0,0,0.95)"
+                          : "0 0 30px rgba(255,255,255,0.24), 0 4px 24px rgba(0,0,0,0.9)",
+                      }}
+                    >
                       {w.text}
                     </span>
                   );
