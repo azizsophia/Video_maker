@@ -479,6 +479,9 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
   const cinematic = props.cinematic === true;
   // Children's "kitab" storytime look: warm amber grade + rounded font.
   const warm = props.theme === "kitab";
+  // "aura" aesthetic: big glowing Qur'an-translation captions over cinematic
+  // b-roll (sacredayah style). Minimal grade; the look lives in the type.
+  const aura = props.theme === "aura";
   // Single continuous background: when every cinematic beat shares the SAME still
   // image (the kids channel's one cosy scene), render it ONCE behind all beats so
   // it never resets/fades at a cut. Per-beat backgrounds would re-fade the image
@@ -513,7 +516,7 @@ export const StoryVideo: React.FC<StoryProps> = (props) => {
           <Sequence key={i} from={from} durationInFrames={dur}>
             {seg.audioSrc ? <Audio src={resolveAudio(seg.audioSrc)} /> : null}
             {cinematic ? (
-              <CinematicBeat seg={seg} warm={warm} hideBg={!!sharedBg} />
+              <CinematicBeat seg={seg} warm={warm} hideBg={!!sharedBg} aura={aura} />
             ) : institutional ? (
               <>
                 <Slide kicker={seg.kicker} foot={seg.foot}>

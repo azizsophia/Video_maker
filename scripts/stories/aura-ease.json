@@ -1,0 +1,29 @@
+{
+  "id": "aura-ease",
+  "title": "With Hardship Comes Ease",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "voiceName": "Brian (deep)",
+  "voiceSeed": 55055,
+  "showOutro": false,
+  "_brand": "Ketabi Studio - aesthetic Qur'an-translation format (sacredayah style). Cinematic b-roll + deep voice reading The Clear Quran translation + big glowing captions. English spoken, Arabic only SHOWN (never AI-recited). Accuracy: verbatim Clear Quran, citation on screen.",
+  "captions": {
+    "tiktok": "Surely with hardship comes ease. A reminder from Qur'an 94:5-6 (The Clear Quran).",
+    "shorts": "Surely with hardship comes ease - Qur'an 94:5-6 (The Clear Quran).",
+    "reels": "Surely with hardship comes ease. A reminder from Qur'an 94:5-6 (The Clear Quran).",
+    "hashtags": ["#quran", "#islam", "#islamicreminder", "#dailyquran", "#muslim", "#deen"]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "So, surely with hardship comes ease. Surely with that hardship comes more ease.",
+      "quote": "94:5-6",
+      "foot": "Qur'an 94:5-6 - The Clear Quran",
+      "voiceSettings": { "stability": 0.48, "style": 0.3, "similarity_boost": 0.85, "speed": 0.95 },
+      "video": "https://videos.pexels.com/video-files/27604304/12183395_1080_1920_30fps.mp4",
+      "videoDuration": 106,
+      "holdSeconds": 2.2
+    }
+  ]
+}

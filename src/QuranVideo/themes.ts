@@ -94,6 +94,21 @@ export const themes: Record<z.infer<typeof themeSchema>, ThemePalette> = {
     accent: "#9e7320",
     vignette: "rgba(120, 90, 30, 0.22)",
   },
+  // "aura" — the aesthetic Qur'an-translation format: cinematic nature b-roll +
+  // big glowing white captions + a deep voice. Minimal grade so the footage keeps
+  // its natural cinematic colour; the look lives in the captions.
+  aura: {
+    background: "#05070c",
+    gradientFrom: "#0a0e16",
+    gradientTo: "#02040a",
+    patternColor: "rgba(255,255,255,0.05)",
+    arabicIdle: "rgba(255,255,255,0.55)",
+    arabicActive: "#ffffff",
+    arabicGlow: "rgba(255,255,255,0.6)",
+    translation: "rgba(255,255,255,0.95)",
+    accent: "#efe3c2",
+    vignette: "rgba(0,0,0,0.5)",
+  },
   // Light "noor" theme — cream paper, deep ink-green Arabic, gold accents.
   // Stands out on a feed full of dark Quran videos.
   noor: {
