@@ -4,10 +4,10 @@
   "theme": "kitab",
   "cinematic": true,
   "voiceId": "pFZP5JQG7iQjIQuC4Bku",
-  "voiceName": "Lily (Mama) + child",
+  "voiceName": "Lily (Mama) + child (6fZce9LFNG3iEITDfqZZ)",
   "voiceSeed": 61103,
   "showOutro": false,
-  "_brand": "shop.ketabi children's storytime. Warm kitab theme, English only (Arabic shown on the verse card, never recited). Mama=Lily, child=Xb7hH8MSUJpSbSDYk0k2. Single cosy moon-window background. Analogy-driven dialogue (wind / sun / a mother's love) in the proven format. Sourced: Qur'an 6:103 (shown), 75:22-23 (hopeful close).",
+  "_brand": "shop.ketabi children's storytime. Warm kitab theme, English only (Arabic shown on the verse card, never recited). Mama=Lily, child=6fZce9LFNG3iEITDfqZZ. Single cosy moon-window background. Analogy-driven dialogue (wind / sun / a mother's love) in the proven format. Sourced: Qur'an 6:103 (shown), 75:22-23 (hopeful close).",
   "cover": {
     "title": "Why Can't We\nSee Allah?",
     "kicker": "A BEDTIME STORY",
@@ -19,31 +19,307 @@
     "tiktok": "\"Mama, why can't we see Allah?\" The gentlest answer for a little heart. Qur'an 6:103.",
     "shorts": "Why can't we see Allah - explained gently for little ones. Qur'an 6:103.",
     "reels": "\"Mama, why can't we see Allah?\" The gentlest answer for a little heart. Qur'an 6:103.",
-    "hashtags": ["#muslimkids", "#islamicparenting", "#islam", "#muslimtiktok", "#bedtimestories"]
+    "hashtags": [
+      "#muslimkids",
+      "#islamicparenting",
+      "#islam",
+      "#muslimtiktok",
+      "#bedtimestories"
+    ]
   },
   "segments": [
-    { "type": "narration", "text": "Mama... if Allah is real, why can't we see Him?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "What a beautiful question. Let me ask you one first. Can you see the wind?", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "No.", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "But look. The birds are riding it right now. You cannot see the wind, yet you see everything it does.", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "So Allah is like the wind?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Allah is far greater than anything we could ever picture. But it teaches us something. The most real things are not always the ones our eyes can see.", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Like what else?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Can you look straight at the sun?", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "No, it hurts my eyes.", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Even the sun, which Allah made, is too bright to look at. So imagine the One who made it. In this life, our little eyes could never take Him in.", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Then how do I know He is really there?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "The same way you know that I love you. Can you see my love?", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "No... but I feel it.", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "You feel it in every hug, and every warm meal, and every time I tuck you in at night. Allah's care is like that. All around you, all the time.", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "So where is He?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Closer to you than you know. He left His signs everywhere. That moon. Those birds. The little breath going in and out of your chest right now.", "kicker": "MAMA", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "The whole sky feels like a message.", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Because it is. And in the Qur'an, Allah tells us something gentle about this.", "kicker": "MAMA", "voiceSettings": { "stability": 0.44, "style": 0.42, "similarity_boost": 0.9, "speed": 0.9 }, "image": "kids/see-allah.png", "holdSeconds": 0.5 },
-    { "type": "narration", "text": "No vision can grasp Him, but His grasp is over all vision. And He is the Most Subtle, the All Aware.", "quote": "6:103", "foot": "Qur'an 6:103", "kicker": "THE QUR'AN SAYS", "voiceSettings": { "stability": 0.55, "style": 0.24, "similarity_boost": 0.9, "speed": 0.9 }, "image": "kids/see-allah.png", "holdSeconds": 1.6 },
-    { "type": "narration", "text": "Will we ever get to see Him?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Yes, my love. The ones who love Allah are promised the most beautiful gift of all. In Paradise, they will look upon their Lord, with their very own eyes.", "kicker": "MAMA", "foot": "Qur'an 75:22-23", "voiceSettings": { "stability": 0.42, "style": 0.46, "similarity_boost": 0.9, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "More beautiful than that moon?", "kicker": "SON", "voiceId": "Xb7hH8MSUJpSbSDYk0k2", "voiceSettings": { "stability": 0.4, "style": 0.45, "similarity_boost": 0.85, "speed": 0.92 }, "image": "kids/see-allah.png" },
-    { "type": "narration", "text": "Far, far more beautiful. So we remember Him now, even when we cannot see Him. And that, my love, is what faith means.", "kicker": "MAMA", "voiceSettings": { "stability": 0.44, "style": 0.44, "similarity_boost": 0.9, "speed": 0.9 }, "image": "kids/see-allah.png", "holdSeconds": 1.4 }
+    {
+      "type": "narration",
+      "text": "Mama... if Allah is real, why can't we see Him?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "What a beautiful question. Let me ask you one first. Can you see the wind?",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "No.",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "But look. The birds are riding it right now. You cannot see the wind, yet you see everything it does.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "So Allah is like the wind?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Allah is far greater than anything we could ever picture. But it teaches us something. The most real things are not always the ones our eyes can see.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Like what else?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Can you look straight at the sun?",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "No, it hurts my eyes.",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Even the sun, which Allah made, is too bright to look at. So imagine the One who made it. In this life, our little eyes could never take Him in.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Then how do I know He is really there?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "The same way you know that I love you. Can you see my love?",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "No... but I feel it.",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "You feel it in every hug, and every warm meal, and every time I tuck you in at night. Allah's care is like that. All around you, all the time.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "So where is He?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Closer to you than you know. He left His signs everywhere. That moon. Those birds. The little breath going in and out of your chest right now.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "The whole sky feels like a message.",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Because it is. And in the Qur'an, Allah tells us something gentle about this.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.44,
+        "style": 0.42,
+        "similarity_boost": 0.9,
+        "speed": 0.9
+      },
+      "image": "kids/see-allah.png",
+      "holdSeconds": 0.5
+    },
+    {
+      "type": "narration",
+      "text": "No vision can grasp Him, but His grasp is over all vision. And He is the Most Subtle, the All Aware.",
+      "quote": "6:103",
+      "foot": "Qur'an 6:103",
+      "kicker": "THE QUR'AN SAYS",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.24,
+        "similarity_boost": 0.9,
+        "speed": 0.9
+      },
+      "image": "kids/see-allah.png",
+      "holdSeconds": 1.6
+    },
+    {
+      "type": "narration",
+      "text": "Will we ever get to see Him?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Yes, my love. The ones who love Allah are promised the most beautiful gift of all. In Paradise, they will look upon their Lord, with their very own eyes.",
+      "kicker": "MAMA",
+      "foot": "Qur'an 75:22-23",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.46,
+        "similarity_boost": 0.9,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "More beautiful than that moon?",
+      "kicker": "SON",
+      "voiceId": "6fZce9LFNG3iEITDfqZZ",
+      "voiceSettings": {
+        "stability": 0.4,
+        "style": 0.45,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "image": "kids/see-allah.png"
+    },
+    {
+      "type": "narration",
+      "text": "Far, far more beautiful. So we remember Him now, even when we cannot see Him. And that, my love, is what faith means.",
+      "kicker": "MAMA",
+      "voiceSettings": {
+        "stability": 0.44,
+        "style": 0.44,
+        "similarity_boost": 0.9,
+        "speed": 0.9
+      },
+      "image": "kids/see-allah.png",
+      "holdSeconds": 1.4
+    }
   ]
 }
