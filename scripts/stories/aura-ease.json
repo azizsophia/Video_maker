@@ -3,27 +3,27 @@
   "title": "With Hardship Comes Ease",
   "theme": "aura",
   "cinematic": true,
-  "voiceId": "nPczCjzI2devNBz1zQrb",
-  "voiceName": "Brian (deep)",
+  "voiceId": "onwK4e9ZLuTAKqWW03F9",
+  "voiceName": "Daniel (deep British)",
   "voiceSeed": 55055,
   "showOutro": false,
-  "_brand": "Ketabi Studio - aesthetic Qur'an-translation format (sacredayah style). Cinematic b-roll + deep voice reading The Clear Quran translation + big glowing captions. English spoken, Arabic only SHOWN (never AI-recited). Accuracy: verbatim Clear Quran, citation on screen.",
+  "_brand": "Ketabi Studio - aesthetic Qur'an-translation format. Cinematic b-roll + a deep BRITISH voice reading a PUBLIC-DOMAIN translation (Yusuf Ali) + minimal glowing captions (2-3 words at a time). English spoken, Arabic only SHOWN (never AI-recited). Accuracy: verbatim public-domain translation, translator cited on screen.",
   "captions": {
-    "tiktok": "Surely with hardship comes ease. A reminder from Qur'an 94:5-6 (The Clear Quran).",
-    "shorts": "Surely with hardship comes ease - Qur'an 94:5-6 (The Clear Quran).",
-    "reels": "Surely with hardship comes ease. A reminder from Qur'an 94:5-6 (The Clear Quran).",
+    "tiktok": "With every difficulty, there is relief. A reminder from the Qur'an (94:5-6).",
+    "shorts": "With every difficulty, there is relief - Qur'an 94:5-6.",
+    "reels": "With every difficulty, there is relief. A reminder from the Qur'an (94:5-6).",
     "hashtags": ["#quran", "#islam", "#islamicreminder", "#dailyquran", "#muslim", "#deen"]
   },
   "segments": [
     {
       "type": "narration",
-      "text": "So, surely with hardship comes ease. Surely with that hardship comes more ease.",
+      "text": "So, verily, with every difficulty, there is relief. Verily, with every difficulty, there is relief.",
       "quote": "94:5-6",
-      "foot": "Qur'an 94:5-6 - The Clear Quran",
-      "voiceSettings": { "stability": 0.48, "style": 0.3, "similarity_boost": 0.85, "speed": 0.95 },
+      "foot": "Qur'an 94:5-6 - Yusuf Ali (transl.)",
+      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 0.9 },
       "video": "https://videos.pexels.com/video-files/27604304/12183395_1080_1920_30fps.mp4",
       "videoDuration": 106,
-      "holdSeconds": 2.2
+      "holdSeconds": 2.5
     }
   ]
 }

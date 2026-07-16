@@ -297,20 +297,30 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
             <div dir="rtl" style={{ fontFamily: ARABIC_DISPLAY_FONT, fontWeight: 700, fontSize: arSize, lineHeight: 1.75, color: "#ffffff", textShadow: "0 0 34px rgba(255,255,255,0.35), 0 2px 18px rgba(0,0,0,0.85)", opacity: 0.94 }}>{arabic}</div>
           </div>
         ) : null}
-        {/* Translation — BIG glowing, centred, each word pops as it is spoken */}
-        <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 9%" : "0 8%" }}>
-          <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: trSize, lineHeight: 1.3, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2px 16px", maxWidth: wide ? 1500 : 880, textShadow: "0 0 34px rgba(255,255,255,0.28), 0 4px 26px rgba(0,0,0,0.92)" }}>
-            {words.map((w, i) => {
-              const active = t >= w.start - 0.04 && t < w.end + 0.12;
-              const shown = t >= w.start - 0.14;
-              return (
-                <span key={i} style={{ display: "inline-block", opacity: shown ? 1 : 0.32, transform: `scale(${active ? 1.09 : 1})`, transformOrigin: "center bottom", transition: "transform 0.16s ease, opacity 0.22s linear", fontWeight: active ? 900 : 800, textShadow: active ? "0 0 46px rgba(255,255,255,0.6), 0 4px 26px rgba(0,0,0,0.95)" : undefined }}>
-                  {w.text}
-                </span>
-              );
-            })}
-          </div>
-        </AbsoluteFill>
+        {/* Translation — only the CURRENT short phrase shows (2-3 words) big and
+            glowing, replaced as the voice moves on. Premium minimal - never the
+            whole ayah at once. */}
+        {(() => {
+          const trLines = toLines(words, wide ? 5 : 3);
+          let li = 0;
+          for (let i = 0; i < trLines.length; i++) if (t >= trLines[i].start - 0.15) li = i;
+          const cur = trLines[li];
+          const lf = interpolate(t, [(cur?.start ?? 0) - 0.05, (cur?.start ?? 0) + 0.28], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+          return (
+            <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 9%" : "0 10%" }}>
+              <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: trSize, lineHeight: 1.26, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "4px 18px", maxWidth: wide ? 1400 : 820, textShadow: "0 0 34px rgba(255,255,255,0.26), 0 4px 26px rgba(0,0,0,0.92)", opacity: lf, transform: `translateY(${(1 - lf) * 10}px)` }}>
+                {cur?.words.map((w, i) => {
+                  const active = t >= w.start - 0.04 && t < w.end + 0.14;
+                  return (
+                    <span key={i} style={{ display: "inline-block", transition: "text-shadow 0.2s linear", color: "#ffffff", textShadow: active ? "0 0 46px rgba(255,255,255,0.55), 0 4px 26px rgba(0,0,0,0.95)" : undefined }}>
+                      {w.text}
+                    </span>
+                  );
+                })}
+              </div>
+            </AbsoluteFill>
+          );
+        })()}
         {/* citation — small, bottom */}
         {foot ? (
           <div style={{ position: "absolute", bottom: wide ? "8%" : "10.5%", left: 0, right: 0, textAlign: "center", fontFamily: MONTSERRAT, fontWeight: 600, letterSpacing: 2, fontSize: wide ? 22 : 27, color: "rgba(255,255,255,0.85)", textShadow: "0 2px 14px rgba(0,0,0,0.9)" }}>
