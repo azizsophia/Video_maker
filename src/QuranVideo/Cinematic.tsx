@@ -285,8 +285,8 @@ const CineQuote: React.FC<{ arabic?: string; words?: StoryWord[]; kicker?: strin
   // small + elegant up top, the citation small at the bottom — over natural
   // cinematic b-roll (no boxed card, no heavy grade). The look lives in the type.
   if (aura) {
-    const arSize = wide ? 44 : 56;
-    const trSize = wide ? 58 : 74;
+    const arSize = wide ? 44 : 54;
+    const trSize = wide ? 64 : 86;
     return (
       <AbsoluteFill style={{ opacity: fade }}>
         {/* soft top + bottom scrims so white type reads over any footage */}
