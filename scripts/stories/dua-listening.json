@@ -51,7 +51,7 @@
     },
     {
       "type": "narration",
-      "text": "Can I tell you what the Prophet, peace be upon him, taught about exactly that? Not one of those duas was wasted. Not a single one.",
+      "text": "Can I tell you what the Prophet, peace be upon him, taught about exactly that? Not one of those prayers was wasted. Not a single one.",
       "kicker": "THE ELDER",
       "voiceSettings": {
         "stability": 0.55,
@@ -76,7 +76,7 @@
     },
     {
       "type": "narration",
-      "text": "Because an answer is not always a yes, today. He taught that every dua, free of sin and of cutting family ties, is answered in one of three ways. Sometimes Allah gives you what you asked for, quickly.",
+      "text": "Because an answer is not always a yes, today. He taught that every prayer, free of sin and of cutting family ties, is answered in one of three ways. Sometimes Allah gives you what you asked for, quickly.",
       "kicker": "THE ELDER",
       "foot": "Musnad Ahmad 11133 (hasan)",
       "voiceSettings": {
@@ -159,9 +159,9 @@
       "kicker": "HIM",
       "voiceId": "yJSTU8D97YocC6Dqg20L",
       "voiceSettings": {
-        "stability": 0.42,
-        "style": 0.38,
-        "similarity_boost": 0.85,
+        "stability": 0.5,
+        "style": 0.32,
+        "similarity_boost": 0.9,
         "speed": 0.95
       },
       "image": "main/dua-listening.png"
@@ -181,7 +181,7 @@
     },
     {
       "type": "narration",
-      "text": "So keep asking. The dua you are tired of repeating may be the very thing standing between you and what you could not survive.",
+      "text": "So keep asking. The prayer you are tired of repeating may be the very thing standing between you and what you could not survive.",
       "kicker": "THE ELDER",
       "voiceSettings": {
         "stability": 0.55,
@@ -198,10 +198,10 @@
       "kicker": "HIM",
       "voiceId": "yJSTU8D97YocC6Dqg20L",
       "voiceSettings": {
-        "stability": 0.44,
-        "style": 0.36,
-        "similarity_boost": 0.85,
-        "speed": 0.93
+        "stability": 0.5,
+        "style": 0.32,
+        "similarity_boost": 0.9,
+        "speed": 0.95
       },
       "image": "main/dua-listening.png",
       "holdSeconds": 1.6
