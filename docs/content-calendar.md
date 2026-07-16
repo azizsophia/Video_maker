@@ -31,6 +31,9 @@ Euphrates long.)
 
 ### Already POSTED (do not remake, do not re-propose)
 
+**Do not despair / mercy (aura-mercy, 39:53-56)** - posted 2026-07-16 (main, first aura format);
+**Why Can't We See Allah? (see-allah)** - posted 2026-07-16 (shop.ketabi kids dialogue);
+
 Year of the Elephant; Surah Al-Kahf decoded; Ayat al-Kursi decoded; The Splitting
 of the Sea; Abu Bakr as-Siddiq; The Story of Ibrahim; The Only Woman Named in the
 Qur'an (Maryam); Hegra / Al-Hijr; Euphrates (short + long); Fire of the Hijaz;
@@ -39,6 +42,8 @@ Green Arabia; Constantinople; Lowest land on Earth (Ar-Rum);
 **Surah ad-Duha: When the Heavens Went Silent (long-form 16:9)** - posted 2026-07-04.
 
 ### PRODUCED + DELIVERED to owner (rendered, QC-passed; owner is scheduling)
+
+**Is Allah Even Listening? (dua-listening)** - delivered 2026-07-16; PILOT of the new adult-dialogue main-channel format (research doc docs/main-channel-format-research-2026-07-16.md). Asker yJSTU8D97YocC6Dqg20L + Voice B, scale 2.
 
 All final re-renders delivered 2026-07-04 (artifact links in README):
 moon-split; jerusalem-test; shepherds-towers; forelock; verse-of-honey;
