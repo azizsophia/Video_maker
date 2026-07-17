@@ -477,17 +477,17 @@ async function main() {
     reciterName: args.reciterName ?? "Sheikh Abdur-Rahman as-Sudais",
     voiceName: story.voiceName ?? "Daniel",
     websiteUrl: args.website ?? "ketabistudio.com",
-    // Founding-list ad end card: on by default, but a story can opt out
-    // (e.g. the standalone brand ad, which is itself the CTA).
+    // Owner directive 2026-07-16: NO product/waitlist ad at the end - the owner
+    // believes (plausibly - TikTok dampens off-platform promo) it suppresses the
+    // videos. Default is now the lightweight WEBSITE-ONLY end card: outroAd off,
+    // no ParallaxAd, no waitlist copy, just the ketabistudio.com button.
     showOutro: story.showOutro ?? true,
-    outroAd: story.outroAd ?? true,
-    // The owner's produced ad spot is the standing outro (2026-07-03). Set
-    // outroVideoSrc:null in a story to fall back to the generated ParallaxAd.
-    outroVideoSrc: story.outroVideoSrc === null ? undefined : (story.outroVideoSrc ?? "ad/ketabi-ad-12s.mp4"),
-    adSeconds: story.adSeconds ?? (story.outroVideoSrc === null ? 8 : 12.4),
-    ctaHeadline: story.ctaHeadline ?? "Launching this month",
+    outroAd: story.outroAd ?? false,
+    outroVideoSrc: story.outroVideoSrc === null ? undefined : (story.outroVideoSrc ?? undefined),
+    adSeconds: story.adSeconds ?? 8,
+    ctaHeadline: story.ctaHeadline ?? "More reflections",
     ctaHandle: story.ctaHandle ?? "",
-    ctaSub: story.ctaSub ?? "Our keepsake and children's book. Join the waitlist for 15% off your first order.",
+    ctaSub: story.ctaSub ?? "",
     ctaComment: story.ctaComment ?? "",
     ctaShowUrl: story.ctaShowUrl ?? true,
     ctaSeconds: story.ctaSeconds ?? 5.5,

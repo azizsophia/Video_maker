@@ -72,6 +72,28 @@ that is the point of the gate. Nothing ships with an open item.
    the ad outro plays clean at the tail, no glyph-box tofu on Arabic.
 8. Deliver with day-labeled covers + captions + contact sheets + artifact links.
 
+## Length + end card (owner directives 2026-07-16, non-negotiable)
+- EVERY video is ~61 seconds (just over 1:00). This is deliberate: TikTok's
+  Creator Rewards / monetization needs >60s, and the owner wants every post to
+  qualify. Target 61-63s total including the end card. Reach it with REAL content
+  (more beats, a fuller story), never dead-air holds - padding kills retention
+  (the account's avg watch time collapsed to ~6s; length must be filled, not
+  stretched).
+- NO product / waitlist / "join the founding list" ad at the end. The owner
+  believes the waitlist end card suppresses reach (plausible: TikTok dampens
+  off-platform promo CTAs), and pulled it. The ONLY end card is the lightweight
+  WEBSITE card: brand mark + a short line + the ketabistudio.com button
+  (showOutro true, outroAd false, ctaShowUrl true, no ParallaxAd, no waitlist
+  copy). Captions also drop the waitlist line - just "More at ketabistudio.com".
+- VISUALS trend toward STORY over stock (owner note 2026-07-16): the owner grew
+  this account to 70k on faceless AI videos (InVideo AI) and the decline is
+  market saturation + the "reads as AI" reach penalty, not the format itself.
+  She now generates gen-AI VIDEO clips in ElevenLabs Studio (Sora/Veo/Kling -
+  Studio only, no API, so SHE generates + sends them like she does images). Drop
+  them in as the moving background (videoSrc) and compose the branded verse
+  cards / speaker labels / voices / cover around them. A moving story visual is
+  preferred over a single still where a clip is available.
+
 ## The quality bar
 - ONLY show the owner work once it is a genuine PREMIUM, LUXURY, cinematic
   experience. No half-baked or first-pass drafts. Self-QC to that bar first.

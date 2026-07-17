@@ -34,9 +34,10 @@ if (c) {
   const tags = Array.isArray(c.hashtags) ? c.hashtags.join(" ") : "";
   const block = (label, line, withTags) =>
     line ? `== ${label} ==\n${line}${withTags && tags ? `\n${tags}` : ""}\n\n` : "";
-  // Standing launch call to action, appended to each social caption and the
-  // long-form description so every post drives the keepsake + book waitlist.
-  const cta = c.cta ?? "Our keepsake and children's book launch this month. Join the waitlist at ketabistudio.com for 15% off your first order.";
+  // Owner directive 2026-07-16: NO waitlist / product ad in captions - TikTok
+  // suppresses off-platform promo CTAs. Website only. A story may still override
+  // via captions.cta, but the default is now a clean site line, not the waitlist.
+  const cta = c.cta ?? "More at ketabistudio.com";
   const withCta = (line) => (line ? `${line}\n${cta}` : line);
   const txt =
     `${story.title ?? "Untitled"} - captions\n` +
