@@ -47,7 +47,7 @@
         "similarity_boost": 0.85,
         "speed": 0.95
       },
-      "video": "CLIP_RAIN",
+      "video": "main/genai/rain.mp4",
       "videoDuration": 5
     },
     {
@@ -60,7 +60,7 @@
         "similarity_boost": 0.85,
         "speed": 0.93
       },
-      "video": "CLIP_CLOUDS",
+      "video": "main/genai/clouds.mp4",
       "videoDuration": 5
     },
     {
@@ -74,7 +74,7 @@
         "similarity_boost": 0.85,
         "speed": 0.93
       },
-      "video": "CLIP_CLOUDS",
+      "video": "main/genai/clouds.mp4",
       "videoDuration": 5
     },
     {
@@ -88,7 +88,7 @@
         "similarity_boost": 0.85,
         "speed": 0.95
       },
-      "video": "CLIP_RAIN",
+      "video": "main/genai/rain.mp4",
       "videoDuration": 5
     },
     {
@@ -101,7 +101,7 @@
         "similarity_boost": 0.85,
         "speed": 0.93
       },
-      "video": "CLIP_WINDOW",
+      "video": "main/genai/window.mp4",
       "videoDuration": 5,
       "holdSeconds": 0.4
     },
@@ -117,7 +117,7 @@
         "similarity_boost": 0.85,
         "speed": 0.9
       },
-      "video": "CLIP_WINDOW",
+      "video": "main/genai/window.mp4",
       "videoDuration": 5,
       "holdSeconds": 1.2
     },
@@ -132,7 +132,7 @@
         "similarity_boost": 0.85,
         "speed": 0.93
       },
-      "video": "CLIP_OCEAN",
+      "video": "main/genai/ocean.mp4",
       "videoDuration": 5
     },
     {
@@ -146,7 +146,7 @@
         "similarity_boost": 0.9,
         "speed": 0.93
       },
-      "video": "CLIP_DAWN",
+      "video": "main/genai/dawn.mp4",
       "videoDuration": 5,
       "holdSeconds": 1.4
     }
