@@ -94,6 +94,24 @@ that is the point of the gate. Nothing ships with an open item.
   cards / speaker labels / voices / cover around them. A moving story visual is
   preferred over a single still where a clip is available.
 
+## AURA dreamscape format (owner-approved 2026-07-17, the main-channel look)
+- Ketabi Studio main channel = surreal gen-AI DREAMSCAPES (fal.ai Kling, ~$0.35/5s
+  clip) as the moving background: luminous otherworldly gardens, rivers of light,
+  glowing skies - a Jannah / beauty-of-creation dream world. NOT realistic stock
+  b-roll (reads as AI slop), NOT characters (owner rejected claymation/anime).
+  Reference: the owner's glowing-purple-garden image. Deep British Voice B reads a
+  reflection / Qur'an translation over it; glowing word-by-word captions (theme
+  "aura"); Arabic shown on the ayah cards; website-only end card; 61s.
+- Workflow: fal key is the owner's (kept out of the repo - env var only). Generate
+  Kling clips (aspect_ratio 9:16, duration 5), 6-frame eye-QC each (no text/faces/
+  haram), download + commit under public/main/genai/, wire as per-beat videoSrc.
+  Keep prompts PEOPLE-FREE (dodges uncanny AI faces AND any depiction/adab issue).
+- RENDER SCALE for gen-AI VIDEO backgrounds = scale 1, NOT 2. The clips are 720p,
+  so scale 2 just upscales them 3x (soft) for no gain and triples render time (a
+  scale-2 video-bg render ran >24min and was cancelled). scale 1 (1080) is the
+  right call; the glowing captions are still legible. (scale 2 stays only for the
+  still-image aura/kids videos where the type is the hero.)
+
 ## The quality bar
 - ONLY show the owner work once it is a genuine PREMIUM, LUXURY, cinematic
   experience. No half-baked or first-pass drafts. Self-QC to that bar first.
