@@ -1,0 +1,154 @@
+{
+  "id": "dua-genai",
+  "title": "Is Allah Even Listening?",
+  "theme": "kitab",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Asker (yJSTU8D97YocC6Dqg20L) + Answerer (Voice B)",
+  "voiceSeed": 21186,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "More reflections",
+  "ctaSub": "",
+  "ctaSeconds": 5.5,
+  "_brand": "Ketabi Studio - ADULT DIALOGUE, gen-AI VIDEO test (fal.ai Kling, owner-funded 2026-07-16). 61s target, website-only end card. Per-beat cinematic gen-AI clips (people-free / no prophet depiction - adab + dodges uncanny AI faces). Sources (verified, fact-checked in dua-listening): Musnad Ahmad 11133 (hasan), Qur'an 2:186, 21:87-88.",
+  "cover": {
+    "title": "Is Allah\nEven Listening?",
+    "kicker": "A LATE NIGHT QUESTION",
+    "image": "main/dua-listening.png",
+    "wordmark": "KETABI STUDIO",
+    "warm": true
+  },
+  "captions": {
+    "tiktok": "\"I make dua every night and nothing changes.\" If that is you, this is for you. Qur'an 2:186.",
+    "shorts": "Is Allah even listening? What the Prophet said about the dua that feels unanswered. Qur'an 2:186.",
+    "reels": "\"I make dua every night and nothing changes.\" If that is you, this is for you. Qur'an 2:186.",
+    "hashtags": [
+      "#islam",
+      "#dua",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#quran",
+      "#faith"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "It's been months. I make dua every single night... and nothing changes. Is Allah even listening to me?",
+      "kicker": "HIM",
+      "voiceId": "yJSTU8D97YocC6Dqg20L",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.38,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "CLIP_RAIN",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "Every prayer you made was heard. Not one was wasted.",
+      "kicker": "THE ELDER",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.25,
+        "similarity_boost": 0.85,
+        "speed": 0.93
+      },
+      "video": "CLIP_CLOUDS",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "He answers in one of three ways. He gives you what you asked for. Or He saves it for you, for the next life. Or He turns away a harm you never saw coming.",
+      "kicker": "THE ELDER",
+      "foot": "Musnad Ahmad 11133 (hasan)",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.25,
+        "similarity_boost": 0.85,
+        "speed": 0.93
+      },
+      "video": "CLIP_CLOUDS",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "But it feels like silence.",
+      "kicker": "HIM",
+      "voiceId": "yJSTU8D97YocC6Dqg20L",
+      "voiceSettings": {
+        "stability": 0.42,
+        "style": 0.38,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "CLIP_RAIN",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "Then hear what He says about you.",
+      "kicker": "THE ELDER",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.25,
+        "similarity_boost": 0.85,
+        "speed": 0.93
+      },
+      "video": "CLIP_WINDOW",
+      "videoDuration": 5,
+      "holdSeconds": 0.4
+    },
+    {
+      "type": "narration",
+      "text": "And when My servants ask you concerning Me, indeed I am near. I respond to the invocation of the supplicant when he calls upon Me.",
+      "quote": "2:186",
+      "foot": "Qur'an 2:186 - Saheeh International",
+      "kicker": "THE QUR'AN SAYS",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.18,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "CLIP_WINDOW",
+      "videoDuration": 5,
+      "holdSeconds": 1.2
+    },
+    {
+      "type": "narration",
+      "text": "A prophet once called out from the darkness of the sea, in darkness upon darkness. And the answer still reached him. So keep asking.",
+      "kicker": "THE ELDER",
+      "foot": "Qur'an 21:87-88",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.25,
+        "similarity_boost": 0.85,
+        "speed": 0.93
+      },
+      "video": "CLIP_OCEAN",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "Then I will keep asking.",
+      "kicker": "HIM",
+      "voiceId": "yJSTU8D97YocC6Dqg20L",
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.32,
+        "similarity_boost": 0.9,
+        "speed": 0.93
+      },
+      "video": "CLIP_DAWN",
+      "videoDuration": 5,
+      "holdSeconds": 1.4
+    }
+  ]
+}
