@@ -539,6 +539,10 @@ export const CinematicBeat: React.FC<{ seg: StorySegment; warm?: boolean; hideBg
         <CineTitle title={seg.title} sub={seg.titleSub} kicker={seg.kicker} />
       ) : seg.arabic ? (
         <CineQuote arabic={seg.arabic} words={seg.words} kicker={seg.kicker} foot={seg.foot} warm={warm} aura={aura} />
+      ) : aura ? (
+        // aura reflective/hadith beat (no ayah): the big glowing word-by-word
+        // caption too, so a mixed reflection+ayah video reads as one piece.
+        <CineQuote words={seg.words} kicker={seg.kicker} foot={seg.foot} aura />
       ) : (
         <>
           <CineLabel kicker={seg.kicker} foot={seg.foot} warm={warm} />

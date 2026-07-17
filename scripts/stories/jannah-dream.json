@@ -1,0 +1,112 @@
+{
+  "id": "jannah-dream",
+  "title": "The Home You Have Never Seen",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British, Voice Library)",
+  "voiceSeed": 20225,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "More reflections",
+  "ctaSub": "",
+  "ctaSeconds": 5.5,
+  "_brand": "Ketabi Studio - AURA dreamscape format (owner-approved 2026-07-17). Deep British Voice B reading a Jannah reflection over surreal gen-AI dreamworlds (fal Kling), glowing word-by-word captions, Arabic shown on the ayah cards. 61s, website-only end card. Sources verified: Hadith Qudsi Sahih al-Bukhari 3244 / Muslim 2824; Qur'an 2:25, 43:71.",
+  "cover": {
+    "title": "The Home You\nHave Never Seen",
+    "kicker": "A GLIMPSE OF PARADISE",
+    "image": "main/jannah-cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "A place no eye has ever seen. A glimpse of what Allah promised. Qur'an 2:25.",
+    "shorts": "The reward no eye has seen, no ear has heard - a glimpse of Paradise. Qur'an 2:25.",
+    "reels": "A place no eye has ever seen. A glimpse of what Allah promised. Qur'an 2:25.",
+    "hashtags": [
+      "#islam",
+      "#jannah",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#paradise"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "What if the best thing that ever happens to you... has not happened yet?",
+      "hook": true,
+      "hookMark": "yet",
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "main/genai/dream_garden.mp4",
+      "videoDuration": 5,
+      "holdSeconds": 0.6
+    },
+    {
+      "type": "narration",
+      "text": "Allah has prepared for His righteous servants a reward no eye has ever seen, no ear has ever heard, and no heart could ever imagine.",
+      "foot": "Hadith Qudsi - Sahih al-Bukhari 3244",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.18,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "main/genai/dream_vista.mp4",
+      "videoDuration": 5,
+      "holdSeconds": 1.0
+    },
+    {
+      "type": "narration",
+      "text": "Gardens beneath which rivers flow. Whenever they are given fruit from it, they will say, this is what we were given before. And they will abide there, forever.",
+      "quote": "2:25",
+      "foot": "Qur'an 2:25 - Saheeh International",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "main/genai/dream_river.mp4",
+      "videoDuration": 5,
+      "holdSeconds": 1.4
+    },
+    {
+      "type": "narration",
+      "text": "There, you will have whatever your soul desires, and whatever delights the eyes. And you will remain, forever.",
+      "quote": "43:71",
+      "foot": "Qur'an 43:71 - Saheeh International",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "main/genai/dream_golden.mp4",
+      "videoDuration": 5,
+      "holdSeconds": 1.4
+    },
+    {
+      "type": "narration",
+      "text": "So do not give up. What is waiting for you is worth every single day of the wait.",
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "main/genai/dream_sky.mp4",
+      "videoDuration": 5,
+      "holdSeconds": 2.0
+    }
+  ]
+}
