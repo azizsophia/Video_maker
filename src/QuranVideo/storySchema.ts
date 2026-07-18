@@ -32,6 +32,7 @@ export const storySegmentSchema = z.object({
   dim: z.number().optional(), // extra darkening (0..1) for clips that are too bright for the grade
   // ayah
   arabic: z.string().optional(),
+  arabicText: z.string().optional(), // manual Arabic clause to SHOW (not fetched from `quote`)
   translation: z.string().optional(),
 });
 

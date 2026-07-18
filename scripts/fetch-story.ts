@@ -428,7 +428,10 @@ async function main() {
         hook: seg.hook, // aura intro: gold highlight-sweep hook
         hookMark: seg.hookMark,
         dim: typeof seg.dim === "number" ? seg.dim : undefined, // extra darkening for bright clips
-        arabic: arabicQuote,
+        // Manual Arabic override: for a verse whose "Allah loves ..." clause is
+        // only PART of a longer, differently-themed ayah, show just the clause
+        // (arabicText) rather than the whole ayah that `quote` would fetch.
+        arabic: seg.arabicText ? cleanArabic(seg.arabicText) : arabicQuote,
       });
       cursor += duration + GAP + hold;
     } else if (seg.type === "ayah") {

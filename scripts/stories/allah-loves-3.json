@@ -1,0 +1,149 @@
+{
+  "id": "allah-loves-3",
+  "title": "3 People Allah Loves",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 30222,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 5.5,
+  "_brand": "Ketabi Studio - NUMBERED REMINDER series (owner 2026-07-17). Real cinematic Pexels b-roll + deep British Voice B + glowing captions + verse-clause cards (arabicText shows just the 'Allah loves ...' clause, not the full off-topic ayat). 61s, gift-shop end card. Sources: Qur'an 2:222, 3:146, 2:195.",
+  "cover": {
+    "title": "3 People\nAllah Loves",
+    "kicker": "A REMINDER",
+    "image": "main/allah-loves-cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "3 kinds of people Allah says He loves. Number 3 we forget. Qur'an 2:222, 3:146, 2:195.",
+    "shorts": "3 people Allah says He loves - straight from the Qur'an.",
+    "reels": "3 kinds of people Allah says He loves. Number 3 we forget.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#faith",
+      "#allah"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Three kinds of people Allah Himself says He loves. Most of us forget the third.",
+      "hook": true,
+      "hookMark": "third",
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "CLIP_HOOK",
+      "videoDuration": 5,
+      "holdSeconds": 0.4
+    },
+    {
+      "type": "narration",
+      "text": "Number one. The ones who keep coming back. No matter how many times they slip, they turn around and return to Him.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "video": "CLIP_1",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "Indeed, Allah loves those who are constantly repentant, and those who purify themselves.",
+      "arabicText": "إِنَّ ٱللَّهَ يُحِبُّ ٱلتَّوَّٰبِينَ وَيُحِبُّ ٱلْمُتَطَهِّرِينَ",
+      "foot": "Qur'an 2:222 - Saheeh International",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "CLIP_1",
+      "videoDuration": 5,
+      "holdSeconds": 1.2
+    },
+    {
+      "type": "narration",
+      "text": "Number two. The ones who hold on through the pain. When life is breaking them, and they still do not let go of Allah.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "video": "CLIP_2",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "And Allah loves the steadfast.",
+      "arabicText": "وَٱللَّهُ يُحِبُّ ٱلصَّـٰبِرِينَ",
+      "foot": "Qur'an 3:146 - Saheeh International",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "CLIP_2",
+      "videoDuration": 5,
+      "holdSeconds": 1.2
+    },
+    {
+      "type": "narration",
+      "text": "Number three, the one we forget. The ones who quietly do good. Who help, who give, expecting nothing back.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.92
+      },
+      "video": "CLIP_3",
+      "videoDuration": 5
+    },
+    {
+      "type": "narration",
+      "text": "Indeed, Allah loves the doers of good.",
+      "arabicText": "إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُحْسِنِينَ",
+      "foot": "Qur'an 2:195 - Saheeh International",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "CLIP_3",
+      "videoDuration": 5,
+      "holdSeconds": 1.2
+    },
+    {
+      "type": "narration",
+      "text": "So if you have been repenting, or holding on, or quietly doing good, then know this. You are loved by the One whose love never runs out.",
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.9
+      },
+      "video": "CLIP_CLOSE",
+      "videoDuration": 5,
+      "holdSeconds": 1.8
+    }
+  ]
+}
