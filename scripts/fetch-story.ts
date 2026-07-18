@@ -485,7 +485,7 @@ async function main() {
     outroAd: story.outroAd ?? false,
     outroVideoSrc: story.outroVideoSrc === null ? undefined : (story.outroVideoSrc ?? undefined),
     adSeconds: story.adSeconds ?? 8,
-    ctaHeadline: story.ctaHeadline ?? "More reflections",
+    ctaHeadline: story.ctaHeadline ?? "Visit our gift shop",
     ctaHandle: story.ctaHandle ?? "",
     ctaSub: story.ctaSub ?? "",
     ctaComment: story.ctaComment ?? "",

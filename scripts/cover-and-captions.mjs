@@ -37,7 +37,7 @@ if (c) {
   // Owner directive 2026-07-16: NO waitlist / product ad in captions - TikTok
   // suppresses off-platform promo CTAs. Website only. A story may still override
   // via captions.cta, but the default is now a clean site line, not the waitlist.
-  const cta = c.cta ?? "More at ketabistudio.com";
+  const cta = c.cta ?? "Visit our gift shop at ketabistudio.com";
   const withCta = (line) => (line ? `${line}\n${cta}` : line);
   const txt =
     `${story.title ?? "Untitled"} - captions\n` +

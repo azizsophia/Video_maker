@@ -84,7 +84,9 @@ that is the point of the gate. Nothing ships with an open item.
   off-platform promo CTAs), and pulled it. The ONLY end card is the lightweight
   WEBSITE card: brand mark + a short line + the ketabistudio.com button
   (showOutro true, outroAd false, ctaShowUrl true, no ParallaxAd, no waitlist
-  copy). Captions also drop the waitlist line - just "More at ketabistudio.com".
+  copy). Captions also drop the waitlist line. CTA copy (owner 2026-07-17):
+  end card headline "Visit our gift shop" + the ketabistudio.com button; captions
+  "Visit our gift shop at ketabistudio.com".
 - VISUALS trend toward STORY over stock (owner note 2026-07-16): the owner grew
   this account to 70k on faceless AI videos (InVideo AI) and the decline is
   market saturation + the "reads as AI" reach penalty, not the format itself.
