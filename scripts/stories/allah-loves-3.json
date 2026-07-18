@@ -12,7 +12,7 @@
   "ctaShowUrl": true,
   "ctaHeadline": "Visit our gift shop",
   "ctaSub": "",
-  "ctaSeconds": 5.5,
+  "ctaSeconds": 4.5,
   "_brand": "Ketabi Studio - NUMBERED REMINDER series (owner 2026-07-17). Real cinematic Pexels b-roll + deep British Voice B + glowing captions + verse-clause cards (arabicText shows just the 'Allah loves ...' clause, not the full off-topic ayat). 61s, gift-shop end card. Sources: Qur'an 2:222, 3:146, 2:195.",
   "cover": {
     "title": "3 People\nAllah Loves",
@@ -45,20 +45,20 @@
         "stability": 0.5,
         "style": 0.28,
         "similarity_boost": 0.85,
-        "speed": 0.95
+        "speed": 0.97
       },
       "video": "main/broll/candle.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.4
+      "holdSeconds": 0.3
     },
     {
       "type": "narration",
-      "text": "Number one. The ones who keep coming back. No matter how many times they slip, they turn around and return to Him.",
+      "text": "Number one. The ones who keep coming back. However many times they fall, they turn back to Him.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.92
+        "speed": 0.97
       },
       "video": "main/broll/forest-path.mp4",
       "videoDuration": 13
@@ -72,20 +72,20 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.9
+        "speed": 0.95
       },
       "video": "main/broll/forest-path.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.2
+      "holdSeconds": 0.5
     },
     {
       "type": "narration",
-      "text": "Number two. The ones who hold on through the pain. When life is breaking them, and they still do not let go of Allah.",
+      "text": "Number two. The ones who hold on through the pain. When life is breaking them, they still don't let go.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.92
+        "speed": 0.97
       },
       "video": "main/broll/moody-field.mp4",
       "videoDuration": 13
@@ -99,20 +99,20 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.9
+        "speed": 0.95
       },
       "video": "main/broll/moody-field.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.2
+      "holdSeconds": 0.5
     },
     {
       "type": "narration",
-      "text": "Number three, the one we forget. The ones who quietly do good. Who help, who give, expecting nothing back.",
+      "text": "Number three, the one we forget. The ones who quietly do good, and expect nothing back.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.92
+        "speed": 0.97
       },
       "video": "main/broll/pour-water.mp4",
       "videoDuration": 13
@@ -126,24 +126,24 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.9
+        "speed": 0.95
       },
       "video": "main/broll/pour-water.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.2
+      "holdSeconds": 0.5
     },
     {
       "type": "narration",
-      "text": "So if you have been repenting, or holding on, or quietly doing good, then know this. You are loved by the One whose love never runs out.",
+      "text": "So if you're repenting, holding on, or quietly doing good, then know this. You are loved by the One whose love never runs out.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.9
+        "speed": 0.95
       },
       "video": "main/broll/golden-canopy.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.8,
+      "holdSeconds": 0.9,
       "dim": 0.42
     }
   ]
