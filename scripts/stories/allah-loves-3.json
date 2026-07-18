@@ -47,9 +47,10 @@
         "similarity_boost": 0.85,
         "speed": 0.97
       },
-      "video": "main/broll/candle.mp4",
+      "video": "main/broll/mountain.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.3
+      "holdSeconds": 0.3,
+      "dim": 0.2
     },
     {
       "type": "narration",
@@ -74,7 +75,7 @@
         "similarity_boost": 0.85,
         "speed": 0.95
       },
-      "video": "main/broll/forest-path.mp4",
+      "video": "main/broll/forest-stream.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.5
     },
@@ -101,9 +102,10 @@
         "similarity_boost": 0.85,
         "speed": 0.95
       },
-      "video": "main/broll/moody-field.mp4",
+      "video": "main/broll/lone-tree.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.5
+      "holdSeconds": 0.5,
+      "dim": 0.15
     },
     {
       "type": "narration",
@@ -129,10 +131,10 @@
         "similarity_boost": 0.85,
         "speed": 0.95
       },
-      "video": "main/broll/seedling-hands.mp4",
-      "videoDuration": 7,
+      "video": "main/broll/blossoms.mp4",
+      "videoDuration": 13,
       "holdSeconds": 0.5,
-      "dim": 0.5
+      "dim": 0.4
     },
     {
       "type": "narration",
