@@ -457,29 +457,46 @@ const CineHook: React.FC<{ words?: StoryWord[]; mark?: string }> = ({ words = []
   const { fps, width, height } = useVideoConfig();
   const wide = width > height;
   const t = frame / fps;
-  const fade = interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp" });
-  const size = wide ? 54 : 66;
+  const fade = interpolate(frame, [0, 12], [0, 1], { extrapolateRight: "clamp" });
+  // Bigger, punchier hook type — the first second has to stop the scroll.
+  const size = wide ? 70 : 92;
   const markN = (mark || "").toLowerCase().replace(/[^a-z]/g, "");
+  // WORD-BY-WORD, not a paragraph: reveal the hook in SMALL groups (3 words on
+  // 9:16), showing only the current group. Each word pops in as it is spoken and
+  // upcoming words in the group are invisible but reserve their space (no reflow).
+  // When the voice moves on, the group clears and the next one builds. This keeps
+  // at most ~3 words on screen at once instead of dumping the whole sentence.
+  const groups = toLines(words, wide ? 4 : 3);
+  let gi = 0;
+  for (let i = 0; i < groups.length; i++) if (t >= groups[i].start - 0.15) gi = i;
+  const cur = groups[gi];
+  const gEnd = cur?.words.length ? cur.words[cur.words.length - 1].end : 0;
+  const gIn = interpolate(t, [(cur?.start ?? 0) - 0.14, (cur?.start ?? 0) + 0.12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const gOut = interpolate(t, [gEnd + 0.16, gEnd + 0.46], [1, 0.9], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ opacity: fade }}>
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.08) 62%, rgba(0,0,0,0.74) 100%)" }} />
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse 76% 30% at 50% 50%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.28) 48%, rgba(0,0,0,0) 74%)" }} />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: wide ? "0 10%" : "0 9%" }}>
-        <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: size, lineHeight: 1.32, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "6px 16px", maxWidth: wide ? 1400 : 840, textShadow: "0 0 30px rgba(255,255,255,0.18), 0 4px 26px rgba(0,0,0,0.92)" }}>
-          {words.map((w, i) => {
-            const shown = t >= w.start - 0.12;
+        <div style={{ fontFamily: MONTSERRAT, fontWeight: 800, fontSize: size, lineHeight: 1.3, textAlign: "center", color: "#ffffff", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "6px 18px", maxWidth: wide ? 1400 : 860, opacity: Math.min(gIn, gOut) }}>
+          {cur?.words.map((w, i) => {
+            const appear = interpolate(t, [w.start - 0.03, w.start + 0.15], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+            const pop = interpolate(t, [w.start - 0.03, w.start + 0.13, w.start + 0.28], [0.7, 1.1, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
             const clean = w.text.toLowerCase().replace(/[^a-z]/g, "");
             const isMark = markN.length > 0 && clean === markN;
             if (isMark) {
               const sweep = interpolate(t, [w.start - 0.02, w.start + 0.45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
               const inked = sweep > 0.55;
               return (
-                <span key={i} style={{ position: "relative", display: "inline-block", opacity: shown ? 1 : 0 }}>
+                <span key={i} style={{ position: "relative", display: "inline-block", opacity: appear, transform: `scale(${pop})` }}>
                   <span style={{ position: "absolute", left: -6, right: -6, top: "12%", bottom: "8%", background: "linear-gradient(90deg,#f6e7b8,#e7c873)", transform: `scaleX(${sweep})`, transformOrigin: "left center", borderRadius: 4, boxShadow: "0 0 26px rgba(231,200,115,0.5)" }} />
                   <span style={{ position: "relative", color: inked ? "#0b0b0b" : "#ffffff", fontWeight: 900, transition: "color 0.15s linear", padding: "0 4px" }}>{w.text}</span>
                 </span>
               );
             }
-            return <span key={i} style={{ display: "inline-block", opacity: shown ? 1 : 0.3, transition: "opacity 0.2s linear" }}>{w.text}</span>;
+            return (
+              <span key={i} style={{ display: "inline-block", color: "#ffffff", opacity: appear, transform: `scale(${pop})`, textShadow: "0 0 42px rgba(255,255,255,0.4), 0 4px 26px rgba(0,0,0,0.92)" }}>{w.text}</span>
+            );
           })}
         </div>
       </AbsoluteFill>

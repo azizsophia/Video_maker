@@ -114,8 +114,9 @@
         "similarity_boost": 0.85,
         "speed": 0.97
       },
-      "video": "main/broll/pour-water.mp4",
-      "videoDuration": 13
+      "video": "main/broll/seedling-hands.mp4",
+      "videoDuration": 7,
+      "dim": 0.5
     },
     {
       "type": "narration",
@@ -128,9 +129,10 @@
         "similarity_boost": 0.85,
         "speed": 0.95
       },
-      "video": "main/broll/pour-water.mp4",
-      "videoDuration": 13,
-      "holdSeconds": 0.5
+      "video": "main/broll/seedling-hands.mp4",
+      "videoDuration": 7,
+      "holdSeconds": 0.5,
+      "dim": 0.5
     },
     {
       "type": "narration",
