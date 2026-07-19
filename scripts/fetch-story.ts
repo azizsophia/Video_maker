@@ -429,6 +429,9 @@ async function main() {
         videoDuration: typeof seg.videoDuration === "number" ? seg.videoDuration : undefined, // clip seconds → fill-the-beat slowdown
         title: seg.title, // cinematic gold-on-black title card (film open)
         titleSub: seg.titleSub,
+        nameArabic: seg.nameArabic, // 99-Names series signature card (gold Arabic Name)
+        nameTranslit: seg.nameTranslit,
+        nameMeaning: seg.nameMeaning,
         hook: seg.hook, // aura intro: gold highlight-sweep hook
         hookMark: seg.hookMark,
         dim: typeof seg.dim === "number" ? seg.dim : undefined, // extra darkening for bright clips

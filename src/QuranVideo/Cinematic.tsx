@@ -448,6 +448,66 @@ const CineTitle: React.FC<{ title: string; sub?: string; kicker?: string }> = ({
   );
 };
 
+// 99-Names series signature card: the Name of Allah in GOLD Arabic script rises
+// out of the dark, a gold flourish, the transliteration letter-spaced under it,
+// and the English meaning in cream italic beneath. Read deep + slow; no running
+// caption. Reused (same layout) for every Name so the series reads as one set.
+const CineName: React.FC<{ arabic: string; translit?: string; meaning?: string }> = ({ arabic, translit, meaning }) => {
+  const frame = useCurrentFrame();
+  const { fps, width, height } = useVideoConfig();
+  const wide = width > height;
+  const t = frame / fps;
+  const rise = interpolate(t, [0.5, 2.1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const flourish = interpolate(t, [1.7, 3.1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const meanFade = interpolate(t, [2.4, 3.6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const arSize = wide ? 150 : 190;
+  return (
+    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 8%" }}>
+      {/* deepen the frame so the gold Name reads like a film title */}
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 48%, rgba(6,12,9,0.5) 0%, rgba(5,10,8,0.85) 68%, rgba(4,8,6,0.96) 100%)" }} />
+      {/* the Name, in gold Arabic script */}
+      <div
+        dir="rtl"
+        style={{
+          position: "relative",
+          fontFamily: ARABIC_DISPLAY_FONT,
+          fontWeight: 700,
+          fontSize: arSize,
+          lineHeight: 1.25,
+          textAlign: "center",
+          color: GOLD,
+          background: "linear-gradient(180deg,#f6e7b8 0%,#e7c873 46%,#bf9a45 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          textShadow: "0 0 70px rgba(231,200,115,0.4)",
+          opacity: rise,
+          transform: `translateY(${(1 - rise) * 24}px)`,
+        }}
+      >
+        {arabic}
+      </div>
+      {/* gold flourish */}
+      <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center", gap: 18, margin: wide ? "30px 0 0" : "40px 0 0" }}>
+        <div style={{ height: 1.5, width: 170 * flourish, background: "linear-gradient(90deg,transparent,#e7c873)" }} />
+        <div style={{ width: 13, height: 13, transform: "rotate(45deg)", background: GOLD, opacity: flourish }} />
+        <div style={{ height: 1.5, width: 170 * flourish, background: "linear-gradient(90deg,#e7c873,transparent)" }} />
+      </div>
+      {/* transliteration, gold, letter-spaced */}
+      {translit ? (
+        <div style={{ position: "relative", fontFamily: JOST, fontWeight: 400, letterSpacing: 10, fontSize: wide ? 44 : 56, color: GOLD, opacity: flourish, marginTop: wide ? 26 : 40, textShadow: "0 2px 18px rgba(0,0,0,0.8)" }}>
+          {translit}
+        </div>
+      ) : null}
+      {/* English meaning, cream italic */}
+      {meaning ? (
+        <div style={{ position: "relative", fontFamily: CORMORANT, fontStyle: "italic", fontWeight: 600, fontSize: wide ? 40 : 50, color: CREAM, opacity: meanFade, marginTop: wide ? 14 : 20, textShadow: "0 2px 16px rgba(0,0,0,0.8)" }}>
+          {meaning}
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 // aura intro hook: the spoken line appears word-by-word over the b-roll, and a
 // GOLD highlight bar sweeps across the marked word as it is spoken (the word inks
 // dark once the sweep passes) — a premium, original take on the "highlighter"
@@ -550,7 +610,9 @@ export const CinematicBeat: React.FC<{ seg: StorySegment; warm?: boolean; hideBg
       ) : (
         <AbsoluteFill style={{ background: warm ? "#20140c" : aura ? "#05070c" : "#0b1410" }} />
       )}
-      {seg.hook ? (
+      {seg.nameArabic ? (
+        <CineName arabic={seg.nameArabic} translit={seg.nameTranslit} meaning={seg.nameMeaning} />
+      ) : seg.hook ? (
         <CineHook words={seg.words} mark={seg.hookMark} />
       ) : seg.title ? (
         <CineTitle title={seg.title} sub={seg.titleSub} kicker={seg.kicker} />

@@ -27,6 +27,11 @@ export const storySegmentSchema = z.object({
   videoDuration: z.number().optional(), // clip length in seconds — slows playback to fill the beat (no end freeze)
   title: z.string().optional(), // cinematic film-open: gold-on-black title card over the beat
   titleSub: z.string().optional(), // small line under the title (e.g. "alayhi salam")
+  // 99-Names series signature card: the Name of Allah in gold Arabic script,
+  // its transliteration, and its English meaning, read deep. Captions suppressed.
+  nameArabic: z.string().optional(), // the Name in Arabic (gold), e.g. "ٱلسَّمِيع"
+  nameTranslit: z.string().optional(), // transliteration, e.g. "As-Samee'"
+  nameMeaning: z.string().optional(), // English meaning, e.g. "The All-Hearing"
   hook: z.boolean().optional(), // aura intro: render the spoken line as a hook with a gold highlight sweep
   hookMark: z.string().optional(), // the word/phrase in the hook to sweep-highlight in gold
   dim: z.number().optional(), // extra darkening (0..1) for clips that are too bright for the grade
