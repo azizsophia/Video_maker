@@ -1,0 +1,109 @@
+{
+  "id": "speak-for-you",
+  "title": "3 Things That Will Speak For You",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 40711,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.5,
+  "_brand": "Ketabi Studio - NUMBERED REMINDER series Ep2 (owner 2026-07-17). Deep British Voice B, glowing word-by-word captions, distinct aesthetic nature clips per beat, hadith proof-cards via arabicText, 61s, gift-shop end card. Sources verified (docs/ep2-speak-for-you-sources.md): Sahih Muslim 804; Musnad Ahmad 6589 (sahih); Abu Dawud 1400 (hasan) + Qur'an 67:1.",
+  "cover": {
+    "title": "3 Things That\nSpeak For You",
+    "kicker": "A REMINDER",
+    "image": "main/speak-cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "On the Day of Judgment, 3 things will speak for you. Number 3 most of us forget. Sahih Muslim 804, Musnad Ahmad, Abu Dawud 1400.",
+    "shorts": "3 things will speak for you on the Day of Judgment - straight from the Sunnah.",
+    "reels": "3 things will speak for you when you cannot speak for yourself. Number 3 most forget.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#jannah",
+      "#hereafter"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "One day you will stand before Allah, unable to speak for yourself. But three things will speak for you.",
+      "hook": true,
+      "hookMark": "speak",
+      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 0.96 },
+      "video": "CLIP_HOOK",
+      "videoDuration": 13,
+      "holdSeconds": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "Number one. The Qur'an. Every verse you ever recited is coming back, to defend the one who kept it close.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 0.97 },
+      "video": "CLIP_1",
+      "videoDuration": 13
+    },
+    {
+      "type": "narration",
+      "text": "Recite the Qur'an. On the Day of Resurrection, it will come as an intercessor for those who recite it.",
+      "arabicText": "اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا لِأَصْحَابِهِ",
+      "foot": "Prophet Muhammad, peace be upon him - Sahih Muslim 804",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.95 },
+      "video": "CLIP_2",
+      "videoDuration": 13,
+      "holdSeconds": 0.6
+    },
+    {
+      "type": "narration",
+      "text": "Number two. Your fasting. Every day of hunger you carried, only for Allah, was quietly building a voice.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 0.97 },
+      "video": "CLIP_3",
+      "videoDuration": 13
+    },
+    {
+      "type": "narration",
+      "text": "Fasting will say: my Lord, I kept him from food and desire by day. So let me intercede for him.",
+      "arabicText": "يَقُولُ الصِّيَامُ أَيْ رَبِّ مَنَعْتُهُ الطَّعَامَ وَالشَّهَوَاتِ بِالنَّهَارِ فَشَفِّعْنِي فِيهِ",
+      "foot": "Prophet Muhammad, peace be upon him - Musnad Ahmad (sahih)",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.95 },
+      "video": "CLIP_4",
+      "videoDuration": 13,
+      "holdSeconds": 0.6
+    },
+    {
+      "type": "narration",
+      "text": "Number three, the one most people forget. One chapter, Surah al-Mulk. Recite it, and it defends you until you are forgiven.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 0.97 },
+      "video": "CLIP_5",
+      "videoDuration": 13
+    },
+    {
+      "type": "narration",
+      "text": "A chapter of thirty verses, that interceded for a man, until he was forgiven.",
+      "arabicText": "تَبَـٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ",
+      "foot": "Prophet Muhammad, peace be upon him - Abu Dawud 1400 (hasan); Qur'an 67:1",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.95 },
+      "video": "CLIP_6",
+      "videoDuration": 13,
+      "holdSeconds": 0.9
+    },
+    {
+      "type": "narration",
+      "text": "So fill your days with His words, and your nights holding back for Him. Build the voices now, that will speak for you then.",
+      "voiceSettings": { "stability": 0.58, "style": 0.22, "similarity_boost": 0.85, "speed": 0.94 },
+      "video": "CLIP_CLOSE",
+      "videoDuration": 13,
+      "holdSeconds": 1.4
+    }
+  ]
+}
