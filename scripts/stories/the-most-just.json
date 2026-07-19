@@ -47,9 +47,10 @@
         "similarity_boost": 0.85,
         "speed": 1.0
       },
-      "video": "main/broll3/lightning.mp4",
+      "video": "main/broll3/hook-desert.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.2
+      "holdSeconds": 0.2,
+      "dim": 0.3
     },
     {
       "type": "narration",
@@ -144,9 +145,10 @@
         "similarity_boost": 0.85,
         "speed": 1.0
       },
-      "video": "main/broll3/scale.mp4",
+      "video": "main/broll3/close-plain.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.8
+      "holdSeconds": 0.8,
+      "dim": 0.28
     }
   ]
 }
