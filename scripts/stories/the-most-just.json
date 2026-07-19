@@ -45,7 +45,7 @@
         "stability": 0.5,
         "style": 0.28,
         "similarity_boost": 0.85,
-        "speed": 0.99
+        "speed": 1.0
       },
       "video": "main/broll3/lightning.mp4",
       "videoDuration": 13,
@@ -53,7 +53,7 @@
     },
     {
       "type": "narration",
-      "text": "In Madinah, among a noble tribe called the Aws, a coat of armor was stolen.",
+      "text": "In Madinah, among the noble tribe of Aws, a coat of armor was stolen.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
@@ -66,7 +66,7 @@
     },
     {
       "type": "narration",
-      "text": "The thief was one of their own, a Muslim. He hid the armor in a Jewish neighbour's home, and accused him.",
+      "text": "The thief was one of their own. He hid the armor in a Jewish neighbour's home, and accused him.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
@@ -96,11 +96,11 @@
         "stability": 0.55,
         "style": 0.2,
         "similarity_boost": 0.85,
-        "speed": 0.99
+        "speed": 1.0
       },
       "video": "main/broll3/storm-break.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.4,
+      "holdSeconds": 0.3,
       "dim": 0.2
     },
     {
@@ -112,11 +112,11 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 1.0
       },
       "video": "main/broll3/lightburst.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.5,
+      "holdSeconds": 0.35,
       "dim": 0.3
     },
     {
@@ -128,25 +128,25 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 1.0
       },
       "video": "main/broll3/mesa.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.5,
+      "holdSeconds": 0.35,
       "dim": 0.2
     },
     {
       "type": "narration",
-      "text": "The innocent walked free. The liar, exposed. For Allah, the Most Just, takes no side but the truth.",
+      "text": "The innocent walked free. The liar, exposed. For Allah, the Most Just, takes no side but truth.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.98
+        "speed": 1.0
       },
       "video": "main/broll3/scale.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.0
+      "holdSeconds": 0.8
     }
   ]
 }
