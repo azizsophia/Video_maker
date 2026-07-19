@@ -38,7 +38,7 @@
   "segments": [
     {
       "type": "narration",
-      "text": "Allah once revealed Qur'an, to clear an innocent man, and expose the Muslim who framed him.",
+      "text": "Allah once revealed Qur'an to clear an innocent man, and expose the Muslim who framed him.",
       "hook": true,
       "hookMark": "Muslim",
       "voiceSettings": {
@@ -47,101 +47,106 @@
         "similarity_boost": 0.85,
         "speed": 0.99
       },
-      "video": "CLIP_HOOK",
+      "video": "main/broll3/lightning.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.2
     },
     {
       "type": "narration",
-      "text": "It happened in Madinah, among a noble tribe called the Aws. A coat of armor had been stolen.",
+      "text": "In Madinah, among a noble tribe called the Aws, a coat of armor was stolen.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.98
+        "speed": 1.0
       },
-      "video": "CLIP_1",
-      "videoDuration": 13
+      "video": "main/broll3/ruins.mp4",
+      "videoDuration": 13,
+      "dim": 0.25
     },
     {
       "type": "narration",
-      "text": "The thief was one of their own, a Muslim. To bury his crime, he hid the armor in a Jewish neighbour's home, and accused him of the theft.",
+      "text": "The thief was one of their own, a Muslim. He hid the armor in a Jewish neighbour's home, and accused him.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.99
+        "speed": 1.0
       },
-      "video": "CLIP_2",
-      "videoDuration": 13
+      "video": "main/broll3/vault.mp4",
+      "videoDuration": 12
     },
     {
       "type": "narration",
-      "text": "His people closed ranks around him. He is one of us, they said. Take his word over the word of a Jew.",
+      "text": "His people closed ranks. He is one of us, they said. Take his word over a Jew's.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.99
+        "speed": 1.0
       },
-      "video": "CLIP_3",
-      "videoDuration": 13
+      "video": "main/broll3/storm-dark.mp4",
+      "videoDuration": 8,
+      "dim": 0.1
     },
     {
       "type": "narration",
-      "text": "And the Prophet, peace be upon him, was about to rule against the innocent man. Then the sky spoke.",
+      "text": "The Prophet, peace be upon him, was about to rule against the innocent. Then the sky spoke.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.2,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 0.99
       },
-      "video": "CLIP_4",
+      "video": "main/broll3/storm-break.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.4
+      "holdSeconds": 0.4,
+      "dim": 0.2
     },
     {
       "type": "narration",
-      "text": "We have revealed to you the Book in truth, to judge between people by what Allah has shown you. So do not be an advocate for the deceitful.",
+      "text": "We revealed to you the Book in truth, to judge between people by what Allah shows you. So do not defend the deceitful.",
       "arabicText": "إِنَّآ أَنزَلْنَآ إِلَيْكَ ٱلْكِتَـٰبَ بِٱلْحَقِّ لِتَحْكُمَ بَيْنَ ٱلنَّاسِ بِمَآ أَرَىٰكَ ٱللَّهُ وَلَا تَكُن لِّلْخَآئِنِينَ خَصِيمًا",
       "foot": "Qur'an 4:105 - Surah an-Nisa",
       "voiceSettings": {
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.96
+        "speed": 0.97
       },
-      "video": "CLIP_5",
+      "video": "main/broll3/lightburst.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.6
+      "holdSeconds": 0.5,
+      "dim": 0.3
     },
     {
       "type": "narration",
-      "text": "And whoever earns a sin, then casts it upon someone innocent, has taken on a slander, and a clear sin.",
+      "text": "And whoever sins, then casts it on someone innocent, has taken a slander, and a clear sin.",
       "arabicText": "وَمَن يَكْسِبْ خَطِيٓـَٔةً أَوْ إِثْمًا ثُمَّ يَرْمِ بِهِۦ بَرِيٓـًٔا فَقَدِ ٱحْتَمَلَ بُهْتَـٰنًا وَإِثْمًا مُّبِينًا",
       "foot": "Qur'an 4:112 - Surah an-Nisa",
       "voiceSettings": {
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.96
+        "speed": 0.97
       },
-      "video": "CLIP_6",
+      "video": "main/broll3/mesa.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.6
+      "holdSeconds": 0.5,
+      "dim": 0.2
     },
     {
       "type": "narration",
-      "text": "The innocent walked free. The liar was exposed. Because Allah, the Most Just, takes no side but the truth.",
+      "text": "The innocent walked free. The liar, exposed. For Allah, the Most Just, takes no side but the truth.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 0.98
       },
-      "video": "CLIP_CLOSE",
+      "video": "main/broll3/scale.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.2
+      "holdSeconds": 1.0
     }
   ]
 }
