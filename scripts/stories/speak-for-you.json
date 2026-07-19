@@ -41,50 +41,84 @@
       "text": "One day you will stand before Allah, unable to speak for yourself. But three things will speak for you.",
       "hook": true,
       "hookMark": "speak",
-      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 0.96 },
-      "video": "CLIP_HOOK",
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
+      "video": "main/broll2/godrays.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.3
+      "holdSeconds": 0.3,
+      "dim": 0.15
     },
     {
       "type": "narration",
       "text": "Number one. The Qur'an. Every verse you ever recited is coming back, to defend the one who kept it close.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 0.97 },
-      "video": "CLIP_1",
-      "videoDuration": 13
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.97
+      },
+      "video": "main/broll2/goldclouds.mp4",
+      "videoDuration": 13,
+      "dim": 0.25
     },
     {
       "type": "narration",
       "text": "Recite the Qur'an. On the Day of Resurrection, it will come as an intercessor for those who recite it.",
       "arabicText": "اقْرَءُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا لِأَصْحَابِهِ",
       "foot": "Prophet Muhammad, peace be upon him - Sahih Muslim 804",
-      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.95 },
-      "video": "CLIP_2",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "main/broll2/mistlake.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.6
+      "holdSeconds": 0.6,
+      "dim": 0.45
     },
     {
       "type": "narration",
       "text": "Number two. Your fasting. Every day of hunger you carried, only for Allah, was quietly building a voice.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 0.97 },
-      "video": "CLIP_3",
-      "videoDuration": 13
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.97
+      },
+      "video": "main/broll2/crescent.mp4",
+      "videoDuration": 13,
+      "dim": 0.1
     },
     {
       "type": "narration",
       "text": "Fasting will say: my Lord, I kept him from food and desire by day. So let me intercede for him.",
       "arabicText": "يَقُولُ الصِّيَامُ أَيْ رَبِّ مَنَعْتُهُ الطَّعَامَ وَالشَّهَوَاتِ بِالنَّهَارِ فَشَفِّعْنِي فِيهِ",
       "foot": "Prophet Muhammad, peace be upon him - Musnad Ahmad (sahih)",
-      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.95 },
-      "video": "CLIP_4",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "main/broll2/starsky.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.6
     },
     {
       "type": "narration",
       "text": "Number three, the one most people forget. One chapter, Surah al-Mulk. Recite it, and it defends you until you are forgiven.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 0.97 },
-      "video": "CLIP_5",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.97
+      },
+      "video": "main/broll2/starfield.mp4",
       "videoDuration": 13
     },
     {
@@ -92,18 +126,29 @@
       "text": "A chapter of thirty verses, that interceded for a man, until he was forgiven.",
       "arabicText": "تَبَـٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ",
       "foot": "Prophet Muhammad, peace be upon him - Abu Dawud 1400 (hasan); Qur'an 67:1",
-      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 0.95 },
-      "video": "CLIP_6",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.95
+      },
+      "video": "main/broll2/fullmoon.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.9
     },
     {
       "type": "narration",
-      "text": "So fill your days with His words, and your nights holding back for Him. Build the voices now, that will speak for you then.",
-      "voiceSettings": { "stability": 0.58, "style": 0.22, "similarity_boost": 0.85, "speed": 0.94 },
-      "video": "CLIP_CLOSE",
+      "text": "So spend your days holding back for Him, and your nights in His words. Build the voices now, that will speak for you then.",
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 0.94
+      },
+      "video": "main/broll2/cloudsea.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.4
+      "holdSeconds": 1.4,
+      "dim": 0.3
     }
   ]
 }
