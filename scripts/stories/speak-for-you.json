@@ -12,7 +12,7 @@
   "ctaShowUrl": true,
   "ctaHeadline": "Visit our gift shop",
   "ctaSub": "",
-  "ctaSeconds": 4.5,
+  "ctaSeconds": 4.0,
   "_brand": "Ketabi Studio - NUMBERED REMINDER series Ep2 (owner 2026-07-17). Deep British Voice B, glowing word-by-word captions, distinct aesthetic nature clips per beat, hadith proof-cards via arabicText, 61s, gift-shop end card. Sources verified (docs/ep2-speak-for-you-sources.md): Sahih Muslim 804; Musnad Ahmad 6589 (sahih); Abu Dawud 1400 (hasan) + Qur'an 67:1.",
   "cover": {
     "title": "3 Things That\nSpeak For You",
@@ -45,16 +45,16 @@
         "stability": 0.5,
         "style": 0.28,
         "similarity_boost": 0.85,
-        "speed": 0.99
+        "speed": 1.0
       },
       "video": "main/broll2/godrays.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.3,
+      "holdSeconds": 0.2,
       "dim": 0.15
     },
     {
       "type": "narration",
-      "text": "Number one. The Qur'an. Every verse you recited comes back to defend you.",
+      "text": "Number one. The Qur'an. Every verse you recited defends you.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
@@ -74,16 +74,16 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.98
+        "speed": 0.99
       },
       "video": "main/broll2/mistlake.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.5,
+      "holdSeconds": 0.4,
       "dim": 0.45
     },
     {
       "type": "narration",
-      "text": "Number two. Your fasting. Every day of hunger, carried only for Allah, was building a voice.",
+      "text": "Number two. Your fasting. Every hour of hunger, borne for Allah, builds a voice.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
@@ -103,15 +103,15 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.98
+        "speed": 0.99
       },
       "video": "main/broll2/starsky.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.5
+      "holdSeconds": 0.4
     },
     {
       "type": "narration",
-      "text": "Number three, the one most forget. One surah, al-Mulk. Recite it, and it defends you till you're forgiven.",
+      "text": "Number three, the one most forget. Surah al-Mulk. Recite it, it defends you till you're forgiven.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
@@ -130,24 +130,24 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.98
+        "speed": 0.99
       },
       "video": "main/broll2/fullmoon.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.7
+      "holdSeconds": 0.5
     },
     {
       "type": "narration",
-      "text": "Fill your days fasting for Him, your nights in His words. Build the voices that speak for you.",
+      "text": "Fill your days fasting, your nights in His words. Build the voices that speak for you.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.98
+        "speed": 1.0
       },
       "video": "main/broll2/cloudsea.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.0,
+      "holdSeconds": 0.8,
       "dim": 0.3
     }
   ]
