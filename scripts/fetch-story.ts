@@ -260,6 +260,7 @@ const PHONETIC: Record<string, string> = {
   harj: "Harj",
   masjid: "masjid",
   madinah: "Madeenah",
+  aws: "Owss",
   hurayra: "Hurayra",
   "al-khudri": "al-Khudree",
   // "Read" here is the command Iqra (present/imperative), so it must sound
