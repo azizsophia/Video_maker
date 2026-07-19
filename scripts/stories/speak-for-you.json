@@ -45,7 +45,7 @@
         "stability": 0.5,
         "style": 0.28,
         "similarity_boost": 0.85,
-        "speed": 0.96
+        "speed": 0.99
       },
       "video": "main/broll2/godrays.mp4",
       "videoDuration": 13,
@@ -54,12 +54,12 @@
     },
     {
       "type": "narration",
-      "text": "Number one. The Qur'an. Every verse you ever recited is coming back, to defend the one who kept it close.",
+      "text": "Number one. The Qur'an. Every verse you recited comes back to defend you.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 1.0
       },
       "video": "main/broll2/goldclouds.mp4",
       "videoDuration": 13,
@@ -74,21 +74,21 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.95
+        "speed": 0.98
       },
       "video": "main/broll2/mistlake.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.6,
+      "holdSeconds": 0.5,
       "dim": 0.45
     },
     {
       "type": "narration",
-      "text": "Number two. Your fasting. Every day of hunger you carried, only for Allah, was quietly building a voice.",
+      "text": "Number two. Your fasting. Every day of hunger, carried only for Allah, was building a voice.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 1.0
       },
       "video": "main/broll2/crescent.mp4",
       "videoDuration": 13,
@@ -103,20 +103,20 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.95
+        "speed": 0.98
       },
       "video": "main/broll2/starsky.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.6
+      "holdSeconds": 0.5
     },
     {
       "type": "narration",
-      "text": "Number three, the one most people forget. One chapter, Surah al-Mulk. Recite it, and it defends you until you are forgiven.",
+      "text": "Number three, the one most forget. One surah, al-Mulk. Recite it, and it defends you till you're forgiven.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.97
+        "speed": 1.0
       },
       "video": "main/broll2/starfield.mp4",
       "videoDuration": 13
@@ -130,24 +130,24 @@
         "stability": 0.6,
         "style": 0.16,
         "similarity_boost": 0.85,
-        "speed": 0.95
+        "speed": 0.98
       },
       "video": "main/broll2/fullmoon.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.9
+      "holdSeconds": 0.7
     },
     {
       "type": "narration",
-      "text": "So spend your days holding back for Him, and your nights in His words. Build the voices now, that will speak for you then.",
+      "text": "Fill your days fasting for Him, your nights in His words. Build the voices that speak for you.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
         "similarity_boost": 0.85,
-        "speed": 0.94
+        "speed": 0.98
       },
       "video": "main/broll2/cloudsea.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.4,
+      "holdSeconds": 1.0,
       "dim": 0.3
     }
   ]
