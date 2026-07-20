@@ -261,9 +261,10 @@ const PHONETIC: Record<string, string> = {
   masjid: "masjid",
   madinah: "Madeenah",
   aws: "aus",
-  khawla: "Kawla",
+  khawla: "Khawla",
   // Name of Allah as-Sami' (السميع). Ayn dropped for English TTS; stress on "mee".
-  "as-samee": "as-Samee",
+  // Owner ear-test 2026-07-20: "as sa MEE" (as-sah-MEE), the All-Hearing.
+  "as-samee": "as sa MEE",
   hurayra: "Hurayra",
   "al-khudri": "al-Khudree",
   // "Read" here is the command Iqra (present/imperative), so it must sound
