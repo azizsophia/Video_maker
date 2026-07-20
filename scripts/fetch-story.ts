@@ -261,8 +261,10 @@ const PHONETIC: Record<string, string> = {
   masjid: "masjid",
   madinah: "Madeenah",
   aws: "aus",
-  khawla: "Khawla",
-  khaulah: "Khawla", // owner spells the name "Khaulah"; approved sound = test #4 "Khawla"
+  // Owner ear-test 2026-07-20: "Kh-howla" - throaty KH (خ, not a hard K) + "owla"
+  // rhyming with owl. Display keeps "Khaulah". SINGLE token (hyphens, no spaces).
+  khawla: "Kh-howla",
+  khaulah: "Kh-howla",
   // Name of Allah as-Sami' (السميع). MUST be a SINGLE token (no spaces) or the
   // caption remap breaks and the raw TTS spelling (incl. "Allaah") leaks on screen.
   // Owner ear-test 2026-07-20 (from Wiktionary /as.sa.miːʕ/): "as-sah-mee",
