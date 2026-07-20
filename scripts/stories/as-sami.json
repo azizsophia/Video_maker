@@ -64,10 +64,10 @@
         "similarity_boost": 0.85,
         "speed": 0.96
       },
-      "video": "main/broll4/aurora.mp4",
+      "video": "main/broll4/namecard.mp4",
       "videoDuration": 13,
       "holdSeconds": 1.6,
-      "dim": 0.4
+      "dim": 0.42
     },
     {
       "type": "narration",
@@ -80,7 +80,7 @@
       },
       "video": "main/broll4/fog-valley.mp4",
       "videoDuration": 13,
-      "dim": 0.25
+      "dim": 0.4
     },
     {
       "type": "narration",
@@ -93,7 +93,7 @@
       },
       "video": "main/broll4/rain-water.mp4",
       "videoDuration": 12,
-      "dim": 0.2
+      "dim": 0.4
     },
     {
       "type": "narration",
@@ -135,10 +135,10 @@
         "similarity_boost": 0.85,
         "speed": 1.0
       },
-      "video": "main/broll4/cloud-aerial.mp4",
+      "video": "main/broll4/mist-lake.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.3,
-      "dim": 0.25
+      "dim": 0.28
     },
     {
       "type": "narration",
@@ -149,7 +149,7 @@
         "similarity_boost": 0.85,
         "speed": 1.0
       },
-      "video": "main/broll4/mist-lake.mp4",
+      "video": "main/broll4/dew-grass.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.8,
       "dim": 0.28
