@@ -57,11 +57,11 @@ dawn-meadow/mist-lake/dew-grass), ~63s, gift-shop end card, no audio. Pronunciat
 ear-tested + locked: as-Sami' -> "as sa MEE", Khawla -> "Khawla". Sources:
 docs/as-sami-sources.md. Wrongdoer husband left unnamed (his name was Aws; not tied
 to anyone). al-Adl (the-most-just) was Ep1 of the same series concept. DELIVERED
-2026-07-20; master run 29748514821 (67.5s). Owner QC round fixed: (1) caption-remap BUG -
+2026-07-20; master run 29784705908 (67.3s). Owner QC round fixed: (1) caption-remap BUG -
 a multi-token phonetic ("as sa MEE") broke the display-spelling remap and leaked raw TTS
 text ("Allaah") on screen; fixed by making all phonetic values SINGLE tokens (no spaces);
 (2) name card now shows "As-Sami" + ٱلسَّمِيعُ; (3) pronunciations from Wiktionary IPA -
-as-Sami "as-sah-mee" (/as.sa.miːʕ/), Aisha "aa-i-shah" (/ˈʕaː.ʔi.ʃa/); (4) name spelled
+as-Sami "as-sah-mee" (/as.sa.miːʕ/), Aisha "Aisha", Khawla "Kh-howla" (throaty KH, owl vowel); (4) name spelled
 "Khaulah". Frame-by-frame caption QC passed: Allah/as-Sami/Khaulah/Aisha all display clean,
 name card correct, 58:1 ayah card + citation clean, gift-shop end card clean.
 **The Most Just (the-most-just)** - delivered 2026-07-19; standalone aura STORY on al-Adl (owner request, from "Reflecting on the Names of Allah"). Banu Ubayriq incident / occasion of revelation of Surah an-Nisa 4:105-113: Allah cleared an innocent Jewish man and exposed the Muslim (of the Aws) who framed him. Aws tribe woven in (owner's son's name; historically accurate - Banu Zafar/Ubayriq were Aws). Qur'an 4:105 + 4:112 (Saheeh Intl, quran.com verified); incident per Tafheem/Maarif tafsir + Tirmidhi 3036. Deep British Voice B, 8 atmospheric clips (lightning/ruins/stone-vault/storm/light-burst/red-mesa/brass-scale), 69s, gift-shop end card, no audio. Sources: docs/the-most-just-sources.md. Master run 29703008020. Owner revisions 2026-07-19: "Then Allah spoke" (was "the sky spoke"); new desert+sky hook + golden-plain close (dropped black-until-thunder opener + chain/scale visuals); cover from red-mesa frame. "Aws" pronunciation locked by owner ear-test to respelling "aus" (test 2 #1 - "House without the H", hard hissed S).
