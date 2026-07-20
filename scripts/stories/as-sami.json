@@ -1,0 +1,158 @@
+{
+  "id": "as-sami",
+  "title": "As-Sami' - The All-Hearing",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 51820,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "_brand": "Ketabi Studio - 99 NAMES OF ALLAH series. Episode: As-Sami' (The All-Hearing). Series signature = gold Arabic Name card (beat 2). Anchor: the occasion of revelation of Surah al-Mujadila 58:1 - Allah heard the whispered plea of Khawlah bint Tha'labah. Deep British Voice B, glowing word-by-word captions, aura nature b-roll, Qur'an ayah card (arabicText). Sources verified: docs/as-sami-sources.md (Qur'an 58:1 Saheeh Intl; incident per Ibn Kathir; Aisha's narration Sunan Ibn Majah 2063 sahih + Nasa'i 3460 sahih; Umar's 'above the seven heavens'). Wrongdoer husband left unnamed. ~63s, gift-shop end card.",
+  "cover": {
+    "title": "The\nAll-Hearing",
+    "kicker": "99 NAMES OF ALLAH",
+    "image": "main/broll4/assami-cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "A woman whispered her heartbreak to Allah, and He answered her from above the seven heavens. Allah is as-Sami', the All-Hearing. Qur'an 58:1.",
+    "shorts": "Allah heard the whispered plea no one else could - the story behind Surah al-Mujadila 58:1. He is as-Sami', the All-Hearing.",
+    "reels": "Whatever you can only whisper, Allah has already heard. As-Sami', the All-Hearing. Qur'an 58:1.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#namesofallah",
+      "#asmaulhusna"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "A woman poured out her heartbreak in a whisper. Too quiet for the room to hear. But Allah heard every word.",
+      "hook": true,
+      "hookMark": "Allah",
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/ripples.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.2,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "As-Samee. The All-Hearing.",
+      "nameArabic": "ٱلسَّمِيع",
+      "nameTranslit": "As-Samee'",
+      "nameMeaning": "The All-Hearing",
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
+      "video": "main/broll4/aurora.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 1.6,
+      "dim": 0.4
+    },
+    {
+      "type": "narration",
+      "text": "In Madinah, a woman named Khawla came to the Prophet, peace be upon him. Her husband had wronged her.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/fog-valley.mp4",
+      "videoDuration": 13,
+      "dim": 0.25
+    },
+    {
+      "type": "narration",
+      "text": "She pleaded, her voice breaking, but there was no answer yet. So she turned to Allah alone, and complained to Him.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.24,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/rain-water.mp4",
+      "videoDuration": 12,
+      "dim": 0.2
+    },
+    {
+      "type": "narration",
+      "text": "She thought no one was listening. But heaven had heard every word.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/lightrays.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.3,
+      "dim": 0.15
+    },
+    {
+      "type": "narration",
+      "text": "Allah has heard the words of the woman who pleads about her husband, and complains to Him. Indeed, Allah is Hearing and Seeing.",
+      "arabicText": "قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِى تُجَـٰدِلُكَ فِى زَوْجِهَا وَتَشْتَكِىٓ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمَآ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ",
+      "foot": "Qur'an 58:1 - Surah al-Mujadila",
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/dawn-meadow.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.35,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "Umar said, Allah heard this woman's complaint from above the seven heavens.",
+      "foot": "Sunan Ibn Majah 2063 (sahih)",
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/cloud-aerial.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.3,
+      "dim": 0.25
+    },
+    {
+      "type": "narration",
+      "text": "Whatever you cannot say aloud, whatever you only whisper, Allah has already heard. He is as-Samee, the All-Hearing.",
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll4/mist-lake.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.8,
+      "dim": 0.28
+    }
+  ]
+}
