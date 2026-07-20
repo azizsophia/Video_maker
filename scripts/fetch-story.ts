@@ -105,7 +105,7 @@ const PHONETIC: Record<string, string> = {
   khadijah: "Kadeeja",
   jibril: "Jibreel",
   musa: "Moosa",
-  aisha: "aa-i-shah", // owner ear-test 2026-07-20 (Wiktionary /ˈʕaː.ʔi.ʃa/): AA-i-sha, stress AA, short i
+  aisha: "Aisha", // owner ear-test 2026-07-20: plain "Aisha" reads best/most natural on Voice B
   makkah: "Makkah",
   waraqah: "Warahkah",
   hira: "Hi-raa",
