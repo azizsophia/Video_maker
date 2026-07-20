@@ -38,7 +38,7 @@
   "segments": [
     {
       "type": "narration",
-      "text": "A woman poured out her heartbreak in a whisper. Too quiet for the room to hear. But Allah heard every word.",
+      "text": "A woman whispered her heartbreak, too quiet for anyone to hear. But Allah heard every word.",
       "hook": true,
       "hookMark": "Allah",
       "voiceSettings": {
@@ -66,7 +66,7 @@
       },
       "video": "main/broll4/namecard.mp4",
       "videoDuration": 13,
-      "holdSeconds": 1.6,
+      "holdSeconds": 1.0,
       "dim": 0.42
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "type": "narration",
-      "text": "She pleaded with him again and again, but he had no answer to give her yet. So she turned to Allah alone.",
+      "text": "She pleaded again and again, but no answer came. So she turned to Allah alone.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.24,
@@ -122,7 +122,7 @@
       },
       "video": "main/broll4/dawn-meadow.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.35,
+      "holdSeconds": 0.25,
       "dim": 0.3
     },
     {
@@ -142,7 +142,7 @@
     },
     {
       "type": "narration",
-      "text": "Whatever you cannot say aloud, whatever you only whisper, Allah has already heard. He is as-Samee, the All-Hearing.",
+      "text": "Whatever you only whisper, Allah has already heard. He is as-Samee, the All-Hearing.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
@@ -151,7 +151,7 @@
       },
       "video": "main/broll4/dew-grass.mp4",
       "videoDuration": 13,
-      "holdSeconds": 0.8,
+      "holdSeconds": 0.5,
       "dim": 0.28
     }
   ]
