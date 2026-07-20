@@ -243,14 +243,19 @@ that is the point of the gate. Nothing ships with an open item.
 - Arabic pronunciation must be correct: voice from a phonetic script (the
   `PHONETIC` map in `scripts/fetch-story.ts`) while the on-screen text keeps
   proper spelling. Send a names-only voice test to confirm. Locked so far:
-  Khadijah -> "Kadeeja", Aisha -> "Aisha", Waraqah -> "Warahkah", Jibril ->
+  Khadijah -> "Kadeeja", Aisha -> "aa-i-shah" (corrected 2026-07-20 from Wiktionary
+  /ˈʕaː.ʔi.ʃa/: AA-i-sha, stress AA, short i; was "Aisha"), Waraqah -> "Warahkah", Jibril ->
   "Jibreel", Musa -> "Moosa", Read (the command Iqra) -> "reed" (never "red"),
   plus the full week-batch set in the PHONETIC map (Dajjal, Ayyub, Salman
   al-Farisi, Suraqah, Yunus, Sulayman, Hajar, Ismail, Ammar, Yasir, Isa, Nuh,
   Sham, ad-Duha, al-Kawthar, Qasim, Quba, Nasibin, Ammuriyyah, Thawr, wahy,
   istighfar) - all ear-tested and approved 2026-07-01. 99-Names series adds
   (ear-tested + owner-approved 2026-07-19/20): Aws -> "aus" (House without the H,
-  hard hissed S), as-Sami' -> "as sa MEE" (the All-Hearing), Khawla -> "Khawla".
+  hard hissed S), as-Sami' -> "as-sah-mee" (Wiktionary /as.sa.miːʕ/, hard doubled S,
+  stress MEE; on-screen name card shows "As-Sami" + ٱلسَّمِيعُ), Khaulah -> "Khawla"
+  (owner spells the name "Khaulah", sound = approved test #4). IMPORTANT: phonetic
+  values MUST be a single token (no spaces) or the caption remap breaks and the raw
+  TTS spelling (e.g. "Allaah") leaks on screen - use hyphens, never spaces.
   Spoken transliterated
   Arabic (e.g. the dua of Yunus) is approved BUT must never sit flush at the
   end of a segment: keep a trailing ellipsis after it so the tail never clips.

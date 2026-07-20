@@ -105,7 +105,7 @@ const PHONETIC: Record<string, string> = {
   khadijah: "Kadeeja",
   jibril: "Jibreel",
   musa: "Moosa",
-  aisha: "Aisha",
+  aisha: "aa-i-shah", // owner ear-test 2026-07-20 (Wiktionary /ˈʕaː.ʔi.ʃa/): AA-i-sha, stress AA, short i
   makkah: "Makkah",
   waraqah: "Warahkah",
   hira: "Hi-raa",
@@ -265,8 +265,9 @@ const PHONETIC: Record<string, string> = {
   khaulah: "Khawla", // owner spells the name "Khaulah"; approved sound = test #4 "Khawla"
   // Name of Allah as-Sami' (السميع). MUST be a SINGLE token (no spaces) or the
   // caption remap breaks and the raw TTS spelling (incl. "Allaah") leaks on screen.
-  // Owner 2026-07-20: hard S ("Ass" not "Azz"). Value finalized from the ear-test.
-  "as-sami": "ass-samee",
+  // Owner ear-test 2026-07-20 (from Wiktionary /as.sa.miːʕ/): "as-sah-mee",
+  // three syllables as-sa-MEE, hard doubled S (never Z). SINGLE token (no spaces).
+  "as-sami": "as-sah-mee",
   hurayra: "Hurayra",
   "al-khudri": "al-Khudree",
   // "Read" here is the command Iqra (present/imperative), so it must sound
