@@ -248,7 +248,10 @@ that is the point of the gate. Nothing ships with an open item.
   plus the full week-batch set in the PHONETIC map (Dajjal, Ayyub, Salman
   al-Farisi, Suraqah, Yunus, Sulayman, Hajar, Ismail, Ammar, Yasir, Isa, Nuh,
   Sham, ad-Duha, al-Kawthar, Qasim, Quba, Nasibin, Ammuriyyah, Thawr, wahy,
-  istighfar) - all ear-tested and approved 2026-07-01. Spoken transliterated
+  istighfar) - all ear-tested and approved 2026-07-01. 99-Names series adds
+  (ear-tested + owner-approved 2026-07-19/20): Aws -> "aus" (House without the H,
+  hard hissed S), as-Sami' -> "as sa MEE" (the All-Hearing), Khawla -> "Khawla".
+  Spoken transliterated
   Arabic (e.g. the dua of Yunus) is approved BUT must never sit flush at the
   end of a segment: keep a trailing ellipsis after it so the tail never clips.
 - The voice is SEED-LOCKED (`DEFAULT_VOICE_SEED` in fetch-story, per-story via
