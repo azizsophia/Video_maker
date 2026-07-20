@@ -262,9 +262,11 @@ const PHONETIC: Record<string, string> = {
   madinah: "Madeenah",
   aws: "aus",
   khawla: "Khawla",
-  // Name of Allah as-Sami' (السميع). Ayn dropped for English TTS; stress on "mee".
-  // Owner ear-test 2026-07-20: "as sa MEE" (as-sah-MEE), the All-Hearing.
-  "as-samee": "as sa MEE",
+  khaulah: "Khawla", // owner spells the name "Khaulah"; approved sound = test #4 "Khawla"
+  // Name of Allah as-Sami' (السميع). MUST be a SINGLE token (no spaces) or the
+  // caption remap breaks and the raw TTS spelling (incl. "Allaah") leaks on screen.
+  // Owner 2026-07-20: hard S ("Ass" not "Azz"). Value finalized from the ear-test.
+  "as-sami": "ass-samee",
   hurayra: "Hurayra",
   "al-khudri": "al-Khudree",
   // "Read" here is the command Iqra (present/imperative), so it must sound

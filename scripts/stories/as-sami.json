@@ -54,9 +54,9 @@
     },
     {
       "type": "narration",
-      "text": "As-Samee. The All-Hearing.",
-      "nameArabic": "ٱلسَّمِيع",
-      "nameTranslit": "As-Samee'",
+      "text": "As-Sami. The All-Hearing.",
+      "nameArabic": "ٱلسَّمِيعُ",
+      "nameTranslit": "As-Sami",
       "nameMeaning": "The All-Hearing",
       "voiceSettings": {
         "stability": 0.72,
@@ -71,7 +71,7 @@
     },
     {
       "type": "narration",
-      "text": "In Madinah, a woman named Khawla came to the Prophet, peace be upon him. Her husband had wronged her.",
+      "text": "In Madinah, a woman named Khaulah came to the Prophet, peace be upon him. Her husband had wronged her.",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.22,
@@ -142,7 +142,7 @@
     },
     {
       "type": "narration",
-      "text": "Whatever you only whisper, Allah has already heard. He is as-Samee, the All-Hearing.",
+      "text": "Whatever you only whisper, Allah has already heard. He is as-Sami, the All-Hearing.",
       "voiceSettings": {
         "stability": 0.58,
         "style": 0.22,
