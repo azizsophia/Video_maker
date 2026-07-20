@@ -252,7 +252,7 @@ that is the point of the gate. Nothing ships with an open item.
   istighfar) - all ear-tested and approved 2026-07-01. 99-Names series adds
   (ear-tested + owner-approved 2026-07-19/20): Aws -> "aus" (House without the H,
   hard hissed S), as-Sami' -> "as-sah-mee" (Wiktionary /as.sa.miːʕ/, hard doubled S,
-  stress MEE; on-screen name card shows "As-Sami" + ٱلسَّمِيعُ), Khaulah -> "Kh-howla" (throaty KH خ + owl vowel)
+  stress MEE; on-screen name card shows "As-Sami" + ٱلسَّمِيعُ), Khaulah -> "Khawla" (clean KAW-la; English voice cannot produce خ, forcing it added a bad syllable)
   (owner spells the name "Khaulah", sound = approved test #4). IMPORTANT: phonetic
   values MUST be a single token (no spaces) or the caption remap breaks and the raw
   TTS spelling (e.g. "Allaah") leaks on screen - use hyphens, never spaces.
