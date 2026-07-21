@@ -29,21 +29,28 @@ Euphrates long.)
 ## produced, delivered, posted, or scrapped. Check this BEFORE proposing or
 ## producing ANY video. Proposing an already-posted topic is a QC failure.)
 
-### IN PRODUCTION (rendering / awaiting owner sign-off)
+### PRODUCED + DELIVERED (99 Names batch 2)
 
 **99 NAMES series batch 2 - An-Nur (an-nur), Al-Wadud (al-wadud), Al-Hafiz
-(al-hafiz), Ar-Razzaq (ar-razzaq)** - in production 2026-07-21 (Episodes 3-6 of
-the 99 Names series; same gold Name-card signature format as as-Sami). Each ~63s,
-aura theme, deep British Voice B (seed-locked), 8 beats, website gift-shop end card.
-Footage = 32 distinct Pexels clips under public/main/broll5/{annur,alwadud,alhafiz,
-arrazzaq}, each 6-frame eye-QC'd and cross-video de-duped (no clip repeats across the
-series or vs as-Sami broll4). Owner-approved names test 2026-07-21 (an-Noor / al-Wa-dood
-/ al-Ha-feez / ar-Razzaak). Owner footage sign-off 2026-07-21 with 3 swaps: an-Nur
-"light upon light" -> warm gold shimmer (4625521, replaced particle-bokeh "germs");
-al-Wadud "love reaches" -> warm candle flame (11267669, replaced heart-bokeh);
-al-Wadud "mercy" -> dewdrop daisy (37691469, replaced magenta CGI-bokeh). Rendering
-all 4 at scale 2. Ayah cards: an-Nur 24:35; al-Wadud 11:90 + 85:14; al-Hafiz 15:9;
-ar-Razzaq 11:6 + 65:3 (all Saheeh Intl, quran.com verified).
+(al-hafiz), Ar-Razzaq (ar-razzaq)** - DELIVERED 2026-07-21 (Episodes 3-6 of
+the 99 Names series; same gold Name-card signature format as as-Sami). Each aura
+theme, deep British Voice B (seed-locked), 8 beats, website gift-shop end card,
+scale 2 (4K 2160x3840). Footage = 32 distinct Pexels clips under public/main/broll5/
+{annur,alwadud,alhafiz,arrazzaq}, each 6-frame eye-QC'd and cross-video de-duped (no
+clip repeats across the series or vs as-Sami broll4). Owner-approved names test
+2026-07-21 (an-Noor / al-Wa-dood / al-Ha-feez / ar-Razzaak). Owner footage sign-off
+2026-07-21 with 3 swaps: an-Nur "light upon light" -> warm gold shimmer (4625521,
+replaced particle-bokeh "germs"); al-Wadud "love reaches" -> warm candle flame
+(11267669, replaced heart-bokeh); al-Wadud "mercy" -> dewdrop daisy (37691469,
+replaced magenta CGI-bokeh). Ayah cards: an-Nur 24:35; al-Wadud 11:90 + 85:14;
+al-Hafiz 15:9; ar-Razzaq 11:6 + 65:3 (all Saheeh Intl, quran.com verified).
+LENGTH FIX: first renders came in at 59.1-59.9s (under the >60s Creator Rewards
+threshold) except an-Nur (63.5s); added one on-voice reflective close line to the
+other 3 and re-rendered. FINAL masters + durations: an-Nur run 29831916496 (63.5s);
+al-Wadud run 29834213063 (63.6s); al-Hafiz run 29834221783 (64.3s); ar-Razzaq run
+29834229051 (65.1s). Render-still QC passed: captions crisp, ayah Arabic+citations
+clean (no tofu), gold Name cards sharp, gift-shop end card clean. Awaiting owner
+scheduling.
 
 ### Already POSTED (do not remake, do not re-propose)
 
