@@ -29,6 +29,22 @@ Euphrates long.)
 ## produced, delivered, posted, or scrapped. Check this BEFORE proposing or
 ## producing ANY video. Proposing an already-posted topic is a QC failure.)
 
+### IN PRODUCTION (rendering / awaiting owner sign-off)
+
+**99 NAMES series batch 2 - An-Nur (an-nur), Al-Wadud (al-wadud), Al-Hafiz
+(al-hafiz), Ar-Razzaq (ar-razzaq)** - in production 2026-07-21 (Episodes 3-6 of
+the 99 Names series; same gold Name-card signature format as as-Sami). Each ~63s,
+aura theme, deep British Voice B (seed-locked), 8 beats, website gift-shop end card.
+Footage = 32 distinct Pexels clips under public/main/broll5/{annur,alwadud,alhafiz,
+arrazzaq}, each 6-frame eye-QC'd and cross-video de-duped (no clip repeats across the
+series or vs as-Sami broll4). Owner-approved names test 2026-07-21 (an-Noor / al-Wa-dood
+/ al-Ha-feez / ar-Razzaak). Owner footage sign-off 2026-07-21 with 3 swaps: an-Nur
+"light upon light" -> warm gold shimmer (4625521, replaced particle-bokeh "germs");
+al-Wadud "love reaches" -> warm candle flame (11267669, replaced heart-bokeh);
+al-Wadud "mercy" -> dewdrop daisy (37691469, replaced magenta CGI-bokeh). Rendering
+all 4 at scale 2. Ayah cards: an-Nur 24:35; al-Wadud 11:90 + 85:14; al-Hafiz 15:9;
+ar-Razzaq 11:6 + 65:3 (all Saheeh Intl, quran.com verified).
+
 ### Already POSTED (do not remake, do not re-propose)
 
 **Do not despair / mercy (aura-mercy, 39:53-56)** - posted 2026-07-16 (main, first aura format);
