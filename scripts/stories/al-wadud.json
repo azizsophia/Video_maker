@@ -1,0 +1,119 @@
+{
+  "id": "al-wadud",
+  "title": "Al-Wadud - The Most Loving",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 51820,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "_brand": "Ketabi Studio - 99 NAMES OF ALLAH series. Episode: Al-Wadud (The Most Loving). Gold Name card signature. Anchor: Qur'an 11:90 + 85:14 (al-Wadud), with the mother-and-child hadith (Bukhari 5999 / Muslim 2754) framed as Allah's LOVING MERCY (hadith wording is rahma, not wadud - kept as illustration, Name grounded in the ayat). Deep British Voice B, aura warm clips, ayah cards via arabicText. Sources: docs/al-wadud-sources.md. Light name-load. ~63s, gift-shop end card.",
+  "cover": {
+    "title": "The Most\nLoving",
+    "kicker": "99 NAMES OF ALLAH",
+    "image": "main/broll5/alwadud/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "Allah is al-Wadud, the Most Loving. His care for you is greater than a mother's for her child, and however far you have wandered, He loves for you to return. Qur'an 11:90, 85:14.",
+    "shorts": "Al-Wadud, the Most Loving - His love reaches you and asks nothing first. Qur'an 11:90 + 85:14.",
+    "reels": "He is more merciful to you than a mother to her child. Allah, al-Wadud, the Most Loving.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#namesofallah",
+      "#asmaulhusna"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "There is a love that asks nothing from you first, and never runs out.",
+      "hook": true,
+      "hookMark": "love",
+      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.2,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "Al-Wadud. The Most Loving.",
+      "nameArabic": "ٱلْوَدُودُ",
+      "nameTranslit": "Al-Wadud",
+      "nameMeaning": "The Most Loving",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85, "speed": 0.96 },
+      "video": "main/broll5/alwadud/namecard.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 1.0,
+      "dim": 0.42
+    },
+    {
+      "type": "narration",
+      "text": "One of the names of Allah is al-Wadud. It does not only mean that He loves. It means His love reaches you.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/warm-light.mp4",
+      "videoDuration": 13,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "Picture a mother with her newborn, holding the child to her chest, unable to let it come to any harm.",
+      "voiceSettings": { "stability": 0.55, "style": 0.24, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/blossom.mp4",
+      "videoDuration": 13,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet, peace be upon him, once pointed to such a mother, and said something we should never forget.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/gentle-rain.mp4",
+      "videoDuration": 13,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "Allah is more merciful to His servants than she is to her own child.",
+      "foot": "Sahih al-Bukhari 5999",
+      "voiceSettings": { "stability": 0.58, "style": 0.2, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/soft-glow.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.35,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "Indeed, my Lord is Merciful and Affectionate.",
+      "arabicText": "إِنَّ رَبِّى رَحِيمٌ وَدُودٌ",
+      "foot": "Qur'an 11:90 - Surah Hud",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/dawn-warm.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.35,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "However far you have wandered, He loves for you to return. He is the Forgiving, the Most Loving.",
+      "arabicText": "وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ",
+      "foot": "Qur'an 85:14 - Surah al-Buruj",
+      "voiceSettings": { "stability": 0.58, "style": 0.2, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/alwadud/close-glow.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.8,
+      "dim": 0.28
+    }
+  ]
+}

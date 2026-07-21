@@ -1,0 +1,118 @@
+{
+  "id": "ar-razzaq",
+  "title": "Ar-Razzaq - The Provider",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 51820,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "_brand": "Ketabi Studio - 99 NAMES OF ALLAH series. Episode: Ar-Razzaq (The Provider). Gold Name card signature. Anchor: Qur'an 51:58 (names ar-Razzaq) + 11:6 (every creature's provision is on Allah) + 65:3 (provision from where you don't expect). Deep British Voice B, aura provision/growth clips, ayah cards via arabicText. Sources: docs/ar-razzaq-sources.md. Light name-load (Maryam/Zakariyya omitted). ~63s, gift-shop end card.",
+  "cover": {
+    "title": "The\nProvider",
+    "kicker": "99 NAMES OF ALLAH",
+    "image": "main/broll5/arrazzaq/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "Every creature that wakes is fed, and Allah provides from where you never expect. Loosen your grip on the how. He is ar-Razzaq, the Provider. Qur'an 11:6, 65:3.",
+    "shorts": "Ar-Razzaq, the Provider - He provides from where you do not expect. Qur'an 11:6 + 65:3.",
+    "reels": "Your provision was never limited to the paths you can see. Allah, ar-Razzaq, the Provider.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#namesofallah",
+      "#asmaulhusna"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Have you ever received exactly what you needed, from a direction you never once looked?",
+      "hook": true,
+      "hookMark": "needed",
+      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.2,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "Ar-Razzaq. The Provider.",
+      "nameArabic": "ٱلرَّزَّاقُ",
+      "nameTranslit": "Ar-Razzaq",
+      "nameMeaning": "The Provider",
+      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85, "speed": 0.96 },
+      "video": "main/broll5/arrazzaq/namecard.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 1.0,
+      "dim": 0.42
+    },
+    {
+      "type": "narration",
+      "text": "One of the names of Allah is ar-Razzaq, the Provider. Nothing that breathes feeds itself into being.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/field.mp4",
+      "videoDuration": 13,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "The bird does not plant the field it eats from. Yet every morning, the earth wakes, and is fed.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/sprout.mp4",
+      "videoDuration": 13,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "There is no creature on earth but that upon Allah is its provision.",
+      "arabicText": "وَمَا مِن دَآبَّةٍ فِى ٱلْأَرْضِ إِلَّا عَلَى ٱللَّهِ رِزْقُهَا",
+      "foot": "Qur'an 11:6 - Surah Hud",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/flowing-water.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.35,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "And your provision is not only food. It is calm when you were anxious, a door when every wall felt closed.",
+      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/rain-earth.mp4",
+      "videoDuration": 13,
+      "dim": 0.28
+    },
+    {
+      "type": "narration",
+      "text": "And He will provide for him from where he does not expect.",
+      "arabicText": "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ",
+      "foot": "Qur'an 65:3 - Surah at-Talaq",
+      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/orchard.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.35,
+      "dim": 0.3
+    },
+    {
+      "type": "narration",
+      "text": "So loosen your grip on the how. The Provider was never limited to the paths you can see. He is ar-Razzaq.",
+      "voiceSettings": { "stability": 0.58, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "video": "main/broll5/arrazzaq/close-abundance.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.8,
+      "dim": 0.28
+    }
+  ]
+}

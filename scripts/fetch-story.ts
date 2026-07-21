@@ -272,6 +272,11 @@ const PHONETIC: Record<string, string> = {
   // Owner ear-test 2026-07-20 (from Wiktionary /as.sa.miːʕ/): "as-sah-mee",
   // three syllables as-sa-MEE, hard doubled S (never Z). SINGLE token (no spaces).
   "as-sami": "as-sah-mee",
+  // 99-Names batch 2 (pending owner ear-test - respellings from Wiktionary/MSA):
+  "an-nur": "an-Noor", // النور /nuːr/ + sun-letter assimilation -> an-NOOR
+  "al-wadud": "al-Wa-dood", // الودود /wa.duːd/ -> al-wa-DOOD
+  "al-hafiz": "al-Ha-feez", // الحفيظ /al.ħa.fiːdˤ/ -> al-ha-FEEZ (h/emphatic z not producible in English)
+  "ar-razzaq": "ar-Razzaak", // الرزاق /raz.zaːq/ -> ar-ruh-ZAAK (qaf -> k per house rule)
   hurayra: "Hurayra",
   "al-khudri": "al-Khudree",
   // "Read" here is the command Iqra (present/imperative), so it must sound
