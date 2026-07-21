@@ -41,7 +41,12 @@
       "text": "A single book, held in the hearts of millions, word for word the same.",
       "hook": true,
       "hookMark": "millions",
-      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alhafiz/hook.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.2,
@@ -53,7 +58,12 @@
       "nameArabic": "ٱلْحَفِيظُ",
       "nameTranslit": "Al-Hafiz",
       "nameMeaning": "The Preserver",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85, "speed": 0.96 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
       "video": "main/broll5/alhafiz/namecard.mp4",
       "videoDuration": 13,
       "holdSeconds": 1.0,
@@ -62,7 +72,12 @@
     {
       "type": "narration",
       "text": "One of the names of Allah is al-Hafiz, the Preserver. And He made a promise about His book.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alhafiz/mountains.mp4",
       "videoDuration": 13,
       "dim": 0.3
@@ -70,7 +85,12 @@
     {
       "type": "narration",
       "text": "Over fourteen hundred years have passed, yet not one letter of the Qur'an has changed.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alhafiz/ancient-stone.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -78,15 +98,25 @@
     {
       "type": "narration",
       "text": "Children who have never met, on every continent, recite it in the very same words.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
-      "video": "main/broll5/alhafiz/starfield.mp4",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
+      "video": "main/broll5/alhafiz/lone-tree.mp4",
       "videoDuration": 13,
       "dim": 0.28
     },
     {
       "type": "narration",
       "text": "Close the book, and the whole of it still lives inside them, memorized.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alhafiz/enduring-tree.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -96,7 +126,12 @@
       "text": "Indeed, it is We who sent down the message, and indeed, We will be its guardian.",
       "arabicText": "إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُۥ لَحَٰفِظُونَ",
       "foot": "Qur'an 15:9 - Surah al-Hijr",
-      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alhafiz/luminous.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.35,
@@ -105,7 +140,12 @@
     {
       "type": "narration",
       "text": "No other book has been kept so perfectly, for so long. He is al-Hafiz. What He preserves, nothing can touch.",
-      "voiceSettings": { "stability": 0.58, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alhafiz/close-vista.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.8,
