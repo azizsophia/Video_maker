@@ -41,7 +41,12 @@
       "text": "There is a love that asks nothing from you first, and never runs out.",
       "hook": true,
       "hookMark": "love",
-      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/hook.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.2,
@@ -53,7 +58,12 @@
       "nameArabic": "ٱلْوَدُودُ",
       "nameTranslit": "Al-Wadud",
       "nameMeaning": "The Most Loving",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85, "speed": 0.96 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
       "video": "main/broll5/alwadud/namecard.mp4",
       "videoDuration": 13,
       "holdSeconds": 1.0,
@@ -62,7 +72,12 @@
     {
       "type": "narration",
       "text": "One of the names of Allah is al-Wadud. It does not only mean that He loves. It means His love reaches you.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/warm-light.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -70,7 +85,12 @@
     {
       "type": "narration",
       "text": "Picture a mother with her newborn, holding the child to her chest, unable to let it come to any harm.",
-      "voiceSettings": { "stability": 0.55, "style": 0.24, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.24,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/blossom.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -78,7 +98,12 @@
     {
       "type": "narration",
       "text": "The Prophet, peace be upon him, once pointed to such a mother, and said something we should never forget.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/gentle-rain.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -87,7 +112,12 @@
       "type": "narration",
       "text": "Allah is more merciful to His servants than she is to her own child.",
       "foot": "Sahih al-Bukhari 5999",
-      "voiceSettings": { "stability": 0.58, "style": 0.2, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/soft-glow.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.35,
@@ -98,7 +128,12 @@
       "text": "Indeed, my Lord is Merciful and Affectionate.",
       "arabicText": "إِنَّ رَبِّى رَحِيمٌ وَدُودٌ",
       "foot": "Qur'an 11:90 - Surah Hud",
-      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/dawn-warm.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.35,
@@ -106,10 +141,15 @@
     },
     {
       "type": "narration",
-      "text": "However far you have wandered, He loves for you to return. He is the Forgiving, the Most Loving.",
+      "text": "However far you have wandered, He loves for you to return. He is the Forgiving, the Most Loving. The door back to Him was never once closed.",
       "arabicText": "وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ",
       "foot": "Qur'an 85:14 - Surah al-Buruj",
-      "voiceSettings": { "stability": 0.58, "style": 0.2, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/alwadud/close-glow.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.8,
