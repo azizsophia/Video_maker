@@ -41,7 +41,12 @@
       "text": "There is a darkness no lamp can reach. The darkness of a heart that has lost its way.",
       "hook": true,
       "hookMark": "darkness",
-      "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.5,
+        "style": 0.28,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/hook.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.2,
@@ -53,7 +58,12 @@
       "nameArabic": "ٱلنُّورُ",
       "nameTranslit": "An-Nur",
       "nameMeaning": "The Light",
-      "voiceSettings": { "stability": 0.72, "style": 0.1, "similarity_boost": 0.85, "speed": 0.96 },
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
       "video": "main/broll5/annur/namecard.mp4",
       "videoDuration": 13,
       "holdSeconds": 1.0,
@@ -61,8 +71,13 @@
     },
     {
       "type": "narration",
-      "text": "One of the names of Allah is an-Nur. Not a light among lights, but the Light of the heavens and the earth.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "text": "One of the names of Allah is an-Nur. Not one light among many, but the source of all light itself.",
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/dawn.mp4",
       "videoDuration": 13,
       "dim": 0.3
@@ -72,7 +87,12 @@
       "text": "Allah is the Light of the heavens and the earth.",
       "arabicText": "ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ",
       "foot": "Qur'an 24:35 - Surah an-Nur",
-      "voiceSettings": { "stability": 0.6, "style": 0.16, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/luminous-sky.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.35,
@@ -81,7 +101,12 @@
     {
       "type": "narration",
       "text": "He gives us a picture. A single lamp in a niche, glowing through clear glass, like a shining star.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/lamp-glow.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -89,7 +114,12 @@
     {
       "type": "narration",
       "text": "Its oil so pure it seems to glow before the fire has even touched it. Light upon light.",
-      "voiceSettings": { "stability": 0.55, "style": 0.24, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.24,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/radiance.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.3,
@@ -98,7 +128,12 @@
     {
       "type": "narration",
       "text": "And He is calling you still. Turn toward Him, and He will lead you to His light.",
-      "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/path-light.mp4",
       "videoDuration": 13,
       "dim": 0.28
@@ -106,7 +141,12 @@
     {
       "type": "narration",
       "text": "So when your world goes dark, you are not lost. You are being called back to the Light that was never far.",
-      "voiceSettings": { "stability": 0.58, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
+      "voiceSettings": {
+        "stability": 0.58,
+        "style": 0.22,
+        "similarity_boost": 0.85,
+        "speed": 1.0
+      },
       "video": "main/broll5/annur/glow-fill.mp4",
       "videoDuration": 13,
       "holdSeconds": 0.8,
