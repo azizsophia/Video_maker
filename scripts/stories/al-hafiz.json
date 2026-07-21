@@ -85,7 +85,7 @@
     },
     {
       "type": "narration",
-      "text": "Close the book, and the whole of it still lives, memorized, inside them.",
+      "text": "Close the book, and the whole of it still lives inside them, memorized.",
       "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
       "video": "main/broll5/alhafiz/enduring-tree.mp4",
       "videoDuration": 13,

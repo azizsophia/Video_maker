@@ -38,7 +38,7 @@
   "segments": [
     {
       "type": "narration",
-      "text": "Have you ever received exactly what you needed, from a direction you never once looked?",
+      "text": "Have you ever received exactly what you needed, from a direction you never thought to look?",
       "hook": true,
       "hookMark": "needed",
       "voiceSettings": { "stability": 0.5, "style": 0.28, "similarity_boost": 0.85, "speed": 1.0 },
@@ -61,7 +61,7 @@
     },
     {
       "type": "narration",
-      "text": "One of the names of Allah is ar-Razzaq, the Provider. Nothing that breathes feeds itself into being.",
+      "text": "One of the names of Allah is ar-Razzaq, the Provider. Nothing that breathes keeps itself alive on its own.",
       "voiceSettings": { "stability": 0.55, "style": 0.22, "similarity_boost": 0.85, "speed": 1.0 },
       "video": "main/broll5/arrazzaq/field.mp4",
       "videoDuration": 13,
