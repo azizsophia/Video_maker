@@ -46,7 +46,7 @@ replaced magenta CGI-bokeh). Ayah cards: an-Nur 24:35; al-Wadud 11:90 + 85:14;
 al-Hafiz 15:9; ar-Razzaq 11:6 + 65:3 (all Saheeh Intl, quran.com verified).
 LENGTH FIX: first renders came in at 59.1-59.9s (under the >60s Creator Rewards
 threshold) except an-Nur (63.5s); added one on-voice reflective close line to the
-other 3 and re-rendered. FINAL masters + durations: an-Nur run 29831916496 (63.5s);
+other 3 and re-rendered. FINAL masters + durations: an-Nur run 29856897184 (63.1s; beat-2 lead-in reworded to drop a back-to-back repeat of the 24:35 phrase - owner catch; caption pace kept as-is per owner, matches as-Sami);
 al-Wadud run 29834213063 (63.6s); al-Hafiz run 29834221783 (64.3s); ar-Razzaq run
 29834229051 (65.1s). Render-still QC passed: captions crisp, ayah Arabic+citations
 clean (no tofu), gold Name cards sharp, gift-shop end card clean. Awaiting owner
