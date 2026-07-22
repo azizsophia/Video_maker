@@ -131,6 +131,20 @@ const PHONETIC: Record<string, string> = {
   kawthar: "Kowthar",
   "al-istighfar": "al-istighfaar",
   istighfar: "istighfaar",
+  // Overnight batch 2026-07-22: new spoken terms (rizq/tawakkul short + Names).
+  // qaf respelled "k" per house rule; single tokens; MSA-vocalized.
+  rizq: "rizk",
+  taqwa: "tak-waa",
+  tawakkul: "ta-wak-kul",
+  shukr: "shukr",
+  salawat: "sa-la-waat",
+  tawbah: "taw-bah",
+  "ar-rahman": "ar-rah-maan",
+  rahman: "rah-maan",
+  "al-ghaffar": "al-ghaf-faar",
+  ghaffar: "ghaf-faar",
+  "al-wakil": "al-wa-keel",
+  wakil: "wa-keel",
   qasim: "Kaasim",
   // Khadijah long-form names, researched against authoritative MSA sources
   // (Wikipedia IPA/vocalizations, Wiktionary) 2026-07-05; ear-test pending.
