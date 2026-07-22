@@ -1,0 +1,171 @@
+{
+  "id": "al-ghaffar",
+  "title": "Al-Ghaffar - The Ever-Forgiving",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 61005,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "cover": {
+    "title": "The Ever-\nForgiving",
+    "kicker": "99 NAMES OF ALLAH",
+    "image": "main/broll6/al-ghaffar/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "No sin is too big to be forgiven. Were your sins to reach the clouds, He would still forgive you. Allah is Al-Ghaffar, the Ever-Forgiving. Qur'an 39:53, Tirmidhi 3540.",
+    "shorts": "One of the names of Allah means He forgives again, and again, and again. Al-Ghaffar.",
+    "reels": "Do not despair of the mercy of Allah. He forgives all sins. Al-Ghaffar. Qur'an 39:53.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#namesofallah",
+      "#asmaulhusna"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "No sin is too big to be forgiven. And one of the names of God in Islam tells you exactly why.",
+      "video": "main/broll6/al-ghaffar/0-hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "hook": true,
+      "hookMark": true,
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 0.98
+      }
+    },
+    {
+      "type": "narration",
+      "text": "Al-Ghaffar. The Ever-Forgiving.",
+      "video": "main/broll6/al-ghaffar/1-namecard.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 1.0,
+      "dim": 0.42,
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
+      "nameArabic": "ٱلْغَفَّارُ",
+      "nameTranslit": "Al-Ghaffar",
+      "nameMeaning": "The Ever-Forgiving",
+      "arabicText": "ٱلْغَفَّارُ",
+      "foot": "Gold name card. Read deep."
+    },
+    {
+      "type": "narration",
+      "text": "Al-Ghaffar is one of the names of Allah, the name for God in Islam. It doesn't mean He forgives once. It means again, and again, however many times you return to Him.",
+      "video": "main/broll6/al-ghaffar/2-name.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَإِنِّي لَغَفَّارٞ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَٰلِحٗا ثُمَّ ٱهۡتَدَىٰ",
+      "foot": "20:82 literally contains the name Ghaffar."
+    },
+    {
+      "type": "narration",
+      "text": "God tells us plainly, do not lose hope in His mercy, for He forgives all sins.",
+      "video": "main/broll6/al-ghaffar/3-ayah.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا",
+      "foot": "Saheeh International; shown with citation, English spoken."
+    },
+    {
+      "type": "narration",
+      "text": "Turning back to God is called tawbah. Simply asking Him to forgive you is called istighfar. And the Prophet Muhammad, peace be upon him, passed on these words from God.",
+      "video": "main/broll6/al-ghaffar/4-teach.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Defines tawbah and istighfar; introduces the hadith qudsi."
+    },
+    {
+      "type": "narration",
+      "text": "O son of Adam, were your sins to reach the clouds of the sky, and then you asked My forgiveness, I would forgive you.",
+      "video": "main/broll6/al-ghaffar/5-proof.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "يَا ابْنَ آدَمَ لَوْ بَلَغَتْ ذُنُوبُكَ عَنَانَ السَّمَاءِ ثُمَّ اسْتَغْفَرْتَنِي غَفَرْتُ لَكَ وَلاَ أُبَالِي",
+      "foot": "Hadith qudsi, hasan gharib; Arabic shown, English spoken."
+    },
+    {
+      "type": "narration",
+      "text": "And He is not slow to forgive. He is more joyful when one soul turns back to Him than a man who lost everything in the desert and found it again.",
+      "video": "main/broll6/al-ghaffar/6-proof.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "لَلَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ",
+      "foot": "Sahih; parallel in Sahih Muslim 2747."
+    },
+    {
+      "type": "narration",
+      "text": "So whatever weighs on you, however far you feel, the door was never shut. Al-Ghaffar is waiting for you to turn around.",
+      "video": "main/broll6/al-ghaffar/7-close.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Reflective close."
+    }
+  ],
+  "nameArabic": "ٱلْغَفَّارُ",
+  "nameTranslit": "Al-Ghaffar",
+  "nameMeaning": "The Ever-Forgiving"
+}

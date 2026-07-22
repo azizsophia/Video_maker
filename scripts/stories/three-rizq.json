@@ -1,0 +1,161 @@
+{
+  "id": "three-rizq",
+  "title": "3 Things That Increase Your Rizq",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 61002,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "cover": {
+    "title": "3 Things That\nIncrease Your Rizq",
+    "kicker": "A REMINDER",
+    "image": "main/broll6/three-rizq/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "3 things that increase your rizq, your provision, straight from the Qur'an. Seek forgiveness, stay mindful, and give thanks. Qur'an 71:10-12, 65:2-3, 14:7.",
+    "shorts": "3 things the Qur'an ties to more provision. Number 1 surprises most people.",
+    "reels": "3 Qur'anic keys to more rizq. Provision from where you never expected. 65:3.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#dua",
+      "#sunnah"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Have you ever received exactly what you needed, right when you needed it, from a direction you never saw coming?",
+      "video": "main/broll6/three-rizq/0-hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "hook": true,
+      "hookMark": true,
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 0.98
+      }
+    },
+    {
+      "type": "narration",
+      "text": "In Islam that is called rizq, your provision. Not only money, but health, peace, and knowledge. Three habits widen its doors.",
+      "video": "main/broll6/three-rizq/1-define.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      }
+    },
+    {
+      "type": "narration",
+      "text": "The first is istighfar, asking Allah, the one God, for forgiveness. In the Qur'an it brings rain, wealth, and gardens.",
+      "video": "main/broll6/three-rizq/2-point-one.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًۭا • يُرْسِلِ ٱلسَّمَآءَ عَلَيْكُم مِّدْرَارًۭا",
+      "foot": "Qur'an 71:10-12 (Surah Nuh)"
+    },
+    {
+      "type": "narration",
+      "text": "The second is taqwa, living mindful of God, with tawakkul, trusting Him. He then makes a way out for you.",
+      "video": "main/broll6/three-rizq/3-point-two.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا",
+      "foot": "Qur'an 65:2-3 (Surah at-Talaq)"
+    },
+    {
+      "type": "narration",
+      "text": "The third is shukr, gratitude. Thank Allah for a little, and He promises to give you more.",
+      "video": "main/broll6/three-rizq/4-point-three.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",
+      "foot": "Qur'an 14:7 (Surah Ibrahim)"
+    },
+    {
+      "type": "narration",
+      "text": "The provision may not arrive as money. It can come from where you never expected.",
+      "video": "main/broll6/three-rizq/5-deepen.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ",
+      "foot": "Qur'an 65:3 (Surah at-Talaq)"
+    },
+    {
+      "type": "narration",
+      "text": "These are not payments. They are trust. You turn to the Giver, and the gift quietly follows.",
+      "video": "main/broll6/three-rizq/6-deepen.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      }
+    },
+    {
+      "type": "narration",
+      "text": "Your rizq was written before you were born. Seek forgiveness, stay mindful, give thanks, and watch it open.",
+      "video": "main/broll6/three-rizq/7-close.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      }
+    }
+  ]
+}

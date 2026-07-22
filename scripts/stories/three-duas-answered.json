@@ -1,0 +1,165 @@
+{
+  "id": "three-duas-answered",
+  "title": "3 Duas Allah Never Turns Away",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 61001,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "cover": {
+    "title": "3 Duas Allah\nNever Turns Away",
+    "kicker": "A REMINDER",
+    "image": "main/broll6/three-duas-answered/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "3 duas Allah never turns away, straight from the Sunnah. The fasting person, the just leader, and the one who was wronged. Jami at-Tirmidhi 3598.",
+    "shorts": "3 people whose dua is never rejected - from the words of the Prophet, peace be upon him.",
+    "reels": "3 duas that are never turned away. The third one most of us forget. Tirmidhi 3598.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#dua",
+      "#sunnah"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Some prayers are never turned away. Whoever you are, in certain moments your call to God is promised an answer.",
+      "video": "main/broll6/three-duas-answered/0-hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "hook": true,
+      "hookMark": true,
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 0.98
+      }
+    },
+    {
+      "type": "narration",
+      "text": "A dua is a personal prayer, calling on God in your own words. The Prophet Muhammad, peace be upon him, named three whose dua is never rejected.",
+      "video": "main/broll6/three-duas-answered/1-intro.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "ثَلاَثَةٌ لاَ تُرَدُّ دَعْوَتُهُمْ",
+      "foot": "Jami at-Tirmidhi 3598; also Sunan Ibn Majah 1752. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "The first is the fasting person, going without food and drink for God from dawn to sunset. Their prayer is answered, all the way until they break their fast.",
+      "video": "main/broll6/three-duas-answered/2-point-one.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "الصَّائِمُ حَتَّى يُفْطِرَ",
+      "foot": "Jami at-Tirmidhi 3598; Sunan Ibn Majah 1752. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "The second is the just leader, the one who holds power over others and rules them with fairness.",
+      "video": "main/broll6/three-duas-answered/3-point-two.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَالإِمَامُ الْعَادِلُ",
+      "foot": "Jami at-Tirmidhi 3598; Sunan Ibn Majah 1752. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "The third is the wronged, the one treated unjustly and left with nowhere to turn but God.",
+      "video": "main/broll6/three-duas-answered/4-point-three.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَدَعْوَةُ الْمَظْلُومِ",
+      "foot": "Jami at-Tirmidhi 3598; Sunan Ibn Majah 1752. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "God raises the prayer of the wronged high above the clouds, and opens the gates of heaven for it.",
+      "video": "main/broll6/three-duas-answered/5-deepen.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "يَرْفَعُهَا اللَّهُ فَوْقَ الْغَمَامِ",
+      "foot": "Jami at-Tirmidhi 3598. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "And God says: by My might, I will surely help you, even if it takes time.",
+      "video": "main/broll6/three-duas-answered/6-promise.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَعِزَّتِي لأَنْصُرَنَّكِ وَلَوْ بَعْدَ حِينٍ",
+      "foot": "Jami at-Tirmidhi 3598. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "So if you fast, if you lead fairly, or if you are wronged, know that your voice is heard.",
+      "video": "main/broll6/three-duas-answered/7-close.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      }
+    }
+  ]
+}

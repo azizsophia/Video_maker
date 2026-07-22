@@ -1,0 +1,169 @@
+{
+  "id": "ar-rahman",
+  "title": "Ar-Rahman: The Mercy You Have Only Glimpsed",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 61004,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "cover": {
+    "title": "The Most\nMerciful",
+    "kicker": "99 NAMES OF ALLAH",
+    "image": "main/broll6/ar-rahman/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "Everything tender you have ever seen is one drop of a mercy held back. Allah kept 99 parts and sent only 1 to all creation. He is Ar-Rahman, the Most Merciful. Sahih al-Bukhari 6469.",
+    "shorts": "Allah divided mercy into 100 parts and sent only 1 to the whole world. He is Ar-Rahman.",
+    "reels": "The mercy you have seen is a single drop. Ar-Rahman, the Most Merciful. Bukhari 6469.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#namesofallah",
+      "#asmaulhusna"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "All the tenderness you have ever seen in this world, every act of kindness, is only a single drop from an ocean being held back.",
+      "video": "main/broll6/ar-rahman/0-hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "hook": true,
+      "hookMark": true,
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 0.98
+      }
+    },
+    {
+      "type": "narration",
+      "text": "Ar-Rahman. The Most Merciful.",
+      "video": "main/broll6/ar-rahman/1-namecard.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 1.0,
+      "dim": 0.42,
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
+      "nameArabic": "ٱلرَّحْمَٰنُ",
+      "nameTranslit": "Ar-Rahman",
+      "nameMeaning": "The Most Merciful",
+      "arabicText": "ٱلرَّحْمَٰنُ",
+      "foot": "Gold Arabic name card beat; captions suppressed; read deep."
+    },
+    {
+      "type": "narration",
+      "text": "One of the names of Allah, the one God, is ar-Rahman. It means the Entirely Merciful, the source from which every other mercy flows.",
+      "video": "main/broll6/ar-rahman/2-name.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      }
+    },
+    {
+      "type": "narration",
+      "text": "The Most Merciful. He taught the Qur'an.",
+      "video": "main/broll6/ar-rahman/3-ayah.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "ٱلرَّحْمَٰنُ ۝ عَلَّمَ ٱلْقُرْآنَ",
+      "foot": "Qur'an 55:1-2, the opening of Surah ar-Rahman (shown, not recited)."
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet Muhammad, peace be upon him, said that Allah divided mercy into one hundred parts, and kept ninety-nine with Himself.",
+      "video": "main/broll6/ar-rahman/4-narrative.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Sahih al-Bukhari 6469 / Sahih Muslim 2752."
+    },
+    {
+      "type": "narration",
+      "text": "He sent down only one part to the whole of creation. Every mother who cradles her child draws her tenderness from that single share.",
+      "video": "main/broll6/ar-rahman/5-narrative.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَأَرْسَلَ فِي خَلْقِهِ كُلِّهِمْ رَحْمَةً وَاحِدَةً",
+      "foot": "One part of mercy sent to all creation."
+    },
+    {
+      "type": "narration",
+      "text": "And above His throne He wrote a promise. My mercy comes before My anger. Mercy is His first word, and His last.",
+      "video": "main/broll6/ar-rahman/6-narrative.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "إِنَّ رَحْمَتِي سَبَقَتْ غَضَبِي",
+      "foot": "Sahih al-Bukhari 7554 / Sahih Muslim 2751."
+    },
+    {
+      "type": "narration",
+      "text": "So if one part alone can hold the whole world together, imagine the ninety-nine still waiting for those who turn to Him.",
+      "video": "main/broll6/ar-rahman/7-close.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Reflective close."
+    }
+  ],
+  "nameArabic": "ٱلرَّحْمَٰنُ",
+  "nameTranslit": "Ar-Rahman",
+  "nameMeaning": "The Most Merciful"
+}

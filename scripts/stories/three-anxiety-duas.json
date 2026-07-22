@@ -1,0 +1,163 @@
+{
+  "id": "three-anxiety-duas",
+  "title": "3 Duas for When Your Heart Is Heavy",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 61003,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "cover": {
+    "title": "3 Duas for a\nHeavy Heart",
+    "kicker": "A REMINDER",
+    "image": "main/broll6/three-anxiety-duas/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "3 duas for when your heart is heavy, the words the Prophet, peace be upon him, turned to in grief. Sahih al-Bukhari 6369, Tirmidhi 2457, and the dua of Yunus, Qur'an 21:87.",
+    "shorts": "3 prophetic duas for anxiety and grief. The third pulled a prophet out of the dark.",
+    "reels": "3 duas for a heavy heart. The dua of Yunus, said in the darkness, was never refused.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#dua",
+      "#sunnah"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "Everyone carries a weight they cannot always name. The Prophet Muhammad, peace be upon him, was given words for it.",
+      "video": "main/broll6/three-anxiety-duas/0-hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "hook": true,
+      "hookMark": true,
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 0.98
+      }
+    },
+    {
+      "type": "narration",
+      "text": "Here are three short prayers, called dua, a personal call to God, for when your heart feels heavy.",
+      "video": "main/broll6/three-anxiety-duas/1-intro.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "dua = a personal prayer, calling on God."
+    },
+    {
+      "type": "narration",
+      "text": "When worry pressed on him, he would say: O Allah, I seek refuge in You from anxiety and grief.",
+      "video": "main/broll6/three-anxiety-duas/2-dua-one.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ",
+      "foot": "Sahih al-Bukhari 6369; also Abu Dawud 1555. Sahih."
+    },
+    {
+      "type": "narration",
+      "text": "The second: send blessings upon the Prophet, peace be upon him. One man made all his prayers this, and his worries eased.",
+      "video": "main/broll6/three-anxiety-duas/3-dua-two.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ",
+      "foot": "Jami at-Tirmidhi 2457. Hasan."
+    },
+    {
+      "type": "narration",
+      "text": "The third belongs to Yunus, peace be upon him, a prophet swallowed by a great fish. In the dark he cried: There is no god but You. Glory to You. I have done wrong.",
+      "video": "main/broll6/three-anxiety-duas/4-dua-three.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+      "foot": "Qur'an 21:87 (Surah al-Anbiya). Yunus = the prophet Jonah."
+    },
+    {
+      "type": "narration",
+      "text": "Darkness pressed on every side, yet he did not lose hope, and called the only One who could hear him there.",
+      "video": "main/broll6/three-anxiety-duas/5-deepen.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "'He called out within the darknesses' - Qur'an 21:87."
+    },
+    {
+      "type": "narration",
+      "text": "And God answered. No one in sorrow speaks these words, it is said, without a reply.",
+      "video": "main/broll6/three-anxiety-duas/6-answer.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Jami at-Tirmidhi 3505. Hasan; sahih per al-Albani."
+    },
+    {
+      "type": "narration",
+      "text": "So when your heart is heavy, you are not alone, and never without words. Speak them softly, and wait for the light.",
+      "video": "main/broll6/three-anxiety-duas/7-close.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Reflective close."
+    }
+  ]
+}

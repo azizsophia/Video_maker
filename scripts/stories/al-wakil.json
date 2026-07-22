@@ -1,0 +1,170 @@
+{
+  "id": "al-wakil",
+  "title": "Al-Wakil: The One You Can Hand It All To",
+  "theme": "aura",
+  "cinematic": true,
+  "voiceId": "goT3UYdM9bhm0n2lmKQx",
+  "voiceName": "Voice B (deep British)",
+  "voiceSeed": 61006,
+  "showOutro": true,
+  "outroAd": false,
+  "outroVideoSrc": null,
+  "ctaShowUrl": true,
+  "ctaHeadline": "Visit our gift shop",
+  "ctaSub": "",
+  "ctaSeconds": 4.0,
+  "cover": {
+    "title": "The Disposer\nof Affairs",
+    "kicker": "99 NAMES OF ALLAH",
+    "image": "main/broll6/al-wakil/cover.jpg",
+    "wordmark": "KETABI STUDIO",
+    "warm": false
+  },
+  "captions": {
+    "tiktok": "The weight you carry was never meant to be carried alone. Rely on Allah as the birds do, out empty and back full. He is Al-Wakil, the Disposer of affairs. Qur'an 3:173, Tirmidhi 2344.",
+    "shorts": "One of the names of Allah is the One you can hand it all to. Al-Wakil. Trust, then let go.",
+    "reels": "He feeds the birds who fly out with nothing. Al-Wakil, the best Disposer of affairs. 3:173.",
+    "hashtags": [
+      "#islam",
+      "#quran",
+      "#muslim",
+      "#islamicreminder",
+      "#deen",
+      "#namesofallah",
+      "#asmaulhusna"
+    ]
+  },
+  "segments": [
+    {
+      "type": "narration",
+      "text": "The weight you have been carrying, the worry that keeps you awake at night, was never meant to be carried alone.",
+      "video": "main/broll6/al-wakil/0-hook.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "hook": true,
+      "hookMark": true,
+      "voiceSettings": {
+        "stability": 0.55,
+        "style": 0.2,
+        "similarity_boost": 0.85,
+        "speed": 0.98
+      }
+    },
+    {
+      "type": "narration",
+      "text": "Al-Wakil. The Disposer of Affairs.",
+      "video": "main/broll6/al-wakil/1-namecard.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 1.0,
+      "dim": 0.42,
+      "voiceSettings": {
+        "stability": 0.72,
+        "style": 0.1,
+        "similarity_boost": 0.85,
+        "speed": 0.96
+      },
+      "nameArabic": "ٱلْوَكِيلُ",
+      "nameTranslit": "Al-Wakil",
+      "nameMeaning": "The Disposer of Affairs",
+      "titleSub": "one of the names of Allah",
+      "arabicText": "ٱلْوَكِيلُ",
+      "foot": "Gold Arabic name card"
+    },
+    {
+      "type": "narration",
+      "text": "Al-Wakil is one of the names of Allah. It means the One you can hand your affairs to, the trustee who carries the outcome once you have done your part.",
+      "video": "main/broll6/al-wakil/2-narrate.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Meaning of the name"
+    },
+    {
+      "type": "narration",
+      "text": "When fear closed in around the first Muslims, they did not break. They answered with a single, steady line.",
+      "video": "main/broll6/al-wakil/3-ayah.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ",
+      "foot": "Qur'an 3:173 (Al Imran), Saheeh International"
+    },
+    {
+      "type": "narration",
+      "text": "The Prophet Muhammad, peace be upon him, described this trust. If you relied upon Allah as He deserves, he said, He would provide for you as He provides for the birds.",
+      "video": "main/broll6/al-wakil/4-narrate.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Jami at-Tirmidhi 2344, hasan sahih"
+    },
+    {
+      "type": "narration",
+      "text": "But notice, the birds still fly out at dawn, empty, and return full. This trust, called tawakkul, is not doing nothing. You do your part, and you leave the result to Him.",
+      "video": "main/broll6/al-wakil/5-narrate.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "tawakkul is not passivity; the bird still seeks (Tirmidhi 2344)"
+    },
+    {
+      "type": "narration",
+      "text": "Whoever relies upon Allah, He is enough for him.",
+      "video": "main/broll6/al-wakil/6-ayah.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "arabicText": "وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥ",
+      "foot": "Qur'an 65:3 (at-Talaq), Saheeh International"
+    },
+    {
+      "type": "narration",
+      "text": "So loosen your grip on what you cannot control. The One who feeds the birds has not forgotten you.",
+      "video": "main/broll6/al-wakil/7-close.mp4",
+      "videoDuration": 13,
+      "holdSeconds": 0.4,
+      "dim": 0.44,
+      "voiceSettings": {
+        "stability": 0.6,
+        "style": 0.16,
+        "similarity_boost": 0.85,
+        "speed": 0.99
+      },
+      "foot": "Reflective close"
+    }
+  ],
+  "nameArabic": "ٱلْوَكِيلُ",
+  "nameTranslit": "Al-Wakil",
+  "nameMeaning": "The Disposer of Affairs"
+}
