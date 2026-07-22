@@ -43,7 +43,7 @@
       "holdSeconds": 0.4,
       "dim": 0.44,
       "hook": true,
-      "hookMark": true,
+      "hookMark": "drop",
       "voiceSettings": {
         "stability": 0.55,
         "style": 0.2,
