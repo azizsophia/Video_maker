@@ -203,3 +203,12 @@ risk), do the footage sourcing + QC early in a FRESH chat. Abstract-only footage
 4. Covers: `CoverCard` (9:16) + `CoverWide` (16:9) brand template, never PIL.
 5. Captions: TikTok (one line + 5 hashtags, #edutokcontest in middle), YouTube
    Shorts (one line), long-form description + app footer. No emojis/dashes.
+
+### IN PRODUCTION / DELIVERED (overnight autonomous batch 2026-07-22)
+
+**Overnight WAVE 1 (owner asleep, "keep doing more videos" + "bypass the tests / do it fully yourself" - self-approved sign-off gates; accuracy fact-check NOT skipped)** - 6 videos DELIVERED 2026-07-22, all fact-checked (docs/overnight-batch-sources.md, independent adversarial pass, all PASS):
+"3 things" numbered series: three-duas-answered (3 Duas Allah Never Turns Away; Tirmidhi 3598 hasan) run 29887781573 (72.9s); three-rizq (Qur'an 71:10-12/65:2-3/14:7) run 29887783049 (77.4s); three-anxiety-duas (Bukhari 6369/Tirmidhi 2457/21:87) run 29887784274 (80.8s).
+99 Names Ep7-9: ar-rahman (Bukhari 6469/7554, 55:1-2) run 29887791813 (79.1s); al-ghaffar (39:53, Tirmidhi 3540, Bukhari 6309) run 29887793383 (84.8s); al-wakil (3:173, 65:3, Tirmidhi 2344) run 29887794373 (79.3s).
+Footage in public/main/broll6/, 6-frame eye-QC'd, cross-wave de-duped. LENGTH FLAG: all run 73-85s, OVER the 61-63s target (wave-1 beats were wordier). All >60s (monetization-safe), dense real content not padding, but longer than the owner sweet spot - offered to trim to ~63s on owner's word. Two engine bugs fixed this batch: (1) render crashed on hookMark boolean (must be a STRING emphasis word); (2) name-card beat was double-emitting arabicText - removed.
+
+**Overnight WAVE 2** - 6 more scripts written + independently fact-checked (all PASS; softened a "jihad = not holy war" oversimplification in three-beloved-deeds): three-beloved-deeds (Bukhari 527/Muslim 85), three-follow-to-grave (Bukhari 6514/Muslim 2960), three-before-sleep (Bukhari 5017/2311/5009), as-salam (59:23, Muslim 591), al-fattah (34:26, 35:2), al-latif (67:14, 42:19, 12:100). FOOTAGE WALL: after 12 videos the clean dark-aura vertical Pexels pool is largely drained; several beats are surreal dreamscape shots (river of light / single glowing orb / single star over valley / garden of light) that realistic stock cannot cleanly provide - these are exactly the AURA gen-AI Kling beats the owner generates. Held for owner Kling clips: the residual-gap beats. Non-dreamscape gaps re-sourced.
