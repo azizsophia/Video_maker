@@ -25,6 +25,10 @@ export const storySegmentSchema = z.object({
 export const storyPropsSchema = z.object({
   title: z.string(),
   theme: themeSchema.default("midnight"),
+  // Per-video visual look (geometric motif + motion + particles). "auto" (or
+  // omitted) derives a distinct-but-stable look from the title so no two
+  // stories look mass-produced; or pin one by name (see visualVariants.ts).
+  visual: z.string().default("auto"),
   reciterName: z.string().default("Sheikh Abdur-Rahman as-Sudais"),
   voiceName: z.string().default("Daniel"),
   websiteUrl: z.string().default("ketabistudio.com"),

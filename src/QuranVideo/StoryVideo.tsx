@@ -12,6 +12,7 @@ import {
 import { StoryProps, StorySegment, StoryWord } from "./storySchema";
 import { themes, ThemePalette } from "./themes";
 import { Background } from "./Background";
+import { pickVariant } from "./visualVariants";
 import { ARABIC_DISPLAY_FONT, TRANSLATION_FONT } from "./fonts";
 
 export const STORY_FPS = 30;
@@ -176,9 +177,10 @@ const AyahCard: React.FC<{
 
 export const StoryVideo: React.FC<StoryProps> = (props) => {
   const theme = themes[props.theme];
+  const variant = pickVariant(props.title, props.visual);
   return (
     <AbsoluteFill>
-      <Background theme={theme} />
+      <Background theme={theme} variant={variant} />
       {/* Extra darken for cinematic mood. */}
       <AbsoluteFill style={{ background: "rgba(0,0,0,0.28)" }} />
       {props.segments.map((seg: StorySegment, i: number) => {

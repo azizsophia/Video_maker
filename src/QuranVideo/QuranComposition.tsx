@@ -3,6 +3,7 @@ import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import { QuranProps, Ayah } from "./schema";
 import { themes } from "./themes";
 import { Background } from "./Background";
+import { pickVariant } from "./visualVariants";
 import { AyahView } from "./Ayah";
 import { Intro, Outro } from "./Cards";
 import { Watermark } from "./Watermark";
@@ -89,6 +90,7 @@ export const tajweedRulesPresent = (props: QuranProps): string[] => {
 
 export const QuranComposition: React.FC<QuranProps> = (props) => {
   const theme = themes[props.theme];
+  const variant = pickVariant(props.surahNameEnglish, props.visual);
   const showTajweed = props.mode === "tajweed";
   const introFrames = Math.round(props.introSeconds * FPS);
   const outroFrames = Math.round(props.outroSeconds * FPS);
@@ -97,7 +99,7 @@ export const QuranComposition: React.FC<QuranProps> = (props) => {
 
   return (
     <AbsoluteFill>
-      <Background theme={theme} />
+      <Background theme={theme} variant={variant} />
 
       {/* Intro title card */}
       <Sequence from={0} durationInFrames={introFrames}>

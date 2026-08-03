@@ -43,6 +43,10 @@ export const quranPropsSchema = z.object({
   reciterName: z.string(),
   translationName: z.string(),
   theme: themeSchema,
+  // Per-video visual look (geometric motif + motion + particles). "auto" (or
+  // omitted) derives a distinct-but-stable look from the surah name so renders
+  // don't all look identical/mass-produced; or pin one (see visualVariants.ts).
+  visual: z.string().default("auto"),
   mode: modeSchema.default("standard"),
   // Hifz mode: how many times each ayah repeats. First pass is a full
   // read-along; middle passes hide the words and reveal each one just AFTER

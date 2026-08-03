@@ -156,6 +156,9 @@ async function main() {
   const props = {
     title: story.title,
     theme,
+    // "auto" (default) derives a distinct look from the title; a story may pin
+    // one by name (see src/QuranVideo/visualVariants.ts).
+    visual: args.visual ?? story.visual ?? "auto",
     reciterName: args.reciterName ?? "Sheikh Abdur-Rahman as-Sudais",
     voiceName: story.voiceName ?? "Daniel",
     websiteUrl: args.website ?? "ketabistudio.com",
