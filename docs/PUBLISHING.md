@@ -2,6 +2,12 @@
 
 How to publish the rendered videos across platforms **without copyright trouble**.
 
+> **This doc is about copyright / Content ID only.** Whether a video *earns* on
+> TikTok's Creator Rewards Program is a separate system (originality & quality) —
+> see **[`CREATOR_REWARDS.md`](./CREATOR_REWARDS.md)**. Passing copyright does
+> not mean a video is CRP-eligible; our disqualifications came from the CRP
+> originality engine, not from copyright.
+
 ## The core rule (copyright / Content ID)
 
 Famous reciter recordings (Abdul Basit, Sudais, Shuraim, etc.) are commercially
