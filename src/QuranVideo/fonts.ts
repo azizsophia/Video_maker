@@ -4,10 +4,16 @@ import "@fontsource/amiri/400.css";
 import "@fontsource/amiri/700.css";
 import "@fontsource/scheherazade-new/400.css";
 import "@fontsource/scheherazade-new/700.css";
+// Modern, heavy geometric sans for the viral-short captions (trendy look).
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/800.css";
+import "@fontsource/montserrat/900.css";
 
 export const ARABIC_FONT = "Amiri";
 export const ARABIC_DISPLAY_FONT = '"Scheherazade New"';
 export const TRANSLATION_FONT = 'Georgia, "Times New Roman", serif';
+// Punchy sans used by the short-form captions / number badges.
+export const CAPTION_FONT = 'Montserrat, "Helvetica Neue", Arial, sans-serif';
 
 // The Arabic fonts are bundled locally via @fontsource — the CSS imports above
 // register their @font-face rules at load time, so they apply effectively

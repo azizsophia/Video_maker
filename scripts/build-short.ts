@@ -110,14 +110,35 @@ async function fetchBroll(
   return false;
 }
 
-async function fetchAyah(verse: string, translation: string) {
+async function fetchAyah(verse: string, translation: string, reciter?: string) {
+  const audioParam = reciter ? `&audio=${reciter}` : "";
   const v = await getJson<any>(
-    `${QURAN_API}/verses/by_key/${verse}?language=en&translations=${translation}&fields=text_uthmani`
+    `${QURAN_API}/verses/by_key/${verse}?language=en${audioParam}&translations=${translation}&fields=text_uthmani`
   );
-  const arabic = v.verse?.text_uthmani as string;
-  const tr = stripHtml(v.verse?.translations?.[0]?.text ?? "");
+  const verseObj = v.verse;
+  const arabic = verseObj?.text_uthmani as string;
+  const tr = stripHtml(verseObj?.translations?.[0]?.text ?? "");
   if (!arabic) throw new Error(`no Arabic returned for ${verse}`);
-  return { arabic, translation: tr };
+  let audioUrl: string | undefined;
+  let audioDur: number | undefined;
+  if (reciter && verseObj?.audio?.url) {
+    audioUrl = resolveAudioUrl(verseObj.audio.url);
+    const segs: number[][] = verseObj.audio.segments ?? [];
+    audioDur = segs.length ? segs[segs.length - 1][segs[0].length - 1] / 1000 + 0.6 : undefined;
+  }
+  return { arabic, translation: tr, audioUrl, audioDur };
+}
+
+// Wrap known hard-to-pronounce words with misaki IPA overrides so Kokoro says
+// them correctly (e.g. "Allah", "Quran") while the on-screen caption keeps the
+// normal spelling. Format: [Word](/ipa/).
+function applyPronounce(text: string, dict: Record<string, string>): string {
+  let out = text;
+  for (const [word, ipa] of Object.entries(dict)) {
+    const esc = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    out = out.replace(new RegExp(`\\b${esc}\\b`, "g"), `[${word}](/${ipa}/)`);
+  }
+  return out;
 }
 
 async function main() {
@@ -131,8 +152,11 @@ async function main() {
   const pexKey = (process.env.PEXELS_API_KEY || "").trim();
   const PAD = 0.45; // breathing room after each line
   const GAP = 0.0; // beats are contiguous (each has its own background)
+  const pronounce: Record<string, string> = script.pronounce ?? {};
+  const defaultReciter = String(script.reciter ?? 2); // 2 = AbdulBasit (Murattal)
 
   const beats: any[] = script.beats;
+  const isRecite = (b: any) => b.kind === "ayah" && (b.recite || b.reciter);
 
   // 1) Narrate every beat that has spoken text, in one Kokoro run. -----------
   const manifest = {
@@ -145,7 +169,7 @@ async function main() {
       .filter(({ b }) => b.say)
       .map(({ b, i }) => ({
         id: `${i}-${b.kind}`,
-        text: b.say as string,
+        text: applyPronounce(b.say as string, pronounce),
         out: join("public", "short", `${i}.wav`),
         timestamps: join("build", `${i}.json`),
       })),
@@ -183,13 +207,12 @@ async function main() {
       narrationDur = ts.duration ?? (words.length ? words[words.length - 1].end : 2);
     }
     const hold = Number(b.hold ?? 0);
-    const durationInSeconds = Number((Math.max(narrationDur, 1.2) + hold + PAD).toFixed(2));
+    let durationInSeconds = Number((Math.max(narrationDur, 1.2) + hold + PAD).toFixed(2));
 
     const beat: any = {
       kind: b.kind,
       audioSrc: hasAudio ? `short/${i}.wav` : "",
       fromSeconds: Number(cursor.toFixed(2)),
-      durationInSeconds,
       words,
       badge: b.badge,
       kicker: b.kicker,
@@ -197,26 +220,51 @@ async function main() {
       source: b.source,
     };
 
-    // Matched B-roll.
-    if (pexKey && Array.isArray(b.query) && b.query.length) {
-      const dest = join("public", "short", "broll", `${i}.mp4`);
-      const ok = await fetchBroll(b.query, pexKey, durationInSeconds, dest);
-      if (ok) beat.videoSrc = `short/broll/${i}.mp4`;
-    } else if (!pexKey && Array.isArray(b.query)) {
-      if (i === 0) console.warn("    (no PEXELS_API_KEY — using the code-generated backdrop)");
-    }
-
-    // Real ayah (Arabic + translation from Quran.com).
+    // Real ayah: Arabic (+ translation) from Quran.com. Optionally a real
+    // reciter (opt-in via `recite`/`reciter` — off by default for copyright).
     if (b.kind === "ayah" && b.verse) {
       try {
-        const { arabic, translation: tr } = await fetchAyah(b.verse, translation);
+        const reciter = isRecite(b) ? String(b.reciter ?? defaultReciter) : undefined;
+        const { arabic, translation: tr, audioUrl, audioDur } = await fetchAyah(
+          b.verse,
+          translation,
+          reciter
+        );
         beat.arabic = arabic;
-        beat.translation = tr;
-        console.log(`    ayah ${b.verse}: fetched ${arabic.length} chars`);
+        // Show the exact words the narrator speaks (keeps audio ↔ text in sync);
+        // fall back to the API translation if this beat isn't narrated.
+        beat.translation = b.displayText ?? b.say ?? tr;
+        if (audioUrl) {
+          const dest = join("public", "short", `ayah-${i}.mp3`);
+          await download(audioUrl, dest);
+          beat.audioSrc = `short/ayah-${i}.mp3`;
+          durationInSeconds = Number(((audioDur ?? 8) + hold + PAD).toFixed(2));
+        }
+        console.log(
+          `    ayah ${b.verse}: ${arabic.length} chars${reciter ? ` + reciter ${reciter}` : " (narrated meaning)"}`
+        );
       } catch (e: any) {
         console.warn(`    ayah ${b.verse} fetch failed (${e.message}); showing caption instead`);
-        beat.kind = "cta"; // graceful fallback: show the spoken lead-in as a caption
+        beat.kind = "cta"; // graceful fallback
       }
+    }
+
+    beat.durationInSeconds = durationInSeconds;
+
+    // Matched B-roll (uses the final duration to prefer a long-enough clip).
+    // Reuse an already-downloaded clip so re-runs keep the same visuals.
+    if (Array.isArray(b.query) && b.query.length) {
+      const dest = join("public", "short", "broll", `${i}.mp4`);
+      if (existsSync(dest)) {
+        beat.videoSrc = `short/broll/${i}.mp4`;
+        console.log(`    b-roll ${i}: reusing existing clip`);
+      } else if (pexKey) {
+        const ok = await fetchBroll(b.query, pexKey, durationInSeconds, dest);
+        if (ok) beat.videoSrc = `short/broll/${i}.mp4`;
+      }
+    }
+    if (!pexKey && Array.isArray(b.query)) {
+      if (i === 0) console.warn("    (no PEXELS_API_KEY — using the code-generated backdrop)");
     }
 
     outBeats.push(beat);

@@ -12,7 +12,7 @@ export const shortWordSchema = z.object({
 // One beat of a fast-cut short. Every beat has its own narration audio +
 // (usually) its own background B-roll clip, so the visual changes each line.
 export const shortBeatSchema = z.object({
-  kind: z.enum(["hook", "point", "ayah", "cta"]),
+  kind: z.enum(["hook", "line", "point", "ayah", "cta"]),
   audioSrc: z.string(), // /public path or URL (Kokoro narration)
   fromSeconds: z.number(), // start offset within the whole video
   durationInSeconds: z.number(),

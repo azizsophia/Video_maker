@@ -7,53 +7,67 @@
   "voiceName": "Kokoro · bm_george (British male)",
   "handle": "@Ketabi.studio",
   "translation": "20",
-  "_accuracy": "Every point is an explicit Qur'anic statement of Allah's love (inna Allāha yuḥibb…). No hadith grading needed — these are direct āyāt. Arabic on the ayah beat is pulled live from Quran.com (KFGQPC Uthmani), never hand-typed. Verify final render before publishing.",
+  "pronounce": {
+    "Allah": "ˈɑːlɑː",
+    "Quran": "kʊrˈɑːn"
+  },
+  "_accuracy": "Every point is an explicit Qur'anic statement of Allah's love (inna Allāha yuḥibb…). Arabic on the ayah beat is pulled live from Quran.com (Uthmani), never hand-typed. Copyright-clean: NO reciter recording — the narrator reads the meaning while the Arabic is shown on screen. Verify the render before publishing.",
   "_visuals": "B-roll queries are nature / sky / architecture only — no people, no faces, no human depictions.",
   "beats": [
     {
       "kind": "hook",
-      "say": "Allah named the exact people He loves. It's right here in the Qur'an. Here are three.",
-      "query": ["golden sunrise clouds", "sun rays through clouds", "dramatic sky sunrise"]
+      "say": "Allah named the exact people He loves. Not a guess. It's written in the Quran.",
+      "query": ["milky way night sky stars", "aerial clouds at sunrise", "sun rays through clouds"]
+    },
+    {
+      "kind": "line",
+      "say": "Three kinds of people, named by your Creator. So ask yourself — are you one of them?",
+      "query": ["aerial mountains above clouds", "vast desert sand dunes", "ocean waves aerial view"]
     },
     {
       "kind": "point",
       "badge": "1",
       "kicker": "People Allah loves",
-      "say": "One. The ones who keep coming back. Every time they fall, they turn straight back to Him.",
+      "say": "Number one. The ones who always come back. They slip. They fall. But they never stay down. Every time, they return to Him.",
       "translit": "At-Tawwābūn · those who constantly repent",
       "source": "Qur'an 2:222 · Saheeh Int'l",
-      "query": ["rain drops on green leaves", "gentle rain water surface", "sunrise over calm sea"]
+      "query": ["rain drops on green leaves", "gentle rain on water", "sunrise over calm sea"]
     },
     {
       "kind": "point",
       "badge": "2",
       "kicker": "People Allah loves",
-      "say": "Two. The ones who stay fair. Even when it costs them. Even against their own side.",
+      "say": "Number two. The ones who stay fair. Even when lying is easier. Even when the truth costs them everything.",
       "translit": "Al-Muqsiṭūn · those who act justly",
       "source": "Qur'an 60:8 · Saheeh Int'l",
-      "query": ["mountain range at sunrise", "calm lake mountain reflection", "still water reflection sky"]
+      "query": ["mountain peak at sunrise", "calm lake mountain reflection", "still water reflection sky"]
     },
     {
       "kind": "point",
       "badge": "3",
       "kicker": "People Allah loves",
-      "say": "Three. The ones who do good. Quietly. Expecting nothing back.",
+      "say": "Number three. The ones who quietly do good. No audience. No credit. They give, and expect nothing back.",
       "translit": "Al-Muḥsinūn · the doers of good",
       "source": "Qur'an 2:195 · Saheeh Int'l",
-      "query": ["flowing river in green forest", "sunlight through forest trees", "wheat field in wind"]
+      "query": ["flowing river in green forest", "sunlight through forest trees", "green field in the wind"]
+    },
+    {
+      "kind": "line",
+      "say": "And listen to how Allah describes them.",
+      "query": ["mosque dome interior", "islamic architecture arches", "mosque ceiling geometric pattern"]
     },
     {
       "kind": "ayah",
-      "say": "And these aren't just words. Allah described them Himself.",
+      "say": "Those who give in ease and in hardship. Who swallow their anger. And who pardon people. Allah loves those who do good.",
       "verse": "3:134",
-      "source": "Qur'an 3:134 · Saheeh International",
-      "hold": 4.0,
-      "query": ["mosque dome interior", "islamic architecture arches", "mosque ceiling pattern"]
+      "source": "Qur'an 3:134",
+      "hold": 1.5,
+      "query": ["mosque interior soft light", "islamic geometric pattern", "mosque arches architecture"]
     },
     {
       "kind": "cta",
-      "say": "So which one will you become? Save this, and follow for more.",
-      "query": ["night sky full of stars", "milky way stars timelapse", "sunrise over horizon"]
+      "say": "So which one will you become? Save this reminder, and follow for more.",
+      "query": ["sunrise over calm horizon", "golden hour clouds sky", "peaceful night sky stars"]
     }
   ],
   "sources": [

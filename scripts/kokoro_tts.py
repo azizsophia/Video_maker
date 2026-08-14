@@ -95,7 +95,18 @@ def synth(pipeline, text, voice, speed):
                 start = getattr(tk, "start_ts", None)
                 end = getattr(tk, "end_ts", None)
                 txt = (getattr(tk, "text", "") or "").strip()
-                if txt and start is not None and end is not None:
+                if not txt:
+                    continue
+                is_word = re.search(r"\w", txt, flags=re.UNICODE) is not None
+                if not is_word:
+                    # Attach trailing punctuation to the previous word so caption
+                    # lines can break on sentence/clause boundaries.
+                    if words:
+                        words[-1]["text"] += txt
+                        if end is not None:
+                            words[-1]["end"] = round(offset + float(end), 3)
+                    continue
+                if start is not None and end is not None:
                     words.append(
                         {
                             "text": txt,
