@@ -1,0 +1,96 @@
+{
+  "_note": "Non-publishable PREVIEW only (no audio, no B-roll, timings are placeholders). Run `npm run build:short` to produce the real render props with Kokoro narration + matched Pexels clips.",
+  "title": "3 Kinds of People Allah Loves",
+  "theme": "emerald",
+  "voiceName": "Kokoro · bm_george",
+  "handle": "@yourhandle",
+  "websiteUrl": "",
+  "progressBar": true,
+  "beats": [
+    {
+      "kind": "hook",
+      "audioSrc": "",
+      "fromSeconds": 0,
+      "durationInSeconds": 3.4,
+      "words": [
+        { "text": "Allah", "start": 0.0, "end": 0.34 },
+        { "text": "named", "start": 0.34, "end": 0.68 },
+        { "text": "the", "start": 0.68, "end": 0.9 },
+        { "text": "people", "start": 0.9, "end": 1.28 },
+        { "text": "He", "start": 1.28, "end": 1.5 },
+        { "text": "loves.", "start": 1.5, "end": 1.95 },
+        { "text": "Here", "start": 1.95, "end": 2.25 },
+        { "text": "are", "start": 2.25, "end": 2.47 },
+        { "text": "three.", "start": 2.47, "end": 2.95 }
+      ]
+    },
+    {
+      "kind": "point",
+      "badge": "1",
+      "kicker": "People Allah loves",
+      "translit": "At-Tawwābūn · those who repent",
+      "source": "Qur'an 2:222 · Saheeh Int'l",
+      "audioSrc": "",
+      "fromSeconds": 3.4,
+      "durationInSeconds": 3.1,
+      "words": [
+        { "text": "The", "start": 0.6, "end": 0.85 },
+        { "text": "ones", "start": 0.85, "end": 1.2 },
+        { "text": "who", "start": 1.2, "end": 1.42 },
+        { "text": "keep", "start": 1.42, "end": 1.75 },
+        { "text": "coming", "start": 1.75, "end": 2.15 },
+        { "text": "back.", "start": 2.15, "end": 2.6 }
+      ]
+    },
+    {
+      "kind": "point",
+      "badge": "2",
+      "kicker": "People Allah loves",
+      "translit": "Al-Muqsiṭūn · those who are just",
+      "source": "Qur'an 60:8 · Saheeh Int'l",
+      "audioSrc": "",
+      "fromSeconds": 6.5,
+      "durationInSeconds": 2.75,
+      "words": [
+        { "text": "The", "start": 0.6, "end": 0.85 },
+        { "text": "ones", "start": 0.85, "end": 1.2 },
+        { "text": "who", "start": 1.2, "end": 1.42 },
+        { "text": "stay", "start": 1.42, "end": 1.78 },
+        { "text": "fair.", "start": 1.78, "end": 2.3 }
+      ]
+    },
+    {
+      "kind": "point",
+      "badge": "3",
+      "kicker": "People Allah loves",
+      "translit": "Al-Muḥsinūn · the doers of good",
+      "source": "Qur'an 2:195 · Saheeh Int'l",
+      "audioSrc": "",
+      "fromSeconds": 9.25,
+      "durationInSeconds": 2.7,
+      "words": [
+        { "text": "The", "start": 0.65, "end": 0.9 },
+        { "text": "ones", "start": 0.9, "end": 1.25 },
+        { "text": "who", "start": 1.25, "end": 1.47 },
+        { "text": "do", "start": 1.47, "end": 1.72 },
+        { "text": "good.", "start": 1.72, "end": 2.25 }
+      ]
+    },
+    {
+      "kind": "cta",
+      "audioSrc": "",
+      "fromSeconds": 11.95,
+      "durationInSeconds": 3.15,
+      "words": [
+        { "text": "Which", "start": 0.0, "end": 0.32 },
+        { "text": "one", "start": 0.32, "end": 0.6 },
+        { "text": "will", "start": 0.6, "end": 0.85 },
+        { "text": "you", "start": 0.85, "end": 1.1 },
+        { "text": "become?", "start": 1.1, "end": 1.6 },
+        { "text": "Follow", "start": 1.7, "end": 2.05 },
+        { "text": "for", "start": 2.05, "end": 2.25 },
+        { "text": "more.", "start": 2.25, "end": 2.7 }
+      ]
+    }
+  ]
+}

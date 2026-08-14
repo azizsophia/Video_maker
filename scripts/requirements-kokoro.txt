@@ -1,0 +1,7 @@
+# Kokoro TTS — free, open-source (Apache-2.0) narration for the shorts.
+# Model weights (hexgrad/Kokoro-82M, ~330 MB) auto-download from HuggingFace on
+# first run. Also install the espeak-ng system package (see kokoro_tts.py header).
+kokoro>=0.9.4
+misaki[en]>=0.9.4
+soundfile>=0.12.1
+numpy>=1.26

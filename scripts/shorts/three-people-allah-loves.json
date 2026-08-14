@@ -1,0 +1,65 @@
+{
+  "id": "three-people-allah-loves",
+  "title": "3 Kinds of People Allah Loves",
+  "theme": "emerald",
+  "voice": "bm_george",
+  "lang_code": "b",
+  "voiceName": "Kokoro · bm_george (British male)",
+  "handle": "@yourhandle",
+  "translation": "20",
+  "_accuracy": "Every point is an explicit Qur'anic statement of Allah's love (inna Allāha yuḥibb…). No hadith grading needed — these are direct āyāt. Arabic on the ayah beat is pulled live from Quran.com (KFGQPC Uthmani), never hand-typed. Verify final render before publishing.",
+  "_visuals": "B-roll queries are nature / sky / architecture only — no people, no faces, no human depictions.",
+  "beats": [
+    {
+      "kind": "hook",
+      "say": "Allah named the exact people He loves. It's right here in the Qur'an. Here are three.",
+      "query": ["golden sunrise clouds", "sun rays through clouds", "dramatic sky sunrise"]
+    },
+    {
+      "kind": "point",
+      "badge": "1",
+      "kicker": "People Allah loves",
+      "say": "One. The ones who keep coming back. Every time they fall, they turn straight back to Him.",
+      "translit": "At-Tawwābūn · those who constantly repent",
+      "source": "Qur'an 2:222 · Saheeh Int'l",
+      "query": ["rain drops on green leaves", "gentle rain water surface", "sunrise over calm sea"]
+    },
+    {
+      "kind": "point",
+      "badge": "2",
+      "kicker": "People Allah loves",
+      "say": "Two. The ones who stay fair. Even when it costs them. Even against their own side.",
+      "translit": "Al-Muqsiṭūn · those who act justly",
+      "source": "Qur'an 60:8 · Saheeh Int'l",
+      "query": ["mountain range at sunrise", "calm lake mountain reflection", "still water reflection sky"]
+    },
+    {
+      "kind": "point",
+      "badge": "3",
+      "kicker": "People Allah loves",
+      "say": "Three. The ones who do good. Quietly. Expecting nothing back.",
+      "translit": "Al-Muḥsinūn · the doers of good",
+      "source": "Qur'an 2:195 · Saheeh Int'l",
+      "query": ["flowing river in green forest", "sunlight through forest trees", "wheat field in wind"]
+    },
+    {
+      "kind": "ayah",
+      "say": "And these aren't just words. Allah described them Himself.",
+      "verse": "3:134",
+      "source": "Qur'an 3:134 · Saheeh International",
+      "hold": 4.0,
+      "query": ["mosque dome interior", "islamic architecture arches", "mosque ceiling pattern"]
+    },
+    {
+      "kind": "cta",
+      "say": "So which one will you become? Save this, and follow for more.",
+      "query": ["night sky full of stars", "milky way stars timelapse", "sunrise over horizon"]
+    }
+  ],
+  "sources": [
+    "Qur'an 2:222 — 'Indeed, Allah loves those who are constantly repentant and loves those who purify themselves.'",
+    "Qur'an 60:8 (also 49:9) — 'Indeed, Allah loves those who act justly.'",
+    "Qur'an 2:195 (also 3:134) — 'And do good; indeed, Allah loves the doers of good.'",
+    "Qur'an 3:134 — 'Who spend during ease and hardship, and restrain anger, and pardon the people — and Allah loves the doers of good.'"
+  ]
+}

@@ -18,23 +18,70 @@ frame is drawn by code.
 
 | Path | What it is |
 |---|---|
-| `src/QuranVideo/` | The Remotion composition: background, ayah view, word-by-word highlighting, themes |
+| `src/QuranVideo/` | The Remotion compositions: Quran recitation, story, and the viral short |
+| `src/QuranVideo/ShortVideo.tsx` | The **viral short** format: full-bleed stock B-roll + big karaoke captions |
+| `scripts/build-short.ts` | Builds a short end-to-end: Kokoro narration + matched Pexels B-roll + real ayahs |
+| `scripts/kokoro_tts.py` | Free, open-source narration (Kokoro) with word-level timings for captions |
+| `scripts/shorts/*.json` | The sourced scripts (e.g. `3 Kinds of People Allah Loves`) |
 | `src/data/sample-al-ikhlas.json` | A bundled sample (Surah Al-Ikhlas) so the engine runs out of the box |
 | `scripts/fetch-ayahs.ts` | Pulls any surah/ayah range + real reciter audio + word timings from the free Quran.com API |
-| `.github/workflows/render-quran.yml` | One-tap rendering you can trigger from your phone |
-| `docs/SETUP.md` | API keys, network allowlist, Drive + ElevenLabs setup |
+| `.github/workflows/render-*.yml` | One-tap rendering you can trigger from your phone |
+| `docs/SETUP.md` | API keys, network allowlist, Kokoro + Pexels + Drive setup |
 
 Built with [Remotion](https://remotion.dev) (React → MP4). Data from the free
 [Quran.com API v4](https://api-docs.quran.com/).
 
 ---
 
+## Viral shorts (the scroll-stopper format)
+
+A fast-cut, feed-native format built to actually convert: a hard hook in the
+first two seconds, **full-bleed stock B-roll that changes every line**, and
+**big word-by-word "karaoke" captions** locked to the voice. The pilot is
+**`3 Kinds of People Allah Loves`** (`scripts/shorts/three-people-allah-loves.json`).
+
+Everything in it is **free and open-source**:
+
+- **Voice** — [Kokoro](https://github.com/hexgrad/kokoro), an Apache-2.0 TTS
+  model. No API key, no per-character cost. Default voice is `bm_george`
+  (British male); swap it for American/female voices in one flag.
+- **Backgrounds** — matched [Pexels](https://www.pexels.com/api/) clips (free
+  key). Each line gets a portrait clip from its own search terms, and anything
+  showing **people/faces/hands is filtered out** — no human depictions.
+- **Sources** — every point is an explicit Qur'anic statement of Allah's love
+  (*inna Allāha yuḥibb…*), and the on-screen ayah is pulled live from the
+  Quran.com Uthmani text, **never hand-typed**.
+
+```bash
+# one-time
+pip install -r scripts/requirements-kokoro.txt      # + espeak-ng, see docs/SETUP.md
+export PEXELS_API_KEY=your_free_key                  # optional (falls back to coded bg)
+
+npm run build:short     # Kokoro narration + Pexels B-roll + ayahs -> render props
+npm run render:short     # -> out/short.mp4
+```
+
+Preview the layout live in `npm run dev` as the **`ViralShort`** composition
+(the bundled `sample-short.json` runs with no audio/key so you can see it
+immediately).
+
+To make a **new topic**, copy the pilot script, rewrite the `say` lines and
+`query` terms (keep them people-free), cite the sources, and run the same two
+commands. See `docs/SETUP.md → 2b` for the Kokoro voices and the Pexels key.
+
+---
+
 ## Render from your phone
 
 1. Open the **GitHub app** → this repo → **Actions** tab.
-2. Choose **"Render Quran Video"** → **Run workflow**.
-3. Fill in: surah, (optional) ayah range, reciter, translation, theme, orientation.
-4. When the run finishes, open it and download the MP4 from **Artifacts**.
+2. Choose your workflow → **Run workflow**:
+   - **"Render Viral Short"** — the new scroll-stopper format (Kokoro + Pexels).
+     Pick the script, theme, and Kokoro voice. Add a free `PEXELS_API_KEY`
+     secret first for stock backgrounds (see `docs/SETUP.md → 2b`).
+   - **"Render Quran Video"** — word-by-word recitation. Fill in surah,
+     (optional) ayah range, reciter, translation, theme, orientation.
+3. When the run finishes, open it and download the MP4 from **Artifacts**
+   (or have it land in your Drive — see below).
 
 Reciter ids: `2` AbdulBaset (Murattal) · `1` AbdulBaset (Mujawwad) · `3` Sudais · `6` Husary.
 Translation ids: `20` Saheeh International · `131` The Clear Quran.
@@ -108,6 +155,8 @@ Preview it live as the `QuranHifz` composition in `npm run dev`.
 - [x] **Tajweed color-coding** (letters colored by rule, with legend)
 - [ ] **Word-by-word meaning layer** (transliteration + literal meaning per word)
 - [ ] **3D audio-reactive scenes** (`@remotion/three`, verse-meaning environments)
+- [x] **Viral short template**: script → free Kokoro narration + matched Pexels
+      B-roll + big karaoke captions (the scroll-stopper, no ElevenLabs needed)
 - [ ] **M2 — Story / prophets template**: script → ElevenLabs British narrator +
       Pexels stock visuals + captions (the InVideo replacement)
 - [ ] **M3 — Phone web app**: Next.js on Vercel + Supabase; paste a script,

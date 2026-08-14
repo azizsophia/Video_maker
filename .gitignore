@@ -1,6 +1,12 @@
 node_modules/
 out/
 public/audio/
+public/story/
+public/short/
+build/
+# Generated render props (rebuilt from the story/short scripts each render)
+src/data/short-render.json
+src/data/story-render.json
 .DS_Store
 *.log
 .env

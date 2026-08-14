@@ -12,7 +12,10 @@ the fetcher and render videos *from here*, add these hosts in your environment's
 | `remotion.media` | download the headless Chrome that renders frames |
 | `api.quran.com` | surah text, translations, word-by-word timing segments |
 | `verses.quran.com` | per-ayah reciter audio files |
-| `api.elevenlabs.io` | (later, M2) British narrator voice |
+| `api.pexels.com` | stock B-roll search for the viral shorts |
+| `*.pexels.com` / `player.vimeo.com` | downloading the chosen B-roll clips |
+| `huggingface.co` / `*.hf.co` | Kokoro voice model weights (first run only) |
+| `api.elevenlabs.io` | (optional) ElevenLabs narrator for the story template |
 | `fonts.gstatic.com` | (optional) extra web fonts — Arabic fonts are bundled locally already |
 
 You do **not** need this for the GitHub Action — GitHub runners have open
@@ -26,6 +29,44 @@ internet, so phone-triggered renders work without any allowlist changes.
 
 The Quran template (M1) does **not** use TTS — it uses real reciter audio — so
 you can ship Quran videos before setting this up.
+
+## 2b. Viral shorts — Kokoro voice + Pexels stock (free, no ElevenLabs)
+
+The fast-cut "scroll-stopper" shorts (`ViralShort` composition, e.g.
+`3 Kinds of People Allah Loves`) don't use ElevenLabs at all. Narration is
+**Kokoro** — a free, open-source (Apache-2.0) TTS model — and the backgrounds
+are matched **Pexels** stock clips.
+
+**Voice — Kokoro (no key, no cost).** Nothing to sign up for. In CI the render
+workflow runs `pip install -r scripts/requirements-kokoro.txt` and the voice
+model (~330 MB, `hexgrad/Kokoro-82M`) auto-downloads from HuggingFace on the
+first run. Voices you can pass as `--voice`: `bm_george` / `bm_lewis` (British
+male, the default), `am_michael` / `am_adam` (American male), `af_heart` /
+`af_bella` (American female), `bf_emma` (British female). British voices use
+`lang_code` `b`; American voices use `a` (the build reads this from the script's
+`lang_code`).
+
+**Stock — Pexels (free key).** Grab a free API key at
+<https://www.pexels.com/api/> (instant, no card). Add it as a repo secret
+`PEXELS_API_KEY` (Settings → Secrets and variables → Actions). The build picks a
+**portrait** clip per beat from that beat's search terms and skips any clip
+whose page mentions people/faces/hands, so there are **no human depictions**. No
+key? The render still works — it just falls back to the code-generated
+geometric backdrop.
+
+**On a computer:**
+
+```bash
+pip install -r scripts/requirements-kokoro.txt   # + espeak-ng (see below)
+export PEXELS_API_KEY=your_key                    # optional but recommended
+npm run build:short                               # Kokoro + Pexels + ayahs -> props
+npm run render:short                              # -> out/short.mp4
+```
+
+`espeak-ng` is a small system package the tokenizer uses for out-of-dictionary
+words: `sudo apt-get install -y espeak-ng` (Linux) or `brew install espeak-ng`
+(mac). Re-render layout tweaks fast with `npm run build:short -- --skip-tts`
+(reuses the WAVs, no model reload).
 
 ## 3. Google Drive auto-upload
 

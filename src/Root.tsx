@@ -8,11 +8,15 @@ import {
 import { quranPropsSchema, QuranProps } from "./QuranVideo/schema";
 import { StoryVideo, STORY_FPS, storyDurationInFrames } from "./QuranVideo/StoryVideo";
 import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
+import { ShortVideo, SHORT_FPS, shortDurationInFrames } from "./QuranVideo/ShortVideo";
+import { shortPropsSchema, ShortProps } from "./QuranVideo/shortSchema";
 import sampleData from "./data/sample-al-ikhlas.json";
 import sampleStory from "./data/sample-story.json";
+import sampleShort from "./data/sample-short.json";
 
 const defaultProps = sampleData as unknown as QuranProps;
 const defaultStoryProps = sampleStory as unknown as StoryProps;
+const defaultShortProps = sampleShort as unknown as ShortProps;
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -84,6 +88,21 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         calculateMetadata={({ props }) => ({
           durationInFrames: storyDurationInFrames(props),
+        })}
+      />
+
+      {/* Fast-cut viral short (vertical) — Kokoro narration + matched Pexels
+          B-roll + big karaoke captions. The "scroll-stopper" format. */}
+      <Composition
+        id="ViralShort"
+        component={ShortVideo}
+        schema={shortPropsSchema}
+        defaultProps={defaultShortProps}
+        fps={SHORT_FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: shortDurationInFrames(props),
         })}
       />
     </>
