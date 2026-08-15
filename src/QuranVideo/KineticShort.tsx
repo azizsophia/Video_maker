@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
+  OffthreadVideo,
   Sequence,
   staticFile,
   useCurrentFrame,
@@ -107,6 +108,23 @@ const MotionBackground: React.FC = () => {
   );
 };
 
+// Per-beat cinematic footage (cover + cohesive grade) — used when the beat has
+// a matched clip, so the visual changes every line (retention).
+const FootageBg: React.FC<{ src: string }> = ({ src }) => {
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const scale = interpolate(frame, [0, durationInFrames], [1.05, 1.16], { extrapolateRight: "clamp" });
+  return (
+    <AbsoluteFill style={{ backgroundColor: INK, overflow: "hidden" }}>
+      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
+        <OffthreadVideo src={/^https?:\/\//.test(src) ? src : staticFile(src)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      </AbsoluteFill>
+      <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.12) 32%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.8) 100%)` }} />
+      <AbsoluteFill style={{ background: `radial-gradient(120% 76% at 50% 32%, ${EMERALD}18 0%, transparent 55%)` }} />
+    </AbsoluteFill>
+  );
+};
+
 // --- Word-by-word kinetic captions ------------------------------------------
 const Kinetic: React.FC<{ words?: ShortWord[]; size?: number; maxWords?: number }> = ({
   words = [],
@@ -131,13 +149,16 @@ const Kinetic: React.FC<{ words?: ShortWord[]; size?: number; maxWords?: number 
         flexWrap: "wrap",
         justifyContent: "center",
         alignItems: "center",
-        gap: "8px 16px",
+        // Airier: more room between words and much more between lines so the
+        // captions never feel cramped.
+        gap: "26px 22px",
         fontFamily: CAPTION_FONT,
         fontWeight: 900,
         fontSize: size,
-        lineHeight: 1.08,
+        lineHeight: 1.32,
         textAlign: "center",
-        letterSpacing: -1.5,
+        letterSpacing: -0.5,
+        maxWidth: 940,
       }}
     >
       {lw.map((w, i) => {
@@ -265,8 +286,9 @@ export const Scene: React.FC<{ beat: ShortBeat }> = ({ beat }) => {
       </AbsoluteFill>
     );
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 62px" }}>
+    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 62px", gap: 44 }}>
       <Kinetic words={beat.words} size={beat.kind === "hook" ? 90 : 78} maxWords={3} />
+      {beat.source ? <Chips source={beat.source} /> : null}
     </AbsoluteFill>
   );
 };
@@ -287,12 +309,14 @@ const ProgressBar: React.FC = () => {
 export const KineticShort: React.FC<ShortProps> = (props) => {
   return (
     <AbsoluteFill style={{ backgroundColor: INK }}>
-      <MotionBackground />
       {props.beats.map((beat: ShortBeat, i: number) => {
         const from = Math.round(beat.fromSeconds * KINETIC_FPS);
         const dur = Math.round(beat.durationInSeconds * KINETIC_FPS);
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
+            {/* Cinematic footage matched to this beat when present; the
+                code-drawn motion background is the fallback. */}
+            {beat.videoSrc ? <FootageBg src={beat.videoSrc} /> : <MotionBackground />}
             {beat.audioSrc ? <Audio src={resolveSrc(beat.audioSrc)} /> : null}
             <Scene beat={beat} />
           </Sequence>

@@ -154,6 +154,9 @@ async function main() {
   const GAP = 0.0; // beats are contiguous (each has its own background)
   const pronounce: Record<string, string> = script.pronounce ?? {};
   const defaultReciter = String(script.reciter ?? 2); // 2 = AbdulBasit (Murattal)
+  // Namespace all generated assets by script id so different videos never
+  // clobber or accidentally reuse each other's narration / B-roll.
+  const sid = String(script.id || "short").replace(/[^a-z0-9_-]/gi, "-");
 
   const beats: any[] = script.beats;
   const isRecite = (b: any) => b.kind === "ayah" && (b.recite || b.reciter);
@@ -170,8 +173,8 @@ async function main() {
       .map(({ b, i }) => ({
         id: `${i}-${b.kind}`,
         text: applyPronounce(b.say as string, pronounce),
-        out: join("public", "short", `${i}.wav`),
-        timestamps: join("build", `${i}.json`),
+        out: join("public", "short", sid, `${i}.wav`),
+        timestamps: join("build", sid, `${i}.json`),
       })),
   };
   await mkdir("build", { recursive: true });
@@ -202,7 +205,7 @@ async function main() {
     let words: any[] = [];
     let narrationDur = 0;
     if (hasAudio) {
-      const ts = JSON.parse(await readFile(join("build", `${i}.json`), "utf8"));
+      const ts = JSON.parse(await readFile(join("build", sid, `${i}.json`), "utf8"));
       words = ts.words ?? [];
       narrationDur = ts.duration ?? (words.length ? words[words.length - 1].end : 2);
     }
@@ -211,7 +214,7 @@ async function main() {
 
     const beat: any = {
       kind: b.kind,
-      audioSrc: hasAudio ? `short/${i}.wav` : "",
+      audioSrc: hasAudio ? `short/${sid}/${i}.wav` : "",
       fromSeconds: Number(cursor.toFixed(2)),
       words,
       badge: b.badge,
@@ -235,9 +238,9 @@ async function main() {
         // fall back to the API translation if this beat isn't narrated.
         beat.translation = b.displayText ?? b.say ?? tr;
         if (audioUrl) {
-          const dest = join("public", "short", `ayah-${i}.mp3`);
+          const dest = join("public", "short", sid, `ayah-${i}.mp3`);
           await download(audioUrl, dest);
-          beat.audioSrc = `short/ayah-${i}.mp3`;
+          beat.audioSrc = `short/${sid}/ayah-${i}.mp3`;
           durationInSeconds = Number(((audioDur ?? 8) + hold + PAD).toFixed(2));
         }
         console.log(
@@ -254,13 +257,13 @@ async function main() {
     // Matched B-roll (uses the final duration to prefer a long-enough clip).
     // Reuse an already-downloaded clip so re-runs keep the same visuals.
     if (Array.isArray(b.query) && b.query.length) {
-      const dest = join("public", "short", "broll", `${i}.mp4`);
+      const dest = join("public", "short", sid, "broll", `${i}.mp4`);
       if (existsSync(dest)) {
-        beat.videoSrc = `short/broll/${i}.mp4`;
+        beat.videoSrc = `short/${sid}/broll/${i}.mp4`;
         console.log(`    b-roll ${i}: reusing existing clip`);
       } else if (pexKey) {
         const ok = await fetchBroll(b.query, pexKey, durationInSeconds, dest);
-        if (ok) beat.videoSrc = `short/broll/${i}.mp4`;
+        if (ok) beat.videoSrc = `short/${sid}/broll/${i}.mp4`;
       }
     }
     if (!pexKey && Array.isArray(b.query)) {

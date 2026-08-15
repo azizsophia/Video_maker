@@ -1,0 +1,54 @@
+{
+  "id": "iron-from-the-stars",
+  "title": "The Iron in Your Blood Came From a Dying Star",
+  "theme": "emerald",
+  "voice": "bm_george",
+  "lang_code": "b",
+  "voiceName": "Kokoro · bm_george (British male)",
+  "handle": "@Ketabi.studio",
+  "translation": "20",
+  "pronounce": { "Allah": "ˈɑːlɑː", "Quran": "kʊrˈɑːn" },
+  "_accuracy": "Science: iron forms via stellar nucleosynthesis and is dispersed by supernovae — its origin is genuinely cosmic. Framed as a reflection/sign, not as 'proof'. Ayah 57:25 ('wa anzalnā al-ḥadīd' — 'and We sent down iron') is pulled live from Quran.com; narrator reads the meaning (copyright-clean, no reciter). Every beat gets its own matched cosmic clip.",
+  "beats": [
+    {
+      "kind": "hook",
+      "say": "Every bit of iron on Earth was forged inside a dying star. And delivered here, from space.",
+      "query": ["supernova explosion space", "star explosion nebula", "exploding star space"]
+    },
+    {
+      "kind": "line",
+      "say": "Iron can't be made on a planet. It's born in the heart of massive stars. Then flung out when they die.",
+      "query": ["colorful nebula stars", "cosmic gas clouds space", "nebula deep space"]
+    },
+    {
+      "kind": "line",
+      "say": "So the iron in your blood, in your bones, is the ash of dead stars.",
+      "query": ["milky way galaxy stars", "galaxy space stars", "deep space starfield"]
+    },
+    {
+      "kind": "line",
+      "say": "You are, quite literally, made of stardust.",
+      "query": ["glowing particles space", "cosmic dust particles", "stardust space glow"]
+    },
+    {
+      "kind": "line",
+      "say": "Now here's what stops people. Fourteen hundred years ago, the Quran didn't say iron was made here. It said it was sent down.",
+      "query": ["planet earth from space", "earth from orbit at night", "earth atmosphere from space"]
+    },
+    {
+      "kind": "line",
+      "say": "And We sent down iron, in which is great strength, and benefits for the people.",
+      "source": "Qur'an 57:25 · Saheeh Int'l",
+      "query": ["colorful nebula deep space", "cosmic nebula stars", "space nebula clouds"]
+    },
+    {
+      "kind": "cta",
+      "say": "Sent down. From a book, in the desert. Before anyone knew where iron came from. Follow for the signs people scroll past.",
+      "query": ["sunrise earth from space", "earth sunrise from orbit", "sunrise over horizon space"]
+    }
+  ],
+  "sources": [
+    "Qur'an 57:25 — 'And We sent down iron, wherein is great military might and benefits for the people.' (Saheeh International)",
+    "Science: iron is produced by stellar nucleosynthesis and dispersed by supernovae — Earth's iron has a stellar/cosmic origin."
+  ]
+}
