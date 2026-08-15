@@ -16,10 +16,10 @@ export const KINETIC_FPS = 30;
 
 // A bespoke motion-design look — NO stock footage. Animated Islamic geometry,
 // drifting light, and word-by-word kinetic typography synced to the narration.
-const INK = "#04130d";
-const EMERALD = "#57e6a9";
-const GOLD = "#f2d391";
-const WHITE = "#ffffff";
+export const INK = "#04130d";
+export const EMERALD = "#57e6a9";
+export const GOLD = "#f2d391";
+export const WHITE = "#ffffff";
 
 const resolveSrc = (src: string): string =>
   /^https?:\/\//.test(src) ? src : staticFile(src);
@@ -254,7 +254,7 @@ const AyahScene: React.FC<{ beat: ShortBeat }> = ({ beat }) => {
   );
 };
 
-const Scene: React.FC<{ beat: ShortBeat }> = ({ beat }) => {
+export const Scene: React.FC<{ beat: ShortBeat }> = ({ beat }) => {
   if (beat.kind === "ayah") return <AyahScene beat={beat} />;
   if (beat.kind === "point")
     return (

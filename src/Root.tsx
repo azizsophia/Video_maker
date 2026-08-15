@@ -10,6 +10,7 @@ import { StoryVideo, STORY_FPS, storyDurationInFrames } from "./QuranVideo/Story
 import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
 import { ShortVideo, SHORT_FPS, shortDurationInFrames } from "./QuranVideo/ShortVideo";
 import { KineticShort, KINETIC_FPS, kineticDurationInFrames } from "./QuranVideo/KineticShort";
+import { DemoReel, demoReelDurationInFrames } from "./QuranVideo/DemoReel";
 import { shortPropsSchema, ShortProps } from "./QuranVideo/shortSchema";
 import sampleData from "./data/sample-al-ikhlas.json";
 import sampleStory from "./data/sample-story.json";
@@ -119,6 +120,21 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         calculateMetadata={({ props }) => ({
           durationInFrames: kineticDurationInFrames(props),
+        })}
+      />
+
+      {/* Style comparison reel — 4 free/open-source background engines under
+          the same kinetic text + narration. */}
+      <Composition
+        id="DemoReel"
+        component={DemoReel}
+        schema={shortPropsSchema}
+        defaultProps={defaultShortProps}
+        fps={KINETIC_FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: demoReelDurationInFrames(props),
         })}
       />
     </>
