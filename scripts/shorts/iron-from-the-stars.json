@@ -17,6 +17,11 @@
     },
     {
       "kind": "line",
+      "say": "Not made in a lab. Not dug out of nothing. Forged at temperatures of billions of degrees.",
+      "query": ["surface of the sun plasma", "solar flare sun", "burning star surface"]
+    },
+    {
+      "kind": "line",
       "say": "Iron can't be made on a planet. It's born in the heart of massive stars. Then flung out when they die.",
       "query": ["colorful nebula stars", "cosmic gas clouds space", "nebula deep space"]
     },
@@ -42,8 +47,13 @@
       "query": ["colorful nebula deep space", "cosmic nebula stars", "space nebula clouds"]
     },
     {
+      "kind": "line",
+      "say": "The very element running through your veins was born in an explosion halfway across the galaxy.",
+      "query": ["spiral galaxy space", "galaxy stars cosmic", "deep space galaxy"]
+    },
+    {
       "kind": "cta",
-      "say": "Sent down. From a book, in the desert. Before anyone knew where iron came from. Follow for the signs people scroll past.",
+      "say": "And a book, in the desert, called it a gift sent down. Fourteen centuries early. Follow for the signs people scroll straight past.",
       "query": ["sunrise earth from space", "earth sunrise from orbit", "sunrise over horizon space"]
     }
   ],

@@ -106,6 +106,100 @@
       "fromSeconds": 7.13,
       "words": [
         {
+          "text": "Not",
+          "start": 0.25,
+          "end": 0.45
+        },
+        {
+          "text": "made",
+          "start": 0.45,
+          "end": 0.738
+        },
+        {
+          "text": "in",
+          "start": 0.738,
+          "end": 0.825
+        },
+        {
+          "text": "a",
+          "start": 0.825,
+          "end": 0.938
+        },
+        {
+          "text": "lab.",
+          "start": 0.938,
+          "end": 1.675
+        },
+        {
+          "text": "Not",
+          "start": 1.675,
+          "end": 1.913
+        },
+        {
+          "text": "dug",
+          "start": 1.913,
+          "end": 2.225
+        },
+        {
+          "text": "out",
+          "start": 2.225,
+          "end": 2.388
+        },
+        {
+          "text": "of",
+          "start": 2.388,
+          "end": 2.5
+        },
+        {
+          "text": "nothing.",
+          "start": 2.5,
+          "end": 3.3
+        },
+        {
+          "text": "Forged",
+          "start": 3.3,
+          "end": 3.775
+        },
+        {
+          "text": "at",
+          "start": 3.775,
+          "end": 3.888
+        },
+        {
+          "text": "temperatures",
+          "start": 3.888,
+          "end": 4.525
+        },
+        {
+          "text": "of",
+          "start": 4.525,
+          "end": 4.7
+        },
+        {
+          "text": "billions",
+          "start": 4.7,
+          "end": 5.237
+        },
+        {
+          "text": "of",
+          "start": 5.237,
+          "end": 5.325
+        },
+        {
+          "text": "degrees.",
+          "start": 5.325,
+          "end": 6.45
+        }
+      ],
+      "durationInSeconds": 7,
+      "videoSrc": "short/iron-from-the-stars/broll/1.mp4"
+    },
+    {
+      "kind": "line",
+      "audioSrc": "short/iron-from-the-stars/2.wav",
+      "fromSeconds": 14.13,
+      "words": [
+        {
           "text": "Iron",
           "start": 0.25,
           "end": 0.613
@@ -212,12 +306,12 @@
         }
       ],
       "durationInSeconds": 7.35,
-      "videoSrc": "short/iron-from-the-stars/broll/1.mp4"
+      "videoSrc": "short/iron-from-the-stars/broll/2.mp4"
     },
     {
       "kind": "line",
-      "audioSrc": "short/iron-from-the-stars/2.wav",
-      "fromSeconds": 14.48,
+      "audioSrc": "short/iron-from-the-stars/3.wav",
+      "fromSeconds": 21.48,
       "words": [
         {
           "text": "So",
@@ -296,12 +390,12 @@
         }
       ],
       "durationInSeconds": 5.53,
-      "videoSrc": "short/iron-from-the-stars/broll/2.mp4"
+      "videoSrc": "short/iron-from-the-stars/broll/3.mp4"
     },
     {
       "kind": "line",
-      "audioSrc": "short/iron-from-the-stars/3.wav",
-      "fromSeconds": 20.01,
+      "audioSrc": "short/iron-from-the-stars/4.wav",
+      "fromSeconds": 27.01,
       "words": [
         {
           "text": "You",
@@ -340,12 +434,12 @@
         }
       ],
       "durationInSeconds": 3.68,
-      "videoSrc": "short/iron-from-the-stars/broll/3.mp4"
+      "videoSrc": "short/iron-from-the-stars/broll/4.mp4"
     },
     {
       "kind": "line",
-      "audioSrc": "short/iron-from-the-stars/4.wav",
-      "fromSeconds": 23.69,
+      "audioSrc": "short/iron-from-the-stars/5.wav",
+      "fromSeconds": 30.69,
       "words": [
         {
           "text": "Now",
@@ -464,12 +558,12 @@
         }
       ],
       "durationInSeconds": 8.95,
-      "videoSrc": "short/iron-from-the-stars/broll/4.mp4"
+      "videoSrc": "short/iron-from-the-stars/broll/5.mp4"
     },
     {
       "kind": "line",
-      "audioSrc": "short/iron-from-the-stars/5.wav",
-      "fromSeconds": 32.64,
+      "audioSrc": "short/iron-from-the-stars/6.wav",
+      "fromSeconds": 39.64,
       "words": [
         {
           "text": "And",
@@ -549,126 +643,220 @@
       ],
       "source": "Qur'an 57:25 · Saheeh Int'l",
       "durationInSeconds": 5.88,
-      "videoSrc": "short/iron-from-the-stars/broll/5.mp4"
+      "videoSrc": "short/iron-from-the-stars/broll/6.mp4"
     },
     {
-      "kind": "cta",
-      "audioSrc": "short/iron-from-the-stars/6.wav",
-      "fromSeconds": 38.52,
+      "kind": "line",
+      "audioSrc": "short/iron-from-the-stars/7.wav",
+      "fromSeconds": 45.52,
       "words": [
         {
-          "text": "Sent",
-          "start": 0.25,
-          "end": 0.5
+          "text": "The",
+          "start": 0.225,
+          "end": 0.325
         },
         {
-          "text": "down.",
-          "start": 0.5,
-          "end": 1.075
+          "text": "very",
+          "start": 0.325,
+          "end": 0.662
         },
         {
-          "text": "From",
-          "start": 1.075,
-          "end": 1.238
+          "text": "element",
+          "start": 0.662,
+          "end": 1.225
         },
         {
-          "text": "a",
-          "start": 1.238,
-          "end": 1.337
+          "text": "running",
+          "start": 1.225,
+          "end": 1.637
         },
         {
-          "text": "book,",
-          "start": 1.337,
+          "text": "through",
+          "start": 1.637,
           "end": 1.9
         },
         {
-          "text": "in",
+          "text": "your",
           "start": 1.9,
-          "end": 2.013
-        },
-        {
-          "text": "the",
-          "start": 2.013,
           "end": 2.1
         },
         {
-          "text": "desert.",
+          "text": "veins",
           "start": 2.1,
-          "end": 2.925
+          "end": 2.888
         },
         {
-          "text": "Before",
-          "start": 2.925,
-          "end": 3.3
+          "text": "was",
+          "start": 2.888,
+          "end": 3.112
         },
         {
-          "text": "anyone",
-          "start": 3.3,
-          "end": 3.675
+          "text": "born",
+          "start": 3.112,
+          "end": 3.763
         },
         {
-          "text": "knew",
-          "start": 3.675,
-          "end": 3.95
+          "text": "in",
+          "start": 3.763,
+          "end": 3.888
         },
         {
-          "text": "where",
-          "start": 3.95,
-          "end": 4.15
+          "text": "an",
+          "start": 3.888,
+          "end": 3.975
         },
         {
-          "text": "iron",
-          "start": 4.15,
-          "end": 4.475
+          "text": "explosion",
+          "start": 3.975,
+          "end": 4.65
         },
         {
-          "text": "came",
-          "start": 4.475,
-          "end": 4.775
+          "text": "halfway",
+          "start": 4.65,
+          "end": 5.312
         },
         {
-          "text": "from.",
-          "start": 4.775,
-          "end": 5.412
-        },
-        {
-          "text": "Follow",
-          "start": 5.412,
-          "end": 5.75
-        },
-        {
-          "text": "for",
-          "start": 5.75,
-          "end": 5.862
+          "text": "across",
+          "start": 5.312,
+          "end": 5.675
         },
         {
           "text": "the",
-          "start": 5.862,
+          "start": 5.675,
+          "end": 5.775
+        },
+        {
+          "text": "galaxy.",
+          "start": 5.775,
+          "end": 6.85
+        }
+      ],
+      "durationInSeconds": 7.4,
+      "videoSrc": "short/iron-from-the-stars/broll/7.mp4"
+    },
+    {
+      "kind": "cta",
+      "audioSrc": "short/iron-from-the-stars/8.wav",
+      "fromSeconds": 52.92,
+      "words": [
+        {
+          "text": "And",
+          "start": 0.225,
+          "end": 0.338
+        },
+        {
+          "text": "a",
+          "start": 0.338,
+          "end": 0.438
+        },
+        {
+          "text": "book,",
+          "start": 0.438,
+          "end": 0.875
+        },
+        {
+          "text": "in",
+          "start": 0.875,
+          "end": 0.988
+        },
+        {
+          "text": "the",
+          "start": 0.988,
+          "end": 1.075
+        },
+        {
+          "text": "desert,",
+          "start": 1.075,
+          "end": 1.775
+        },
+        {
+          "text": "called",
+          "start": 1.775,
+          "end": 2.038
+        },
+        {
+          "text": "it",
+          "start": 2.038,
+          "end": 2.112
+        },
+        {
+          "text": "a",
+          "start": 2.112,
+          "end": 2.212
+        },
+        {
+          "text": "gift",
+          "start": 2.212,
+          "end": 2.587
+        },
+        {
+          "text": "sent",
+          "start": 2.587,
+          "end": 2.875
+        },
+        {
+          "text": "down.",
+          "start": 2.875,
+          "end": 3.638
+        },
+        {
+          "text": "Fourteen",
+          "start": 3.638,
+          "end": 4.213
+        },
+        {
+          "text": "centuries",
+          "start": 4.213,
+          "end": 4.812
+        },
+        {
+          "text": "early.",
+          "start": 4.812,
+          "end": 5.537
+        },
+        {
+          "text": "Follow",
+          "start": 5.537,
+          "end": 5.875
+        },
+        {
+          "text": "for",
+          "start": 5.875,
           "end": 5.987
         },
         {
-          "text": "signs",
+          "text": "the",
           "start": 5.987,
-          "end": 6.45
+          "end": 6.112
+        },
+        {
+          "text": "signs",
+          "start": 6.112,
+          "end": 6.575
         },
         {
           "text": "people",
-          "start": 6.45,
-          "end": 6.838
+          "start": 6.575,
+          "end": 6.963
         },
         {
           "text": "scroll",
-          "start": 6.838,
-          "end": 7.312
+          "start": 6.963,
+          "end": 7.487
+        },
+        {
+          "text": "straight",
+          "start": 7.487,
+          "end": 7.838
         },
         {
           "text": "past.",
-          "start": 7.312,
-          "end": 8.275
+          "start": 7.838,
+          "end": 8.825
         }
       ],
-      "durationInSeconds": 8.82,
-      "videoSrc": "short/iron-from-the-stars/broll/6.mp4"
+      "durationInSeconds": 9.38,
+      "videoSrc": "short/iron-from-the-stars/broll/8.mp4"
     }
   ]
 }

@@ -286,9 +286,15 @@ export const Scene: React.FC<{ beat: ShortBeat }> = ({ beat }) => {
       </AbsoluteFill>
     );
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 62px", gap: 44 }}>
+    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 62px" }}>
       <Kinetic words={beat.words} size={beat.kind === "hook" ? 90 : 78} maxWords={3} />
-      {beat.source ? <Chips source={beat.source} /> : null}
+      {/* Citation pinned to the lower third so it never collides with the
+          centred caption. */}
+      {beat.source ? (
+        <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 300 }}>
+          <Chips source={beat.source} />
+        </AbsoluteFill>
+      ) : null}
     </AbsoluteFill>
   );
 };
