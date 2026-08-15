@@ -9,6 +9,7 @@ import { quranPropsSchema, QuranProps } from "./QuranVideo/schema";
 import { StoryVideo, STORY_FPS, storyDurationInFrames } from "./QuranVideo/StoryVideo";
 import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
 import { ShortVideo, SHORT_FPS, shortDurationInFrames } from "./QuranVideo/ShortVideo";
+import { KineticShort, KINETIC_FPS, kineticDurationInFrames } from "./QuranVideo/KineticShort";
 import { shortPropsSchema, ShortProps } from "./QuranVideo/shortSchema";
 import sampleData from "./data/sample-al-ikhlas.json";
 import sampleStory from "./data/sample-story.json";
@@ -103,6 +104,21 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         calculateMetadata={({ props }) => ({
           durationInFrames: shortDurationInFrames(props),
+        })}
+      />
+
+      {/* Motion-design short (vertical) — NO stock footage. Animated Islamic
+          geometry + word-by-word kinetic typography synced to the narration. */}
+      <Composition
+        id="KineticShort"
+        component={KineticShort}
+        schema={shortPropsSchema}
+        defaultProps={defaultShortProps}
+        fps={KINETIC_FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: kineticDurationInFrames(props),
         })}
       />
     </>
