@@ -295,11 +295,18 @@ export const Scene: React.FC<{ beat: ShortBeat }> = ({ beat }) => {
         <Chips translit={beat.translit} source={beat.source} />
       </AbsoluteFill>
     );
+  // On map beats the pin sits dead-centre, so lift the caption to the upper
+  // third and keep the location chip in the lower third — pin stays visible.
+  const isMap = !!beat.videoSrc && /\.(png|jpe?g|webp|gif)$/i.test(beat.videoSrc);
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 62px" }}>
+    <AbsoluteFill
+      style={{
+        justifyContent: isMap ? "flex-start" : "center",
+        alignItems: "center",
+        padding: isMap ? "300px 62px 0" : "0 62px",
+      }}
+    >
       <Kinetic words={beat.words} size={beat.kind === "hook" ? 90 : 78} maxWords={3} />
-      {/* Citation pinned to the lower third so it never collides with the
-          centred caption. */}
       {beat.source ? (
         <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 300 }}>
           <Chips source={beat.source} />
