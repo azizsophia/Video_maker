@@ -1,0 +1,79 @@
+{
+  "id": "al-hijr-warning",
+  "title": "The Place the Prophet ﷺ Told You Never to Enter",
+  "theme": "emerald",
+  "voice": "bm_george",
+  "lang_code": "b",
+  "voiceName": "Kokoro · bm_george (British male)",
+  "handle": "@Ketabi.studio",
+  "translation": "20",
+  "pronounce": {
+    "Quran": "kʊrˈɑːn",
+    "Muhammad": "mʊhˈæmæd",
+    "Thamud": "θæmˈuːd",
+    "Salih": "sˈɑːlɪh",
+    "Ula": "ˈuːlɑː",
+    "Hijr": "hˈɪdʒr"
+  },
+  "_accuracy": "All sourced: the Prophet ﷺ passing Al-Hijr on the way to Tabuk and forbidding entry except while weeping (Sahih al-Bukhari 3379); Al-Hijr named in Qur'an 15:80; Thamud carving mountain homes (7:74); the she-camel sign (7:73, 26:155); killing it and the ṣayḥah/scream after three days (11:65–67, 54:31). Map is real Esri satellite imagery pinned to Hegra/Mada'in Salih (26.7917°N, 37.9539°E). No human depictions.",
+  "beats": [
+    {
+      "kind": "hook",
+      "say": "There's a place in Saudi Arabia the Prophet Muhammad, peace be upon him, warned his companions not to enter. And to hurry through it, covering their faces.",
+      "query": ["Al Ula Saudi Arabia desert", "sandstone desert cliffs aerial", "desert rock formations"]
+    },
+    {
+      "kind": "line",
+      "say": "He told them not to drink from its wells. And not to enter, unless they were weeping.",
+      "source": "Sahih al-Bukhari 3379",
+      "query": ["desert canyon sandstone", "sandstorm desert wind", "empty desert dunes"]
+    },
+    {
+      "kind": "line",
+      "say": "Because this is Al-Hijr. The land of Thamud.",
+      "clip": "maps/alhijr-wide.png",
+      "source": "Al-Ḥijr · Al-ʿUlā, Saudi Arabia",
+      "hold": 1.2
+    },
+    {
+      "kind": "line",
+      "say": "Right here. In the deserts of Al-Ula.",
+      "clip": "maps/alhijr-close.png",
+      "source": "26.79°N · 37.95°E",
+      "hold": 1.2
+    },
+    {
+      "kind": "line",
+      "say": "The Quran even names them. The companions of Al-Hijr, who denied the messengers.",
+      "source": "Qur'an 15:80",
+      "query": ["ancient desert rock mountains", "sandstone cliffs sunset", "desert rock canyon"]
+    },
+    {
+      "kind": "line",
+      "say": "Thamud were master builders. They carved entire homes into solid mountains.",
+      "source": "Qur'an 7:74",
+      "query": ["carved rock formation desert", "sandstone canyon cliffs", "rock cliffs desert"]
+    },
+    {
+      "kind": "line",
+      "say": "So Allah sent them the prophet Salih, with one miracle. A she-camel. And one rule. Let it drink freely, and never harm it.",
+      "query": ["desert oasis water palm", "desert spring water", "golden desert landscape"]
+    },
+    {
+      "kind": "line",
+      "say": "They killed it anyway. Three days later, a single scream from the sky ended them all.",
+      "source": "Qur'an 11:65–67",
+      "query": ["desert lightning storm", "dark storm clouds desert", "dramatic desert sky"]
+    },
+    {
+      "kind": "cta",
+      "say": "Their homes still stand today. Empty. So the Prophet rushed past, and warned: don't enter, unless you're weeping. Follow, for the places history tried to bury.",
+      "query": ["Al Ula rock formation sunset", "desert ruins golden hour", "desert sunset landscape"]
+    }
+  ],
+  "sources": [
+    "Sahih al-Bukhari 3379 — the Prophet ﷺ at al-Hijr: do not enter upon those punished except while weeping; he covered his head and hurried through the valley.",
+    "Qur'an 15:80–84 — the companions of al-Hijr denied the messengers.",
+    "Qur'an 7:73–79; 11:61–68; 26:141–158; 54:23–31 — Thamud, Salih, the she-camel, and the ṣayḥah (scream)."
+  ]
+}

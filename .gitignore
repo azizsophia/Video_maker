@@ -13,3 +13,5 @@ src/data/story-render.json
 .env.local
 __pycache__/
 *.pyc
+public/maps/
+src/data/*-render.json

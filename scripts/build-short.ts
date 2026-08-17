@@ -254,9 +254,14 @@ async function main() {
 
     beat.durationInSeconds = durationInSeconds;
 
+    // A script can pin a specific local asset (e.g. a rendered map) via `clip`.
+    if (b.clip) {
+      beat.videoSrc = String(b.clip);
+      console.log(`    clip ${i}: using ${b.clip}`);
+    }
     // Matched B-roll (uses the final duration to prefer a long-enough clip).
     // Reuse an already-downloaded clip so re-runs keep the same visuals.
-    if (Array.isArray(b.query) && b.query.length) {
+    else if (Array.isArray(b.query) && b.query.length) {
       const dest = join("public", "short", sid, "broll", `${i}.mp4`);
       if (existsSync(dest)) {
         beat.videoSrc = `short/${sid}/broll/${i}.mp4`;

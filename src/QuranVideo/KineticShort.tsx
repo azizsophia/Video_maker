@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
+  Img,
   OffthreadVideo,
   Sequence,
   staticFile,
@@ -113,11 +114,20 @@ const MotionBackground: React.FC = () => {
 const FootageBg: React.FC<{ src: string }> = ({ src }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const scale = interpolate(frame, [0, durationInFrames], [1.05, 1.16], { extrapolateRight: "clamp" });
+  const url = /^https?:\/\//.test(src) ? src : staticFile(src);
+  const isImage = /\.(png|jpe?g|webp|gif)$/i.test(src);
+  // Images (e.g. satellite maps) get a stronger "zoom into the pin" push.
+  const scale = interpolate(frame, [0, durationInFrames], [1.05, isImage ? 1.35 : 1.16], {
+    extrapolateRight: "clamp",
+  });
   return (
     <AbsoluteFill style={{ backgroundColor: INK, overflow: "hidden" }}>
       <AbsoluteFill style={{ transform: `scale(${scale})` }}>
-        <OffthreadVideo src={/^https?:\/\//.test(src) ? src : staticFile(src)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        {isImage ? (
+          <Img src={url} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        ) : (
+          <OffthreadVideo src={url} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        )}
       </AbsoluteFill>
       <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.12) 32%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.8) 100%)` }} />
       <AbsoluteFill style={{ background: `radial-gradient(120% 76% at 50% 32%, ${EMERALD}18 0%, transparent 55%)` }} />
