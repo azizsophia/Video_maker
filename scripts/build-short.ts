@@ -40,7 +40,8 @@ const stripHtml = (s: string): string =>
   s.replace(/<sup[^>]*>.*?<\/sup>/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 
 // Words we don't want in a background clip (keeps humans out of frame).
-const PEOPLE = /people|person|\bman\b|\bmen\b|woman|women|girl|\bboy\b|kid|child|children|baby|face|portrait|selfie|crowd|hand|finger|model|dancer|athlete|worker/i;
+const PEOPLE =
+  /people|person|\bman\b|\bmen\b|woman|women|girl|\bboy\b|kid|child|children|baby|face|portrait|selfie|crowd|hand|finger|model|dancer|athlete|worker|walk|walking|tourist|hiker|hiking|traveler|traveller|runner|running|silhouette|couple|family|standing|sitting|holding|female|male|lady|guy|human|pilgrim/i;
 
 async function getJson<T>(url: string, headers: Record<string, string> = {}): Promise<T> {
   const res = await fetch(url, { headers: { Accept: "application/json", ...headers } });
@@ -141,6 +142,62 @@ function applyPronounce(text: string, dict: Record<string, string>): string {
   return out;
 }
 
+// --- ElevenLabs narration (natural voice + native pronunciation) ------------
+type Word = { text: string; start: number; end: number };
+
+// Turn ElevenLabs character-level alignment into word timings (punctuation
+// stays attached to the preceding word so caption lines can break on it).
+function charsToWords(a: any): Word[] {
+  if (!a?.characters) return [];
+  const ch: string[] = a.characters;
+  const s: number[] = a.character_start_times_seconds;
+  const e: number[] = a.character_end_times_seconds;
+  const words: Word[] = [];
+  let cur = "";
+  let cs = 0;
+  let ce = 0;
+  for (let i = 0; i < ch.length; i++) {
+    if (/\s/.test(ch[i])) {
+      if (cur) {
+        words.push({ text: cur, start: +cs.toFixed(3), end: +ce.toFixed(3) });
+        cur = "";
+      }
+    } else {
+      if (!cur) cs = s[i];
+      cur += ch[i];
+      ce = e[i];
+    }
+  }
+  if (cur) words.push({ text: cur, start: +cs.toFixed(3), end: +ce.toFixed(3) });
+  return words;
+}
+
+async function elevenNarrate(
+  text: string,
+  voiceId: string,
+  apiKey: string,
+  modelId: string
+): Promise<{ audio: Buffer; words: Word[]; duration: number }> {
+  const res = await fetch(
+    `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/with-timestamps`,
+    {
+      method: "POST",
+      headers: { "xi-api-key": apiKey, "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        text,
+        model_id: modelId,
+        voice_settings: { stability: 0.5, similarity_boost: 0.8, style: 0.0, use_speaker_boost: true },
+      }),
+    }
+  );
+  if (!res.ok) throw new Error(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 240)}`);
+  const data: any = await res.json();
+  const audio = Buffer.from(data.audio_base64, "base64");
+  const words = charsToWords(data.alignment || data.normalized_alignment);
+  const duration = words.length ? words[words.length - 1].end : 2;
+  return { audio, words, duration };
+}
+
 async function main() {
   const args = parseArgs();
   const scriptFile = args.script ?? "scripts/shorts/three-people-allah-loves.json";
@@ -161,37 +218,69 @@ async function main() {
   const beats: any[] = script.beats;
   const isRecite = (b: any) => b.kind === "ayah" && (b.recite || b.reciter);
 
-  // 1) Narrate every beat that has spoken text, in one Kokoro run. -----------
-  const manifest = {
-    voice,
-    lang_code: lang,
-    speed: Number(script.speed ?? 1.0),
-    index: "build/tts-index.json",
-    segments: beats
-      .map((b, i) => ({ b, i }))
-      .filter(({ b }) => b.say)
-      .map(({ b, i }) => ({
-        id: `${i}-${b.kind}`,
-        text: applyPronounce(b.say as string, pronounce),
-        out: join("public", "short", sid, `${i}.wav`),
-        timestamps: join("build", sid, `${i}.json`),
-      })),
-  };
-  await mkdir("build", { recursive: true });
-  await writeFile("build/tts-manifest.json", JSON.stringify(manifest, null, 2));
+  // Voice engine: ElevenLabs when a key is present (natural voice + correct
+  // pronunciation), otherwise the free Kokoro model.
+  const elKey = (process.env.ELEVENLABS_API_KEY || "").trim();
+  const useEleven = Boolean(elKey);
+  const voiceId = String(script.voiceId || "JBFqnCBsd6RMkjVDRZzb"); // "George", British male
+  const elModel = String(script.elModel || "eleven_multilingual_v2");
+  const audioExt = useEleven ? "mp3" : "wav";
 
-  if (!args["skip-tts"]) {
-    console.log(`\n🎙️  Kokoro narration (voice=${voice}, lang=${lang})…`);
-    const py = spawnSync("python3", ["scripts/kokoro_tts.py", "--manifest", "build/tts-manifest.json"], {
-      stdio: "inherit",
-    });
-    if (py.status !== 0) {
-      throw new Error(
-        "Kokoro narration failed. Install it with:\n" +
-          "  pip install -r scripts/requirements-kokoro.txt\n" +
-          "  (and the espeak-ng system package)\n" +
-          "or pass --skip-tts to reuse existing WAVs."
-      );
+  await mkdir(join("public", "short", sid), { recursive: true });
+  await mkdir(join("build", sid), { recursive: true });
+
+  // 1) Narrate every beat that has spoken text. ------------------------------
+  if (useEleven) {
+    console.log(`\n🎙️  ElevenLabs narration (voice=${voiceId}, model=${elModel})…`);
+    let chars = 0;
+    for (let i = 0; i < beats.length; i++) {
+      const b = beats[i];
+      if (!b.say) continue;
+      const mp3 = join("public", "short", sid, `${i}.mp3`);
+      const tsf = join("build", sid, `${i}.json`);
+      if (existsSync(mp3) && existsSync(tsf)) {
+        console.log(`  ↺ ${i}-${b.kind}: cached (0 characters used)`);
+        continue;
+      }
+      if (args["skip-tts"]) continue;
+      const { audio, words, duration } = await elevenNarrate(b.say as string, voiceId, elKey, elModel);
+      await writeFile(mp3, audio);
+      await writeFile(tsf, JSON.stringify({ words, duration }));
+      chars += (b.say as string).length;
+      console.log(`  ✓ ${i}-${b.kind}: ${duration.toFixed(1)}s, ${words.length} words`);
+    }
+    console.log(`  (~${chars} characters used this build)`);
+  } else {
+    const manifest = {
+      voice,
+      lang_code: lang,
+      speed: Number(script.speed ?? 1.0),
+      index: "build/tts-index.json",
+      segments: beats
+        .map((b, i) => ({ b, i }))
+        .filter(({ b }) => b.say)
+        .map(({ b, i }) => ({
+          id: `${i}-${b.kind}`,
+          text: applyPronounce(b.say as string, pronounce),
+          out: join("public", "short", sid, `${i}.wav`),
+          timestamps: join("build", sid, `${i}.json`),
+        })),
+    };
+    await mkdir("build", { recursive: true });
+    await writeFile("build/tts-manifest.json", JSON.stringify(manifest, null, 2));
+    if (!args["skip-tts"]) {
+      console.log(`\n🎙️  Kokoro narration (voice=${voice}, lang=${lang})…`);
+      const py = spawnSync("python3", ["scripts/kokoro_tts.py", "--manifest", "build/tts-manifest.json"], {
+        stdio: "inherit",
+      });
+      if (py.status !== 0) {
+        throw new Error(
+          "Kokoro narration failed. Install it with:\n" +
+            "  pip install -r scripts/requirements-kokoro.txt\n" +
+            "  (and the espeak-ng system package)\n" +
+            "or pass --skip-tts to reuse existing WAVs."
+        );
+      }
     }
   }
 
@@ -214,7 +303,7 @@ async function main() {
 
     const beat: any = {
       kind: b.kind,
-      audioSrc: hasAudio ? `short/${sid}/${i}.wav` : "",
+      audioSrc: hasAudio ? `short/${sid}/${i}.${audioExt}` : "",
       fromSeconds: Number(cursor.toFixed(2)),
       words,
       badge: b.badge,
