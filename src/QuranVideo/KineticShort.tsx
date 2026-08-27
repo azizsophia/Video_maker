@@ -116,8 +116,9 @@ const FootageBg: React.FC<{ src: string }> = ({ src }) => {
   const { durationInFrames } = useVideoConfig();
   const url = /^https?:\/\//.test(src) ? src : staticFile(src);
   const isImage = /\.(png|jpe?g|webp|gif)$/i.test(src);
-  // Images (e.g. satellite maps) get a stronger "zoom into the pin" push.
-  const scale = interpolate(frame, [0, durationInFrames], [1.05, isImage ? 1.35 : 1.16], {
+  // Very gentle drift so we never add motion on top of already-moving footage
+  // (keeps it calm, not dizzying). Maps get a slightly larger, slow push.
+  const scale = interpolate(frame, [0, durationInFrames], [1.02, isImage ? 1.12 : 1.06], {
     extrapolateRight: "clamp",
   });
   return (
@@ -174,7 +175,7 @@ const Kinetic: React.FC<{ words?: ShortWord[]; size?: number; maxWords?: number 
       {lw.map((w, i) => {
         // Each word pops in on its own start time (typewriter-by-voice).
         const wf = frame - Math.round(w.start * fps);
-        const enter = spring({ frame: wf, fps, config: { damping: 14, stiffness: 200, mass: 0.5 } });
+        const enter = spring({ frame: wf, fps, config: { damping: 22, stiffness: 130, mass: 0.6 } });
         const appeared = t >= w.start - 0.04;
         const active = i === activeIdx;
         return (
@@ -184,7 +185,7 @@ const Kinetic: React.FC<{ words?: ShortWord[]; size?: number; maxWords?: number 
               display: "inline-block",
               color: active ? GOLD : WHITE,
               opacity: appeared ? enter : 0,
-              transform: `translateY(${(1 - enter) * 34}px) scale(${active ? 1.08 : 0.9 + enter * 0.1})`,
+              transform: `translateY(${(1 - enter) * 14}px) scale(${active ? 1.04 : 0.97 + enter * 0.03})`,
               textShadow: active
                 ? `0 0 26px ${GOLD}88, 0 4px 20px rgba(0,0,0,0.85)`
                 : "0 4px 20px rgba(0,0,0,0.85)",
