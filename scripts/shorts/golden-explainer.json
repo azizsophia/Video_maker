@@ -1,0 +1,27 @@
+{
+  "id": "golden-explainer",
+  "title": "The Golden Ratio — Explained",
+  "theme": "emerald",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "voiceName": "ElevenLabs · George (British male)",
+  "handle": "@Ketabi.studio",
+  "translation": "20",
+  "_accuracy": "Maths half is drawn on screen (Fibonacci sequence, the ratio landing on 1.618, the golden spiral) — accurate. Qur'an half uses only strong sources shown on screen (54:49 Arabic from Quran.com, 25:2, 67:3, 2:144 qibla with real Kaaba satellite map, 16:18). Framed as ORDER in creation — NOT a claim that the Qur'an encodes 1.618, and none of the debunked 'golden ratio of the Earth' / letter-count numerology.",
+  "beats": [
+    { "kind": "line", "scene": "title", "say": "There's a number hidden in everything that grows. Mathematicians call it the golden ratio." },
+    { "kind": "line", "scene": "fibonacci", "label": "The Fibonacci Sequence", "say": "It starts with a simple sequence. Begin with one, and one. Then just add the last two numbers to get the next. One, two, three, five, eight, thirteen, twenty one." },
+    { "kind": "line", "scene": "ratio", "label": "The Golden Ratio", "say": "Now divide any number by the one before it. Eight over five. Thirteen over eight. You keep landing on the exact same number. One point six one eight." },
+    { "kind": "line", "scene": "spiral", "label": "One Perfect Spiral", "say": "Follow that ratio outward, and it draws this. A spiral that grows forever, and never loses its shape." },
+    { "kind": "line", "scene": "nature", "say": "And this exact spiral is hidden in the seeds of a sunflower.", "query": ["sunflower center seeds macro", "sunflower head spiral macro", "sunflower seeds close up"] },
+    { "kind": "line", "scene": "bridge", "say": "For centuries, people called this a coincidence. The Quran called it something else, fourteen hundred years ago." },
+    { "kind": "ayah", "scene": "ayah", "say": "Indeed, We created everything with precise measure.", "verse": "54:49", "source": "Qur'an 54:49", "hold": 1.4 },
+    { "kind": "line", "scene": "darkline", "say": "He created all things, and gave each one its exact proportion.", "source": "Qur'an 25:2" },
+    { "kind": "line", "scene": "darkline", "say": "Look again, and again. You will not find a single flaw in what He made.", "source": "Qur'an 67:3" },
+    { "kind": "line", "scene": "map", "say": "And the same God who ordered every spiral gave the believers one point to face.", "clip": "maps/mecca-close.png", "source": "Qur'an 2:144 · the Qibla", "hold": 1.4 },
+    { "kind": "cta", "scene": "darkline", "say": "So if you ever tried to count the signs hidden in it all, you never could. It was never random.", "source": "Qur'an 16:18" }
+  ],
+  "sources": [
+    "Fibonacci / golden ratio: standard mathematics; golden-spiral phyllotaxis in sunflowers is well documented.",
+    "Qur'an 54:49, 25:2, 67:3, 2:144, 16:18 — order/measure in creation, the qibla, and uncountable blessings."
+  ]
+}

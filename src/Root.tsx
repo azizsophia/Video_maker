@@ -11,6 +11,7 @@ import { storyPropsSchema, StoryProps } from "./QuranVideo/storySchema";
 import { ShortVideo, SHORT_FPS, shortDurationInFrames } from "./QuranVideo/ShortVideo";
 import { KineticShort, KINETIC_FPS, kineticDurationInFrames } from "./QuranVideo/KineticShort";
 import { DemoReel, demoReelDurationInFrames } from "./QuranVideo/DemoReel";
+import { GoldenExplainer, EXPLAINER_FPS, explainerDurationInFrames } from "./QuranVideo/GoldenExplainer";
 import { shortPropsSchema, ShortProps } from "./QuranVideo/shortSchema";
 import sampleData from "./data/sample-al-ikhlas.json";
 import sampleStory from "./data/sample-story.json";
@@ -135,6 +136,21 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         calculateMetadata={({ props }) => ({
           durationInFrames: demoReelDurationInFrames(props),
+        })}
+      />
+
+      {/* Animated maths explainer (golden ratio) — drawn on screen, then the
+          sourced Qur'an verses. */}
+      <Composition
+        id="GoldenExplainer"
+        component={GoldenExplainer}
+        schema={shortPropsSchema}
+        defaultProps={defaultShortProps}
+        fps={EXPLAINER_FPS}
+        width={1080}
+        height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: explainerDurationInFrames(props),
         })}
       />
     </>

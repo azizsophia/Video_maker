@@ -37,6 +37,11 @@ export const shortBeatSchema = z.object({
   // + a trusted translation.
   arabic: z.string().optional(),
   translation: z.string().optional(),
+
+  // Animated-explainer scenes (GoldenExplainer): which custom scene to render,
+  // and an optional top label.
+  scene: z.string().optional(),
+  label: z.string().optional(),
 });
 
 export const shortPropsSchema = z.object({

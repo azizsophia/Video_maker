@@ -310,6 +310,8 @@ async function main() {
       kicker: b.kicker,
       translit: b.translit,
       source: b.source,
+      scene: b.scene,
+      label: b.label,
     };
 
     // Real ayah: Arabic (+ translation) from Quran.com. Optionally a real
