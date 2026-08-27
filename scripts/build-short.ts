@@ -71,11 +71,11 @@ function pickPortraitFile(v: PexVideo): PexFile | null {
     (f) => f.file_type === "video/mp4" && f.height > f.width && f.width >= 700
   );
   if (!portrait.length) return null;
-  // Prefer the smallest file that's at least 1080 wide; else the largest one.
-  const atLeast1080 = portrait
-    .filter((f) => f.width >= 1080)
-    .sort((a, b) => a.width - b.width);
-  return atLeast1080[0] ?? portrait.sort((a, b) => b.width - a.width)[0];
+  // Prefer a crisp ~1080–1500w portrait (downscales cleanly to the 1080 output
+  // and stays light to software-render); fall back to the largest available.
+  // True 4K sources are avoided — they stall the GPU-less renderer.
+  const hi = portrait.filter((f) => f.width >= 1080 && f.width <= 1500).sort((a, b) => b.width - a.width);
+  return hi[0] ?? portrait.sort((a, b) => a.width - b.width)[0];
 }
 
 async function fetchBroll(
@@ -87,7 +87,7 @@ async function fetchBroll(
   for (const q of queries) {
     try {
       const data = await getJson<{ videos: PexVideo[] }>(
-        `${PEXELS_API}?query=${encodeURIComponent(q)}&orientation=portrait&size=medium&per_page=8`,
+        `${PEXELS_API}?query=${encodeURIComponent(q)}&orientation=portrait&size=large&per_page=8`,
         { Authorization: key }
       );
       const clean = (data.videos ?? []).filter((v) => !PEOPLE.test(v.url));

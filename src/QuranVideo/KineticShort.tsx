@@ -130,8 +130,12 @@ const FootageBg: React.FC<{ src: string }> = ({ src }) => {
           <OffthreadVideo src={url} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         )}
       </AbsoluteFill>
-      <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.12) 32%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.8) 100%)` }} />
-      <AbsoluteFill style={{ background: `radial-gradient(120% 76% at 50% 32%, ${EMERALD}18 0%, transparent 55%)` }} />
+      {/* Moody cinematic grade: overall darken + top/bottom scrim + heavy
+          vignette + a whisper of cool tint. */}
+      <AbsoluteFill style={{ background: "rgba(3,9,7,0.34)" }} />
+      <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.24) 30%, rgba(0,0,0,0.24) 52%, rgba(0,0,0,0.9) 100%)` }} />
+      <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 42%, transparent 30%, rgba(0,0,0,0.58) 100%)" }} />
+      <AbsoluteFill style={{ background: `radial-gradient(120% 76% at 50% 30%, ${EMERALD}14 0%, transparent 55%)` }} />
     </AbsoluteFill>
   );
 };

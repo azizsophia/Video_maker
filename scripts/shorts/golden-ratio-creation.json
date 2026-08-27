@@ -10,8 +10,8 @@
   "beats": [
     {
       "kind": "hook",
-      "say": "Hidden inside a sunflower is a pattern most people walk straight past. And once you see it, you start noticing it everywhere.",
-      "query": ["sunflower close up macro", "sunflower blooming macro", "sunflower head macro"]
+      "say": "There's a hidden number that keeps appearing in nature. In a sunflower. A pinecone. The spiral of a shell. They call it the golden ratio. And it echoes something the Quran said about creation, fourteen hundred years ago.",
+      "query": ["sunflower close up macro dark", "moody sunflower macro", "sunflower head macro"]
     },
     {
       "kind": "line",
@@ -20,7 +20,7 @@
     },
     {
       "kind": "line",
-      "say": "It's called the golden ratio. One point six one eight. A number that keeps showing up wherever living things grow.",
+      "say": "Divide any two numbers next to each other, and you always land on the same thing. One point six one eight.",
       "query": ["pine cone close up macro", "sunflower seeds spiral macro", "spiral pattern nature"]
     },
     {
