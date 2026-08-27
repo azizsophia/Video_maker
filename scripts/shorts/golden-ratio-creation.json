@@ -1,0 +1,78 @@
+{
+  "id": "golden-ratio-creation",
+  "title": "The Number Hidden in Creation",
+  "theme": "emerald",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "voiceName": "ElevenLabs · George (British male)",
+  "handle": "@Ketabi.studio",
+  "translation": "20",
+  "_accuracy": "Deliberately avoids the debunked numerology in the viral video (no 'Mecca is the golden ratio of the Earth', no letter-count 'miracles', no golden-ratio-in-the-human-body myth). Only strong claims: the golden ratio/Fibonacci is real and documented in plant phyllotaxis (sunflowers, pinecones); framed as ORDER in creation, a reflection — NOT a claim that the Qur'an encodes 1.618. Verses cited exactly and shown on screen: 54:49 (Arabic pulled from Quran.com), 25:2, 67:3, 2:144 (qibla), 16:18 (uncountable blessings). Real Esri satellite map pinned to the Kaaba (21.4225N, 39.8262E). Aerial/macro nature + space footage, no people.",
+  "beats": [
+    {
+      "kind": "hook",
+      "say": "Hidden inside a sunflower is a pattern most people walk straight past. And once you see it, you start noticing it everywhere.",
+      "query": ["sunflower close up macro", "sunflower blooming macro", "sunflower head macro"]
+    },
+    {
+      "kind": "line",
+      "say": "It comes from a simple rule. Start with one, and one. Then every number is just the two before it, added together. One, two, three, five, eight, thirteen.",
+      "query": ["spiral succulent plant macro", "green succulent top view", "aloe plant spiral macro"]
+    },
+    {
+      "kind": "line",
+      "say": "It's called the golden ratio. One point six one eight. A number that keeps showing up wherever living things grow.",
+      "query": ["pine cone close up macro", "sunflower seeds spiral macro", "spiral pattern nature"]
+    },
+    {
+      "kind": "line",
+      "say": "In the seeds of a sunflower, packed into perfect spirals. In the scales of a pinecone. In the shell of a snail.",
+      "query": ["sunflower seeds macro spiral", "snail shell spiral macro", "fern unfurling macro"]
+    },
+    {
+      "kind": "line",
+      "say": "For a long time, people called this a coincidence. The Quran, fourteen hundred years ago, called it something else.",
+      "query": ["spiral galaxy space", "deep space nebula stars", "cosmic spiral galaxy"]
+    },
+    {
+      "kind": "ayah",
+      "say": "Indeed, We created everything with precise measure.",
+      "verse": "54:49",
+      "source": "Qur'an 54:49",
+      "hold": 1.4,
+      "query": ["nebula deep space stars", "galaxy space clouds", "cosmic nebula colorful"]
+    },
+    {
+      "kind": "line",
+      "say": "He created all things, and gave each one its exact proportion.",
+      "source": "Qur'an 25:2",
+      "query": ["green fern unfurling macro", "plants growing timelapse", "leaf veins macro nature"]
+    },
+    {
+      "kind": "line",
+      "say": "Look again, and again. You will not find a single flaw in what He made.",
+      "source": "Qur'an 67:3",
+      "query": ["symmetrical flower macro", "spiral galaxy stars", "aurora night sky"]
+    },
+    {
+      "kind": "line",
+      "say": "And the same God who ordered every spiral in creation gave the believers one single point to turn toward.",
+      "clip": "maps/mecca-close.png",
+      "source": "Qur'an 2:144 · the Qibla",
+      "hold": 1.4
+    },
+    {
+      "kind": "cta",
+      "say": "So if you ever tried to count the signs hidden in it all, you never could. It was never random.",
+      "source": "Qur'an 16:18",
+      "query": ["milky way night sky stars", "earth from space sunrise", "vast starry night sky"]
+    }
+  ],
+  "sources": [
+    "Qur'an 54:49 — 'Indeed, We created everything with measure (qadar).'",
+    "Qur'an 25:2 — 'He created everything and determined it with precise proportion.'",
+    "Qur'an 67:3 — 'You see no flaw in the creation of the Most Merciful.'",
+    "Qur'an 2:144 — the command to face the Sacred Mosque (the Qibla).",
+    "Qur'an 16:18 — 'If you tried to count Allah's blessings, you could never enumerate them.'",
+    "Science: Fibonacci/golden-ratio phyllotaxis in sunflowers, pinecones, and other plants is well-documented (NOT claimed for galaxies, hurricanes, or human-body proportions, which are popular myths)."
+  ]
+}
