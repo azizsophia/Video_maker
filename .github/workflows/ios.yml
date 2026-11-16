@@ -40,11 +40,16 @@ jobs:
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-no-key
           NEXT_PUBLIC_E2E: "1"
       - name: Build the app for the simulator
+        timeout-minutes: 30
         run: |
           set -o pipefail
+          xcodebuild -resolvePackageDependencies -project ios/App/App.xcodeproj -scheme App \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" -skipPackagePluginValidation -skipMacroValidation 2>&1 | tail -n 25
           xcodebuild build -project ios/App/App.xcodeproj -scheme App -configuration Debug \
             -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
-            -derivedDataPath "$RUNNER_TEMP/dd" CODE_SIGNING_ALLOWED=NO | tail -n 15
+            -derivedDataPath "$RUNNER_TEMP/dd" -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" \
+            -skipPackagePluginValidation -skipMacroValidation \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee "$RUNNER_TEMP/build.log" | grep --line-buffered -E "^(Resolve|Fetching|Cloning|Computing|Creating working copy|\*\* BUILD)|error:" | head -n 200
       - name: Start a simulator
         id: sim
         run: |
