@@ -57,7 +57,7 @@ jobs:
             -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
             -derivedDataPath "$RUNNER_TEMP/dd" -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" -scmProvider system \
             -skipPackagePluginValidation -skipMacroValidation -disableAutomaticPackageResolution \
-            CODE_SIGNING_ALLOWED=NO 2>&1 | grep --line-buffered -E "^(\*\* BUILD|CompileSwift normal|Ld )|error:" | awk '{ print strftime("%T"), $0; fflush() }' | head -n 400
+            CODE_SIGNING_ALLOWED=NO 2>&1 | grep --line-buffered -E "^(\*\* BUILD|CompileSwift normal|Ld )|error:" | while IFS= read -r l; do echo "$(date +%T) $l"; done
       - name: Start a simulator
         id: sim
         run: |
