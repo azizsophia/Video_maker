@@ -11,7 +11,7 @@ OPENSSL=openssl
 work="$RUNNER_TEMP/unlock"; mkdir -p "$work"; chmod 700 "$work"
 $OPENSSL genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:3072 -out "$work/k.pem" 2>/dev/null
 $OPENSSL pkey -in "$work/k.pem" -pubout -out "$work/pub.pem"
-branch="keys-$name-$GITHUB_RUN_ID"
+branch="keys-$name-$GITHUB_RUN_ID-${GITHUB_RUN_ATTEMPT:-1}"
 git init -q "$work/repo"; cd "$work/repo"
 git checkout -q -b "$branch"
 cp "$work/pub.pem" pub.pem
