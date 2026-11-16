@@ -1,0 +1,83 @@
+name: Ketabi iPhone simulator test (temporary)
+on:
+  push:
+    branches: [ketabi-test]
+permissions:
+  contents: write
+jobs:
+  simulator:
+    runs-on: macos-15
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: src
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unlock
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash .github/unlock/unlock.sh ios
+      - name: Pick Xcode
+        run: |
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | sort -V | tail -1)"
+          xcodebuild -version
+      - name: Widget timing rules
+        run: |
+          mkdir -p device-results
+          TZ=Europe/London swiftc -O -o "$RUNNER_TEMP/logic-tests" "ios/App/Ketabi Widget/Shared/"*.swift ios/LogicTests/main.swift
+          TZ=Europe/London "$RUNNER_TEMP/logic-tests" | tee device-results/widget-timing.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the web app
+        run: |
+          npm ci --no-audit --no-fund --loglevel=error
+          npm run build > /dev/null
+          npx cap sync ios > /dev/null
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://bxvyoemwegzenjaynhwi.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ci-no-key
+          NEXT_PUBLIC_E2E: "1"
+      - name: Build the app for the simulator
+        run: |
+          set -o pipefail
+          xcodebuild build -project ios/App/App.xcodeproj -scheme App -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/dd" CODE_SIGNING_ALLOWED=NO | tail -n 15
+      - name: Start a simulator
+        id: sim
+        run: |
+          udid=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = [d for runtime, ds in json.load(sys.stdin)["devices"].items() if "iOS" in runtime for d in ds]
+          for wanted in ("iPhone 16", "iPhone 15", "iPhone 16 Pro"):
+              match = [d for d in devices if d["name"] == wanted]
+              if match:
+                  print(match[-1]["udid"]); break
+          else:
+              print([d for d in devices if d["name"].startswith("iPhone")][-1]["udid"])
+          ')
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid" -b > /dev/null
+          xcrun simctl status_bar "$udid" override --time "9:41" --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4
+          xcrun simctl location "$udid" set 51.5072,-0.1276
+          echo "udid=$udid" >> "$GITHUB_OUTPUT"
+      - name: Screen tour
+        env:
+          UDID: ${{ steps.sim.outputs.udid }}
+        run: |
+          app=$(ls -d "$RUNNER_TEMP"/dd/Build/Products/Debug-iphonesimulator/*.app | head -1)
+          xcrun simctl install "$UDID" "$app"
+          xcrun simctl privacy "$UDID" grant location com.ketabi.myapp || true
+          mkdir -p device-results
+          xcrun simctl launch --console-pty --terminate-running-process "$UDID" com.ketabi.myapp > device-results/app-log.txt 2>&1 &
+          bash .github/scripts/screen-tour.sh device-results/app-log.txt device-results/tour "xcrun simctl io $UDID screenshot --type=png \"\$1\" >/dev/null 2>&1"
+      - name: Keep screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-results
+          path: src/device-results/
+          retention-days: 1
+          if-no-files-found: ignore
