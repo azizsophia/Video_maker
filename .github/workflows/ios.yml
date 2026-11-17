@@ -17,7 +17,12 @@ jobs:
         working-directory: .
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash .github/unlock/unlock.sh ios
+        run: |
+          bash .github/unlock/unlock.sh ios
+          # The app sits inside this repo's checkout: keep git (and Xcode's
+          # source control scan) away from its untracked node_modules.
+          echo "src/" >> .git/info/exclude
+          defaults write com.apple.dt.Xcode IDESourceControlEnableSourceControl_10_0 -bool NO || true
       - name: Pick Xcode
         run: |
           sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | sort -V | tail -1)"
