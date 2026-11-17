@@ -50,9 +50,11 @@ jobs:
           GIT_TERMINAL_PROMPT: "0"
         working-directory: ${{ runner.temp }}/app
         run: |
-          ( for t in 60 180 400; do sleep $t; echo "=== $(date +%T) processes"; ps -axo pid,etime,pcpu,command | grep -E "git|swift|xcodebuild|curl|IDE|Service" | grep -v grep | cut -c1-220; done ) &
+          # No Keychain on this machine: a hidden Keychain prompt stalls xcodebuild.
+          touch ~/.netrc && chmod 600 ~/.netrc
+          git config --global credential.helper ""
           xcodebuild -resolvePackageDependencies -project ios/App/App.xcodeproj -scheme App \
-            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" -scmProvider system \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" -scmProvider system -packageAuthorizationProvider netrc \
             -skipPackagePluginValidation -skipMacroValidation 2>&1 | while IFS= read -r l; do echo "$(date +%T) $l"; done
       - name: Build the app for the simulator
         timeout-minutes: 30
@@ -63,7 +65,7 @@ jobs:
           set -o pipefail
           xcodebuild build -project ios/App/App.xcodeproj -scheme App -configuration Debug \
             -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
-            -derivedDataPath "$RUNNER_TEMP/dd" -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" -scmProvider system \
+            -derivedDataPath "$RUNNER_TEMP/dd" -clonedSourcePackagesDirPath "$RUNNER_TEMP/spm" -scmProvider system -packageAuthorizationProvider netrc \
             -skipPackagePluginValidation -skipMacroValidation -disableAutomaticPackageResolution \
             CODE_SIGNING_ALLOWED=NO 2>&1 | grep --line-buffered -E "^(\*\* BUILD|CompileSwift normal|Ld )|error:" | while IFS= read -r l; do echo "$(date +%T) $l"; done
       - name: Start a simulator
