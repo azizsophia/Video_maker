@@ -1,7 +1,6 @@
 name: Ketabi iPhone simulator test (temporary)
 on:
-  push:
-    branches: [ketabi-test]
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:

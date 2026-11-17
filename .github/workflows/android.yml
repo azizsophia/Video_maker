@@ -1,6 +1,7 @@
 name: Ketabi Android emulator test (temporary)
 on:
-  workflow_dispatch:
+  push:
+    branches: [ketabi-test]
 permissions:
   contents: write
 jobs:
