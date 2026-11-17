@@ -38,7 +38,8 @@ jobs:
       - name: Build the web app
         run: |
           npm ci --no-audit --no-fund --loglevel=error
-          npm run build > /dev/null
+          # Google Fonts sometimes answers next/font with an unusable file list; try again.
+          for i in 1 2 3 4; do npm run build > build.log 2>&1 && break; tail -5 build.log; sleep 20; done; test -f out/index.html
           npx cap sync ios > /dev/null
         env:
           NEXT_PUBLIC_SUPABASE_URL: https://bxvyoemwegzenjaynhwi.supabase.co
