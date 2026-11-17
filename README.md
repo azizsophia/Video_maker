@@ -1,1 +1,1 @@
-Temporary test branch, finished and emptied. Safe to delete.
+Temporary test branch. Deleted after the test runs.
